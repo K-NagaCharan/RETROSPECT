@@ -1,0 +1,350 @@
+[
+  {
+    "id": "py-01",
+    "language": "python",
+    "category": "unchanged",
+    "description": "Python unchanged function across commit",
+    "current": {
+      "name": "calculate_tax",
+      "enclosingScope": [],
+      "parameters": [{"name": "amount"}, {"name": "rate"}],
+      "source": "def calculate_tax(amount, rate):\n    return amount * rate\n",
+      "filePath": "src/tax.py"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "calculate_tax",
+        "enclosingScope": [],
+        "parameters": [{"name": "amount"}, {"name": "rate"}],
+        "source": "def calculate_tax(amount, rate):\n    return amount * rate\n",
+        "filePath": "src/tax.py"
+      },
+      {
+        "id": "c2",
+        "name": "get_discount",
+        "enclosingScope": [],
+        "parameters": [{"name": "price"}],
+        "source": "def get_discount(price):\n    return price * 0.1\n",
+        "filePath": "src/tax.py"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "unchanged"
+  },
+  {
+    "id": "py-02",
+    "language": "python",
+    "category": "modified",
+    "description": "Python function with modified body and added parameter",
+    "current": {
+      "name": "process_record",
+      "enclosingScope": ["Processor"],
+      "parameters": [{"name": "record"}, {"name": "strict", "defaultValue": "False"}],
+      "source": "def process_record(record, strict=False):\n    if strict and not record:\n        raise ValueError('Empty')\n    return record.strip()\n",
+      "filePath": "src/proc.py"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "process_record",
+        "enclosingScope": ["Processor"],
+        "parameters": [{"name": "record"}],
+        "source": "def process_record(record):\n    return record.strip()\n",
+        "filePath": "src/proc.py"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "modified"
+  },
+  {
+    "id": "py-03",
+    "language": "python",
+    "category": "renamed",
+    "description": "Python function renamed from fetch_all to retrieve_all",
+    "current": {
+      "name": "retrieve_all",
+      "enclosingScope": [],
+      "parameters": [{"name": "db_session"}, {"name": "limit"}],
+      "source": "def retrieve_all(db_session, limit):\n    query = db_session.query(Item).limit(limit)\n    return query.all()\n",
+      "filePath": "src/repo.py"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "fetch_all",
+        "enclosingScope": [],
+        "parameters": [{"name": "db_session"}, {"name": "limit"}],
+        "source": "def fetch_all(db_session, limit):\n    query = db_session.query(Item).limit(limit)\n    return query.all()\n",
+        "filePath": "src/repo.py"
+      },
+      {
+        "id": "c2",
+        "name": "delete_all",
+        "enclosingScope": [],
+        "parameters": [{"name": "db_session"}],
+        "source": "def delete_all(db_session):\n    db_session.query(Item).delete()\n",
+        "filePath": "src/repo.py"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "renamed"
+  },
+  {
+    "id": "py-04",
+    "language": "python",
+    "category": "new",
+    "description": "Genuinely new Python function with no predecessor",
+    "current": {
+      "name": "export_to_csv",
+      "enclosingScope": [],
+      "parameters": [{"name": "rows"}, {"name": "output_path"}],
+      "source": "def export_to_csv(rows, output_path):\n    import csv\n    with open(output_path, 'w') as f:\n        writer = csv.writer(f)\n        writer.writerows(rows)\n",
+      "filePath": "src/export.py"
+    },
+    "candidates": [],
+    "expectedSelectedId": null,
+    "expectedClassification": "new"
+  },
+  {
+    "id": "js-01",
+    "language": "javascript",
+    "category": "unchanged",
+    "description": "JavaScript unchanged arrow function",
+    "current": {
+      "name": "formatCurrency",
+      "enclosingScope": [],
+      "parameters": [{"name": "val"}],
+      "source": "const formatCurrency = (val) => `$${val.toFixed(2)}`;\n",
+      "filePath": "src/utils.js"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "formatCurrency",
+        "enclosingScope": [],
+        "parameters": [{"name": "val"}],
+        "source": "const formatCurrency = (val) => `$${val.toFixed(2)}`;\n",
+        "filePath": "src/utils.js"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "unchanged"
+  },
+  {
+    "id": "js-02",
+    "language": "javascript",
+    "category": "modified",
+    "description": "JavaScript async method with error handling added",
+    "current": {
+      "name": "fetchUser",
+      "enclosingScope": ["UserService"],
+      "parameters": [{"name": "userId"}],
+      "source": "async fetchUser(userId) {\n  try {\n    return await api.get(`/users/${userId}`);\n  } catch (err) {\n    return null;\n  }\n}\n",
+      "filePath": "src/user.js"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "fetchUser",
+        "enclosingScope": ["UserService"],
+        "parameters": [{"name": "userId"}],
+        "source": "async fetchUser(userId) {\n  return await api.get(`/users/${userId}`);\n}\n",
+        "filePath": "src/user.js"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "modified"
+  },
+  {
+    "id": "js-03",
+    "language": "javascript",
+    "category": "moved",
+    "description": "JavaScript function moved to a new module file",
+    "current": {
+      "name": "sanitizeInput",
+      "enclosingScope": [],
+      "parameters": [{"name": "str"}],
+      "source": "function sanitizeInput(str) {\n  return str.replace(/[<>]/g, '');\n}\n",
+      "filePath": "src/security/sanitizer.js"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "sanitizeInput",
+        "enclosingScope": [],
+        "parameters": [{"name": "str"}],
+        "source": "function sanitizeInput(str) {\n  return str.replace(/[<>]/g, '');\n}\n",
+        "filePath": "src/legacy/helpers.js"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "moved"
+  },
+  {
+    "id": "ts-01",
+    "language": "typescript",
+    "category": "modified",
+    "description": "TypeScript method with added generic type parameter",
+    "current": {
+      "name": "dispatch",
+      "enclosingScope": ["EventBus"],
+      "parameters": [{"name": "event", "type": "T"}],
+      "source": "public dispatch<T extends Event>(event: T): void {\n  this.listeners.forEach(fn => fn(event));\n}\n",
+      "filePath": "src/events.ts"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "dispatch",
+        "enclosingScope": ["EventBus"],
+        "parameters": [{"name": "event", "type": "Event"}],
+        "source": "public dispatch(event: Event): void {\n  this.listeners.forEach(fn => fn(event));\n}\n",
+        "filePath": "src/events.ts"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "modified"
+  },
+  {
+    "id": "ts-02",
+    "language": "typescript",
+    "category": "renamed_and_moved",
+    "description": "TypeScript function renamed and moved into handlers folder",
+    "current": {
+      "name": "handleWebhookEvent",
+      "enclosingScope": [],
+      "parameters": [{"name": "req", "type": "Request"}, {"name": "res", "type": "Response"}],
+      "source": "export function handleWebhookEvent(req: Request, res: Response): Promise<void> {\n  const payload = req.body;\n  return processWebhook(payload);\n}\n",
+      "filePath": "src/handlers/webhook.ts"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "onWebhookPayload",
+        "enclosingScope": [],
+        "parameters": [{"name": "req", "type": "Request"}, {"name": "res", "type": "Response"}],
+        "source": "export function onWebhookPayload(req: Request, res: Response): Promise<void> {\n  const payload = req.body;\n  return processWebhook(payload);\n}\n",
+        "filePath": "src/old/router.ts"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "renamed_and_moved"
+  },
+  {
+    "id": "ts-03",
+    "language": "typescript",
+    "category": "ambiguous",
+    "description": "TypeScript function with two equally similar candidate alternatives",
+    "current": {
+      "name": "processData",
+      "enclosingScope": [],
+      "parameters": [{"name": "item"}],
+      "source": "function processData(item) {\n  return item.value;\n}\n",
+      "filePath": "src/data.ts"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "processItemA",
+        "enclosingScope": [],
+        "parameters": [{"name": "item"}],
+        "source": "function processItemA(item) {\n  return item.value;\n}\n",
+        "filePath": "src/data.ts"
+      },
+      {
+        "id": "c2",
+        "name": "processItemB",
+        "enclosingScope": [],
+        "parameters": [{"name": "item"}],
+        "source": "function processItemB(item) {\n  return item.value;\n}\n",
+        "filePath": "src/data.ts"
+      }
+    ],
+    "expectedSelectedId": null,
+    "expectedClassification": "uncertain"
+  },
+  {
+    "id": "java-01",
+    "language": "java",
+    "category": "unchanged",
+    "description": "Java method unchanged across commit",
+    "current": {
+      "name": "getConnection",
+      "enclosingScope": ["DbPool"],
+      "parameters": [],
+      "source": "public Connection getConnection() throws SQLException {\n  return pool.borrow();\n}\n",
+      "filePath": "src/DbPool.java"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "getConnection",
+        "enclosingScope": ["DbPool"],
+        "parameters": [],
+        "source": "public Connection getConnection() throws SQLException {\n  return pool.borrow();\n}\n",
+        "filePath": "src/DbPool.java"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "unchanged"
+  },
+  {
+    "id": "java-02",
+    "language": "java",
+    "category": "modified",
+    "description": "Java overloaded method modified with distinct signature",
+    "current": {
+      "name": "saveItem",
+      "enclosingScope": ["ItemDao"],
+      "parameters": [{"name": "item", "type": "Item"}, {"name": "flush", "type": "boolean"}],
+      "source": "public void saveItem(Item item, boolean flush) {\n  session.save(item);\n  if (flush) session.flush();\n}\n",
+      "filePath": "src/ItemDao.java"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "saveItem",
+        "enclosingScope": ["ItemDao"],
+        "parameters": [{"name": "item", "type": "Item"}],
+        "source": "public void saveItem(Item item) {\n  session.save(item);\n}\n",
+        "filePath": "src/ItemDao.java"
+      },
+      {
+        "id": "c2",
+        "name": "deleteItem",
+        "enclosingScope": ["ItemDao"],
+        "parameters": [{"name": "item", "type": "Item"}],
+        "source": "public void deleteItem(Item item) {\n  session.delete(item);\n}\n",
+        "filePath": "src/ItemDao.java"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "modified"
+  },
+  {
+    "id": "java-03",
+    "language": "java",
+    "category": "renamed",
+    "description": "Java method renamed from validateCredentials to authenticate",
+    "current": {
+      "name": "authenticate",
+      "enclosingScope": ["AuthManager"],
+      "parameters": [{"name": "user", "type": "String"}, {"name": "token", "type": "String"}],
+      "source": "public boolean authenticate(String user, String token) {\n  return tokenValidator.check(user, token);\n}\n",
+      "filePath": "src/AuthManager.java"
+    },
+    "candidates": [
+      {
+        "id": "c1",
+        "name": "validateCredentials",
+        "enclosingScope": ["AuthManager"],
+        "parameters": [{"name": "user", "type": "String"}, {"name": "token", "type": "String"}],
+        "source": "public boolean validateCredentials(String user, String token) {\n  return tokenValidator.check(user, token);\n}\n",
+        "filePath": "src/AuthManager.java"
+      }
+    ],
+    "expectedSelectedId": "c1",
+    "expectedClassification": "renamed"
+  }
+]
