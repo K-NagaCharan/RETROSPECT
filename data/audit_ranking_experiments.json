@@ -1,0 +1,2084 @@
+{
+  "timestamp": "2026-10-12T05:28:24.010Z",
+  "devLexical": {
+    "ansCount": 12,
+    "candidateRecall": 100,
+    "recallAt1": 66.7,
+    "recallAt5": 75,
+    "recallAt10": 75,
+    "mrr": 0.6875,
+    "precisionAt1": 66.7,
+    "precisionAt5": 34.2,
+    "noResultCount": 4,
+    "trueNegatives": 3,
+    "falsePositives": 1,
+    "noResultAccuracy": 75,
+    "noResultPrecision": 75,
+    "noResultRecall": 75,
+    "latency": {
+      "meanLat": 53.31,
+      "medLat": 14,
+      "p95Lat": 264
+    },
+    "details": [
+      {
+        "id": "dev_bot_01",
+        "query": "tob",
+        "category": "exact_name",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "tob"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 48,
+        "returnedCount": 2,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "tob",
+            "score": 1,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 1
+            }
+          },
+          {
+            "name": "tobs",
+            "score": 0.325,
+            "filePath": "test/tools.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0.175,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.325
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_bot_02",
+        "query": "Parse uploaded multi-part files and form attachments",
+        "category": "functional_description",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "FileUpload",
+          "_MultipartParser",
+          "forms"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 99,
+        "returnedCount": 7,
+        "firstMatchRank": 4,
+        "reciprocalRank": 0.25,
+        "topResults": [
+          {
+            "name": "_MultipartPart",
+            "score": 0.18,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.36,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.18
+            }
+          },
+          {
+            "name": "_parse_http_header",
+            "score": 0.1,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.5,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          },
+          {
+            "name": "parse",
+            "score": 0.1,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.333,
+              "pathScore": 0,
+              "signatureScore": 0.7,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          },
+          {
+            "name": "FileUpload",
+            "score": 0.1,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.667,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          },
+          {
+            "name": "forms",
+            "score": 0.1,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.833,
+              "pathScore": 0,
+              "signatureScore": 0.175,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_bot_03",
+        "query": "Route matching and URL pattern compiler",
+        "category": "cross_file",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "Router",
+          "Route"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 252,
+        "returnedCount": 6,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "Route",
+            "score": 0.12,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.24,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.12
+            }
+          },
+          {
+            "name": "match",
+            "score": 0.12,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.24,
+              "docstringScore": 0.6,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.12
+            }
+          },
+          {
+            "name": "get_url",
+            "score": 0.12,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.24,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0.525,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.12
+            }
+          },
+          {
+            "name": "route",
+            "score": 0.12,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.24,
+              "docstringScore": 0.6,
+              "pathScore": 0,
+              "signatureScore": 0.525,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.12
+            }
+          },
+          {
+            "name": "route",
+            "score": 0.12,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.24,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.12
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_bot_04",
+        "query": "Quantum key distribution encryption handshake",
+        "category": "no_result",
+        "isNoResult": true,
+        "returnedCount": 0,
+        "topCandidate": null,
+        "topScore": null
+      },
+      {
+        "id": "dev_exp_01",
+        "query": "app.listen",
+        "category": "exact_name",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "app.listen"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 665,
+        "returnedCount": 10,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "app.listen",
+            "score": 1,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0.5,
+              "signatureScore": 0.175,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 1
+            }
+          },
+          {
+            "name": "app.init",
+            "score": 0.3,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.6,
+              "docstringScore": 0,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.3
+            }
+          },
+          {
+            "name": "app.defaultConfiguration",
+            "score": 0.3,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.6,
+              "docstringScore": 0.5,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.3
+            }
+          },
+          {
+            "name": "app.handle",
+            "score": 0.3,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.6,
+              "docstringScore": 0.5,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.3
+            }
+          },
+          {
+            "name": "app.use",
+            "score": 0.3,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.6,
+              "docstringScore": 0.5,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.3
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_exp_02",
+        "query": "Mount middleware functions into the request processing chain",
+        "category": "functional_description",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "app.use"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 99,
+        "returnedCount": 0,
+        "firstMatchRank": -1,
+        "reciprocalRank": 0,
+        "topResults": []
+      },
+      {
+        "id": "dev_exp_03",
+        "query": "Send JSON response with appropriate content-type headers",
+        "category": "cross_file",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "res.json",
+          "res.send"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 416,
+        "returnedCount": 7,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "res.send",
+            "score": 0.0857,
+            "filePath": "lib/response.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.171,
+              "docstringScore": 0.429,
+              "pathScore": 0.143,
+              "signatureScore": 0.35,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.0857
+            }
+          },
+          {
+            "name": "res.json",
+            "score": 0.0857,
+            "filePath": "lib/response.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.171,
+              "docstringScore": 0.429,
+              "pathScore": 0.143,
+              "signatureScore": 0.175,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.0857
+            }
+          },
+          {
+            "name": "res.sendStatus",
+            "score": 0.0857,
+            "filePath": "lib/response.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.171,
+              "docstringScore": 0.286,
+              "pathScore": 0.143,
+              "signatureScore": 0.35,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.0857
+            }
+          },
+          {
+            "name": "res.sendFile",
+            "score": 0.0857,
+            "filePath": "lib/response.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.171,
+              "docstringScore": 0.714,
+              "pathScore": 0.143,
+              "signatureScore": 0.35,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.0857
+            }
+          },
+          {
+            "name": "json",
+            "score": 0.0857,
+            "filePath": "examples/content-negotiation/users.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.171,
+              "docstringScore": 0,
+              "pathScore": 0.143,
+              "signatureScore": 0.175,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.0857
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_exp_04",
+        "query": "Distributed consensus algorithm with Raft leader election",
+        "category": "no_result",
+        "isNoResult": true,
+        "returnedCount": 0,
+        "topCandidate": null,
+        "topScore": null
+      },
+      {
+        "id": "dev_zod_01",
+        "query": "ZodMiniType",
+        "category": "exact_name",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "ZodMiniType",
+          "_ZodMiniType"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 2962,
+        "returnedCount": 10,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "ZodMiniType",
+            "score": 1,
+            "filePath": "packages/zod/src/v4/mini/schemas.ts",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 0.667,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 1
+            }
+          },
+          {
+            "name": "_ZodMiniType",
+            "score": 0.825,
+            "filePath": "packages/zod/src/v4/mini/schemas.ts",
+            "breakdown": {
+              "exactScore": 0.65,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 0.667,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.825
+            }
+          },
+          {
+            "name": "ZodMiniType",
+            "score": 0.65,
+            "filePath": "packages/zod/src/v4/mini/tests/prototypes.test.ts",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 1,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.65
+            }
+          },
+          {
+            "name": "ZodMiniISODateTime",
+            "score": 0.4,
+            "filePath": "packages/zod/src/v4/mini/iso.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.8,
+              "docstringScore": 0,
+              "pathScore": 0.667,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.4
+            }
+          },
+          {
+            "name": "ZodMiniISODate",
+            "score": 0.4,
+            "filePath": "packages/zod/src/v4/mini/iso.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.8,
+              "docstringScore": 0,
+              "pathScore": 0.667,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.4
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_zod_02",
+        "query": "Validate email address format and domain schema",
+        "category": "functional_description",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "email",
+          "ZodMiniEmail"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 1608,
+        "returnedCount": 10,
+        "firstMatchRank": -1,
+        "reciprocalRank": 0,
+        "topResults": [
+          {
+            "name": "formatDate",
+            "score": 0.18,
+            "filePath": "packages/docs/loaders/source.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.36,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.18
+            }
+          },
+          {
+            "name": "formatDate",
+            "score": 0.18,
+            "filePath": "packages/docs/app/blog/page.tsx",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.36,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.18
+            }
+          },
+          {
+            "name": "validateOpenAPI30Schema",
+            "score": 0.13,
+            "filePath": "packages/zod/src/v4/classic/tests/to-json-schema.test.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0,
+              "pathScore": 0.167,
+              "signatureScore": 0.525,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.13
+            }
+          },
+          {
+            "name": "validateFallback",
+            "score": 0.1,
+            "filePath": "packages/zod/src/v4/core/parse.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0.7,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          },
+          {
+            "name": "validateAsync",
+            "score": 0.1,
+            "filePath": "packages/zod/src/v4/core/parse.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0.35,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_zod_03",
+        "query": "UUID string validator for v4 and v7 identifiers",
+        "category": "ambiguous",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "uuid",
+          "uuidv4",
+          "uuidv7",
+          "ZodMiniUUID"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 960,
+        "returnedCount": 10,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "ZodMiniUUID",
+            "score": 0.1,
+            "filePath": "packages/zod/src/v4/mini/schemas.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.167,
+              "pathScore": 0.167,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          },
+          {
+            "name": "uuid",
+            "score": 0.1,
+            "filePath": "packages/zod/src/v4/mini/schemas.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0,
+              "pathScore": 0.167,
+              "signatureScore": 0.875,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          },
+          {
+            "name": "_uuid",
+            "score": 0.1,
+            "filePath": "packages/zod/src/v4/core/api.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0,
+              "pathScore": 0.167,
+              "signatureScore": 0.7,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          },
+          {
+            "name": "uuid",
+            "score": 0.1,
+            "filePath": "packages/zod/src/v4/core/regexes.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.167,
+              "pathScore": 0.167,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          },
+          {
+            "name": "$ZodUUIDDef",
+            "score": 0.1,
+            "filePath": "packages/zod/src/v4/core/schemas.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.167,
+              "pathScore": 0.167,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_zod_04",
+        "query": "GraphQL subscription query execution engine",
+        "category": "no_result",
+        "isNoResult": true,
+        "returnedCount": 1,
+        "topCandidate": "graphql",
+        "topScore": 0.08
+      },
+      {
+        "id": "dev_gs_01",
+        "query": "newBuilder",
+        "category": "exact_name",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "newBuilder"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 297,
+        "returnedCount": 10,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "newBuilder",
+            "score": 1,
+            "filePath": "proto/src/main/java/com/google/gson/protobuf/ProtoTypeAdapter.java",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 1
+            }
+          },
+          {
+            "name": "newBuilder",
+            "score": 1,
+            "filePath": "gson/src/main/java/com/google/gson/Gson.java",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 1
+            }
+          },
+          {
+            "name": "testDefaultGsonNewBuilderModification",
+            "score": 0.5363,
+            "filePath": "gson/src/test/java/com/google/gson/GsonTest.java",
+            "breakdown": {
+              "exactScore": 0.65,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0,
+              "signatureScore": 0.35,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.5363
+            }
+          },
+          {
+            "name": "testNewBuilderModification",
+            "score": 0.5363,
+            "filePath": "gson/src/test/java/com/google/gson/GsonTest.java",
+            "breakdown": {
+              "exactScore": 0.65,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0,
+              "signatureScore": 0.35,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.5363
+            }
+          },
+          {
+            "name": "newParser",
+            "score": 0.3,
+            "filePath": "metrics/src/main/java/com/google/gson/metrics/ParseBenchmark.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.6,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.3
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_gs_02",
+        "query": "Serialize Java object into JSON string format",
+        "category": "functional_description",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "toJson"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 4239,
+        "returnedCount": 10,
+        "firstMatchRank": -1,
+        "reciprocalRank": 0,
+        "topResults": [
+          {
+            "name": "isJsonObject",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/JsonElement.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.333,
+              "pathScore": 0.333,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          },
+          {
+            "name": "getAsJsonObject",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/JsonElement.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.333,
+              "pathScore": 0.333,
+              "signatureScore": 0.35,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          },
+          {
+            "name": "JsonObject",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/JsonObject.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.5,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          },
+          {
+            "name": "JsonObject",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/JsonObject.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.333,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          },
+          {
+            "name": "getAsJsonObject",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/JsonObject.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.333,
+              "pathScore": 0.5,
+              "signatureScore": 0.35,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_gs_03",
+        "query": "Convert JSON syntax tree to and from Java types",
+        "category": "cross_file",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "TypeAdapter",
+          "Gson",
+          "fromJsonTree",
+          "toJsonTree"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 4239,
+        "returnedCount": 10,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "toJsonTree",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.667,
+              "pathScore": 0.333,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          },
+          {
+            "name": "fromJsonTree",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.667,
+              "pathScore": 0.333,
+              "signatureScore": 0.7,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          },
+          {
+            "name": "toJsonTree",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/Gson.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.667,
+              "pathScore": 0.167,
+              "signatureScore": 0.35,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          },
+          {
+            "name": "toJsonTree",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/Gson.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.5,
+              "pathScore": 0.167,
+              "signatureScore": 0.175,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          },
+          {
+            "name": "JsonSyntaxException",
+            "score": 0.2,
+            "filePath": "gson/src/main/java/com/google/gson/JsonSyntaxException.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.167,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_gs_04",
+        "query": "WebGPU compute pipeline shaders dispatch",
+        "category": "no_result",
+        "isNoResult": true,
+        "returnedCount": 0,
+        "topCandidate": null,
+        "topScore": null
+      }
+    ]
+  },
+  "devCurrent": {
+    "ansCount": 12,
+    "candidateRecall": 100,
+    "recallAt1": 66.7,
+    "recallAt5": 83.3,
+    "recallAt10": 83.3,
+    "mrr": 0.75,
+    "precisionAt1": 66.7,
+    "precisionAt5": 35,
+    "noResultCount": 4,
+    "trueNegatives": 4,
+    "falsePositives": 0,
+    "noResultAccuracy": 100,
+    "noResultPrecision": 100,
+    "noResultRecall": 100,
+    "latency": {
+      "meanLat": 77.38,
+      "medLat": 19,
+      "p95Lat": 423
+    },
+    "details": [
+      {
+        "id": "dev_bot_01",
+        "query": "tob",
+        "category": "exact_name",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "tob"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 48,
+        "returnedCount": 2,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "tob",
+            "score": 0.6,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.6
+            }
+          },
+          {
+            "name": "tobs",
+            "score": 0.1942,
+            "filePath": "test/tools.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 0,
+              "signatureScore": 0.175,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.1942
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_bot_02",
+        "query": "Parse uploaded multi-part files and form attachments",
+        "category": "functional_description",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "FileUpload",
+          "_MultipartParser",
+          "forms"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 99,
+        "returnedCount": 9,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "forms",
+            "score": 0.1837,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.833,
+              "pathScore": 0,
+              "signatureScore": 0.175,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1837
+            }
+          },
+          {
+            "name": "parse",
+            "score": 0.165,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.333,
+              "pathScore": 0,
+              "signatureScore": 0.7,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.165
+            }
+          },
+          {
+            "name": "_parse_http_header",
+            "score": 0.155,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.5,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.155
+            }
+          },
+          {
+            "name": "FileUpload",
+            "score": 0.15,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.667,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.15
+            }
+          },
+          {
+            "name": "POST",
+            "score": 0.14,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0,
+              "docstringScore": 0.333,
+              "pathScore": 0,
+              "signatureScore": 1,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.14
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_bot_03",
+        "query": "Route matching and URL pattern compiler",
+        "category": "cross_file",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "Router",
+          "Route"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 252,
+        "returnedCount": 6,
+        "firstMatchRank": 2,
+        "reciprocalRank": 0.5,
+        "topResults": [
+          {
+            "name": "route",
+            "score": 0.2162,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.24,
+              "docstringScore": 0.6,
+              "pathScore": 0,
+              "signatureScore": 0.525,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.2162
+            }
+          },
+          {
+            "name": "Route",
+            "score": 0.15,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.24,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.15
+            }
+          },
+          {
+            "name": "match",
+            "score": 0.15,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.24,
+              "docstringScore": 0.6,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.15
+            }
+          },
+          {
+            "name": "get_url",
+            "score": 0.1462,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.24,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0.525,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1462
+            }
+          },
+          {
+            "name": "yieldroutes",
+            "score": 0.138,
+            "filePath": "bottle.py",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.192,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.138
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_bot_04",
+        "query": "Quantum key distribution encryption handshake",
+        "category": "no_result",
+        "isNoResult": true,
+        "returnedCount": 0,
+        "topCandidate": null,
+        "topScore": null
+      },
+      {
+        "id": "dev_exp_01",
+        "query": "app.listen",
+        "category": "exact_name",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "app.listen"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 665,
+        "returnedCount": 10,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "app.listen",
+            "score": 0.8088,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0.5,
+              "signatureScore": 0.175,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.8088
+            }
+          },
+          {
+            "name": "app.all",
+            "score": 0.2837,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.6,
+              "docstringScore": 0.5,
+              "pathScore": 0.5,
+              "signatureScore": 0.175,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2837
+            }
+          },
+          {
+            "name": "app.defaultConfiguration",
+            "score": 0.275,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.6,
+              "docstringScore": 0.5,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.275
+            }
+          },
+          {
+            "name": "app.handle",
+            "score": 0.275,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.6,
+              "docstringScore": 0.5,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.275
+            }
+          },
+          {
+            "name": "app.use",
+            "score": 0.275,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.6,
+              "docstringScore": 0.5,
+              "pathScore": 0.5,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.275
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_exp_02",
+        "query": "Mount middleware functions into the request processing chain",
+        "category": "functional_description",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "app.use"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 99,
+        "returnedCount": 5,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "app.use",
+            "score": 0.11,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 1,
+              "totalScore": 0.11
+            }
+          },
+          {
+            "name": "app.set",
+            "score": 0.11,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 1,
+              "totalScore": 0.11
+            }
+          },
+          {
+            "name": "anonymous",
+            "score": 0.11,
+            "filePath": "examples/web-service/index.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 1,
+              "totalScore": 0.11
+            }
+          },
+          {
+            "name": "app.all",
+            "score": 0.11,
+            "filePath": "lib/application.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 1,
+              "totalScore": 0.11
+            }
+          },
+          {
+            "name": "anonymous",
+            "score": 0.11,
+            "filePath": "examples/error/index.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0,
+              "docstringScore": 0.4,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 1,
+              "totalScore": 0.11
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_exp_03",
+        "query": "Send JSON response with appropriate content-type headers",
+        "category": "cross_file",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "res.json",
+          "res.send"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 416,
+        "returnedCount": 10,
+        "firstMatchRank": 2,
+        "reciprocalRank": 0.5,
+        "topResults": [
+          {
+            "name": "res.sendFile",
+            "score": 0.1818,
+            "filePath": "lib/response.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.171,
+              "docstringScore": 0.714,
+              "pathScore": 0.143,
+              "signatureScore": 0.35,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1818
+            }
+          },
+          {
+            "name": "res.send",
+            "score": 0.1789,
+            "filePath": "lib/response.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.171,
+              "docstringScore": 0.429,
+              "pathScore": 0.143,
+              "signatureScore": 0.35,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.1789
+            }
+          },
+          {
+            "name": "res.format",
+            "score": 0.1389,
+            "filePath": "lib/response.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0,
+              "docstringScore": 0.714,
+              "pathScore": 0.143,
+              "signatureScore": 0.35,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1389
+            }
+          },
+          {
+            "name": "res.json",
+            "score": 0.1302,
+            "filePath": "lib/response.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.171,
+              "docstringScore": 0.429,
+              "pathScore": 0.143,
+              "signatureScore": 0.175,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1302
+            }
+          },
+          {
+            "name": "res.jsonp",
+            "score": 0.1216,
+            "filePath": "lib/response.js",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.137,
+              "docstringScore": 0.429,
+              "pathScore": 0.143,
+              "signatureScore": 0.175,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1216
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_exp_04",
+        "query": "Distributed consensus algorithm with Raft leader election",
+        "category": "no_result",
+        "isNoResult": true,
+        "returnedCount": 0,
+        "topCandidate": null,
+        "topScore": null
+      },
+      {
+        "id": "dev_zod_01",
+        "query": "ZodMiniType",
+        "category": "exact_name",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "ZodMiniType",
+          "_ZodMiniType"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 2962,
+        "returnedCount": 10,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "ZodMiniType",
+            "score": 0.6667,
+            "filePath": "packages/zod/src/v4/mini/schemas.ts",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 0.667,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.6667
+            }
+          },
+          {
+            "name": "_ZodMiniType",
+            "score": 0.5442,
+            "filePath": "packages/zod/src/v4/mini/schemas.ts",
+            "breakdown": {
+              "exactScore": 0.65,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 0.667,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.5442
+            }
+          },
+          {
+            "name": "ZodMiniType",
+            "score": 0.455,
+            "filePath": "packages/zod/src/v4/mini/tests/prototypes.test.ts",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 0,
+              "pathScore": 1,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.455
+            }
+          },
+          {
+            "name": "ZodMiniString",
+            "score": 0.3667,
+            "filePath": "packages/zod/src/v4/mini/schemas.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.8,
+              "docstringScore": 0.667,
+              "pathScore": 0.667,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.3667
+            }
+          },
+          {
+            "name": "ZodMiniStringFormat",
+            "score": 0.3667,
+            "filePath": "packages/zod/src/v4/mini/schemas.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.8,
+              "docstringScore": 0.667,
+              "pathScore": 0.667,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.3667
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_zod_02",
+        "query": "Validate email address format and domain schema",
+        "category": "functional_description",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "email",
+          "ZodMiniEmail"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 1608,
+        "returnedCount": 1,
+        "firstMatchRank": -1,
+        "reciprocalRank": 0,
+        "topResults": [
+          {
+            "name": "convertBaseSchema",
+            "score": 0.1504,
+            "filePath": "packages/zod/src/v4/classic/from-json-schema.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0,
+              "pathScore": 0.167,
+              "signatureScore": 0.875,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.1504
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_zod_03",
+        "query": "UUID string validator for v4 and v7 identifiers",
+        "category": "ambiguous",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "uuid",
+          "uuidv4",
+          "uuidv7",
+          "ZodMiniUUID"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 960,
+        "returnedCount": 10,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "uuidv7",
+            "score": 0.1567,
+            "filePath": "packages/zod/src/v4/classic/schemas.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.16,
+              "docstringScore": 0.333,
+              "pathScore": 0.167,
+              "signatureScore": 1,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1567
+            }
+          },
+          {
+            "name": "_uuid",
+            "score": 0.1317,
+            "filePath": "packages/zod/src/v4/core/api.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0,
+              "pathScore": 0.167,
+              "signatureScore": 0.7,
+              "graphScore": 0.6,
+              "kindScore": 0,
+              "totalScore": 0.1317
+            }
+          },
+          {
+            "name": "uuid",
+            "score": 0.1267,
+            "filePath": "packages/zod/src/v4/classic/schemas.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.167,
+              "pathScore": 0.167,
+              "signatureScore": 0.7,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1267
+            }
+          },
+          {
+            "name": "uuidv6",
+            "score": 0.1254,
+            "filePath": "packages/zod/src/v4/classic/schemas.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.16,
+              "docstringScore": 0.167,
+              "pathScore": 0.167,
+              "signatureScore": 0.875,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1254
+            }
+          },
+          {
+            "name": "uuidv4",
+            "score": 0.1167,
+            "filePath": "packages/zod/src/v4/classic/schemas.ts",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.16,
+              "docstringScore": 0.167,
+              "pathScore": 0.167,
+              "signatureScore": 0.7,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.1167
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_zod_04",
+        "query": "GraphQL subscription query execution engine",
+        "category": "no_result",
+        "isNoResult": true,
+        "returnedCount": 0,
+        "topCandidate": null,
+        "topScore": null
+      },
+      {
+        "id": "dev_gs_01",
+        "query": "newBuilder",
+        "category": "exact_name",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "newBuilder"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 297,
+        "returnedCount": 4,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "newBuilder",
+            "score": 0.75,
+            "filePath": "proto/src/main/java/com/google/gson/protobuf/ProtoTypeAdapter.java",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.75
+            }
+          },
+          {
+            "name": "newBuilder",
+            "score": 0.75,
+            "filePath": "gson/src/main/java/com/google/gson/Gson.java",
+            "breakdown": {
+              "exactScore": 1,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.75
+            }
+          },
+          {
+            "name": "testDefaultGsonNewBuilderModification",
+            "score": 0.4452,
+            "filePath": "gson/src/test/java/com/google/gson/GsonTest.java",
+            "breakdown": {
+              "exactScore": 0.65,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0,
+              "signatureScore": 0.35,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.4452
+            }
+          },
+          {
+            "name": "testNewBuilderModification",
+            "score": 0.4452,
+            "filePath": "gson/src/test/java/com/google/gson/GsonTest.java",
+            "breakdown": {
+              "exactScore": 0.65,
+              "tokenScore": 1,
+              "docstringScore": 1,
+              "pathScore": 0,
+              "signatureScore": 0.35,
+              "graphScore": 0.8,
+              "kindScore": 0,
+              "totalScore": 0.4452
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_gs_02",
+        "query": "Serialize Java object into JSON string format",
+        "category": "functional_description",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "toJson"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 4239,
+        "returnedCount": 1,
+        "firstMatchRank": -1,
+        "reciprocalRank": 0,
+        "topResults": [
+          {
+            "name": "fromJson",
+            "score": 0.2604,
+            "filePath": "gson/src/main/java/com/google/gson/Gson.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 1,
+              "pathScore": 0.167,
+              "signatureScore": 0.875,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2604
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_gs_03",
+        "query": "Convert JSON syntax tree to and from Java types",
+        "category": "cross_file",
+        "isNoResult": false,
+        "expectedSymbols": [
+          "TypeAdapter",
+          "Gson",
+          "fromJsonTree",
+          "toJsonTree"
+        ],
+        "candidateRecall": true,
+        "totalCandidates": 4239,
+        "returnedCount": 7,
+        "firstMatchRank": 1,
+        "reciprocalRank": 1,
+        "topResults": [
+          {
+            "name": "fromJsonTree",
+            "score": 0.2683,
+            "filePath": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.667,
+              "pathScore": 0.333,
+              "signatureScore": 0.7,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2683
+            }
+          },
+          {
+            "name": "toJsonTree",
+            "score": 0.2342,
+            "filePath": "gson/src/main/java/com/google/gson/Gson.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.667,
+              "pathScore": 0.167,
+              "signatureScore": 0.35,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2342
+            }
+          },
+          {
+            "name": "toJsonTree",
+            "score": 0.2333,
+            "filePath": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.4,
+              "docstringScore": 0.667,
+              "pathScore": 0.333,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2333
+            }
+          },
+          {
+            "name": "fromJson",
+            "score": 0.2179,
+            "filePath": "gson/src/main/java/com/google/gson/Gson.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.833,
+              "pathScore": 0.167,
+              "signatureScore": 0.525,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2179
+            }
+          },
+          {
+            "name": "JsonElement",
+            "score": 0.2083,
+            "filePath": "gson/src/main/java/com/google/gson/JsonElement.java",
+            "breakdown": {
+              "exactScore": 0,
+              "tokenScore": 0.2,
+              "docstringScore": 0.833,
+              "pathScore": 0.333,
+              "signatureScore": 0,
+              "graphScore": 0,
+              "kindScore": 0,
+              "totalScore": 0.2083
+            }
+          }
+        ]
+      },
+      {
+        "id": "dev_gs_04",
+        "query": "WebGPU compute pipeline shaders dispatch",
+        "category": "no_result",
+        "isNoResult": true,
+        "returnedCount": 0,
+        "topCandidate": null,
+        "topScore": null
+      }
+    ]
+  },
+  "ablationResults": [
+    {
+      "Configuration": "Full Structural (Default)",
+      "Recall@1": "66.7%",
+      "Recall@5": "83.3%",
+      "Recall@10": "83.3%",
+      "MRR": 0.75,
+      "P@5": "35%",
+      "No-Res Acc": "100%"
+    },
+    {
+      "Configuration": "Ablation: No Call Graph (graph=0)",
+      "Recall@1": "66.7%",
+      "Recall@5": "83.3%",
+      "Recall@10": "83.3%",
+      "MRR": 0.7153,
+      "P@5": "35%",
+      "No-Res Acc": "100%"
+    },
+    {
+      "Configuration": "Ablation: No File Path (path=0)",
+      "Recall@1": "66.7%",
+      "Recall@5": "91.7%",
+      "Recall@10": "91.7%",
+      "MRR": 0.7708,
+      "P@5": "39.2%",
+      "No-Res Acc": "100%"
+    },
+    {
+      "Configuration": "Ablation: No Docstring (docstring=0)",
+      "Recall@1": "41.7%",
+      "Recall@5": "66.7%",
+      "Recall@10": "66.7%",
+      "MRR": 0.5028,
+      "P@5": "23.9%",
+      "No-Res Acc": "100%"
+    },
+    {
+      "Configuration": "Ablation: No Target Kind (kind=0)",
+      "Recall@1": "58.3%",
+      "Recall@5": "75%",
+      "Recall@10": "75%",
+      "MRR": 0.6667,
+      "P@5": "33.3%",
+      "No-Res Acc": "100%"
+    },
+    {
+      "Configuration": "Ablation: No Signature (signature=0)",
+      "Recall@1": "58.3%",
+      "Recall@5": "83.3%",
+      "Recall@10": "83.3%",
+      "MRR": 0.7083,
+      "P@5": "31.7%",
+      "No-Res Acc": "100%"
+    }
+  ]
+}

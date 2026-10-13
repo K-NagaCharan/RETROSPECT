@@ -1,0 +1,178 @@
+[
+  {
+    "query_id": "dev_bot_01",
+    "query": "tob",
+    "language": "python",
+    "repository": "bottle",
+    "repo_path": "data/external_repos/bottle",
+    "category": "exact_name",
+    "expected_symbols": ["tob"],
+    "is_no_result": false,
+    "rationale": "Exact helper function name query in Bottle for byte string conversion."
+  },
+  {
+    "query_id": "dev_bot_02",
+    "query": "Parse uploaded multi-part files and form attachments",
+    "language": "python",
+    "repository": "bottle",
+    "repo_path": "data/external_repos/bottle",
+    "category": "functional_description",
+    "expected_symbols": ["FileUpload", "_MultipartParser", "forms"],
+    "is_no_result": false,
+    "rationale": "Multipart form upload and file handling classes and properties."
+  },
+  {
+    "query_id": "dev_bot_03",
+    "query": "Route matching and URL pattern compiler",
+    "language": "python",
+    "repository": "bottle",
+    "repo_path": "data/external_repos/bottle",
+    "category": "cross_file",
+    "expected_symbols": ["Router", "Route"],
+    "is_no_result": false,
+    "rationale": "Core URL route matching and compiling classes in Bottle."
+  },
+  {
+    "query_id": "dev_bot_04",
+    "query": "Quantum key distribution encryption handshake",
+    "language": "python",
+    "repository": "bottle",
+    "repo_path": "data/external_repos/bottle",
+    "category": "no_result",
+    "expected_symbols": [],
+    "is_no_result": true,
+    "rationale": "Absent topic; retriever must return zero results."
+  },
+  {
+    "query_id": "dev_exp_01",
+    "query": "app.listen",
+    "language": "javascript",
+    "repository": "express",
+    "repo_path": "data/external_repos/express",
+    "category": "exact_name",
+    "expected_symbols": ["app.listen"],
+    "is_no_result": false,
+    "rationale": "Exact method name query for Express server listen method."
+  },
+  {
+    "query_id": "dev_exp_02",
+    "query": "Mount middleware functions into the request processing chain",
+    "language": "javascript",
+    "repository": "express",
+    "repo_path": "data/external_repos/express",
+    "category": "functional_description",
+    "expected_symbols": ["app.use"],
+    "is_no_result": false,
+    "rationale": "Middleware mounting in application.js."
+  },
+  {
+    "query_id": "dev_exp_03",
+    "query": "Send JSON response with appropriate content-type headers",
+    "language": "javascript",
+    "repository": "express",
+    "repo_path": "data/external_repos/express",
+    "category": "cross_file",
+    "expected_symbols": ["res.json", "res.send"],
+    "is_no_result": false,
+    "rationale": "HTTP JSON response formatting in lib/response.js."
+  },
+  {
+    "query_id": "dev_exp_04",
+    "query": "Distributed consensus algorithm with Raft leader election",
+    "language": "javascript",
+    "repository": "express",
+    "repo_path": "data/external_repos/express",
+    "category": "no_result",
+    "expected_symbols": [],
+    "is_no_result": true,
+    "rationale": "Absent topic; retriever must return zero results."
+  },
+  {
+    "query_id": "dev_zod_01",
+    "query": "ZodMiniType",
+    "language": "typescript",
+    "repository": "zod",
+    "repo_path": "data/external_repos/zod",
+    "category": "exact_name",
+    "expected_symbols": ["ZodMiniType", "_ZodMiniType"],
+    "is_no_result": false,
+    "rationale": "Exact schema interface name in Zod v4 mini."
+  },
+  {
+    "query_id": "dev_zod_02",
+    "query": "Validate email address format and domain schema",
+    "language": "typescript",
+    "repository": "zod",
+    "repo_path": "data/external_repos/zod",
+    "category": "functional_description",
+    "expected_symbols": ["email", "ZodMiniEmail"],
+    "is_no_result": false,
+    "rationale": "Email string format schema generator."
+  },
+  {
+    "query_id": "dev_zod_03",
+    "query": "UUID string validator for v4 and v7 identifiers",
+    "language": "typescript",
+    "repository": "zod",
+    "repo_path": "data/external_repos/zod",
+    "category": "ambiguous",
+    "expected_symbols": ["uuid", "uuidv4", "uuidv7", "ZodMiniUUID"],
+    "is_no_result": false,
+    "rationale": "UUID schema helpers in schemas.ts."
+  },
+  {
+    "query_id": "dev_zod_04",
+    "query": "GraphQL subscription query execution engine",
+    "language": "typescript",
+    "repository": "zod",
+    "repo_path": "data/external_repos/zod",
+    "category": "no_result",
+    "expected_symbols": [],
+    "is_no_result": true,
+    "rationale": "Absent topic; retriever must return zero results."
+  },
+  {
+    "query_id": "dev_gs_01",
+    "query": "newBuilder",
+    "language": "java",
+    "repository": "gson",
+    "repo_path": "data/external_repos/gson",
+    "category": "exact_name",
+    "expected_symbols": ["newBuilder"],
+    "is_no_result": false,
+    "rationale": "Exact method query for Gson builder factory."
+  },
+  {
+    "query_id": "dev_gs_02",
+    "query": "Serialize Java object into JSON string format",
+    "language": "java",
+    "repository": "gson",
+    "repo_path": "data/external_repos/gson",
+    "category": "functional_description",
+    "expected_symbols": ["toJson"],
+    "is_no_result": false,
+    "rationale": "Core Gson serialization method in Gson.java."
+  },
+  {
+    "query_id": "dev_gs_03",
+    "query": "Convert JSON syntax tree to and from Java types",
+    "language": "java",
+    "repository": "gson",
+    "repo_path": "data/external_repos/gson",
+    "category": "cross_file",
+    "expected_symbols": ["TypeAdapter", "Gson", "fromJsonTree", "toJsonTree"],
+    "is_no_result": false,
+    "rationale": "Type adapter conversion methods between JSON tree and objects."
+  },
+  {
+    "query_id": "dev_gs_04",
+    "query": "WebGPU compute pipeline shaders dispatch",
+    "language": "java",
+    "repository": "gson",
+    "repo_path": "data/external_repos/gson",
+    "category": "no_result",
+    "expected_symbols": [],
+    "is_no_result": true,
+    "rationale": "Absent topic; retriever must return zero results."
+  }
+]

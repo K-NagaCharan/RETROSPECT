@@ -24,11 +24,13 @@ class FunctionExtractor {
 
     const tree = await adapter.parse(sourceCode);
     const symbols = adapter.extractSymbols(sourceCode, tree, filePath || '');
+    const imports = typeof adapter.extractImports === 'function' ? adapter.extractImports(tree, sourceCode) : [];
 
     return {
       language: adapter.getLanguageId(),
       filePath: filePath || '',
       symbols,
+      imports,
       hasSyntaxError: tree.rootNode.hasError()
     };
   }

@@ -34,6 +34,43 @@ class JavaAdapter extends LanguageAdapter {
       if (['class_declaration', 'interface_declaration', 'enum_declaration', 'record_declaration'].includes(node.type)) {
         const nameNode = node.childForFieldName('name');
         const className = nameNode ? this._nodeText(nameNode, sourceCode) : 'AnonymousClass';
+        const docstring = this._extractLeadingComment(node, sourceCode);
+        const range = this._nodeRange(node);
+        const source = this._nodeText(node, sourceCode);
+        const { modifiers, annotations } = this._extractModifiersAndAnnotations(node, sourceCode);
+
+        const fullScope = scopeStack.length > 0 ? scopeStack.join('.') : '';
+        const qualifiedBase = packageName ? `${packageName}.${fullScope}` : fullScope;
+        const qualifiedName = qualifiedBase ? `${qualifiedBase}.${className}` : className;
+
+        let symbolType = 'class';
+        if (node.type === 'interface_declaration') symbolType = 'interface';
+        else if (node.type === 'enum_declaration') symbolType = 'enum';
+        else if (node.type === 'record_declaration') symbolType = 'record';
+
+        const classSymbol = new SymbolRecord({
+          name: className,
+          qualifiedName,
+          enclosingScope: [...scopeStack],
+          parameters: [],
+          normalizedSignature: `${symbolType} ${className}`,
+          range,
+          source,
+          language: 'java',
+          filePath,
+          symbolType,
+          modifiers,
+          decorators: annotations,
+          docstring,
+          metadata: {
+            packageName,
+            isClass: true,
+            typeKind: symbolType
+          },
+          extractionStatus: hasSyntaxError ? 'partial' : 'success'
+        });
+        symbols.push(classSymbol);
+
         const newScope = [...scopeStack, className];
         const bodyNode = node.childForFieldName('body');
         if (bodyNode) {
@@ -53,6 +90,8 @@ class JavaAdapter extends LanguageAdapter {
 
         const { modifiers, annotations } = this._extractModifiersAndAnnotations(node, sourceCode);
         const normalizedSignature = this._formatJavaSignature(name, parameters, null);
+        const docstring = this._extractLeadingComment(node, sourceCode);
+        const calls = this._extractCalls(node, sourceCode);
         
         // Scope & qualified name
         const fullScope = scopeStack.length > 0 ? scopeStack.join('.') : '';
@@ -73,10 +112,12 @@ class JavaAdapter extends LanguageAdapter {
           symbolType: 'constructor',
           modifiers,
           decorators: annotations,
+          docstring,
+          calls,
           astSummary: { nodeType: node.type },
           metadata: {
             packageName,
-            isOverloaded: true // checked later or flag
+            isOverloaded: true
           },
           extractionStatus: hasSyntaxError ? 'partial' : 'success'
         });
@@ -96,6 +137,8 @@ class JavaAdapter extends LanguageAdapter {
 
         const { modifiers, annotations } = this._extractModifiersAndAnnotations(node, sourceCode);
         const normalizedSignature = this._formatJavaSignature(name, parameters, returnType);
+        const docstring = this._extractLeadingComment(node, sourceCode);
+        const calls = this._extractCalls(node, sourceCode);
 
         // Throws clause
         const throwsNode = node.childForFieldName('throws') || this._findChildType(node, 'throws');
@@ -119,6 +162,8 @@ class JavaAdapter extends LanguageAdapter {
           symbolType: 'method',
           modifiers,
           decorators: annotations,
+          docstring,
+          calls,
           astSummary: { nodeType: node.type },
           metadata: {
             packageName,
@@ -212,6 +257,38 @@ class JavaAdapter extends LanguageAdapter {
     }
 
     return params;
+  }
+
+  _extractCalls(node, sourceCode) {
+    const calls = new Set();
+    const walk = (n) => {
+      if (!n) return;
+      if (n.type === 'method_invocation') {
+        const nameNode = n.childForFieldName('name');
+        if (nameNode) calls.add(this._nodeText(nameNode, sourceCode).trim());
+      }
+      for (let i = 0; i < n.childCount; i++) {
+        walk(n.child(i));
+      }
+    };
+
+    const bodyNode = node.childForFieldName('body') || node;
+    walk(bodyNode);
+    return Array.from(calls);
+  }
+
+  extractImports(tree, sourceCode) {
+    const imports = [];
+    if (!tree || !tree.rootNode) return imports;
+
+    for (let i = 0; i < tree.rootNode.childCount; i++) {
+      const child = tree.rootNode.child(i);
+      if (child.type === 'import_declaration') {
+        const text = this._nodeText(child, sourceCode).replace(/^import\s+(static\s+)?/, '').replace(/;$/, '').trim();
+        if (text) imports.push(text);
+      }
+    }
+    return imports;
   }
 }
 

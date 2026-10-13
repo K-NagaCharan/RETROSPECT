@@ -1,0 +1,1719 @@
+{
+  "timestamp": "2026-10-10T14:55:23.185Z",
+  "overall": {
+    "queries": 24,
+    "recallAt1": 33.3,
+    "recallAt5": 58.3,
+    "recallAt10": 62.5,
+    "mrr": 0.4222,
+    "precisionAt1": 33.3,
+    "precisionAt5": 26.1,
+    "noResultAcc": 25
+  },
+  "perRepo": {
+    "bottle": {
+      "queries": 6,
+      "recallAt1": 16.7,
+      "recallAt5": 50,
+      "recallAt10": 50,
+      "mrr": 0.3056,
+      "precisionAt1": 16.7,
+      "precisionAt5": 18.3,
+      "noResultAcc": 0
+    },
+    "express": {
+      "queries": 6,
+      "recallAt1": 50,
+      "recallAt5": 66.7,
+      "recallAt10": 83.3,
+      "mrr": 0.5722,
+      "precisionAt1": 50,
+      "precisionAt5": 37.8,
+      "noResultAcc": 100
+    },
+    "zod": {
+      "queries": 6,
+      "recallAt1": 50,
+      "recallAt5": 66.7,
+      "recallAt10": 66.7,
+      "mrr": 0.5556,
+      "precisionAt1": 50,
+      "precisionAt5": 33.3,
+      "noResultAcc": 0
+    },
+    "gson": {
+      "queries": 6,
+      "recallAt1": 16.7,
+      "recallAt5": 50,
+      "recallAt10": 50,
+      "mrr": 0.2556,
+      "precisionAt1": 16.7,
+      "precisionAt5": 15,
+      "noResultAcc": 0
+    }
+  },
+  "perCategory": {
+    "exact_name": {
+      "queries": 4,
+      "recallAt1": 100,
+      "recallAt5": 100,
+      "recallAt10": 100,
+      "mrr": 1,
+      "precisionAt1": 100,
+      "precisionAt5": 45,
+      "noResultAcc": 100
+    },
+    "functional_description": {
+      "queries": 4,
+      "recallAt1": 25,
+      "recallAt5": 25,
+      "recallAt10": 50,
+      "mrr": 0.275,
+      "precisionAt1": 25,
+      "precisionAt5": 20,
+      "noResultAcc": 100
+    },
+    "generic_misleading_name": {
+      "queries": 4,
+      "recallAt1": 0,
+      "recallAt5": 25,
+      "recallAt10": 25,
+      "mrr": 0.05,
+      "precisionAt1": 0,
+      "precisionAt5": 5,
+      "noResultAcc": 100
+    },
+    "cross_file": {
+      "queries": 4,
+      "recallAt1": 0,
+      "recallAt5": 75,
+      "recallAt10": 75,
+      "mrr": 0.2917,
+      "precisionAt1": 0,
+      "precisionAt5": 25,
+      "noResultAcc": 100
+    },
+    "ambiguous": {
+      "queries": 4,
+      "recallAt1": 50,
+      "recallAt5": 100,
+      "recallAt10": 100,
+      "mrr": 0.6667,
+      "precisionAt1": 50,
+      "precisionAt5": 36.7,
+      "noResultAcc": 100
+    },
+    "no_result": {
+      "queries": 4,
+      "recallAt1": 25,
+      "recallAt5": 25,
+      "recallAt10": 25,
+      "mrr": 0.25,
+      "precisionAt1": 25,
+      "precisionAt5": 25,
+      "noResultAcc": 25
+    }
+  },
+  "latencyStats": {
+    "meanLat": 16.083333333333332,
+    "medLat": 5,
+    "p95Lat": 57
+  },
+  "indexStats": {
+    "data/external_repos/bottle": {
+      "indexingTimeMs": 415,
+      "filesCount": 30,
+      "symbolsCount": 1044
+    },
+    "data/external_repos/express": {
+      "indexingTimeMs": 617,
+      "filesCount": 141,
+      "symbolsCount": 3101
+    },
+    "data/external_repos/zod": {
+      "indexingTimeMs": 3670,
+      "filesCount": 511,
+      "symbolsCount": 3530
+    },
+    "data/external_repos/gson": {
+      "indexingTimeMs": 1160,
+      "filesCount": 264,
+      "symbolsCount": 4239
+    }
+  },
+  "records": [
+    {
+      "queryId": "audit_bot_01",
+      "query": "tob",
+      "language": "python",
+      "repository": "bottle",
+      "category": "exact_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "tob"
+      ],
+      "returnedTop5": [
+        {
+          "name": "tob",
+          "kind": "function",
+          "file": "bottle.py",
+          "score": 0.5475,
+          "reasons": [
+            "Symbol name matches query term: 'tob'",
+            "Matched 1 query term(s) in identifier 'tob'"
+          ]
+        },
+        {
+          "name": "tobs",
+          "kind": "function",
+          "file": "test/tools.py",
+          "score": 0.465,
+          "reasons": [
+            "Matched 1 query term(s) in identifier 'tobs'",
+            "Calls related high-relevance function 'tob'"
+          ]
+        }
+      ],
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.5,
+      "latencyMs": 3
+    },
+    {
+      "queryId": "audit_bot_02",
+      "query": "Parse uploaded multi-part files and form attachments",
+      "language": "python",
+      "repository": "bottle",
+      "category": "functional_description",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "FileUpload",
+        "_MultipartParser"
+      ],
+      "returnedTop5": [
+        {
+          "name": "parse",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.445,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'parse'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "Called by related function 'parse'"
+          ]
+        },
+        {
+          "name": "parse",
+          "kind": "method",
+          "file": "test/test_multipart.py",
+          "score": 0.4383,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'parse'",
+            "File path 'test/test_multipart.py' matches query terms",
+            "Calls related high-relevance function 'parse'"
+          ]
+        },
+        {
+          "name": "forms",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.4025,
+          "reasons": [
+            "Symbol name contains exact term: 'form'",
+            "Associated docstring/comment matches 5 query term(s)"
+          ]
+        },
+        {
+          "name": "_parse_http_header",
+          "kind": "function",
+          "file": "bottle.py",
+          "score": 0.3825,
+          "reasons": [
+            "Symbol name contains exact term: 'Parse'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "Called by related function 'parse'"
+          ]
+        },
+        {
+          "name": "FormsDict",
+          "kind": "class",
+          "file": "bottle.py",
+          "score": 0.3275,
+          "reasons": [
+            "Symbol name contains exact term: 'form'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 2
+    },
+    {
+      "queryId": "audit_bot_03",
+      "query": "Convert text strings or bytes into UTF-8 encoded byte strings",
+      "language": "python",
+      "repository": "bottle",
+      "category": "generic_misleading_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "tob"
+      ],
+      "returnedTop5": [
+        {
+          "name": "test_bytes",
+          "kind": "method",
+          "file": "test/test_outputfilter.py",
+          "score": 0.3275,
+          "reasons": [
+            "Symbol name contains exact term: 'bytes'",
+            "Symbol name contains exact term: 'byte'",
+            "Matched 2 query term(s) in identifier 'test_bytes'"
+          ]
+        },
+        {
+          "name": "cookie_is_encoded",
+          "kind": "function",
+          "file": "bottle.py",
+          "score": 0.2918,
+          "reasons": [
+            "Symbol name contains exact term: 'encoded'"
+          ]
+        },
+        {
+          "name": "flush_text",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.2704,
+          "reasons": [
+            "Symbol name contains exact term: 'text'"
+          ]
+        },
+        {
+          "name": "test_multiline_strings_in_code_line",
+          "kind": "method",
+          "file": "test/test_stpl.py",
+          "score": 0.2704,
+          "reasons": [
+            "Symbol name contains exact term: 'strings'",
+            "Symbol name contains exact term: 'strings'"
+          ]
+        },
+        {
+          "name": "__init__",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.0857,
+          "reasons": [
+            "Associated docstring/comment matches 4 query term(s)"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 2
+    },
+    {
+      "queryId": "audit_bot_04",
+      "query": "Route matching and URL pattern compiler",
+      "language": "python",
+      "repository": "bottle",
+      "category": "cross_file",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "Router",
+        "Route"
+      ],
+      "returnedTop5": [
+        {
+          "name": "route",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.505,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'route'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "Calls related high-relevance function 'Route'"
+          ]
+        },
+        {
+          "name": "Route",
+          "kind": "class",
+          "file": "bottle.py",
+          "score": 0.5,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'Route'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "Called by related function 'route'"
+          ]
+        },
+        {
+          "name": "route",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.435,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'route'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "route",
+          "kind": "method",
+          "file": "test/test_mount.py",
+          "score": 0.415,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'route'",
+            "Calls related high-relevance function 'url'"
+          ]
+        },
+        {
+          "name": "url",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.3875,
+          "reasons": [
+            "Symbol name matches query term: 'url'",
+            "Called by related function 'route'"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 0.5,
+      "precisionAt1": 0,
+      "precisionAt5": 0.2,
+      "latencyMs": 3
+    },
+    {
+      "queryId": "audit_bot_05",
+      "query": "Server adapter for running WSGI applications",
+      "language": "python",
+      "repository": "bottle",
+      "category": "ambiguous",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "ServerAdapter",
+        "WSGIRefServer"
+      ],
+      "returnedTop5": [
+        {
+          "name": "AsyncioServerAdapter",
+          "kind": "class",
+          "file": "bottle.py",
+          "score": 0.4075,
+          "reasons": [
+            "Symbol name contains exact term: 'Server'",
+            "Symbol name contains exact term: 'adapter'",
+            "Matched 2 query term(s) in identifier 'AsyncioServerAdapter'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "wsgi",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.405,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'wsgi'"
+          ]
+        },
+        {
+          "name": "ServerAdapter",
+          "kind": "class",
+          "file": "bottle.py",
+          "score": 0.3475,
+          "reasons": [
+            "Symbol name contains exact term: 'Server'",
+            "Symbol name contains exact term: 'adapter'",
+            "Matched 2 query term(s) in identifier 'ServerAdapter'"
+          ]
+        },
+        {
+          "name": "WSGIRefServer",
+          "kind": "class",
+          "file": "bottle.py",
+          "score": 0.3475,
+          "reasons": [
+            "Symbol name contains exact term: 'Server'",
+            "Symbol name contains exact term: 'WSGI'",
+            "Matched 2 query term(s) in identifier 'WSGIRefServer'"
+          ]
+        },
+        {
+          "name": "GeventServer",
+          "kind": "class",
+          "file": "bottle.py",
+          "score": 0.3475,
+          "reasons": [
+            "Symbol name contains exact term: 'Server'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 0.3333333333333333,
+      "precisionAt1": 0,
+      "precisionAt5": 0.4,
+      "latencyMs": 3
+    },
+    {
+      "queryId": "audit_bot_06",
+      "query": "Quantum key distribution encryption handshake",
+      "language": "python",
+      "repository": "bottle",
+      "category": "no_result",
+      "isNoResult": true,
+      "expectedSymbols": [],
+      "returnedTop5": [
+        {
+          "name": "keys",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.235,
+          "reasons": []
+        },
+        {
+          "name": "keys",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.235,
+          "reasons": []
+        },
+        {
+          "name": "keys",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.235,
+          "reasons": []
+        },
+        {
+          "name": "test_overlay_filter_error_keeps_virtual_key",
+          "kind": "method",
+          "file": "test/test_config.py",
+          "score": 0.235,
+          "reasons": []
+        },
+        {
+          "name": "testWrongKey",
+          "kind": "method",
+          "file": "test/test_securecookies.py",
+          "score": 0.235,
+          "reasons": []
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 1
+    },
+    {
+      "queryId": "audit_exp_01",
+      "query": "app.listen",
+      "language": "javascript",
+      "repository": "express",
+      "category": "exact_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "app.listen"
+      ],
+      "returnedTop5": [
+        {
+          "name": "app.listen",
+          "kind": "function",
+          "file": "lib/application.js",
+          "score": 0.8,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'app.listen'",
+            "Matched 2 query term(s) in identifier 'app.listen'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "File path 'lib/application.js' matches query terms"
+          ]
+        },
+        {
+          "name": "app.defaultConfiguration",
+          "kind": "function",
+          "file": "lib/application.js",
+          "score": 0.45,
+          "reasons": [
+            "Matched 1 query term(s) in identifier 'app.defaultConfiguration'",
+            "Associated docstring/comment matches 1 query term(s)",
+            "File path 'lib/application.js' matches query terms"
+          ]
+        },
+        {
+          "name": "app.handle",
+          "kind": "function",
+          "file": "lib/application.js",
+          "score": 0.45,
+          "reasons": [
+            "Matched 1 query term(s) in identifier 'app.handle'",
+            "Associated docstring/comment matches 1 query term(s)",
+            "File path 'lib/application.js' matches query terms"
+          ]
+        },
+        {
+          "name": "app.use",
+          "kind": "function",
+          "file": "lib/application.js",
+          "score": 0.45,
+          "reasons": [
+            "Matched 1 query term(s) in identifier 'app.use'",
+            "Associated docstring/comment matches 1 query term(s)",
+            "File path 'lib/application.js' matches query terms"
+          ]
+        },
+        {
+          "name": "app.route",
+          "kind": "function",
+          "file": "lib/application.js",
+          "score": 0.45,
+          "reasons": [
+            "Matched 1 query term(s) in identifier 'app.route'",
+            "Associated docstring/comment matches 1 query term(s)",
+            "File path 'lib/application.js' matches query terms"
+          ]
+        }
+      ],
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.2,
+      "latencyMs": 5
+    },
+    {
+      "queryId": "audit_exp_02",
+      "query": "Mount middleware functions into the request processing chain",
+      "language": "javascript",
+      "repository": "express",
+      "category": "functional_description",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "app.use"
+      ],
+      "returnedTop5": [
+        {
+          "name": "app.request.querystring",
+          "kind": "function",
+          "file": "test/app.request.js",
+          "score": 0.3575,
+          "reasons": [
+            "Symbol name contains exact term: 'request'",
+            "Symbol kind matches requested target 'function'"
+          ]
+        },
+        {
+          "name": "app1.request.foobar",
+          "kind": "function",
+          "file": "test/app.request.js",
+          "score": 0.3575,
+          "reasons": [
+            "Symbol name contains exact term: 'request'",
+            "Symbol kind matches requested target 'function'"
+          ]
+        },
+        {
+          "name": "app1.request.foobar",
+          "kind": "function",
+          "file": "test/app.request.js",
+          "score": 0.3575,
+          "reasons": [
+            "Symbol name contains exact term: 'request'",
+            "Symbol kind matches requested target 'function'"
+          ]
+        },
+        {
+          "name": "app1.request.foobar",
+          "kind": "function",
+          "file": "test/app.request.js",
+          "score": 0.3575,
+          "reasons": [
+            "Symbol name contains exact term: 'request'",
+            "Symbol kind matches requested target 'function'"
+          ]
+        },
+        {
+          "name": "app2.request.foobar",
+          "kind": "function",
+          "file": "test/app.request.js",
+          "score": 0.3575,
+          "reasons": [
+            "Symbol name contains exact term: 'request'",
+            "Symbol kind matches requested target 'function'"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": true,
+      "reciprocalRank": 0.1,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 1
+    },
+    {
+      "queryId": "audit_exp_03",
+      "query": "Verify file existence synchronously or catch file system errors",
+      "language": "javascript",
+      "repository": "express",
+      "category": "generic_misleading_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "tryStat"
+      ],
+      "returnedTop5": [
+        {
+          "name": "error",
+          "kind": "function",
+          "file": "examples/error/index.js",
+          "score": 0.0917,
+          "reasons": []
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 1
+    },
+    {
+      "queryId": "audit_exp_04",
+      "query": "Send JSON response with appropriate content-type headers",
+      "language": "javascript",
+      "repository": "express",
+      "category": "cross_file",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "res.json",
+        "res.send"
+      ],
+      "returnedTop5": [
+        {
+          "name": "json",
+          "kind": "function",
+          "file": "examples/content-negotiation/users.js",
+          "score": 0.4121,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'json'",
+            "Calls related high-relevance function 'json'"
+          ]
+        },
+        {
+          "name": "res.sendFile",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.3918,
+          "reasons": [
+            "Symbol name contains exact term: 'Send'",
+            "Associated docstring/comment matches 5 query term(s)"
+          ]
+        },
+        {
+          "name": "res.send",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.3889,
+          "reasons": [
+            "Symbol name contains exact term: 'Send'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "Calls related high-relevance function 'json'"
+          ]
+        },
+        {
+          "name": "res.json",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.3489,
+          "reasons": [
+            "Symbol name contains exact term: 'JSON'",
+            "Associated docstring/comment matches 3 query term(s)"
+          ]
+        },
+        {
+          "name": "res.sendStatus",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.3275,
+          "reasons": [
+            "Symbol name contains exact term: 'Send'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 0.3333333333333333,
+      "precisionAt1": 0,
+      "precisionAt5": 0.4,
+      "latencyMs": 9
+    },
+    {
+      "queryId": "audit_exp_05",
+      "query": "Handle incoming HTTP requests and dispatch to route stack",
+      "language": "javascript",
+      "repository": "express",
+      "category": "ambiguous",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "app.handle",
+        "app.route"
+      ],
+      "returnedTop5": [
+        {
+          "name": "app.handle",
+          "kind": "function",
+          "file": "lib/application.js",
+          "score": 0.3346,
+          "reasons": [
+            "Symbol name contains exact term: 'Handle'",
+            "Associated docstring/comment matches 3 query term(s)"
+          ]
+        },
+        {
+          "name": "app.route",
+          "kind": "function",
+          "file": "lib/application.js",
+          "score": 0.3132,
+          "reasons": [
+            "Symbol name contains exact term: 'route'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "handleHeaders",
+          "kind": "function",
+          "file": "test/res.sendFile.js",
+          "score": 0.2704,
+          "reasons": [
+            "Symbol name contains exact term: 'Handle'"
+          ]
+        }
+      ],
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.6666666666666666,
+      "latencyMs": 5
+    },
+    {
+      "queryId": "audit_exp_06",
+      "query": "Distributed consensus algorithm with Raft leader election",
+      "language": "javascript",
+      "repository": "express",
+      "category": "no_result",
+      "isNoResult": true,
+      "expectedSymbols": [],
+      "returnedTop5": [],
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 1,
+      "latencyMs": 5
+    },
+    {
+      "queryId": "audit_zod_01",
+      "query": "ZodMiniType",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "exact_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "ZodMiniType",
+        "_ZodMiniType"
+      ],
+      "returnedTop5": [
+        {
+          "name": "ZodMiniType",
+          "kind": "interface",
+          "file": "packages/zod/src/v4/mini/tests/prototypes.test.ts",
+          "score": 0.7,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'ZodMiniType'",
+            "Matched 3 query term(s) in identifier 'ZodMiniType'",
+            "File path 'packages/zod/src/v4/mini/tests/prototypes.test.ts' matches query terms"
+          ]
+        },
+        {
+          "name": "ZodMiniType",
+          "kind": "interface",
+          "file": "packages/zod/src/v4/mini/schemas.ts",
+          "score": 0.6667,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'ZodMiniType'",
+            "Matched 3 query term(s) in identifier 'ZodMiniType'",
+            "File path 'packages/zod/src/v4/mini/schemas.ts' matches query terms"
+          ]
+        },
+        {
+          "name": "_ZodMiniType",
+          "kind": "interface",
+          "file": "packages/zod/src/v4/mini/schemas.ts",
+          "score": 0.5442,
+          "reasons": [
+            "Symbol name contains exact term: 'ZodMiniType'",
+            "Matched 3 query term(s) in identifier '_ZodMiniType'",
+            "File path 'packages/zod/src/v4/mini/schemas.ts' matches query terms"
+          ]
+        },
+        {
+          "name": "ZodMiniString",
+          "kind": "interface",
+          "file": "packages/zod/src/v4/mini/schemas.ts",
+          "score": 0.5417,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'ZodMiniString'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "File path 'packages/zod/src/v4/mini/schemas.ts' matches query terms"
+          ]
+        },
+        {
+          "name": "ZodMiniStringFormat",
+          "kind": "interface",
+          "file": "packages/zod/src/v4/mini/schemas.ts",
+          "score": 0.5417,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'ZodMiniStringFormat'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "File path 'packages/zod/src/v4/mini/schemas.ts' matches query terms"
+          ]
+        }
+      ],
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.6,
+      "latencyMs": 41
+    },
+    {
+      "queryId": "audit_zod_02",
+      "query": "Validate email address format and domain schema",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "functional_description",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "email",
+        "ZodMiniEmail"
+      ],
+      "returnedTop5": [
+        {
+          "name": "email",
+          "kind": "method",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.4617,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'email'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "email",
+          "kind": "function",
+          "file": "packages/zod/src/v4/mini/schemas.ts",
+          "score": 0.4367,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'email'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "email",
+          "kind": "function",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.4367,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'email'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "validate",
+          "kind": "method",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.4217,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'validate'",
+            "Calls related high-relevance function 'validate'"
+          ]
+        },
+        {
+          "name": "email",
+          "kind": "method",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.4167,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'email'"
+          ]
+        }
+      ],
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.8,
+      "latencyMs": 28
+    },
+    {
+      "queryId": "audit_zod_03",
+      "query": "Make all object properties optional recursively",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "generic_misleading_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "deepPartial"
+      ],
+      "returnedTop5": [
+        {
+          "name": "properties",
+          "kind": "method",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.49,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'properties'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "object",
+          "kind": "function",
+          "file": "packages/zod/src/v4/mini/schemas.ts",
+          "score": 0.46,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'object'",
+            "Signature parameters match query terms",
+            "Called by related function 'object'"
+          ]
+        },
+        {
+          "name": "object",
+          "kind": "function",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.46,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'object'",
+            "Signature parameters match query terms",
+            "Called by related function 'object'"
+          ]
+        },
+        {
+          "name": "object",
+          "kind": "arrow_function",
+          "file": "packages/zod/src/v4/classic/tests/cyclic-data.test.ts",
+          "score": 0.45,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'object'",
+            "Calls related high-relevance function 'object'"
+          ]
+        },
+        {
+          "name": "object",
+          "kind": "method",
+          "file": "packages/zod/src/v4/classic/tests/recursive-types.test.ts",
+          "score": 0.45,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'object'",
+            "Calls related high-relevance function 'object'"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 9
+    },
+    {
+      "queryId": "audit_zod_04",
+      "query": "Parse and coerce boolean input values",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "cross_file",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "boolean"
+      ],
+      "returnedTop5": [
+        {
+          "name": "parse",
+          "kind": "method",
+          "file": "packages/zod/src/v4/core/schemas.ts",
+          "score": 0.505,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'parse'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "Signature parameters match query terms",
+            "Called by related function 'parse'"
+          ]
+        },
+        {
+          "name": "input",
+          "kind": "function",
+          "file": "packages/zod/src/v4/classic/in-out.ts",
+          "score": 0.47,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'input'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "boolean",
+          "kind": "function",
+          "file": "packages/zod/src/v4/mini/coerce.ts",
+          "score": 0.45,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'boolean'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "boolean",
+          "kind": "function",
+          "file": "packages/zod/src/v4/classic/coerce.ts",
+          "score": 0.45,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'boolean'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "parse",
+          "kind": "method",
+          "file": "packages/bench/safeparse.ts",
+          "score": 0.435,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'parse'",
+            "Calls related high-relevance function 'parse'"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 0.3333333333333333,
+      "precisionAt1": 0,
+      "precisionAt5": 0.4,
+      "latencyMs": 16
+    },
+    {
+      "queryId": "audit_zod_05",
+      "query": "UUID string validator for v4 and v7 identifiers",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "ambiguous",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "uuid",
+        "uuidv4",
+        "uuidv7",
+        "ZodMiniUUID"
+      ],
+      "returnedTop5": [
+        {
+          "name": "uuid",
+          "kind": "method",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.4467,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'uuid'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "string",
+          "kind": "function",
+          "file": "packages/zod/src/v4/mini/coerce.ts",
+          "score": 0.4367,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'string'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "string",
+          "kind": "function",
+          "file": "packages/zod/src/v4/mini/schemas.ts",
+          "score": 0.4367,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'string'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "string",
+          "kind": "function",
+          "file": "packages/zod/src/v4/classic/coerce.ts",
+          "score": 0.4367,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'string'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "string",
+          "kind": "function",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.4367,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'string'",
+            "Signature parameters match query terms"
+          ]
+        }
+      ],
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.2,
+      "latencyMs": 17
+    },
+    {
+      "queryId": "audit_zod_06",
+      "query": "GraphQL subscription query execution engine",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "no_result",
+      "isNoResult": true,
+      "expectedSymbols": [],
+      "returnedTop5": [
+        {
+          "name": "query",
+          "kind": "function",
+          "file": "packages/docs/loaders/stars.ts",
+          "score": 0.4,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'query'"
+          ]
+        },
+        {
+          "name": "Graph",
+          "kind": "interface",
+          "file": "packages/bench/memory/retainers.ts",
+          "score": 0.3475,
+          "reasons": [
+            "Symbol name matches query term: 'graph'"
+          ]
+        },
+        {
+          "name": "graphql",
+          "kind": "function",
+          "file": "scripts/triage-signal.ts",
+          "score": 0.335,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'graphql'",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "loadGraph",
+          "kind": "function",
+          "file": "packages/bench/memory/retainers.ts",
+          "score": 0.225,
+          "reasons": []
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 0
+    },
+    {
+      "queryId": "audit_gs_01",
+      "query": "newBuilder",
+      "language": "java",
+      "repository": "gson",
+      "category": "exact_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "newBuilder"
+      ],
+      "returnedTop5": [
+        {
+          "name": "newBuilder",
+          "kind": "method",
+          "file": "proto/src/main/java/com/google/gson/protobuf/ProtoTypeAdapter.java",
+          "score": 0.75,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'newBuilder'",
+            "Matched 2 query term(s) in identifier 'newBuilder'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "newBuilder",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/Gson.java",
+          "score": 0.75,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'newBuilder'",
+            "Matched 2 query term(s) in identifier 'newBuilder'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "testDefaultGsonNewBuilderModification",
+          "kind": "method",
+          "file": "gson/src/test/java/com/google/gson/GsonTest.java",
+          "score": 0.6675,
+          "reasons": [
+            "Symbol name contains exact term: 'newBuilder'",
+            "Matched 2 query term(s) in identifier 'testDefaultGsonNewBuilderModification'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "Calls related high-relevance function 'newBuilder'"
+          ]
+        },
+        {
+          "name": "testNewBuilderModification",
+          "kind": "method",
+          "file": "gson/src/test/java/com/google/gson/GsonTest.java",
+          "score": 0.6675,
+          "reasons": [
+            "Symbol name contains exact term: 'newBuilder'",
+            "Matched 2 query term(s) in identifier 'testNewBuilderModification'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "Calls related high-relevance function 'newBuilder'"
+          ]
+        }
+      ],
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.5,
+      "latencyMs": 10
+    },
+    {
+      "queryId": "audit_gs_02",
+      "query": "Serialize Java object into JSON string format",
+      "language": "java",
+      "repository": "gson",
+      "category": "functional_description",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "toJson"
+      ],
+      "returnedTop5": [
+        {
+          "name": "serialize",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/JsonSerializationContext.java",
+          "score": 0.5483,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'serialize'",
+            "Associated docstring/comment matches 4 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/JsonSerializationContext.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'serialize'"
+          ]
+        },
+        {
+          "name": "serialize",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/JsonSerializer.java",
+          "score": 0.54,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'serialize'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/JsonSerializer.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'serialize'"
+          ]
+        },
+        {
+          "name": "serialize",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/JsonSerializationContext.java",
+          "score": 0.5233,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'serialize'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/JsonSerializationContext.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'serialize'"
+          ]
+        },
+        {
+          "name": "serialize",
+          "kind": "method",
+          "file": "gson/src/test/java/com/google/gson/functional/JsonAdapterSerializerDeserializerTest.java",
+          "score": 0.485,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'serialize'",
+            "File path 'gson/src/test/java/com/google/gson/functional/JsonAdapterSerializerDeserializerTest.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'serialize'"
+          ]
+        },
+        {
+          "name": "fromJson",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/Gson.java",
+          "score": 0.4842,
+          "reasons": [
+            "Symbol name contains exact term: 'JSON'",
+            "Associated docstring/comment matches 6 query term(s)",
+            "Signature parameters match query terms"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 70
+    },
+    {
+      "queryId": "audit_gs_03",
+      "query": "Write JSON string token or null value safely",
+      "language": "java",
+      "repository": "gson",
+      "category": "generic_misleading_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "nullSafe",
+        "write"
+      ],
+      "returnedTop5": [
+        {
+          "name": "value",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+          "score": 0.6014,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'value'",
+            "Associated docstring/comment matches 4 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/stream/JsonWriter.java' matches query terms",
+            "Signature parameters match query terms",
+            "Calls related high-relevance function 'string'"
+          ]
+        },
+        {
+          "name": "value",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+          "score": 0.5714,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'value'",
+            "Associated docstring/comment matches 4 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/stream/JsonWriter.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'write'"
+          ]
+        },
+        {
+          "name": "value",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+          "score": 0.55,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'value'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/stream/JsonWriter.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'write'"
+          ]
+        },
+        {
+          "name": "value",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+          "score": 0.55,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'value'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/stream/JsonWriter.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'write'"
+          ]
+        },
+        {
+          "name": "write",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+          "score": 0.545,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'write'",
+            "Associated docstring/comment matches 5 query term(s)",
+            "Signature parameters match query terms",
+            "Called by related function 'write'"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 0.2,
+      "precisionAt1": 0,
+      "precisionAt5": 0.2,
+      "latencyMs": 49
+    },
+    {
+      "queryId": "audit_gs_04",
+      "query": "Convert JSON syntax tree to and from Java types",
+      "language": "java",
+      "repository": "gson",
+      "category": "cross_file",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "TypeAdapter",
+        "Gson"
+      ],
+      "returnedTop5": [
+        {
+          "name": "fromJsonTree",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+          "score": 0.5008,
+          "reasons": [
+            "Symbol name contains exact term: 'JSON'",
+            "Symbol name contains exact term: 'tree'",
+            "Matched 2 query term(s) in identifier 'fromJsonTree'",
+            "Associated docstring/comment matches 4 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/TypeAdapter.java' matches query terms",
+            "Signature parameters match query terms"
+          ]
+        },
+        {
+          "name": "JsonTreeTest",
+          "kind": "class",
+          "file": "gson/src/test/java/com/google/gson/functional/JsonTreeTest.java",
+          "score": 0.4775,
+          "reasons": [
+            "Symbol name contains exact term: 'JSON'",
+            "Symbol name contains exact term: 'tree'",
+            "Matched 2 query term(s) in identifier 'JsonTreeTest'",
+            "Associated docstring/comment matches 4 query term(s)",
+            "File path 'gson/src/test/java/com/google/gson/functional/JsonTreeTest.java' matches query terms"
+          ]
+        },
+        {
+          "name": "toJsonTree",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+          "score": 0.4608,
+          "reasons": [
+            "Symbol name contains exact term: 'JSON'",
+            "Symbol name contains exact term: 'tree'",
+            "Matched 2 query term(s) in identifier 'toJsonTree'",
+            "Associated docstring/comment matches 4 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/TypeAdapter.java' matches query terms"
+          ]
+        },
+        {
+          "name": "toJsonTree",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/Gson.java",
+          "score": 0.4442,
+          "reasons": [
+            "Symbol name contains exact term: 'JSON'",
+            "Symbol name contains exact term: 'tree'",
+            "Matched 2 query term(s) in identifier 'toJsonTree'",
+            "Associated docstring/comment matches 4 query term(s)"
+          ]
+        },
+        {
+          "name": "fromJson",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/Gson.java",
+          "score": 0.4392,
+          "reasons": [
+            "Symbol name contains exact term: 'JSON'",
+            "Associated docstring/comment matches 5 query term(s)",
+            "Signature parameters match query terms"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 57
+    },
+    {
+      "queryId": "audit_gs_05",
+      "query": "Read and deserialize JSON input stream into object",
+      "language": "java",
+      "repository": "gson",
+      "category": "ambiguous",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "fromJson",
+        "read"
+      ],
+      "returnedTop5": [
+        {
+          "name": "deserialize",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/JsonDeserializer.java",
+          "score": 0.5783,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'deserialize'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/JsonDeserializer.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'deserialize'"
+          ]
+        },
+        {
+          "name": "deserialize",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/JsonDeserializationContext.java",
+          "score": 0.5417,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'deserialize'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "Signature parameters match query terms",
+            "Called by related function 'deserialize'"
+          ]
+        },
+        {
+          "name": "read",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+          "score": 0.51,
+          "reasons": [
+            "Exact case-insensitive symbol name match: 'read'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "Signature parameters match query terms",
+            "Called by related function 'read'"
+          ]
+        },
+        {
+          "name": "deserialize",
+          "kind": "method",
+          "file": "gson/src/test/java/com/google/gson/functional/JsonAdapterSerializerDeserializerTest.java",
+          "score": 0.5033,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'deserialize'",
+            "File path 'gson/src/test/java/com/google/gson/functional/JsonAdapterSerializerDeserializerTest.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'deserialize'"
+          ]
+        },
+        {
+          "name": "deserialize",
+          "kind": "method",
+          "file": "gson/src/test/java/com/google/gson/functional/JsonAdapterSerializerDeserializerTest.java",
+          "score": 0.5033,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'deserialize'",
+            "File path 'gson/src/test/java/com/google/gson/functional/JsonAdapterSerializerDeserializerTest.java' matches query terms",
+            "Signature parameters match query terms",
+            "Called by related function 'deserialize'"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 0.3333333333333333,
+      "precisionAt1": 0,
+      "precisionAt5": 0.2,
+      "latencyMs": 44
+    },
+    {
+      "queryId": "audit_gs_06",
+      "query": "WebGPU compute pipeline shaders dispatch",
+      "language": "java",
+      "repository": "gson",
+      "category": "no_result",
+      "isNoResult": true,
+      "expectedSymbols": [],
+      "returnedTop5": [
+        {
+          "name": "computeValue",
+          "kind": "method",
+          "file": "proto/src/main/java/com/google/gson/protobuf/LegacyProtoTypeAdapterFactory.java",
+          "score": 0.2775,
+          "reasons": [
+            "Symbol name contains exact term: 'compute'"
+          ]
+        },
+        {
+          "name": "Computer",
+          "kind": "class",
+          "file": "gson/src/test/java/com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest.java",
+          "score": 0.2275,
+          "reasons": [
+            "Symbol name contains exact term: 'compute'"
+          ]
+        },
+        {
+          "name": "Computer",
+          "kind": "constructor",
+          "file": "gson/src/test/java/com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest.java",
+          "score": 0.2275,
+          "reasons": [
+            "Symbol name contains exact term: 'compute'"
+          ]
+        },
+        {
+          "name": "Computer2",
+          "kind": "class",
+          "file": "gson/src/test/java/com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest.java",
+          "score": 0.2275,
+          "reasons": [
+            "Symbol name contains exact term: 'compute'"
+          ]
+        },
+        {
+          "name": "Computer2",
+          "kind": "constructor",
+          "file": "gson/src/test/java/com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest.java",
+          "score": 0.2275,
+          "reasons": [
+            "Symbol name contains exact term: 'compute'"
+          ]
+        }
+      ],
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "latencyMs": 5
+    }
+  ]
+}

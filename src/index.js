@@ -15,9 +15,12 @@ const HistoryStore = require('./storage/HistoryStore');
 const { HistoryCache, CACHE_SYSTEM_VERSION } = require('./storage/HistoryCache');
 const HistoryTracker = require('./tracker/HistoryTracker');
 const HistoricalRetriever = require('./retrieval/HistoricalRetriever');
+const HistoricalRetrievalAdapter = require('./retrieval/HistoricalRetrievalAdapter');
 const HistoryEvaluator = require('./evaluation/HistoryEvaluator');
+const structural = require('./structural');
 
 module.exports = {
+  // Historical pipeline
   GitHistoryReader,
   LanguageAdapterRegistry,
   defaultRegistry,
@@ -38,5 +41,10 @@ module.exports = {
   CACHE_SYSTEM_VERSION,
   HistoryTracker,
   HistoricalRetriever,
-  HistoryEvaluator
+  HistoricalRetrievalAdapter,
+  HistoryEvaluator,
+
+  // Structural current-code retrieval pipeline
+  ...structural,
+  structural
 };

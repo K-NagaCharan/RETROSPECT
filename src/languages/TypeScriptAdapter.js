@@ -17,10 +17,33 @@ class TypeScriptAdapter extends JavaScriptAdapter {
     const traverse = (node, scopeStack = []) => {
       if (!node) return;
 
-      // Handle class declaration or interface declaration
-      if (node.type === 'class_declaration' || node.type === 'class' || node.type === 'interface_declaration') {
+      // Handle class declaration, interface declaration, or enum declaration
+      if (node.type === 'class_declaration' || node.type === 'class' || node.type === 'interface_declaration' || node.type === 'enum_declaration') {
         const nameNode = node.childForFieldName('name');
         const className = nameNode ? this._nodeText(nameNode, sourceCode) : 'AnonymousType';
+        const docstring = this._extractLeadingComment(node, sourceCode);
+        const range = this._nodeRange(node);
+        const source = this._nodeText(node, sourceCode);
+        const qualifiedName = scopeStack.length > 0 ? `${scopeStack.join('.')}.${className}` : className;
+        const symbolType = node.type === 'interface_declaration' ? 'interface' : (node.type === 'enum_declaration' ? 'enum' : 'class');
+
+        const classSymbol = new SymbolRecord({
+          name: className,
+          qualifiedName,
+          enclosingScope: [...scopeStack],
+          parameters: [],
+          normalizedSignature: `${symbolType} ${className}`,
+          range,
+          source,
+          language: 'typescript',
+          filePath,
+          symbolType,
+          docstring,
+          metadata: { isType: true, symbolType },
+          extractionStatus: hasSyntaxError ? 'partial' : 'success'
+        });
+        symbols.push(classSymbol);
+
         const newScope = [...scopeStack, className];
         const bodyNode = node.childForFieldName('body');
         if (bodyNode) {
@@ -50,6 +73,8 @@ class TypeScriptAdapter extends JavaScriptAdapter {
 
         const normalizedSignature = this.normalizeSignature(name, parameters, returnType);
         const qualifiedName = scopeStack.length > 0 ? `${scopeStack.join('.')}.${name}` : name;
+        const docstring = this._extractLeadingComment(node, sourceCode);
+        const calls = this._extractCalls(node, sourceCode);
 
         // Modifiers (accessibility, static, async, abstract, readonly)
         const modifiers = [];
@@ -79,6 +104,8 @@ class TypeScriptAdapter extends JavaScriptAdapter {
           filePath,
           symbolType,
           modifiers,
+          docstring,
+          calls,
           astSummary: { nodeType: node.type },
           metadata: {
             isConstructor,
@@ -111,6 +138,8 @@ class TypeScriptAdapter extends JavaScriptAdapter {
 
         const normalizedSignature = this.normalizeSignature(name, parameters, returnType);
         const qualifiedName = scopeStack.length > 0 ? `${scopeStack.join('.')}.${name}` : name;
+        const docstring = this._extractLeadingComment(node, sourceCode);
+        const calls = this._extractCalls(node, sourceCode);
 
         const modifiers = [];
         for (let i = 0; i < node.childCount; i++) {
@@ -136,6 +165,8 @@ class TypeScriptAdapter extends JavaScriptAdapter {
           filePath,
           symbolType: 'function',
           modifiers,
+          docstring,
+          calls,
           astSummary: { nodeType: node.type },
           metadata: {
             typeParameters,
@@ -155,13 +186,14 @@ class TypeScriptAdapter extends JavaScriptAdapter {
       // Handle variable declarator: const foo = (...) => ...
       if (node.type === 'variable_declarator') {
         const nameNode = node.childForFieldName('name');
-        const valueNode = node.childForFieldName('value');
+        const rawValueNode = node.childForFieldName('value');
+        const valueNode = this._unwrapFunctionValue(rawValueNode);
         if (valueNode && (valueNode.type === 'arrow_function' || valueNode.type === 'function_expression')) {
           const name = nameNode ? this._nodeText(nameNode, sourceCode) : 'anonymous';
           const paramsNode = valueNode.childForFieldName('parameters');
           const parameters = this._extractParameters(paramsNode, sourceCode);
 
-          const returnTypeNode = valueNode.childForFieldName('return_type') || this._findChildType(valueNode, 'type_annotation');
+          const returnTypeNode = valueNode.childForFieldName('return_type') || this._findChildType(valueNode, 'type_annotation') || node.childForFieldName('type');
           let returnType = null;
           if (returnTypeNode) {
             returnType = this._nodeText(returnTypeNode, sourceCode).replace(/^:\s*/, '').trim();
@@ -170,6 +202,8 @@ class TypeScriptAdapter extends JavaScriptAdapter {
           const normalizedSignature = this.normalizeSignature(name, parameters, returnType);
           const qualifiedName = scopeStack.length > 0 ? `${scopeStack.join('.')}.${name}` : name;
           const symbolType = valueNode.type === 'arrow_function' ? 'arrow_function' : 'function';
+          const docstring = this._extractLeadingComment(node, sourceCode);
+          const calls = this._extractCalls(valueNode, sourceCode);
 
           const modifiers = [];
           if (valueNode.text.startsWith('async')) modifiers.push('async');
@@ -187,6 +221,8 @@ class TypeScriptAdapter extends JavaScriptAdapter {
             filePath,
             symbolType,
             modifiers,
+            docstring,
+            calls,
             astSummary: { nodeType: valueNode.type },
             metadata: {},
             extractionStatus: hasSyntaxError ? 'partial' : 'success'

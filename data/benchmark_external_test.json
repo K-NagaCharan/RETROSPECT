@@ -1,0 +1,178 @@
+[
+  {
+    "query_id": "test_bot_01",
+    "query": "touni",
+    "language": "python",
+    "repository": "bottle",
+    "repo_path": "data/external_repos/bottle",
+    "category": "exact_name",
+    "expected_symbols": ["touni"],
+    "is_no_result": false,
+    "rationale": "Exact helper function name query in Bottle for string decoding."
+  },
+  {
+    "query_id": "test_bot_02",
+    "query": "HTTP request redirect with status code",
+    "language": "python",
+    "repository": "bottle",
+    "repo_path": "data/external_repos/bottle",
+    "category": "functional_description",
+    "expected_symbols": ["redirect"],
+    "is_no_result": false,
+    "rationale": "High-level HTTP response redirection helper function in Bottle."
+  },
+  {
+    "query_id": "test_bot_03",
+    "query": "Decorator marking deprecated API calls with warnings",
+    "language": "python",
+    "repository": "bottle",
+    "repo_path": "data/external_repos/bottle",
+    "category": "generic_misleading_name",
+    "expected_symbols": ["depr"],
+    "is_no_result": false,
+    "rationale": "Deprecation warning decorator with terse identifier 'depr'."
+  },
+  {
+    "query_id": "test_bot_04",
+    "query": "Kubernetes custom resource definition ingress controller",
+    "language": "python",
+    "repository": "bottle",
+    "repo_path": "data/external_repos/bottle",
+    "category": "no_result",
+    "expected_symbols": [],
+    "is_no_result": true,
+    "rationale": "Absent topic; retriever must return zero results."
+  },
+  {
+    "query_id": "test_exp_01",
+    "query": "res.cookie",
+    "language": "javascript",
+    "repository": "express",
+    "repo_path": "data/external_repos/express",
+    "category": "exact_name",
+    "expected_symbols": ["res.cookie"],
+    "is_no_result": false,
+    "rationale": "Exact method query for setting HTTP cookies on response."
+  },
+  {
+    "query_id": "test_exp_02",
+    "query": "Render view template with data object and callback",
+    "language": "javascript",
+    "repository": "express",
+    "repo_path": "data/external_repos/express",
+    "category": "functional_description",
+    "expected_symbols": ["app.render", "res.render"],
+    "is_no_result": false,
+    "rationale": "Template engine view rendering methods in application.js and response.js."
+  },
+  {
+    "query_id": "test_exp_03",
+    "query": "Dispatch incoming HTTP request to matching route",
+    "language": "javascript",
+    "repository": "express",
+    "repo_path": "data/external_repos/express",
+    "category": "ambiguous",
+    "expected_symbols": ["app.handle", "app.route"],
+    "is_no_result": false,
+    "rationale": "Core request dispatch and route handling methods."
+  },
+  {
+    "query_id": "test_exp_04",
+    "query": "TensorFlow neural network convolutional weight matrix",
+    "language": "javascript",
+    "repository": "express",
+    "repo_path": "data/external_repos/express",
+    "category": "no_result",
+    "expected_symbols": [],
+    "is_no_result": true,
+    "rationale": "Absent topic; retriever must return zero results."
+  },
+  {
+    "query_id": "test_zod_01",
+    "query": "deepPartial",
+    "language": "typescript",
+    "repository": "zod",
+    "repo_path": "data/external_repos/zod",
+    "category": "exact_name",
+    "expected_symbols": ["deepPartial"],
+    "is_no_result": false,
+    "rationale": "Exact function name query for deep partial schema helper."
+  },
+  {
+    "query_id": "test_zod_02",
+    "query": "Credit card Luhn algorithm validation schema",
+    "language": "typescript",
+    "repository": "zod",
+    "repo_path": "data/external_repos/zod",
+    "category": "functional_description",
+    "expected_symbols": ["creditCard", "ZodMiniCreditCard"],
+    "is_no_result": false,
+    "rationale": "Credit card format validation schema in schemas.ts."
+  },
+  {
+    "query_id": "test_zod_03",
+    "query": "Parse and coerce boolean input values",
+    "language": "typescript",
+    "repository": "zod",
+    "repo_path": "data/external_repos/zod",
+    "category": "cross_file",
+    "expected_symbols": ["boolean"],
+    "is_no_result": false,
+    "rationale": "Boolean coercion helper in packages/zod/src/v4/mini/coerce.ts."
+  },
+  {
+    "query_id": "test_zod_04",
+    "query": "WebAssembly linear memory boundary allocator",
+    "language": "typescript",
+    "repository": "zod",
+    "repo_path": "data/external_repos/zod",
+    "category": "no_result",
+    "expected_symbols": [],
+    "is_no_result": true,
+    "rationale": "Absent topic; retriever must return zero results."
+  },
+  {
+    "query_id": "test_gs_01",
+    "query": "fromJsonTree",
+    "language": "java",
+    "repository": "gson",
+    "repo_path": "data/external_repos/gson",
+    "category": "exact_name",
+    "expected_symbols": ["fromJsonTree"],
+    "is_no_result": false,
+    "rationale": "Exact method query for deserializing from JsonElement tree."
+  },
+  {
+    "query_id": "test_gs_02",
+    "query": "Deserialize JSON stream into Java object tree",
+    "language": "java",
+    "repository": "gson",
+    "repo_path": "data/external_repos/gson",
+    "category": "functional_description",
+    "expected_symbols": ["fromJson", "read"],
+    "is_no_result": false,
+    "rationale": "Deserialization methods in Gson and TypeAdapter."
+  },
+  {
+    "query_id": "test_gs_03",
+    "query": "Safe null-handling type adapter wrapper",
+    "language": "java",
+    "repository": "gson",
+    "repo_path": "data/external_repos/gson",
+    "category": "generic_misleading_name",
+    "expected_symbols": ["nullSafe", "NullSafeTypeAdapter"],
+    "is_no_result": false,
+    "rationale": "NullSafe adapter method and class in TypeAdapter.java."
+  },
+  {
+    "query_id": "test_gs_04",
+    "query": "Apache Kafka partition consumer offset coordinator",
+    "language": "java",
+    "repository": "gson",
+    "repo_path": "data/external_repos/gson",
+    "category": "no_result",
+    "expected_symbols": [],
+    "is_no_result": true,
+    "rationale": "Absent topic; retriever must return zero results."
+  }
+]

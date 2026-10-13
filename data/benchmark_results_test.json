@@ -1,0 +1,956 @@
+{
+  "split": "test",
+  "datasetFile": "data/benchmark_external_test.json",
+  "timestamp": "2026-10-12T05:31:47.608Z",
+  "answerableMetrics": {
+    "count": 12,
+    "candidateRecall": 100,
+    "recallAt1": 50,
+    "recallAt5": 75,
+    "recallAt10": 75,
+    "mrr": 0.5792,
+    "precisionAt1": 50,
+    "precisionAt5": 34.2
+  },
+  "noResultMetrics": {
+    "count": 4,
+    "trueNegatives": 4,
+    "falsePositives": 0,
+    "accuracy": 100,
+    "precision": 100,
+    "recall": 100
+  },
+  "perRepo": {
+    "bottle": {
+      "count": 3,
+      "candidateRecall": 100,
+      "recallAt1": 33.3,
+      "recallAt5": 66.7,
+      "recallAt10": 66.7,
+      "mrr": 0.4167,
+      "precisionAt1": 33.3,
+      "precisionAt5": 40
+    },
+    "express": {
+      "count": 3,
+      "candidateRecall": 100,
+      "recallAt1": 33.3,
+      "recallAt5": 66.7,
+      "recallAt10": 66.7,
+      "mrr": 0.5,
+      "precisionAt1": 33.3,
+      "precisionAt5": 20
+    },
+    "zod": {
+      "count": 3,
+      "candidateRecall": 100,
+      "recallAt1": 66.7,
+      "recallAt5": 66.7,
+      "recallAt10": 66.7,
+      "mrr": 0.6667,
+      "precisionAt1": 66.7,
+      "precisionAt5": 40
+    },
+    "gson": {
+      "count": 3,
+      "candidateRecall": 100,
+      "recallAt1": 66.7,
+      "recallAt5": 100,
+      "recallAt10": 100,
+      "mrr": 0.7333,
+      "precisionAt1": 66.7,
+      "precisionAt5": 36.7
+    }
+  },
+  "perCategory": {
+    "exact_name": {
+      "count": 4,
+      "candidateRecall": 100,
+      "recallAt1": 100,
+      "recallAt5": 100,
+      "recallAt10": 100,
+      "mrr": 1,
+      "precisionAt1": 100,
+      "precisionAt5": 57.5
+    },
+    "functional_description": {
+      "count": 4,
+      "candidateRecall": 100,
+      "recallAt1": 25,
+      "recallAt5": 100,
+      "recallAt10": 100,
+      "mrr": 0.4875,
+      "precisionAt1": 25,
+      "precisionAt5": 35
+    },
+    "generic_misleading_name": {
+      "count": 2,
+      "candidateRecall": 100,
+      "recallAt1": 50,
+      "recallAt5": 50,
+      "recallAt10": 50,
+      "mrr": 0.5,
+      "precisionAt1": 50,
+      "precisionAt5": 20
+    },
+    "no_result": {
+      "count": 4,
+      "trueNegatives": 4,
+      "falsePositives": 0,
+      "accuracy": 100,
+      "precision": 100,
+      "recall": 100
+    },
+    "ambiguous": {
+      "count": 1,
+      "candidateRecall": 100,
+      "recallAt1": 0,
+      "recallAt5": 0,
+      "recallAt10": 0,
+      "mrr": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0
+    },
+    "cross_file": {
+      "count": 1,
+      "candidateRecall": 100,
+      "recallAt1": 0,
+      "recallAt5": 0,
+      "recallAt10": 0,
+      "mrr": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0
+    }
+  },
+  "latencyStats": {
+    "meanLat": 20.5625,
+    "medLat": 6,
+    "p95Lat": 113
+  },
+  "indexStats": {
+    "data/external_repos/bottle": {
+      "indexingTimeMs": 15,
+      "filesCount": 30,
+      "symbolsCount": 1044
+    },
+    "data/external_repos/express": {
+      "indexingTimeMs": 12,
+      "filesCount": 141,
+      "symbolsCount": 3101
+    },
+    "data/external_repos/zod": {
+      "indexingTimeMs": 41,
+      "filesCount": 511,
+      "symbolsCount": 3530
+    },
+    "data/external_repos/gson": {
+      "indexingTimeMs": 23,
+      "filesCount": 264,
+      "symbolsCount": 4239
+    }
+  },
+  "records": [
+    {
+      "queryId": "test_bot_01",
+      "query": "touni",
+      "language": "python",
+      "repository": "bottle",
+      "category": "exact_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "touni"
+      ],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 1,
+      "returnedTop5": [
+        {
+          "name": "touni",
+          "kind": "function",
+          "file": "bottle.py",
+          "score": 0.6,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'touni'",
+            "Matched 1 query term(s) in identifier 'touni'"
+          ]
+        }
+      ],
+      "latencyMs": 0
+    },
+    {
+      "queryId": "test_bot_02",
+      "query": "HTTP request redirect with status code",
+      "language": "python",
+      "repository": "bottle",
+      "category": "functional_description",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "redirect"
+      ],
+      "candidateRecall": true,
+      "hitAt1": false,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 0.25,
+      "precisionAt1": 0,
+      "precisionAt5": 0.2,
+      "returnedTop5": [
+        {
+          "name": "HTTPResponse",
+          "kind": "class",
+          "file": "bottle.py",
+          "score": 0.1875,
+          "reasons": [
+            "Associated docstring/comment matches 3 query term(s)"
+          ]
+        },
+        {
+          "name": "status_line",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.15,
+          "reasons": [
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "status_code",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.15,
+          "reasons": [
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "redirect",
+          "kind": "function",
+          "file": "bottle.py",
+          "score": 0.15,
+          "reasons": [
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "__init__",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.1012,
+          "reasons": [
+            "Associated docstring/comment matches 2 query term(s)",
+            "Signature parameters/calls match query terms"
+          ]
+        }
+      ],
+      "latencyMs": 7
+    },
+    {
+      "queryId": "test_bot_03",
+      "query": "Decorator marking deprecated API calls with warnings",
+      "language": "python",
+      "repository": "bottle",
+      "category": "generic_misleading_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "depr"
+      ],
+      "candidateRecall": true,
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "returnedTop5": [
+        {
+          "name": "route",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.0988,
+          "reasons": [
+            "Associated docstring/comment matches 2 query term(s)",
+            "Calls related high-relevance function 'decorator'"
+          ]
+        },
+        {
+          "name": "error",
+          "kind": "method",
+          "file": "bottle.py",
+          "score": 0.0988,
+          "reasons": [
+            "Associated docstring/comment matches 2 query term(s)",
+            "Calls related high-relevance function 'decorator'"
+          ]
+        }
+      ],
+      "latencyMs": 5
+    },
+    {
+      "queryId": "test_bot_04",
+      "query": "Kubernetes custom resource definition ingress controller",
+      "language": "python",
+      "repository": "bottle",
+      "category": "no_result",
+      "isNoResult": true,
+      "expectedSymbols": [],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 1,
+      "returnedTop5": [],
+      "latencyMs": 1
+    },
+    {
+      "queryId": "test_exp_01",
+      "query": "res.cookie",
+      "language": "javascript",
+      "repository": "express",
+      "category": "exact_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "res.cookie"
+      ],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.2,
+      "returnedTop5": [
+        {
+          "name": "res.cookie",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.8,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'res.cookie'",
+            "Matched 2 query term(s) in identifier 'res.cookie'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "File path 'lib/response.js' matches query terms"
+          ]
+        },
+        {
+          "name": "res.clearCookie",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.4587,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'res.clearCookie'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "File path 'lib/response.js' matches query terms"
+          ]
+        },
+        {
+          "name": "res.append",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.35,
+          "reasons": [
+            "Matched 1 query term(s) in identifier 'res.append'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "File path 'lib/response.js' matches query terms"
+          ]
+        },
+        {
+          "name": "res.download",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.2837,
+          "reasons": [
+            "Matched 1 query term(s) in identifier 'res.download'",
+            "Associated docstring/comment matches 1 query term(s)",
+            "File path 'lib/response.js' matches query terms"
+          ]
+        },
+        {
+          "name": "res.status",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.275,
+          "reasons": [
+            "Matched 1 query term(s) in identifier 'res.status'",
+            "Associated docstring/comment matches 1 query term(s)",
+            "File path 'lib/response.js' matches query terms"
+          ]
+        }
+      ],
+      "latencyMs": 8
+    },
+    {
+      "queryId": "test_exp_02",
+      "query": "Render view template with data object and callback",
+      "language": "javascript",
+      "repository": "express",
+      "category": "functional_description",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "app.render",
+        "res.render"
+      ],
+      "candidateRecall": true,
+      "hitAt1": false,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 0.5,
+      "precisionAt1": 0,
+      "precisionAt5": 0.4,
+      "returnedTop5": [
+        {
+          "name": "View.prototype.render",
+          "kind": "function",
+          "file": "lib/view.js",
+          "score": 0.2092,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'View.prototype.render'",
+            "Associated docstring/comment matches 3 query term(s)",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "res.render",
+          "kind": "function",
+          "file": "lib/response.js",
+          "score": 0.2088,
+          "reasons": [
+            "Associated docstring/comment matches 3 query term(s)",
+            "Signature parameters/calls match query terms",
+            "Calls related high-relevance function 'render'"
+          ]
+        },
+        {
+          "name": "app.render",
+          "kind": "function",
+          "file": "lib/application.js",
+          "score": 0.2012,
+          "reasons": [
+            "Associated docstring/comment matches 5 query term(s)",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "tryRender",
+          "kind": "function",
+          "file": "lib/application.js",
+          "score": 0.19,
+          "reasons": [
+            "Associated docstring/comment matches 2 query term(s)",
+            "Signature parameters/calls match query terms",
+            "Calls related high-relevance function 'render'"
+          ]
+        },
+        {
+          "name": "GithubView",
+          "kind": "function",
+          "file": "examples/view-constructor/github-view.js",
+          "score": 0.1667,
+          "reasons": [
+            "Associated docstring/comment matches 4 query term(s)"
+          ]
+        }
+      ],
+      "latencyMs": 4
+    },
+    {
+      "queryId": "test_exp_03",
+      "query": "Dispatch incoming HTTP request to matching route",
+      "language": "javascript",
+      "repository": "express",
+      "category": "ambiguous",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "app.handle",
+        "app.route"
+      ],
+      "candidateRecall": true,
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "returnedTop5": [],
+      "latencyMs": 6
+    },
+    {
+      "queryId": "test_exp_04",
+      "query": "TensorFlow neural network convolutional weight matrix",
+      "language": "javascript",
+      "repository": "express",
+      "category": "no_result",
+      "isNoResult": true,
+      "expectedSymbols": [],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 1,
+      "returnedTop5": [],
+      "latencyMs": 2
+    },
+    {
+      "queryId": "test_zod_01",
+      "query": "deepPartial",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "exact_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "deepPartial"
+      ],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.6,
+      "returnedTop5": [
+        {
+          "name": "deepPartial",
+          "kind": "function",
+          "file": "packages/zod/src/v4/mini/deep-partial.ts",
+          "score": 0.8988,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'deepPartial'",
+            "Matched 2 query term(s) in identifier 'deepPartial'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "File path 'packages/zod/src/v4/mini/deep-partial.ts' matches query terms",
+            "Calls related high-relevance function 'partial'"
+          ]
+        },
+        {
+          "name": "deepPartial",
+          "kind": "function",
+          "file": "packages/zod/src/v4/classic/deep-partial.ts",
+          "score": 0.7488,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'deepPartial'",
+            "Matched 2 query term(s) in identifier 'deepPartial'",
+            "File path 'packages/zod/src/v4/classic/deep-partial.ts' matches query terms",
+            "Calls related high-relevance function 'partial'"
+          ]
+        },
+        {
+          "name": "deepPartial",
+          "kind": "method",
+          "file": "packages/zod/src/v3/types.ts",
+          "score": 0.6175,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'deepPartial'",
+            "Matched 2 query term(s) in identifier 'deepPartial'",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "deepPartialify",
+          "kind": "function",
+          "file": "packages/zod/src/v3/types.ts",
+          "score": 0.525,
+          "reasons": [
+            "Symbol name contains exact term: 'deepPartial'",
+            "Matched 1.8 query term(s) in identifier 'deepPartialify'",
+            "Signature parameters/calls match query terms",
+            "Called by related function 'deepPartial'"
+          ]
+        },
+        {
+          "name": "exactPartial",
+          "kind": "method",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.225,
+          "reasons": [
+            "Matched 1 query term(s) in identifier 'exactPartial'",
+            "Associated docstring/comment matches 1 query term(s)"
+          ]
+        }
+      ],
+      "latencyMs": 1
+    },
+    {
+      "queryId": "test_zod_02",
+      "query": "Credit card Luhn algorithm validation schema",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "functional_description",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "creditCard",
+        "ZodMiniCreditCard"
+      ],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.6,
+      "returnedTop5": [
+        {
+          "name": "ZodMiniCreditCard",
+          "kind": "interface",
+          "file": "packages/zod/src/v4/mini/schemas.ts",
+          "score": 0.1667,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'ZodMiniCreditCard'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "creditCard",
+          "kind": "function",
+          "file": "packages/zod/src/v4/mini/schemas.ts",
+          "score": 0.1667,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'creditCard'",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "ZodCreditCard",
+          "kind": "interface",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.1667,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'ZodCreditCard'",
+            "Associated docstring/comment matches 2 query term(s)"
+          ]
+        },
+        {
+          "name": "creditCard",
+          "kind": "function",
+          "file": "packages/zod/src/v4/classic/schemas.ts",
+          "score": 0.1667,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'creditCard'",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "isValidCreditCard",
+          "kind": "function",
+          "file": "packages/zod/src/v4/core/schemas.ts",
+          "score": 0.1654,
+          "reasons": [
+            "Matched 2.8 query term(s) in identifier 'isValidCreditCard'"
+          ]
+        }
+      ],
+      "latencyMs": 52
+    },
+    {
+      "queryId": "test_zod_03",
+      "query": "Parse and coerce boolean input values",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "cross_file",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "boolean"
+      ],
+      "candidateRecall": true,
+      "hitAt1": false,
+      "hitAt5": false,
+      "hitAt10": false,
+      "reciprocalRank": 0,
+      "precisionAt1": 0,
+      "precisionAt5": 0,
+      "returnedTop5": [
+        {
+          "name": "parse",
+          "kind": "method",
+          "file": "packages/zod/src/v4/core/schemas.ts",
+          "score": 0.185,
+          "reasons": [
+            "Associated docstring/comment matches 2 query term(s)",
+            "Signature parameters/calls match query terms",
+            "Called by related function 'parse'"
+          ]
+        },
+        {
+          "name": "withParser",
+          "kind": "function",
+          "file": "packages/zod/src/v4/core/compile.ts",
+          "score": 0.1818,
+          "reasons": [
+            "Associated docstring/comment matches 3 query term(s)",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "inputOptin",
+          "kind": "function",
+          "file": "packages/zod/src/v4/core/json-schema-processors.ts",
+          "score": 0.1588,
+          "reasons": [
+            "Associated docstring/comment matches 3 query term(s)"
+          ]
+        },
+        {
+          "name": "_coercedBoolean",
+          "kind": "function",
+          "file": "packages/zod/src/v4/core/api.ts",
+          "score": 0.1555,
+          "reasons": [
+            "Matched 1.8 query term(s) in identifier '_coercedBoolean'",
+            "Signature parameters/calls match query terms",
+            "Called by related function 'boolean'"
+          ]
+        },
+        {
+          "name": "safeParse",
+          "kind": "function",
+          "file": "packages/bench/bench-invalid.ts",
+          "score": 0.1375,
+          "reasons": [
+            "Signature parameters/calls match query terms",
+            "Called by related function 'parse'"
+          ]
+        }
+      ],
+      "latencyMs": 20
+    },
+    {
+      "queryId": "test_zod_04",
+      "query": "WebAssembly linear memory boundary allocator",
+      "language": "typescript",
+      "repository": "zod",
+      "category": "no_result",
+      "isNoResult": true,
+      "expectedSymbols": [],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 1,
+      "returnedTop5": [],
+      "latencyMs": 1
+    },
+    {
+      "queryId": "test_gs_01",
+      "query": "fromJsonTree",
+      "language": "java",
+      "repository": "gson",
+      "category": "exact_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "fromJsonTree"
+      ],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.5,
+      "returnedTop5": [
+        {
+          "name": "fromJsonTree",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+          "score": 0.785,
+          "reasons": [
+            "Exact case-sensitive symbol name match: 'fromJsonTree'",
+            "Matched 2 query term(s) in identifier 'fromJsonTree'",
+            "Associated docstring/comment matches 2 query term(s)",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "JsonTreeReader",
+          "kind": "class",
+          "file": "gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java",
+          "score": 0.425,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'JsonTreeReader'",
+            "Associated docstring/comment matches 1 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java' matches query terms"
+          ]
+        }
+      ],
+      "latencyMs": 50
+    },
+    {
+      "queryId": "test_gs_02",
+      "query": "Deserialize JSON stream into Java object tree",
+      "language": "java",
+      "repository": "gson",
+      "category": "functional_description",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "fromJson",
+        "read"
+      ],
+      "candidateRecall": true,
+      "hitAt1": false,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 0.2,
+      "precisionAt1": 0,
+      "precisionAt5": 0.2,
+      "returnedTop5": [
+        {
+          "name": "JsonDeserializer",
+          "kind": "interface",
+          "file": "gson/src/main/java/com/google/gson/JsonDeserializer.java",
+          "score": 0.265,
+          "reasons": [
+            "Matched 1.8 query term(s) in identifier 'JsonDeserializer'",
+            "Associated docstring/comment matches 5 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/JsonDeserializer.java' matches query terms"
+          ]
+        },
+        {
+          "name": "toJsonTree",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/Gson.java",
+          "score": 0.2517,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'toJsonTree'",
+            "Associated docstring/comment matches 4 query term(s)",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "fromJsonTree",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+          "score": 0.2517,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'fromJsonTree'",
+            "Associated docstring/comment matches 4 query term(s)",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "JsonStreamParser",
+          "kind": "class",
+          "file": "gson/src/main/java/com/google/gson/JsonStreamParser.java",
+          "score": 0.25,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'JsonStreamParser'",
+            "Associated docstring/comment matches 4 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/JsonStreamParser.java' matches query terms"
+          ]
+        },
+        {
+          "name": "fromJson",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/Gson.java",
+          "score": 0.2479,
+          "reasons": [
+            "Associated docstring/comment matches 5 query term(s)",
+            "Signature parameters/calls match query terms",
+            "Called by related function 'deserialize'"
+          ]
+        }
+      ],
+      "latencyMs": 113
+    },
+    {
+      "queryId": "test_gs_03",
+      "query": "Safe null-handling type adapter wrapper",
+      "language": "java",
+      "repository": "gson",
+      "category": "generic_misleading_name",
+      "isNoResult": false,
+      "expectedSymbols": [
+        "nullSafe",
+        "NullSafeTypeAdapter"
+      ],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 0.4,
+      "returnedTop5": [
+        {
+          "name": "nullSafe",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+          "score": 0.2833,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'nullSafe'",
+            "Associated docstring/comment matches 6 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/TypeAdapter.java' matches query terms"
+          ]
+        },
+        {
+          "name": "registerTypeAdapter",
+          "kind": "method",
+          "file": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+          "score": 0.275,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'registerTypeAdapter'",
+            "Associated docstring/comment matches 5 query term(s)",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "TypeAdapter",
+          "kind": "class",
+          "file": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+          "score": 0.2583,
+          "reasons": [
+            "Matched 2 query term(s) in identifier 'TypeAdapter'",
+            "Associated docstring/comment matches 5 query term(s)",
+            "File path 'gson/src/main/java/com/google/gson/TypeAdapter.java' matches query terms"
+          ]
+        },
+        {
+          "name": "TypeAdapterRuntimeTypeWrapper",
+          "kind": "constructor",
+          "file": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.java",
+          "score": 0.25,
+          "reasons": [
+            "Matched 3 query term(s) in identifier 'TypeAdapterRuntimeTypeWrapper'",
+            "File path 'gson/src/main/java/com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.java' matches query terms",
+            "Signature parameters/calls match query terms"
+          ]
+        },
+        {
+          "name": "NullSafeTypeAdapter",
+          "kind": "class",
+          "file": "gson/src/main/java/com/google/gson/TypeAdapter.java",
+          "score": 0.2333,
+          "reasons": [
+            "Matched 4 query term(s) in identifier 'NullSafeTypeAdapter'",
+            "File path 'gson/src/main/java/com/google/gson/TypeAdapter.java' matches query terms"
+          ]
+        }
+      ],
+      "latencyMs": 57
+    },
+    {
+      "queryId": "test_gs_04",
+      "query": "Apache Kafka partition consumer offset coordinator",
+      "language": "java",
+      "repository": "gson",
+      "category": "no_result",
+      "isNoResult": true,
+      "expectedSymbols": [],
+      "candidateRecall": true,
+      "hitAt1": true,
+      "hitAt5": true,
+      "hitAt10": true,
+      "reciprocalRank": 1,
+      "precisionAt1": 1,
+      "precisionAt5": 1,
+      "returnedTop5": [],
+      "latencyMs": 2
+    }
+  ]
+}

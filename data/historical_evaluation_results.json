@@ -1,0 +1,4899 @@
+{
+  "evaluatedAt": "2026-10-12T08:48:46.784Z",
+  "benchmarkVersion": "benchmark_lineage_audited.json (40 cases)",
+  "indexTimes": {
+    "bottle": 378,
+    "express": 632,
+    "zod": 4121,
+    "gson": 1360
+  },
+  "configurations": {
+    "configA": {
+      "configName": "Config_A_Lexical_Only",
+      "metrics": {
+        "recall1": {
+          "raw": "3/36",
+          "pct": 8.3
+        },
+        "recall5": {
+          "raw": "4/36",
+          "pct": 11.1
+        },
+        "recall10": {
+          "raw": "6/36",
+          "pct": 16.7
+        },
+        "mrr": 0.1034,
+        "precision5": 0.0222,
+        "predecessorAccuracy": {
+          "raw": "0/27",
+          "pct": 0
+        },
+        "falsePositiveRate": {
+          "raw": "1/4",
+          "pct": 25
+        },
+        "noResultAccuracy": {
+          "raw": "3/4",
+          "pct": 75
+        },
+        "avgLatencyMs": 9.1
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 1,
+          "r5": 1,
+          "r10": 2,
+          "mrr": 1.1111111111111112,
+          "fp": 0,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 1,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 1.5,
+          "fp": 0,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 1,
+          "r5": 1,
+          "r10": 2,
+          "mrr": 1.1111111111111112,
+          "fp": 1,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 0,
+          "r5": 0,
+          "r10": 1,
+          "mrr": 0.1111111111111111,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 1,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 1,
+          "r5": 2,
+          "r10": 3,
+          "mrr": 1.6111111111111112,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 9,
+          "score": 0.0556,
+          "topSymbol": "route",
+          "topScore": 0.0889
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "query_string",
+          "topScore": 0.1278
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.08,
+          "topSymbol": "static_file",
+          "topScore": 0.08
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "AsyncioServerAdapter",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "test_unicode_value",
+          "topScore": 0.0625
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "ConfigDict",
+          "topScore": 0.6278
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "LocalResponse",
+          "topScore": 0.1182
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "_get_body_string",
+          "topScore": 0.0833
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "reset",
+          "topScore": 0.0889
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.sendFile",
+          "topScore": 0.095
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "View.prototype.render",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsLanguages",
+          "topScore": 0.0722
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "shouldContainInBody",
+          "topScore": 0.07
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "error",
+          "topScore": 0.0556
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "getExpectedClientAddress",
+          "topScore": 0.0556
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.location",
+          "topScore": 0.1187
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsCharsets",
+          "topScore": 0.1625
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "fromJSONSchema",
+          "topScore": 0.1182
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "JSONSchemaGenerator",
+          "topScore": 0.0556
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "ZodMiniEmail",
+          "topScore": 0.0625
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 2,
+          "score": 0.0875,
+          "topSymbol": "currencyCode",
+          "topScore": 0.0875
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.125,
+          "topSymbol": "properties",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "setCommonNumberChecks",
+          "topScore": 0.07
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "validateOpenAPI30Schema",
+          "topScore": 0.0944
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkArrayGuards",
+          "topScore": 0.0722
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "validateNumberArray",
+          "topScore": 0.0875
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "ZodMiniString",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "NonNullElementWrapperList",
+          "topScore": 0.22
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "testClassWithObjectFieldSerialization",
+          "topScore": 0.15
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeFieldsWithModifiers",
+          "topScore": 0.1625
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 1,
+          "score": 0.16,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.16
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "JsonPrimitive",
+          "topScore": 0.6
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 9,
+          "score": 0.1056,
+          "topSymbol": "LazilyParsedNumber",
+          "topScore": 0.65
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "TypeAdapter",
+          "topScore": 0.1611
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "JsonReader",
+          "topScore": 0.1591
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "isBoolean",
+          "topScore": 0.0929
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "fromJsonTree",
+          "topScore": 0.6444
+        }
+      ]
+    },
+    "configB": {
+      "configName": "Config_B_Structural_Only",
+      "metrics": {
+        "recall1": {
+          "raw": "6/36",
+          "pct": 16.7
+        },
+        "recall5": {
+          "raw": "6/36",
+          "pct": 16.7
+        },
+        "recall10": {
+          "raw": "6/36",
+          "pct": 16.7
+        },
+        "mrr": 0.1667,
+        "precision5": 0.0333,
+        "predecessorAccuracy": {
+          "raw": "0/27",
+          "pct": 0
+        },
+        "falsePositiveRate": {
+          "raw": "1/4",
+          "pct": 25
+        },
+        "noResultAccuracy": {
+          "raw": "3/4",
+          "pct": 75
+        },
+        "avgLatencyMs": 83.67
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 1,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 1,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "route",
+          "topScore": 0.18375000000000002
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "query_string",
+          "topScore": 0.11666666666666667
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.1075,
+          "topSymbol": "static_file",
+          "topScore": 0.1075
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "run",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "ConfigDict",
+          "topScore": 0.4933333333333333
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "LocalResponse",
+          "topScore": 0.10909090909090909
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "reset",
+          "topScore": 0.14958333333333335
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.sendFile",
+          "topScore": 0.11750000000000001
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.render",
+          "topScore": 0.19625
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsLanguages",
+          "topScore": 0.11041666666666666
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 1,
+          "score": 0.12541666666666668,
+          "topSymbol": "logerror",
+          "topScore": 0.12541666666666668
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.location",
+          "topScore": 0.13374999999999998
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsCharsets",
+          "topScore": 0.185
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 1,
+          "score": 0.21181818181818182,
+          "topSymbol": "processSchema",
+          "topScore": 0.21181818181818182
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.11111111111111112
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "ZodMiniISODateTime",
+          "topScore": 0.09875
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.15500000000000003,
+          "topSymbol": "properties",
+          "topScore": 0.15500000000000003
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkArrayGuards",
+          "topScore": 0.09375
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.14444444444444443
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkArrayGuards",
+          "topScore": 0.11041666666666666
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "isLuhnAlgo",
+          "topScore": 0.10500000000000001
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "convertBaseSchema",
+          "topScore": 0.165
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "NonNullElementWrapperList",
+          "topScore": 0.245
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeFieldsWithModifiers",
+          "topScore": 0.16875
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeFieldsWithModifiers",
+          "topScore": 0.15875
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 1,
+          "score": 0.18,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.18
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "JsonPrimitive",
+          "topScore": 0.475
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 1,
+          "score": 0.18333333333333335,
+          "topSymbol": "compareTo",
+          "topScore": 0.18333333333333335
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "NumberTypeAdapter",
+          "topScore": 0.19444444444444445
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "JsonReader",
+          "topScore": 0.16818181818181818
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "isBoolean",
+          "topScore": 0.0857142857142857
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "fromJsonTree",
+          "topScore": 0.5461111111111111
+        }
+      ]
+    },
+    "configC": {
+      "configName": "Config_C_Historical_Only",
+      "metrics": {
+        "recall1": {
+          "raw": "21/36",
+          "pct": 58.3
+        },
+        "recall5": {
+          "raw": "22/36",
+          "pct": 61.1
+        },
+        "recall10": {
+          "raw": "22/36",
+          "pct": 61.1
+        },
+        "mrr": 0.5972,
+        "precision5": 0.1222,
+        "predecessorAccuracy": {
+          "raw": "17/27",
+          "pct": 63
+        },
+        "falsePositiveRate": {
+          "raw": "1/4",
+          "pct": 25
+        },
+        "noResultAccuracy": {
+          "raw": "3/4",
+          "pct": 75
+        },
+        "avgLatencyMs": 4.17
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 8,
+          "r5": 8,
+          "r10": 8,
+          "mrr": 8,
+          "fp": 1,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 5,
+          "r5": 6,
+          "r10": 6,
+          "mrr": 5.5,
+          "fp": 0,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 7,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 7,
+          "fp": 0,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 7,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 7,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 5,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 5,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 1,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 4,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 4.5,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 1,
+          "score": 0.17,
+          "topSymbol": "get_undecorated_callback",
+          "topScore": 0.17
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 1,
+          "score": 0.0733,
+          "topSymbol": "build",
+          "topScore": 0.0733
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.093,
+          "topSymbol": "static_file",
+          "topScore": 0.093
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 1,
+          "score": 0.0825,
+          "topSymbol": "__repr__",
+          "topScore": 0.0825
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 1,
+          "score": 0.0912,
+          "topSymbol": "touni",
+          "topScore": 0.0912
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 1,
+          "score": 0.1767,
+          "topSymbol": "_define",
+          "topScore": 0.1767
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 1,
+          "score": 0.1514,
+          "topSymbol": "depr",
+          "topScore": 0.1514
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 1,
+          "score": 0.0845,
+          "topSymbol": "headerlist",
+          "topScore": 0.0845
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "tob",
+          "topScore": 0.2433
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "Route",
+          "topScore": 0.1622
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 1,
+          "score": 0.1178,
+          "topSymbol": "logerror",
+          "topScore": 0.1178
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 1,
+          "score": 0.2955,
+          "topSymbol": "processSchema",
+          "topScore": 0.2955
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 1,
+          "score": 0.1622,
+          "topSymbol": "cached",
+          "topScore": 0.1622
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 1,
+          "score": 0.265,
+          "topSymbol": "currencyCode",
+          "topScore": 0.265
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.285,
+          "topSymbol": "properties",
+          "topScore": 0.285
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 2,
+          "score": 0.053,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.053
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.1622
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 1,
+          "score": 0.1844,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.1844
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "iban",
+          "topScore": 0.0663
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "processSchema",
+          "topScore": 0.1575
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 1,
+          "score": 0.186,
+          "topSymbol": "removeIf",
+          "topScore": 0.186
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 1,
+          "score": 0.1033,
+          "topSymbol": "excludeField",
+          "topScore": 0.1033
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeField",
+          "topScore": 0.075
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 1,
+          "score": 0.245,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.245
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 1,
+          "score": 0.325,
+          "topSymbol": "hashCode",
+          "topScore": 0.325
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 1,
+          "score": 0.1322,
+          "topSymbol": "compareTo",
+          "topScore": 0.1322
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 1,
+          "score": 0.2511,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.2511
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 1,
+          "score": 0.2655,
+          "topSymbol": "promoteNameToValue",
+          "topScore": 0.2655
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.0857
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.0589
+        }
+      ]
+    },
+    "configD": {
+      "configName": "Config_D_Combined",
+      "metrics": {
+        "recall1": {
+          "raw": "12/36",
+          "pct": 33.3
+        },
+        "recall5": {
+          "raw": "16/36",
+          "pct": 44.4
+        },
+        "recall10": {
+          "raw": "17/36",
+          "pct": 47.2
+        },
+        "mrr": 0.3729,
+        "precision5": 0.0889,
+        "predecessorAccuracy": {
+          "raw": "9/27",
+          "pct": 33.3
+        },
+        "falsePositiveRate": {
+          "raw": "1/4",
+          "pct": 25
+        },
+        "noResultAccuracy": {
+          "raw": "3/4",
+          "pct": 75
+        },
+        "avgLatencyMs": 86.17
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 2,
+          "r5": 3,
+          "r10": 4,
+          "mrr": 2.392857142857143,
+          "fp": 0,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 4,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 4.5,
+          "fp": 0,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 5,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 5.533333333333333,
+          "fp": 1,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 3,
+          "r5": 4,
+          "r10": 5,
+          "mrr": 3.342857142857143,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 3,
+          "r5": 3,
+          "r10": 3,
+          "mrr": 3,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 1,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 1.25,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 1,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 1,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 1.5,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 3,
+          "r5": 4,
+          "r10": 4,
+          "mrr": 3.333333333333333,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 7,
+          "score": 0.068,
+          "topSymbol": "route",
+          "topScore": 0.1103
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "query_string",
+          "topScore": 0.07
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.1017,
+          "topSymbol": "static_file",
+          "topScore": 0.1017
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "run",
+          "topScore": 0.075
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 4,
+          "score": 0.0707,
+          "topSymbol": "ConfigDict",
+          "topScore": 0.296
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 1,
+          "score": 0.0606,
+          "topSymbol": "depr",
+          "topScore": 0.0606
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "LocalResponse",
+          "topScore": 0.0655
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "tob",
+          "topScore": 0.0973
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "Route",
+          "topScore": 0.1229
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.sendFile",
+          "topScore": 0.0705
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.render",
+          "topScore": 0.1177
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsLanguages",
+          "topScore": 0.0662
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 1,
+          "score": 0.1224,
+          "topSymbol": "logerror",
+          "topScore": 0.1224
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.location",
+          "topScore": 0.0802
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsCharsets",
+          "topScore": 0.111
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 1,
+          "score": 0.2453,
+          "topSymbol": "processSchema",
+          "topScore": 0.2453
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 2,
+          "score": 0.0649,
+          "topSymbol": "processSchema",
+          "topScore": 0.0902
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 1,
+          "score": 0.106,
+          "topSymbol": "currencyCode",
+          "topScore": 0.106
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.207,
+          "topSymbol": "properties",
+          "topScore": 0.207
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkArrayGuards",
+          "topScore": 0.0562
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.1515
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 1,
+          "score": 0.0738,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.0738
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "isLuhnAlgo",
+          "topScore": 0.063
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "processSchema",
+          "topScore": 0.138
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 3,
+          "score": 0.0744,
+          "topSymbol": "NonNullElementWrapperList",
+          "topScore": 0.147
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 1,
+          "score": 0.114,
+          "topSymbol": "excludeField",
+          "topScore": 0.114
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeFieldsWithModifiers",
+          "topScore": 0.0953
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 1,
+          "score": 0.206,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.206
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 5,
+          "score": 0.1795,
+          "topSymbol": "JsonPrimitive",
+          "topScore": 0.285
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 1,
+          "score": 0.1629,
+          "topSymbol": "compareTo",
+          "topScore": 0.1629
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 1,
+          "score": 0.1869,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.1869
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 1,
+          "score": 0.1798,
+          "topSymbol": "promoteNameToValue",
+          "topScore": 0.1798
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "isBoolean",
+          "topScore": 0.0514
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "fromJsonTree",
+          "topScore": 0.3277
+        }
+      ]
+    }
+  },
+  "ablations": {
+    "ablationNamesOnly": {
+      "configName": "Ablation_Historical_Names_Only",
+      "metrics": {
+        "recall1": {
+          "raw": "9/36",
+          "pct": 25
+        },
+        "recall5": {
+          "raw": "10/36",
+          "pct": 27.8
+        },
+        "recall10": {
+          "raw": "10/36",
+          "pct": 27.8
+        },
+        "mrr": 0.2639,
+        "precision5": 0.0556,
+        "predecessorAccuracy": {
+          "raw": "9/27",
+          "pct": 33.3
+        },
+        "falsePositiveRate": {
+          "raw": "0/4",
+          "pct": 0
+        },
+        "noResultAccuracy": {
+          "raw": "4/4",
+          "pct": 100
+        },
+        "avgLatencyMs": 6.53
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 3,
+          "r5": 4,
+          "r10": 4,
+          "mrr": 3.5,
+          "fp": 0,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 4,
+          "r5": 4,
+          "r10": 4,
+          "mrr": 4,
+          "fp": 0,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 5,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 5,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 1,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 1.5,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 1,
+          "score": 0.1111,
+          "topSymbol": "get_undecorated_callback",
+          "topScore": 0.1111
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.1,
+          "topSymbol": "static_file",
+          "topScore": 0.1
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 2,
+          "score": 0.0909,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.0909
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 1,
+          "score": 0.1111,
+          "topSymbol": "cached",
+          "topScore": 0.1111
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.1,
+          "topSymbol": "properties",
+          "topScore": 0.1
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.1111
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 1,
+          "score": 0.1111,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.1111
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 1,
+          "score": 0.1111,
+          "topSymbol": "excludeField",
+          "topScore": 0.1111
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeField",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 1,
+          "score": 0.1,
+          "topSymbol": "hashCode",
+          "topScore": 0.1
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 1,
+          "score": 0.2222,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.2222
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 1,
+          "score": 0.1818,
+          "topSymbol": "promoteNameToValue",
+          "topScore": 0.1818
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.1429
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "topSymbol": "none",
+          "topScore": 0
+        }
+      ]
+    },
+    "ablationCommitMessagesOnly": {
+      "configName": "Ablation_Commit_Messages_Only",
+      "metrics": {
+        "recall1": {
+          "raw": "20/36",
+          "pct": 55.6
+        },
+        "recall5": {
+          "raw": "22/36",
+          "pct": 61.1
+        },
+        "recall10": {
+          "raw": "22/36",
+          "pct": 61.1
+        },
+        "mrr": 0.5833,
+        "precision5": 0.1222,
+        "predecessorAccuracy": {
+          "raw": "16/27",
+          "pct": 59.3
+        },
+        "falsePositiveRate": {
+          "raw": "3/4",
+          "pct": 75
+        },
+        "noResultAccuracy": {
+          "raw": "1/4",
+          "pct": 25
+        },
+        "avgLatencyMs": 8.7
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 7,
+          "r5": 8,
+          "r10": 8,
+          "mrr": 7.5,
+          "fp": 2,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 5,
+          "r5": 6,
+          "r10": 6,
+          "mrr": 5.5,
+          "fp": 1,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 7,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 7,
+          "fp": 0,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 6,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 6.5,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 5,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 5,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 3,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 4,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 4.5,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 2,
+          "score": 0.1222,
+          "topSymbol": "Route",
+          "topScore": 0.1222
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 1,
+          "score": 0.2444,
+          "topSymbol": "build",
+          "topScore": 0.2444
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.11,
+          "topSymbol": "static_file",
+          "topScore": 0.11
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 1,
+          "score": 0.275,
+          "topSymbol": "__repr__",
+          "topScore": 0.275
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 1,
+          "score": 0.1375,
+          "topSymbol": "touni",
+          "topScore": 0.1375
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 1,
+          "score": 0.3667,
+          "topSymbol": "_define",
+          "topScore": 0.3667
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 1,
+          "score": 0.3143,
+          "topSymbol": "depr",
+          "topScore": 0.3143
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 1,
+          "score": 0.1,
+          "topSymbol": "headerlist",
+          "topScore": 0.1
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "tob",
+          "topScore": 0.3667
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "Route",
+          "topScore": 0.2444
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 1,
+          "score": 0.2444,
+          "topSymbol": "logerror",
+          "topScore": 0.2444
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 1,
+          "score": 0.5,
+          "topSymbol": "processSchema",
+          "topScore": 0.5
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 1,
+          "score": 0.2444,
+          "topSymbol": "cached",
+          "topScore": 0.2444
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 1,
+          "score": 0.55,
+          "topSymbol": "currencyCode",
+          "topScore": 0.55
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.55,
+          "topSymbol": "properties",
+          "topScore": 0.55
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 2,
+          "score": 0.11,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.11
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.2444
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 1,
+          "score": 0.2444,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.2444
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "iban",
+          "topScore": 0.1375
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "processSchema",
+          "topScore": 0.275
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 1,
+          "score": 0.22,
+          "topSymbol": "removeIf",
+          "topScore": 0.22
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 1,
+          "score": 0.1222,
+          "topSymbol": "excludeField",
+          "topScore": 0.1222
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 1,
+          "score": 0.55,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.55
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 1,
+          "score": 0.55,
+          "topSymbol": "hashCode",
+          "topScore": 0.55
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 1,
+          "score": 0.3667,
+          "topSymbol": "compareTo",
+          "topScore": 0.3667
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 1,
+          "score": 0.2444,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.2444
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 1,
+          "score": 0.4,
+          "topSymbol": "promoteNameToValue",
+          "topScore": 0.4
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeField",
+          "topScore": 0.1571
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "hashCode",
+          "topScore": 0.1222
+        }
+      ]
+    },
+    "ablationDiffTermsOnly": {
+      "configName": "Ablation_Diff_Terms_Only",
+      "metrics": {
+        "recall1": {
+          "raw": "18/36",
+          "pct": 50
+        },
+        "recall5": {
+          "raw": "20/36",
+          "pct": 55.6
+        },
+        "recall10": {
+          "raw": "20/36",
+          "pct": 55.6
+        },
+        "mrr": 0.5231,
+        "precision5": 0.1111,
+        "predecessorAccuracy": {
+          "raw": "15/27",
+          "pct": 55.6
+        },
+        "falsePositiveRate": {
+          "raw": "4/4",
+          "pct": 100
+        },
+        "noResultAccuracy": {
+          "raw": "0/4",
+          "pct": 0
+        },
+        "avgLatencyMs": 8.82
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 6,
+          "r5": 6,
+          "r10": 6,
+          "mrr": 6,
+          "fp": 2,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 5,
+          "r5": 6,
+          "r10": 6,
+          "mrr": 5.5,
+          "fp": 1,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 6,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 6.333333333333333,
+          "fp": 1,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 7,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 7,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 3,
+          "r5": 3,
+          "r10": 3,
+          "mrr": 3,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 4,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 3,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 3.8333333333333335,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 1,
+          "score": 0.4444,
+          "topSymbol": "get_undecorated_callback",
+          "topScore": 0.4444
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "tob",
+          "topScore": 0.1111
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.1,
+          "topSymbol": "static_file",
+          "topScore": 0.1
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "tob",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 1,
+          "score": 0.25,
+          "topSymbol": "touni",
+          "topScore": 0.25
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 1,
+          "score": 0.3333,
+          "topSymbol": "_define",
+          "topScore": 0.3333
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 1,
+          "score": 0.2857,
+          "topSymbol": "depr",
+          "topScore": 0.2857
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 1,
+          "score": 0.2727,
+          "topSymbol": "headerlist",
+          "topScore": 0.2727
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "tob",
+          "topScore": 0.6667
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "Route",
+          "topScore": 0.4444
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 1,
+          "score": 0.2222,
+          "topSymbol": "logerror",
+          "topScore": 0.2222
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 1,
+          "score": 0.5455,
+          "topSymbol": "processSchema",
+          "topScore": 0.5455
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 1,
+          "score": 0.2222,
+          "topSymbol": "cached",
+          "topScore": 0.2222
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 1,
+          "score": 0.5,
+          "topSymbol": "currencyCode",
+          "topScore": 0.5
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.4,
+          "topSymbol": "properties",
+          "topScore": 0.4
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 2,
+          "score": 0.1,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.1
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.2222
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 1,
+          "score": 0.3333,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.3333
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "iban",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "processSchema",
+          "topScore": 0.375
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 1,
+          "score": 0.6,
+          "topSymbol": "removeIf",
+          "topScore": 0.6
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 1,
+          "score": 0.1111,
+          "topSymbol": "excludeField",
+          "topScore": 0.1111
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeField",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 1,
+          "score": 0.4,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.4
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 1,
+          "score": 0.6,
+          "topSymbol": "hashCode",
+          "topScore": 0.6
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 3,
+          "score": 0.1111,
+          "topSymbol": "toJsonTree",
+          "topScore": 0.1111
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 1,
+          "score": 0.4444,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.4444
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 1,
+          "score": 0.3636,
+          "topSymbol": "promoteNameToValue",
+          "topScore": 0.3636
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.1429
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "toJsonTree",
+          "topScore": 0.2222
+        }
+      ]
+    },
+    "ablationAllHistorical": {
+      "configName": "Config_C_Historical_Only",
+      "metrics": {
+        "recall1": {
+          "raw": "21/36",
+          "pct": 58.3
+        },
+        "recall5": {
+          "raw": "22/36",
+          "pct": 61.1
+        },
+        "recall10": {
+          "raw": "22/36",
+          "pct": 61.1
+        },
+        "mrr": 0.5972,
+        "precision5": 0.1222,
+        "predecessorAccuracy": {
+          "raw": "17/27",
+          "pct": 63
+        },
+        "falsePositiveRate": {
+          "raw": "1/4",
+          "pct": 25
+        },
+        "noResultAccuracy": {
+          "raw": "3/4",
+          "pct": 75
+        },
+        "avgLatencyMs": 4.17
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 8,
+          "r5": 8,
+          "r10": 8,
+          "mrr": 8,
+          "fp": 1,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 5,
+          "r5": 6,
+          "r10": 6,
+          "mrr": 5.5,
+          "fp": 0,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 7,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 7,
+          "fp": 0,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 7,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 7,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 5,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 5,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 1,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 4,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 4.5,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 1,
+          "score": 0.17,
+          "topSymbol": "get_undecorated_callback",
+          "topScore": 0.17
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 1,
+          "score": 0.0733,
+          "topSymbol": "build",
+          "topScore": 0.0733
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.093,
+          "topSymbol": "static_file",
+          "topScore": 0.093
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 1,
+          "score": 0.0825,
+          "topSymbol": "__repr__",
+          "topScore": 0.0825
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 1,
+          "score": 0.0912,
+          "topSymbol": "touni",
+          "topScore": 0.0912
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 1,
+          "score": 0.1767,
+          "topSymbol": "_define",
+          "topScore": 0.1767
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 1,
+          "score": 0.1514,
+          "topSymbol": "depr",
+          "topScore": 0.1514
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 1,
+          "score": 0.0845,
+          "topSymbol": "headerlist",
+          "topScore": 0.0845
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "tob",
+          "topScore": 0.2433
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "Route",
+          "topScore": 0.1622
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 1,
+          "score": 0.1178,
+          "topSymbol": "logerror",
+          "topScore": 0.1178
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 1,
+          "score": 0.2955,
+          "topSymbol": "processSchema",
+          "topScore": 0.2955
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 1,
+          "score": 0.1622,
+          "topSymbol": "cached",
+          "topScore": 0.1622
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 1,
+          "score": 0.265,
+          "topSymbol": "currencyCode",
+          "topScore": 0.265
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.285,
+          "topSymbol": "properties",
+          "topScore": 0.285
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 2,
+          "score": 0.053,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.053
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.1622
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 1,
+          "score": 0.1844,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.1844
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "iban",
+          "topScore": 0.0663
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "processSchema",
+          "topScore": 0.1575
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 1,
+          "score": 0.186,
+          "topSymbol": "removeIf",
+          "topScore": 0.186
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 1,
+          "score": 0.1033,
+          "topSymbol": "excludeField",
+          "topScore": 0.1033
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeField",
+          "topScore": 0.075
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 1,
+          "score": 0.245,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.245
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 1,
+          "score": 0.325,
+          "topSymbol": "hashCode",
+          "topScore": 0.325
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 1,
+          "score": 0.1322,
+          "topSymbol": "compareTo",
+          "topScore": 0.1322
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 1,
+          "score": 0.2511,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.2511
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 1,
+          "score": 0.2655,
+          "topSymbol": "promoteNameToValue",
+          "topScore": 0.2655
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.0857
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.0589
+        }
+      ]
+    },
+    "structuralBaseline": {
+      "configName": "Config_B_Structural_Only",
+      "metrics": {
+        "recall1": {
+          "raw": "6/36",
+          "pct": 16.7
+        },
+        "recall5": {
+          "raw": "6/36",
+          "pct": 16.7
+        },
+        "recall10": {
+          "raw": "6/36",
+          "pct": 16.7
+        },
+        "mrr": 0.1667,
+        "precision5": 0.0333,
+        "predecessorAccuracy": {
+          "raw": "0/27",
+          "pct": 0
+        },
+        "falsePositiveRate": {
+          "raw": "1/4",
+          "pct": 25
+        },
+        "noResultAccuracy": {
+          "raw": "3/4",
+          "pct": 75
+        },
+        "avgLatencyMs": 83.67
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 1,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 1,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 2,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 2,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "route",
+          "topScore": 0.18375000000000002
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "query_string",
+          "topScore": 0.11666666666666667
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.1075,
+          "topSymbol": "static_file",
+          "topScore": 0.1075
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "run",
+          "topScore": 0.125
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "ConfigDict",
+          "topScore": 0.4933333333333333
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "LocalResponse",
+          "topScore": 0.10909090909090909
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "reset",
+          "topScore": 0.14958333333333335
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.sendFile",
+          "topScore": 0.11750000000000001
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.render",
+          "topScore": 0.19625
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsLanguages",
+          "topScore": 0.11041666666666666
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 1,
+          "score": 0.12541666666666668,
+          "topSymbol": "logerror",
+          "topScore": 0.12541666666666668
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.location",
+          "topScore": 0.13374999999999998
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsCharsets",
+          "topScore": 0.185
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 1,
+          "score": 0.21181818181818182,
+          "topSymbol": "processSchema",
+          "topScore": 0.21181818181818182
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.11111111111111112
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "ZodMiniISODateTime",
+          "topScore": 0.09875
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.15500000000000003,
+          "topSymbol": "properties",
+          "topScore": 0.15500000000000003
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkArrayGuards",
+          "topScore": 0.09375
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.14444444444444443
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkArrayGuards",
+          "topScore": 0.11041666666666666
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "isLuhnAlgo",
+          "topScore": 0.10500000000000001
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "convertBaseSchema",
+          "topScore": 0.165
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "NonNullElementWrapperList",
+          "topScore": 0.245
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeFieldsWithModifiers",
+          "topScore": 0.16875
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeFieldsWithModifiers",
+          "topScore": 0.15875
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 1,
+          "score": 0.18,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.18
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "JsonPrimitive",
+          "topScore": 0.475
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 1,
+          "score": 0.18333333333333335,
+          "topSymbol": "compareTo",
+          "topScore": 0.18333333333333335
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "NumberTypeAdapter",
+          "topScore": 0.19444444444444445
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "JsonReader",
+          "topScore": 0.16818181818181818
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "isBoolean",
+          "topScore": 0.0857142857142857
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "fromJsonTree",
+          "topScore": 0.5461111111111111
+        }
+      ]
+    },
+    "combined": {
+      "configName": "Config_D_Combined",
+      "metrics": {
+        "recall1": {
+          "raw": "12/36",
+          "pct": 33.3
+        },
+        "recall5": {
+          "raw": "16/36",
+          "pct": 44.4
+        },
+        "recall10": {
+          "raw": "17/36",
+          "pct": 47.2
+        },
+        "mrr": 0.3729,
+        "precision5": 0.0889,
+        "predecessorAccuracy": {
+          "raw": "9/27",
+          "pct": 33.3
+        },
+        "falsePositiveRate": {
+          "raw": "1/4",
+          "pct": 25
+        },
+        "noResultAccuracy": {
+          "raw": "3/4",
+          "pct": 75
+        },
+        "avgLatencyMs": 86.17
+      },
+      "perLanguage": {
+        "python": {
+          "answerable": 8,
+          "r1": 2,
+          "r5": 3,
+          "r10": 4,
+          "mrr": 2.392857142857143,
+          "fp": 0,
+          "neg": 2
+        },
+        "javascript": {
+          "answerable": 10,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        },
+        "typescript": {
+          "answerable": 9,
+          "r1": 4,
+          "r5": 5,
+          "r10": 5,
+          "mrr": 4.5,
+          "fp": 0,
+          "neg": 1
+        },
+        "java": {
+          "answerable": 9,
+          "r1": 5,
+          "r5": 7,
+          "r10": 7,
+          "mrr": 5.533333333333333,
+          "fp": 1,
+          "neg": 1
+        }
+      },
+      "perEvolutionType": {
+        "rewrite": {
+          "answerable": 10,
+          "r1": 3,
+          "r5": 4,
+          "r10": 5,
+          "mrr": 3.342857142857143,
+          "fp": 0,
+          "neg": 0
+        },
+        "routine_modification": {
+          "answerable": 10,
+          "r1": 3,
+          "r5": 3,
+          "r10": 3,
+          "mrr": 3,
+          "fp": 0,
+          "neg": 0
+        },
+        "signature_change": {
+          "answerable": 4,
+          "r1": 1,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 1.25,
+          "fp": 0,
+          "neg": 0
+        },
+        "hard_negative": {
+          "answerable": 3,
+          "r1": 0,
+          "r5": 0,
+          "r10": 0,
+          "mrr": 0,
+          "fp": 1,
+          "neg": 4
+        },
+        "rename": {
+          "answerable": 2,
+          "r1": 1,
+          "r5": 2,
+          "r10": 2,
+          "mrr": 1.5,
+          "fp": 0,
+          "neg": 0
+        },
+        "new_symbol": {
+          "answerable": 6,
+          "r1": 3,
+          "r5": 4,
+          "r10": 4,
+          "mrr": 3.333333333333333,
+          "fp": 0,
+          "neg": 0
+        },
+        "move": {
+          "answerable": 1,
+          "r1": 1,
+          "r5": 1,
+          "r10": 1,
+          "mrr": 1,
+          "fp": 0,
+          "neg": 0
+        }
+      },
+      "queryResults": [
+        {
+          "query_id": "q_py_bot_01",
+          "has_answer": true,
+          "target_symbol": "get_undecorated_callback",
+          "rank": 7,
+          "score": 0.068,
+          "topSymbol": "route",
+          "topScore": 0.1103
+        },
+        {
+          "query_id": "q_py_bot_02",
+          "has_answer": true,
+          "target_symbol": "build",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "query_string",
+          "topScore": 0.07
+        },
+        {
+          "query_id": "q_py_bot_03",
+          "has_answer": true,
+          "target_symbol": "static_file",
+          "rank": 1,
+          "score": 0.1017,
+          "topSymbol": "static_file",
+          "topScore": 0.1017
+        },
+        {
+          "query_id": "q_py_bot_04",
+          "has_answer": true,
+          "target_symbol": "__repr__",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "run",
+          "topScore": 0.075
+        },
+        {
+          "query_id": "q_py_bot_05",
+          "has_answer": true,
+          "target_symbol": "touni",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_py_bot_06",
+          "has_answer": true,
+          "target_symbol": "_define",
+          "rank": 4,
+          "score": 0.0707,
+          "topSymbol": "ConfigDict",
+          "topScore": 0.296
+        },
+        {
+          "query_id": "q_py_bot_07",
+          "has_answer": true,
+          "target_symbol": "depr",
+          "rank": 1,
+          "score": 0.0606,
+          "topSymbol": "depr",
+          "topScore": 0.0606
+        },
+        {
+          "query_id": "q_py_bot_08",
+          "has_answer": true,
+          "target_symbol": "headerlist",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "LocalResponse",
+          "topScore": 0.0655
+        },
+        {
+          "query_id": "q_py_bot_09",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "tob",
+          "topScore": 0.0973
+        },
+        {
+          "query_id": "q_py_bot_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "Route",
+          "topScore": 0.1229
+        },
+        {
+          "query_id": "q_js_exp_01",
+          "has_answer": true,
+          "target_symbol": "send",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.sendFile",
+          "topScore": 0.0705
+        },
+        {
+          "query_id": "q_js_exp_02",
+          "has_answer": true,
+          "target_symbol": "render",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.render",
+          "topScore": 0.1177
+        },
+        {
+          "query_id": "q_js_exp_03",
+          "has_answer": true,
+          "target_symbol": "listen",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_04",
+          "has_answer": true,
+          "target_symbol": "acceptsLanguages",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsLanguages",
+          "topScore": 0.0662
+        },
+        {
+          "query_id": "q_js_exp_05",
+          "has_answer": true,
+          "target_symbol": "redirect",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_06",
+          "has_answer": true,
+          "target_symbol": "logerror",
+          "rank": 1,
+          "score": 0.1224,
+          "topSymbol": "logerror",
+          "topScore": 0.1224
+        },
+        {
+          "query_id": "q_js_exp_07",
+          "has_answer": true,
+          "target_symbol": "protocol",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_08",
+          "has_answer": true,
+          "target_symbol": "fresh",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_js_exp_09",
+          "has_answer": true,
+          "target_symbol": "location",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "res.location",
+          "topScore": 0.0802
+        },
+        {
+          "query_id": "q_js_exp_10",
+          "has_answer": true,
+          "target_symbol": "acceptsCharsets",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "req.acceptsCharsets",
+          "topScore": 0.111
+        },
+        {
+          "query_id": "q_ts_zod_01",
+          "has_answer": true,
+          "target_symbol": "processSchema",
+          "rank": 1,
+          "score": 0.2453,
+          "topSymbol": "processSchema",
+          "topScore": 0.2453
+        },
+        {
+          "query_id": "q_ts_zod_02",
+          "has_answer": true,
+          "target_symbol": "cached",
+          "rank": 2,
+          "score": 0.0649,
+          "topSymbol": "processSchema",
+          "topScore": 0.0902
+        },
+        {
+          "query_id": "q_ts_zod_03",
+          "has_answer": true,
+          "target_symbol": "email",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "none",
+          "topScore": 0
+        },
+        {
+          "query_id": "q_ts_zod_04",
+          "has_answer": true,
+          "target_symbol": "currencyCode",
+          "rank": 1,
+          "score": 0.106,
+          "topSymbol": "currencyCode",
+          "topScore": 0.106
+        },
+        {
+          "query_id": "q_ts_zod_05",
+          "has_answer": true,
+          "target_symbol": "properties",
+          "rank": 1,
+          "score": 0.207,
+          "topSymbol": "properties",
+          "topScore": 0.207
+        },
+        {
+          "query_id": "q_ts_zod_06",
+          "has_answer": true,
+          "target_symbol": "iban",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "checkArrayGuards",
+          "topScore": 0.0562
+        },
+        {
+          "query_id": "q_ts_zod_07",
+          "has_answer": true,
+          "target_symbol": "validate",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "processSchema",
+          "topScore": 0.1515
+        },
+        {
+          "query_id": "q_ts_zod_08",
+          "has_answer": true,
+          "target_symbol": "$ZodArray",
+          "rank": 1,
+          "score": 0.0738,
+          "topSymbol": "$ZodArray",
+          "topScore": 0.0738
+        },
+        {
+          "query_id": "q_ts_zod_09",
+          "has_answer": true,
+          "target_symbol": "creditCard",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "isLuhnAlgo",
+          "topScore": 0.063
+        },
+        {
+          "query_id": "q_ts_zod_10",
+          "has_answer": false,
+          "is_false_positive": false,
+          "topSymbol": "processSchema",
+          "topScore": 0.138
+        },
+        {
+          "query_id": "q_java_gsn_01",
+          "has_answer": true,
+          "target_symbol": "removeIf",
+          "rank": 3,
+          "score": 0.0744,
+          "topSymbol": "NonNullElementWrapperList",
+          "topScore": 0.147
+        },
+        {
+          "query_id": "q_java_gsn_02",
+          "has_answer": true,
+          "target_symbol": "excludeField",
+          "rank": 1,
+          "score": 0.114,
+          "topSymbol": "excludeField",
+          "topScore": 0.114
+        },
+        {
+          "query_id": "q_java_gsn_03",
+          "has_answer": true,
+          "target_symbol": "isExcludedByModifier",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "excludeFieldsWithModifiers",
+          "topScore": 0.0953
+        },
+        {
+          "query_id": "q_java_gsn_04",
+          "has_answer": true,
+          "target_symbol": "getCharacterOffset",
+          "rank": 1,
+          "score": 0.206,
+          "topSymbol": "getCharacterOffset",
+          "topScore": 0.206
+        },
+        {
+          "query_id": "q_java_gsn_05",
+          "has_answer": true,
+          "target_symbol": "hashCode",
+          "rank": 5,
+          "score": 0.1795,
+          "topSymbol": "JsonPrimitive",
+          "topScore": 0.285
+        },
+        {
+          "query_id": "q_java_gsn_06",
+          "has_answer": true,
+          "target_symbol": "compareTo",
+          "rank": 1,
+          "score": 0.1629,
+          "topSymbol": "compareTo",
+          "topScore": 0.1629
+        },
+        {
+          "query_id": "q_java_gsn_07",
+          "has_answer": true,
+          "target_symbol": "checkValidFloatingPoint",
+          "rank": 1,
+          "score": 0.1869,
+          "topSymbol": "checkValidFloatingPoint",
+          "topScore": 0.1869
+        },
+        {
+          "query_id": "q_java_gsn_08",
+          "has_answer": true,
+          "target_symbol": "promoteNameToValue",
+          "rank": 1,
+          "score": 0.1798,
+          "topSymbol": "promoteNameToValue",
+          "topScore": 0.1798
+        },
+        {
+          "query_id": "q_java_gsn_09",
+          "has_answer": true,
+          "target_symbol": "checkArgument",
+          "rank": 0,
+          "score": 0,
+          "topSymbol": "isBoolean",
+          "topScore": 0.0514
+        },
+        {
+          "query_id": "q_java_gsn_10",
+          "has_answer": false,
+          "is_false_positive": true,
+          "topSymbol": "fromJsonTree",
+          "topScore": 0.3277
+        }
+      ]
+    }
+  }
+}

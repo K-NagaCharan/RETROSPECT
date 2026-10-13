@@ -20,8 +20,48 @@ class PythonAdapter extends LanguageAdapter {
       if (node.type === 'class_definition') {
         const classNameNode = node.childForFieldName('name');
         const className = classNameNode ? this._nodeText(classNameNode, sourceCode) : 'AnonymousClass';
-        const newScope = [...scopeStack, className];
+        let docstring = this._extractPythonDocstring(node, sourceCode);
         const bodyNode = node.childForFieldName('body');
+        if (!docstring && bodyNode) {
+          for (let i = 0; i < bodyNode.childCount; i++) {
+            const child = bodyNode.child(i);
+            if (child.type === 'function_definition') {
+              const nameNode = child.childForFieldName('name');
+              if (nameNode && this._nodeText(nameNode, sourceCode) === '__init__') {
+                docstring = this._extractPythonDocstring(child, sourceCode);
+                if (docstring) break;
+              }
+            }
+          }
+        }
+        const range = this._nodeRange(node);
+        const source = this._nodeText(node, sourceCode);
+        const qualifiedName = scopeStack.length > 0 ? `${scopeStack.join('.')}.${className}` : className;
+
+        const superclassesNode = node.childForFieldName('superclasses');
+        const baseClasses = superclassesNode ? this._nodeText(superclassesNode, sourceCode).replace(/[()]/g, '').split(',').map(s => s.trim()).filter(Boolean) : [];
+
+        const classSymbol = new SymbolRecord({
+          name: className,
+          qualifiedName,
+          enclosingScope: [...scopeStack],
+          parameters: [],
+          normalizedSignature: `class ${className}`,
+          range,
+          source,
+          language: 'python',
+          filePath,
+          symbolType: 'class',
+          docstring,
+          metadata: {
+            isClass: true,
+            baseClasses
+          },
+          extractionStatus: hasSyntaxError ? 'partial' : 'success'
+        });
+        symbols.push(classSymbol);
+
+        const newScope = [...scopeStack, className];
         if (bodyNode) {
           for (let i = 0; i < bodyNode.childCount; i++) {
             traverse(bodyNode.child(i), newScope);
@@ -79,6 +119,8 @@ class PythonAdapter extends LanguageAdapter {
 
     const source = this._nodeText(node, sourceCode);
     const range = this._nodeRange(node);
+    const docstring = this._extractPythonDocstring(node, sourceCode);
+    const calls = this._extractCalls(node, sourceCode);
 
     const symbol = new SymbolRecord({
       name,
@@ -94,6 +136,8 @@ class PythonAdapter extends LanguageAdapter {
       symbolType,
       modifiers: [],
       decorators,
+      docstring,
+      calls,
       astSummary: {
         nodeType: node.type,
         childCount: node.childCount
@@ -175,6 +219,75 @@ class PythonAdapter extends LanguageAdapter {
     }
 
     return params;
+  }
+
+  _extractPythonDocstring(node, sourceCode) {
+    // Check inside function/class body for docstring
+    const bodyNode = node.childForFieldName('body');
+    if (bodyNode && bodyNode.childCount > 0) {
+      for (let i = 0; i < bodyNode.childCount; i++) {
+        const child = bodyNode.child(i);
+        if (child.type === 'expression_statement') {
+          const expr = child.child(0);
+          if (expr && (expr.type === 'string' || expr.type === 'concatenated_string')) {
+            const raw = this._nodeText(expr, sourceCode).trim();
+            // Strip quotes
+            return raw.replace(/^("""|'''|"|')|("""|'''|"|')$/g, '').trim();
+          }
+        }
+        // If not a comment or empty statement, stop looking for docstring
+        if (child.type !== 'comment') break;
+      }
+    }
+
+    // Fallback: check leading comments above symbol
+    return this._extractLeadingComment(node, sourceCode);
+  }
+
+  _extractCalls(node, sourceCode) {
+    const calls = new Set();
+    const walk = (n) => {
+      if (!n) return;
+      if (n.type === 'call') {
+        const funcNode = n.childForFieldName('function');
+        if (funcNode) {
+          if (funcNode.type === 'identifier') {
+            calls.add(this._nodeText(funcNode, sourceCode).trim());
+          } else if (funcNode.type === 'attribute') {
+            const attrNode = funcNode.childForFieldName('attribute');
+            if (attrNode) calls.add(this._nodeText(attrNode, sourceCode).trim());
+          }
+        }
+      }
+      for (let i = 0; i < n.childCount; i++) {
+        walk(n.child(i));
+      }
+    };
+
+    const bodyNode = node.childForFieldName('body');
+    if (bodyNode) walk(bodyNode);
+    return Array.from(calls);
+  }
+
+  extractImports(tree, sourceCode) {
+    const imports = [];
+    if (!tree || !tree.rootNode) return imports;
+
+    for (let i = 0; i < tree.rootNode.childCount; i++) {
+      const child = tree.rootNode.child(i);
+      if (child.type === 'import_statement') {
+        // e.g. import os, sys
+        const text = this._nodeText(child, sourceCode).replace(/^import\s+/, '').trim();
+        imports.push(...text.split(',').map(s => s.trim()).filter(Boolean));
+      } else if (child.type === 'import_from_statement') {
+        // e.g. from math import sqrt
+        const modNode = child.childForFieldName('module_name');
+        if (modNode) {
+          imports.push(this._nodeText(modNode, sourceCode).trim());
+        }
+      }
+    }
+    return imports;
   }
 }
 

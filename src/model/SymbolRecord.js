@@ -19,6 +19,9 @@ class SymbolRecord {
     this.normalizedTokens = Array.isArray(data.normalizedTokens) ? data.normalizedTokens : this._computeNormalizedTokens();
     this.astSummary = data.astSummary || {};
     this.metadata = data.metadata || {};
+    this.docstring = data.docstring || '';
+    this.calls = Array.isArray(data.calls) ? data.calls : [];
+    this.dependencies = Array.isArray(data.dependencies) ? data.dependencies : [];
     this.extractionStatus = data.extractionStatus || 'success'; // 'success', 'syntax_error', 'partial'
     
     this.id = data.id || this._generateId();
@@ -69,6 +72,9 @@ class SymbolRecord {
       normalizedTokens: this.normalizedTokens,
       astSummary: this.astSummary,
       metadata: this.metadata,
+      docstring: this.docstring,
+      calls: this.calls,
+      dependencies: this.dependencies,
       extractionStatus: this.extractionStatus
     };
   }

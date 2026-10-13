@@ -123,6 +123,64 @@ class OrderService {
       expect(fetchOrder.qualifiedName).toBe('OrderService.fetchOrder');
       expect(fetchOrder.modifiers).toContain('async');
     });
+
+    test('extracts defineGetter calls as getter symbols for protocol and fresh', async () => {
+      const code = `
+const req = {};
+
+/**
+ * Return the protocol string "http" or "https"
+ * when properly sub-classed.
+ */
+defineGetter(req, 'protocol', function protocol(){
+  var proto = this.connection.encrypted ? 'https' : 'http';
+  return proto;
+});
+
+/**
+ * Check if the request is fresh.
+ */
+defineGetter(req, 'fresh', function(){
+  var method = this.method;
+  var res = this.res;
+  return true;
+});
+`;
+      const result = await extractor.extract(code, 'lib/request.js');
+      expect(result.language).toBe('javascript');
+      expect(result.hasSyntaxError).toBe(false);
+
+      const names = result.symbols.map(s => s.name);
+      expect(names).toContain('protocol');
+      expect(names).toContain('fresh');
+
+      const protocolSym = result.symbols.find(s => s.name === 'protocol');
+      expect(protocolSym.symbolType).toBe('getter');
+      expect(protocolSym.qualifiedName).toBe('req.protocol');
+      expect(protocolSym.modifiers).toContain('get');
+      expect(protocolSym.docstring).toContain('Return the protocol string');
+      expect(protocolSym.normalizedSignature).toBe('protocol()');
+
+      const freshSym = result.symbols.find(s => s.name === 'fresh');
+      expect(freshSym.symbolType).toBe('getter');
+      expect(freshSym.qualifiedName).toBe('req.fresh');
+      expect(freshSym.modifiers).toContain('get');
+      expect(freshSym.docstring).toContain('Check if the request is fresh');
+      expect(freshSym.normalizedSignature).toBe('fresh()');
+    });
+
+    test('unwraps parenthesized expressions around function initializers without extracting non-functions', async () => {
+      const code = `
+const wrappedArrow = ((a, b) => a + b);
+const regularConst = (42);
+const regexConst = (/^[a-z]+$/);
+`;
+      const result = await extractor.extract(code, 'src/helpers.js');
+      const names = result.symbols.map(s => s.name);
+      expect(names).toContain('wrappedArrow');
+      expect(names).not.toContain('regularConst');
+      expect(names).not.toContain('regexConst');
+    });
   });
 
   describe('TypeScriptAdapter', () => {
@@ -171,6 +229,43 @@ export function parsePayload<T>(raw: string): T {
 
       const parsePayload = result.symbols.find(s => s.name === 'parsePayload');
       expect(parsePayload.returnType).toBe('T');
+    });
+
+    test('extracts Zod-style validate arrow function wrapped in as_expression and parenthesized_expression', async () => {
+      const code = `
+export type $Validate = <T>(schema: T, value: unknown) => boolean;
+
+// Deliberately tiny helper for schema parsing
+export const validate: $Validate = ((
+  schema: any,
+  value: unknown,
+  _ctx?: any
+): boolean => {
+  return true;
+}) as $Validate;
+
+export const legacyCast = <any>((x: number) => x * 2);
+export const regexConst = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/ as any;
+export const numberConst = 100 as number;
+`;
+      const result = await extractor.extract(code, 'packages/zod/src/v4/core/parse.ts');
+      expect(result.language).toBe('typescript');
+      expect(result.hasSyntaxError).toBe(false);
+
+      const names = result.symbols.map(s => s.name);
+      expect(names).toContain('validate');
+      expect(names).toContain('legacyCast');
+      expect(names).not.toContain('regexConst');
+      expect(names).not.toContain('numberConst');
+
+      const validateSym = result.symbols.find(s => s.name === 'validate');
+      expect(validateSym.symbolType).toBe('arrow_function');
+      expect(validateSym.returnType).toBe('boolean');
+      expect(validateSym.parameters.length).toBe(3);
+      expect(validateSym.parameters[0].name).toBe('schema');
+      expect(validateSym.parameters[1].name).toBe('value');
+      expect(validateSym.parameters[2].name).toBe('_ctx');
+      expect(validateSym.docstring).toContain('Deliberately tiny helper');
     });
   });
 
