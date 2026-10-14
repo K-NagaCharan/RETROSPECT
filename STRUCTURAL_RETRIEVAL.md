@@ -186,20 +186,20 @@ The dataset covers 7 distinct query categories:
 
 | Metric | Target / Benchmark | Measured Test Result |
 | :--- | :--- | :--- |
-| **Recall@1** | $\ge 80.0\%$ | **93.75%** |
+| **Recall@1** | $\ge 80.0\%$ | **100.00%** |
 | **Recall@5** | $\ge 90.0\%$ | **100.00%** |
 | **Recall@10** | $\ge 95.0\%$ | **100.00%** |
-| **MRR (Mean Reciprocal Rank)** | $\ge 0.85$ | **0.9688** |
-| **Precision@1** | $\ge 80.0\%$ | **93.75%** |
-| **Precision@5** | - | **75.52%** |
+| **MRR (Mean Reciprocal Rank)** | $\ge 0.85$ | **1.0000** |
+| **Precision@1** | $\ge 80.0\%$ | **100.00%** |
+| **Precision@5** | - | **90.10%** |
 | **No-Result Accuracy** | $100.0\%$ | **100.00%** |
-| **Mean Query Latency** | $< 50\text{ ms}$ | **0.19 ms** ($p95 = 1.0\text{ ms}$) |
+| **Mean Query Latency** | $< 50\text{ ms}$ | **0.81 ms** ($p95 = 6.0\text{ ms}$) |
 
 ### Breakdown by Language (Test Split)
 
 | Language | Labeled Queries | Recall@1 | Recall@5 | MRR | Precision@1 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Python** | 5 | 80.0% | 100.0% | 0.900 | 80.0% |
+| **Python** | 5 | 100.0% | 100.0% | 1.000 | 100.0% |
 | **JavaScript** | 3 | 100.0% | 100.0% | 1.000 | 100.0% |
 | **TypeScript** | 3 | 100.0% | 100.0% | 1.000 | 100.0% |
 | **Java** | 5 | 100.0% | 100.0% | 1.000 | 100.0% |
@@ -209,13 +209,13 @@ The dataset covers 7 distinct query categories:
 | Category | Queries | Recall@1 | Recall@5 | MRR | No-Result Acc |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `functional_description` | 8 | 100.0% | 100.0% | 1.000 | 100.0% |
+| `generic_misleading_name` | 1 | 100.0% | 100.0% | 1.000 | 100.0% |
 | `exact_name` | 2 | 100.0% | 100.0% | 1.000 | 100.0% |
-| `generic_misleading_name` | 1 | 0.0% | 100.0% | 0.500 | 100.0% |
 | `dependency_helper` | 1 | 100.0% | 100.0% | 1.000 | 100.0% |
 | `no_result` | 3 | 100.0% | 100.0% | 1.000 | 100.0% |
 | `ambiguous` | 1 | 100.0% | 100.0% | 1.000 | 100.0% |
 
-*Key finding*: For `generic_misleading_name` queries (e.g. `process` handling image uploads), the retriever places the function at Rank 2 (Recall@5 = 100%) because the identifier itself does not provide lexical signal, relying instead on docstrings and path matches.
+Across all 22 benchmark instances (dev + test splits combined), Retrospect achieves **95.45% Recall@1**, **95.45% Recall@5**, **0.9545 MRR**, and **100.00% No-Result Accuracy**.
 
 ---
 
