@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-7BC011",
+  "developer_context": {
+    "problem_scenario": "A route handler initiates an HTTP redirect after form submission.",
+    "observable_behavior": "Supplying the special legacy keyword \"back\" resolves to the Referer header, exposing the redirect to open-redirect manipulation.",
+    "expected_outcome": "Remove the legacy keyword shortcut and require explicit target URLs for redirection destination headers.",
+    "environmental_context": "HTTP redirection destination header construction."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.922Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

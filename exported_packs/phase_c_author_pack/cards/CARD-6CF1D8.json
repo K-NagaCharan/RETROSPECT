@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-6CF1D8",
+  "developer_context": {
+    "problem_scenario": "An unhandled exception occurs in a route handler during production request processing.",
+    "observable_behavior": "The built-in error reporting mechanism prints only a truncated single-line string to stderr instead of the full error stack.",
+    "expected_outcome": "The default server error logger should output the complete error object including stack trace details.",
+    "environmental_context": "Default framework error handling middleware."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.920Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

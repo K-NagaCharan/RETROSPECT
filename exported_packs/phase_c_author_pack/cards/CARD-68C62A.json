@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-68C62A",
+  "developer_context": {
+    "problem_scenario": "An API handler sets the media payload header based on filename extension.",
+    "observable_behavior": "MIME category resolution for uncommon or modern file extensions returns incorrect or missing header values.",
+    "expected_outcome": "Adopt standard community MIME database lookup to ensure consistent header values across file extensions.",
+    "environmental_context": "HTTP media header resolution."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.919Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

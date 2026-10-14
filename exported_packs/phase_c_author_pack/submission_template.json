@@ -1,0 +1,13 @@
+{
+  "submission_id": "SUB-A1B2C3",
+  "card_id": "CARD-A1B2C3",
+  "query_text": "Replace with natural language search query describing the functionality to locate (minimum 15 characters)",
+  "intent_category": "BUG_FIX",
+  "author_metadata": {
+    "author_id": "AUTHOR-XX",
+    "author_experience_level": "SENIOR_DEV",
+    "authorship_timestamp": "2026-10-14T12:00:00Z",
+    "blinded_attestation": true,
+    "external_search_used": false
+  }
+}

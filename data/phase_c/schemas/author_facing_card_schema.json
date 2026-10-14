@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retrospect.org/schemas/phase_c/author_facing_card.schema.json",
+  "title": "Phase C Sanitized Author-Facing Context Card Schema (Blinded)",
+  "description": "Defines the blinded card format provided to independent authors. STRICT CONSTRAINT: Excludes partition, benchmark_id, provenance_tier, and repository identifiers.",
+  "type": "object",
+  "required": [
+    "card_id",
+    "developer_context",
+    "sanitization_metadata"
+  ],
+  "properties": {
+    "card_id": {
+      "type": "string",
+      "pattern": "^CARD-[A-Z0-9]{6}$"
+    },
+    "developer_context": {
+      "type": "object",
+      "required": [
+        "problem_scenario",
+        "observable_behavior",
+        "expected_outcome",
+        "environmental_context"
+      ],
+      "properties": {
+        "problem_scenario": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Realistic engineering situation in which a developer encounters the issue or task."
+        },
+        "observable_behavior": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Observed system failure, defect, or required functionality, expressed without naming implementation symbols or filenames."
+        },
+        "expected_outcome": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Expected correct behavior or system capability once resolved."
+        },
+        "environmental_context": {
+          "type": "string",
+          "description": "Relevant runtime or protocol context using neutral technical terminology."
+        }
+      },
+      "additionalProperties": false
+    },
+    "sanitization_metadata": {
+      "type": "object",
+      "required": [
+        "sanitizer_role_id",
+        "sanitization_timestamp",
+        "sanitization_attestation"
+      ],
+      "properties": {
+        "sanitizer_role_id": {
+          "type": "string"
+        },
+        "sanitization_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sanitization_attestation": {
+          "type": "string",
+          "enum": ["VERIFIED_ZERO_TARGET_IDENTIFIERS"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

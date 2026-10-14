@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-85BFDB",
+  "developer_context": {
+    "problem_scenario": "A web framework instance maintains global environment and server settings.",
+    "observable_behavior": "Modifying configuration settings using user-controlled property keys can inadvertently pollute the global Object prototype.",
+    "expected_outcome": "Configuration key assignment should guard against modifying prototype-inherited properties such as __proto__.",
+    "environmental_context": "Framework environment configuration storage."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.917Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

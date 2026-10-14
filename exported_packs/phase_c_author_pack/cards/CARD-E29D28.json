@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-E29D28",
+  "developer_context": {
+    "problem_scenario": "A web server parses incoming URL query strings into nested JavaScript objects.",
+    "observable_behavior": "Excessively deep bracket nesting in incoming query parameters causes exponential recursion, resulting in server denial of service.",
+    "expected_outcome": "Enforce strict recursion depth limits when parsing structured URL query parameters to reject malicious payloads.",
+    "environmental_context": "URL query parameter parsing during request preprocessing."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.920Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

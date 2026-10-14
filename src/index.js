@@ -16,6 +16,7 @@ const { HistoryCache, CACHE_SYSTEM_VERSION } = require('./storage/HistoryCache')
 const HistoryTracker = require('./tracker/HistoryTracker');
 const HistoricalRetriever = require('./retrieval/HistoricalRetriever');
 const HistoricalRetrievalAdapter = require('./retrieval/HistoricalRetrievalAdapter');
+const { UnifiedSearch, search, searchRepository, clearHistoryCache } = require('./retrieval/UnifiedSearch');
 const HistoryEvaluator = require('./evaluation/HistoryEvaluator');
 const structural = require('./structural');
 
@@ -43,6 +44,12 @@ module.exports = {
   HistoricalRetriever,
   HistoricalRetrievalAdapter,
   HistoryEvaluator,
+
+  // Unified search pipeline
+  UnifiedSearch,
+  search,
+  searchRepository,
+  clearHistoryCache,
 
   // Structural current-code retrieval pipeline
   ...structural,

@@ -5,6 +5,9 @@ const { execFileSync } = require('child_process');
 const HistoryTracker = require('../../src/tracker/HistoryTracker');
 const GitHistoryReader = require('../../src/git/GitHistoryReader');
 const { HistoryCache } = require('../../src/storage/HistoryCache');
+const HistoricalRetrievalAdapter = require('../../src/retrieval/HistoricalRetrievalAdapter');
+const { StructuralIndex } = require('../../src/structural/index/StructuralIndex');
+const QueryProcessor = require('../../src/structural/query/QueryProcessor');
 
 describe('End-to-End Git Historical Tracking Integration Tests', () => {
   let repoDir;
@@ -118,5 +121,92 @@ describe('End-to-End Git Historical Tracking Integration Tests', () => {
     await cache.invalidate(c2);
     const cachedAfterInvalidate = await cache.getSymbols(c2, 'src/calc.py');
     expect(cachedAfterInvalidate).toBeNull();
+  });
+
+  test('indexRepositoryHistory transitive lineage: connects HEAD symbol across modifications and multiple renames (A -> B -> C)', async () => {
+    let testRepoDir;
+    try {
+      testRepoDir = fs.mkdtempSync(path.join(os.tmpdir(), 'retrospect-transitive-git-test-'));
+
+      const testRunGit = (args) => {
+        return execFileSync('git', args, { cwd: testRepoDir, encoding: 'utf8', windowsHide: true });
+      };
+
+      const testCommitFile = (relPath, content, message) => {
+        const fullPath = path.join(testRepoDir, relPath);
+        fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+        fs.writeFileSync(fullPath, content, 'utf8');
+        testRunGit(['add', relPath]);
+        testRunGit(['commit', '-m', message]);
+        return testRunGit(['rev-parse', 'HEAD']).trim();
+      };
+
+      testRunGit(['init', '-b', 'main']);
+      testRunGit(['config', 'user.name', 'Retrospect Transitive Tester']);
+      testRunGit(['config', 'user.email', 'tester@example.com']);
+
+      // 1. Initial commit with computeAlpha (c0)
+      testCommitFile('src/calc.js', 'function computeAlpha(x, y) {\n  return x + y;\n}\n', 'Root commit: initial calc');
+
+      // 2. Modified computeAlpha with distinctive tokens and message (c1)
+      testCommitFile('src/calc.js',
+        'function computeAlpha(x, y) {\n  const quantumSuperpositionCoherence = x * 42;\n  return quantumSuperpositionCoherence + y;\n}\n',
+        'perf: optimize quantumSuperpositionCoherence in computeAlpha'
+      );
+
+      // 3. Rename computeAlpha to computeBeta (c2)
+      testCommitFile('src/calc.js',
+        'function computeBeta(x, y) {\n  const quantumSuperpositionCoherence = x * 42;\n  return quantumSuperpositionCoherence + y;\n}\n',
+        'refactor: rename computeAlpha to computeBeta'
+      );
+
+      // 4. Rename computeBeta to computeGamma (c3, HEAD)
+      testCommitFile('src/calc.js',
+        'function computeGamma(x, y) {\n  const quantumSuperpositionCoherence = x * 42;\n  return quantumSuperpositionCoherence + y;\n}\n',
+        'refactor: rename computeBeta to computeGamma'
+      );
+
+      // Build structural index at HEAD
+      const structuralIndex = new StructuralIndex();
+      await structuralIndex.build(testRepoDir);
+      const headSymbols = Array.from(structuralIndex.symbols.values());
+
+      expect(headSymbols.length).toBe(1);
+      expect(headSymbols[0].name).toBe('computeGamma');
+
+      // Run real indexRepositoryHistory pipeline
+      const adapter = new HistoricalRetrievalAdapter();
+      const historyResult = await adapter.indexRepositoryHistory(testRepoDir, headSymbols, { maxCommits: 10 });
+
+      const gammaProfile = historyResult.profileMap.get(headSymbols[0].id);
+      expect(gammaProfile).toBeDefined();
+
+      // Verify transitive ancestor names: computeGamma must inherit both computeBeta and computeAlpha
+      expect(gammaProfile.historicalNames).toEqual(expect.arrayContaining(['computeBeta', 'computeAlpha']));
+
+      // Verify commit message tokens inherited from commit c1 (prior to both renames)
+      expect(gammaProfile.commitTerms.tokens).toContain('quantumsuperpositioncoherence');
+      expect(gammaProfile.commitTerms.tokens).toContain('quantum');
+
+      // Verify diff tokens inherited from commit c1
+      expect(gammaProfile.diffTerms.tokens).toContain('quantumsuperpositioncoherence');
+      expect(gammaProfile.diffTerms.tokens).toContain('quantum');
+
+      // Verify history depth represents all 3 evolution commits
+      expect(gammaProfile.historyDepth).toBe(3);
+
+      // Verify historical scoring against query targeting earliest ancestor name and tokens
+      const query = QueryProcessor.process('find quantumSuperpositionCoherence algorithm in computeAlpha');
+      const score = adapter.scoreHistorical(query, gammaProfile);
+      expect(score.score).toBeGreaterThan(0.30);
+      expect(score.breakdown.historicalName).toBeGreaterThan(0);
+      expect(score.breakdown.commitMessage).toBeGreaterThan(0);
+    } finally {
+      if (testRepoDir && fs.existsSync(testRepoDir)) {
+        try {
+          fs.rmSync(testRepoDir, { recursive: true, force: true });
+        } catch (e) {}
+      }
+    }
   });
 });

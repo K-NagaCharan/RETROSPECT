@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-7B2064",
+  "developer_context": {
+    "problem_scenario": "A logout route attempts to expire an authentication session token on the client browser.",
+    "observable_behavior": "Supplying conflicting expiration or max-age parameter overrides causes the browser cookie deletion header to fail.",
+    "expected_outcome": "The cookie deletion utility should overwrite expiration headers so client browsers reliably delete the designated cookie.",
+    "environmental_context": "HTTP Set-Cookie header generation and session teardown."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.918Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

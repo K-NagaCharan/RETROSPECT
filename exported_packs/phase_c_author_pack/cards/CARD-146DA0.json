@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-146DA0",
+  "developer_context": {
+    "problem_scenario": "An HTTP client issues a query-based read request with conditional validation headers.",
+    "observable_behavior": "Conditional cache revalidation headers (If-None-Match / ETag) are ignored when using newer HTTP read methods.",
+    "expected_outcome": "Enable conditional cache revalidation so the server correctly returns 304 Not Modified for supported read methods.",
+    "environmental_context": "HTTP conditional request cache validation."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.924Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

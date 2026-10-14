@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-55A45E",
+  "developer_context": {
+    "problem_scenario": "An internationalized API processes requests specifying character encoding preferences.",
+    "observable_behavior": "When the Accept-Charset header includes multiple encodings with fractional quality factors, preference order is parsed incorrectly.",
+    "expected_outcome": "Properly parse quality weightings and select the client's highest-preference supported character encoding.",
+    "environmental_context": "HTTP Accept-Charset header content negotiation."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.924Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

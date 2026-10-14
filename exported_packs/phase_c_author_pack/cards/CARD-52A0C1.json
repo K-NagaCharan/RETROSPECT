@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-52A0C1",
+  "developer_context": {
+    "problem_scenario": "An API sets HTTP Link headers to support HATEOAS pagination relations.",
+    "observable_behavior": "Attempting to specify multiple URIs with the same relation category overwrites prior entries instead of concatenating them.",
+    "expected_outcome": "Allow multiple Link header entries sharing the same relation attribute to be combined into a comma-separated header.",
+    "environmental_context": "HTTP Link header construction for pagination."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.923Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

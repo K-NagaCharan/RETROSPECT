@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-1C1090",
+  "developer_context": {
+    "problem_scenario": "During web service bootstrap, an operating system network socket error is encountered while binding the port.",
+    "observable_behavior": "The error callback supplied to the service bootstrap helper is triggered multiple times instead of firing exactly once.",
+    "expected_outcome": "The startup error callback should be invoked at most once, and subsequent socket error events during startup should be suppressed.",
+    "environmental_context": "Node.js HTTP network socket startup and port binding lifecycle."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.914Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

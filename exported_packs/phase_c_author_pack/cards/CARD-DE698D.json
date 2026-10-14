@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-DE698D",
+  "developer_context": {
+    "problem_scenario": "An HTTP endpoint transmits a streaming or chunked message payload.",
+    "observable_behavior": "HTTP response entity validation headers (ETags) are erroneously omitted when chunked transfer encoding headers are configured.",
+    "expected_outcome": "The HTTP response payload generator should correctly construct and assign headers according to HTTP caching specifications.",
+    "environmental_context": "HTTP response payload generation and header finalization."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.918Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

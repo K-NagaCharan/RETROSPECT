@@ -332,6 +332,99 @@ class HistoricalRetrievalAdapter {
   }
 
   /**
+   * Traverse ancestor lineage from a current symbol through renames and moves.
+   * Accumulates historical change records in reverse-chronological order without cycles.
+   * @param {object} sym Current symbol metadata { name, filePath, id }
+   * @param {Map<string, Array<object>>} evolutionMap Map of "path::name" -> change records
+   * @param {Map<string, number>} [commitIndexMap] Map of commitHash -> chronological index
+   * @param {object} [options] Traversal options { maxHistoryDepth }
+   * @returns {Array<object>} Accumulated change records
+   */
+  stitchLineage(sym, evolutionMap, commitIndexMap = null, options = {}) {
+    if (!sym || !evolutionMap) return [];
+    const maxDepth = options.maxHistoryDepth || 50;
+    const normPath = (sym.filePath || '').replace(/\\/g, '/');
+
+    const allRecords = [];
+    const visitedRecordIds = new Set();
+    const visitedStates = new Set();
+
+    let currPath = normPath;
+    let currName = sym.name;
+    let minCommitIndex = 0;
+    let continueTracing = true;
+
+    while (continueTracing && allRecords.length < maxDepth) {
+      const currKey = `${currPath}::${currName}`;
+      const stateKey = `${currKey}@${minCommitIndex}`;
+      if (visitedStates.has(stateKey)) {
+        // Cycle detected
+        break;
+      }
+      visitedStates.add(stateKey);
+
+      const candidateRecords = evolutionMap.get(currKey) || [];
+      let transitionFound = false;
+
+      for (const rec of candidateRecords) {
+        if (allRecords.length >= maxDepth) {
+          continueTracing = false;
+          break;
+        }
+
+        const childIdx = commitIndexMap ? commitIndexMap.get(rec.childCommit) : undefined;
+        // If commit ordering is provided, ignore records newer than minCommitIndex
+        if (commitIndexMap && childIdx !== undefined && childIdx < minCommitIndex) {
+          continue;
+        }
+
+        const recId = `${rec.childCommit}::${currKey}`;
+        if (visitedRecordIds.has(recId)) {
+          continue;
+        }
+        visitedRecordIds.add(recId);
+        allRecords.push(rec);
+
+        if (rec.confidence === 'uncertain' || rec.changeClassification === 'uncertain') {
+          // Ambiguous lineage link: apply ambiguity policy, stop further traversal along this branch
+          continueTracing = false;
+          break;
+        }
+
+        if (rec.predecessorSymbol && rec.predecessorSymbol.name) {
+          const predName = rec.predecessorSymbol.name;
+          const predPath = (rec.predecessorSymbol.filePath || rec.normPath).replace(/\\/g, '/');
+          const isRenameOrMove = (predName !== currName) || (predPath !== currPath);
+
+          if (isRenameOrMove) {
+            // Identity transition: switch current key to predecessor and advance minimum commit index
+            currPath = predPath;
+            currName = predName;
+            if (commitIndexMap) {
+              const parentIdx = commitIndexMap.get(rec.parentCommit);
+              minCommitIndex = (parentIdx !== undefined) ? parentIdx : (childIdx !== undefined ? childIdx + 1 : minCommitIndex + 1);
+            } else {
+              minCommitIndex += 1;
+            }
+            transitionFound = true;
+            break; // Query evolutionMap for the predecessor key
+          }
+        } else {
+          // Root introduction or severed predecessor link: stop backward traversal
+          continueTracing = false;
+          break;
+        }
+      }
+
+      if (!transitionFound) {
+        continueTracing = false;
+      }
+    }
+
+    return allRecords;
+  }
+
+  /**
    * Indexes genuine Git commit history and symbol lineage for a repository.
    * Uses GitHistoryReader, FunctionExtractor, and FunctionMatcher to extract
    * real commit messages, diffs, and predecessor symbols. Never uses audit notes
@@ -435,14 +528,16 @@ class HistoricalRetrievalAdapter {
       analyzedCommits++;
     }
 
+    // Build commit index map for temporal ordering during lineage traversal
+    const commitIndexMap = new Map();
+    commits.forEach((c, idx) => commitIndexMap.set(c.hash, idx));
+
     // Build historical profile for each current symbol
     const profileMap = new Map();
     let symbolsWithHistory = 0;
 
     for (const sym of currentSymbols) {
-      const normPath = (sym.filePath || '').replace(/\\/g, '/');
-      const directKey = `${normPath}::${sym.name}`;
-      const records = evolutionMap.get(directKey) || [];
+      const records = this.stitchLineage(sym, evolutionMap, commitIndexMap, options);
 
       if (records.length > 0) {
         symbolsWithHistory++;
@@ -451,6 +546,9 @@ class HistoricalRetrievalAdapter {
         const historicalDocstrings = [];
         const commitMessages = [];
         const diffSnippets = [];
+        const seenCommitMessages = new Set();
+        const seenDiffSnippets = new Set();
+        const seenDocstrings = new Set();
         let lowestConfidence = 'certain';
         let latestEvolutionType = records[0].changeClassification;
 
@@ -460,17 +558,20 @@ class HistoricalRetrievalAdapter {
             if (rec.predecessorSymbol.qualifiedName) {
               historicalQualifiedNames.add(rec.predecessorSymbol.qualifiedName);
             }
-            if (rec.predecessorSymbol.docstring) {
+            if (rec.predecessorSymbol.docstring && !seenDocstrings.has(rec.predecessorSymbol.docstring)) {
+              seenDocstrings.add(rec.predecessorSymbol.docstring);
               historicalDocstrings.push(rec.predecessorSymbol.docstring);
             }
           }
-          if (rec.commitMessage) {
+          if (rec.commitMessage && !seenCommitMessages.has(rec.commitMessage)) {
+            seenCommitMessages.add(rec.commitMessage);
             commitMessages.push(rec.commitMessage);
           }
-          if (rec.diffText) {
+          if (rec.diffText && !seenDiffSnippets.has(rec.diffText)) {
+            seenDiffSnippets.add(rec.diffText);
             diffSnippets.push(rec.diffText.substring(0, 1500)); // Cap diff size per commit
           }
-          if (rec.confidence === 'uncertain') {
+          if (rec.confidence === 'uncertain' || rec.changeClassification === 'uncertain') {
             lowestConfidence = 'uncertain';
           }
         }

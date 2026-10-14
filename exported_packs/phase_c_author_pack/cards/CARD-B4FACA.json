@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-B4FACA",
+  "developer_context": {
+    "problem_scenario": "A developer is generating HTML output from view template files using default configuration values.",
+    "observable_behavior": "The template evaluation routine throws a TypeError when the caller explicitly passes null or undefined for the options argument.",
+    "expected_outcome": "The view evaluation routine should treat null or undefined options as an empty configuration object and generate output cleanly.",
+    "environmental_context": "Server-side view template evaluation pipeline."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.915Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

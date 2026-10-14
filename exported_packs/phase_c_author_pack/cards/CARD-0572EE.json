@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-0572EE",
+  "developer_context": {
+    "problem_scenario": "An application serves static assets directly from disk to web clients.",
+    "observable_behavior": "Callers cannot control or override ETag header calculation when delivering files to the client.",
+    "expected_outcome": "Allow callers to pass custom caching options to toggle or configure entity tag generation when delivering files.",
+    "environmental_context": "Static file transmission pipeline."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.921Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

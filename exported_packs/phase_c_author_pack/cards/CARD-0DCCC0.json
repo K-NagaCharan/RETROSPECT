@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-0DCCC0",
+  "developer_context": {
+    "problem_scenario": "Initializing a new server instance with default runtime options.",
+    "observable_behavior": "The server defaults to a complex nested query parser that allows arbitrary object creation instead of standard key-value parsing.",
+    "expected_outcome": "Configure the framework to default to a simpler, safer standard query parser out of the box.",
+    "environmental_context": "Framework initialization and default setting bootstrapping."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.921Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

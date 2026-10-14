@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-0BBF08",
+  "developer_context": {
+    "problem_scenario": "A controller handler sets an HTTP response numeric code before dispatching.",
+    "observable_behavior": "Passing invalid inputs such as text or non-numeric values fails silently or produces malformed HTTP header responses.",
+    "expected_outcome": "Enforce strict input validation by throwing an error whenever an invalid non-integer code is supplied.",
+    "environmental_context": "HTTP response code assignment."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.921Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

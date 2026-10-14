@@ -1,0 +1,152 @@
+{
+  "key_title": "Retrospect Phase C — Author Card Blind Mapping Key",
+  "key_version": "1.0",
+  "freeze_date": "2026-10-14T06:27:29.909Z",
+  "notice": "CONFIDENTIAL EVALUATION MAPPING — FOR EVALUATOR USE ONLY. NEVER DISTRIBUTE TO AUTHORS.",
+  "mappings": [
+    {
+      "opaque_card_id": "CARD-1C1090",
+      "internal_card_id": "CARD-EXP-DEV-01",
+      "benchmark_id": "EXP-DEV-01",
+      "partition": "DEVELOPMENT",
+      "provenance_tier": "TIER_3_BEHAVIORAL_SYNTHESIS",
+      "lineage_cluster_id": "CL-05"
+    },
+    {
+      "opaque_card_id": "CARD-B4FACA",
+      "internal_card_id": "CARD-EXP-DEV-02",
+      "benchmark_id": "EXP-DEV-02",
+      "partition": "DEVELOPMENT",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-06"
+    },
+    {
+      "opaque_card_id": "CARD-C833B4",
+      "internal_card_id": "CARD-EXP-DEV-03",
+      "benchmark_id": "EXP-DEV-03",
+      "partition": "DEVELOPMENT",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-07"
+    },
+    {
+      "opaque_card_id": "CARD-85BFDB",
+      "internal_card_id": "CARD-EXP-DEV-04",
+      "benchmark_id": "EXP-DEV-04",
+      "partition": "DEVELOPMENT",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-08"
+    },
+    {
+      "opaque_card_id": "CARD-DE698D",
+      "internal_card_id": "CARD-EXP-DEV-05",
+      "benchmark_id": "EXP-DEV-05",
+      "partition": "DEVELOPMENT",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-12"
+    },
+    {
+      "opaque_card_id": "CARD-7B2064",
+      "internal_card_id": "CARD-EXP-DEV-06",
+      "benchmark_id": "EXP-DEV-06",
+      "partition": "DEVELOPMENT",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-16"
+    },
+    {
+      "opaque_card_id": "CARD-68C62A",
+      "internal_card_id": "CARD-EXP-DEV-07",
+      "benchmark_id": "EXP-DEV-07",
+      "partition": "DEVELOPMENT",
+      "provenance_tier": "TIER_3_BEHAVIORAL_SYNTHESIS",
+      "lineage_cluster_id": "CL-18"
+    },
+    {
+      "opaque_card_id": "CARD-BF8B6C",
+      "internal_card_id": "CARD-EXP-DEV-08",
+      "benchmark_id": "EXP-DEV-08",
+      "partition": "DEVELOPMENT",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-20"
+    },
+    {
+      "opaque_card_id": "CARD-E29D28",
+      "internal_card_id": "CARD-EXP-DEV-09",
+      "benchmark_id": "EXP-DEV-09",
+      "partition": "DEVELOPMENT",
+      "provenance_tier": "TIER_2_CHANGELOG_AND_CVE",
+      "lineage_cluster_id": "CL-24"
+    },
+    {
+      "opaque_card_id": "CARD-6CF1D8",
+      "internal_card_id": "CARD-EXP-TEST-01",
+      "benchmark_id": "EXP-TEST-01",
+      "partition": "HELD_OUT_TEST",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-04"
+    },
+    {
+      "opaque_card_id": "CARD-0DCCC0",
+      "internal_card_id": "CARD-EXP-TEST-02",
+      "benchmark_id": "EXP-TEST-02",
+      "partition": "HELD_OUT_TEST",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-09"
+    },
+    {
+      "opaque_card_id": "CARD-0BBF08",
+      "internal_card_id": "CARD-EXP-TEST-03",
+      "benchmark_id": "EXP-TEST-03",
+      "partition": "HELD_OUT_TEST",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-13"
+    },
+    {
+      "opaque_card_id": "CARD-0572EE",
+      "internal_card_id": "CARD-EXP-TEST-04",
+      "benchmark_id": "EXP-TEST-04",
+      "partition": "HELD_OUT_TEST",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-14"
+    },
+    {
+      "opaque_card_id": "CARD-7BC011",
+      "internal_card_id": "CARD-EXP-TEST-05",
+      "benchmark_id": "EXP-TEST-05",
+      "partition": "HELD_OUT_TEST",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-15"
+    },
+    {
+      "opaque_card_id": "CARD-A41718",
+      "internal_card_id": "CARD-EXP-TEST-06",
+      "benchmark_id": "EXP-TEST-06",
+      "partition": "HELD_OUT_TEST",
+      "provenance_tier": "TIER_3_BEHAVIORAL_SYNTHESIS",
+      "lineage_cluster_id": "CL-17"
+    },
+    {
+      "opaque_card_id": "CARD-52A0C1",
+      "internal_card_id": "CARD-EXP-TEST-07",
+      "benchmark_id": "EXP-TEST-07",
+      "partition": "HELD_OUT_TEST",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-19"
+    },
+    {
+      "opaque_card_id": "CARD-146DA0",
+      "internal_card_id": "CARD-EXP-TEST-08",
+      "benchmark_id": "EXP-TEST-08",
+      "partition": "HELD_OUT_TEST",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-22"
+    },
+    {
+      "opaque_card_id": "CARD-55A45E",
+      "internal_card_id": "CARD-EXP-TEST-09",
+      "benchmark_id": "EXP-TEST-09",
+      "partition": "HELD_OUT_TEST",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "lineage_cluster_id": "CL-23"
+    }
+  ]
+}

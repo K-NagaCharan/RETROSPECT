@@ -183,4 +183,273 @@ describe('HistoricalRetrievalAdapter Unit Tests', () => {
     // 0.80 * 0.65 + 0.60 * 0.35 = 0.52 + 0.21 = 0.73
     expect(combined).toBeCloseTo(0.73, 2);
   });
+
+  describe('Transitive Historical Lineage Stitching', () => {
+    test('Two-step rename (A -> B -> C): inherits names, commit messages, and diff tokens across multiple renames', () => {
+      const currentSymbol = { id: 'symC', name: 'parseConfig', filePath: 'src/config.js' };
+      const evolutionMap = new Map();
+
+      // C (childCommit c3, parentCommit c2): renamed from B
+      evolutionMap.set('src/config.js::parseConfig', [{
+        childCommit: 'c3',
+        parentCommit: 'c2',
+        commitMessage: 'refactor: rename loadConfig to parseConfig',
+        changeClassification: 'renamed',
+        predecessorSymbol: { name: 'loadConfig', filePath: 'src/config.js', qualifiedName: 'loadConfig' },
+        confidence: 'high_confidence',
+        diffText: '-function loadConfig()\n+function parseConfig()',
+        normPath: 'src/config.js'
+      }]);
+
+      // B (childCommit c2, parentCommit c1): renamed from A
+      evolutionMap.set('src/config.js::loadConfig', [{
+        childCommit: 'c2',
+        parentCommit: 'c1',
+        commitMessage: 'refactor: rename readConfig to loadConfig and add yaml support',
+        changeClassification: 'renamed',
+        predecessorSymbol: { name: 'readConfig', filePath: 'src/config.js', qualifiedName: 'readConfig' },
+        confidence: 'high_confidence',
+        diffText: '-function readConfig()\n+function loadConfig()',
+        normPath: 'src/config.js'
+      }]);
+
+      // A (childCommit c1, parentCommit c0): modification to original implementation
+      evolutionMap.set('src/config.js::readConfig', [{
+        childCommit: 'c1',
+        parentCommit: 'c0',
+        commitMessage: 'feat: initial json config parser implementation',
+        changeClassification: 'modified',
+        predecessorSymbol: { name: 'readConfig', filePath: 'src/config.js', qualifiedName: 'readConfig' },
+        confidence: 'exact_match',
+        diffText: '+function readConfig(path) { return JSON.parse(readFileSync(path)); }',
+        normPath: 'src/config.js'
+      }]);
+
+      const commitIndexMap = new Map([['c3', 0], ['c2', 1], ['c1', 2], ['c0', 3]]);
+      const records = adapter.stitchLineage(currentSymbol, evolutionMap, commitIndexMap);
+
+      // Verify all 3 ancestor steps are traversed in reverse-chronological order
+      expect(records.length).toBe(3);
+      expect(records[0].childCommit).toBe('c3');
+      expect(records[1].childCommit).toBe('c2');
+      expect(records[2].childCommit).toBe('c1');
+
+      // Accumulate into historical profile
+      const historicalNames = new Set();
+      const commitMessages = [];
+      const diffSnippets = [];
+      for (const rec of records) {
+        if (rec.predecessorSymbol?.name) historicalNames.add(rec.predecessorSymbol.name);
+        if (rec.commitMessage) commitMessages.push(rec.commitMessage);
+        if (rec.diffText) diffSnippets.push(rec.diffText);
+      }
+
+      // Historical names must include both immediate (B) and transitive (A) predecessors
+      expect(historicalNames.has('loadConfig')).toBe(true);
+      expect(historicalNames.has('readConfig')).toBe(true);
+
+      const profile = {
+        currentSymbolName: currentSymbol.name,
+        currentFilePath: currentSymbol.filePath,
+        historicalNames: Array.from(historicalNames),
+        historicalQualifiedNames: Array.from(historicalNames),
+        commitMessage: commitMessages.join('\n'),
+        commitTerms: HistoricalRetrievalAdapter.extractTerms(commitMessages.join('\n')),
+        diffText: diffSnippets.join('\n'),
+        diffTerms: HistoricalRetrievalAdapter.extractTerms(diffSnippets.join('\n')),
+        historicalDocstrings: [],
+        docstringTerms: { tokens: [], stems: [] },
+        evolutionType: records[0].changeClassification,
+        confidence: 'certain',
+        historyDepth: records.length
+      };
+
+      // Query targeting the earliest ancestor name 'readConfig'
+      const queryName = QueryProcessor.process('find readConfig helper');
+      const scoreName = adapter.scoreHistorical(queryName, profile);
+      expect(scoreName.score).toBeGreaterThan(0.35);
+      expect(scoreName.breakdown.historicalName).toBeGreaterThan(0);
+
+      // Query targeting diff terms from commit c1 ('readfilesync', 'json')
+      const queryDiff = QueryProcessor.process('readfilesync json parse logic');
+      const scoreDiff = adapter.scoreHistorical(queryDiff, profile);
+      expect(scoreDiff.score).toBeGreaterThan(0.20);
+      expect(scoreDiff.breakdown.diffTerms).toBeGreaterThan(0);
+    });
+
+    test('Cross-file move followed by another change: chains through file relocation and preserves earlier diffs', () => {
+      const currentSymbol = { id: 'vp', name: 'validatePayload', filePath: 'src/core/schema.js' };
+      const evolutionMap = new Map();
+
+      // Recent modification in new file (c3 -> c2)
+      // File move from legacy path to core path (c2 -> c1)
+      evolutionMap.set('src/core/schema.js::validatePayload', [
+        {
+          childCommit: 'c3',
+          parentCommit: 'c2',
+          commitMessage: 'fix: handle empty arrays in schema validation',
+          changeClassification: 'modified',
+          predecessorSymbol: { name: 'validatePayload', filePath: 'src/core/schema.js' },
+          confidence: 'exact_match',
+          diffText: '+ if (Array.isArray(x) && !x.length) return false;',
+          normPath: 'src/core/schema.js'
+        },
+        {
+          childCommit: 'c2',
+          parentCommit: 'c1',
+          commitMessage: 'refactor: relocate validator from legacy directory to core schema',
+          changeClassification: 'moved',
+          predecessorSymbol: { name: 'validatePayload', filePath: 'src/legacy/validator.js' },
+          confidence: 'high_confidence',
+          diffText: '- export function validatePayload\n+ export function validatePayload',
+          normPath: 'src/core/schema.js'
+        }
+      ]);
+
+      // Earlier change in legacy file (c1 -> c0)
+      evolutionMap.set('src/legacy/validator.js::validatePayload', [
+        {
+          childCommit: 'c1',
+          parentCommit: 'c0',
+          commitMessage: 'perf: optimize regex pattern in legacy validator',
+          changeClassification: 'modified',
+          predecessorSymbol: { name: 'validatePayload', filePath: 'src/legacy/validator.js' },
+          confidence: 'exact_match',
+          diffText: '- const regex = /[a-z]/g;\n+ const regex = /^[a-z]+$/;',
+          normPath: 'src/legacy/validator.js'
+        }
+      ]);
+
+      const commitIndexMap = new Map([['c3', 0], ['c2', 1], ['c1', 2], ['c0', 3]]);
+      const records = adapter.stitchLineage(currentSymbol, evolutionMap, commitIndexMap);
+
+      expect(records.length).toBe(3);
+      expect(records[0].childCommit).toBe('c3');
+      expect(records[1].childCommit).toBe('c2');
+      expect(records[2].childCommit).toBe('c1');
+
+      // Diff snippets from both the new file and the legacy file should be present
+      const allDiffs = records.map(r => r.diffText).join('\n');
+      const diffTerms = HistoricalRetrievalAdapter.extractTerms(allDiffs);
+      expect(diffTerms.tokens).toContain('array');
+      expect(diffTerms.tokens).toContain('regex');
+    });
+
+    test('Broken predecessor chain: stops cleanly at root or missing predecessor without errors', () => {
+      const currentSymbol = { id: 'stream', name: 'transformStream', filePath: 'src/stream.js' };
+      const evolutionMap = new Map();
+
+      evolutionMap.set('src/stream.js::transformStream', [
+        {
+          childCommit: 'c2',
+          parentCommit: 'c1',
+          commitMessage: 'refactor stream buffering',
+          changeClassification: 'modified',
+          predecessorSymbol: { name: 'transformStream', filePath: 'src/stream.js' },
+          confidence: 'exact_match',
+          diffText: '+ buffer.flush();',
+          normPath: 'src/stream.js'
+        },
+        {
+          childCommit: 'c1',
+          parentCommit: 'c0',
+          commitMessage: 'feat: add transformStream helper',
+          changeClassification: 'new',
+          predecessorSymbol: null, // Origin reached
+          confidence: 'certain',
+          diffText: '+ function transformStream() {}',
+          normPath: 'src/stream.js'
+        }
+      ]);
+
+      const commitIndexMap = new Map([['c2', 0], ['c1', 1], ['c0', 2]]);
+      const records = adapter.stitchLineage(currentSymbol, evolutionMap, commitIndexMap);
+
+      expect(records.length).toBe(2);
+      expect(records[1].predecessorSymbol).toBeNull();
+    });
+
+    test('Ambiguous predecessor chain: applies uncertainty discount and halts speculative ancestor traversal', () => {
+      const currentSymbol = { id: 'route', name: 'dispatchRoute', filePath: 'src/router.js' };
+      const evolutionMap = new Map();
+
+      // Recent modification
+      // Followed by an uncertain / ambiguous rename where matcher could not disambiguate
+      evolutionMap.set('src/router.js::dispatchRoute', [
+        {
+          childCommit: 'c3',
+          parentCommit: 'c2',
+          commitMessage: 'fix: async next handling',
+          changeClassification: 'modified',
+          predecessorSymbol: { name: 'dispatchRoute', filePath: 'src/router.js' },
+          confidence: 'certain',
+          diffText: '+ await next();',
+          normPath: 'src/router.js'
+        },
+        {
+          childCommit: 'c2',
+          parentCommit: 'c1',
+          commitMessage: 'refactor: ambiguous rewrite of dispatch logic',
+          changeClassification: 'uncertain',
+          predecessorSymbol: { name: 'handleOldRoute', filePath: 'src/router.js' },
+          confidence: 'uncertain', // Ambiguity policy
+          diffText: '- handleOldRoute\n+ dispatchRoute',
+          normPath: 'src/router.js'
+        }
+      ]);
+
+      // Speculative ancestor that should NOT be traversed due to uncertain link
+      evolutionMap.set('src/router.js::handleOldRoute', [
+        {
+          childCommit: 'c1',
+          parentCommit: 'c0',
+          commitMessage: 'unrelated speculative ancestor',
+          changeClassification: 'modified',
+          predecessorSymbol: { name: 'handleOldRoute', filePath: 'src/router.js' },
+          confidence: 'certain',
+          diffText: '+ speculative();',
+          normPath: 'src/router.js'
+        }
+      ]);
+
+      const commitIndexMap = new Map([['c3', 0], ['c2', 1], ['c1', 2], ['c0', 3]]);
+      const records = adapter.stitchLineage(currentSymbol, evolutionMap, commitIndexMap);
+
+      // Traversal stops at the uncertain link (c2), so speculative ancestor (c1) is excluded
+      expect(records.length).toBe(2);
+      expect(records[1].confidence).toBe('uncertain');
+
+      // Lowest confidence flag is propagated
+      let lowestConfidence = 'certain';
+      for (const rec of records) {
+        if (rec.confidence === 'uncertain' || rec.changeClassification === 'uncertain') {
+          lowestConfidence = 'uncertain';
+        }
+      }
+      expect(lowestConfidence).toBe('uncertain');
+    });
+
+    test('Regression test: single-hop rename behavior remains strictly preserved', () => {
+      const currentSymbol = { id: 'p', name: 'printFormatted', filePath: 'src/printer.js' };
+      const evolutionMap = new Map();
+
+      evolutionMap.set('src/printer.js::printFormatted', [{
+        childCommit: 'c1',
+        parentCommit: 'c0',
+        commitMessage: 'rename formatOutput to printFormatted',
+        changeClassification: 'renamed',
+        predecessorSymbol: { name: 'formatOutput', filePath: 'src/printer.js' },
+        confidence: 'high_confidence',
+        diffText: '-function formatOutput()\n+function printFormatted()',
+        normPath: 'src/printer.js'
+      }]);
+
+      const commitIndexMap = new Map([['c1', 0], ['c0', 1]]);
+      const records = adapter.stitchLineage(currentSymbol, evolutionMap, commitIndexMap);
+
+      expect(records.length).toBe(1);
+      expect(records[0].predecessorSymbol.name).toBe('formatOutput');
+      expect(records[0].changeClassification).toBe('renamed');
+    });
+  });
 });

@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-A41718",
+  "developer_context": {
+    "problem_scenario": "A multi-representation REST API handles requests with unsupported Accept headers.",
+    "observable_behavior": "When content negotiation fails to find a matching representation, the server fails with an unstandardized error representation.",
+    "expected_outcome": "Standardize content negotiation failure handling to construct a consistent 406 Not Acceptable error object.",
+    "environmental_context": "HTTP Accept header content negotiation."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.922Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}

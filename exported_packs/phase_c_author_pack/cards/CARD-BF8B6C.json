@@ -1,0 +1,14 @@
+{
+  "card_id": "CARD-BF8B6C",
+  "developer_context": {
+    "problem_scenario": "An incoming HTTP request is evaluated to determine whether the connection is plain HTTP or secure TLS/HTTPS.",
+    "observable_behavior": "The connection security check accesses an obsolete, deprecated internal Node.js socket property causing runtime deprecation warnings.",
+    "expected_outcome": "Update socket inspection to use modern network stream properties to cleanly detect encrypted connections.",
+    "environmental_context": "Incoming HTTP connection scheme detection."
+  },
+  "sanitization_metadata": {
+    "sanitizer_role_id": "PHASE-C-LEAD-SANITIZER",
+    "sanitization_timestamp": "2026-10-14T06:27:29.919Z",
+    "sanitization_attestation": "VERIFIED_ZERO_TARGET_IDENTIFIERS"
+  }
+}
