@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retrospect.org/schemas/phase_c/restricted_answer_key.schema.json",
+  "title": "Phase C Restricted Ground-Truth Answer Key Schema",
+  "description": "Defines the structure for restricted ground-truth answer keys used strictly by evaluation scoring harnesses. CONFIDENTIAL: Never exposed to query authors or prompt synthesis workflows.",
+  "type": "object",
+  "required": [
+    "notice",
+    "audit_version",
+    "repository",
+    "pinned_head",
+    "development_answers",
+    "held_out_test_answers"
+  ],
+  "properties": {
+    "notice": {
+      "type": "string"
+    },
+    "audit_version": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "pinned_head": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "development_answers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "target_file",
+          "target_symbol",
+          "target_lineage_cluster",
+          "ground_truth_commit",
+          "parent_commit"
+        ],
+        "properties": {
+          "benchmark_id": { "type": "string" },
+          "target_file": { "type": "string" },
+          "target_symbol": { "type": "string" },
+          "target_lineage_cluster": { "type": "string" },
+          "ground_truth_commit": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "parent_commit": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "held_out_test_answers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "target_file",
+          "target_symbol",
+          "target_lineage_cluster",
+          "ground_truth_commit",
+          "parent_commit"
+        ],
+        "properties": {
+          "benchmark_id": { "type": "string" },
+          "target_file": { "type": "string" },
+          "target_symbol": { "type": "string" },
+          "target_lineage_cluster": { "type": "string" },
+          "ground_truth_commit": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "parent_commit": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

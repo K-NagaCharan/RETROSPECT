@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retrospect.org/schemas/phase_c/leakage_audit.schema.json",
+  "title": "Phase C Leakage Audit & Human Review Gate Schema",
+  "description": "Defines the dual automated-screening and human-review evaluation record for admitting an authored query to the benchmark.",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "query_id",
+    "benchmark_id",
+    "partition",
+    "automated_screening",
+    "human_review_gate",
+    "final_gate_verdict"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string",
+      "pattern": "^AUD-EXP-(DEV|TEST)-[0-9]{2}$"
+    },
+    "query_id": {
+      "type": "string",
+      "pattern": "^QRY-EXP-(DEV|TEST)-[0-9]{2}$"
+    },
+    "benchmark_id": {
+      "type": "string",
+      "pattern": "^EXP-(DEV|TEST)-[0-9]{2}$"
+    },
+    "partition": {
+      "type": "string",
+      "enum": ["DEVELOPMENT", "HELD_OUT_TEST"]
+    },
+    "automated_screening": {
+      "type": "object",
+      "required": [
+        "identifier_token_overlap",
+        "distinctive_ngram_overlap",
+        "file_path_clues",
+        "automated_screening_verdict"
+      ],
+      "properties": {
+        "identifier_token_overlap": {
+          "type": "object",
+          "required": [
+            "target_subwords",
+            "matched_query_subwords",
+            "exact_symbol_name_present",
+            "screening_status"
+          ],
+          "properties": {
+            "target_subwords": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "matched_query_subwords": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "exact_symbol_name_present": {
+              "type": "boolean"
+            },
+            "screening_status": {
+              "type": "string",
+              "enum": ["SCREEN_PASS", "SCREEN_FLAGGED"]
+            }
+          },
+          "additionalProperties": false
+        },
+        "distinctive_ngram_overlap": {
+          "type": "object",
+          "required": [
+            "tested_ngrams_count",
+            "matched_ngrams",
+            "screening_status"
+          ],
+          "properties": {
+            "tested_ngrams_count": { "type": "integer" },
+            "matched_ngrams": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "screening_status": {
+              "type": "string",
+              "enum": ["SCREEN_PASS", "SCREEN_FLAGGED"]
+            }
+          },
+          "additionalProperties": false
+        },
+        "file_path_clues": {
+          "type": "object",
+          "required": [
+            "matched_path_segments",
+            "screening_status"
+          ],
+          "properties": {
+            "matched_path_segments": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "screening_status": {
+              "type": "string",
+              "enum": ["SCREEN_PASS", "SCREEN_FLAGGED"]
+            }
+          },
+          "additionalProperties": false
+        },
+        "automated_screening_verdict": {
+          "type": "string",
+          "enum": ["SCREEN_CLEAR", "SCREEN_FLAGGED_FOR_HUMAN_ATTENTION"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "human_review_gate": {
+      "type": "object",
+      "required": [
+        "reviewer_id",
+        "review_timestamp",
+        "leakage_inspection",
+        "task_quality_inspection",
+        "reviewer_notes"
+      ],
+      "properties": {
+        "reviewer_id": {
+          "type": "string",
+          "description": "Identifier of the independent reviewer who inspected the query against the codebase and diff."
+        },
+        "review_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "leakage_inspection": {
+          "type": "object",
+          "required": [
+            "leakage_detected",
+            "reviewer_leakage_rationale"
+          ],
+          "properties": {
+            "leakage_detected": { "type": "boolean" },
+            "reviewer_leakage_rationale": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "task_quality_inspection": {
+          "type": "object",
+          "required": [
+            "is_realistic_developer_query",
+            "is_clear_and_unambiguous",
+            "is_answerable_by_codebase",
+            "reviewer_quality_rationale"
+          ],
+          "properties": {
+            "is_realistic_developer_query": { "type": "boolean" },
+            "is_clear_and_unambiguous": { "type": "boolean" },
+            "is_answerable_by_codebase": { "type": "boolean" },
+            "reviewer_quality_rationale": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "reviewer_notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "final_gate_verdict": {
+      "type": "string",
+      "enum": [
+        "ADMITTED_TO_BENCHMARK",
+        "REJECTED_LEAKAGE",
+        "REJECTED_POOR_QUALITY",
+        "RETURNED_FOR_REVISION"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

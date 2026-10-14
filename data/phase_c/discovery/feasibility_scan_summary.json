@@ -1,0 +1,348 @@
+{
+  "scan_timestamp": "2026-10-13T16:52:07.471Z",
+  "discovery_window_spec": "Up to 150 most recent commits from pinned HEAD",
+  "repositories": {
+    "bottle": {
+      "language": "python",
+      "pinned_head_commit": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "total_local_commits": 162,
+      "discovery_window_commits": 150,
+      "date_range": {
+        "newest_commit_date": "2026-10-10",
+        "oldest_commit_date": "2020-09-16"
+      },
+      "commits_with_issue_references": {
+        "count": 25,
+        "percentage": 16.7,
+        "sample_references": [
+          {
+            "commit": "b73bd1db",
+            "subject": "fix: If-Modified-Since should be ignored if If-None-Match is",
+            "refs": [
+              "#1132",
+              "#1154",
+              "#1529"
+            ]
+          },
+          {
+            "commit": "62ca0c31",
+            "subject": "HTTP -> HTTPS everywhere",
+            "refs": [
+              "#1500"
+            ]
+          },
+          {
+            "commit": "da7e372f",
+            "subject": "fix: Anonymous route wildcards with filter",
+            "refs": [
+              "#1505"
+            ]
+          },
+          {
+            "commit": "e3d8e711",
+            "subject": "fix: Route.__repr__ and Route.get_undecorated_callback excep",
+            "refs": [
+              "#1488"
+            ]
+          },
+          {
+            "commit": "b2cf884e",
+            "subject": "refactor: Change `dict()` to literal `{}` (#1318)",
+            "refs": [
+              "#1318"
+            ]
+          }
+        ]
+      },
+      "head_callable_declarations": {
+        "total_callables": 1044,
+        "by_symbol_type": {
+          "function": 51,
+          "class": 118,
+          "method": 875
+        },
+        "source_files_parsed": 30
+      },
+      "automatically_detected_candidate_events": {
+        "source_modifying_commits": 96,
+        "candidate_file_additions": 2,
+        "candidate_file_deletions": 3,
+        "candidate_file_modifications": 133,
+        "heuristic_breakdown_estimate": {
+          "routine_modifications": 59,
+          "substantial_rewrites": 47,
+          "signature_changes": 27
+        },
+        "git_detected_file_renames": 0,
+        "git_detected_file_moves": 0
+      },
+      "feasibility_assessment": {
+        "target_answerable_queries": 40,
+        "target_negative_queries": 10,
+        "target_feasible": true,
+        "notes": [
+          "Sufficient candidate event pool (135 detected events) to curate 40 answerable queries.",
+          "Refactoring rarity warning: Only 0 file renames and 0 file moves detected by git diff -M. Genuine renames/moves within functions will require detailed AST screening.",
+          "Issue reference scarcity: Only 25 commits contain formal issue IDs (#123). Context Card authoring for remaining commits will require Tier 2/3 sources."
+        ]
+      }
+    },
+    "express": {
+      "language": "javascript",
+      "pinned_head_commit": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "total_local_commits": 150,
+      "discovery_window_commits": 150,
+      "date_range": {
+        "newest_commit_date": "2026-10-09",
+        "oldest_commit_date": "2025-03-04"
+      },
+      "commits_with_issue_references": {
+        "count": 142,
+        "percentage": 94.7,
+        "sample_references": [
+          {
+            "commit": "a419aa73",
+            "subject": "Revert \"build(deps-dev): bump supertest from 6.3.0 to 7.3.0 ",
+            "refs": [
+              "#7494",
+              "#7518"
+            ]
+          },
+          {
+            "commit": "6d2df035",
+            "subject": "build(deps-dev): bump supertest from 6.3.0 to 7.3.0 (#7494)",
+            "refs": [
+              "#7494"
+            ]
+          },
+          {
+            "commit": "cf6722bf",
+            "subject": "5.3.0 (#7468)",
+            "refs": [
+              "#7468"
+            ]
+          },
+          {
+            "commit": "8c2fcfcb",
+            "subject": "docs: fix typos and a stale API reference in lib comments (#",
+            "refs": [
+              "#7512"
+            ]
+          },
+          {
+            "commit": "9efc29e2",
+            "subject": "docs: fix pass-through typos (#7509)",
+            "refs": [
+              "#7509"
+            ]
+          }
+        ]
+      },
+      "head_callable_declarations": {
+        "total_callables": 3101,
+        "by_symbol_type": {
+          "function": 3089,
+          "getter": 12
+        },
+        "source_files_parsed": 141
+      },
+      "automatically_detected_candidate_events": {
+        "source_modifying_commits": 39,
+        "candidate_file_additions": 0,
+        "candidate_file_deletions": 1,
+        "candidate_file_modifications": 78,
+        "heuristic_breakdown_estimate": {
+          "routine_modifications": 35,
+          "substantial_rewrites": 27,
+          "signature_changes": 16
+        },
+        "git_detected_file_renames": 1,
+        "git_detected_file_moves": 1
+      },
+      "feasibility_assessment": {
+        "target_answerable_queries": 40,
+        "target_negative_queries": 10,
+        "target_feasible": true,
+        "notes": [
+          "Sufficient candidate event pool (80 detected events) to curate 40 answerable queries.",
+          "Refactoring rarity warning: Only 1 file renames and 1 file moves detected by git diff -M. Genuine renames/moves within functions will require detailed AST screening."
+        ]
+      }
+    },
+    "zod": {
+      "language": "typescript",
+      "pinned_head_commit": "284243fb0d6532665afdc9239188773bb624f73c",
+      "total_local_commits": 150,
+      "discovery_window_commits": 150,
+      "date_range": {
+        "newest_commit_date": "2026-10-09",
+        "oldest_commit_date": "2026-08-28"
+      },
+      "commits_with_issue_references": {
+        "count": 85,
+        "percentage": 56.7,
+        "sample_references": [
+          {
+            "commit": "e06a510b",
+            "subject": "fix(v4): check array, set and map size bounds before parsing",
+            "refs": [
+              "#6652",
+              "#6643"
+            ]
+          },
+          {
+            "commit": "0b216ef6",
+            "subject": "fix(types): declare record output and input as members, not ",
+            "refs": [
+              "#6645",
+              "#64372"
+            ]
+          },
+          {
+            "commit": "004d800c",
+            "subject": "release: hold the run on the release-approval environment un",
+            "refs": [
+              "#6638"
+            ]
+          },
+          {
+            "commit": "2bf7b063",
+            "subject": "release: stage npm versions instead of publishing them (#662",
+            "refs": [
+              "#6622"
+            ]
+          },
+          {
+            "commit": "10dda3a3",
+            "subject": "Cleanup bad commits (#6620)",
+            "refs": [
+              "#6620"
+            ]
+          }
+        ]
+      },
+      "head_callable_declarations": {
+        "total_callables": 3531,
+        "by_symbol_type": {
+          "function": 1052,
+          "interface": 705,
+          "arrow_function": 491,
+          "method": 1133,
+          "class": 96,
+          "constructor": 22,
+          "enum": 32
+        },
+        "source_files_parsed": 511
+      },
+      "automatically_detected_candidate_events": {
+        "source_modifying_commits": 104,
+        "candidate_file_additions": 34,
+        "candidate_file_deletions": 2,
+        "candidate_file_modifications": 594,
+        "heuristic_breakdown_estimate": {
+          "routine_modifications": 267,
+          "substantial_rewrites": 208,
+          "signature_changes": 119
+        },
+        "git_detected_file_renames": 2,
+        "git_detected_file_moves": 0
+      },
+      "feasibility_assessment": {
+        "target_answerable_queries": 40,
+        "target_negative_queries": 10,
+        "target_feasible": true,
+        "notes": [
+          "Sufficient candidate event pool (630 detected events) to curate 40 answerable queries.",
+          "Refactoring rarity warning: Only 2 file renames and 0 file moves detected by git diff -M. Genuine renames/moves within functions will require detailed AST screening."
+        ]
+      }
+    },
+    "gson": {
+      "language": "java",
+      "pinned_head_commit": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "total_local_commits": 148,
+      "discovery_window_commits": 148,
+      "date_range": {
+        "newest_commit_date": "2026-10-05",
+        "oldest_commit_date": "2025-04-13"
+      },
+      "commits_with_issue_references": {
+        "count": 142,
+        "percentage": 95.9,
+        "sample_references": [
+          {
+            "commit": "845664ba",
+            "subject": "Correct logic for BOM detection. (#3137)",
+            "refs": [
+              "#3137",
+              "#3102"
+            ]
+          },
+          {
+            "commit": "216c41b6",
+            "subject": "Bump com.fasterxml.jackson.core:jackson-databind (#3136)",
+            "refs": [
+              "#3136"
+            ]
+          },
+          {
+            "commit": "854c8255",
+            "subject": "Simplify key removal in `LegacyProtoTypeAdapterFactoryTest` ",
+            "refs": [
+              "#3124"
+            ]
+          },
+          {
+            "commit": "698ba9eb",
+            "subject": "use the runtime type for a wildcard element type (#3112)",
+            "refs": [
+              "#3112",
+              "#1870"
+            ]
+          },
+          {
+            "commit": "115bcc7e",
+            "subject": "Avoid quadratic removeIf in JsonArray list views (#3115)",
+            "refs": [
+              "#3115"
+            ]
+          }
+        ]
+      },
+      "head_callable_declarations": {
+        "total_callables": 4239,
+        "by_symbol_type": {
+          "class": 673,
+          "method": 3139,
+          "interface": 27,
+          "constructor": 341,
+          "enum": 26,
+          "record": 33
+        },
+        "source_files_parsed": 264
+      },
+      "automatically_detected_candidate_events": {
+        "source_modifying_commits": 74,
+        "candidate_file_additions": 9,
+        "candidate_file_deletions": 6,
+        "candidate_file_modifications": 249,
+        "heuristic_breakdown_estimate": {
+          "routine_modifications": 112,
+          "substantial_rewrites": 87,
+          "signature_changes": 50
+        },
+        "git_detected_file_renames": 0,
+        "git_detected_file_moves": 2
+      },
+      "feasibility_assessment": {
+        "target_answerable_queries": 40,
+        "target_negative_queries": 10,
+        "target_feasible": true,
+        "notes": [
+          "Sufficient candidate event pool (260 detected events) to curate 40 answerable queries.",
+          "Refactoring rarity warning: Only 0 file renames and 2 file moves detected by git diff -M. Genuine renames/moves within functions will require detailed AST screening."
+        ]
+      }
+    }
+  }
+}

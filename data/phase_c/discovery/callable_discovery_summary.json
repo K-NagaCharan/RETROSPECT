@@ -1,0 +1,222 @@
+{
+  "scan_timestamp": "2026-10-13T17:05:43.731Z",
+  "discovery_window_spec": "Up to 150 most recent commits from pinned HEAD",
+  "repositories": {
+    "bottle": {
+      "language": "python",
+      "pinned_head_commit": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "scanned_commits": 150,
+      "merge_commits_handled": 4,
+      "files_diffed": 147,
+      "files_parsed_successfully": 289,
+      "parser_syntax_errors": 0,
+      "unsupported_or_skipped_files": 271,
+      "raw_events_by_type": {
+        "callable_addition": 112,
+        "callable_deletion": 43,
+        "signature_change": 7,
+        "substantial_rewrite": 14,
+        "routine_modification": 466,
+        "candidate_rename_heuristic": 0,
+        "candidate_move_heuristic": 0
+      },
+      "production_events_by_type": {
+        "callable_addition": 32,
+        "callable_deletion": 24,
+        "signature_change": 6,
+        "substantial_rewrite": 10,
+        "routine_modification": 345,
+        "candidate_rename_heuristic": 0,
+        "candidate_move_heuristic": 0
+      },
+      "test_events_total": 225,
+      "lineage_clustering": {
+        "total_unique_production_symbols_mutated": 179,
+        "unique_production_commits_with_events": 77,
+        "multi_mutation_symbols_count": 100
+      },
+      "ambiguous_lineage_candidates": [],
+      "feasibility_assessment": {
+        "target_answerable_queries": 40,
+        "total_production_events": 417,
+        "unique_production_symbols": 179,
+        "unique_production_commits": 77,
+        "plausibly_supports_target_sample": true,
+        "assessment_notes": "Sufficient production event base (77 commits, 179 unique symbols) to curate 40 answerable queries."
+      }
+    },
+    "express": {
+      "language": "javascript",
+      "pinned_head_commit": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "scanned_commits": 150,
+      "merge_commits_handled": 0,
+      "files_diffed": 79,
+      "files_parsed_successfully": 157,
+      "parser_syntax_errors": 0,
+      "unsupported_or_skipped_files": 215,
+      "raw_events_by_type": {
+        "callable_addition": 3,
+        "callable_deletion": 3,
+        "signature_change": 4,
+        "substantial_rewrite": 0,
+        "routine_modification": 21,
+        "candidate_rename_heuristic": 0,
+        "candidate_move_heuristic": 0
+      },
+      "production_events_by_type": {
+        "callable_addition": 0,
+        "callable_deletion": 0,
+        "signature_change": 2,
+        "substantial_rewrite": 0,
+        "routine_modification": 17,
+        "candidate_rename_heuristic": 0,
+        "candidate_move_heuristic": 0
+      },
+      "test_events_total": 12,
+      "lineage_clustering": {
+        "total_unique_production_symbols_mutated": 13,
+        "unique_production_commits_with_events": 17,
+        "multi_mutation_symbols_count": 5
+      },
+      "ambiguous_lineage_candidates": [],
+      "feasibility_assessment": {
+        "target_answerable_queries": 40,
+        "total_production_events": 19,
+        "unique_production_symbols": 13,
+        "unique_production_commits": 17,
+        "plausibly_supports_target_sample": false,
+        "assessment_notes": "Deficit warning: Only 17 commits and 13 unique symbols available. Cannot support 40 independent queries under strict partition isolation."
+      }
+    },
+    "zod": {
+      "language": "typescript",
+      "pinned_head_commit": "284243fb0d6532665afdc9239188773bb624f73c",
+      "scanned_commits": 150,
+      "merge_commits_handled": 0,
+      "files_diffed": 630,
+      "files_parsed_successfully": 1224,
+      "parser_syntax_errors": 179,
+      "unsupported_or_skipped_files": 294,
+      "raw_events_by_type": {
+        "callable_addition": 297,
+        "callable_deletion": 67,
+        "signature_change": 25,
+        "substantial_rewrite": 21,
+        "routine_modification": 433,
+        "candidate_rename_heuristic": 8,
+        "candidate_move_heuristic": 0
+      },
+      "production_events_by_type": {
+        "callable_addition": 226,
+        "callable_deletion": 65,
+        "signature_change": 23,
+        "substantial_rewrite": 17,
+        "routine_modification": 431,
+        "candidate_rename_heuristic": 8,
+        "candidate_move_heuristic": 0
+      },
+      "test_events_total": 81,
+      "lineage_clustering": {
+        "total_unique_production_symbols_mutated": 476,
+        "unique_production_commits_with_events": 61,
+        "multi_mutation_symbols_count": 146
+      },
+      "ambiguous_lineage_candidates": [
+        {
+          "commit": "213ee75d",
+          "parent_symbol": "compile.wrapped",
+          "child_symbol": "withParser.wrapped",
+          "similarity": 1,
+          "type": "candidate_rename_heuristic"
+        },
+        {
+          "commit": "18e71c71",
+          "parent_symbol": "process",
+          "child_symbol": "processSchema",
+          "similarity": 0.979,
+          "type": "candidate_rename_heuristic"
+        },
+        {
+          "commit": "f412178d",
+          "parent_symbol": "releases",
+          "child_symbol": "npmReleases",
+          "similarity": 0.824,
+          "type": "candidate_rename_heuristic"
+        },
+        {
+          "commit": "fb3af01f",
+          "parent_symbol": "attachMemoizer",
+          "child_symbol": "attach",
+          "similarity": 0.703,
+          "type": "candidate_rename_heuristic"
+        },
+        {
+          "commit": "fb3af01f",
+          "parent_symbol": "attachMemoizer.alloc",
+          "child_symbol": "alloc",
+          "similarity": 0.95,
+          "type": "candidate_rename_heuristic"
+        }
+      ],
+      "feasibility_assessment": {
+        "target_answerable_queries": 40,
+        "total_production_events": 770,
+        "unique_production_symbols": 476,
+        "unique_production_commits": 61,
+        "plausibly_supports_target_sample": true,
+        "assessment_notes": "Sufficient production event base (61 commits, 476 unique symbols) to curate 40 answerable queries."
+      }
+    },
+    "gson": {
+      "language": "java",
+      "pinned_head_commit": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "scanned_commits": 148,
+      "merge_commits_handled": 0,
+      "files_diffed": 264,
+      "files_parsed_successfully": 513,
+      "parser_syntax_errors": 0,
+      "unsupported_or_skipped_files": 307,
+      "raw_events_by_type": {
+        "callable_addition": 295,
+        "callable_deletion": 80,
+        "signature_change": 7,
+        "substantial_rewrite": 11,
+        "routine_modification": 574,
+        "candidate_rename_heuristic": 19,
+        "candidate_move_heuristic": 0
+      },
+      "production_events_by_type": {
+        "callable_addition": 120,
+        "callable_deletion": 58,
+        "signature_change": 7,
+        "substantial_rewrite": 9,
+        "routine_modification": 226,
+        "candidate_rename_heuristic": 1,
+        "candidate_move_heuristic": 0
+      },
+      "test_events_total": 565,
+      "lineage_clustering": {
+        "total_unique_production_symbols_mutated": 323,
+        "unique_production_commits_with_events": 55,
+        "multi_mutation_symbols_count": 53
+      },
+      "ambiguous_lineage_candidates": [
+        {
+          "commit": "8526dbd2",
+          "parent_symbol": "com.google.gson.GsonBuilder.addTypeAdaptersForDate",
+          "child_symbol": "com.google.gson.GsonBuilder.addDateTypeAdapters",
+          "similarity": 0.857,
+          "type": "candidate_rename_heuristic"
+        }
+      ],
+      "feasibility_assessment": {
+        "target_answerable_queries": 40,
+        "total_production_events": 421,
+        "unique_production_symbols": 323,
+        "unique_production_commits": 55,
+        "plausibly_supports_target_sample": true,
+        "assessment_notes": "Sufficient production event base (55 commits, 323 unique symbols) to curate 40 answerable queries."
+      }
+    }
+  }
+}

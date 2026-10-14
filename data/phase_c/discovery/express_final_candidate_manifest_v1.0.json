@@ -1,0 +1,494 @@
+{
+  "manifest_title": "Retrospect Phase C — Final Express Benchmark Candidate Manifest",
+  "manifest_version": "1.0",
+  "freeze_date": "2026-10-13T23:15:00Z",
+  "repository": "express",
+  "pinned_head_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+  "express_version_at_head": "5.3.0",
+  "benchmark_structure": {
+    "balanced_target": 18,
+    "development_count": 9,
+    "held_out_test_count": 9,
+    "reserve_test_count": 1,
+    "invariants": [
+      "Zero cluster reuse between Development and Held-Out Test",
+      "Zero commit SHA overlap between Development and Held-Out Test",
+      "Every target symbol exists in working tree at pinned HEAD",
+      "Every candidate has verified predecessor in parent commit",
+      "Zero prompt leakage: behavioral descriptions do not reveal target symbols or file names"
+    ]
+  },
+  "development_candidates": [
+    {
+      "benchmark_id": "EXP-DEV-01",
+      "provenance_candidate_id": "CAND-EXP-DEV-02",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-05: app.listen",
+      "target_symbol": "app.listen",
+      "source_file": "lib/application.js",
+      "commit_sha": "ee40a881f5d8cb4ce71bc45262fde8e4b7640d05",
+      "parent_sha": "26801a0afdd73258ee3c3685e30d5d4040c1558d",
+      "commit_date": "2017-02-20",
+      "commit_author": "Wes",
+      "commit_subject": "call callback once on listen error",
+      "issue_references": [],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 32,
+      "behavioral_issue_description": "HTTP server error event during startup invokes error callback multiple times instead of exactly once",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": false,
+        "blinding_status": "PASS_CLEAN"
+      }
+    },
+    {
+      "benchmark_id": "EXP-DEV-02",
+      "provenance_candidate_id": "CAND-EXP-DEV-03",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-06: app.render",
+      "target_symbol": "app.render",
+      "source_file": "lib/application.js",
+      "commit_sha": "c9ecf7b658388ccaa2b8470aabad92aabde458a2",
+      "parent_sha": "a479419b16f5b97eb20f5dbae5848708ff30ce2d",
+      "commit_date": "2026-02-01",
+      "commit_author": "AkaHarshit",
+      "commit_subject": "feat: Allow passing null or undefined as the value for options in app.render (#6903)",
+      "issue_references": [
+        "#6903"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 13,
+      "behavioral_issue_description": "Application template rendering crashes when callers pass null or undefined as the rendering options argument",
+      "blinding_audit": {
+        "leaks_target_symbol": true,
+        "leaks_source_file": true,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-DEV-03",
+      "provenance_candidate_id": "CAND-EXP-DEV-04",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-07: app.use",
+      "target_symbol": "app.use",
+      "source_file": "lib/application.js",
+      "commit_sha": "d106bf53246eb82aeb925c84c8855c54e17741c2",
+      "parent_sha": "723b5451bbcbab69bc8ded50ccd6545a79b8fe64",
+      "commit_date": "2024-08-01",
+      "commit_author": "Mick A.",
+      "commit_subject": "Use Array.flat instead of array-flatten (#5677)",
+      "issue_references": [
+        "#5677"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 29,
+      "behavioral_issue_description": "Replace external legacy array flattening package dependency with standard ECMAScript native Array.flat",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": false,
+        "blinding_status": "PASS_CLEAN"
+      }
+    },
+    {
+      "benchmark_id": "EXP-DEV-04",
+      "provenance_candidate_id": "CAND-EXP-DEV-05",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-08: app.set",
+      "target_symbol": "app.set",
+      "source_file": "lib/application.js",
+      "commit_sha": "26801a0afdd73258ee3c3685e30d5d4040c1558d",
+      "parent_sha": "14439731f968c1ec6015227d747ede32d3fbf676",
+      "commit_date": "2022-02-21",
+      "commit_author": "Evan Hahn",
+      "commit_subject": "Use object with null prototype for settings closes #4835",
+      "issue_references": [
+        "#4835"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 31,
+      "behavioral_issue_description": "Application configuration settings dictionary is vulnerable to prototype pollution when setting prototype-inherited property names",
+      "blinding_audit": {
+        "leaks_target_symbol": true,
+        "leaks_source_file": true,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-DEV-05",
+      "provenance_candidate_id": "CAND-EXP-DEV-06",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-12: res.send",
+      "target_symbol": "res.send",
+      "source_file": "lib/response.js",
+      "commit_sha": "9a34acf03cb818ff3f8bc40e44176e277a25cbb9",
+      "parent_sha": "3ce6d0eb86e9d93529ff3191c6bb5db8ce6e72c8",
+      "commit_date": "2026-09-16",
+      "commit_author": "cui fliter",
+      "commit_subject": "fix(res.send): preserve ETag generation with Transfer-Encoding (#7459)",
+      "issue_references": [
+        "#7459"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 29,
+      "behavioral_issue_description": "HTTP response entity tag generation is unintentionally bypassed when response has Transfer-Encoding header set",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": true,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-DEV-06",
+      "provenance_candidate_id": "CAND-EXP-DEV-07",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-16: res.cookie",
+      "target_symbol": "res.clearCookie",
+      "source_file": "lib/response.js",
+      "commit_sha": "82fc12a40b3e6694e9a2c9b1376e7548d95779f6",
+      "parent_sha": "160b91cbf79b595712b694c3513c347551d17fbe",
+      "commit_date": "2024-08-02",
+      "commit_author": "Jon Church",
+      "commit_subject": "Ignore `expires` and `maxAge` in `res.clearCookie()` (#5792)",
+      "issue_references": [
+        "#5792"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 16,
+      "behavioral_issue_description": "Clearing an HTTP cookie fails to delete client cookie if caller supplies conflicting expires or maxAge options",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": false,
+        "blinding_status": "PASS_CLEAN"
+      }
+    },
+    {
+      "benchmark_id": "EXP-DEV-07",
+      "provenance_candidate_id": "CAND-EXP-DEV-08",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-18: res.type",
+      "target_symbol": "res.type",
+      "source_file": "lib/response.js",
+      "commit_sha": "a0276c6c91b3b119acc045640e8f4e0616734526",
+      "parent_sha": "3d05e85b0cfe76ed0c70f842dbdbf27d9a7c8d39",
+      "commit_date": "2022-02-06",
+      "commit_author": "Douglas Christopher Wilson",
+      "commit_subject": "Use mime-types for file to content type mapping",
+      "issue_references": [],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 77,
+      "behavioral_issue_description": "Standardize response Content-Type MIME lookup across file extensions by adopting community mime-types library",
+      "blinding_audit": {
+        "leaks_target_symbol": true,
+        "leaks_source_file": true,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-DEV-08",
+      "provenance_candidate_id": "CAND-EXP-DEV-09",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-20: req.protocol",
+      "target_symbol": "protocol",
+      "source_file": "lib/request.js",
+      "commit_sha": "89f198c6a50ab0cb65b741767791dd1b647e3b2c",
+      "parent_sha": "d9a62f983390da932c4f2e21e67a55fa33c164f4",
+      "commit_date": "2025-08-21",
+      "commit_author": "Sebastian Beltran",
+      "commit_subject": "lib: use req.socket over deprecated req.connection (#6705)",
+      "issue_references": [
+        "#6705"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 28,
+      "behavioral_issue_description": "Migrate deprecated Node socket property lookup in HTTP request protocol resolution to modern socket reference",
+      "blinding_audit": {
+        "leaks_target_symbol": true,
+        "leaks_source_file": true,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-DEV-09",
+      "provenance_candidate_id": "CAND-EXP-DEV-10",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-24: utils.query",
+      "target_symbol": "parseExtendedQueryString",
+      "source_file": "lib/utils.js",
+      "commit_sha": "2f64f68c37c64ae333e41ff38032d21860f22255",
+      "parent_sha": "ed0ba3f1dc905d6b62eabf23bd383abcae4901ba",
+      "commit_date": "2025-12-01",
+      "commit_author": "Chris de Almeida",
+      "commit_subject": "sec: security patch for CVE-2024-51999",
+      "issue_references": [],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 12,
+      "behavioral_issue_description": "Denial of service vulnerability from deeply nested query parameter recursion in URL query parser (CVE-2024-51999)",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": false,
+        "blinding_status": "PASS_CLEAN"
+      }
+    }
+  ],
+  "held_out_test_candidates": [
+    {
+      "benchmark_id": "EXP-TEST-01",
+      "provenance_candidate_id": "CAND-EXP-TEST-02",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-04: app.handle",
+      "target_symbol": "logerror",
+      "source_file": "lib/application.js",
+      "commit_sha": "90ec6206d3275fdf2787f2028c6f48a2d92e8042",
+      "parent_sha": "cb19f04170fc815321d40dcd3bc620ae03c828cd",
+      "commit_date": "2026-06-16",
+      "commit_author": "Nitin Mohapatra",
+      "commit_subject": "Improve error logging by logging full error object (#6464)",
+      "issue_references": [
+        "#6464"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 13,
+      "behavioral_issue_description": "Default application error logger outputs truncated error message strings instead of the complete error object with stack trace",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": true,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-TEST-02",
+      "provenance_candidate_id": "CAND-EXP-TEST-03",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-09: app.defaultConfiguration",
+      "target_symbol": "app.defaultConfiguration",
+      "source_file": "lib/application.js",
+      "commit_sha": "450c468d0469ea79c878084c623cd18642d7ad7d",
+      "parent_sha": "af341b0f098393cb85a123b51b308f760937e6b8",
+      "commit_date": "2018-04-15",
+      "commit_author": "Czarek",
+      "commit_subject": "Change query parser setting default to 'simple'",
+      "issue_references": [
+        "#3361",
+        "#3621"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 12,
+      "behavioral_issue_description": "Change default application query parser configuration from extended nested parser to standard querystring parser",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": true,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-TEST-03",
+      "provenance_candidate_id": "CAND-EXP-TEST-04",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-13: res.status",
+      "target_symbol": "res.status",
+      "source_file": "lib/response.js",
+      "commit_sha": "723b5451bbcbab69bc8ded50ccd6545a79b8fe64",
+      "parent_sha": "ee40a881f5d8cb4ce71bc45262fde8e4b7640d05",
+      "commit_date": "2024-07-30",
+      "commit_author": "Jon Church",
+      "commit_subject": "Throw on invalid status codes (#4212)",
+      "issue_references": [
+        "#4212"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 73,
+      "behavioral_issue_description": "Enforce strict input validation on HTTP status codes by throwing TypeError when status is not a valid integer",
+      "blinding_audit": {
+        "leaks_target_symbol": true,
+        "leaks_source_file": false,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-TEST-04",
+      "provenance_candidate_id": "CAND-EXP-TEST-05",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-14: res.sendFile",
+      "target_symbol": "res.sendFile",
+      "source_file": "lib/response.js",
+      "commit_sha": "327af123a1833239adf7eb47fee94542b692d451",
+      "parent_sha": "d2de128a32f1ce3d360bbe3fad56afa026fc8832",
+      "commit_date": "2025-02-13",
+      "commit_author": "Juan José",
+      "commit_subject": "feat: add support for ETag option in res.sendFile (#6073)",
+      "issue_references": [
+        "#6073"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 14,
+      "behavioral_issue_description": "Allow caller to pass custom etag option when sending files to client to control conditional validation headers",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": false,
+        "blinding_status": "PASS_CLEAN"
+      }
+    },
+    {
+      "benchmark_id": "EXP-TEST-05",
+      "provenance_candidate_id": "CAND-EXP-TEST-06",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-15: res.location",
+      "target_symbol": "res.location",
+      "source_file": "lib/response.js",
+      "commit_sha": "bdd81f8670975ef30fd49e92513ef48d35029eaf",
+      "parent_sha": "6c98f80b6ac95b90cff5da6857be4fe21d5e9c4e",
+      "commit_date": "2024-09-09",
+      "commit_author": "Blake Embrey",
+      "commit_subject": "Delete `back` as a magic string (#5933)",
+      "issue_references": [
+        "#5933"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 32,
+      "behavioral_issue_description": "Remove legacy magic string back parameter from redirection and location headers to prevent unexpected referrer redirects",
+      "blinding_audit": {
+        "leaks_target_symbol": true,
+        "leaks_source_file": false,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-TEST-06",
+      "provenance_candidate_id": "CAND-EXP-TEST-07",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-17: res.format",
+      "target_symbol": "res.format",
+      "source_file": "lib/response.js",
+      "commit_sha": "a10770286e7420c5a56ed3cc0b6add2c028ae56e",
+      "parent_sha": "5855339455a7f60774bef4166829e742a5056fa8",
+      "commit_date": "2022-03-27",
+      "commit_author": "Douglas Christopher Wilson",
+      "commit_subject": "Use http-errors for res.format error",
+      "issue_references": [],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 26,
+      "behavioral_issue_description": "Modernize HTTP content negotiation failure handling to construct standard 406 Not Acceptable error via http-errors",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": false,
+        "blinding_status": "PASS_CLEAN"
+      }
+    },
+    {
+      "benchmark_id": "EXP-TEST-07",
+      "provenance_candidate_id": "CAND-EXP-TEST-08",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-19: res.links",
+      "target_symbol": "res.links",
+      "source_file": "lib/response.js",
+      "commit_sha": "caa4f68ee8d32474676fa29cc2086dcc1d62208b",
+      "parent_sha": "6ed3439584b6bc77b0f1156f8797700df063fa63",
+      "commit_date": "2025-02-14",
+      "commit_author": "Andrea Polverino",
+      "commit_subject": "feat: Extend res.links() to allow adding multiple links with the same rel (closes #2729) (#4885)",
+      "issue_references": [
+        "#2729",
+        "#4885"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 38,
+      "behavioral_issue_description": "Support specifying multiple HTTP Link header relations that share the same rel attribute value",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": false,
+        "blinding_status": "PASS_CLEAN"
+      }
+    },
+    {
+      "benchmark_id": "EXP-TEST-08",
+      "provenance_candidate_id": "CAND-EXP-TEST-09",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-22: req.fresh",
+      "target_symbol": "fresh",
+      "source_file": "lib/request.js",
+      "commit_sha": "ae6dd37680e3a00618d6c8a3e522f0ee4eeba1a4",
+      "parent_sha": "ba006766fb964571723138708eacaba0f55759cd",
+      "commit_date": "2026-07-12",
+      "commit_author": "James Ross",
+      "commit_subject": "feat: allow conditional revalidation for QUERY requests (#7366)",
+      "issue_references": [
+        "#7366"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 15,
+      "behavioral_issue_description": "Enable conditional HTTP cache revalidation (If-None-Match / ETag freshness) for HTTP QUERY request method",
+      "blinding_audit": {
+        "leaks_target_symbol": true,
+        "leaks_source_file": true,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    },
+    {
+      "benchmark_id": "EXP-TEST-09",
+      "provenance_candidate_id": "CAND-EXP-TEST-10",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-23: req.accepts",
+      "target_symbol": "req.acceptsCharsets",
+      "source_file": "lib/request.js",
+      "commit_sha": "6cd404eb28ff861180f435b3015f8d0c8c0b44d4",
+      "parent_sha": "3e81873b52e107898ed7ba45874959fb0546df3f",
+      "commit_date": "2026-01-07",
+      "commit_author": "AbdelMonaam Aouini",
+      "commit_subject": "fix: enhance req.acceptsCharsets method (#6088)",
+      "issue_references": [
+        "#6088"
+      ],
+      "predecessor_verified": true,
+      "head_verified": true,
+      "diff_line_count": 46,
+      "behavioral_issue_description": "Fix charset negotiation parsing when request Accept-Charset header includes multiple charsets with quality factor weighting",
+      "blinding_audit": {
+        "leaks_target_symbol": false,
+        "leaks_source_file": true,
+        "blinding_status": "FLAGGED_REVIEW"
+      }
+    }
+  ],
+  "reserve_test_candidate": {
+    "benchmark_id": "EXP-TEST-RESERVE-01",
+    "provenance_candidate_id": "CAND-EXP-TEST-11",
+    "partition": "TEST_RESERVE_ALTERNATE",
+    "lineage_cluster": "CL-25: utils.types",
+    "target_symbol": "normalizeTypes",
+    "source_file": "lib/utils.js",
+    "commit_sha": "511d9dfca8f2329534ee9c75990163766b82c407",
+    "parent_sha": "7f13d572c13228856822af9ba4a7a094f4784ac9",
+    "commit_date": "2025-02-04",
+    "commit_author": "Ayoub Mabrouk",
+    "commit_subject": "refactor: simplify `normalizeTypes` function (#6097)",
+    "issue_references": [
+      "#6097"
+    ],
+    "predecessor_verified": true,
+    "head_verified": true,
+    "diff_line_count": 24,
+    "behavioral_issue_description": "Simplify and refactor internal content-type array normalization utility for cleaner functional array mapping",
+    "blinding_audit": {
+      "leaks_target_symbol": false,
+      "leaks_source_file": false,
+      "blinding_status": "PASS_CLEAN"
+    }
+  }
+}

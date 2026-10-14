@@ -1,0 +1,143 @@
+{
+  "notice": "RESTRICTED GROUND TRUTH ANSWER KEY — DO NOT EXPOSE TO QUERY AUTHORS OR PROMPT SYNTHESIS WORKFLOWS",
+  "audit_version": "1.0",
+  "repository": "express",
+  "pinned_head": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+  "development_answers": {
+    "CAND-EXP-DEV-02": {
+      "target_file": "lib/application.js",
+      "target_symbol": "app.listen",
+      "target_lineage_cluster": "CL-05",
+      "ground_truth_commit": "ee40a881f5d8cb4ce71bc45262fde8e4b7640d05",
+      "parent_commit": "26801a0afdd73258ee3c3685e30d5d4040c1558d"
+    },
+    "CAND-EXP-DEV-03": {
+      "target_file": "lib/application.js",
+      "target_symbol": "app.render",
+      "target_lineage_cluster": "CL-06",
+      "ground_truth_commit": "c9ecf7b658388ccaa2b8470aabad92aabde458a2",
+      "parent_commit": "a479419b16f5b97eb20f5dbae5848708ff30ce2d"
+    },
+    "CAND-EXP-DEV-04": {
+      "target_file": "lib/application.js",
+      "target_symbol": "app.use",
+      "target_lineage_cluster": "CL-07",
+      "ground_truth_commit": "d106bf53246eb82aeb925c84c8855c54e17741c2",
+      "parent_commit": "723b5451bbcbab69bc8ded50ccd6545a79b8fe64"
+    },
+    "CAND-EXP-DEV-05": {
+      "target_file": "lib/application.js",
+      "target_symbol": "app.set",
+      "target_lineage_cluster": "CL-08",
+      "ground_truth_commit": "26801a0afdd73258ee3c3685e30d5d4040c1558d",
+      "parent_commit": "14439731f968c1ec6015227d747ede32d3fbf676"
+    },
+    "CAND-EXP-DEV-06": {
+      "target_file": "lib/response.js",
+      "target_symbol": "res.send",
+      "target_lineage_cluster": "CL-12",
+      "ground_truth_commit": "9a34acf03cb818ff3f8bc40e44176e277a25cbb9",
+      "parent_commit": "3ce6d0eb86e9d93529ff3191c6bb5db8ce6e72c8"
+    },
+    "CAND-EXP-DEV-07": {
+      "target_file": "lib/response.js",
+      "target_symbol": "res.clearCookie",
+      "target_lineage_cluster": "CL-16",
+      "ground_truth_commit": "82fc12a40b3e6694e9a2c9b1376e7548d95779f6",
+      "parent_commit": "160b91cbf79b595712b694c3513c347551d17fbe"
+    },
+    "CAND-EXP-DEV-08": {
+      "target_file": "lib/response.js",
+      "target_symbol": "res.type",
+      "target_lineage_cluster": "CL-18",
+      "ground_truth_commit": "a0276c6c91b3b119acc045640e8f4e0616734526",
+      "parent_commit": "3d05e85b0cfe76ed0c70f842dbdbf27d9a7c8d39"
+    },
+    "CAND-EXP-DEV-09": {
+      "target_file": "lib/request.js",
+      "target_symbol": "protocol",
+      "target_lineage_cluster": "CL-20",
+      "ground_truth_commit": "89f198c6a50ab0cb65b741767791dd1b647e3b2c",
+      "parent_commit": "d9a62f983390da932c4f2e21e67a55fa33c164f4"
+    },
+    "CAND-EXP-DEV-10": {
+      "target_file": "lib/utils.js",
+      "target_symbol": "parseExtendedQueryString",
+      "target_lineage_cluster": "CL-24",
+      "ground_truth_commit": "2f64f68c37c64ae333e41ff38032d21860f22255",
+      "parent_commit": "ed0ba3f1dc905d6b62eabf23bd383abcae4901ba"
+    }
+  },
+  "held_out_test_answers": {
+    "CAND-EXP-TEST-02": {
+      "target_file": "lib/application.js",
+      "target_symbol": "logerror",
+      "target_lineage_cluster": "CL-04",
+      "ground_truth_commit": "90ec6206d3275fdf2787f2028c6f48a2d92e8042",
+      "parent_commit": "cb19f04170fc815321d40dcd3bc620ae03c828cd"
+    },
+    "CAND-EXP-TEST-03": {
+      "target_file": "lib/application.js",
+      "target_symbol": "app.defaultConfiguration",
+      "target_lineage_cluster": "CL-09",
+      "ground_truth_commit": "450c468d0469ea79c878084c623cd18642d7ad7d",
+      "parent_commit": "af341b0f098393cb85a123b51b308f760937e6b8"
+    },
+    "CAND-EXP-TEST-04": {
+      "target_file": "lib/response.js",
+      "target_symbol": "res.status",
+      "target_lineage_cluster": "CL-13",
+      "ground_truth_commit": "723b5451bbcbab69bc8ded50ccd6545a79b8fe64",
+      "parent_commit": "ee40a881f5d8cb4ce71bc45262fde8e4b7640d05"
+    },
+    "CAND-EXP-TEST-05": {
+      "target_file": "lib/response.js",
+      "target_symbol": "res.sendFile",
+      "target_lineage_cluster": "CL-14",
+      "ground_truth_commit": "327af123a1833239adf7eb47fee94542b692d451",
+      "parent_commit": "d2de128a32f1ce3d360bbe3fad56afa026fc8832"
+    },
+    "CAND-EXP-TEST-06": {
+      "target_file": "lib/response.js",
+      "target_symbol": "res.location",
+      "target_lineage_cluster": "CL-15",
+      "ground_truth_commit": "bdd81f8670975ef30fd49e92513ef48d35029eaf",
+      "parent_commit": "6c98f80b6ac95b90cff5da6857be4fe21d5e9c4e"
+    },
+    "CAND-EXP-TEST-07": {
+      "target_file": "lib/response.js",
+      "target_symbol": "res.format",
+      "target_lineage_cluster": "CL-17",
+      "ground_truth_commit": "a10770286e7420c5a56ed3cc0b6add2c028ae56e",
+      "parent_commit": "5855339455a7f60774bef4166829e742a5056fa8"
+    },
+    "CAND-EXP-TEST-08": {
+      "target_file": "lib/response.js",
+      "target_symbol": "res.links",
+      "target_lineage_cluster": "CL-19",
+      "ground_truth_commit": "caa4f68ee8d32474676fa29cc2086dcc1d62208b",
+      "parent_commit": "6ed3439584b6bc77b0f1156f8797700df063fa63"
+    },
+    "CAND-EXP-TEST-09": {
+      "target_file": "lib/request.js",
+      "target_symbol": "fresh",
+      "target_lineage_cluster": "CL-22",
+      "ground_truth_commit": "ae6dd37680e3a00618d6c8a3e522f0ee4eeba1a4",
+      "parent_commit": "ba006766fb964571723138708eacaba0f55759cd"
+    },
+    "CAND-EXP-TEST-10": {
+      "target_file": "lib/request.js",
+      "target_symbol": "req.acceptsCharsets",
+      "target_lineage_cluster": "CL-23",
+      "ground_truth_commit": "6cd404eb28ff861180f435b3015f8d0c8c0b44d4",
+      "parent_commit": "3e81873b52e107898ed7ba45874959fb0546df3f"
+    },
+    "CAND-EXP-TEST-11 (RESERVE)": {
+      "target_file": "lib/utils.js",
+      "target_symbol": "normalizeTypes",
+      "target_lineage_cluster": "CL-25",
+      "ground_truth_commit": "511d9dfca8f2329534ee9c75990163766b82c407",
+      "parent_commit": "7f13d572c13228856822af9ba4a7a094f4784ac9"
+    }
+  }
+}

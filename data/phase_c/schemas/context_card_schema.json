@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retrospect.org/schemas/phase_c/context_card.schema.json",
+  "title": "Phase C Sanitized Behavioral Context Card Schema (Author-Facing)",
+  "description": "Defines the non-leaking, author-facing behavioral context card provided to independent query authors. STRICT CONSTRAINT: Must never contain target symbols, source file paths, commit SHAs, or implementation diffs.",
+  "type": "object",
+  "required": [
+    "card_id",
+    "benchmark_id",
+    "partition",
+    "provenance_tier",
+    "developer_context",
+    "sanitization_metadata"
+  ],
+  "properties": {
+    "card_id": {
+      "type": "string",
+      "pattern": "^CARD-EXP-(DEV|TEST)-[0-9]{2}$"
+    },
+    "benchmark_id": {
+      "type": "string",
+      "pattern": "^EXP-(DEV|TEST)-[0-9]{2}$"
+    },
+    "partition": {
+      "type": "string",
+      "enum": ["DEVELOPMENT", "HELD_OUT_TEST"]
+    },
+    "provenance_tier": {
+      "type": "string",
+      "enum": [
+        "TIER_1_VERIFIED_USER_ISSUE",
+        "TIER_2_CHANGELOG_AND_CVE",
+        "TIER_3_BEHAVIORAL_SYNTHESIS"
+      ]
+    },
+    "developer_context": {
+      "type": "object",
+      "required": [
+        "problem_scenario",
+        "observable_behavior",
+        "expected_outcome",
+        "environmental_context"
+      ],
+      "properties": {
+        "problem_scenario": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Realistic engineering situation in which a developer encounters the issue or task."
+        },
+        "observable_behavior": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Observed system failure, defect, or required functionality, expressed without naming implementation symbols or filenames."
+        },
+        "expected_outcome": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Expected correct behavior or system capability once resolved."
+        },
+        "environmental_context": {
+          "type": "string",
+          "description": "Relevant runtime or protocol context (e.g., HTTP request lifecycle, server configuration) using neutral technical terminology."
+        }
+      },
+      "additionalProperties": false
+    },
+    "sanitization_metadata": {
+      "type": "object",
+      "required": [
+        "sanitizer_role_id",
+        "sanitization_timestamp",
+        "redacted_terms_count",
+        "sanitization_attestation"
+      ],
+      "properties": {
+        "sanitizer_role_id": {
+          "type": "string",
+          "description": "Identifier of the individual who sanitized the raw issue text."
+        },
+        "sanitization_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "redacted_terms_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sanitization_attestation": {
+          "type": "string",
+          "enum": ["VERIFIED_ZERO_TARGET_IDENTIFIERS"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

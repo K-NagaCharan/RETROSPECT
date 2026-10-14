@@ -1,0 +1,63 @@
+{
+  "repository": "express",
+  "language": "javascript",
+  "pinned_head_commit": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+  "total_reachable_commits": 1675,
+  "scanned_commits": 500,
+  "date_range": {
+    "newest_date": "2026-10-09",
+    "oldest_date": "2020-07-03"
+  },
+  "merge_commits_handled": 12,
+  "files_diffed": 719,
+  "files_parsed_successfully": 1433,
+  "parser_syntax_errors": 0,
+  "unsupported_or_skipped_files": 729,
+  "raw_events_by_type": {
+    "callable_addition": 58,
+    "callable_deletion": 41,
+    "signature_change": 6,
+    "substantial_rewrite": 20,
+    "routine_modification": 124,
+    "candidate_rename_heuristic": 0,
+    "candidate_move_heuristic": 0
+  },
+  "production_events_by_type": {
+    "callable_addition": 0,
+    "callable_deletion": 0,
+    "signature_change": 4,
+    "substantial_rewrite": 20,
+    "routine_modification": 95,
+    "candidate_rename_heuristic": 0,
+    "candidate_move_heuristic": 0
+  },
+  "test_events_total": 130,
+  "lineage_clustering": {
+    "total_unique_production_symbols_mutated": 47,
+    "unique_production_commits_with_events": 71,
+    "multi_mutation_symbols_count": 26,
+    "single_mutation_symbols_count": 21
+  },
+  "ambiguous_lineage_candidates": [],
+  "comparison_with_shallow_150_window": {
+    "shallow_commits_scanned": 150,
+    "shallow_production_events": 19,
+    "shallow_unique_symbols": 13,
+    "shallow_unique_commits": 17,
+    "deepened_commits_scanned": 500,
+    "deepened_production_events": 119,
+    "deepened_unique_symbols": 47,
+    "deepened_unique_commits": 71,
+    "events_growth_factor": 6.26,
+    "symbols_growth_factor": 3.62,
+    "commits_growth_factor": 4.18
+  },
+  "feasibility_assessment": {
+    "target_answerable_queries": 40,
+    "total_production_events": 119,
+    "unique_production_symbols": 47,
+    "unique_production_commits": 71,
+    "plausibly_supports_target_sample": true,
+    "assessment_notes": "Deepening successful: Express history now contains 71 distinct production commits and 47 unique mutated symbols across 500 commits (2020-07-03 to 2026-10-09). Plausibly supports a 40-query target under careful cluster partitioning."
+  }
+}

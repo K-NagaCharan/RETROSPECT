@@ -1,0 +1,233 @@
+{
+  "register_title": "Retrospect Phase C — Express Restricted Candidate Provenance Register",
+  "register_version": "1.0",
+  "freeze_date": "2026-10-14T08:15:00Z",
+  "notice": "CONFIDENTIAL RESEARCH ARTIFACT — FOR SANITIZATION REVIEW AND EVALUATION INTEGRITY ONLY. NEVER EXPOSE TO QUERY AUTHORS.",
+  "repository": "express",
+  "pinned_head": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+  "summary": {
+    "total_candidates": 19,
+    "tier_breakdown": {
+      "tier_1_verified_user_issue_count": 15,
+      "tier_2_changelog_and_cve_count": 1,
+      "tier_3_behavioral_synthesis_count": 3
+    },
+    "partition_breakdown": {
+      "development": { "tier_1": 6, "tier_2": 1, "tier_3": 2, "total": 9 },
+      "held_out_test": { "tier_1": 8, "tier_2": 0, "tier_3": 1, "total": 9 },
+      "reserve_test": { "tier_1": 1, "tier_2": 0, "tier_3": 0, "total": 1 }
+    },
+    "protocol_invariant": "Context Card synthesis requires an exact match against this register. Any Context Card misrepresenting a Tier 2 or Tier 3 candidate as Tier 1 will be rejected by the audit gate."
+  },
+  "candidates": [
+    {
+      "benchmark_id": "EXP-DEV-01",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-05: app.listen",
+      "provenance_tier": "TIER_3_BEHAVIORAL_SYNTHESIS",
+      "historical_reference": "commit ee40a881f5d8cb4ce71bc45262fde8e4b7640d05",
+      "issue_references": [],
+      "evidence": "Authored by Wes in 2017 ('call callback once on listen error'). Predecessor exists at lib/application.js:L608. Verified in test/app.listen.js ('should call callback only once on error').",
+      "uncertainty_assessment": "Low historical uncertainty regarding the bug itself, but High provenance uncertainty regarding user dialogue. No external GitHub issue was filed or linked in the commit. Context Card must be synthesized from test suite behavior and commit notes.",
+      "sanitization_risk": "Medium. Risk of using 'listen' or 'server' as clues. Must describe HTTP startup error callbacks generically."
+    },
+    {
+      "benchmark_id": "EXP-DEV-02",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-06: app.render",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #6903 / commit c9ecf7b60032fcfbcf148902888cf3c647b0e513",
+      "issue_references": ["#6903"],
+      "evidence": "Authored by AkaHarshit in 2026 ('feat: Allow passing null or undefined as the value for options in app.render (#6903)'). Predecessor at lib/application.js:L547.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Explicit user-facing pull request and discussion thread exist.",
+      "sanitization_risk": "High. The words 'render' and 'application' appear naturally in issue titles and must be sanitized to 'template evaluation' and 'framework instance'."
+    },
+    {
+      "benchmark_id": "EXP-DEV-03",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-07: app.use",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #5677 / commit d106bf5380582ca9f884a6c8e31fc571161d9a24",
+      "issue_references": ["#5677"],
+      "evidence": "Authored by Mick A. in 2024 ('Use Array.flat instead of array-flatten (#5677)'). Predecessor at lib/application.js:L187.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Verified modernization PR discussed in #5677.",
+      "sanitization_risk": "Medium. The dependency name 'array-flatten' must be redacted. Must describe as internal middleware list flattening."
+    },
+    {
+      "benchmark_id": "EXP-DEV-04",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-08: app.set",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "Issue #4835 / commit 26801a0afdd73258ee3c3685e30d5d4040c1558d",
+      "issue_references": ["#4835"],
+      "evidence": "Authored by Evan Hahn in 2022 ('Use object with null prototype for settings closes #4835'). Predecessor at lib/application.js:L357.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Closed public issue #4835 regarding prototype pollution vulnerability.",
+      "sanitization_risk": "High. The word 'set' or 'settings' could leak `app.set`. Must describe as 'application configuration storage'."
+    },
+    {
+      "benchmark_id": "EXP-DEV-05",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-12: res.send",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #7459 / commit 9a34acf03cb818ff3f8bc40e44176e277a25cbb9",
+      "issue_references": ["#7459"],
+      "evidence": "Authored by cui fliter in 2026 ('fix(res.send): preserve ETag generation with Transfer-Encoding (#7459)'). Predecessor at lib/response.js:L108.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Authentic bug report and PR #7459.",
+      "sanitization_risk": "High. The words 'send' and 'response' naturally match the target. Must describe as 'HTTP response payload transmission'."
+    },
+    {
+      "benchmark_id": "EXP-DEV-06",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-16: res.cookie",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #5792 / commit 82fc12a40b3e6694e9a2c9b1376e7548d95779f6",
+      "issue_references": ["#5792"],
+      "evidence": "Authored by Jon Church in 2024 ('Ignore `expires` and `maxAge` in `res.clearCookie()` (#5792)'). Predecessor at lib/response.js:L890.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Authentic PR #5792.",
+      "sanitization_risk": "High. Must avoid exact method name `clearCookie`. Must frame as 'removing or clearing client cookie header options'."
+    },
+    {
+      "benchmark_id": "EXP-DEV-07",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-18: res.type",
+      "provenance_tier": "TIER_3_BEHAVIORAL_SYNTHESIS",
+      "historical_reference": "commit a0276c6c91b3b119acc045640e8f4e0616734526",
+      "issue_references": [],
+      "evidence": "Authored by Douglas Wilson in 2022 ('Use mime-types for file to content type mapping'). Predecessor at lib/response.js:L596. Modified package.json and History.md.",
+      "uncertainty_assessment": "Medium provenance uncertainty. Mainline refactoring commit without a linked public issue. Card must be synthesized from commit diff and test assertions.",
+      "sanitization_risk": "High. Target symbol `res.type` easily leaked by words like 'content type'. Must describe as 'MIME type resolution for outbound documents'."
+    },
+    {
+      "benchmark_id": "EXP-DEV-08",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-20: req.protocol",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #6705 / commit 89f198c6a50ab0cb65b741767791dd1b647e3b2c",
+      "issue_references": ["#6705"],
+      "evidence": "Authored by Sebastian Beltran in 2025 ('lib: use req.socket over deprecated req.connection (#6705)'). Predecessor at lib/request.js:L341.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Verified public PR #6705.",
+      "sanitization_risk": "High. The words 'protocol' and 'request' are direct leaks. Must frame as 'URL transport scheme determination (http vs https)'."
+    },
+    {
+      "benchmark_id": "EXP-DEV-09",
+      "partition": "DEVELOPMENT",
+      "lineage_cluster": "CL-24: utils.query",
+      "provenance_tier": "TIER_2_CHANGELOG_AND_CVE",
+      "historical_reference": "CVE-2024-51999 / commit 2f64f68c37c64ae333e41ff38032d21860f22255",
+      "issue_references": [],
+      "evidence": "Authored by Chris de Almeida in 2025 ('sec: security patch for CVE-2024-51999'). Predecessor at lib/utils.js:L90. Patches recursive query string parameter parsing.",
+      "uncertainty_assessment": "Low provenance uncertainty regarding technical motivation. Derived from public security advisory CVE-2024-51999 rather than an open GitHub issue thread.",
+      "sanitization_risk": "Medium. Do NOT include 'CVE-2024-51999' in author-facing card. Frame as 'query parameter parser depth recursion guard'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-01",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-04: app.handle",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #6464 / commit 90ec6206d3275fdf2787f2028c6f48a2d92e8042",
+      "issue_references": ["#6464"],
+      "evidence": "Authored by Nitin Mohapatra in 2026 ('Improve error logging by logging full error object (#6464)'). Predecessor at lib/application.js:L615.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Verified public PR #6464.",
+      "sanitization_risk": "Low. Target symbol `logerror` is internal. Frame as 'default unhandled application error output formatting'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-02",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-09: app.defaultConfiguration",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PRs #3361, #3621 / commit 450c468d0469ea79c878084c623cd18642d7ad7d",
+      "issue_references": ["#3361", "#3621"],
+      "evidence": "Authored by Czarek in 2018 ('Change query parser setting default to simple'). Predecessor at lib/application.js:L88.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Long-standing community discussion in issues #3361 and #3621.",
+      "sanitization_risk": "High. Avoid leaking `defaultConfiguration`. Frame as 'initial framework default settings for URL query string parsing'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-03",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-13: res.status",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "Issue #4212 / commit 723b5451bbcbab69bc8ded50ccd6545a79b8fe64",
+      "issue_references": ["#4212"],
+      "evidence": "Authored by Jon Church in 2024 ('Throw on invalid status codes (#4212)'). Predecessor at lib/response.js:L102.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Detailed public issue #4212 regarding invalid HTTP status code validation.",
+      "sanitization_risk": "High. The word 'status' directly leaks the target. Must frame as 'validating HTTP numerical state codes'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-04",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-14: res.sendFile",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #6073 / commit 327af123a1833239adf7eb47fee94542b692d451",
+      "issue_references": ["#6073"],
+      "evidence": "Authored by Juan José in 2025 ('feat: add support for ETag option in res.sendFile (#6073)'). Predecessor at lib/response.js:L428.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Explicit feature PR #6073.",
+      "sanitization_risk": "High. Avoid method name `sendFile`. Frame as 'serving static files with custom cache validation options'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-05",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-15: res.location",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #5933 / commit bdd81f8670975ef30fd49e92513ef48d35029eaf",
+      "issue_references": ["#5933"],
+      "evidence": "Authored by Blake Embrey in 2024 ('Delete `back` as a magic string (#5933)'). Predecessor at lib/response.js:L878.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Verified breaking change discussion in PR #5933.",
+      "sanitization_risk": "High. Avoid `location`. Frame as 'handling redirect header target resolution and removing legacy referrer alias'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-06",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-17: res.format",
+      "provenance_tier": "TIER_3_BEHAVIORAL_SYNTHESIS",
+      "historical_reference": "commit a10770286e7420c5a56ed3cc0b6add2c028ae56e",
+      "issue_references": [],
+      "evidence": "Authored by Douglas Wilson in 2022 ('Use http-errors for res.format error'). Predecessor at lib/response.js:L669.",
+      "uncertainty_assessment": "Medium provenance uncertainty. Mainline maintenance commit without a public issue reference. Context Card must be synthesized from commit diff and test suite behavior.",
+      "sanitization_risk": "High. Avoid `format`. Frame as 'HTTP content negotiation failure error response construction'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-07",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-19: res.links",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "Issues #2729, #4885 / commit caa4f68ee8d32474676fa29cc2086dcc1d62208b",
+      "issue_references": ["#2729", "#4885"],
+      "evidence": "Authored by Andrea Polverino in 2025 ('feat: Extend res.links() to allow adding multiple links with the same rel (closes #2729) (#4885)'). Predecessor at lib/response.js:L840.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Explicit user feature request #2729 and PR #4885.",
+      "sanitization_risk": "High. Avoid method name `links`. Frame as 'HTTP Link header concatenation for shared relations'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-08",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-22: req.fresh",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #7366 / commit ae6dd37680e3a00618d6c8a3e522f0ee4eeba1a4",
+      "issue_references": ["#7366"],
+      "evidence": "Authored by James Ross in 2026 ('feat: allow conditional revalidation for QUERY requests (#7366)'). Predecessor at lib/request.js:L399.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Verified public RFC extension PR #7366.",
+      "sanitization_risk": "High. Avoid `fresh`. Frame as 'client cache validation and freshness checks for HTTP QUERY requests'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-09",
+      "partition": "HELD_OUT_TEST",
+      "lineage_cluster": "CL-23: req.accepts",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #6088 / commit 6cd404eb28ff861180f435b3015f8d0c8c0b44d4",
+      "issue_references": ["#6088"],
+      "evidence": "Authored by AbdelMonaam Aouini in 2026 ('fix: enhance req.acceptsCharsets method (#6088)'). Predecessor at lib/request.js:L215.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Verified public bug report and PR #6088.",
+      "sanitization_risk": "High. Avoid `acceptsCharsets`. Frame as 'character set content negotiation header quality factor parsing'."
+    },
+    {
+      "benchmark_id": "EXP-TEST-RESERVE-01",
+      "partition": "TEST_RESERVE_ALTERNATE",
+      "lineage_cluster": "CL-25: utils.types",
+      "provenance_tier": "TIER_1_VERIFIED_USER_ISSUE",
+      "historical_reference": "PR #6097 / commit 511d9dfca8f2329534ee9c75990163766b82c407",
+      "issue_references": ["#6097"],
+      "evidence": "Authored by Ayoub Mabrouk in 2025 ('refactor: simplify normalizeTypes function (#6097)'). Predecessor at lib/utils.js:L138.",
+      "uncertainty_assessment": "Zero provenance uncertainty. Verified refactoring PR #6097.",
+      "sanitization_risk": "Low. Symbol `normalizeTypes` is internal. Frame as 'content type array normalization and parsing'."
+    }
+  ]
+}
