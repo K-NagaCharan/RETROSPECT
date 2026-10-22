@@ -33,6 +33,9 @@ class StructuralIndex {
     // Exact name index: lowerName -> Set<symbolId>
     this.exactNameIndex = new Map();
 
+    // Extraction failures (count, first error) - previously swallowed silently.
+    this.extractionFailures = { count: 0, firstError: null };
+
     this.extractor = options.extractor || new FunctionExtractor();
     this.discoverer = options.discoverer || new RepoDiscoverer(options.discoveryOptions);
   }
@@ -55,6 +58,7 @@ class StructuralIndex {
     this.callGraph.reverse.clear();
     this.invertedIndex.clear();
     this.exactNameIndex.clear();
+    this.extractionFailures = { count: 0, firstError: null };
 
     const { files, stats } = await this.discoverer.discover(this.repoPath);
 
@@ -67,10 +71,19 @@ class StructuralIndex {
       ...stats,
       totalSymbolsIndexed: this.symbols.size,
       totalFilesIndexed: this.files.size,
-      indexingTimeMs: this.indexingTimeMs
+      indexingTimeMs: this.indexingTimeMs,
+      extractionFailures: { ...this.extractionFailures }
     };
 
     return this;
+  }
+
+  _recordExtractionFailure(relativePath, err) {
+    this.extractionFailures.count++;
+    if (!this.extractionFailures.firstError) {
+      const message = err && (err.message || err.name) ? (err.message || err.name) : String(err);
+      this.extractionFailures.firstError = `${relativePath}: ${message}`;
+    }
   }
 
   /**
@@ -156,6 +169,8 @@ class StructuralIndex {
     try {
       extractionResult = await this.extractor.extract(sourceCode, fileInfo.filePath, fileInfo.language);
     } catch (err) {
+      // Behaviour unchanged (the file contributes no symbols), but the failure is now counted, not silent.
+      this._recordExtractionFailure(fileInfo.relativePath, err);
       return;
     }
 

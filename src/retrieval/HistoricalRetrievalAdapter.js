@@ -444,6 +444,8 @@ class HistoricalRetrievalAdapter {
 
     const commits = await this.gitReader.getCommitHistory(repoPath, startCommit, maxCommits, true);
     const fileCache = new Map();
+    // Extraction failures (count, first error) - previously swallowed silently; exposed in stats.
+    const extractionFailures = { count: 0, firstError: null };
 
     const getSymbols = async (commitHash, filePath) => {
       const cacheKey = `${commitHash}:${filePath}`;
@@ -456,6 +458,12 @@ class HistoricalRetrievalAdapter {
         fileCache.set(cacheKey, res);
         return res;
       } catch (err) {
+        // Behaviour unchanged (no symbols for this file version), but counted.
+        extractionFailures.count++;
+        if (!extractionFailures.firstError) {
+          const message = err && (err.message || err.name) ? (err.message || err.name) : String(err);
+          extractionFailures.firstError = `${commitHash.slice(0, 12)}:${filePath}: ${message}`;
+        }
         return [];
       }
     };
@@ -624,7 +632,8 @@ class HistoricalRetrievalAdapter {
         changedFilesAnalyzed,
         symbolsWithHistory,
         totalCurrentSymbols: currentSymbols.length,
-        durationMs
+        durationMs,
+        extractionFailures
       }
     };
   }

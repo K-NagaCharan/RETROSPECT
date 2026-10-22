@@ -7,6 +7,7 @@ class TreeSitterManager {
     this._initialized = false;
     this._initPromise = null;
     this._languages = new Map(); // langName -> Language object
+    this._parsers = new Map(); // langName -> Promise<Parser> (shared, reused)
     this._wasmsDir = path.resolve(__dirname, '../../node_modules/tree-sitter-wasms/out');
   }
 
@@ -47,6 +48,18 @@ class TreeSitterManager {
     const parser = new Parser();
     parser.setLanguage(language);
     return parser;
+  }
+
+  /**
+   * Shared parser for a language, created lazily on first use and cached. Callers must not delete it.
+   * Parsing is synchronous, so concurrent async callers cannot interleave inside one parse.
+   */
+  async getParser(langName) {
+    const key = langName.toLowerCase();
+    if (!this._parsers.has(key)) {
+      this._parsers.set(key, this.createParser(langName));
+    }
+    return this._parsers.get(key);
   }
 }
 
