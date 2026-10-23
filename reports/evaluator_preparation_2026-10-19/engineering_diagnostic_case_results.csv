@@ -1,0 +1,49 @@
+case_id,case_name,repository,distance,configuration,target_symbol,target_indexed,history_reachable,lineage_detected,target_in_candidates,score,rank,success_at_1,success_at_5,success_at_10,recall_at_1,recall_at_5,recall_at_10,abstained,latency_ms,primary_failure_category
+DIAG-01,"Checkstyle getViolations (Rename within horizon; RRF asymmetry test)",checkstyle/checkstyle,36,B1,"getViolations",1,1,1,1,0.1550,14,0,0,0,0,0,0,0,874,NONE
+DIAG-01,"Checkstyle getViolations (Rename within horizon; RRF asymmetry test)",checkstyle/checkstyle,36,B2,"getViolations",1,1,1,1,0.2288,1,1,1,1,1,1,1,0,178,NONE
+DIAG-01,"Checkstyle getViolations (Rename within horizon; RRF asymmetry test)",checkstyle/checkstyle,36,B3_Baseline,"getViolations",1,1,1,1,0.1845,1,1,1,1,1,1,1,0,1096,NONE
+DIAG-01,"Checkstyle getViolations (Rename within horizon; RRF asymmetry test)",checkstyle/checkstyle,36,B3_Normalized,"getViolations",1,1,1,1,0.1845,3,0,1,1,0,1,1,0,1096,NONE
+DIAG-01,"Checkstyle getViolations (Rename within horizon; RRF asymmetry test)",checkstyle/checkstyle,36,B4_Baseline,"getViolations",1,1,1,1,0.0146,3,0,1,1,0,1,1,0,1137,NONE
+DIAG-01,"Checkstyle getViolations (Rename within horizon; RRF asymmetry test)",checkstyle/checkstyle,36,B4_Modified,"getViolations",1,1,1,1,0.0148,2,0,1,1,0,1,1,0,1137,NONE
+DIAG-02,"Graphhopper markNodesRemovedIfUnreachable (Rename within horizon)",graphhopper/graphhopper,40,B1,"markNodesRemovedIfUnreachable",1,1,0,1,0.1308,5,0,1,1,0,1,1,0,306,NONE
+DIAG-02,"Graphhopper markNodesRemovedIfUnreachable (Rename within horizon)",graphhopper/graphhopper,40,B2,"markNodesRemovedIfUnreachable",1,1,0,1,0.1718,25,0,0,0,0,0,0,0,45,NONE
+DIAG-02,"Graphhopper markNodesRemovedIfUnreachable (Rename within horizon)",graphhopper/graphhopper,40,B3_Baseline,"markNodesRemovedIfUnreachable",1,1,0,1,0.1472,12,0,0,0,0,0,0,0,376,NONE
+DIAG-02,"Graphhopper markNodesRemovedIfUnreachable (Rename within horizon)",graphhopper/graphhopper,40,B3_Normalized,"markNodesRemovedIfUnreachable",1,1,0,1,0.1472,27,0,0,0,0,0,0,0,376,NONE
+DIAG-02,"Graphhopper markNodesRemovedIfUnreachable (Rename within horizon)",graphhopper/graphhopper,40,B4_Baseline,"markNodesRemovedIfUnreachable",1,1,0,1,0.0139,11,0,0,0,0,0,0,0,379,NONE
+DIAG-02,"Graphhopper markNodesRemovedIfUnreachable (Rename within horizon)",graphhopper/graphhopper,40,B4_Modified,"markNodesRemovedIfUnreachable",1,1,0,1,0.0135,12,0,0,0,0,0,0,0,379,NONE
+DIAG-03,"Checkstyle createBlockCommentNode (Move Method across classes)",checkstyle/checkstyle,28,B1,"createBlockCommentNode",1,1,0,1,0.1094,5,0,1,1,0,1,1,0,740,LINEAR_FUSION_DILUTION
+DIAG-03,"Checkstyle createBlockCommentNode (Move Method across classes)",checkstyle/checkstyle,28,B2,"createBlockCommentNode",1,1,0,0,0.0000,null,0,0,0,0,0,0,1,69,LINEAR_FUSION_DILUTION
+DIAG-03,"Checkstyle createBlockCommentNode (Move Method across classes)",checkstyle/checkstyle,28,B3_Baseline,"createBlockCommentNode",1,1,0,1,0.0657,12,0,0,0,0,0,0,0,851,LINEAR_FUSION_DILUTION
+DIAG-03,"Checkstyle createBlockCommentNode (Move Method across classes)",checkstyle/checkstyle,28,B3_Normalized,"createBlockCommentNode",1,1,0,1,0.1094,24,0,0,0,0,0,0,0,851,LINEAR_FUSION_DILUTION
+DIAG-03,"Checkstyle createBlockCommentNode (Move Method across classes)",checkstyle/checkstyle,28,B4_Baseline,"createBlockCommentNode",1,1,0,1,0.0092,8,0,0,1,0,0,1,0,886,LINEAR_FUSION_DILUTION
+DIAG-03,"Checkstyle createBlockCommentNode (Move Method across classes)",checkstyle/checkstyle,28,B4_Modified,"createBlockCommentNode",1,1,0,1,0.0077,10,0,0,1,0,0,1,0,886,LINEAR_FUSION_DILUTION
+DIAG-04,"Guava checkNonnegative (Destructive Linear Dilution in B3)",google/guava,0,B1,"checkNonnegative",1,1,0,1,0.1333,35,0,0,0,0,0,0,0,3996,NONE
+DIAG-04,"Guava checkNonnegative (Destructive Linear Dilution in B3)",google/guava,0,B2,"checkNonnegative",1,1,0,0,0.0000,null,0,0,0,0,0,0,1,187,NONE
+DIAG-04,"Guava checkNonnegative (Destructive Linear Dilution in B3)",google/guava,0,B3_Baseline,"checkNonnegative",1,1,0,1,0.0800,57,0,0,0,0,0,0,0,4302,NONE
+DIAG-04,"Guava checkNonnegative (Destructive Linear Dilution in B3)",google/guava,0,B3_Normalized,"checkNonnegative",1,1,0,1,0.1333,157,0,0,0,0,0,0,0,4302,NONE
+DIAG-04,"Guava checkNonnegative (Destructive Linear Dilution in B3)",google/guava,0,B4_Baseline,"checkNonnegative",1,1,0,1,0.0061,41,0,0,0,0,0,0,0,4338,NONE
+DIAG-04,"Guava checkNonnegative (Destructive Linear Dilution in B3)",google/guava,0,B4_Modified,"checkNonnegative",1,1,0,1,0.0051,85,0,0,0,0,0,0,0,4338,NONE
+DIAG-05,"Guava ImmutableList.builder (Multi-Module Sibling Shadowing in B1)",google/guava,0,B1,"ImmutableList.builder",1,1,0,1,0.1622,98,0,0,0,0,0,0,0,5885,STRUCTURAL_SIBLING_SHADOWING
+DIAG-05,"Guava ImmutableList.builder (Multi-Module Sibling Shadowing in B1)",google/guava,0,B2,"ImmutableList.builder",1,1,0,0,0.0000,null,0,0,0,0,0,0,1,169,STRUCTURAL_SIBLING_SHADOWING
+DIAG-05,"Guava ImmutableList.builder (Multi-Module Sibling Shadowing in B1)",google/guava,0,B3_Baseline,"ImmutableList.builder",1,1,0,1,0.0973,124,0,0,0,0,0,0,0,6167,STRUCTURAL_SIBLING_SHADOWING
+DIAG-05,"Guava ImmutableList.builder (Multi-Module Sibling Shadowing in B1)",google/guava,0,B3_Normalized,"ImmutableList.builder",1,1,0,1,0.1622,130,0,0,0,0,0,0,0,6167,STRUCTURAL_SIBLING_SHADOWING
+DIAG-05,"Guava ImmutableList.builder (Multi-Module Sibling Shadowing in B1)",google/guava,0,B4_Baseline,"ImmutableList.builder",1,1,0,1,0.0038,152,0,0,0,0,0,0,0,6194,STRUCTURAL_SIBLING_SHADOWING
+DIAG-05,"Guava ImmutableList.builder (Multi-Module Sibling Shadowing in B1)",google/guava,0,B4_Modified,"ImmutableList.builder",1,1,0,1,0.0031,183,0,0,0,0,0,0,0,6194,STRUCTURAL_SIBLING_SHADOWING
+DIAG-06,"Requests HTTPAdapter.send (Structural & Historical Multi-Signal Agreement)",psf/requests,0,B1,"HTTPAdapter.send",1,1,1,1,0.1621,1,1,1,1,1,1,1,0,36,NONE
+DIAG-06,"Requests HTTPAdapter.send (Structural & Historical Multi-Signal Agreement)",psf/requests,0,B2,"HTTPAdapter.send",1,1,1,1,0.2329,2,0,1,1,0,1,1,0,6,NONE
+DIAG-06,"Requests HTTPAdapter.send (Structural & Historical Multi-Signal Agreement)",psf/requests,0,B3_Baseline,"HTTPAdapter.send",1,1,1,1,0.1904,1,1,1,1,1,1,1,0,44,NONE
+DIAG-06,"Requests HTTPAdapter.send (Structural & Historical Multi-Signal Agreement)",psf/requests,0,B3_Normalized,"HTTPAdapter.send",1,1,1,1,0.1904,2,0,1,1,0,1,1,0,44,NONE
+DIAG-06,"Requests HTTPAdapter.send (Structural & Historical Multi-Signal Agreement)",psf/requests,0,B4_Baseline,"HTTPAdapter.send",1,1,1,1,0.0162,1,1,1,1,1,1,1,0,45,NONE
+DIAG-06,"Requests HTTPAdapter.send (Structural & Historical Multi-Signal Agreement)",psf/requests,0,B4_Modified,"HTTPAdapter.send",1,1,1,1,0.0162,1,1,1,1,1,1,1,0,45,NONE
+DIAG-07,"Undertow sendInternal (Lexical Token Gap / Shadowing)",undertow-io/undertow,40,B1,"sendInternal",1,1,0,1,0.1483,28,0,0,0,0,0,0,0,535,NONE
+DIAG-07,"Undertow sendInternal (Lexical Token Gap / Shadowing)",undertow-io/undertow,40,B2,"sendInternal",1,1,0,1,0.1262,154,0,0,0,0,0,0,0,59,NONE
+DIAG-07,"Undertow sendInternal (Lexical Token Gap / Shadowing)",undertow-io/undertow,40,B3_Baseline,"sendInternal",1,1,0,1,0.1395,86,0,0,0,0,0,0,0,625,NONE
+DIAG-07,"Undertow sendInternal (Lexical Token Gap / Shadowing)",undertow-io/undertow,40,B3_Normalized,"sendInternal",1,1,0,1,0.1395,114,0,0,0,0,0,0,0,625,NONE
+DIAG-07,"Undertow sendInternal (Lexical Token Gap / Shadowing)",undertow-io/undertow,40,B4_Baseline,"sendInternal",1,1,0,1,0.0088,44,0,0,0,0,0,0,0,637,NONE
+DIAG-07,"Undertow sendInternal (Lexical Token Gap / Shadowing)",undertow-io/undertow,40,B4_Modified,"sendInternal",1,1,0,1,0.0081,48,0,0,0,0,0,0,0,637,NONE
+DIAG-08,"Checkstyle getLineNo (Historical Horizon Exceeded, dist=394)",checkstyle/checkstyle,394,B1,"getLineNo",1,0,1,0,0.0000,null,0,0,0,0,0,0,1,835,RRF_FUSION_ASYMMETRY_CAP
+DIAG-08,"Checkstyle getLineNo (Historical Horizon Exceeded, dist=394)",checkstyle/checkstyle,394,B2,"getLineNo",1,0,1,1,0.1883,2,0,1,1,0,1,1,0,93,RRF_FUSION_ASYMMETRY_CAP
+DIAG-08,"Checkstyle getLineNo (Historical Horizon Exceeded, dist=394)",checkstyle/checkstyle,394,B3_Baseline,"getLineNo",1,0,1,1,0.0753,11,0,0,0,0,0,0,0,979,RRF_FUSION_ASYMMETRY_CAP
+DIAG-08,"Checkstyle getLineNo (Historical Horizon Exceeded, dist=394)",checkstyle/checkstyle,394,B3_Normalized,"getLineNo",1,0,1,1,0.1883,2,0,1,1,0,1,1,0,979,RRF_FUSION_ASYMMETRY_CAP
+DIAG-08,"Checkstyle getLineNo (Historical Horizon Exceeded, dist=394)",checkstyle/checkstyle,394,B4_Baseline,"getLineNo",1,0,1,1,0.0062,43,0,0,0,0,0,0,0,999,RRF_FUSION_ASYMMETRY_CAP
+DIAG-08,"Checkstyle getLineNo (Historical Horizon Exceeded, dist=394)",checkstyle/checkstyle,394,B4_Modified,"getLineNo",1,0,1,1,0.0078,13,0,0,0,0,0,0,0,999,RRF_FUSION_ASYMMETRY_CAP

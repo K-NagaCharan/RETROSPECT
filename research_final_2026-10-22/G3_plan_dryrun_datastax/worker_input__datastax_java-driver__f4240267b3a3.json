@@ -1,0 +1,228 @@
+{
+  "repoSlug": "datastax/java-driver",
+  "repoPath": "D:\\clones\\datastax-java-driver",
+  "pinSha": "f4240267b3a3b829fa51242441dd219424a91347",
+  "cases": [
+    {
+      "case_id": "CASE-HIST-JAVA-0035",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "datastax/java-driver",
+      "pin_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+      "origin_commit": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+      "commit_distance_k": 628,
+      "query_text": "Locate current implementation corresponding to historical method messageReceived in Dispatcher",
+      "target": {
+        "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.channelRead0",
+        "short_name": "channelRead0",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "line_range": [
+          960,
+          997
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.initAsync",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'initAsync' is declared in the same class (Connection) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.operationComplete",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'operationComplete' in Connection provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0035",
+        "old_symbol_name": "com.datastax.driver.core.Connection.Dispatcher.messageReceived",
+        "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "origin_commit_sha": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+        "change_type": "rename",
+        "commit_message": "083600a93 Upgrade Netty to 4.0.26 (JAVA-622).",
+        "diff_summary": "Rename Method public messageReceived(ctx ChannelHandlerContext, e MessageEvent) : void renamed to protected channelRead0(ctx ChannelHandlerContext, response Message.Response) : void in class com.datastax.driver.core.Connection.Dispatcher"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0039",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "datastax/java-driver",
+      "pin_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+      "origin_commit": "aeb98f954b1226e97cbe4cbb455888f34d1920e3",
+      "commit_distance_k": 568,
+      "query_text": "Locate current implementation corresponding to historical method withSlowQueryLatencyThresholdMillis in Builder",
+      "target": {
+        "symbol_name": "com.datastax.driver.core.QueryLogger.Builder.withConstantThreshold",
+        "short_name": "withConstantThreshold",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/QueryLogger.java",
+        "line_range": [
+          417,
+          421
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.datastax.driver.core.QueryLogger.Builder.builder",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/QueryLogger.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'builder' is declared in the same class (QueryLogger) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.datastax.driver.core.QueryLogger.Builder.getSlowQueryLatencyThresholdMillis",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/QueryLogger.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getSlowQueryLatencyThresholdMillis' in QueryLogger provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0039",
+        "old_symbol_name": "com.datastax.driver.core.QueryLogger.Builder.withSlowQueryLatencyThresholdMillis",
+        "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/QueryLogger.java",
+        "origin_commit_sha": "aeb98f954b1226e97cbe4cbb455888f34d1920e3",
+        "change_type": "rename",
+        "commit_message": "aeb98f954 Percentile-based variant of query logger and speculative executions (JAVA-723).",
+        "diff_summary": "Rename Method public withSlowQueryLatencyThresholdMillis(slowQueryLatencyThresholdMillis long) : Builder renamed to public withConstantThreshold(slowQueryLatencyThresholdMillis long) : Builder in class com.datastax.driver.core.QueryLogger.Builder"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0036",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "datastax/java-driver",
+      "pin_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+      "origin_commit": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+      "commit_distance_k": 628,
+      "query_text": "Locate current implementation corresponding to historical method channelIdle in Dispatcher",
+      "target": {
+        "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.userEventTriggered",
+        "short_name": "userEventTriggered",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "line_range": [
+          999,
+          1005
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.initAsync",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'initAsync' is declared in the same class (Connection) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.operationComplete",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'operationComplete' in Connection provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0036",
+        "old_symbol_name": "com.datastax.driver.core.Connection.Dispatcher.channelIdle",
+        "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "origin_commit_sha": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+        "change_type": "rename",
+        "commit_message": "083600a93 Upgrade Netty to 4.0.26 (JAVA-622).",
+        "diff_summary": "Rename Method public channelIdle(ctx ChannelHandlerContext, e IdleStateEvent) : void renamed to public userEventTriggered(ctx ChannelHandlerContext, evt Object) : void in class com.datastax.driver.core.Connection.Dispatcher"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0038",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "datastax/java-driver",
+      "pin_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+      "origin_commit": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+      "commit_distance_k": 628,
+      "query_text": "Locate current implementation corresponding to historical method getPipeline in Initializer",
+      "target": {
+        "symbol_name": "com.datastax.driver.core.Connection.Initializer.initChannel",
+        "short_name": "initChannel",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "line_range": [
+          1275,
+          1305
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.datastax.driver.core.Connection.Initializer.initAsync",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'initAsync' is declared in the same class (Connection) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.datastax.driver.core.Connection.Initializer.operationComplete",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'operationComplete' in Connection provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0038",
+        "old_symbol_name": "com.datastax.driver.core.Connection.Initializer.getPipeline",
+        "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "origin_commit_sha": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+        "change_type": "rename",
+        "commit_message": "083600a93 Upgrade Netty to 4.0.26 (JAVA-622).",
+        "diff_summary": "Rename Method public getPipeline() : ChannelPipeline renamed to protected initChannel(channel SocketChannel) : void in class com.datastax.driver.core.Connection.Initializer"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0034",
+      "dataset_source": "category_b_repaired",
+      "cohort": "quarantined_negative",
+      "language": "Java",
+      "repository_id": "datastax/java-driver",
+      "pin_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+      "origin_commit": "de6d8c78629f3f2033cba2339a8b650e1a4c7212",
+      "commit_distance_k": 637,
+      "query_text": "Locate current implementation corresponding to historical method getDate in ArrayBackedRow",
+      "target": {
+        "symbol_name": "com.datastax.driver.core.ArrayBackedRow.getValue",
+        "short_name": "getValue",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/ArrayBackedRow.java",
+        "line_range": [
+          61,
+          64
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.datastax.driver.core.ArrayBackedRow.fromData",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/ArrayBackedRow.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'fromData' is declared in the same class (ArrayBackedRow) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.datastax.driver.core.ArrayBackedRow.getColumnDefinitions",
+          "file_path": "driver-core/src/main/java/com/datastax/driver/core/ArrayBackedRow.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getColumnDefinitions' in ArrayBackedRow provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0034",
+        "old_symbol_name": "com.datastax.driver.core.ArrayBackedRow.getDate",
+        "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/ArrayBackedRow.java",
+        "origin_commit_sha": "de6d8c78629f3f2033cba2339a8b650e1a4c7212",
+        "change_type": "rename",
+        "commit_message": "de6d8c786 Add typed getters and getObject to BoundStatement (JAVA-547, JAVA-584).",
+        "diff_summary": "Rename Method public getDate(i int) : Date renamed to protected getValue(i int) : ByteBuffer in class com.datastax.driver.core.ArrayBackedRow"
+      },
+      "origin_exists": true
+    }
+  ],
+  "searchHorizon": 50
+}

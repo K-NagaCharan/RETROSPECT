@@ -1,0 +1,30 @@
+{
+  "python": {
+    "N": 7,
+    "CORRECT": 6,
+    "WRONG_COMMIT": 1,
+    "NO_COMMIT": 0,
+    "TARGET_NOT_INDEXED": 0
+  },
+  "javascript": {
+    "N": 4,
+    "CORRECT": 3,
+    "WRONG_COMMIT": 0,
+    "NO_COMMIT": 1,
+    "TARGET_NOT_INDEXED": 0
+  },
+  "typescript": {
+    "N": 3,
+    "CORRECT": 2,
+    "WRONG_COMMIT": 1,
+    "NO_COMMIT": 0,
+    "TARGET_NOT_INDEXED": 0
+  },
+  "java": {
+    "N": 7,
+    "CORRECT": 7,
+    "WRONG_COMMIT": 0,
+    "NO_COMMIT": 0,
+    "TARGET_NOT_INDEXED": 0
+  }
+}

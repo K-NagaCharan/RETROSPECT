@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retrospect.org/schemas/evaluation-result.schema.json",
+  "title": "RetrospectEvaluationResult",
+  "description": "Schema for individual per-case evaluation outputs covering B1-B4 configurations, 3-stage historical metrics, and component latency.",
+  "type": "object",
+  "required": [
+    "case_id",
+    "origin_commit_cluster",
+    "repository",
+    "language",
+    "category",
+    "split",
+    "historical_evaluation",
+    "configurations",
+    "latency"
+  ],
+  "properties": {
+    "case_id": { "type": "string" },
+    "origin_commit_cluster": { "type": "string" },
+    "repository": { "type": "string" },
+    "language": { "type": "string" },
+    "category": { "type": "string" },
+    "split": { "type": "string", "enum": ["dev", "val", "test_confirmatory"] },
+    "contains_historical_identifier": { "type": "boolean" },
+    "commit_distance_origin_to_pin": { "type": ["integer", "null"] },
+    "distance_band": { "type": ["string", "null"] },
+    "historical_evaluation": {
+      "type": "object",
+      "required": ["stage_a_reachability", "stage_b_detection"],
+      "properties": {
+        "stage_a_reachability": {
+          "type": "object",
+          "required": ["origin_commit_in_dag", "origin_in_search_scope", "historical_evidence_discovered"],
+          "properties": {
+            "origin_commit_in_dag": { "type": "boolean" },
+            "origin_in_search_scope": { "type": "boolean" },
+            "historical_evidence_discovered": { "type": "boolean" },
+            "reachability_status": { "type": "string" },
+            "exclusion_reason": { "type": ["string", "null"] }
+          }
+        },
+        "stage_b_detection": {
+          "type": "object",
+          "required": ["relationship_detected", "match_status"],
+          "properties": {
+            "relationship_detected": { "type": "boolean" },
+            "match_status": { "type": "string", "enum": ["matched", "ambiguous", "unmatched"] },
+            "evidence_supporting_match": { "type": "string" }
+          }
+        }
+      }
+    },
+    "configurations": {
+      "type": "object",
+      "required": ["b1_structural", "b2_historical", "b3_linear", "b4_rrf"],
+      "additionalProperties": {
+        "type": "object",
+        "required": ["target_rank", "success_at_10", "recall_at_1", "recall_at_5", "reciprocal_rank", "abstained"],
+        "properties": {
+          "target_rank": { "type": ["integer", "null"] },
+          "target_score": { "type": "number" },
+          "success_at_10": { "type": "boolean" },
+          "recall_at_1": { "type": "boolean" },
+          "recall_at_5": { "type": "boolean" },
+          "reciprocal_rank": { "type": "number" },
+          "abstained": { "type": "boolean" },
+          "target_absent_from_pool": { "type": "boolean" },
+          "latency_ms": { "type": "number" }
+        }
+      }
+    },
+    "latency": {
+      "type": "object",
+      "required": ["total_end_to_end_ms", "components"],
+      "properties": {
+        "total_end_to_end_ms": { "type": "number" },
+        "components": {
+          "type": "object",
+          "properties": {
+            "t_structural_ms": { "type": "number" },
+            "t_historical_ms": { "type": "number" },
+            "t_fusion_ms": { "type": "number" }
+          }
+        },
+        "amortized_indexing_excluded": { "type": "boolean" }
+      }
+    }
+  }
+}

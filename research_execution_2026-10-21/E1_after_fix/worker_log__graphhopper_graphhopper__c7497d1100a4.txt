@@ -1,0 +1,18 @@
+
+------------------------------------------------------------
+Processing Snapshot: graphhopper/graphhopper @ c7497d1100 (8 cases)
+------------------------------------------------------------
+  Checking out c7497d1100...
+  Structural Index: indexed 6483 symbols in 3.47s
+  Historical Index: analyzed 6483 historical profiles in 54.35s
+    Case CASE-HIST-JAVA-0105  | B1:    4 | B2:    3 (s=0.586) | B4:    2 | REACHABLE | RENAMED_SYMBOL
+    Case CASE-HIST-JAVA-0096  | B1:    7 | B2: null (s=0) | B4:   38 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case CASE-HIST-JAVA-0099  | B1:   57 | B2: null (s=0) | B4:  138 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case CASE-HIST-JAVA-0058  | B1:    6 | B2: null (s=0) | B4:   11 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case CASE-HIST-JAVA-0101  | B1:   10 | B2:    3 (s=0.5844) | B4:    2 | REACHABLE | AMBIGUOUS
+    Case CASE-HIST-JAVA-0055  | B1:    7 | B2: null (s=0) | B4:   13 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case CASE-HIST-JAVA-0097  | B1:   33 | B2: null (s=0) | B4:   81 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case CASE-HIST-JAVA-0078  | B1:    3 | B2: null (s=0) | B4:   24 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+  Restoring graphhopper/graphhopper to master...
+
+--- stderr ---

@@ -1,0 +1,360 @@
+{
+  "repoSlug": "graphhopper/graphhopper",
+  "repoPath": "D:\\clones_eval_2026-10-22\\graphhopper",
+  "pinSha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+  "cases": [
+    {
+      "case_id": "CASE-HIST-JAVA-0105",
+      "dataset_source": "category_b_repaired",
+      "cohort": "in_policy_primary",
+      "language": "Java",
+      "repository_id": "graphhopper/graphhopper",
+      "pin_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+      "origin_commit": "88806c24c77ce9dde2d99ad3ffd4f4e190f06252",
+      "commit_distance_k": 40,
+      "query_text": "Locate current implementation corresponding to historical method removeZeroDegreeNodes in PrepareRoutingSubnetworks",
+      "target": {
+        "symbol_name": "com.graphhopper.routing.util.PrepareRoutingSubnetworks.markNodesRemovedIfUnreachable",
+        "short_name": "markNodesRemovedIfUnreachable",
+        "file_path": "core/src/main/java/com/graphhopper/routing/util/PrepareRoutingSubnetworks.java",
+        "line_range": [
+          270,
+          278
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.graphhopper.routing.util.PrepareRoutingSubnetworks.setMinNetworkSize",
+          "file_path": "core/src/main/java/com/graphhopper/routing/util/PrepareRoutingSubnetworks.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'setMinNetworkSize' is declared in the same class (PrepareRoutingSubnetworks) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.graphhopper.routing.util.PrepareRoutingSubnetworks.setMinOneWayNetworkSize",
+          "file_path": "core/src/main/java/com/graphhopper/routing/util/PrepareRoutingSubnetworks.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'setMinOneWayNetworkSize' in PrepareRoutingSubnetworks provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0105",
+        "old_symbol_name": "com.graphhopper.routing.util.PrepareRoutingSubnetworks.removeZeroDegreeNodes",
+        "old_file_path": "core/src/main/java/com/graphhopper/routing/util/PrepareRoutingSubnetworks.java",
+        "origin_commit_sha": "88806c24c77ce9dde2d99ad3ffd4f4e190f06252",
+        "change_type": "rename",
+        "commit_message": "88806c24c make multiple vehicles working for subnetwork removal",
+        "diff_summary": "Rename Method package removeZeroDegreeNodes() : int renamed to package markNodesRemovedIfUnreachable() : void in class com.graphhopper.routing.util.PrepareRoutingSubnetworks"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0096",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "graphhopper/graphhopper",
+      "pin_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+      "origin_commit": "f70c6953e418933216979be7fb045bf2bb2101f8",
+      "commit_distance_k": 64,
+      "query_text": "Locate current implementation corresponding to historical method getEdgeProps in CHGraphImpl",
+      "target": {
+        "symbol_name": "com.graphhopper.storage.CHGraphImpl.getEdgeIteratorState",
+        "short_name": "getEdgeIteratorState",
+        "file_path": "core/src/main/java/com/graphhopper/storage/CHGraphImpl.java",
+        "line_range": [
+          231,
+          245
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.graphhopper.storage.CHGraphImpl.createSingleEdge",
+          "file_path": "core/src/main/java/com/graphhopper/storage/CHGraphImpl.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'createSingleEdge' is declared in the same class (CHGraphImpl) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.graphhopper.storage.CHGraphImpl.getEdgeRef",
+          "file_path": "core/src/main/java/com/graphhopper/storage/CHGraphImpl.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getEdgeRef' in CHGraphImpl provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0096",
+        "old_symbol_name": "com.graphhopper.storage.CHGraphImpl.getEdgeProps",
+        "old_file_path": "core/src/main/java/com/graphhopper/storage/CHGraphImpl.java",
+        "origin_commit_sha": "f70c6953e418933216979be7fb045bf2bb2101f8",
+        "change_type": "rename",
+        "commit_message": "f70c6953e rename getEdgeProps to getEdgeIteratorState, fix #468",
+        "diff_summary": "Rename Method public getEdgeProps(edgeId int, endNode int) : CHEdgeIteratorState renamed to public getEdgeIteratorState(edgeId int, endNode int) : CHEdgeIteratorState in class com.graphhopper.storage.CHGraphImpl"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0099",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "graphhopper/graphhopper",
+      "pin_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+      "origin_commit": "f70c6953e418933216979be7fb045bf2bb2101f8",
+      "commit_distance_k": 64,
+      "query_text": "Locate current implementation corresponding to historical method getEdgeProps in Graph",
+      "target": {
+        "symbol_name": "com.graphhopper.storage.Graph.getEdgeIteratorState",
+        "short_name": "getEdgeIteratorState",
+        "file_path": "core/src/main/java/com/graphhopper/storage/Graph.java",
+        "line_range": [
+          79,
+          79
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.graphhopper.storage.Graph.getBaseGraph",
+          "file_path": "core/src/main/java/com/graphhopper/storage/Graph.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getBaseGraph' is declared in the same class (Graph) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.graphhopper.storage.Graph.getNodes",
+          "file_path": "core/src/main/java/com/graphhopper/storage/Graph.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getNodes' in Graph provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0099",
+        "old_symbol_name": "com.graphhopper.storage.Graph.getEdgeProps",
+        "old_file_path": "core/src/main/java/com/graphhopper/storage/Graph.java",
+        "origin_commit_sha": "f70c6953e418933216979be7fb045bf2bb2101f8",
+        "change_type": "rename",
+        "commit_message": "f70c6953e rename getEdgeProps to getEdgeIteratorState, fix #468",
+        "diff_summary": "Rename Method public getEdgeProps(edgeId int, adjNode int) : EdgeIteratorState renamed to public getEdgeIteratorState(edgeId int, adjNode int) : EdgeIteratorState in class com.graphhopper.storage.Graph"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0058",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "graphhopper/graphhopper",
+      "pin_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+      "origin_commit": "38a5f0821658820a24f1ac2bdb40696058cc3a41",
+      "commit_distance_k": 259,
+      "query_text": "Locate current implementation corresponding to historical method isWeightLimitReached in DijkstraBidirectionRef",
+      "target": {
+        "symbol_name": "com.graphhopper.routing.DijkstraBidirectionRef.isWeightLimitExceeded",
+        "short_name": "isWeightLimitExceeded",
+        "file_path": "core/src/main/java/com/graphhopper/routing/DijkstraBidirectionRef.java",
+        "line_range": [
+          187,
+          191
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.graphhopper.routing.DijkstraBidirectionRef.initCollections",
+          "file_path": "core/src/main/java/com/graphhopper/routing/DijkstraBidirectionRef.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'initCollections' is declared in the same class (DijkstraBidirectionRef) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.graphhopper.routing.DijkstraBidirectionRef.initFrom",
+          "file_path": "core/src/main/java/com/graphhopper/routing/DijkstraBidirectionRef.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'initFrom' in DijkstraBidirectionRef provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0058",
+        "old_symbol_name": "com.graphhopper.routing.DijkstraBidirectionRef.isWeightLimitReached",
+        "old_file_path": "core/src/main/java/com/graphhopper/routing/DijkstraBidirectionRef.java",
+        "origin_commit_sha": "38a5f0821658820a24f1ac2bdb40696058cc3a41",
+        "change_type": "rename",
+        "commit_message": "38a5f0821 fix weightLimit bug, #380",
+        "diff_summary": "Rename Method protected isWeightLimitReached() : boolean renamed to protected isWeightLimitExceeded() : boolean in class com.graphhopper.routing.DijkstraBidirectionRef"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0101",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "graphhopper/graphhopper",
+      "pin_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+      "origin_commit": "158d0eced86c59477da65a432a930294d058e557",
+      "commit_distance_k": 62,
+      "query_text": "Locate current implementation corresponding to historical method setAlgorithmFactory in GraphHopper",
+      "target": {
+        "symbol_name": "com.graphhopper.GraphHopper.putAlgorithmFactory",
+        "short_name": "putAlgorithmFactory",
+        "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "line_range": [
+          797,
+          801
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.graphhopper.GraphHopper.loadGraph",
+          "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'loadGraph' is declared in the same class (GraphHopper) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.graphhopper.GraphHopper.setEncodingManager",
+          "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'setEncodingManager' in GraphHopper provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0101",
+        "old_symbol_name": "com.graphhopper.GraphHopper.setAlgorithmFactory",
+        "old_file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "origin_commit_sha": "158d0eced86c59477da65a432a930294d058e557",
+        "change_type": "rename",
+        "commit_message": "158d0eced first measurement runnable, all tests pass, for multiple CH profiles #464",
+        "diff_summary": "Rename Method public setAlgorithmFactory(algoFactory RoutingAlgorithmFactory) : void renamed to public putAlgorithmFactory(weighting Weighting, algoFactory RoutingAlgorithmFactory) : void in class com.graphhopper.GraphHopper"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0055",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "graphhopper/graphhopper",
+      "pin_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+      "origin_commit": "38a5f0821658820a24f1ac2bdb40696058cc3a41",
+      "commit_distance_k": 259,
+      "query_text": "Locate current implementation corresponding to historical method isWeightLimitReached in AStarBidirection",
+      "target": {
+        "symbol_name": "com.graphhopper.routing.AStarBidirection.isWeightLimitExceeded",
+        "short_name": "isWeightLimitExceeded",
+        "file_path": "core/src/main/java/com/graphhopper/routing/AStarBidirection.java",
+        "line_range": [
+          207,
+          211
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.graphhopper.routing.AStarBidirection.initCollections",
+          "file_path": "core/src/main/java/com/graphhopper/routing/AStarBidirection.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'initCollections' is declared in the same class (AStarBidirection) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.graphhopper.routing.AStarBidirection.setApproximation",
+          "file_path": "core/src/main/java/com/graphhopper/routing/AStarBidirection.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'setApproximation' in AStarBidirection provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0055",
+        "old_symbol_name": "com.graphhopper.routing.AStarBidirection.isWeightLimitReached",
+        "old_file_path": "core/src/main/java/com/graphhopper/routing/AStarBidirection.java",
+        "origin_commit_sha": "38a5f0821658820a24f1ac2bdb40696058cc3a41",
+        "change_type": "rename",
+        "commit_message": "38a5f0821 fix weightLimit bug, #380",
+        "diff_summary": "Rename Method protected isWeightLimitReached() : boolean renamed to protected isWeightLimitExceeded() : boolean in class com.graphhopper.routing.AStarBidirection"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0097",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "graphhopper/graphhopper",
+      "pin_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+      "origin_commit": "f70c6953e418933216979be7fb045bf2bb2101f8",
+      "commit_distance_k": 64,
+      "query_text": "Locate current implementation corresponding to historical method getEdgeProps in QueryGraph",
+      "target": {
+        "symbol_name": "com.graphhopper.routing.QueryGraph.getEdgeIteratorState",
+        "short_name": "getEdgeIteratorState",
+        "file_path": "core/src/main/java/com/graphhopper/routing/QueryGraph.java",
+        "line_range": [
+          563,
+          580
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.graphhopper.routing.QueryGraph.lookup",
+          "file_path": "core/src/main/java/com/graphhopper/routing/QueryGraph.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'lookup' is declared in the same class (QueryGraph) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.graphhopper.routing.QueryGraph.execute",
+          "file_path": "core/src/main/java/com/graphhopper/routing/QueryGraph.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'execute' in QueryGraph provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0097",
+        "old_symbol_name": "com.graphhopper.routing.QueryGraph.getEdgeProps",
+        "old_file_path": "core/src/main/java/com/graphhopper/routing/QueryGraph.java",
+        "origin_commit_sha": "f70c6953e418933216979be7fb045bf2bb2101f8",
+        "change_type": "rename",
+        "commit_message": "f70c6953e rename getEdgeProps to getEdgeIteratorState, fix #468",
+        "diff_summary": "Rename Method public getEdgeProps(origEdgeId int, adjNode int) : EdgeIteratorState renamed to public getEdgeIteratorState(origEdgeId int, adjNode int) : EdgeIteratorState in class com.graphhopper.routing.QueryGraph"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0078",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "graphhopper/graphhopper",
+      "pin_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+      "origin_commit": "7f80425b6a0af9bdfef12c8a873676e39e0a04a6",
+      "commit_distance_k": 157,
+      "query_text": "Locate current implementation corresponding to historical method setGraph in GraphHopper",
+      "target": {
+        "symbol_name": "com.graphhopper.GraphHopper.setGraphHopperStorage",
+        "short_name": "setGraphHopperStorage",
+        "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "line_range": [
+          447,
+          451
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.graphhopper.GraphHopper.loadGraph",
+          "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'loadGraph' is declared in the same class (GraphHopper) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.graphhopper.GraphHopper.setEncodingManager",
+          "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'setEncodingManager' in GraphHopper provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0078",
+        "old_symbol_name": "com.graphhopper.GraphHopper.setGraph",
+        "old_file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "origin_commit_sha": "7f80425b6a0af9bdfef12c8a873676e39e0a04a6",
+        "change_type": "rename",
+        "commit_message": "7f80425b6 refactoring of GraphHopperStorage: use composition instead of inheritance",
+        "diff_summary": "Rename Method public setGraph(graph GraphStorage) : void renamed to public setGraphHopperStorage(ghStorage GraphHopperStorage) : void in class com.graphhopper.GraphHopper"
+      },
+      "origin_exists": true
+    }
+  ],
+  "searchHorizon": 400
+}

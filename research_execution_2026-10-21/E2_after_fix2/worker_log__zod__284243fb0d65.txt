@@ -1,0 +1,18 @@
+
+------------------------------------------------------------
+Processing Snapshot: zod @ 284243fb0d (8 cases)
+------------------------------------------------------------
+  Checking out 284243fb0d...
+  Structural Index: indexed 3675 symbols in 4.79s
+  Historical Index: analyzed 3675 historical profiles in 56.31s
+    Case ts_zod_01            | B1:   22 | B2: null (s=0) | B4:   43 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case ts_zod_02            | B1: null | B2: null (s=0) | B4: null | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case ts_zod_04            | B1:    1 | B2:  290 (s=0.0932) | B4:    1 | REACHABLE | AMBIGUOUS
+    Case ts_zod_05            | B1:    4 | B2:   21 (s=0.29) | B4:    1 | REACHABLE | EXACT_PREDECESSOR
+    Case ts_zod_06            | B1: null | B2: null (s=0) | B4: null | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case ts_zod_07            | B1:    3 | B2: null (s=0) | B4:    5 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case ts_zod_08            | B1: null | B2:   43 (s=0.1844) | B4:   60 | REACHABLE | EXACT_PREDECESSOR
+    Case ts_zod_09            | B1: null | B2: null (s=0) | B4: null | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+  Restoring zod to main...
+
+--- stderr ---

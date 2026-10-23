@@ -1,0 +1,360 @@
+{
+  "repoSlug": "undertow-io/undertow",
+  "repoPath": "D:\\clones_eval_2026-10-22\\undertow",
+  "pinSha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+  "cases": [
+    {
+      "case_id": "CASE-HIST-JAVA-0047",
+      "dataset_source": "category_b_repaired",
+      "cohort": "in_policy_primary",
+      "language": "Java",
+      "repository_id": "undertow-io/undertow",
+      "pin_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+      "origin_commit": "cea721e474e649b18b90f45ddf0bcea81b9256aa",
+      "commit_distance_k": 40,
+      "query_text": "Locate current implementation corresponding to historical method send in WebSocket07FrameSinkChannel",
+      "target": {
+        "symbol_name": "io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel.sendInternal",
+        "short_name": "sendInternal",
+        "file_path": "core/src/main/java/io/undertow/websockets/core/protocol/version07/WebSocket07FrameSinkChannel.java",
+        "line_range": [
+          158,
+          167
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel.handleFlushComplete",
+          "file_path": "core/src/main/java/io/undertow/websockets/core/protocol/version07/WebSocket07FrameSinkChannel.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'handleFlushComplete' is declared in the same class (WebSocket07FrameSinkChannel) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel.opCode",
+          "file_path": "core/src/main/java/io/undertow/websockets/core/protocol/version07/WebSocket07FrameSinkChannel.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'opCode' in WebSocket07FrameSinkChannel provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0047",
+        "old_symbol_name": "io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel.send",
+        "old_file_path": "core/src/main/java/io/undertow/websockets/core/protocol/version07/WebSocket07FrameSinkChannel.java",
+        "origin_commit_sha": "cea721e474e649b18b90f45ddf0bcea81b9256aa",
+        "change_type": "rename",
+        "commit_message": "cea721e47 Fix some issue with the refactor",
+        "diff_summary": "Rename Method public send(pooled Pooled<ByteBuffer>) : boolean renamed to public sendInternal(pooled Pooled<ByteBuffer>) : boolean in class io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0043",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "undertow-io/undertow",
+      "pin_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+      "origin_commit": "91519b9750eca66787f4d626039c0d84a01ff7d4",
+      "commit_distance_k": 59,
+      "query_text": "Locate current implementation corresponding to historical method flush in AbstractFramedStreamSinkConduit",
+      "target": {
+        "symbol_name": "io.undertow.conduits.AbstractFramedStreamSinkConduit.flushQueuedData",
+        "short_name": "flushQueuedData",
+        "file_path": "core/src/main/java/io/undertow/conduits/AbstractFramedStreamSinkConduit.java",
+        "line_range": [
+          208,
+          221
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "io.undertow.conduits.AbstractFramedStreamSinkConduit.queueFrame",
+          "file_path": "core/src/main/java/io/undertow/conduits/AbstractFramedStreamSinkConduit.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'queueFrame' is declared in the same class (AbstractFramedStreamSinkConduit) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "io.undertow.conduits.AbstractFramedStreamSinkConduit.transferFrom",
+          "file_path": "core/src/main/java/io/undertow/conduits/AbstractFramedStreamSinkConduit.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'transferFrom' in AbstractFramedStreamSinkConduit provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0043",
+        "old_symbol_name": "io.undertow.conduits.AbstractFramedStreamSinkConduit.flush",
+        "old_file_path": "core/src/main/java/io/undertow/conduits/AbstractFramedStreamSinkConduit.java",
+        "origin_commit_sha": "91519b9750eca66787f4d626039c0d84a01ff7d4",
+        "change_type": "rename",
+        "commit_message": "91519b975 UNDERTOW-518 send empty packet on AJP flush to tell mod_jk to flush to the client",
+        "diff_summary": "Rename Method public flush() : boolean renamed to protected flushQueuedData() : boolean in class io.undertow.conduits.AbstractFramedStreamSinkConduit"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0044",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "undertow-io/undertow",
+      "pin_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+      "origin_commit": "6199ea13dce900cf1ef808744aab141bee66380d",
+      "commit_distance_k": 52,
+      "query_text": "Locate current implementation corresponding to historical method handleFrameData in AjpClientResponseStreamSourceChannel",
+      "target": {
+        "symbol_name": "io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel.updateFrameDataRemaining",
+        "short_name": "updateFrameDataRemaining",
+        "file_path": "core/src/main/java/io/undertow/protocols/ajp/AjpClientResponseStreamSourceChannel.java",
+        "line_range": [
+          68,
+          76
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel.getHeaders",
+          "file_path": "core/src/main/java/io/undertow/protocols/ajp/AjpClientResponseStreamSourceChannel.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getHeaders' is declared in the same class (AjpClientResponseStreamSourceChannel) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel.getStatusCode",
+          "file_path": "core/src/main/java/io/undertow/protocols/ajp/AjpClientResponseStreamSourceChannel.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getStatusCode' in AjpClientResponseStreamSourceChannel provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0044",
+        "old_symbol_name": "io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel.handleFrameData",
+        "old_file_path": "core/src/main/java/io/undertow/protocols/ajp/AjpClientResponseStreamSourceChannel.java",
+        "origin_commit_sha": "6199ea13dce900cf1ef808744aab141bee66380d",
+        "change_type": "rename",
+        "commit_message": "6199ea13d Refactor websocket extensions to be transforms",
+        "diff_summary": "Rename Method protected handleFrameData(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long renamed to protected updateFrameDataRemaining(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long in class io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0046",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "undertow-io/undertow",
+      "pin_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+      "origin_commit": "6199ea13dce900cf1ef808744aab141bee66380d",
+      "commit_distance_k": 52,
+      "query_text": "Locate current implementation corresponding to historical method handleFrameData in StreamSourceFrameChannel",
+      "target": {
+        "symbol_name": "io.undertow.websockets.core.StreamSourceFrameChannel.processFrameData",
+        "short_name": "processFrameData",
+        "file_path": "core/src/main/java/io/undertow/websockets/core/StreamSourceFrameChannel.java",
+        "line_range": [
+          244,
+          250
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "io.undertow.websockets.core.StreamSourceFrameChannel.getType",
+          "file_path": "core/src/main/java/io/undertow/websockets/core/StreamSourceFrameChannel.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getType' is declared in the same class (StreamSourceFrameChannel) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "io.undertow.websockets.core.StreamSourceFrameChannel.isFinalFragment",
+          "file_path": "core/src/main/java/io/undertow/websockets/core/StreamSourceFrameChannel.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'isFinalFragment' in StreamSourceFrameChannel provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0046",
+        "old_symbol_name": "io.undertow.websockets.core.StreamSourceFrameChannel.handleFrameData",
+        "old_file_path": "core/src/main/java/io/undertow/websockets/core/StreamSourceFrameChannel.java",
+        "origin_commit_sha": "6199ea13dce900cf1ef808744aab141bee66380d",
+        "change_type": "rename",
+        "commit_message": "6199ea13d Refactor websocket extensions to be transforms",
+        "diff_summary": "Rename Method protected handleFrameData(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long renamed to protected processFrameData(frameData Pooled<ByteBuffer>, lastFragmentOfFrame boolean) : Pooled<ByteBuffer> in class io.undertow.websockets.core.StreamSourceFrameChannel"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0048",
+      "dataset_source": "category_b_repaired",
+      "cohort": "quarantined_negative",
+      "language": "Java",
+      "repository_id": "undertow-io/undertow",
+      "pin_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+      "origin_commit": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+      "commit_distance_k": 23,
+      "query_text": "Locate current implementation corresponding to historical method getResource in PooledByteBuffer",
+      "target": {
+        "symbol_name": "io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer.getBuffer",
+        "short_name": "getBuffer",
+        "file_path": "core/src/main/java/io/undertow/connector/PooledByteBuffer.java",
+        "line_range": [
+          29,
+          29
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer.close",
+          "file_path": "core/src/main/java/io/undertow/connector/PooledByteBuffer.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'close' is declared in the same class (PooledByteBuffer) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer.isOpen",
+          "file_path": "core/src/main/java/io/undertow/connector/PooledByteBuffer.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'isOpen' in PooledByteBuffer provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0048",
+        "old_symbol_name": "io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer.getResource",
+        "old_file_path": "core/src/main/java/io/undertow/connector/PooledByteBuffer.java",
+        "origin_commit_sha": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+        "change_type": "rename",
+        "commit_message": "b62c3f1ef Implement new buffer management API",
+        "diff_summary": "Rename Method public getResource() : ByteBuffer renamed to public getBuffer() : ByteBuffer in class io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0045",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "undertow-io/undertow",
+      "pin_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+      "origin_commit": "6199ea13dce900cf1ef808744aab141bee66380d",
+      "commit_distance_k": 52,
+      "query_text": "Locate current implementation corresponding to historical method handleFrameData in AbstractFramedStreamSourceChannel",
+      "target": {
+        "symbol_name": "io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel.updateFrameDataRemaining",
+        "short_name": "updateFrameDataRemaining",
+        "file_path": "core/src/main/java/io/undertow/server/protocol/framed/AbstractFramedStreamSourceChannel.java",
+        "line_range": [
+          384,
+          386
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel.transferTo",
+          "file_path": "core/src/main/java/io/undertow/server/protocol/framed/AbstractFramedStreamSourceChannel.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'transferTo' is declared in the same class (AbstractFramedStreamSourceChannel) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel.decrementFrameDataRemaining",
+          "file_path": "core/src/main/java/io/undertow/server/protocol/framed/AbstractFramedStreamSourceChannel.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'decrementFrameDataRemaining' in AbstractFramedStreamSourceChannel provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0045",
+        "old_symbol_name": "io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel.handleFrameData",
+        "old_file_path": "core/src/main/java/io/undertow/server/protocol/framed/AbstractFramedStreamSourceChannel.java",
+        "origin_commit_sha": "6199ea13dce900cf1ef808744aab141bee66380d",
+        "change_type": "rename",
+        "commit_message": "6199ea13d Refactor websocket extensions to be transforms",
+        "diff_summary": "Rename Method protected handleFrameData(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long renamed to protected updateFrameDataRemaining(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long in class io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0050",
+      "dataset_source": "category_b_repaired",
+      "cohort": "quarantined_negative",
+      "language": "Java",
+      "repository_id": "undertow-io/undertow",
+      "pin_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+      "origin_commit": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+      "commit_distance_k": 23,
+      "query_text": "Locate current implementation corresponding to historical method discard in new",
+      "target": {
+        "symbol_name": "io.undertow.util.ReferenceCountedPooled.createView.new.close",
+        "short_name": "close",
+        "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "line_range": [
+          58,
+          65
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "io.undertow.util.ReferenceCountedPooled.createView.new.isOpen",
+          "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'isOpen' is declared in the same class (ReferenceCountedPooled) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "io.undertow.util.ReferenceCountedPooled.createView.new.isFreed",
+          "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'isFreed' in ReferenceCountedPooled provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0050",
+        "old_symbol_name": "io.undertow.util.ReferenceCountedPooled.createView.new.discard",
+        "old_file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "origin_commit_sha": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+        "change_type": "rename",
+        "commit_message": "b62c3f1ef Implement new buffer management API",
+        "diff_summary": "Rename Method public discard() : void renamed to public close() : void in class io.undertow.util.ReferenceCountedPooled.createView.new PooledByteBuffer"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0049",
+      "dataset_source": "category_b_repaired",
+      "cohort": "in_policy_primary",
+      "language": "Java",
+      "repository_id": "undertow-io/undertow",
+      "pin_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+      "origin_commit": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+      "commit_distance_k": 23,
+      "query_text": "Locate current implementation corresponding to historical method getResource in ReferenceCountedPooled",
+      "target": {
+        "symbol_name": "io.undertow.util.ReferenceCountedPooled.getBuffer",
+        "short_name": "getBuffer",
+        "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "line_range": [
+          101,
+          110
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "io.undertow.util.ReferenceCountedPooled.close",
+          "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'close' is declared in the same class (ReferenceCountedPooled) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "io.undertow.util.ReferenceCountedPooled.isOpen",
+          "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'isOpen' in ReferenceCountedPooled provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0049",
+        "old_symbol_name": "io.undertow.util.ReferenceCountedPooled.getResource",
+        "old_file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "origin_commit_sha": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+        "change_type": "rename",
+        "commit_message": "b62c3f1ef Implement new buffer management API",
+        "diff_summary": "Rename Method public getResource() : ByteBuffer renamed to public getBuffer() : ByteBuffer in class io.undertow.util.ReferenceCountedPooled"
+      },
+      "origin_exists": true
+    }
+  ],
+  "searchHorizon": 400
+}

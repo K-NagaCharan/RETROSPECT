@@ -1,0 +1,59 @@
+{
+  "experiment": "E1_java_rename_case_study",
+  "mode": "plan-only",
+  "started_utc": "2026-10-21T15:11:39.367Z",
+  "configuration": {
+    "search_horizon": 50,
+    "traversal": "git log --topo-order -n <H> <pin> (merge-aware)",
+    "b1": "StructuralRetriever",
+    "b2": "HistoricalRetrievalAdapter.rankHistoricalOnly (enforceCandidateParity)",
+    "b3": "HistoricalRetrievalAdapter.fuseScores structural 0.60 / historical 0.40",
+    "b4": "fuseRRFv2 k=60 weightStructural 0.50 weightHistorical 0.50",
+    "snapshot_cache": "not used"
+  },
+  "dataset": {
+    "path": "D:\\base papers considered\\Test creation\\results\\category_b_benchmark_repair_2026-10-19\\category_b_repaired.json",
+    "sha256": "acb2e388bf510b719e56f82263dec349c2258194fc66dac4e54038de5fe2b94f",
+    "records": 29,
+    "selected": 5
+  },
+  "clones_dir": "D:\\clones",
+  "worker": "D:\\base papers considered\\Retrospect\\scratch\\evaluate_snapshot_worker.js",
+  "source_fingerprints": {
+    "scratch/evaluate_snapshot_worker.js": "4fe37fd558cb17df1afc002b20ed8aea768a2d0f9bc3f9f08026b5eaf48256b9",
+    "scratch/run_java_case_study.js": "22319de6ae2bd104cdf71370945b11b33c4ea276d76b5947075337583841e5e0",
+    "src/git/GitHistoryReader.js": "ace5960be5468a2f76c6edb7a07ebcb2b1f966705f5da9f9841a865fdad9672b",
+    "src/git/historyWindow.js": "5aaec3edb85391b68141a8574ee0d5ca5129200d86bf11a57dd27114baa1dec0",
+    "src/retrieval/HistoricalRetrievalAdapter.js": "374f85f33000fe8096623deb1d47b9238abdbfea3ba0ebf23354ccd17faceb4e",
+    "src/retrieval/RRFv2.js": "d1e555d9640bd95d195bf7fa151d27c8875c2e1b89bead9bf59479a4a30d6e21",
+    "src/structural/retrieval/StructuralRetriever.js": "9380234c73deebdbbc12b498ced34469cd99de6deb20daf94aabfa31cbd2fdd6",
+    "src/structural/query/QueryProcessor.js": "28ad87904fe03c46895465e9303d0f4c43166503832b9d2b1f3a3d2237684cb7",
+    "src/matcher/FunctionMatcher.js": "9d194c28abf94287f29f4b9430f3e8ddd68f51d821b33e8daf0fa719cf27f278"
+  },
+  "retrospect_git": {
+    "head": "17ea399217737f8d5fe2c32c310b69c2f812b84d",
+    "porcelain_entries": 52
+  },
+  "runtime": {
+    "node": "v22.17.1",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "snapshots": [
+    {
+      "repoSlug": "datastax/java-driver",
+      "pinSha": "f4240267b3a3b829fa51242441dd219424a91347",
+      "repoPath": "D:\\clones\\datastax-java-driver",
+      "case_ids": [
+        "CASE-HIST-JAVA-0035",
+        "CASE-HIST-JAVA-0039",
+        "CASE-HIST-JAVA-0036",
+        "CASE-HIST-JAVA-0038",
+        "CASE-HIST-JAVA-0034"
+      ],
+      "head_before": "c2043c577fd9a61ca196f08ac45d568f1d00e8b5",
+      "branch_before": "trunk",
+      "worker_input": "worker_input__datastax_java-driver__f4240267b3a3.json"
+    }
+  ],
+  "finished_utc": "2026-10-21T15:11:39.491Z"
+}

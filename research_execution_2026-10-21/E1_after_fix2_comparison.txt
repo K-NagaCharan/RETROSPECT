@@ -1,0 +1,5 @@
+reference: D:\base papers considered\Retrospect\research_corrected_2026-10-21\per_case_results_corrected.csv
+run:       D:\base papers considered\Retrospect\research_execution_2026-10-21\E1_after_fix2
+cases compared: 29 / 29; ranks compared: 116
+E1 REPRODUCTION: PASS (116/116 ranks identical)
+exit=0

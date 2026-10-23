@@ -1,0 +1,18 @@
+
+------------------------------------------------------------
+Processing Snapshot: undertow-io/undertow @ cf3abec914 (8 cases)
+------------------------------------------------------------
+  Checking out cf3abec914...
+  Structural Index: indexed 13334 symbols in 4.25s
+  Historical Index: analyzed 13334 historical profiles in 207.56s
+    Case CASE-HIST-JAVA-0047  | B1:    8 | B2:  166 (s=0.1898) | B4:   32 | REACHABLE | AMBIGUOUS
+    Case CASE-HIST-JAVA-0043  | B1:    7 | B2:  174 (s=0.193) | B4:    8 | REACHABLE | RENAMED_SYMBOL
+    Case CASE-HIST-JAVA-0044  | B1:    4 | B2:    3 (s=0.6146) | B4:    2 | REACHABLE | AMBIGUOUS
+    Case CASE-HIST-JAVA-0046  | B1:   10 | B2:    6 (s=0.579) | B4:    7 | REACHABLE | AMBIGUOUS
+    Case CASE-HIST-JAVA-0048  | B1:   34 | B2:  897 (s=0.1575) | B4:   74 | REACHABLE | UNMATCHED
+    Case CASE-HIST-JAVA-0045  | B1:    8 | B2:    5 (s=0.6708) | B4:    4 | REACHABLE | AMBIGUOUS
+    Case CASE-HIST-JAVA-0050  | B1: null | B2:  486 (s=0.1217) | B4:  555 | REACHABLE | EXACT_PREDECESSOR
+    Case CASE-HIST-JAVA-0049  | B1:   14 | B2:    4 (s=0.5163) | B4:    2 | REACHABLE | RENAMED_SYMBOL
+  Restoring undertow-io/undertow to main...
+
+--- stderr ---

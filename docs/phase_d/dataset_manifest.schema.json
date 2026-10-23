@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://retrospect.org/schemas/phase_d/dataset_manifest.schema.json",
+  "title": "Retrospect Phase D Dataset Manifest Schema",
+  "description": "Defines the canonical, machine-readable dataset manifest for independent Phase D code retrieval evaluation across Fastify and Flask.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "dataset_version",
+    "benchmark_id",
+    "freeze_date",
+    "repository_contexts",
+    "queries"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2.2.0"
+    },
+    "dataset_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "benchmark_id": {
+      "type": "string",
+      "const": "RETROSPECT-PHASE-D-BENCHMARK"
+    },
+    "freeze_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "repository_contexts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "repository_id",
+          "canonical_url",
+          "evaluated_commit_sha",
+          "primary_language",
+          "source_paths"
+        ],
+        "properties": {
+          "repository_id": {
+            "type": "string",
+            "enum": ["fastify/fastify", "pallets/flask"]
+          },
+          "canonical_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "evaluated_commit_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "primary_language": {
+            "type": "string",
+            "enum": ["javascript", "typescript", "python"]
+          },
+          "source_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "queries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "query_id",
+          "repository",
+          "evaluated_commit_sha",
+          "query_text",
+          "category",
+          "lineage_cluster_id",
+          "split",
+          "is_multi_target",
+          "provenance",
+          "ground_truth",
+          "annotation_metadata",
+          "exclusion_status"
+        ],
+        "properties": {
+          "query_id": {
+            "type": "string",
+            "pattern": "^QRY-PHASED-(FASTIFY|FLASK)-[0-9]{3}$"
+          },
+          "repository": {
+            "type": "string",
+            "enum": ["fastify/fastify", "pallets/flask"]
+          },
+          "evaluated_commit_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "query_text": {
+            "type": "string",
+            "minLength": 15,
+            "maxLength": 500,
+            "description": "Natural language developer query searching for code implementation."
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "HISTORICAL_VOCABULARY",
+              "HISTORICAL_BEHAVIOR",
+              "CURRENT_CODE_CONTROL",
+              "UNANSWERABLE_NEGATIVE"
+            ]
+          },
+          "lineage_cluster_id": {
+            "type": "string",
+            "pattern": "^(FASTIFY|FLASK)-CLUSTER-[A-Za-z0-9_-]+$",
+            "description": "Unique identifier of the refactoring/lineage cluster for group-level split isolation."
+          },
+          "split": {
+            "type": "string",
+            "enum": ["DEVELOPMENT", "HELD_OUT_TEST"]
+          },
+          "is_multi_target": {
+            "type": "boolean",
+            "description": "True if and only if ground_truth contains more than one co-equal symbol."
+          },
+          "multi_target_rationale": {
+            "type": "string",
+            "description": "Mandatory explanation when is_multi_target is true explaining why the refactoring split into multiple symbols."
+          },
+          "provenance": {
+            "type": "object",
+            "required": ["source_type", "historical_excerpt"],
+            "properties": {
+              "source_type": {
+                "type": "string",
+                "enum": [
+                  "MIGRATION_GUIDE",
+                  "RELEASE_NOTES",
+                  "CHANGELOG",
+                  "ISSUE_DISCUSSION",
+                  "CURRENT_API_DOCS",
+                  "NEGATIVE_SPECIFICATION"
+                ]
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "historical_excerpt": {
+                "type": "string",
+                "maxLength": 1000
+              }
+            }
+          },
+          "ground_truth": {
+            "type": "array",
+            "description": "List of ground-truth symbols matching query. Empty array for UNANSWERABLE_NEGATIVE.",
+            "items": {
+              "type": "object",
+              "required": [
+                "symbol_id",
+                "qualified_name",
+                "file_path",
+                "line_start",
+                "line_end",
+                "lineage_type"
+              ],
+              "properties": {
+                "symbol_id": {
+                  "type": "string",
+                  "description": "Internal unique identifier: filePath::symbolName::scope"
+                },
+                "qualified_name": {
+                  "type": "string"
+                },
+                "file_path": {
+                  "type": "string"
+                },
+                "line_start": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "description": "Starting line number in source file (1-indexed, inclusive)."
+                },
+                "line_end": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "description": "Ending line number in source file (1-indexed, inclusive). Must satisfy line_end >= line_start (enforced by validation runner semantic check; cross-property numeric comparisons are not expressible in standard Draft 2020-12 JSON Schema)."
+                },
+                "lineage_type": {
+                  "type": "string",
+                  "enum": [
+                    "RENAME",
+                    "CROSS_FILE_MOVE",
+                    "SUBSTANTIAL_REWRITE",
+                    "UNCHANGED_CONTROL",
+                    "EXTRACTION",
+                    "MERGED_FUNCTIONS"
+                  ]
+                },
+                "lineage_commits": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{40}$"
+                  }
+                }
+              }
+            }
+          },
+          "negative_query_rationale": {
+            "type": "string",
+            "description": "Required if category is UNANSWERABLE_NEGATIVE explaining why functionality is absent."
+          },
+          "annotation_metadata": {
+            "type": "object",
+            "required": ["annotator_id", "adjudicator_id", "status"],
+            "properties": {
+              "annotator_id": {
+                "type": "string"
+              },
+              "adjudicator_id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": ["PROPOSED", "IN_REVIEW", "APPROVED", "REJECTED"]
+              }
+            }
+          },
+          "exclusion_status": {
+            "type": "object",
+            "required": ["is_excluded", "exclusion_reason"],
+            "properties": {
+              "is_excluded": {
+                "type": "boolean"
+              },
+              "exclusion_reason": {
+                "type": "string",
+                "enum": [
+                  "NONE",
+                  "AMBIGUOUS_LINEAGE",
+                  "CIRCULAR_EVIDENCE",
+                  "OVERLAPS_PHASE_B_OR_C",
+                  "PARSER_EXTRACTION_FAILURE",
+                  "TRIVIAL_IDENTIFIER_LEAKAGE",
+                  "EXCLUDED_RETROACTIVE_EDIT"
+                ]
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "category": { "const": "UNANSWERABLE_NEGATIVE" }
+              }
+            },
+            "then": {
+              "required": ["negative_query_rationale"],
+              "properties": {
+                "ground_truth": { "maxItems": 0 },
+                "is_multi_target": { "const": false }
+              }
+            },
+            "else": {
+              "if": {
+                "properties": {
+                  "is_multi_target": { "const": true }
+                }
+              },
+              "then": {
+                "required": ["multi_target_rationale"],
+                "properties": {
+                  "ground_truth": { "minItems": 2 }
+                }
+              },
+              "else": {
+                "properties": {
+                  "ground_truth": { "minItems": 1, "maxItems": 1 }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "exclusion_status": {
+                  "properties": {
+                    "is_excluded": { "const": true }
+                  }
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "exclusion_status": {
+                  "required": ["is_excluded", "exclusion_reason"],
+                  "properties": {
+                    "exclusion_reason": {
+                      "enum": [
+                        "AMBIGUOUS_LINEAGE",
+                        "CIRCULAR_EVIDENCE",
+                        "OVERLAPS_PHASE_B_OR_C",
+                        "PARSER_EXTRACTION_FAILURE",
+                        "TRIVIAL_IDENTIFIER_LEAKAGE",
+                        "EXCLUDED_RETROACTIVE_EDIT"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "exclusion_status": {
+                  "required": ["is_excluded", "exclusion_reason"],
+                  "properties": {
+                    "exclusion_reason": { "const": "NONE" }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

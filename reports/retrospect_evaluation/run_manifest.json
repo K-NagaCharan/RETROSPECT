@@ -1,0 +1,101 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_at": "2026-10-16T04:42:01.700Z",
+  "study_title": "Retrospect: Evolution-Aware Context Retrieval for Repository-Level LLMs",
+  "evaluation_phase": "Phase B Audited Results & Phase D Preregistration Framework",
+  "operational_gate_status": "STRICTLY CLOSED / BLOCKED — FORMAL HUMAN PROTOCOL APPROVAL REQUIRED",
+  "frozen_baseline": {
+    "git_commit_sha": "17ea399217737f8d5fe2c32c310b69c2f812b84d",
+    "branch": "main",
+    "repository_status": "Untouched tracked repository files; untracked experimental files isolated"
+  },
+  "environment": {
+    "runtime": "v22.17.1",
+    "platform": "win32",
+    "arch": "x64",
+    "dependencies": {
+      "tree-sitter-wasms": "^0.1.13",
+      "web-tree-sitter": "^0.20.8",
+      "jest": "^30.5.2"
+    }
+  },
+  "evaluated_configurations": [
+    {
+      "id": "B1",
+      "name": "Structural-Only Baseline",
+      "implementation_file": "src/structural/retrieval/StructuralRetriever.js",
+      "status": "FROZEN_BASELINE_EVIDENCE",
+      "sha256": "9380234C73DEEBDBBC12B498CED34469CD99DE6DEB20DAF94AABFA31CBD2FDD6"
+    },
+    {
+      "id": "B2",
+      "name": "Historical-Only Baseline",
+      "implementation_file": "src/retrieval/HistoricalRetrievalAdapter.js",
+      "status": "FROZEN_BASELINE_EVIDENCE",
+      "sha256": "60F114D8770D0A70108BC343C21ACF2C9F4389FC226270DEFFCA3CE6C0BCA965"
+    },
+    {
+      "id": "B3",
+      "name": "Legacy RRF-v1 Fusion",
+      "implementation_file": "src/retrieval/UnifiedSearch.js",
+      "status": "FROZEN_BASELINE_EVIDENCE",
+      "sha256": "156E4149BA57BF17B4E0B92ED2968F57510E987595CF4EBEAAC791FF695B844E"
+    },
+    {
+      "id": "S1",
+      "name": "Hardened RRF-v2 Candidate",
+      "implementation_file": "src/retrieval/RRFv2.js",
+      "status": "EXPERIMENTAL_UNTRACKED_PROPOSED",
+      "sha256": "343B7819766333A2691130C33CA72A2D5D128F361734869946B98B70289A84F6"
+    },
+    {
+      "id": "B4",
+      "name": "Historical BM25 Baseline",
+      "implementation_file": "src/retrieval/HistoricalBM25Retriever.js",
+      "status": "PROPOSED_NOT_YET_IMPLEMENTED",
+      "sha256": null
+    }
+  ],
+  "datasets": {
+    "phase_b": {
+      "queries_file": "data/evaluation_lineage_queries_v4.json",
+      "benchmark_file": "data/benchmark_lineage_audited_v3.json",
+      "total_queries": 40,
+      "answerable_queries": 34,
+      "negative_queries": 6,
+      "repositories": [
+        "bottle",
+        "express",
+        "zod",
+        "gson"
+      ],
+      "total_candidate_symbols": 11915,
+      "role": "DIAGNOSTIC_AND_PARAMETER_TUNING_ONLY (Non-confirmatory)"
+    },
+    "phase_d_proposed": {
+      "protocol_version": "3.5",
+      "protocol_file": "docs/phase_d/phase_d_v3_5_exploratory_protocol.md",
+      "supervisor_brief": "docs/phase_d/phase_d_v3_5_supervisor_review_brief.md",
+      "planned_repositories": [
+        "fastify",
+        "flask"
+      ],
+      "planned_clusters": 18,
+      "status": "BLOCKED_PENDING_SUPERVISOR_APPROVAL"
+    }
+  },
+  "known_evaluator_defects": [
+    {
+      "defect_id": "DEF-01",
+      "description": "Invalid RRF abstention threshold: evaluate_phase_b_fusion.js tested top1.score >= 0.20, which is mathematically impossible for RRF scores bounded by 2/61 ~ 0.0328. Produced artificial 0% false positive rate.",
+      "status": "INVALIDATED_HISTORICAL_METRIC",
+      "corrective_action": "Expose flaw explicitly; report calibrated dev thresholds and document extreme false rejection of answerables."
+    },
+    {
+      "defect_id": "DEF-02",
+      "description": "Extreme sample-size limitation in Phase B negative queries: Only 3 dev negatives and 3 test negatives existed. Each negative represented 33.3% of the distribution.",
+      "status": "SAMPLE_SIZE_LIMITATION",
+      "corrective_action": "Classify all Phase B abstention metrics as diagnostic-only; mandate minimum Category D sample in Phase D."
+    }
+  ]
+}

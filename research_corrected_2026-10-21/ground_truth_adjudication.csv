@@ -1,0 +1,12 @@
+case_id,target_is_successor,query_acceptable,note,adjudicator,date
+CASE-HIST-JAVA-0013,Y,Y,ACCEPT. Strict rename (element type co-renamed in the same commit 24ead56).,project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0049,Y,Y,"ACCEPT. Strict rename, identical signature (b62c3f1).",project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0005,unsure,Y,"EXCLUDED from strict rename analysis: one method split into two (CheckedFromRcurly, CheckedFromSlist); record names only one. Preserved for separate split/refactoring analysis.",project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0047,Y,Y,ACCEPT sendInternal as body successor. Template-method split: public send remains the entry point. Sensitivity flag.,project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0105,Y,Y,"ACCEPT. Generalized successor, not a strict rename.",project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0019,Y,N,Successor valid (24ead56). Query leaks post-rename class name Violation. EXCLUDED from primary ranking estimand and from rescue claims.,project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0020,Y,N,Successor valid (24ead56). Query leaks post-rename class name Violation. EXCLUDED from primary ranking estimand and from rescue claims.,project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0101,Y,Y,ACCEPT. API signature and semantics changed (single factory -> per-Weighting).,project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0044,Y,Y,ACCEPT. Strict rename; shares commit cluster 6199ea1 with 0045 and 0046.,project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0045,Y,Y,ACCEPT. Strict rename; shares commit cluster 6199ea1 with 0044 and 0046.,project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21
+CASE-HIST-JAVA-0046,Y,Y,ACCEPT processFrameData as body successor. Competing interpretation: inherited updateFrameDataRemaining (not counted as a second target). Sensitivity flag.,project owner (decision given in session 2026-10-21; recorded by Claude),2026-10-21

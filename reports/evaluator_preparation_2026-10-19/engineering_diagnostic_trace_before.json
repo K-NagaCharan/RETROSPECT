@@ -1,0 +1,282 @@
+[
+  {
+    "id": "DIAG-01",
+    "name": "Checkstyle getViolations (Rename within horizon; RRF asymmetry test)",
+    "repo": "checkstyle/checkstyle",
+    "distance": 36,
+    "archetype": "Rename within horizon (Historical strong, Structural weak)",
+    "b1_rank": null,
+    "b1_score": 0,
+    "b2_rank": 3,
+    "b2_score": 0.1757,
+    "b3_rank": 34,
+    "b3_score": 0.0703,
+    "b3_norm_rank": 3,
+    "b3_norm_score": 0.1757,
+    "b4_legacy_rank": 40,
+    "b4_legacy_score": 0.0063,
+    "b4_improved_rank": 19,
+    "b4_improved_score": 0.0078,
+    "latencies": {
+      "isolated": {
+        "b1": 950,
+        "b2": 189,
+        "b3": 85,
+        "b4": 135
+      },
+      "end_to_end": {
+        "b1": 950,
+        "b2": 189,
+        "b3": 1224,
+        "b4": 1274
+      }
+    },
+    "failure_category": "RRF_FUSION_ASYMMETRY_CAP",
+    "diagnosis": "RRF-v2 mathematical cap (w_h/(k+1)=0.00656) allowed top 31 purely structural candidates to outrank historical match. B2 Rank was 3, but Legacy B4 Rank collapsed to 40! Rescued to Rank 19 under Balanced Cormack RRF."
+  },
+  {
+    "id": "DIAG-02",
+    "name": "Graphhopper markNodesRemovedIfUnreachable (Rename within horizon)",
+    "repo": "graphhopper/graphhopper",
+    "distance": 40,
+    "archetype": "Rename within horizon (Behavioral query, no historical name)",
+    "b1_rank": 3,
+    "b1_score": 0.145,
+    "b2_rank": 21,
+    "b2_score": 0.1037,
+    "b3_rank": 5,
+    "b3_score": 0.1285,
+    "b3_norm_rank": 10,
+    "b3_norm_score": 0.1285,
+    "b4_legacy_rank": 7,
+    "b4_legacy_score": 0.0145,
+    "b4_improved_rank": 8,
+    "b4_improved_score": 0.0141,
+    "latencies": {
+      "isolated": {
+        "b1": 204,
+        "b2": 52,
+        "b3": 20,
+        "b4": 26
+      },
+      "end_to_end": {
+        "b1": 204,
+        "b2": 52,
+        "b3": 276,
+        "b4": 282
+      }
+    },
+    "failure_category": "NONE",
+    "diagnosis": "Success: Target retrieved in top-10 across configurations."
+  },
+  {
+    "id": "DIAG-03",
+    "name": "Checkstyle createBlockCommentNode (Move Method across classes)",
+    "repo": "checkstyle/checkstyle",
+    "distance": 28,
+    "archetype": "Move Method across classes",
+    "b1_rank": 6,
+    "b1_score": 0.1202,
+    "b2_rank": null,
+    "b2_score": 0,
+    "b3_rank": 15,
+    "b3_score": 0.0721,
+    "b3_norm_rank": 22,
+    "b3_norm_score": 0.1202,
+    "b4_legacy_rank": 12,
+    "b4_legacy_score": 0.0091,
+    "b4_improved_rank": 15,
+    "b4_improved_score": 0.0076,
+    "latencies": {
+      "isolated": {
+        "b1": 807,
+        "b2": 102,
+        "b3": 70,
+        "b4": 96
+      },
+      "end_to_end": {
+        "b1": 807,
+        "b2": 102,
+        "b3": 979,
+        "b4": 1005
+      }
+    },
+    "failure_category": "LINEAR_FUSION_DILUTION",
+    "diagnosis": "Zero-signal historical channel diluted strong structural score (0.60*S + 0.40*0), dropping target from B1 Rank 6 to B3 Rank 15."
+  },
+  {
+    "id": "DIAG-04",
+    "name": "Guava checkNonnegative (Destructive Linear Dilution in B3)",
+    "repo": "google/guava",
+    "distance": 0,
+    "archetype": "Linear Fusion Dilution (Structural strong, Historical zero)",
+    "b1_rank": null,
+    "b1_score": 0,
+    "b2_rank": null,
+    "b2_score": 0,
+    "b3_rank": null,
+    "b3_score": 0,
+    "b3_norm_rank": null,
+    "b3_norm_score": 0,
+    "b4_legacy_rank": null,
+    "b4_legacy_score": 0,
+    "b4_improved_rank": null,
+    "b4_improved_score": 0,
+    "latencies": {
+      "isolated": {
+        "b1": 5591,
+        "b2": 281,
+        "b3": 170,
+        "b4": 310
+      },
+      "end_to_end": {
+        "b1": 5591,
+        "b2": 281,
+        "b3": 6042,
+        "b4": 6182
+      }
+    },
+    "failure_category": "LEXICAL_TOKEN_GAP",
+    "diagnosis": "Query phrasing lacked sufficient lexical token overlap with AST declarations or commit diffs, resulting in zero scores."
+  },
+  {
+    "id": "DIAG-05",
+    "name": "Guava ImmutableList.builder (Multi-Module Sibling Shadowing in B1)",
+    "repo": "google/guava",
+    "distance": 0,
+    "archetype": "Structural Sibling Shadowing (Multi-module root vs stubs)",
+    "b1_rank": 79,
+    "b1_score": 0.1633,
+    "b2_rank": null,
+    "b2_score": 0,
+    "b3_rank": 121,
+    "b3_score": 0.098,
+    "b3_norm_rank": 160,
+    "b3_norm_score": 0.1633,
+    "b4_legacy_rank": 122,
+    "b4_legacy_score": 0.0043,
+    "b4_improved_rank": 175,
+    "b4_improved_score": 0.0036,
+    "latencies": {
+      "isolated": {
+        "b1": 7086,
+        "b2": 204,
+        "b3": 210,
+        "b4": 239
+      },
+      "end_to_end": {
+        "b1": 7086,
+        "b2": 204,
+        "b3": 7500,
+        "b4": 7529
+      }
+    },
+    "failure_category": "STRUCTURAL_SIBLING_SHADOWING",
+    "diagnosis": "Identical or near-identical method signatures in sibling modules/stubs shadowed the target, dispersing rank down to B1 Rank 79."
+  },
+  {
+    "id": "DIAG-06",
+    "name": "Requests HTTPAdapter.send (Structural & Historical Multi-Signal Agreement)",
+    "repo": "psf/requests",
+    "distance": 0,
+    "archetype": "Multi-Signal Concordance (Both channels retrieve target)",
+    "b1_rank": 2,
+    "b1_score": 0.1633,
+    "b2_rank": 2,
+    "b2_score": 0.2717,
+    "b3_rank": 1,
+    "b3_score": 0.2067,
+    "b3_norm_rank": 2,
+    "b3_norm_score": 0.2067,
+    "b4_legacy_rank": 1,
+    "b4_legacy_score": 0.0161,
+    "b4_improved_rank": 1,
+    "b4_improved_score": 0.0161,
+    "latencies": {
+      "isolated": {
+        "b1": 40,
+        "b2": 9,
+        "b3": 2,
+        "b4": 2
+      },
+      "end_to_end": {
+        "b1": 40,
+        "b2": 9,
+        "b3": 51,
+        "b4": 51
+      }
+    },
+    "failure_category": "NONE",
+    "diagnosis": "Success: Target retrieved in top-10 across configurations."
+  },
+  {
+    "id": "DIAG-07",
+    "name": "Undertow sendInternal (Lexical Token Gap / Shadowing)",
+    "repo": "undertow-io/undertow",
+    "distance": 40,
+    "archetype": "Lexical Token Gap (Behavioral query lacks code keywords)",
+    "b1_rank": null,
+    "b1_score": 0,
+    "b2_rank": null,
+    "b2_score": 0,
+    "b3_rank": null,
+    "b3_score": 0,
+    "b3_norm_rank": null,
+    "b3_norm_score": 0,
+    "b4_legacy_rank": null,
+    "b4_legacy_score": 0,
+    "b4_improved_rank": null,
+    "b4_improved_score": 0,
+    "latencies": {
+      "isolated": {
+        "b1": 414,
+        "b2": 47,
+        "b3": 21,
+        "b4": 32
+      },
+      "end_to_end": {
+        "b1": 414,
+        "b2": 47,
+        "b3": 482,
+        "b4": 493
+      }
+    },
+    "failure_category": "LEXICAL_TOKEN_GAP",
+    "diagnosis": "Query phrasing lacked sufficient lexical token overlap with AST declarations or commit diffs, resulting in zero scores."
+  },
+  {
+    "id": "DIAG-08",
+    "name": "Checkstyle getLineNo (Historical Horizon Exceeded, dist=394)",
+    "repo": "checkstyle/checkstyle",
+    "distance": 394,
+    "archetype": "Historical Horizon Exceeded (Origin beyond 50 commits)",
+    "b1_rank": null,
+    "b1_score": 0,
+    "b2_rank": 2,
+    "b2_score": 0.1883,
+    "b3_rank": 11,
+    "b3_score": 0.0753,
+    "b3_norm_rank": 2,
+    "b3_norm_score": 0.1883,
+    "b4_legacy_rank": 42,
+    "b4_legacy_score": 0.0062,
+    "b4_improved_rank": 13,
+    "b4_improved_score": 0.0078,
+    "latencies": {
+      "isolated": {
+        "b1": 538,
+        "b2": 71,
+        "b3": 45,
+        "b4": 63
+      },
+      "end_to_end": {
+        "b1": 538,
+        "b2": 71,
+        "b3": 654,
+        "b4": 672
+      }
+    },
+    "failure_category": "RRF_FUSION_ASYMMETRY_CAP",
+    "diagnosis": "RRF-v2 mathematical cap (w_h/(k+1)=0.00656) allowed top 31 purely structural candidates to outrank historical match. B2 Rank was 2, but Legacy B4 Rank collapsed to 42! Rescued to Rank 13 under Balanced Cormack RRF."
+  }
+]

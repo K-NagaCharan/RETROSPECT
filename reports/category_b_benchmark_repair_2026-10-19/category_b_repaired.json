@@ -1,0 +1,1945 @@
+[
+  {
+    "case_id": "CASE-HIST-JAVA-0105",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "graphhopper/graphhopper",
+    "target_language": "Java",
+    "source_revision_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+    "query": {
+      "query_id": "Q-HIST-0105",
+      "query_text": "Locate current implementation corresponding to historical method removeZeroDegreeNodes in PrepareRoutingSubnetworks",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0105-TARGET",
+        "symbol_name": "com.graphhopper.routing.util.PrepareRoutingSubnetworks.markNodesRemovedIfUnreachable",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/com/graphhopper/routing/util/PrepareRoutingSubnetworks.java",
+        "line_range": [
+          270,
+          278
+        ],
+        "declaration_signature": "void markNodesRemovedIfUnreachable()"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0105",
+      "old_symbol_name": "com.graphhopper.routing.util.PrepareRoutingSubnetworks.removeZeroDegreeNodes",
+      "old_file_path": "core/src/main/java/com/graphhopper/routing/util/PrepareRoutingSubnetworks.java",
+      "origin_commit_sha": "88806c24c77ce9dde2d99ad3ffd4f4e190f06252",
+      "change_type": "rename",
+      "commit_message": "88806c24c make multiple vehicles working for subnetwork removal",
+      "diff_summary": "Rename Method package removeZeroDegreeNodes() : int renamed to package markNodesRemovedIfUnreachable() : void in class com.graphhopper.routing.util.PrepareRoutingSubnetworks"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.graphhopper.routing.util.PrepareRoutingSubnetworks.setMinNetworkSize",
+        "file_path": "core/src/main/java/com/graphhopper/routing/util/PrepareRoutingSubnetworks.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'setMinNetworkSize' is declared in the same class (PrepareRoutingSubnetworks) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.graphhopper.routing.util.PrepareRoutingSubnetworks.setMinOneWayNetworkSize",
+        "file_path": "core/src/main/java/com/graphhopper/routing/util/PrepareRoutingSubnetworks.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'setMinOneWayNetworkSize' in PrepareRoutingSubnetworks provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "top_k",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (88806c24c7) is 40 commits prior to pin (<= 50 horizon); historical channel predicts target."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 40,
+      "origin_commit_cluster": "88806c24c77ce9dde2d99ad3ffd4f4e190f06252",
+      "rename_token_overlap": 0.125,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0035",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "datastax/java-driver",
+    "target_language": "Java",
+    "source_revision_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+    "query": {
+      "query_id": "Q-HIST-0035",
+      "query_text": "Locate current implementation corresponding to historical method messageReceived in Dispatcher",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0035-TARGET",
+        "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.channelRead0",
+        "symbol_type": "method",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "line_range": [
+          960,
+          997
+        ],
+        "declaration_signature": "@Override protected void channelRead0(ChannelHandlerContext ctx, Message.Response response) throws Exception"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0035",
+      "old_symbol_name": "com.datastax.driver.core.Connection.Dispatcher.messageReceived",
+      "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+      "origin_commit_sha": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+      "change_type": "rename",
+      "commit_message": "083600a93 Upgrade Netty to 4.0.26 (JAVA-622).",
+      "diff_summary": "Rename Method public messageReceived(ctx ChannelHandlerContext, e MessageEvent) : void renamed to protected channelRead0(ctx ChannelHandlerContext, response Message.Response) : void in class com.datastax.driver.core.Connection.Dispatcher"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.initAsync",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'initAsync' is declared in the same class (Connection) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.operationComplete",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'operationComplete' in Connection provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (083600a932) is 628 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 628,
+      "origin_commit_cluster": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+      "rename_token_overlap": 0.0,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0096",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "graphhopper/graphhopper",
+    "target_language": "Java",
+    "source_revision_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+    "query": {
+      "query_id": "Q-HIST-0096",
+      "query_text": "Locate current implementation corresponding to historical method getEdgeProps in CHGraphImpl",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0096-TARGET",
+        "symbol_name": "com.graphhopper.storage.CHGraphImpl.getEdgeIteratorState",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/com/graphhopper/storage/CHGraphImpl.java",
+        "line_range": [
+          231,
+          245
+        ],
+        "declaration_signature": "@Override public final CHEdgeIteratorState getEdgeIteratorState( int edgeId, int endNode )"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0096",
+      "old_symbol_name": "com.graphhopper.storage.CHGraphImpl.getEdgeProps",
+      "old_file_path": "core/src/main/java/com/graphhopper/storage/CHGraphImpl.java",
+      "origin_commit_sha": "f70c6953e418933216979be7fb045bf2bb2101f8",
+      "change_type": "rename",
+      "commit_message": "f70c6953e rename getEdgeProps to getEdgeIteratorState, fix #468",
+      "diff_summary": "Rename Method public getEdgeProps(edgeId int, endNode int) : CHEdgeIteratorState renamed to public getEdgeIteratorState(edgeId int, endNode int) : CHEdgeIteratorState in class com.graphhopper.storage.CHGraphImpl"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.graphhopper.storage.CHGraphImpl.createSingleEdge",
+        "file_path": "core/src/main/java/com/graphhopper/storage/CHGraphImpl.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'createSingleEdge' is declared in the same class (CHGraphImpl) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.graphhopper.storage.CHGraphImpl.getEdgeRef",
+        "file_path": "core/src/main/java/com/graphhopper/storage/CHGraphImpl.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getEdgeRef' in CHGraphImpl provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (f70c6953e4) is 64 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 64,
+      "origin_commit_cluster": "f70c6953e418933216979be7fb045bf2bb2101f8",
+      "rename_token_overlap": 0.4,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0099",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "graphhopper/graphhopper",
+    "target_language": "Java",
+    "source_revision_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+    "query": {
+      "query_id": "Q-HIST-0099",
+      "query_text": "Locate current implementation corresponding to historical method getEdgeProps in Graph",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0099-TARGET",
+        "symbol_name": "com.graphhopper.storage.Graph.getEdgeIteratorState",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/com/graphhopper/storage/Graph.java",
+        "line_range": [
+          79,
+          79
+        ],
+        "declaration_signature": "EdgeIteratorState getEdgeIteratorState( int edgeId, int adjNode );"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0099",
+      "old_symbol_name": "com.graphhopper.storage.Graph.getEdgeProps",
+      "old_file_path": "core/src/main/java/com/graphhopper/storage/Graph.java",
+      "origin_commit_sha": "f70c6953e418933216979be7fb045bf2bb2101f8",
+      "change_type": "rename",
+      "commit_message": "f70c6953e rename getEdgeProps to getEdgeIteratorState, fix #468",
+      "diff_summary": "Rename Method public getEdgeProps(edgeId int, adjNode int) : EdgeIteratorState renamed to public getEdgeIteratorState(edgeId int, adjNode int) : EdgeIteratorState in class com.graphhopper.storage.Graph"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.graphhopper.storage.Graph.getBaseGraph",
+        "file_path": "core/src/main/java/com/graphhopper/storage/Graph.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getBaseGraph' is declared in the same class (Graph) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.graphhopper.storage.Graph.getNodes",
+        "file_path": "core/src/main/java/com/graphhopper/storage/Graph.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getNodes' in Graph provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (f70c6953e4) is 64 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 64,
+      "origin_commit_cluster": "f70c6953e418933216979be7fb045bf2bb2101f8",
+      "rename_token_overlap": 0.4,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0058",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "graphhopper/graphhopper",
+    "target_language": "Java",
+    "source_revision_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+    "query": {
+      "query_id": "Q-HIST-0058",
+      "query_text": "Locate current implementation corresponding to historical method isWeightLimitReached in DijkstraBidirectionRef",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0058-TARGET",
+        "symbol_name": "com.graphhopper.routing.DijkstraBidirectionRef.isWeightLimitExceeded",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/com/graphhopper/routing/DijkstraBidirectionRef.java",
+        "line_range": [
+          187,
+          191
+        ],
+        "declaration_signature": "@Override protected boolean isWeightLimitExceeded()"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0058",
+      "old_symbol_name": "com.graphhopper.routing.DijkstraBidirectionRef.isWeightLimitReached",
+      "old_file_path": "core/src/main/java/com/graphhopper/routing/DijkstraBidirectionRef.java",
+      "origin_commit_sha": "38a5f0821658820a24f1ac2bdb40696058cc3a41",
+      "change_type": "rename",
+      "commit_message": "38a5f0821 fix weightLimit bug, #380",
+      "diff_summary": "Rename Method protected isWeightLimitReached() : boolean renamed to protected isWeightLimitExceeded() : boolean in class com.graphhopper.routing.DijkstraBidirectionRef"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.graphhopper.routing.DijkstraBidirectionRef.initCollections",
+        "file_path": "core/src/main/java/com/graphhopper/routing/DijkstraBidirectionRef.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'initCollections' is declared in the same class (DijkstraBidirectionRef) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.graphhopper.routing.DijkstraBidirectionRef.initFrom",
+        "file_path": "core/src/main/java/com/graphhopper/routing/DijkstraBidirectionRef.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'initFrom' in DijkstraBidirectionRef provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (38a5f08216) is 259 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 259,
+      "origin_commit_cluster": "38a5f0821658820a24f1ac2bdb40696058cc3a41",
+      "rename_token_overlap": 0.6,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0029",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "checkstyle/checkstyle",
+    "target_language": "Java",
+    "source_revision_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+    "query": {
+      "query_id": "Q-HIST-0029",
+      "query_text": "Locate current implementation corresponding to historical method getCommonAncestorChildren in ElementNode",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0029-TARGET",
+        "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.compareCommonAncestorChildrenOrder",
+        "symbol_type": "method",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "line_range": [
+          117,
+          127
+        ],
+        "declaration_signature": "private static int compareCommonAncestorChildrenOrder(NodeInfo first, NodeInfo second)"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0029",
+      "old_symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.getCommonAncestorChildren",
+      "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+      "origin_commit_sha": "e122e7efb43838fbc25cfb3440c2a0187ed24b8e",
+      "change_type": "rename",
+      "commit_message": "e122e7efb4 minor: refactoring in compareOrder method of ElementNode",
+      "diff_summary": "Rename Method private getCommonAncestorChildren(other NodeInfo) : ElementNode[] renamed to private compareCommonAncestorChildrenOrder(first NodeInfo, second NodeInfo) : int in class com.puppycrawl.tools.checkstyle.xpath.ElementNode"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.compareOrder",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'compareOrder' is declared in the same class (ElementNode) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.getDepth",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getDepth' in ElementNode provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (e122e7efb4) is 391 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 391,
+      "origin_commit_cluster": "e122e7efb43838fbc25cfb3440c2a0187ed24b8e",
+      "rename_token_overlap": 0.5,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0101",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "graphhopper/graphhopper",
+    "target_language": "Java",
+    "source_revision_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+    "query": {
+      "query_id": "Q-HIST-0101",
+      "query_text": "Locate current implementation corresponding to historical method setAlgorithmFactory in GraphHopper",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0101-TARGET",
+        "symbol_name": "com.graphhopper.GraphHopper.putAlgorithmFactory",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "line_range": [
+          797,
+          801
+        ],
+        "declaration_signature": "public GraphHopper putAlgorithmFactory( Weighting weighting, RoutingAlgorithmFactory algoFactory )"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0101",
+      "old_symbol_name": "com.graphhopper.GraphHopper.setAlgorithmFactory",
+      "old_file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+      "origin_commit_sha": "158d0eced86c59477da65a432a930294d058e557",
+      "change_type": "rename",
+      "commit_message": "158d0eced first measurement runnable, all tests pass, for multiple CH profiles #464",
+      "diff_summary": "Rename Method public setAlgorithmFactory(algoFactory RoutingAlgorithmFactory) : void renamed to public putAlgorithmFactory(weighting Weighting, algoFactory RoutingAlgorithmFactory) : void in class com.graphhopper.GraphHopper"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.graphhopper.GraphHopper.loadGraph",
+        "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'loadGraph' is declared in the same class (GraphHopper) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.graphhopper.GraphHopper.setEncodingManager",
+        "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'setEncodingManager' in GraphHopper provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (158d0eced8) is 62 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 62,
+      "origin_commit_cluster": "158d0eced86c59477da65a432a930294d058e557",
+      "rename_token_overlap": 0.5,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0020",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "checkstyle/checkstyle",
+    "target_language": "Java",
+    "source_revision_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+    "query": {
+      "query_id": "Q-HIST-0020",
+      "query_text": "Locate current implementation corresponding to historical method getCustomMessage in Violation",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0020-TARGET",
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getCustomViolation",
+        "symbol_type": "method",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "line_range": [
+          485,
+          492
+        ],
+        "declaration_signature": "private String getCustomViolation()"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0020",
+      "old_symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getCustomMessage",
+      "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+      "origin_commit_sha": "24ead56cf961060af6e08399e999440ef6945f84",
+      "change_type": "rename",
+      "commit_message": "24ead56cf9 Issue #4465: Rename LocalizedMessage to Violation",
+      "diff_summary": "Rename Method private getCustomMessage() : String renamed to private getCustomViolation() : String in class com.puppycrawl.tools.checkstyle.api.Violation"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getLineNo",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getLineNo' is declared in the same class (Violation) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getColumnNo",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getColumnNo' in Violation provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "top_k",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (24ead56cf9) is 36 commits prior to pin (<= 50 horizon); historical channel predicts target."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 36,
+      "origin_commit_cluster": "24ead56cf961060af6e08399e999440ef6945f84",
+      "rename_token_overlap": 0.5,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0055",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "graphhopper/graphhopper",
+    "target_language": "Java",
+    "source_revision_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+    "query": {
+      "query_id": "Q-HIST-0055",
+      "query_text": "Locate current implementation corresponding to historical method isWeightLimitReached in AStarBidirection",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0055-TARGET",
+        "symbol_name": "com.graphhopper.routing.AStarBidirection.isWeightLimitExceeded",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/com/graphhopper/routing/AStarBidirection.java",
+        "line_range": [
+          207,
+          211
+        ],
+        "declaration_signature": "@Override protected boolean isWeightLimitExceeded()"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0055",
+      "old_symbol_name": "com.graphhopper.routing.AStarBidirection.isWeightLimitReached",
+      "old_file_path": "core/src/main/java/com/graphhopper/routing/AStarBidirection.java",
+      "origin_commit_sha": "38a5f0821658820a24f1ac2bdb40696058cc3a41",
+      "change_type": "rename",
+      "commit_message": "38a5f0821 fix weightLimit bug, #380",
+      "diff_summary": "Rename Method protected isWeightLimitReached() : boolean renamed to protected isWeightLimitExceeded() : boolean in class com.graphhopper.routing.AStarBidirection"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.graphhopper.routing.AStarBidirection.initCollections",
+        "file_path": "core/src/main/java/com/graphhopper/routing/AStarBidirection.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'initCollections' is declared in the same class (AStarBidirection) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.graphhopper.routing.AStarBidirection.setApproximation",
+        "file_path": "core/src/main/java/com/graphhopper/routing/AStarBidirection.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'setApproximation' in AStarBidirection provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (38a5f08216) is 259 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 259,
+      "origin_commit_cluster": "38a5f0821658820a24f1ac2bdb40696058cc3a41",
+      "rename_token_overlap": 0.6,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0097",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "graphhopper/graphhopper",
+    "target_language": "Java",
+    "source_revision_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+    "query": {
+      "query_id": "Q-HIST-0097",
+      "query_text": "Locate current implementation corresponding to historical method getEdgeProps in QueryGraph",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0097-TARGET",
+        "symbol_name": "com.graphhopper.routing.QueryGraph.getEdgeIteratorState",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/com/graphhopper/routing/QueryGraph.java",
+        "line_range": [
+          563,
+          580
+        ],
+        "declaration_signature": "@Override public EdgeIteratorState getEdgeIteratorState( int origEdgeId, int adjNode )"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0097",
+      "old_symbol_name": "com.graphhopper.routing.QueryGraph.getEdgeProps",
+      "old_file_path": "core/src/main/java/com/graphhopper/routing/QueryGraph.java",
+      "origin_commit_sha": "f70c6953e418933216979be7fb045bf2bb2101f8",
+      "change_type": "rename",
+      "commit_message": "f70c6953e rename getEdgeProps to getEdgeIteratorState, fix #468",
+      "diff_summary": "Rename Method public getEdgeProps(origEdgeId int, adjNode int) : EdgeIteratorState renamed to public getEdgeIteratorState(origEdgeId int, adjNode int) : EdgeIteratorState in class com.graphhopper.routing.QueryGraph"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.graphhopper.routing.QueryGraph.lookup",
+        "file_path": "core/src/main/java/com/graphhopper/routing/QueryGraph.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'lookup' is declared in the same class (QueryGraph) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.graphhopper.routing.QueryGraph.execute",
+        "file_path": "core/src/main/java/com/graphhopper/routing/QueryGraph.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'execute' in QueryGraph provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (f70c6953e4) is 64 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 64,
+      "origin_commit_cluster": "f70c6953e418933216979be7fb045bf2bb2101f8",
+      "rename_token_overlap": 0.4,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0078",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "graphhopper/graphhopper",
+    "target_language": "Java",
+    "source_revision_sha": "c7497d1100a4f05ddf5cc630692cbe8046b98114",
+    "query": {
+      "query_id": "Q-HIST-0078",
+      "query_text": "Locate current implementation corresponding to historical method setGraph in GraphHopper",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0078-TARGET",
+        "symbol_name": "com.graphhopper.GraphHopper.setGraphHopperStorage",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "line_range": [
+          447,
+          451
+        ],
+        "declaration_signature": "public void setGraphHopperStorage( GraphHopperStorage ghStorage )"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0078",
+      "old_symbol_name": "com.graphhopper.GraphHopper.setGraph",
+      "old_file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+      "origin_commit_sha": "7f80425b6a0af9bdfef12c8a873676e39e0a04a6",
+      "change_type": "rename",
+      "commit_message": "7f80425b6 refactoring of GraphHopperStorage: use composition instead of inheritance",
+      "diff_summary": "Rename Method public setGraph(graph GraphStorage) : void renamed to public setGraphHopperStorage(ghStorage GraphHopperStorage) : void in class com.graphhopper.GraphHopper"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.graphhopper.GraphHopper.loadGraph",
+        "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'loadGraph' is declared in the same class (GraphHopper) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.graphhopper.GraphHopper.setEncodingManager",
+        "file_path": "core/src/main/java/com/graphhopper/GraphHopper.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'setEncodingManager' in GraphHopper provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (7f80425b6a) is 157 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 157,
+      "origin_commit_cluster": "7f80425b6a0af9bdfef12c8a873676e39e0a04a6",
+      "rename_token_overlap": 0.5,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0047",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "undertow-io/undertow",
+    "target_language": "Java",
+    "source_revision_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+    "query": {
+      "query_id": "Q-HIST-0047",
+      "query_text": "Locate current implementation corresponding to historical method send in WebSocket07FrameSinkChannel",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0047-TARGET",
+        "symbol_name": "io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel.sendInternal",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/io/undertow/websockets/core/protocol/version07/WebSocket07FrameSinkChannel.java",
+        "line_range": [
+          158,
+          167
+        ],
+        "declaration_signature": "@Override public boolean sendInternal(PooledByteBuffer pooled) throws IOException"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0047",
+      "old_symbol_name": "io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel.send",
+      "old_file_path": "core/src/main/java/io/undertow/websockets/core/protocol/version07/WebSocket07FrameSinkChannel.java",
+      "origin_commit_sha": "cea721e474e649b18b90f45ddf0bcea81b9256aa",
+      "change_type": "rename",
+      "commit_message": "cea721e47 Fix some issue with the refactor",
+      "diff_summary": "Rename Method public send(pooled Pooled<ByteBuffer>) : boolean renamed to public sendInternal(pooled Pooled<ByteBuffer>) : boolean in class io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel.handleFlushComplete",
+        "file_path": "core/src/main/java/io/undertow/websockets/core/protocol/version07/WebSocket07FrameSinkChannel.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'handleFlushComplete' is declared in the same class (WebSocket07FrameSinkChannel) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "io.undertow.websockets.core.protocol.version07.WebSocket07FrameSinkChannel.opCode",
+        "file_path": "core/src/main/java/io/undertow/websockets/core/protocol/version07/WebSocket07FrameSinkChannel.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'opCode' in WebSocket07FrameSinkChannel provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "top_k",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (cea721e474) is 40 commits prior to pin (<= 50 horizon); historical channel predicts target."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 40,
+      "origin_commit_cluster": "cea721e474e649b18b90f45ddf0bcea81b9256aa",
+      "rename_token_overlap": 0.5,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0005",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "checkstyle/checkstyle",
+    "target_language": "Java",
+    "source_revision_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+    "query": {
+      "query_id": "Q-HIST-0005",
+      "query_text": "Locate current implementation corresponding to historical method isEmptyCtorBlock in WhitespaceAroundCheck",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0005-TARGET",
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck.isEmptyCtorBlockCheckedFromRcurly",
+        "symbol_type": "method",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java",
+        "line_range": [
+          898,
+          906
+        ],
+        "declaration_signature": "private boolean isEmptyCtorBlockCheckedFromRcurly(DetailAST ast)"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0005",
+      "old_symbol_name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck.isEmptyCtorBlock",
+      "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java",
+      "origin_commit_sha": "ff424ff8e19c976cf3deed74fe20cb8dc56a894b",
+      "change_type": "rename",
+      "commit_message": "ff424ff8e1 Issue #8237: fixing no whitespace violation in empty constructors",
+      "diff_summary": "Rename Method private isEmptyCtorBlock(ast DetailAST, parentType int) : boolean renamed to private isEmptyCtorBlockCheckedFromRcurly(ast DetailAST) : boolean in class com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck.getDefaultTokens",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getDefaultTokens' is declared in the same class (WhitespaceAroundCheck) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck.getAcceptableTokens",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getAcceptableTokens' in WhitespaceAroundCheck provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "top_k",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (ff424ff8e1) is 47 commits prior to pin (<= 50 horizon); historical channel predicts target."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 47,
+      "origin_commit_cluster": "ff424ff8e19c976cf3deed74fe20cb8dc56a894b",
+      "rename_token_overlap": 0.571,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0039",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "datastax/java-driver",
+    "target_language": "Java",
+    "source_revision_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+    "query": {
+      "query_id": "Q-HIST-0039",
+      "query_text": "Locate current implementation corresponding to historical method withSlowQueryLatencyThresholdMillis in Builder",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0039-TARGET",
+        "symbol_name": "com.datastax.driver.core.QueryLogger.Builder.withConstantThreshold",
+        "symbol_type": "method",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/QueryLogger.java",
+        "line_range": [
+          417,
+          421
+        ],
+        "declaration_signature": "public Builder withConstantThreshold(long slowQueryLatencyThresholdMillis)"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0039",
+      "old_symbol_name": "com.datastax.driver.core.QueryLogger.Builder.withSlowQueryLatencyThresholdMillis",
+      "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/QueryLogger.java",
+      "origin_commit_sha": "aeb98f954b1226e97cbe4cbb455888f34d1920e3",
+      "change_type": "rename",
+      "commit_message": "aeb98f954 Percentile-based variant of query logger and speculative executions (JAVA-723).",
+      "diff_summary": "Rename Method public withSlowQueryLatencyThresholdMillis(slowQueryLatencyThresholdMillis long) : Builder renamed to public withConstantThreshold(slowQueryLatencyThresholdMillis long) : Builder in class com.datastax.driver.core.QueryLogger.Builder"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.datastax.driver.core.QueryLogger.Builder.builder",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/QueryLogger.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'builder' is declared in the same class (QueryLogger) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.datastax.driver.core.QueryLogger.Builder.getSlowQueryLatencyThresholdMillis",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/QueryLogger.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getSlowQueryLatencyThresholdMillis' in QueryLogger provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (aeb98f954b) is 568 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 568,
+      "origin_commit_cluster": "aeb98f954b1226e97cbe4cbb455888f34d1920e3",
+      "rename_token_overlap": 0.286,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0043",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "undertow-io/undertow",
+    "target_language": "Java",
+    "source_revision_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+    "query": {
+      "query_id": "Q-HIST-0043",
+      "query_text": "Locate current implementation corresponding to historical method flush in AbstractFramedStreamSinkConduit",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0043-TARGET",
+        "symbol_name": "io.undertow.conduits.AbstractFramedStreamSinkConduit.flushQueuedData",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/io/undertow/conduits/AbstractFramedStreamSinkConduit.java",
+        "line_range": [
+          208,
+          221
+        ],
+        "declaration_signature": "protected boolean flushQueuedData() throws IOException"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0043",
+      "old_symbol_name": "io.undertow.conduits.AbstractFramedStreamSinkConduit.flush",
+      "old_file_path": "core/src/main/java/io/undertow/conduits/AbstractFramedStreamSinkConduit.java",
+      "origin_commit_sha": "91519b9750eca66787f4d626039c0d84a01ff7d4",
+      "change_type": "rename",
+      "commit_message": "91519b975 UNDERTOW-518 send empty packet on AJP flush to tell mod_jk to flush to the client",
+      "diff_summary": "Rename Method public flush() : boolean renamed to protected flushQueuedData() : boolean in class io.undertow.conduits.AbstractFramedStreamSinkConduit"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "io.undertow.conduits.AbstractFramedStreamSinkConduit.queueFrame",
+        "file_path": "core/src/main/java/io/undertow/conduits/AbstractFramedStreamSinkConduit.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'queueFrame' is declared in the same class (AbstractFramedStreamSinkConduit) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "io.undertow.conduits.AbstractFramedStreamSinkConduit.transferFrom",
+        "file_path": "core/src/main/java/io/undertow/conduits/AbstractFramedStreamSinkConduit.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'transferFrom' in AbstractFramedStreamSinkConduit provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (91519b9750) is 59 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 59,
+      "origin_commit_cluster": "91519b9750eca66787f4d626039c0d84a01ff7d4",
+      "rename_token_overlap": 0.333,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0044",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "undertow-io/undertow",
+    "target_language": "Java",
+    "source_revision_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+    "query": {
+      "query_id": "Q-HIST-0044",
+      "query_text": "Locate current implementation corresponding to historical method handleFrameData in AjpClientResponseStreamSourceChannel",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0044-TARGET",
+        "symbol_name": "io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel.updateFrameDataRemaining",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/io/undertow/protocols/ajp/AjpClientResponseStreamSourceChannel.java",
+        "line_range": [
+          68,
+          76
+        ],
+        "declaration_signature": "@Override protected long updateFrameDataRemaining(PooledByteBuffer frameData, long frameDataRemaining)"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0044",
+      "old_symbol_name": "io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel.handleFrameData",
+      "old_file_path": "core/src/main/java/io/undertow/protocols/ajp/AjpClientResponseStreamSourceChannel.java",
+      "origin_commit_sha": "6199ea13dce900cf1ef808744aab141bee66380d",
+      "change_type": "rename",
+      "commit_message": "6199ea13d Refactor websocket extensions to be transforms",
+      "diff_summary": "Rename Method protected handleFrameData(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long renamed to protected updateFrameDataRemaining(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long in class io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel.getHeaders",
+        "file_path": "core/src/main/java/io/undertow/protocols/ajp/AjpClientResponseStreamSourceChannel.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getHeaders' is declared in the same class (AjpClientResponseStreamSourceChannel) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "io.undertow.protocols.ajp.AjpClientResponseStreamSourceChannel.getStatusCode",
+        "file_path": "core/src/main/java/io/undertow/protocols/ajp/AjpClientResponseStreamSourceChannel.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getStatusCode' in AjpClientResponseStreamSourceChannel provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (6199ea13dc) is 52 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 52,
+      "origin_commit_cluster": "6199ea13dce900cf1ef808744aab141bee66380d",
+      "rename_token_overlap": 0.4,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0019",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "checkstyle/checkstyle",
+    "target_language": "Java",
+    "source_revision_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+    "query": {
+      "query_id": "Q-HIST-0019",
+      "query_text": "Locate current implementation corresponding to historical method getMessage in Violation",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0019-TARGET",
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getViolation",
+        "symbol_type": "method",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "line_range": [
+          454,
+          477
+        ],
+        "declaration_signature": "public String getViolation()"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0019",
+      "old_symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getMessage",
+      "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+      "origin_commit_sha": "24ead56cf961060af6e08399e999440ef6945f84",
+      "change_type": "rename",
+      "commit_message": "24ead56cf9 Issue #4465: Rename LocalizedMessage to Violation",
+      "diff_summary": "Rename Method public getMessage() : String renamed to public getViolation() : String in class com.puppycrawl.tools.checkstyle.api.Violation"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getLineNo",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getLineNo' is declared in the same class (Violation) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getColumnNo",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getColumnNo' in Violation provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "top_k",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (24ead56cf9) is 36 commits prior to pin (<= 50 horizon); historical channel predicts target."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 36,
+      "origin_commit_cluster": "24ead56cf961060af6e08399e999440ef6945f84",
+      "rename_token_overlap": 0.333,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0013",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "checkstyle/checkstyle",
+    "target_language": "Java",
+    "source_revision_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+    "query": {
+      "query_id": "Q-HIST-0013",
+      "query_text": "Locate current implementation corresponding to historical method getMessages in AbstractCheck",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0013-TARGET",
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.AbstractCheck.getViolations",
+        "symbol_type": "method",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/AbstractCheck.java",
+        "line_range": [
+          113,
+          115
+        ],
+        "declaration_signature": "public SortedSet<Violation> getViolations()"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0013",
+      "old_symbol_name": "com.puppycrawl.tools.checkstyle.api.AbstractCheck.getMessages",
+      "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/AbstractCheck.java",
+      "origin_commit_sha": "24ead56cf961060af6e08399e999440ef6945f84",
+      "change_type": "rename",
+      "commit_message": "24ead56cf9 Issue #4465: Rename LocalizedMessage to Violation",
+      "diff_summary": "Rename Method public getMessages() : SortedSet<LocalizedMessage> renamed to public getViolations() : SortedSet<Violation> in class com.puppycrawl.tools.checkstyle.api.AbstractCheck"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.AbstractCheck.getDefaultTokens",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/AbstractCheck.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getDefaultTokens' is declared in the same class (AbstractCheck) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.AbstractCheck.getAcceptableTokens",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/AbstractCheck.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getAcceptableTokens' in AbstractCheck provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "top_k",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (24ead56cf9) is 36 commits prior to pin (<= 50 horizon); historical channel predicts target."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 36,
+      "origin_commit_cluster": "24ead56cf961060af6e08399e999440ef6945f84",
+      "rename_token_overlap": 0.333,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0036",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "datastax/java-driver",
+    "target_language": "Java",
+    "source_revision_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+    "query": {
+      "query_id": "Q-HIST-0036",
+      "query_text": "Locate current implementation corresponding to historical method channelIdle in Dispatcher",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0036-TARGET",
+        "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.userEventTriggered",
+        "symbol_type": "method",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "line_range": [
+          999,
+          1005
+        ],
+        "declaration_signature": "@Override public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0036",
+      "old_symbol_name": "com.datastax.driver.core.Connection.Dispatcher.channelIdle",
+      "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+      "origin_commit_sha": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+      "change_type": "rename",
+      "commit_message": "083600a93 Upgrade Netty to 4.0.26 (JAVA-622).",
+      "diff_summary": "Rename Method public channelIdle(ctx ChannelHandlerContext, e IdleStateEvent) : void renamed to public userEventTriggered(ctx ChannelHandlerContext, evt Object) : void in class com.datastax.driver.core.Connection.Dispatcher"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.initAsync",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'initAsync' is declared in the same class (Connection) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.datastax.driver.core.Connection.Dispatcher.operationComplete",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'operationComplete' in Connection provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (083600a932) is 628 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 628,
+      "origin_commit_cluster": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+      "rename_token_overlap": 0.0,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0046",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "undertow-io/undertow",
+    "target_language": "Java",
+    "source_revision_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+    "query": {
+      "query_id": "Q-HIST-0046",
+      "query_text": "Locate current implementation corresponding to historical method handleFrameData in StreamSourceFrameChannel",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0046-TARGET",
+        "symbol_name": "io.undertow.websockets.core.StreamSourceFrameChannel.processFrameData",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/io/undertow/websockets/core/StreamSourceFrameChannel.java",
+        "line_range": [
+          244,
+          250
+        ],
+        "declaration_signature": "@Override protected PooledByteBuffer processFrameData(PooledByteBuffer frameData, boolean lastFragmentOfFrame) throws IOException"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0046",
+      "old_symbol_name": "io.undertow.websockets.core.StreamSourceFrameChannel.handleFrameData",
+      "old_file_path": "core/src/main/java/io/undertow/websockets/core/StreamSourceFrameChannel.java",
+      "origin_commit_sha": "6199ea13dce900cf1ef808744aab141bee66380d",
+      "change_type": "rename",
+      "commit_message": "6199ea13d Refactor websocket extensions to be transforms",
+      "diff_summary": "Rename Method protected handleFrameData(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long renamed to protected processFrameData(frameData Pooled<ByteBuffer>, lastFragmentOfFrame boolean) : Pooled<ByteBuffer> in class io.undertow.websockets.core.StreamSourceFrameChannel"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "io.undertow.websockets.core.StreamSourceFrameChannel.getType",
+        "file_path": "core/src/main/java/io/undertow/websockets/core/StreamSourceFrameChannel.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getType' is declared in the same class (StreamSourceFrameChannel) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "io.undertow.websockets.core.StreamSourceFrameChannel.isFinalFragment",
+        "file_path": "core/src/main/java/io/undertow/websockets/core/StreamSourceFrameChannel.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'isFinalFragment' in StreamSourceFrameChannel provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (6199ea13dc) is 52 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 52,
+      "origin_commit_cluster": "6199ea13dce900cf1ef808744aab141bee66380d",
+      "rename_token_overlap": 0.5,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0048",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "undertow-io/undertow",
+    "target_language": "Java",
+    "source_revision_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+    "query": {
+      "query_id": "Q-HIST-0048",
+      "query_text": "Locate current implementation corresponding to historical method getResource in PooledByteBuffer",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0048-TARGET",
+        "symbol_name": "io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer.getBuffer",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/io/undertow/connector/PooledByteBuffer.java",
+        "line_range": [
+          29,
+          29
+        ],
+        "declaration_signature": "ByteBuffer getBuffer();"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0048",
+      "old_symbol_name": "io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer.getResource",
+      "old_file_path": "core/src/main/java/io/undertow/connector/PooledByteBuffer.java",
+      "origin_commit_sha": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+      "change_type": "rename",
+      "commit_message": "b62c3f1ef Implement new buffer management API",
+      "diff_summary": "Rename Method public getResource() : ByteBuffer renamed to public getBuffer() : ByteBuffer in class io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer.close",
+        "file_path": "core/src/main/java/io/undertow/connector/PooledByteBuffer.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'close' is declared in the same class (PooledByteBuffer) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "io.undertow.server.handlers.cache.LimitedBufferSlicePool.PooledByteBuffer.isOpen",
+        "file_path": "core/src/main/java/io/undertow/connector/PooledByteBuffer.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'isOpen' in PooledByteBuffer provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "top_k",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (b62c3f1efa) is 23 commits prior to pin (<= 50 horizon); historical channel predicts target."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 23,
+      "origin_commit_cluster": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+      "rename_token_overlap": 0.333,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0045",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "undertow-io/undertow",
+    "target_language": "Java",
+    "source_revision_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+    "query": {
+      "query_id": "Q-HIST-0045",
+      "query_text": "Locate current implementation corresponding to historical method handleFrameData in AbstractFramedStreamSourceChannel",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0045-TARGET",
+        "symbol_name": "io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel.updateFrameDataRemaining",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/io/undertow/server/protocol/framed/AbstractFramedStreamSourceChannel.java",
+        "line_range": [
+          384,
+          386
+        ],
+        "declaration_signature": "protected long updateFrameDataRemaining(PooledByteBuffer frameData, long frameDataRemaining)"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0045",
+      "old_symbol_name": "io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel.handleFrameData",
+      "old_file_path": "core/src/main/java/io/undertow/server/protocol/framed/AbstractFramedStreamSourceChannel.java",
+      "origin_commit_sha": "6199ea13dce900cf1ef808744aab141bee66380d",
+      "change_type": "rename",
+      "commit_message": "6199ea13d Refactor websocket extensions to be transforms",
+      "diff_summary": "Rename Method protected handleFrameData(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long renamed to protected updateFrameDataRemaining(frameData Pooled<ByteBuffer>, frameDataRemaining long) : long in class io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel.transferTo",
+        "file_path": "core/src/main/java/io/undertow/server/protocol/framed/AbstractFramedStreamSourceChannel.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'transferTo' is declared in the same class (AbstractFramedStreamSourceChannel) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "io.undertow.server.protocol.framed.AbstractFramedStreamSourceChannel.decrementFrameDataRemaining",
+        "file_path": "core/src/main/java/io/undertow/server/protocol/framed/AbstractFramedStreamSourceChannel.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'decrementFrameDataRemaining' in AbstractFramedStreamSourceChannel provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (6199ea13dc) is 52 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 52,
+      "origin_commit_cluster": "6199ea13dce900cf1ef808744aab141bee66380d",
+      "rename_token_overlap": 0.4,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0001",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "checkstyle/checkstyle",
+    "target_language": "Java",
+    "source_revision_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+    "query": {
+      "query_id": "Q-HIST-0001",
+      "query_text": "Locate current implementation corresponding to historical method isLegalComment in TrailingCommentCheck",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0001-TARGET",
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck.isLegalSingleLineComment",
+        "symbol_type": "method",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/TrailingCommentCheck.java",
+        "line_range": [
+          275,
+          286
+        ],
+        "declaration_signature": "private boolean isLegalSingleLineComment(String comment)"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0001",
+      "old_symbol_name": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck.isLegalComment",
+      "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/TrailingCommentCheck.java",
+      "origin_commit_sha": "ebef3bd59fdc2c97587a67bc59d57af6ecbb9072",
+      "change_type": "rename",
+      "commit_message": "ebef3bd59f Issue #9010: Refactor TrailingComment implementation to be completely AST based",
+      "diff_summary": "Rename Method private isLegalComment(comment TextBlock) : boolean renamed to private isLegalSingleLineComment(comment String) : boolean in class com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck.setLegalComment",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/TrailingCommentCheck.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'setLegalComment' is declared in the same class (TrailingCommentCheck) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck.setFormat",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/TrailingCommentCheck.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'setFormat' in TrailingCommentCheck provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (ebef3bd59f) is 187 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 187,
+      "origin_commit_cluster": "ebef3bd59fdc2c97587a67bc59d57af6ecbb9072",
+      "rename_token_overlap": 0.6,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0050",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "undertow-io/undertow",
+    "target_language": "Java",
+    "source_revision_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+    "query": {
+      "query_id": "Q-HIST-0050",
+      "query_text": "Locate current implementation corresponding to historical method discard in new",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0050-TARGET",
+        "symbol_name": "io.undertow.util.ReferenceCountedPooled.createView.new.close",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "line_range": [
+          58,
+          65
+        ],
+        "declaration_signature": "@Override public void close()"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0050",
+      "old_symbol_name": "io.undertow.util.ReferenceCountedPooled.createView.new.discard",
+      "old_file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+      "origin_commit_sha": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+      "change_type": "rename",
+      "commit_message": "b62c3f1ef Implement new buffer management API",
+      "diff_summary": "Rename Method public discard() : void renamed to public close() : void in class io.undertow.util.ReferenceCountedPooled.createView.new PooledByteBuffer"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "io.undertow.util.ReferenceCountedPooled.createView.new.isOpen",
+        "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'isOpen' is declared in the same class (ReferenceCountedPooled) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "io.undertow.util.ReferenceCountedPooled.createView.new.isFreed",
+        "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'isFreed' in ReferenceCountedPooled provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "top_k",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (b62c3f1efa) is 23 commits prior to pin (<= 50 horizon); historical channel predicts target."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 23,
+      "origin_commit_cluster": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+      "rename_token_overlap": 0.0,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0049",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "undertow-io/undertow",
+    "target_language": "Java",
+    "source_revision_sha": "cf3abec9145bb4660659add41b97866ff6ef9c31",
+    "query": {
+      "query_id": "Q-HIST-0049",
+      "query_text": "Locate current implementation corresponding to historical method getResource in ReferenceCountedPooled",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0049-TARGET",
+        "symbol_name": "io.undertow.util.ReferenceCountedPooled.getBuffer",
+        "symbol_type": "method",
+        "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "line_range": [
+          101,
+          110
+        ],
+        "declaration_signature": "@Override public ByteBuffer getBuffer() throws IllegalStateException"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0049",
+      "old_symbol_name": "io.undertow.util.ReferenceCountedPooled.getResource",
+      "old_file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+      "origin_commit_sha": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+      "change_type": "rename",
+      "commit_message": "b62c3f1ef Implement new buffer management API",
+      "diff_summary": "Rename Method public getResource() : ByteBuffer renamed to public getBuffer() : ByteBuffer in class io.undertow.util.ReferenceCountedPooled"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "io.undertow.util.ReferenceCountedPooled.close",
+        "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'close' is declared in the same class (ReferenceCountedPooled) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "io.undertow.util.ReferenceCountedPooled.isOpen",
+        "file_path": "core/src/main/java/io/undertow/util/ReferenceCountedPooled.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'isOpen' in ReferenceCountedPooled provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "top_k",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (b62c3f1efa) is 23 commits prior to pin (<= 50 horizon); historical channel predicts target."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 23,
+      "origin_commit_cluster": "b62c3f1efadeb86d94ed6577f59a8705e0ba8cb5",
+      "rename_token_overlap": 0.333,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0028",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "checkstyle/checkstyle",
+    "target_language": "Java",
+    "source_revision_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+    "query": {
+      "query_id": "Q-HIST-0028",
+      "query_text": "Locate current implementation corresponding to historical method createTextAttribute in ElementNode",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0028-TARGET",
+        "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.getAttributeNode",
+        "symbol_type": "method",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "line_range": [
+          406,
+          417
+        ],
+        "declaration_signature": "private AttributeNode getAttributeNode()"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0028",
+      "old_symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.createTextAttribute",
+      "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+      "origin_commit_sha": "3576d1ac2da7c7ee37f296599a99eaaf224e7b7c",
+      "change_type": "rename",
+      "commit_message": "3576d1ac2d Issue #5820: fix stack overflow error in ElementNode ctor",
+      "diff_summary": "Rename Method private createTextAttribute() : void renamed to private getAttributeNode() : AttributeNode in class com.puppycrawl.tools.checkstyle.xpath.ElementNode"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.compareOrder",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'compareOrder' is declared in the same class (ElementNode) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.compareCommonAncestorChildrenOrder",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'compareCommonAncestorChildrenOrder' in ElementNode provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (3576d1ac2d) is 394 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 394,
+      "origin_commit_cluster": "3576d1ac2da7c7ee37f296599a99eaaf224e7b7c",
+      "rename_token_overlap": 0.2,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0031",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "checkstyle/checkstyle",
+    "target_language": "Java",
+    "source_revision_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+    "query": {
+      "query_id": "Q-HIST-0031",
+      "query_text": "Locate current implementation corresponding to historical method isNewKeywordFollowedByAssign in NewHandler",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0031-TARGET",
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler.doesChainedMethodNeedsLineWrapping",
+        "symbol_type": "method",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/indentation/NewHandler.java",
+        "line_range": [
+          128,
+          136
+        ],
+        "declaration_signature": "private boolean doesChainedMethodNeedsLineWrapping()"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0031",
+      "old_symbol_name": "com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler.isNewKeywordFollowedByAssign",
+      "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/indentation/NewHandler.java",
+      "origin_commit_sha": "9c45c84d9386519d1669b8980d98c84efd152c9e",
+      "change_type": "rename",
+      "commit_message": "9c45c84d93 Issue #9071: New keyword throwing unresolvable indentation errors",
+      "diff_summary": "Rename Method private isNewKeywordFollowedByAssign() : boolean renamed to private doesChainedMethodNeedsLineWrapping() : boolean in class com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler.checkIndentation",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/indentation/NewHandler.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'checkIndentation' is declared in the same class (NewHandler) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler.getSuggestedChildIndent",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/indentation/NewHandler.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getSuggestedChildIndent' in NewHandler provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (9c45c84d93) is 372 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 372,
+      "origin_commit_cluster": "9c45c84d9386519d1669b8980d98c84efd152c9e",
+      "rename_token_overlap": 0.0,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0038",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "datastax/java-driver",
+    "target_language": "Java",
+    "source_revision_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+    "query": {
+      "query_id": "Q-HIST-0038",
+      "query_text": "Locate current implementation corresponding to historical method getPipeline in Initializer",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0038-TARGET",
+        "symbol_name": "com.datastax.driver.core.Connection.Initializer.initChannel",
+        "symbol_type": "method",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "line_range": [
+          1275,
+          1305
+        ],
+        "declaration_signature": "@Override protected void initChannel(SocketChannel channel) throws Exception"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0038",
+      "old_symbol_name": "com.datastax.driver.core.Connection.Initializer.getPipeline",
+      "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+      "origin_commit_sha": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+      "change_type": "rename",
+      "commit_message": "083600a93 Upgrade Netty to 4.0.26 (JAVA-622).",
+      "diff_summary": "Rename Method public getPipeline() : ChannelPipeline renamed to protected initChannel(channel SocketChannel) : void in class com.datastax.driver.core.Connection.Initializer"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.datastax.driver.core.Connection.Initializer.initAsync",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'initAsync' is declared in the same class (Connection) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.datastax.driver.core.Connection.Initializer.operationComplete",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/Connection.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'operationComplete' in Connection provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (083600a932) is 628 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 628,
+      "origin_commit_cluster": "083600a9321decf18ec92f4ae54a6438337a3dd3",
+      "rename_token_overlap": 0.0,
+      "target_in_test_code": false
+    }
+  },
+  {
+    "case_id": "CASE-HIST-JAVA-0034",
+    "dataset_id": "historical-symbol-retrieval",
+    "repository_id": "datastax/java-driver",
+    "target_language": "Java",
+    "source_revision_sha": "f4240267b3a3b829fa51242441dd219424a91347",
+    "query": {
+      "query_id": "Q-HIST-0034",
+      "query_text": "Locate current implementation corresponding to historical method getDate in ArrayBackedRow",
+      "query_type": "refactoring_successor",
+      "authoring_method": "synthetic_templated"
+    },
+    "ground_truth_status": "answerable",
+    "target_symbols": [
+      {
+        "symbol_id": "SYM-HIST-JAVA-0034-TARGET",
+        "symbol_name": "com.datastax.driver.core.ArrayBackedRow.getValue",
+        "symbol_type": "method",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/ArrayBackedRow.java",
+        "line_range": [
+          61,
+          64
+        ],
+        "declaration_signature": "@Override protected ByteBuffer getValue(int i)"
+      }
+    ],
+    "historical_evidence": {
+      "lineage_event_id": "EVT-HIST-JAVA-0034",
+      "old_symbol_name": "com.datastax.driver.core.ArrayBackedRow.getDate",
+      "old_file_path": "driver-core/src/main/java/com/datastax/driver/core/ArrayBackedRow.java",
+      "origin_commit_sha": "de6d8c78629f3f2033cba2339a8b650e1a4c7212",
+      "change_type": "rename",
+      "commit_message": "de6d8c786 Add typed getters and getObject to BoundStatement (JAVA-547, JAVA-584).",
+      "diff_summary": "Rename Method public getDate(i int) : Date renamed to protected getValue(i int) : ByteBuffer in class com.datastax.driver.core.ArrayBackedRow"
+    },
+    "hard_negatives": [
+      {
+        "symbol_name": "com.datastax.driver.core.ArrayBackedRow.fromData",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/ArrayBackedRow.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'fromData' is declared in the same class (ArrayBackedRow) alongside the target, sharing class-level context and token representations."
+      },
+      {
+        "symbol_name": "com.datastax.driver.core.ArrayBackedRow.getColumnDefinitions",
+        "file_path": "driver-core/src/main/java/com/datastax/driver/core/ArrayBackedRow.java",
+        "negative_type": "same_file_adjacent",
+        "distractor_rationale": "Method 'getColumnDefinitions' in ArrayBackedRow provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+      }
+    ],
+    "expected_retrieval_behavior": {
+      "structural_prediction": "top_k",
+      "historical_prediction": "unretrieved",
+      "combined_prediction": "top_k",
+      "rationale": "Historical origin (de6d8c7862) is 637 commits prior to pin (> 50 horizon); historical channel predicted to abstain."
+    },
+    "adjudication": {
+      "status": "provisional",
+      "verified_by": "RefactoringMiner oracle; Stage 3 AST & Git Engine (Awaiting manual human adjudication)",
+      "verification_date": "2026-10-19"
+    },
+    "metadata_extensions": {
+      "commit_distance_origin_to_pin": 637,
+      "origin_commit_cluster": "de6d8c78629f3f2033cba2339a8b650e1a4c7212",
+      "rename_token_overlap": 0.333,
+      "target_in_test_code": false
+    }
+  }
+]

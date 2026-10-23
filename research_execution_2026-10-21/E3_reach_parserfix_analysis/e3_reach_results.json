@@ -1,0 +1,741 @@
+{
+  "valid": true,
+  "invalid_reasons": [],
+  "case_sets_sha256": "29cbfc0a3d6bdb5c6f14c1e20013c46c3c73e26bfd7b068a8b13b34f6fb14692",
+  "sets": {
+    "primary": {
+      "N": 18,
+      "clusters": 13,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.2778,
+      "b1_recall@10": 0.7222,
+      "b1_mrr": 0.1623,
+      "b2_recall@1": 0.0556,
+      "b2_recall@5": 0.7222,
+      "b2_recall@10": 0.8333,
+      "b2_mrr": 0.2794,
+      "b3_recall@1": 0.0,
+      "b3_recall@5": 0.6111,
+      "b3_recall@10": 0.9444,
+      "b3_mrr": 0.2861,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.6111,
+      "b4_recall@10": 0.8333,
+      "b4_mrr": 0.2825,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_harms": [
+        "CASE-HIST-JAVA-0047",
+        "CASE-HIST-JAVA-0078"
+      ],
+      "test_b4_minus_b1_mrr": {
+        "clusters": 13,
+        "observed_mean_delta": 0.1068,
+        "p_exact_two_sided": 0.06641,
+        "min_attainable_p": 0.00024,
+        "cluster_deltas": [
+          0.0769,
+          0.4286,
+          0.1393,
+          -0.0938,
+          0.0833,
+          0.4,
+          0.1587,
+          0.1786,
+          -0.2917,
+          -0.0179,
+          0.1591,
+          0.0,
+          0.1667
+        ]
+      },
+      "test_b2_minus_b1_mrr": {
+        "clusters": 13,
+        "observed_mean_delta": 0.1154,
+        "p_exact_two_sided": 0.15698,
+        "min_attainable_p": 0.00024,
+        "cluster_deltas": [
+          0.5,
+          0.1786,
+          0.075,
+          -0.119,
+          0.0833,
+          0.2333,
+          0.1809,
+          0.0952,
+          -0.332,
+          -0.1371,
+          0.2424,
+          -0.1667,
+          0.6667
+        ]
+      }
+    },
+    "primary_in_window_H50": {
+      "N": 8,
+      "clusters": 6,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.25,
+      "b1_recall@10": 0.75,
+      "b1_mrr": 0.1277,
+      "b2_recall@1": 0.0,
+      "b2_recall@5": 0.75,
+      "b2_recall@10": 0.875,
+      "b2_mrr": 0.2653,
+      "b3_recall@1": 0.0,
+      "b3_recall@5": 0.75,
+      "b3_recall@10": 0.875,
+      "b3_mrr": 0.3049,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.625,
+      "b4_recall@10": 0.75,
+      "b4_mrr": 0.2918,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0049"
+      ],
+      "fusion_harms": [
+        "CASE-HIST-JAVA-0047"
+      ],
+      "test_b4_minus_b1_mrr": {
+        "clusters": 6,
+        "observed_mean_delta": 0.1724,
+        "p_exact_two_sided": 0.125,
+        "min_attainable_p": 0.03125,
+        "cluster_deltas": [
+          0.0769,
+          0.4286,
+          0.1393,
+          -0.0938,
+          0.0833,
+          0.4
+        ]
+      },
+      "test_b2_minus_b1_mrr": {
+        "clusters": 6,
+        "observed_mean_delta": 0.1585,
+        "p_exact_two_sided": 0.125,
+        "min_attainable_p": 0.03125,
+        "cluster_deltas": [
+          0.5,
+          0.1786,
+          0.075,
+          -0.119,
+          0.0833,
+          0.2333
+        ]
+      }
+    },
+    "primary_outside_window_H50": {
+      "N": 10,
+      "clusters": 7,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.3,
+      "b1_recall@10": 0.7,
+      "b1_mrr": 0.1901,
+      "b2_recall@1": 0.1,
+      "b2_recall@5": 0.7,
+      "b2_recall@10": 0.8,
+      "b2_mrr": 0.2907,
+      "b3_recall@1": 0.0,
+      "b3_recall@5": 0.5,
+      "b3_recall@10": 1.0,
+      "b3_mrr": 0.2711,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.6,
+      "b4_recall@10": 0.9,
+      "b4_mrr": 0.275,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_harms": [
+        "CASE-HIST-JAVA-0078"
+      ],
+      "test_b4_minus_b1_mrr": {
+        "clusters": 7,
+        "observed_mean_delta": 0.0505,
+        "p_exact_two_sided": 0.375,
+        "min_attainable_p": 0.01562,
+        "cluster_deltas": [
+          0.1587,
+          0.1786,
+          -0.2917,
+          -0.0179,
+          0.1591,
+          0.0,
+          0.1667
+        ]
+      },
+      "test_b2_minus_b1_mrr": {
+        "clusters": 7,
+        "observed_mean_delta": 0.0785,
+        "p_exact_two_sided": 0.57812,
+        "min_attainable_p": 0.01562,
+        "cluster_deltas": [
+          0.1809,
+          0.0952,
+          -0.332,
+          -0.1371,
+          0.2424,
+          -0.1667,
+          0.6667
+        ]
+      }
+    },
+    "strict_rename_sensitivity": {
+      "N": 9,
+      "clusters": 5,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.1111,
+      "b1_recall@10": 0.5556,
+      "b1_mrr": 0.1052,
+      "b2_recall@1": 0.0,
+      "b2_recall@5": 0.8889,
+      "b2_recall@10": 1.0,
+      "b2_mrr": 0.2796,
+      "b3_recall@1": 0.0,
+      "b3_recall@5": 0.6667,
+      "b3_recall@10": 1.0,
+      "b3_mrr": 0.2685,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.6667,
+      "b4_recall@10": 0.8889,
+      "b4_mrr": 0.2956,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099"
+      ],
+      "fusion_harms": [],
+      "test_b4_minus_b1_mrr": {
+        "clusters": 5,
+        "observed_mean_delta": 0.206,
+        "p_exact_two_sided": 0.0625,
+        "min_attainable_p": 0.0625,
+        "cluster_deltas": [
+          0.0769,
+          0.4286,
+          0.1875,
+          0.1587,
+          0.1786
+        ]
+      },
+      "test_b2_minus_b1_mrr": {
+        "clusters": 5,
+        "observed_mean_delta": 0.2068,
+        "p_exact_two_sided": 0.0625,
+        "min_attainable_p": 0.0625,
+        "cluster_deltas": [
+          0.5,
+          0.1786,
+          0.0792,
+          0.1809,
+          0.0952
+        ]
+      }
+    },
+    "sensitivity_without_0047": {
+      "N": 17,
+      "clusters": 12,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.2941,
+      "b1_recall@10": 0.7059,
+      "b1_mrr": 0.1645,
+      "b2_recall@1": 0.0588,
+      "b2_recall@5": 0.7647,
+      "b2_recall@10": 0.8824,
+      "b2_mrr": 0.2955,
+      "b3_recall@1": 0.0,
+      "b3_recall@5": 0.6471,
+      "b3_recall@10": 1.0,
+      "b3_mrr": 0.3016,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.6471,
+      "b4_recall@10": 0.8824,
+      "b4_mrr": 0.2972,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_harms": [
+        "CASE-HIST-JAVA-0078"
+      ],
+      "test_b4_minus_b1_mrr": {
+        "clusters": 12,
+        "observed_mean_delta": 0.1235,
+        "p_exact_two_sided": 0.04297,
+        "min_attainable_p": 0.00049,
+        "cluster_deltas": [
+          0.0769,
+          0.4286,
+          0.1393,
+          0.0833,
+          0.4,
+          0.1587,
+          0.1786,
+          -0.2917,
+          -0.0179,
+          0.1591,
+          0.0,
+          0.1667
+        ]
+      },
+      "test_b2_minus_b1_mrr": {
+        "clusters": 12,
+        "observed_mean_delta": 0.135,
+        "p_exact_two_sided": 0.1167,
+        "min_attainable_p": 0.00049,
+        "cluster_deltas": [
+          0.5,
+          0.1786,
+          0.075,
+          0.0833,
+          0.2333,
+          0.1809,
+          0.0952,
+          -0.332,
+          -0.1371,
+          0.2424,
+          -0.1667,
+          0.6667
+        ]
+      }
+    },
+    "sensitivity_without_0046": {
+      "N": 17,
+      "clusters": 13,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.2941,
+      "b1_recall@10": 0.7059,
+      "b1_mrr": 0.166,
+      "b2_recall@1": 0.0588,
+      "b2_recall@5": 0.7647,
+      "b2_recall@10": 0.8235,
+      "b2_mrr": 0.2861,
+      "b3_recall@1": 0.0,
+      "b3_recall@5": 0.6471,
+      "b3_recall@10": 0.9412,
+      "b3_mrr": 0.2932,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.6471,
+      "b4_recall@10": 0.8235,
+      "b4_mrr": 0.2907,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_harms": [
+        "CASE-HIST-JAVA-0047",
+        "CASE-HIST-JAVA-0078"
+      ],
+      "test_b4_minus_b1_mrr": {
+        "clusters": 13,
+        "observed_mean_delta": 0.1105,
+        "p_exact_two_sided": 0.05811,
+        "min_attainable_p": 0.00024,
+        "cluster_deltas": [
+          0.0769,
+          0.4286,
+          0.1875,
+          -0.0938,
+          0.0833,
+          0.4,
+          0.1587,
+          0.1786,
+          -0.2917,
+          -0.0179,
+          0.1591,
+          0.0,
+          0.1667
+        ]
+      },
+      "test_b2_minus_b1_mrr": {
+        "clusters": 13,
+        "observed_mean_delta": 0.1158,
+        "p_exact_two_sided": 0.1543,
+        "min_attainable_p": 0.00024,
+        "cluster_deltas": [
+          0.5,
+          0.1786,
+          0.0792,
+          -0.119,
+          0.0833,
+          0.2333,
+          0.1809,
+          0.0952,
+          -0.332,
+          -0.1371,
+          0.2424,
+          -0.1667,
+          0.6667
+        ]
+      }
+    },
+    "sensitivity_without_0043": {
+      "N": 17,
+      "clusters": 12,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.2941,
+      "b1_recall@10": 0.7059,
+      "b1_mrr": 0.1635,
+      "b2_recall@1": 0.0588,
+      "b2_recall@5": 0.7647,
+      "b2_recall@10": 0.8824,
+      "b2_mrr": 0.2955,
+      "b3_recall@1": 0.0,
+      "b3_recall@5": 0.6471,
+      "b3_recall@10": 0.9412,
+      "b3_mrr": 0.2964,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.6471,
+      "b4_recall@10": 0.8235,
+      "b4_mrr": 0.2917,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_harms": [
+        "CASE-HIST-JAVA-0047",
+        "CASE-HIST-JAVA-0078"
+      ],
+      "test_b4_minus_b1_mrr": {
+        "clusters": 12,
+        "observed_mean_delta": 0.1171,
+        "p_exact_two_sided": 0.06055,
+        "min_attainable_p": 0.00049,
+        "cluster_deltas": [
+          0.0769,
+          0.4286,
+          0.1393,
+          -0.0938,
+          0.0833,
+          0.4,
+          0.1587,
+          0.1786,
+          -0.2917,
+          0.1591,
+          0.0,
+          0.1667
+        ]
+      },
+      "test_b2_minus_b1_mrr": {
+        "clusters": 12,
+        "observed_mean_delta": 0.1365,
+        "p_exact_two_sided": 0.11572,
+        "min_attainable_p": 0.00049,
+        "cluster_deltas": [
+          0.5,
+          0.1786,
+          0.075,
+          -0.119,
+          0.0833,
+          0.2333,
+          0.1809,
+          0.0952,
+          -0.332,
+          0.2424,
+          -0.1667,
+          0.6667
+        ]
+      }
+    },
+    "sensitivity_without_all_flagged": {
+      "N": 15,
+      "clusters": 11,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.3333,
+      "b1_recall@10": 0.6667,
+      "b1_mrr": 0.1703,
+      "b2_recall@1": 0.0667,
+      "b2_recall@5": 0.8667,
+      "b2_recall@10": 0.9333,
+      "b2_mrr": 0.3234,
+      "b3_recall@1": 0.0,
+      "b3_recall@5": 0.7333,
+      "b3_recall@10": 1.0,
+      "b3_mrr": 0.3233,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.7333,
+      "b4_recall@10": 0.8667,
+      "b4_mrr": 0.319,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0001"
+      ],
+      "fusion_harms": [
+        "CASE-HIST-JAVA-0078"
+      ],
+      "test_b4_minus_b1_mrr": {
+        "clusters": 11,
+        "observed_mean_delta": 0.1407,
+        "p_exact_two_sided": 0.03906,
+        "min_attainable_p": 0.00098,
+        "cluster_deltas": [
+          0.0769,
+          0.4286,
+          0.1875,
+          0.0833,
+          0.4,
+          0.1587,
+          0.1786,
+          -0.2917,
+          0.1591,
+          0.0,
+          0.1667
+        ]
+      },
+      "test_b2_minus_b1_mrr": {
+        "clusters": 11,
+        "observed_mean_delta": 0.1601,
+        "p_exact_two_sided": 0.0791,
+        "min_attainable_p": 0.00098,
+        "cluster_deltas": [
+          0.5,
+          0.1786,
+          0.0792,
+          0.0833,
+          0.2333,
+          0.1809,
+          0.0952,
+          -0.332,
+          0.2424,
+          -0.1667,
+          0.6667
+        ]
+      }
+    },
+    "separate_specialization": {
+      "N": 1,
+      "clusters": 1,
+      "b1_recall@1": 1.0,
+      "b1_recall@5": 1.0,
+      "b1_recall@10": 1.0,
+      "b1_mrr": 1.0,
+      "b2_recall@1": 1.0,
+      "b2_recall@5": 1.0,
+      "b2_recall@10": 1.0,
+      "b2_mrr": 1.0,
+      "b3_recall@1": 1.0,
+      "b3_recall@5": 1.0,
+      "b3_recall@10": 1.0,
+      "b3_mrr": 1.0,
+      "b4_recall@1": 1.0,
+      "b4_recall@5": 1.0,
+      "b4_recall@10": 1.0,
+      "b4_mrr": 1.0,
+      "b2_rescues": [],
+      "fusion_rescues": [],
+      "fusion_harms": []
+    },
+    "separate_split": {
+      "N": 1,
+      "clusters": 1,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 1.0,
+      "b1_recall@10": 1.0,
+      "b1_mrr": 0.5,
+      "b2_recall@1": 0.0,
+      "b2_recall@5": 0.0,
+      "b2_recall@10": 0.0,
+      "b2_mrr": 0.0014,
+      "b3_recall@1": 0.0,
+      "b3_recall@5": 1.0,
+      "b3_recall@10": 1.0,
+      "b3_mrr": 0.3333,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.0,
+      "b4_recall@10": 0.0,
+      "b4_mrr": 0.0769,
+      "b2_rescues": [],
+      "fusion_rescues": [],
+      "fusion_harms": [
+        "CASE-HIST-JAVA-0005"
+      ]
+    },
+    "separate_framework_migration": {
+      "N": 3,
+      "clusters": 1,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.0,
+      "b1_recall@10": 0.0,
+      "b1_mrr": 0.005,
+      "b2_recall@1": 0.6667,
+      "b2_recall@5": 0.6667,
+      "b2_recall@10": 0.6667,
+      "b2_mrr": 0.6667,
+      "b3_recall@1": 0.6667,
+      "b3_recall@5": 0.6667,
+      "b3_recall@10": 0.6667,
+      "b3_mrr": 0.6714,
+      "b4_recall@1": 0.0,
+      "b4_recall@5": 0.3333,
+      "b4_recall@10": 0.6667,
+      "b4_mrr": 0.1247,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0035",
+        "CASE-HIST-JAVA-0036"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0035",
+        "CASE-HIST-JAVA-0036"
+      ],
+      "fusion_harms": []
+    },
+    "excluded_query_leak": {
+      "N": 2,
+      "clusters": 1,
+      "b1_recall@1": 0.0,
+      "b1_recall@5": 0.0,
+      "b1_recall@10": 0.5,
+      "b1_mrr": 0.081,
+      "b2_recall@1": 0.5,
+      "b2_recall@5": 1.0,
+      "b2_recall@10": 1.0,
+      "b2_mrr": 0.6667,
+      "b3_recall@1": 0.5,
+      "b3_recall@5": 1.0,
+      "b3_recall@10": 1.0,
+      "b3_mrr": 0.6667,
+      "b4_recall@1": 0.5,
+      "b4_recall@5": 1.0,
+      "b4_recall@10": 1.0,
+      "b4_mrr": 0.6667,
+      "b2_rescues": [
+        "CASE-HIST-JAVA-0019"
+      ],
+      "fusion_rescues": [
+        "CASE-HIST-JAVA-0019"
+      ],
+      "fusion_harms": []
+    }
+  },
+  "window_noise_in_window_cases": [
+    {
+      "case_id": "CASE-HIST-JAVA-0013",
+      "b2_H50": 2,
+      "b4_H50": 8,
+      "b2_H400": 2,
+      "b4_H400": 13
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0049",
+      "b2_H50": 4,
+      "b4_H50": 1,
+      "b2_H400": 4,
+      "b4_H400": 2
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0044",
+      "b2_H50": 3,
+      "b4_H50": 2,
+      "b2_H400": 3,
+      "b4_H400": 2
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0045",
+      "b2_H50": 5,
+      "b4_H50": 4,
+      "b2_H400": 5,
+      "b4_H400": 4
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0046",
+      "b2_H50": 6,
+      "b4_H50": 7,
+      "b2_H400": 6,
+      "b4_H400": 7
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0047",
+      "b2_H50": 147,
+      "b4_H50": 29,
+      "b2_H400": 166,
+      "b4_H400": 32
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0105",
+      "b2_H50": 3,
+      "b4_H50": 2,
+      "b2_H400": 3,
+      "b4_H400": 3
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0101",
+      "b2_H50": 3,
+      "b4_H50": 2,
+      "b2_H400": 3,
+      "b4_H400": 2
+    }
+  ],
+  "primary_outcome": {
+    "outcome": "INCONCLUSIVE",
+    "delta_mrr_b4_b1": 0.1068,
+    "p": 0.06641,
+    "clusters": 13,
+    "fusion_rescues": 4,
+    "fusion_harms": 2
+  }
+}

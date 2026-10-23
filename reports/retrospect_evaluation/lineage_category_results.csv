@@ -1,0 +1,29 @@
+evolution_type,config_id,config_name,answerable_queries,recall_1_pct,recall_5_pct,recall_10_pct,mrr
+rename,Config_1_Structural_Only,Structural-Only (Baseline),2,0,0,0,0.0208
+rename,Config_2_Historical_Only,Historical-Only (Baseline),2,0,0,0,0.0248
+rename,Config_3_Linear_0.6_0.4,Linear Fusion 0.60S / 0.40H (Current Baseline),2,0,0,0,0.054
+rename,Config_4_Adaptive_Fusion,"Adaptive Fusion [max(s,h) + 0.25*min(s,h)]",2,0,0,0,0.0253
+rename,Config_5_Structural_MaxAnchor,"Structural Max-Anchor [max(s, 0.60*s + 0.40*h)]",2,0,0,0,0.0427
+rename,Config_6_Reciprocal_Rank_Fusion,"Reciprocal Rank Fusion (RRF k=60, 0.6S / 0.4H)",2,0,0,0,0.0435
+rename,Config_7_Residual_Historical_Boost,Residual Historical Boost [s + 0.35*h*(1-s)],2,0,0,0,0.0551
+move,Config_1_Structural_Only,Structural-Only (Baseline),1,100,100,100,1
+move,Config_2_Historical_Only,Historical-Only (Baseline),1,0,0,0,0.0014
+move,Config_3_Linear_0.6_0.4,Linear Fusion 0.60S / 0.40H (Current Baseline),1,0,0,0,0.0909
+move,Config_4_Adaptive_Fusion,"Adaptive Fusion [max(s,h) + 0.25*min(s,h)]",1,0,0,0,0.0667
+move,Config_5_Structural_MaxAnchor,"Structural Max-Anchor [max(s, 0.60*s + 0.40*h)]",1,0,0,100,0.1667
+move,Config_6_Reciprocal_Rank_Fusion,"Reciprocal Rank Fusion (RRF k=60, 0.6S / 0.4H)",1,0,0,100,0.125
+move,Config_7_Residual_Historical_Boost,Residual Historical Boost [s + 0.35*h*(1-s)],1,0,0,100,0.1667
+rewrite,Config_1_Structural_Only,Structural-Only (Baseline),9,0,11.1,11.1,0.0519
+rewrite,Config_2_Historical_Only,Historical-Only (Baseline),9,22.2,33.3,55.6,0.3181
+rewrite,Config_3_Linear_0.6_0.4,Linear Fusion 0.60S / 0.40H (Current Baseline),9,11.1,22.2,55.6,0.2156
+rewrite,Config_4_Adaptive_Fusion,"Adaptive Fusion [max(s,h) + 0.25*min(s,h)]",9,22.2,33.3,66.7,0.3226
+rewrite,Config_5_Structural_MaxAnchor,"Structural Max-Anchor [max(s, 0.60*s + 0.40*h)]",9,11.1,22.2,55.6,0.1968
+rewrite,Config_6_Reciprocal_Rank_Fusion,"Reciprocal Rank Fusion (RRF k=60, 0.6S / 0.4H)",9,11.1,22.2,66.7,0.2284
+rewrite,Config_7_Residual_Historical_Boost,Residual Historical Boost [s + 0.35*h*(1-s)],9,11.1,22.2,66.7,0.2316
+routine_modification,Config_1_Structural_Only,Structural-Only (Baseline),10,10,30,30,0.175
+routine_modification,Config_2_Historical_Only,Historical-Only (Baseline),10,30,70,70,0.4309
+routine_modification,Config_3_Linear_0.6_0.4,Linear Fusion 0.60S / 0.40H (Current Baseline),10,40,50,70,0.4692
+routine_modification,Config_4_Adaptive_Fusion,"Adaptive Fusion [max(s,h) + 0.25*min(s,h)]",10,30,60,70,0.4226
+routine_modification,Config_5_Structural_MaxAnchor,"Structural Max-Anchor [max(s, 0.60*s + 0.40*h)]",10,40,50,70,0.4692
+routine_modification,Config_6_Reciprocal_Rank_Fusion,"Reciprocal Rank Fusion (RRF k=60, 0.6S / 0.4H)",10,40,50,70,0.4692
+routine_modification,Config_7_Residual_Historical_Boost,Residual Historical Boost [s + 0.35*h*(1-s)],10,40,50,70,0.4692

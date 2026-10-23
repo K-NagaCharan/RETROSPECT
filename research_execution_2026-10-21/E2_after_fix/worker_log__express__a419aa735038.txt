@@ -1,0 +1,20 @@
+
+------------------------------------------------------------
+Processing Snapshot: express @ a419aa7350 (10 cases)
+------------------------------------------------------------
+  Checking out a419aa7350...
+  Structural Index: indexed 3109 symbols in 0.67s
+  Historical Index: analyzed 3109 historical profiles in 8.47s
+    Case js_exp_01            | B1:    1 | B2:    1 (s=0.3045) | B4:    1 | REACHABLE | EXACT_PREDECESSOR
+    Case js_exp_02            | B1:    4 | B2: null (s=0) | B4:    4 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case js_exp_03            | B1: null | B2: null (s=0) | B4: null | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case js_exp_04            | B1: null | B2: null (s=0) | B4: null | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case js_exp_05            | B1:    2 | B2: null (s=0) | B4:    4 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case js_exp_06            | B1: null | B2: null (s=0) | B4: null | REACHABLE | EXACT_PREDECESSOR
+    Case js_exp_07            | B1: null | B2: null (s=0) | B4: null | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case js_exp_08            | B1: null | B2: null (s=0) | B4: null | REACHABLE | EXACT_PREDECESSOR
+    Case js_exp_09            | B1: null | B2: null (s=0) | B4: null | NO_HISTORICAL_EVIDENCE | UNMATCHED
+    Case js_exp_10            | B1:    1 | B2: null (s=0) | B4:    1 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+  Restoring express to master...
+
+--- stderr ---

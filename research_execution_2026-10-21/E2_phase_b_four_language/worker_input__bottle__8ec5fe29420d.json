@@ -1,0 +1,216 @@
+{
+  "repoSlug": "bottle",
+  "repoPath": "D:\\clones_eval_2026-10-22\\phaseb_bottle",
+  "pinSha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+  "cases": [
+    {
+      "case_id": "py_bot_01",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "python",
+      "repository_id": "bottle",
+      "pin_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "origin_commit": "750fcbebbc90ef871c58a225ab333f3508a7a1dd",
+      "commit_distance_k": 37,
+      "query_text": "Inspect callback functions to extract parameter specifications across different Python versions",
+      "target": {
+        "symbol_name": "get_undecorated_callback",
+        "short_name": "get_undecorated_callback",
+        "file_path": "bottle.py",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "750fcbebbc90ef871c58a225ab333f3508a7a1dd",
+        "change_type": "rewrite"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "py_bot_02",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "python",
+      "repository_id": "bottle",
+      "pin_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "origin_commit": "b5631d1d8ab9dd8e7a149a83a0be9a883468ef9f",
+      "commit_distance_k": 23,
+      "query_text": "Construct reverse URLs with multiple repeating query string parameters",
+      "target": {
+        "symbol_name": "build",
+        "short_name": "build",
+        "file_path": "bottle.py",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "b5631d1d8ab9dd8e7a149a83a0be9a883468ef9f",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "py_bot_03",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "python",
+      "repository_id": "bottle",
+      "pin_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "origin_commit": "457a8fa82f2c96d18c6f5934288387ad83ac12fa",
+      "commit_distance_k": 8,
+      "query_text": "Serve static assets from disk and handle conditional cache headers and entity tags",
+      "target": {
+        "symbol_name": "static_file",
+        "short_name": "static_file",
+        "file_path": "bottle.py",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "457a8fa82f2c96d18c6f5934288387ad83ac12fa",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "py_bot_04",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "python",
+      "repository_id": "bottle",
+      "pin_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "origin_commit": "1d5b4415a4286c8bf355f6611889f8b6271230b8",
+      "commit_distance_k": 60,
+      "query_text": "Convert server adapter into human-readable text for logging and diagnostics",
+      "target": {
+        "symbol_name": "__repr__",
+        "short_name": "__repr__",
+        "file_path": "bottle.py",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "1d5b4415a4286c8bf355f6611889f8b6271230b8",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "py_bot_05",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "python",
+      "repository_id": "bottle",
+      "pin_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "origin_commit": "8804dd957f544255e71a5a4bade7bd7483ba8073",
+      "commit_distance_k": 39,
+      "query_text": "Convert raw bytes or bytearrays into decoded unicode text safely",
+      "target": {
+        "symbol_name": "touni",
+        "short_name": "touni",
+        "file_path": "bottle.py",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "8804dd957f544255e71a5a4bade7bd7483ba8073",
+        "change_type": "rewrite"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "py_bot_06",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "python",
+      "repository_id": "bottle",
+      "pin_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "origin_commit": "ba4efd126b964ecfcba926a2636ab44ce4a521aa",
+      "commit_distance_k": 4,
+      "query_text": "Declare configuration keys with fallback values in application settings dictionary",
+      "target": {
+        "symbol_name": "_define",
+        "short_name": "_define",
+        "file_path": "bottle.py",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "ba4efd126b964ecfcba926a2636ab44ce4a521aa",
+        "change_type": "signature_change"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "py_bot_07",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "python",
+      "repository_id": "bottle",
+      "pin_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "origin_commit": "7a7e544495f780ea4d5f52296fc8e26cb69b37ea",
+      "commit_distance_k": 48,
+      "query_text": "Warn users about obsolete configuration keys that will be removed in future releases",
+      "target": {
+        "symbol_name": "depr",
+        "short_name": "depr",
+        "file_path": "bottle.py",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "7a7e544495f780ea4d5f52296fc8e26cb69b37ea",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "py_bot_08",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "python",
+      "repository_id": "bottle",
+      "pin_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "origin_commit": "775fd577fcb3a5d63cf152e627a17e5baf730ed7",
+      "commit_distance_k": 1,
+      "query_text": "Build list of HTTP response headers without duplicate thread-local operations",
+      "target": {
+        "symbol_name": "headerlist",
+        "short_name": "headerlist",
+        "file_path": "bottle.py",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "775fd577fcb3a5d63cf152e627a17e5baf730ed7",
+        "change_type": "rewrite"
+      },
+      "origin_exists": true
+    }
+  ],
+  "searchHorizon": 50
+}

@@ -1,0 +1,143 @@
+{
+  "experiment": "E1_java_rename_case_study",
+  "mode": "execute",
+  "started_utc": "2026-10-21T16:35:25.817Z",
+  "configuration": {
+    "search_horizon": 50,
+    "traversal": "git log --topo-order -n <H> <pin> (merge-aware)",
+    "b1": "StructuralRetriever",
+    "b2": "HistoricalRetrievalAdapter.rankHistoricalOnly (enforceCandidateParity)",
+    "b3": "HistoricalRetrievalAdapter.fuseScores structural 0.60 / historical 0.40",
+    "b4": "fuseRRFv2 k=60 weightStructural 0.50 weightHistorical 0.50",
+    "snapshot_cache": "not used"
+  },
+  "dataset": {
+    "path": "D:\\base papers considered\\Retrospect\\research_execution_2026-10-21\\phase_b_input\\phase_b_case_study_input.json",
+    "sha256": "f01059543ebc277440e890b594a7a8403e09f2f89d6a25c9c9432018651df979",
+    "records": 34,
+    "selected": 34
+  },
+  "clones_dir": "D:\\clones_eval_2026-10-22",
+  "worker": "D:\\base papers considered\\Retrospect\\scratch\\evaluate_snapshot_worker.js",
+  "source_fingerprints": {
+    "scratch/evaluate_snapshot_worker.js": "4fe37fd558cb17df1afc002b20ed8aea768a2d0f9bc3f9f08026b5eaf48256b9",
+    "scratch/run_java_case_study.js": "22319de6ae2bd104cdf71370945b11b33c4ea276d76b5947075337583841e5e0",
+    "src/git/GitHistoryReader.js": "ace5960be5468a2f76c6edb7a07ebcb2b1f966705f5da9f9841a865fdad9672b",
+    "src/git/historyWindow.js": "5aaec3edb85391b68141a8574ee0d5ca5129200d86bf11a57dd27114baa1dec0",
+    "src/retrieval/HistoricalRetrievalAdapter.js": "374f85f33000fe8096623deb1d47b9238abdbfea3ba0ebf23354ccd17faceb4e",
+    "src/retrieval/RRFv2.js": "d1e555d9640bd95d195bf7fa151d27c8875c2e1b89bead9bf59479a4a30d6e21",
+    "src/structural/retrieval/StructuralRetriever.js": "9380234c73deebdbbc12b498ced34469cd99de6deb20daf94aabfa31cbd2fdd6",
+    "src/structural/query/QueryProcessor.js": "28ad87904fe03c46895465e9303d0f4c43166503832b9d2b1f3a3d2237684cb7",
+    "src/matcher/FunctionMatcher.js": "9d194c28abf94287f29f4b9430f3e8ddd68f51d821b33e8daf0fa719cf27f278"
+  },
+  "retrospect_git": {
+    "head": "17ea399217737f8d5fe2c32c310b69c2f812b84d",
+    "porcelain_entries": 55
+  },
+  "runtime": {
+    "node": "v22.17.1",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "snapshots": [
+    {
+      "repoSlug": "bottle",
+      "pinSha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "repoPath": "D:\\clones_eval_2026-10-22\\phaseb_bottle",
+      "case_ids": [
+        "py_bot_01",
+        "py_bot_02",
+        "py_bot_03",
+        "py_bot_04",
+        "py_bot_05",
+        "py_bot_06",
+        "py_bot_07",
+        "py_bot_08"
+      ],
+      "head_before": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "branch_before": "main",
+      "worker_input": "worker_input__bottle__8ec5fe29420d.json",
+      "worker_exit_code": 0,
+      "worker_seconds": 23.26,
+      "head_after": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "branch_after": "main",
+      "dirty_after": false,
+      "worker_output": "worker_output__bottle__8ec5fe29420d.json"
+    },
+    {
+      "repoSlug": "express",
+      "pinSha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "repoPath": "D:\\clones_eval_2026-10-22\\phaseb_express",
+      "case_ids": [
+        "js_exp_01",
+        "js_exp_02",
+        "js_exp_03",
+        "js_exp_04",
+        "js_exp_05",
+        "js_exp_06",
+        "js_exp_07",
+        "js_exp_08",
+        "js_exp_09",
+        "js_exp_10"
+      ],
+      "head_before": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "branch_before": "master",
+      "worker_input": "worker_input__express__a419aa735038.json",
+      "worker_exit_code": 0,
+      "worker_seconds": 16.752,
+      "head_after": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "branch_after": "master",
+      "dirty_after": false,
+      "worker_output": "worker_output__express__a419aa735038.json"
+    },
+    {
+      "repoSlug": "zod",
+      "pinSha": "284243fb0d6532665afdc9239188773bb624f73c",
+      "repoPath": "D:\\clones_eval_2026-10-22\\phaseb_zod",
+      "case_ids": [
+        "ts_zod_01",
+        "ts_zod_02",
+        "ts_zod_04",
+        "ts_zod_05",
+        "ts_zod_06",
+        "ts_zod_07",
+        "ts_zod_08",
+        "ts_zod_09"
+      ],
+      "head_before": "284243fb0d6532665afdc9239188773bb624f73c",
+      "branch_before": "main",
+      "worker_input": "worker_input__zod__284243fb0d65.json",
+      "worker_exit_code": 0,
+      "worker_seconds": 65.826,
+      "head_after": "284243fb0d6532665afdc9239188773bb624f73c",
+      "branch_after": "main",
+      "dirty_after": false,
+      "worker_output": "worker_output__zod__284243fb0d65.json"
+    },
+    {
+      "repoSlug": "gson",
+      "pinSha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "repoPath": "D:\\clones_eval_2026-10-22\\phaseb_gson",
+      "case_ids": [
+        "java_gsn_01",
+        "java_gsn_02",
+        "java_gsn_03",
+        "java_gsn_04",
+        "java_gsn_05",
+        "java_gsn_06",
+        "java_gsn_07",
+        "java_gsn_08"
+      ],
+      "head_before": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "branch_before": "main",
+      "worker_input": "worker_input__gson__845664ba1c30.json",
+      "worker_exit_code": 0,
+      "worker_seconds": 30.64,
+      "head_after": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "branch_after": "main",
+      "dirty_after": false,
+      "worker_output": "worker_output__gson__845664ba1c30.json"
+    }
+  ],
+  "cases_evaluated": 34,
+  "finished_utc": "2026-10-21T16:37:43.060Z"
+}

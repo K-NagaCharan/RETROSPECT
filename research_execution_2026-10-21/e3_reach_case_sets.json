@@ -1,0 +1,238 @@
+{
+  "experiment": "E3-Reach",
+  "dataset": "category_b_repaired.json (SHA-256 acb2e388...)",
+  "search_horizon": 400,
+  "max_topological_position_in_primary": 395,
+  "rejected_by_existing_audit_rule": [
+    "CASE-HIST-JAVA-0031",
+    "CASE-HIST-JAVA-0034",
+    "CASE-HIST-JAVA-0048",
+    "CASE-HIST-JAVA-0050"
+  ],
+  "exclusions": {
+    "CASE-HIST-JAVA-0005": "split 1->2; preserved for separate split/refactoring analysis",
+    "CASE-HIST-JAVA-0035": "framework migration (Netty 3->4); separate migration category",
+    "CASE-HIST-JAVA-0036": "framework migration (Netty 3->4); separate migration category",
+    "CASE-HIST-JAVA-0038": "framework migration (Netty 3->4); separate migration category",
+    "CASE-HIST-JAVA-0019": "query leaks post-rename class name (query_acceptable=N)",
+    "CASE-HIST-JAVA-0020": "query leaks post-rename class name (query_acceptable=N)",
+    "CASE-HIST-JAVA-0039": "specialization: old body (delegated to instance setter) not carried forward; new body stores value and sets constantThreshold mode; reported separately"
+  },
+  "classification": {
+    "CASE-HIST-JAVA-0013": "strict_rename (co-renamed type)",
+    "CASE-HIST-JAVA-0049": "strict_rename",
+    "CASE-HIST-JAVA-0044": "strict_rename",
+    "CASE-HIST-JAVA-0045": "strict_rename",
+    "CASE-HIST-JAVA-0096": "strict_rename",
+    "CASE-HIST-JAVA-0097": "strict_rename",
+    "CASE-HIST-JAVA-0099": "strict_rename",
+    "CASE-HIST-JAVA-0055": "strict_rename",
+    "CASE-HIST-JAVA-0058": "strict_rename",
+    "CASE-HIST-JAVA-0047": "template_split",
+    "CASE-HIST-JAVA-0043": "template_split",
+    "CASE-HIST-JAVA-0046": "transformation_competing_successor",
+    "CASE-HIST-JAVA-0105": "generalized_successor",
+    "CASE-HIST-JAVA-0101": "signature_semantic_change",
+    "CASE-HIST-JAVA-0078": "signature_change",
+    "CASE-HIST-JAVA-0001": "signature_change",
+    "CASE-HIST-JAVA-0028": "transformation",
+    "CASE-HIST-JAVA-0029": "transformation"
+  },
+  "sensitivity_flags": [
+    "CASE-HIST-JAVA-0047",
+    "CASE-HIST-JAVA-0046",
+    "CASE-HIST-JAVA-0043"
+  ],
+  "sets": {
+    "primary": {
+      "cases": 18,
+      "clusters": 13,
+      "case_ids": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0044",
+        "CASE-HIST-JAVA-0045",
+        "CASE-HIST-JAVA-0046",
+        "CASE-HIST-JAVA-0047",
+        "CASE-HIST-JAVA-0105",
+        "CASE-HIST-JAVA-0101",
+        "CASE-HIST-JAVA-0096",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0055",
+        "CASE-HIST-JAVA-0058",
+        "CASE-HIST-JAVA-0078",
+        "CASE-HIST-JAVA-0043",
+        "CASE-HIST-JAVA-0001",
+        "CASE-HIST-JAVA-0028",
+        "CASE-HIST-JAVA-0029"
+      ]
+    },
+    "primary_in_window_H50": {
+      "cases": 8,
+      "clusters": 6,
+      "case_ids": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0044",
+        "CASE-HIST-JAVA-0045",
+        "CASE-HIST-JAVA-0046",
+        "CASE-HIST-JAVA-0047",
+        "CASE-HIST-JAVA-0105",
+        "CASE-HIST-JAVA-0101"
+      ]
+    },
+    "primary_outside_window_H50": {
+      "cases": 10,
+      "clusters": 7,
+      "case_ids": [
+        "CASE-HIST-JAVA-0096",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0055",
+        "CASE-HIST-JAVA-0058",
+        "CASE-HIST-JAVA-0078",
+        "CASE-HIST-JAVA-0043",
+        "CASE-HIST-JAVA-0001",
+        "CASE-HIST-JAVA-0028",
+        "CASE-HIST-JAVA-0029"
+      ]
+    },
+    "strict_rename_sensitivity": {
+      "cases": 9,
+      "clusters": 5,
+      "case_ids": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0044",
+        "CASE-HIST-JAVA-0045",
+        "CASE-HIST-JAVA-0096",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0055",
+        "CASE-HIST-JAVA-0058"
+      ]
+    },
+    "sensitivity_without_0047": {
+      "cases": 17,
+      "clusters": 12,
+      "case_ids": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0044",
+        "CASE-HIST-JAVA-0045",
+        "CASE-HIST-JAVA-0046",
+        "CASE-HIST-JAVA-0105",
+        "CASE-HIST-JAVA-0101",
+        "CASE-HIST-JAVA-0096",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0055",
+        "CASE-HIST-JAVA-0058",
+        "CASE-HIST-JAVA-0078",
+        "CASE-HIST-JAVA-0043",
+        "CASE-HIST-JAVA-0001",
+        "CASE-HIST-JAVA-0028",
+        "CASE-HIST-JAVA-0029"
+      ]
+    },
+    "sensitivity_without_0046": {
+      "cases": 17,
+      "clusters": 13,
+      "case_ids": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0044",
+        "CASE-HIST-JAVA-0045",
+        "CASE-HIST-JAVA-0047",
+        "CASE-HIST-JAVA-0105",
+        "CASE-HIST-JAVA-0101",
+        "CASE-HIST-JAVA-0096",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0055",
+        "CASE-HIST-JAVA-0058",
+        "CASE-HIST-JAVA-0078",
+        "CASE-HIST-JAVA-0043",
+        "CASE-HIST-JAVA-0001",
+        "CASE-HIST-JAVA-0028",
+        "CASE-HIST-JAVA-0029"
+      ]
+    },
+    "sensitivity_without_0043": {
+      "cases": 17,
+      "clusters": 12,
+      "case_ids": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0044",
+        "CASE-HIST-JAVA-0045",
+        "CASE-HIST-JAVA-0046",
+        "CASE-HIST-JAVA-0047",
+        "CASE-HIST-JAVA-0105",
+        "CASE-HIST-JAVA-0101",
+        "CASE-HIST-JAVA-0096",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0055",
+        "CASE-HIST-JAVA-0058",
+        "CASE-HIST-JAVA-0078",
+        "CASE-HIST-JAVA-0001",
+        "CASE-HIST-JAVA-0028",
+        "CASE-HIST-JAVA-0029"
+      ]
+    },
+    "sensitivity_without_all_flagged": {
+      "cases": 15,
+      "clusters": 11,
+      "case_ids": [
+        "CASE-HIST-JAVA-0013",
+        "CASE-HIST-JAVA-0049",
+        "CASE-HIST-JAVA-0044",
+        "CASE-HIST-JAVA-0045",
+        "CASE-HIST-JAVA-0105",
+        "CASE-HIST-JAVA-0101",
+        "CASE-HIST-JAVA-0096",
+        "CASE-HIST-JAVA-0097",
+        "CASE-HIST-JAVA-0099",
+        "CASE-HIST-JAVA-0055",
+        "CASE-HIST-JAVA-0058",
+        "CASE-HIST-JAVA-0078",
+        "CASE-HIST-JAVA-0001",
+        "CASE-HIST-JAVA-0028",
+        "CASE-HIST-JAVA-0029"
+      ]
+    },
+    "separate_specialization": {
+      "cases": 1,
+      "clusters": 1,
+      "case_ids": [
+        "CASE-HIST-JAVA-0039"
+      ]
+    },
+    "separate_split": {
+      "cases": 1,
+      "clusters": 1,
+      "case_ids": [
+        "CASE-HIST-JAVA-0005"
+      ]
+    },
+    "separate_framework_migration": {
+      "cases": 3,
+      "clusters": 1,
+      "case_ids": [
+        "CASE-HIST-JAVA-0035",
+        "CASE-HIST-JAVA-0036",
+        "CASE-HIST-JAVA-0038"
+      ]
+    },
+    "excluded_query_leak": {
+      "cases": 2,
+      "clusters": 1,
+      "case_ids": [
+        "CASE-HIST-JAVA-0019",
+        "CASE-HIST-JAVA-0020"
+      ]
+    }
+  }
+}

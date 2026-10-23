@@ -1,0 +1,216 @@
+{
+  "repoSlug": "zod",
+  "repoPath": "D:\\clones_eval_2026-10-22\\phaseb_zod",
+  "pinSha": "284243fb0d6532665afdc9239188773bb624f73c",
+  "cases": [
+    {
+      "case_id": "ts_zod_01",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "typescript",
+      "repository_id": "zod",
+      "pin_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+      "origin_commit": "18e71c71daff6e79ab8f00a48db252ccb340da1f",
+      "commit_distance_k": 73,
+      "query_text": "Generate JSON schema representation from internal schema definition",
+      "target": {
+        "symbol_name": "processSchema",
+        "short_name": "processSchema",
+        "file_path": "packages/zod/src/v4/core/to-json-schema.ts",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "18e71c71daff6e79ab8f00a48db252ccb340da1f",
+        "change_type": "rename"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "ts_zod_02",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "typescript",
+      "repository_id": "zod",
+      "pin_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+      "origin_commit": "51caf01038d3339d7b9db94b959482c549aba2e3",
+      "commit_distance_k": 77,
+      "query_text": "Memoize schema evaluation using single prototype-backed caching utility",
+      "target": {
+        "symbol_name": "cached",
+        "short_name": "cached",
+        "file_path": "packages/zod/src/v4/core/util.ts",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "51caf01038d3339d7b9db94b959482c549aba2e3",
+        "change_type": "rename"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "ts_zod_04",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "typescript",
+      "repository_id": "zod",
+      "pin_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+      "origin_commit": "d6bc1e30ac35fe8d2dfcb2c929dc76c87b274e94",
+      "commit_distance_k": 30,
+      "query_text": "Validation rule for standard international currency codes",
+      "target": {
+        "symbol_name": "currencyCode",
+        "short_name": "currencyCode",
+        "file_path": "packages/zod/src/v4/classic/schemas.ts",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "d6bc1e30ac35fe8d2dfcb2c929dc76c87b274e94",
+        "change_type": "new_symbol"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "ts_zod_05",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "typescript",
+      "repository_id": "zod",
+      "pin_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+      "origin_commit": "56222cd1532c07bcb91b67df529cab4c0a215330",
+      "commit_distance_k": 23,
+      "query_text": "Define schema validation rules for object properties in class declarations",
+      "target": {
+        "symbol_name": "properties",
+        "short_name": "properties",
+        "file_path": "packages/zod/src/v4/classic/schemas.ts",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "56222cd1532c07bcb91b67df529cab4c0a215330",
+        "change_type": "signature_change"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "ts_zod_06",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "typescript",
+      "repository_id": "zod",
+      "pin_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+      "origin_commit": "22bed613281143efa3815fe26ab666c6c56586af",
+      "commit_distance_k": 54,
+      "query_text": "Validate international bank account numbers using mod-97 check digits",
+      "target": {
+        "symbol_name": "iban",
+        "short_name": "iban",
+        "file_path": "packages/zod/src/v4/classic/schemas.ts",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "22bed613281143efa3815fe26ab666c6c56586af",
+        "change_type": "new_symbol"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "ts_zod_07",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "typescript",
+      "repository_id": "zod",
+      "pin_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+      "origin_commit": "764ac59f1afc1a46e7ecc2d5e8e86c57b7d66164",
+      "commit_distance_k": 67,
+      "query_text": "Execute boolean schema validation and stop processing on first issue encounter",
+      "target": {
+        "symbol_name": "validate",
+        "short_name": "validate",
+        "file_path": "packages/zod/src/v4/core/parse.ts",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "764ac59f1afc1a46e7ecc2d5e8e86c57b7d66164",
+        "change_type": "rewrite"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "ts_zod_08",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "typescript",
+      "repository_id": "zod",
+      "pin_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+      "origin_commit": "e06a510b6fc1e6e28e3201fd116ca2a76212f6be",
+      "commit_distance_k": 2,
+      "query_text": "Ensure array size stays within defined limits during schema validation",
+      "target": {
+        "symbol_name": "$ZodArray",
+        "short_name": "$ZodArray",
+        "file_path": "packages/zod/src/v4/core/schemas.ts",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "e06a510b6fc1e6e28e3201fd116ca2a76212f6be",
+        "change_type": "rewrite"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "ts_zod_09",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "typescript",
+      "repository_id": "zod",
+      "pin_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+      "origin_commit": "22bed613281143efa3815fe26ab666c6c56586af",
+      "commit_distance_k": 54,
+      "query_text": "Validate payment card numbers using the Luhn checksum algorithm",
+      "target": {
+        "symbol_name": "creditCard",
+        "short_name": "creditCard",
+        "file_path": "packages/zod/src/v4/classic/schemas.ts",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "22bed613281143efa3815fe26ab666c6c56586af",
+        "change_type": "hard_negative"
+      },
+      "origin_exists": true
+    }
+  ],
+  "searchHorizon": 50
+}

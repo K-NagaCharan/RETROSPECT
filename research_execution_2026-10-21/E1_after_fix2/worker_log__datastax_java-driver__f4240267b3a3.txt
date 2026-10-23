@@ -1,0 +1,15 @@
+
+------------------------------------------------------------
+Processing Snapshot: datastax/java-driver @ f4240267b3 (5 cases)
+------------------------------------------------------------
+  Checking out f4240267b3...
+  Structural Index: indexed 5505 symbols in 1.74s
+  Historical Index: analyzed 5505 historical profiles in 22.59s
+    Case CASE-HIST-JAVA-0035  | B1: null | B2: null (s=0) | B4: null | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case CASE-HIST-JAVA-0039  | B1:    1 | B2: null (s=0) | B4:   32 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case CASE-HIST-JAVA-0036  | B1: null | B2: null (s=0) | B4: null | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case CASE-HIST-JAVA-0038  | B1:   67 | B2: null (s=0) | B4:  108 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+    Case CASE-HIST-JAVA-0034  | B1:   33 | B2: null (s=0) | B4:   58 | OUTSIDE_SEARCH_HORIZON | UNMATCHED
+  Restoring datastax/java-driver to trunk...
+
+--- stderr ---

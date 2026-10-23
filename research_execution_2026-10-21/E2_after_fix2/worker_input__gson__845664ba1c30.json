@@ -1,0 +1,216 @@
+{
+  "repoSlug": "gson",
+  "repoPath": "D:\\clones_eval_2026-10-22\\phaseb_gson",
+  "pinSha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+  "cases": [
+    {
+      "case_id": "java_gsn_01",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "java",
+      "repository_id": "gson",
+      "pin_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "origin_commit": "115bcc7e1136f50eb89c9f7ae579e340fd27d117",
+      "commit_distance_k": 4,
+      "query_text": "Remove matching elements from list without performance degradation",
+      "target": {
+        "symbol_name": "removeIf",
+        "short_name": "removeIf",
+        "file_path": "gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "115bcc7e1136f50eb89c9f7ae579e340fd27d117",
+        "change_type": "new_symbol"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "java_gsn_02",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "java",
+      "repository_id": "gson",
+      "pin_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "origin_commit": "ff521d70b2ecf2ed85dd1012081493ad7d8c0ba6",
+      "commit_distance_k": 28,
+      "query_text": "Determine whether a class field should be excluded from serialization using modifier rules",
+      "target": {
+        "symbol_name": "excludeField",
+        "short_name": "excludeField",
+        "file_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "ff521d70b2ecf2ed85dd1012081493ad7d8c0ba6",
+        "change_type": "rewrite"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "java_gsn_03",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "java",
+      "repository_id": "gson",
+      "pin_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "origin_commit": "ff521d70b2ecf2ed85dd1012081493ad7d8c0ba6",
+      "commit_distance_k": 28,
+      "query_text": "Check if field reflection modifiers include transient or static flags",
+      "target": {
+        "symbol_name": "isExcludedByModifier",
+        "short_name": "isExcludedByModifier",
+        "file_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "ff521d70b2ecf2ed85dd1012081493ad7d8c0ba6",
+        "change_type": "new_symbol"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "java_gsn_04",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "java",
+      "repository_id": "gson",
+      "pin_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "origin_commit": "61f2c646066e959f65cb99a826a2a759be42dbdd",
+      "commit_distance_k": 15,
+      "query_text": "Track current read position in character stream during JSON parsing",
+      "target": {
+        "symbol_name": "getCharacterOffset",
+        "short_name": "getCharacterOffset",
+        "file_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "61f2c646066e959f65cb99a826a2a759be42dbdd",
+        "change_type": "new_symbol"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "java_gsn_05",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "java",
+      "repository_id": "gson",
+      "pin_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "origin_commit": "5e277e42786ab6441b7dd6b1a8c34d545d132307",
+      "commit_distance_k": 36,
+      "query_text": "Calculate hash code value for JSON primitive value wrappers",
+      "target": {
+        "symbol_name": "hashCode",
+        "short_name": "hashCode",
+        "file_path": "gson/src/main/java/com/google/gson/JsonPrimitive.java",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "5e277e42786ab6441b7dd6b1a8c34d545d132307",
+        "change_type": "rewrite"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "java_gsn_06",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "java",
+      "repository_id": "gson",
+      "pin_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "origin_commit": "4b46b6ce6c175d0742a6f9f813219053fb5e36c3",
+      "commit_distance_k": 31,
+      "query_text": "Order lazily parsed numeric values in comparison operations",
+      "target": {
+        "symbol_name": "compareTo",
+        "short_name": "compareTo",
+        "file_path": "gson/src/main/java/com/google/gson/internal/LazilyParsedNumber.java",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "4b46b6ce6c175d0742a6f9f813219053fb5e36c3",
+        "change_type": "new_symbol"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "java_gsn_07",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "java",
+      "repository_id": "gson",
+      "pin_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "origin_commit": "286843d4a90a4690e5e1f438c944569b3fbfb1d2",
+      "commit_distance_k": 82,
+      "query_text": "Check that parsed floating point numbers are neither NaN nor infinite",
+      "target": {
+        "symbol_name": "checkValidFloatingPoint",
+        "short_name": "checkValidFloatingPoint",
+        "file_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "286843d4a90a4690e5e1f438c944569b3fbfb1d2",
+        "change_type": "move"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "java_gsn_08",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "java",
+      "repository_id": "gson",
+      "pin_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "origin_commit": "b3f4ca20087f9066de4c340522ff84e0558e1ad1",
+      "commit_distance_k": 14,
+      "query_text": "Update JSON path navigation pointer when reading object key names",
+      "target": {
+        "symbol_name": "promoteNameToValue",
+        "short_name": "promoteNameToValue",
+        "file_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "b3f4ca20087f9066de4c340522ff84e0558e1ad1",
+        "change_type": "rewrite"
+      },
+      "origin_exists": true
+    }
+  ],
+  "searchHorizon": 50
+}

@@ -1,0 +1,740 @@
+{
+  "config": {
+    "H": 50,
+    "traversal": "merge-aware --topo-order",
+    "clones": "D:/clones_eval_2026-10-22"
+  },
+  "snapshots": [
+    {
+      "repository": "bottle",
+      "pin": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "symbols": 1044,
+      "symbolsWithHistory": 267,
+      "commitsAnalyzed": 48
+    },
+    {
+      "repository": "express",
+      "pin": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "symbols": 3101,
+      "symbolsWithHistory": 9,
+      "commitsAnalyzed": 49
+    },
+    {
+      "repository": "zod",
+      "pin": "284243fb0d6532665afdc9239188773bb624f73c",
+      "symbols": 3675,
+      "symbolsWithHistory": 434,
+      "commitsAnalyzed": 49
+    },
+    {
+      "repository": "gson",
+      "pin": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "symbols": 4239,
+      "symbolsWithHistory": 503,
+      "commitsAnalyzed": 49
+    }
+  ],
+  "results": [
+    {
+      "case_id": "py_bot_01",
+      "language": "python",
+      "repository": "bottle",
+      "evolution_type": "rewrite",
+      "predecessor_name": "get_undecorated_callback",
+      "labelled_commit": "750fcbebbc",
+      "labelled_subject": "refactor: Switch to inspect.signature()",
+      "window_position": 38,
+      "labelled_commit_diffed": true,
+      "target": "get_undecorated_callback",
+      "target_symbols_found": 1,
+      "outcome": "WRONG_COMMIT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "Route.get_undecorated_callback",
+          "symbolType": "method",
+          "line": 533,
+          "outcome": "WRONG_COMMIT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 3,
+          "historicalNames": [
+            "get_undecorated_callback"
+          ],
+          "attachedCommits": [
+            "b1bd8bbeaf",
+            "e3d8e71107",
+            "726da5454a"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "py_bot_02",
+      "language": "python",
+      "repository": "bottle",
+      "evolution_type": "routine_modification",
+      "predecessor_name": "build",
+      "labelled_commit": "b5631d1d8a",
+      "labelled_subject": "feat: add support for repeated query params",
+      "window_position": 24,
+      "labelled_commit_diffed": true,
+      "target": "build",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "Router.build",
+          "symbolType": "method",
+          "line": 417,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 1,
+          "historicalNames": [
+            "build"
+          ],
+          "attachedCommits": [
+            "b5631d1d8a"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "py_bot_03",
+      "language": "python",
+      "repository": "bottle",
+      "evolution_type": "routine_modification",
+      "predecessor_name": "static_file",
+      "labelled_commit": "457a8fa82f",
+      "labelled_subject": "fix: etag handling in static_file()",
+      "window_position": 9,
+      "labelled_commit_diffed": true,
+      "target": "static_file",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "static_file",
+          "symbolType": "function",
+          "line": 2725,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 5,
+          "historicalNames": [
+            "static_file"
+          ],
+          "attachedCommits": [
+            "457a8fa82f",
+            "62d7e076e1",
+            "b73bd1db5b",
+            "a8086fffd7",
+            "b1bd8bbeaf"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "py_bot_05",
+      "language": "python",
+      "repository": "bottle",
+      "evolution_type": "rewrite",
+      "predecessor_name": "touni",
+      "labelled_commit": "8804dd957f",
+      "labelled_subject": "fix: touni() should recognize bytearray",
+      "window_position": 40,
+      "labelled_commit_diffed": true,
+      "target": "touni",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "touni",
+          "symbolType": "function",
+          "line": 124,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 1,
+          "historicalNames": [
+            "touni"
+          ],
+          "attachedCommits": [
+            "8804dd957f"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "py_bot_06",
+      "language": "python",
+      "repository": "bottle",
+      "evolution_type": "signature_change",
+      "predecessor_name": "_define",
+      "labelled_commit": "ba4efd126b",
+      "labelled_subject": "fix: ConfigDict meta 'validate' -> 'filter'",
+      "window_position": 5,
+      "labelled_commit_diffed": true,
+      "target": "_define",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "ConfigDict._define",
+          "symbolType": "method",
+          "line": 2429,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 1,
+          "historicalNames": [
+            "_define"
+          ],
+          "attachedCommits": [
+            "ba4efd126b"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "py_bot_07",
+      "language": "python",
+      "repository": "bottle",
+      "evolution_type": "routine_modification",
+      "predecessor_name": "depr",
+      "labelled_commit": "7a7e544495",
+      "labelled_subject": "fix: depr() should return DeprecationWarning",
+      "window_position": 49,
+      "labelled_commit_diffed": true,
+      "target": "depr",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "depr",
+          "symbolType": "function",
+          "line": 149,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 2,
+          "historicalNames": [
+            "depr"
+          ],
+          "attachedCommits": [
+            "b1bd8bbeaf",
+            "7a7e544495"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "py_bot_08",
+      "language": "python",
+      "repository": "bottle",
+      "evolution_type": "rewrite",
+      "predecessor_name": "headerlist",
+      "labelled_commit": "775fd577fc",
+      "labelled_subject": "perf: Avoid unnecessary work in BaseResponse.headerlist",
+      "window_position": 2,
+      "labelled_commit_diffed": true,
+      "target": "headerlist",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "BaseResponse.headerlist",
+          "symbolType": "method",
+          "line": 1732,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 3,
+          "historicalNames": [
+            "headerlist"
+          ],
+          "attachedCommits": [
+            "775fd577fc",
+            "3b9e865271",
+            "726da5454a"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "js_exp_01",
+      "language": "javascript",
+      "repository": "express",
+      "evolution_type": "rewrite",
+      "predecessor_name": "send",
+      "labelled_commit": "9a34acf03c",
+      "labelled_subject": "fix(res.send): preserve ETag generation with Transfer-Encoding (#7459)",
+      "window_position": 12,
+      "labelled_commit_diffed": true,
+      "target": "send",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "res.send",
+          "symbolType": "function",
+          "line": 126,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 2,
+          "historicalNames": [
+            "res.send"
+          ],
+          "attachedCommits": [
+            "9a34acf03c",
+            "18e5985b8a"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "js_exp_06",
+      "language": "javascript",
+      "repository": "express",
+      "evolution_type": "routine_modification",
+      "predecessor_name": "logerror",
+      "labelled_commit": "90ec6206d3",
+      "labelled_subject": "Improve error logging by logging full error object (#6464)",
+      "window_position": 33,
+      "labelled_commit_diffed": true,
+      "target": "logerror",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "logerror",
+          "symbolType": "function",
+          "line": 615,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 1,
+          "historicalNames": [
+            "logerror"
+          ],
+          "attachedCommits": [
+            "90ec6206d3"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "js_exp_08",
+      "language": "javascript",
+      "repository": "express",
+      "evolution_type": "routine_modification",
+      "predecessor_name": "fresh",
+      "labelled_commit": "ae6dd37680",
+      "labelled_subject": "feat: allow conditional revalidation for QUERY requests (#7366)",
+      "window_position": 25,
+      "labelled_commit_diffed": true,
+      "target": "fresh",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "req.fresh",
+          "symbolType": "getter",
+          "line": 469,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 1,
+          "historicalNames": [
+            "fresh"
+          ],
+          "attachedCommits": [
+            "ae6dd37680"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "js_exp_09",
+      "language": "javascript",
+      "repository": "express",
+      "evolution_type": "hard_negative",
+      "predecessor_name": null,
+      "labelled_commit": "91d333b4cf",
+      "labelled_subject": "docs(res.location): clean up deprecated back string references (#7406)",
+      "window_position": 21,
+      "labelled_commit_diffed": true,
+      "target": "location",
+      "target_symbols_found": 1,
+      "outcome": "NO_COMMIT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "res.location",
+          "symbolType": "function",
+          "line": 797,
+          "outcome": "NO_COMMIT",
+          "evolutionType": "unchanged",
+          "confidence": "certain",
+          "historyDepth": 0,
+          "historicalNames": [],
+          "attachedCommits": []
+        }
+      ]
+    },
+    {
+      "case_id": "ts_zod_04",
+      "language": "typescript",
+      "repository": "zod",
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "labelled_commit": "d6bc1e30ac",
+      "labelled_subject": "feat: add z.currencyCode() over a vendored ISO 4217 list, refreshed weekly by CI (#6595)",
+      "window_position": 31,
+      "labelled_commit_diffed": true,
+      "target": "currencyCode",
+      "target_symbols_found": 1,
+      "outcome": "WRONG_COMMIT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "currencyCode",
+          "symbolType": "function",
+          "line": 1092,
+          "outcome": "WRONG_COMMIT",
+          "evolutionType": "uncertain",
+          "confidence": "uncertain",
+          "historyDepth": 1,
+          "historicalNames": [],
+          "attachedCommits": [
+            "cc4cd4ee9c"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "ts_zod_05",
+      "language": "typescript",
+      "repository": "zod",
+      "evolution_type": "signature_change",
+      "predecessor_name": "properties",
+      "labelled_commit": "56222cd153",
+      "labelled_subject": "feat(instanceof): key the .properties() shape off the instance type (#6600)",
+      "window_position": 24,
+      "labelled_commit_diffed": true,
+      "target": "properties",
+      "target_symbols_found": 2,
+      "outcome": "CORRECT",
+      "ambiguous_target": true,
+      "per_symbol": [
+        {
+          "symbol": "ZodInstanceOf.properties",
+          "symbolType": "method",
+          "line": 2845,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 2,
+          "historicalNames": [
+            "properties"
+          ],
+          "attachedCommits": [
+            "56222cd153",
+            "413cce9a8c"
+          ]
+        },
+        {
+          "symbol": "properties",
+          "symbolType": "method",
+          "line": 2856,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 2,
+          "historicalNames": [
+            "properties"
+          ],
+          "attachedCommits": [
+            "56222cd153",
+            "413cce9a8c"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "ts_zod_08",
+      "language": "typescript",
+      "repository": "zod",
+      "evolution_type": "rewrite",
+      "predecessor_name": "$ZodArray",
+      "labelled_commit": "e06a510b6f",
+      "labelled_subject": "fix(v4): check array, set and map size bounds before parsing elements (#6652)",
+      "window_position": 3,
+      "labelled_commit_diffed": true,
+      "target": "$ZodArray",
+      "target_symbols_found": 2,
+      "outcome": "CORRECT",
+      "ambiguous_target": true,
+      "per_symbol": [
+        {
+          "symbol": "$ZodArray",
+          "symbolType": "interface",
+          "line": 1845,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 1,
+          "historicalNames": [
+            "$ZodArray"
+          ],
+          "attachedCommits": [
+            "e06a510b6f"
+          ]
+        },
+        {
+          "symbol": "$ZodArray",
+          "symbolType": "arrow_function",
+          "line": 1882,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 1,
+          "historicalNames": [
+            "$ZodArray"
+          ],
+          "attachedCommits": [
+            "e06a510b6f"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "java_gsn_01",
+      "language": "java",
+      "repository": "gson",
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "labelled_commit": "115bcc7e11",
+      "labelled_subject": "Avoid quadratic removeIf in JsonArray list views (#3115)",
+      "window_position": 5,
+      "labelled_commit_diffed": true,
+      "target": "removeIf",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "com.google.gson.internal.NonNullElementWrapperList.removeIf",
+          "symbolType": "method",
+          "line": 98,
+          "outcome": "CORRECT",
+          "evolutionType": "uncertain",
+          "confidence": "uncertain",
+          "historyDepth": 1,
+          "historicalNames": [],
+          "attachedCommits": [
+            "115bcc7e11"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "java_gsn_02",
+      "language": "java",
+      "repository": "gson",
+      "evolution_type": "rewrite",
+      "predecessor_name": "excludeField",
+      "labelled_commit": "ff521d70b2",
+      "labelled_subject": "refactor: improve code quality by enforcing final on utility classes and extracting complex methods (#3049)",
+      "window_position": 29,
+      "labelled_commit_diffed": true,
+      "target": "excludeField",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "com.google.gson.internal.Excluder.excludeField",
+          "symbolType": "method",
+          "line": 158,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 1,
+          "historicalNames": [
+            "excludeField"
+          ],
+          "attachedCommits": [
+            "ff521d70b2"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "java_gsn_03",
+      "language": "java",
+      "repository": "gson",
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "labelled_commit": "ff521d70b2",
+      "labelled_subject": "refactor: improve code quality by enforcing final on utility classes and extracting complex methods (#3049)",
+      "window_position": 29,
+      "labelled_commit_diffed": true,
+      "target": "isExcludedByModifier",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "com.google.gson.internal.Excluder.isExcludedByModifier",
+          "symbolType": "method",
+          "line": 167,
+          "outcome": "CORRECT",
+          "evolutionType": "uncertain",
+          "confidence": "uncertain",
+          "historyDepth": 1,
+          "historicalNames": [],
+          "attachedCommits": [
+            "ff521d70b2"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "java_gsn_04",
+      "language": "java",
+      "repository": "gson",
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "labelled_commit": "61f2c64606",
+      "labelled_subject": "Add JsonReader.getCharacterOffset to track stream position (#3102)",
+      "window_position": 16,
+      "labelled_commit_diffed": true,
+      "target": "getCharacterOffset",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "com.google.gson.stream.JsonReader.getCharacterOffset",
+          "symbolType": "method",
+          "line": 1859,
+          "outcome": "CORRECT",
+          "evolutionType": "uncertain",
+          "confidence": "uncertain",
+          "historyDepth": 1,
+          "historicalNames": [],
+          "attachedCommits": [
+            "61f2c64606"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "java_gsn_05",
+      "language": "java",
+      "repository": "gson",
+      "evolution_type": "rewrite",
+      "predecessor_name": "hashCode",
+      "labelled_commit": "5e277e4278",
+      "labelled_subject": "Fix JsonPrimitive.hashCode to honor the equals/hashCode contract (#992) (#3059)",
+      "window_position": 37,
+      "labelled_commit_diffed": true,
+      "target": "hashCode",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "com.google.gson.JsonPrimitive.hashCode",
+          "symbolType": "method",
+          "line": 260,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 1,
+          "historicalNames": [
+            "hashCode"
+          ],
+          "attachedCommits": [
+            "5e277e4278"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "java_gsn_06",
+      "language": "java",
+      "repository": "gson",
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "labelled_commit": "4b46b6ce6c",
+      "labelled_subject": "Make `LazilyParsedNumber` implement `Comparable`. (#3076)",
+      "window_position": 32,
+      "labelled_commit_diffed": true,
+      "target": "compareTo",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "com.google.gson.internal.LazilyParsedNumber.compareTo",
+          "symbolType": "method",
+          "line": 100,
+          "outcome": "CORRECT",
+          "evolutionType": "uncertain",
+          "confidence": "uncertain",
+          "historyDepth": 1,
+          "historicalNames": [],
+          "attachedCommits": [
+            "4b46b6ce6c"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "java_gsn_08",
+      "language": "java",
+      "repository": "gson",
+      "evolution_type": "rewrite",
+      "predecessor_name": "promoteNameToValue",
+      "labelled_commit": "b3f4ca2008",
+      "labelled_subject": "Update JSON path after promoteNameToValue (#3098)",
+      "window_position": 15,
+      "labelled_commit_diffed": true,
+      "target": "promoteNameToValue",
+      "target_symbols_found": 1,
+      "outcome": "CORRECT",
+      "ambiguous_target": false,
+      "per_symbol": [
+        {
+          "symbol": "com.google.gson.stream.JsonReader.promoteNameToValue",
+          "symbolType": "method",
+          "line": 1993,
+          "outcome": "CORRECT",
+          "evolutionType": "modified",
+          "confidence": "certain",
+          "historyDepth": 2,
+          "historicalNames": [
+            "promoteNameToValue"
+          ],
+          "attachedCommits": [
+            "b3f4ca2008",
+            "a3b9f1f737"
+          ]
+        }
+      ]
+    }
+  ]
+}

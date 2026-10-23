@@ -1,0 +1,204 @@
+case_id,field_name,original_value,repaired_value,evidence_rationale,verification_status
+CASE-HIST-JAVA-0105,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0105,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0105,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0105-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0105,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0105,hard_negatives,MISSING,"[setMinNetworkSize, setMinOneWayNetworkSize]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0105,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:top_k, comb:top_k}",Structured retrieval expectations parameterized by commit distance (40).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0105,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0035,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0035,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0035,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0035-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0035,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0035,hard_negatives,MISSING,"[initAsync, operationComplete]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0035,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (628).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0035,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0096,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0096,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0096,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0096-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0096,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0096,hard_negatives,MISSING,"[createSingleEdge, getEdgeRef]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0096,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (64).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0096,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0099,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0099,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0099,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0099-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0099,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0099,hard_negatives,MISSING,"[getBaseGraph, getNodes]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0099,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (64).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0099,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0058,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0058,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0058,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0058-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0058,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0058,hard_negatives,MISSING,"[initCollections, initFrom]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0058,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (259).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0058,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0029,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0029,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0029,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0029-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0029,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0029,hard_negatives,MISSING,"[compareOrder, getDepth]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0029,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (391).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0029,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0101,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0101,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0101,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0101-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0101,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0101,hard_negatives,MISSING,"[loadGraph, setEncodingManager]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0101,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (62).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0101,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0020,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0020,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0020,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0020-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0020,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0020,hard_negatives,MISSING,"[getLineNo, getColumnNo]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0020,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:top_k, comb:top_k}",Structured retrieval expectations parameterized by commit distance (36).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0020,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0055,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0055,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0055,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0055-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0055,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0055,hard_negatives,MISSING,"[initCollections, setApproximation]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0055,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (259).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0055,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0097,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0097,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0097,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0097-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0097,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0097,hard_negatives,MISSING,"[lookup, execute]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0097,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (64).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0097,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0078,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0078,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0078,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0078-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0078,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0078,hard_negatives,MISSING,"[loadGraph, setEncodingManager]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0078,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (157).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0078,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0047,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0047,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0047,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0047-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0047,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0047,hard_negatives,MISSING,"[handleFlushComplete, opCode]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0047,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:top_k, comb:top_k}",Structured retrieval expectations parameterized by commit distance (40).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0047,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0005,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0005,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0005,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0005-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0005,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0005,hard_negatives,MISSING,"[getDefaultTokens, getAcceptableTokens]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0005,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:top_k, comb:top_k}",Structured retrieval expectations parameterized by commit distance (47).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0005,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0039,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0039,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0039,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0039-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0039,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0039,hard_negatives,MISSING,"[builder, getSlowQueryLatencyThresholdMillis]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0039,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (568).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0039,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0043,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0043,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0043,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0043-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0043,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0043,hard_negatives,MISSING,"[queueFrame, transferFrom]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0043,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (59).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0043,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0044,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0044,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0044,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0044-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0044,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0044,hard_negatives,MISSING,"[getHeaders, getStatusCode]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0044,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (52).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0044,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0019,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0019,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0019,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0019-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0019,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0019,hard_negatives,MISSING,"[getLineNo, getColumnNo]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0019,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:top_k, comb:top_k}",Structured retrieval expectations parameterized by commit distance (36).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0019,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0013,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0013,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0013,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0013-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0013,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0013,hard_negatives,MISSING,"[getDefaultTokens, getAcceptableTokens]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0013,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:top_k, comb:top_k}",Structured retrieval expectations parameterized by commit distance (36).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0013,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0036,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0036,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0036,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0036-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0036,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0036,hard_negatives,MISSING,"[initAsync, operationComplete]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0036,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (628).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0036,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0046,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0046,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0046,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0046-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0046,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0046,hard_negatives,MISSING,"[getType, isFinalFragment]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0046,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (52).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0046,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0048,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0048,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0048,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0048-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0048,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0048,hard_negatives,MISSING,"[close, isOpen]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0048,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:top_k, comb:top_k}",Structured retrieval expectations parameterized by commit distance (23).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0048,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0045,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0045,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0045,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0045-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0045,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0045,hard_negatives,MISSING,"[transferTo, decrementFrameDataRemaining]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0045,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (52).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0045,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0001,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0001,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0001,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0001-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0001,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0001,hard_negatives,MISSING,"[setLegalComment, setFormat]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0001,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (187).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0001,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0050,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0050,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0050,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0050-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0050,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0050,hard_negatives,MISSING,"[isOpen, isFreed]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0050,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:top_k, comb:top_k}",Structured retrieval expectations parameterized by commit distance (23).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0050,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0049,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0049,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0049,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0049-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0049,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0049,hard_negatives,MISSING,"[close, isOpen]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0049,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:top_k, comb:top_k}",Structured retrieval expectations parameterized by commit distance (23).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0049,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0028,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0028,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0028,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0028-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0028,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0028,hard_negatives,MISSING,"[compareOrder, compareCommonAncestorChildrenOrder]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0028,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (394).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0028,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0031,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0031,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0031,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0031-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0031,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0031,hard_negatives,MISSING,"[checkIndentation, getSuggestedChildIndent]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0031,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (372).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0031,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0038,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0038,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0038,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0038-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0038,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0038,hard_negatives,MISSING,"[initAsync, operationComplete]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0038,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (628).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0038,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0034,query.query_type,historical_symbol,refactoring_successor,Query explicitly asks to locate current implementation of historical method.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0034,query.authoring_method,refactoring_miner_oracle,synthetic_templated,Query constructed from standardized oracle template.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0034,target_symbols[0].symbol_id,MISSING,SYM-HIST-JAVA-0034-TARGET,Assigned standardized unique symbol ID.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0034,historical_evidence.change_type,rename_method,rename,Normalized RefactoringMiner 'rename_method' to schema enum 'rename'.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0034,hard_negatives,MISSING,"[fromData, getColumnDefinitions]",Extracted authentic declared methods from target file AST at pin commit.,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0034,expected_retrieval_behavior,"{status: hypothesis, unverified}","{struct:top_k, hist:unretrieved, comb:top_k}",Structured retrieval expectations parameterized by commit distance (637).,REPAIRED_AND_CONFORMANT
+CASE-HIST-JAVA-0034,adjudication.status,verified,provisional,Downgraded from verified to provisional pending manual human adjudication.,REPAIRED_AND_CONFORMANT

@@ -1,0 +1,10 @@
+measurement_phase,operation_type,target_entity,candidate_count_or_depth,duration_ms,measurement_unit,notes
+Phase B Indexing,Full Structural AST Indexing,bottle (Python),1044 symbols,412,total ms,AST symbol extraction and topology building
+Phase B Indexing,Full Structural AST Indexing,express (JavaScript),3101 symbols,1285,total ms,AST symbol extraction
+Phase B Indexing,Full Structural AST Indexing,zod (TypeScript),3531 symbols,2410,total ms,AST symbol extraction
+Phase B Indexing,Full Structural AST Indexing,gson (Java),4239 symbols,3150,total ms,AST symbol extraction
+Phase 2 Retrieval,Per-Query Retrieval,Config A (Lexical-Only),11915 pool,26.75,avg ms/query,40 queries evaluated (Sanitized V2)
+Phase 2 Retrieval,Per-Query Retrieval,Config B (Structural-Only B1),11915 pool,132.15,avg ms/query,40 queries evaluated (Sanitized V2)
+Phase 2 Retrieval,Per-Query Retrieval,Config C (Historical-Only B2),11915 pool,27.95,avg ms/query,40 queries evaluated (Sanitized V2)
+Phase 2 Retrieval,Per-Query Retrieval,Config D (Linear Fusion 0.6S/0.4H),11915 pool,139.47,avg ms/query,40 queries evaluated (Sanitized V2)
+Phase 2 Retrieval,Per-Query Retrieval,Config E (Transitive Lineage Stitching),11915 pool,174.55,avg ms/query,Chains through multi-hop renames and moves

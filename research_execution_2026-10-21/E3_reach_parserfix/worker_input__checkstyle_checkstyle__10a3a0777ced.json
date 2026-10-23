@@ -1,0 +1,360 @@
+{
+  "repoSlug": "checkstyle/checkstyle",
+  "repoPath": "D:\\clones_eval_2026-10-22\\checkstyle",
+  "pinSha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+  "cases": [
+    {
+      "case_id": "CASE-HIST-JAVA-0029",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "checkstyle/checkstyle",
+      "pin_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+      "origin_commit": "e122e7efb43838fbc25cfb3440c2a0187ed24b8e",
+      "commit_distance_k": 391,
+      "query_text": "Locate current implementation corresponding to historical method getCommonAncestorChildren in ElementNode",
+      "target": {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.compareCommonAncestorChildrenOrder",
+        "short_name": "compareCommonAncestorChildrenOrder",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "line_range": [
+          117,
+          127
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.compareOrder",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'compareOrder' is declared in the same class (ElementNode) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.getDepth",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getDepth' in ElementNode provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0029",
+        "old_symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.getCommonAncestorChildren",
+        "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "origin_commit_sha": "e122e7efb43838fbc25cfb3440c2a0187ed24b8e",
+        "change_type": "rename",
+        "commit_message": "e122e7efb4 minor: refactoring in compareOrder method of ElementNode",
+        "diff_summary": "Rename Method private getCommonAncestorChildren(other NodeInfo) : ElementNode[] renamed to private compareCommonAncestorChildrenOrder(first NodeInfo, second NodeInfo) : int in class com.puppycrawl.tools.checkstyle.xpath.ElementNode"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0020",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "checkstyle/checkstyle",
+      "pin_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+      "origin_commit": "24ead56cf961060af6e08399e999440ef6945f84",
+      "commit_distance_k": 36,
+      "query_text": "Locate current implementation corresponding to historical method getCustomMessage in Violation",
+      "target": {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getCustomViolation",
+        "short_name": "getCustomViolation",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "line_range": [
+          485,
+          492
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getLineNo",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getLineNo' is declared in the same class (Violation) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getColumnNo",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getColumnNo' in Violation provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0020",
+        "old_symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getCustomMessage",
+        "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "origin_commit_sha": "24ead56cf961060af6e08399e999440ef6945f84",
+        "change_type": "rename",
+        "commit_message": "24ead56cf9 Issue #4465: Rename LocalizedMessage to Violation",
+        "diff_summary": "Rename Method private getCustomMessage() : String renamed to private getCustomViolation() : String in class com.puppycrawl.tools.checkstyle.api.Violation"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0005",
+      "dataset_source": "category_b_repaired",
+      "cohort": "in_policy_primary",
+      "language": "Java",
+      "repository_id": "checkstyle/checkstyle",
+      "pin_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+      "origin_commit": "ff424ff8e19c976cf3deed74fe20cb8dc56a894b",
+      "commit_distance_k": 47,
+      "query_text": "Locate current implementation corresponding to historical method isEmptyCtorBlock in WhitespaceAroundCheck",
+      "target": {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck.isEmptyCtorBlockCheckedFromRcurly",
+        "short_name": "isEmptyCtorBlockCheckedFromRcurly",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java",
+        "line_range": [
+          898,
+          906
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck.getDefaultTokens",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getDefaultTokens' is declared in the same class (WhitespaceAroundCheck) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck.getAcceptableTokens",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getAcceptableTokens' in WhitespaceAroundCheck provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0005",
+        "old_symbol_name": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck.isEmptyCtorBlock",
+        "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/whitespace/WhitespaceAroundCheck.java",
+        "origin_commit_sha": "ff424ff8e19c976cf3deed74fe20cb8dc56a894b",
+        "change_type": "rename",
+        "commit_message": "ff424ff8e1 Issue #8237: fixing no whitespace violation in empty constructors",
+        "diff_summary": "Rename Method private isEmptyCtorBlock(ast DetailAST, parentType int) : boolean renamed to private isEmptyCtorBlockCheckedFromRcurly(ast DetailAST) : boolean in class com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0019",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "checkstyle/checkstyle",
+      "pin_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+      "origin_commit": "24ead56cf961060af6e08399e999440ef6945f84",
+      "commit_distance_k": 36,
+      "query_text": "Locate current implementation corresponding to historical method getMessage in Violation",
+      "target": {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getViolation",
+        "short_name": "getViolation",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "line_range": [
+          454,
+          477
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getLineNo",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getLineNo' is declared in the same class (Violation) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getColumnNo",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getColumnNo' in Violation provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0019",
+        "old_symbol_name": "com.puppycrawl.tools.checkstyle.api.Violation.getMessage",
+        "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/Violation.java",
+        "origin_commit_sha": "24ead56cf961060af6e08399e999440ef6945f84",
+        "change_type": "rename",
+        "commit_message": "24ead56cf9 Issue #4465: Rename LocalizedMessage to Violation",
+        "diff_summary": "Rename Method public getMessage() : String renamed to public getViolation() : String in class com.puppycrawl.tools.checkstyle.api.Violation"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0013",
+      "dataset_source": "category_b_repaired",
+      "cohort": "in_policy_primary",
+      "language": "Java",
+      "repository_id": "checkstyle/checkstyle",
+      "pin_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+      "origin_commit": "24ead56cf961060af6e08399e999440ef6945f84",
+      "commit_distance_k": 36,
+      "query_text": "Locate current implementation corresponding to historical method getMessages in AbstractCheck",
+      "target": {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.api.AbstractCheck.getViolations",
+        "short_name": "getViolations",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/AbstractCheck.java",
+        "line_range": [
+          113,
+          115
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.api.AbstractCheck.getDefaultTokens",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/AbstractCheck.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getDefaultTokens' is declared in the same class (AbstractCheck) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.api.AbstractCheck.getAcceptableTokens",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/AbstractCheck.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getAcceptableTokens' in AbstractCheck provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0013",
+        "old_symbol_name": "com.puppycrawl.tools.checkstyle.api.AbstractCheck.getMessages",
+        "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/api/AbstractCheck.java",
+        "origin_commit_sha": "24ead56cf961060af6e08399e999440ef6945f84",
+        "change_type": "rename",
+        "commit_message": "24ead56cf9 Issue #4465: Rename LocalizedMessage to Violation",
+        "diff_summary": "Rename Method public getMessages() : SortedSet<LocalizedMessage> renamed to public getViolations() : SortedSet<Violation> in class com.puppycrawl.tools.checkstyle.api.AbstractCheck"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0001",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "checkstyle/checkstyle",
+      "pin_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+      "origin_commit": "ebef3bd59fdc2c97587a67bc59d57af6ecbb9072",
+      "commit_distance_k": 187,
+      "query_text": "Locate current implementation corresponding to historical method isLegalComment in TrailingCommentCheck",
+      "target": {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck.isLegalSingleLineComment",
+        "short_name": "isLegalSingleLineComment",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/TrailingCommentCheck.java",
+        "line_range": [
+          275,
+          286
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck.setLegalComment",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/TrailingCommentCheck.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'setLegalComment' is declared in the same class (TrailingCommentCheck) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck.setFormat",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/TrailingCommentCheck.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'setFormat' in TrailingCommentCheck provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0001",
+        "old_symbol_name": "com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck.isLegalComment",
+        "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/TrailingCommentCheck.java",
+        "origin_commit_sha": "ebef3bd59fdc2c97587a67bc59d57af6ecbb9072",
+        "change_type": "rename",
+        "commit_message": "ebef3bd59f Issue #9010: Refactor TrailingComment implementation to be completely AST based",
+        "diff_summary": "Rename Method private isLegalComment(comment TextBlock) : boolean renamed to private isLegalSingleLineComment(comment String) : boolean in class com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0028",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "Java",
+      "repository_id": "checkstyle/checkstyle",
+      "pin_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+      "origin_commit": "3576d1ac2da7c7ee37f296599a99eaaf224e7b7c",
+      "commit_distance_k": 394,
+      "query_text": "Locate current implementation corresponding to historical method createTextAttribute in ElementNode",
+      "target": {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.getAttributeNode",
+        "short_name": "getAttributeNode",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "line_range": [
+          406,
+          417
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.compareOrder",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'compareOrder' is declared in the same class (ElementNode) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.compareCommonAncestorChildrenOrder",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'compareCommonAncestorChildrenOrder' in ElementNode provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0028",
+        "old_symbol_name": "com.puppycrawl.tools.checkstyle.xpath.ElementNode.createTextAttribute",
+        "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/xpath/ElementNode.java",
+        "origin_commit_sha": "3576d1ac2da7c7ee37f296599a99eaaf224e7b7c",
+        "change_type": "rename",
+        "commit_message": "3576d1ac2d Issue #5820: fix stack overflow error in ElementNode ctor",
+        "diff_summary": "Rename Method private createTextAttribute() : void renamed to private getAttributeNode() : AttributeNode in class com.puppycrawl.tools.checkstyle.xpath.ElementNode"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "CASE-HIST-JAVA-0031",
+      "dataset_source": "category_b_repaired",
+      "cohort": "quarantined_negative",
+      "language": "Java",
+      "repository_id": "checkstyle/checkstyle",
+      "pin_sha": "10a3a0777ced10983ebe6266c998957c10dba8f0",
+      "origin_commit": "9c45c84d9386519d1669b8980d98c84efd152c9e",
+      "commit_distance_k": 372,
+      "query_text": "Locate current implementation corresponding to historical method isNewKeywordFollowedByAssign in NewHandler",
+      "target": {
+        "symbol_name": "com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler.doesChainedMethodNeedsLineWrapping",
+        "short_name": "doesChainedMethodNeedsLineWrapping",
+        "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/indentation/NewHandler.java",
+        "line_range": [
+          128,
+          136
+        ]
+      },
+      "hard_negatives": [
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler.checkIndentation",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/indentation/NewHandler.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'checkIndentation' is declared in the same class (NewHandler) alongside the target, sharing class-level context and token representations."
+        },
+        {
+          "symbol_name": "com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler.getSuggestedChildIndent",
+          "file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/indentation/NewHandler.java",
+          "negative_type": "same_file_adjacent",
+          "distractor_rationale": "Method 'getSuggestedChildIndent' in NewHandler provides an alternative functional API in the same class, serving as a lexical and structural distractor."
+        }
+      ],
+      "historical_evidence": {
+        "lineage_event_id": "EVT-HIST-JAVA-0031",
+        "old_symbol_name": "com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler.isNewKeywordFollowedByAssign",
+        "old_file_path": "src/main/java/com/puppycrawl/tools/checkstyle/checks/indentation/NewHandler.java",
+        "origin_commit_sha": "9c45c84d9386519d1669b8980d98c84efd152c9e",
+        "change_type": "rename",
+        "commit_message": "9c45c84d93 Issue #9071: New keyword throwing unresolvable indentation errors",
+        "diff_summary": "Rename Method private isNewKeywordFollowedByAssign() : boolean renamed to private doesChainedMethodNeedsLineWrapping() : boolean in class com.puppycrawl.tools.checkstyle.checks.indentation.NewHandler"
+      },
+      "origin_exists": true
+    }
+  ],
+  "searchHorizon": 400
+}

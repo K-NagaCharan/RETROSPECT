@@ -1,0 +1,35 @@
+query_id,repository,evolution_type,target_symbol,b1_structural_rank,b2_historical_rank,b3_rrf_rank,b1_r10_hit,b2_r10_hit,b3_r10_hit,interaction_category,interaction_detail
+q_py_bot_01,bottle,rewrite,get_undecorated_callback,0,1,8,0,1,1,HISTORICAL_RESCUE,B1 failed top-10 (0); historical signal rescued target into top-10 (8).
+q_py_bot_02,bottle,routine_modification,build,0,4,6,0,1,1,HISTORICAL_RESCUE,B1 failed top-10 (0); historical signal rescued target into top-10 (6).
+q_py_bot_03,bottle,routine_modification,static_file,1,1,1,1,1,1,MUTUAL_SUCCESS,"All three systems placed target in top-10 (B1=1, B2=1, B3=1)."
+q_py_bot_04,bottle,routine_modification,__repr__,0,5,6,0,1,1,HISTORICAL_RESCUE,B1 failed top-10 (0); historical signal rescued target into top-10 (6).
+q_py_bot_05,bottle,rewrite,touni,0,402,402,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=402, B3=402)."
+q_py_bot_06,bottle,signature_change,_define,0,41,42,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=41, B3=42)."
+q_py_bot_07,bottle,routine_modification,depr,0,66,66,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=66, B3=66)."
+q_py_bot_08,bottle,rewrite,headerlist,0,2,8,0,1,1,HISTORICAL_RESCUE,B1 failed top-10 (0); historical signal rescued target into top-10 (8).
+q_js_exp_01,express,rewrite,send,0,1,1,0,1,1,HISTORICAL_RESCUE,B1 failed top-10 (0); historical signal rescued target into top-10 (1).
+q_js_exp_02,express,routine_modification,render,4,1,1,1,1,1,MUTUAL_SUCCESS,"All three systems placed target in top-10 (B1=4, B2=1, B3=1)."
+q_js_exp_03,express,routine_modification,listen,0,3,3,0,1,1,HISTORICAL_RESCUE,B1 failed top-10 (0); historical signal rescued target into top-10 (3).
+q_js_exp_04,express,signature_change,acceptsLanguages,1,2,1,1,1,1,MUTUAL_SUCCESS,"All three systems placed target in top-10 (B1=1, B2=2, B3=1)."
+q_js_exp_05,express,routine_modification,redirect,2,2,1,1,1,1,MUTUAL_SUCCESS,"All three systems placed target in top-10 (B1=2, B2=2, B3=1)."
+q_js_exp_06,express,routine_modification,logerror,0,188,188,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=188, B3=188)."
+q_js_exp_07,express,routine_modification,protocol,0,1,1,0,1,1,HISTORICAL_RESCUE,B1 failed top-10 (0); historical signal rescued target into top-10 (1).
+q_js_exp_08,express,routine_modification,fresh,0,193,193,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=193, B3=193)."
+q_js_exp_09,express,hard_negative,location,0,229,230,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=229, B3=230)."
+q_js_exp_10,express,signature_change,acceptsCharsets,1,2,1,1,1,1,MUTUAL_SUCCESS,"All three systems placed target in top-10 (B1=1, B2=2, B3=1)."
+q_ts_zod_01,zod,rename,processSchema,24,513,23,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=24, B2=513, B3=23)."
+q_ts_zod_02,zod,rename,cached,0,21,23,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=21, B3=23)."
+q_ts_zod_04,zod,new_symbol,currencyCode,1,470,1,1,0,1,STRUCTURAL_SUCCESS_RETAINED,B1 succeeded (1) while B2 failed (470); RRF successfully retained target in top-10 (1).
+q_ts_zod_05,zod,signature_change,properties,4,347,7,1,0,1,STRUCTURAL_SUCCESS_RETAINED,B1 succeeded (4) while B2 failed (347); RRF successfully retained target in top-10 (7).
+q_ts_zod_06,zod,new_symbol,iban,0,333,335,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=333, B3=335)."
+q_ts_zod_07,zod,rewrite,validate,3,356,7,1,0,1,STRUCTURAL_SUCCESS_RETAINED,B1 succeeded (3) while B2 failed (356); RRF successfully retained target in top-10 (7).
+q_ts_zod_08,zod,rewrite,$ZodArray,0,2687,2688,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=2687, B3=2688)."
+q_ts_zod_09,zod,hard_negative,creditCard,0,1703,1703,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=1703, B3=1703)."
+q_java_gsn_01,gson,new_symbol,removeIf,13,117,7,0,0,1,SYNERGISTIC_RESCUE,"Both baselines failed top-10 (B1=13, B2=117); RRF fusion placed target in top-10 (7)."
+q_java_gsn_02,gson,rewrite,excludeField,15,14,2,0,0,1,SYNERGISTIC_RESCUE,"Both baselines failed top-10 (B1=15, B2=14); RRF fusion placed target in top-10 (2)."
+q_java_gsn_03,gson,new_symbol,isExcludedByModifier,0,493,508,0,0,0,MUTUAL_FAILURE,"Neither baseline nor fusion retrieved target in top-10 (B1=0, B2=493, B3=508)."
+q_java_gsn_04,gson,new_symbol,getCharacterOffset,2,16,3,1,0,1,STRUCTURAL_SUCCESS_RETAINED,B1 succeeded (2) while B2 failed (16); RRF successfully retained target in top-10 (3).
+q_java_gsn_05,gson,rewrite,hashCode,15,7,7,0,1,1,HISTORICAL_RESCUE,B1 failed top-10 (15); historical signal rescued target into top-10 (7).
+q_java_gsn_06,gson,new_symbol,compareTo,1,63,4,1,0,1,STRUCTURAL_SUCCESS_RETAINED,B1 succeeded (1) while B2 failed (63); RRF successfully retained target in top-10 (4).
+q_java_gsn_07,gson,move,checkValidFloatingPoint,1,740,8,1,0,1,STRUCTURAL_SUCCESS_RETAINED,B1 succeeded (1) while B2 failed (740); RRF successfully retained target in top-10 (8).
+q_java_gsn_08,gson,rewrite,promoteNameToValue,0,7,59,0,1,0,HISTORICAL_REGRESSION,"B2 placed target in top-10 (7), but structural absence/noise degraded target out of top-10 (59)."

@@ -1,0 +1,18 @@
+
+------------------------------------------------------------
+Processing Snapshot: checkstyle/checkstyle @ 10a3a0777c (8 cases)
+------------------------------------------------------------
+  Checking out 10a3a0777c...
+  Structural Index: indexed 24978 symbols in 10.48s
+  Historical Index: analyzed 24978 historical profiles in 330.72s
+    Case CASE-HIST-JAVA-0029  | B1:    3 | B2:    1 (s=0.6767) | B4:    2 | REACHABLE | RENAMED_SYMBOL
+    Case CASE-HIST-JAVA-0020  | B1:    8 | B2:    1 (s=0.5514) | B4:    1 | REACHABLE | RENAMED_SYMBOL
+    Case CASE-HIST-JAVA-0005  | B1:    2 | B2:  712 (s=0.1199) | B4:   13 | REACHABLE | AMBIGUOUS
+    Case CASE-HIST-JAVA-0019  | B1:   27 | B2:    3 (s=0.56) | B4:    3 | REACHABLE | RENAMED_SYMBOL
+    Case CASE-HIST-JAVA-0013  | B1: null | B2:    2 (s=0.5471) | B4:   13 | REACHABLE | RENAMED_SYMBOL
+    Case CASE-HIST-JAVA-0001  | B1:   11 | B2:    3 (s=0.595) | B4:    4 | REACHABLE | RENAMED_SYMBOL
+    Case CASE-HIST-JAVA-0028  | B1:    2 | B2:    3 (s=0.606) | B4:    2 | REACHABLE | RENAMED_SYMBOL
+    Case CASE-HIST-JAVA-0031  | B1:    6 | B2:  112 (s=0.1199) | B4:    6 | REACHABLE | AMBIGUOUS
+  Restoring checkstyle/checkstyle to master...
+
+--- stderr ---

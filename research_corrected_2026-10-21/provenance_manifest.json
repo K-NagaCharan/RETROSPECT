@@ -1,0 +1,166 @@
+{
+  "generated_utc": "2026-10-21T14:35:42+00:00",
+  "builder": {
+    "path": "D:\\base papers considered\\Retrospect\\research_corrected_2026-10-21\\build_corrected_reporting.py",
+    "sha256": "4d5c83a2228090b627a17ef2fc32411b82667799a865a1fa0e2e21c3bba3ce87",
+    "python": "3.13.5",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "inputs": {
+    "audit_per_case": {
+      "path": "D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_audit_2026-10-20/corrected_per_case_results.csv",
+      "sha256": "b5f64311470bd477699d7787b3f363292f0f0c428418131e30686ac5830c0923",
+      "bytes": 22555
+    },
+    "audit_reconciliation": {
+      "path": "D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_audit_2026-10-20/case_reconciliation.csv",
+      "sha256": "4562b279679bcd4f480495cc5883d751176b5d80f7ea1ec26d931297a5302749",
+      "bytes": 14934
+    },
+    "audit_aggregates": {
+      "path": "D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_audit_2026-10-20/corrected_results.csv",
+      "sha256": "a4b5286b262e197a686380b203cd65d5c9a572d8f17dea4fc0c21bcf3a58137a",
+      "bytes": 1236
+    },
+    "audit_statistics": {
+      "path": "D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_audit_2026-10-20/corrected_statistical_analysis.csv",
+      "sha256": "45357242628bbd3463098802cac803b4ee1b4cf468367b0166869c323d287f18",
+      "bytes": 1639
+    },
+    "audit_config": {
+      "path": "D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_audit_2026-10-20/corrected_experiment_config.json",
+      "sha256": "0a2c6ab643f980f3a606535aea18b5fb8bf1f275eb73193cf51fc32337c6ede0",
+      "bytes": 3976
+    },
+    "raw_per_case": {
+      "path": "D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_merge_aware_2026-10-20/per_case_results.csv",
+      "sha256": "3a32e1e82b7de3ddf8143f6a8bc0fbc9ffcfdd9e7d6707e4d1e39d69e174c008",
+      "bytes": 21198
+    },
+    "raw_config": {
+      "path": "D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_merge_aware_2026-10-20/experiment_config.json",
+      "sha256": "b7a14710f0d1be57d8378091f521e13e47d7ac4daf16ef8e87e0d2a05b1d0b83",
+      "bytes": 2741
+    },
+    "raw_results_json": {
+      "path": "D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_merge_aware_2026-10-20/results.json",
+      "sha256": "5678defd4435c63bd80d0e0e832330a4d7719ec93216e64caac67e2e27318ddf",
+      "bytes": 170067
+    },
+    "catb_audit": {
+      "path": "D:/base papers considered/Test creation/audits/category_b_java_audit_2026-10-19/case_audit_results.csv",
+      "sha256": "0703f6f8649b1f82665cd453c4c1dc78bbecbd02636ca4acddf933bf67e1bc8b",
+      "bytes": 16851
+    },
+    "quarantine_manifest": {
+      "path": "D:/base papers considered/Test creation/datasets/exploratory_java_v1_reconciled/quarantine_manifest.json",
+      "sha256": "c438d95791b4afbec2b936de6c60545639c5bf40a1613289cc9984b586db84b3",
+      "bytes": 4850
+    },
+    "catb_dataset": {
+      "path": "D:/base papers considered/Test creation/results/category_b_benchmark_repair_2026-10-19/category_b_repaired.json",
+      "sha256": "acb2e388bf510b719e56f82263dec349c2258194fc66dac4e54038de5fe2b94f",
+      "bytes": 99410
+    },
+    "research_per_case_superseded": {
+      "path": "D:/base papers considered/Retrospect/research/per_case_empirical_results.csv",
+      "sha256": "0ea5ba08b49c7700d2d1020865eab7678951fd658231f1122da7615594a25dea",
+      "bytes": 17237
+    },
+    "research_aggregate_superseded": {
+      "path": "D:/base papers considered/Retrospect/research/aggregate_empirical_metrics.csv",
+      "sha256": "5e5b27cecfeb33faff5333f9841bfd354e9fada071a6e92000db355c786e5ebe",
+      "bytes": 1056
+    },
+    "research_generator_superseded": {
+      "path": "D:/base papers considered/Retrospect/scratch/generate_research_deliverables.js",
+      "sha256": "59d3a50763b66f7e2a0eabe7d6dd740696eee25a68aa3fb7027a2c0db1f3614f",
+      "bytes": 10869
+    }
+  },
+  "experiment_configuration": {
+    "source": "D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_merge_aware_2026-10-20/experiment_config.json",
+    "search_horizon": 50,
+    "git_traversal_flags": [
+      "--topo-order",
+      "-n",
+      "50"
+    ],
+    "retrieval_configurations": {
+      "b1_structural": {
+        "name": "Structural Only (B1)",
+        "weights": {
+          "structural": 1,
+          "historical": 0
+        },
+        "algorithm": "AST StructuralRetriever (exact identifier matching + subtoken BM25 + test discount)"
+      },
+      "b2_historical": {
+        "name": "Historical Only (B2)",
+        "weights": {
+          "structural": 0,
+          "historical": 1
+        },
+        "algorithm": "HistoricalRetrievalAdapter (historical name matching + commit message + diff terms)"
+      },
+      "b3_linear": {
+        "name": "Linear Fusion (B3)",
+        "weights": {
+          "structural": 0.6,
+          "historical": 0.4
+        },
+        "algorithm": "Active-channel normalized linear fusion"
+      },
+      "b4_rrf": {
+        "name": "Channel-Balanced Cormack RRF-v2 (B4)",
+        "k": 60,
+        "weights": {
+          "structural": 0.5,
+          "historical": 0.5
+        },
+        "algorithm": "Channel-balanced Reciprocal Rank Fusion v2 with zero-signal channel gating"
+      }
+    },
+    "source_fingerprints_note": "Source-file SHA-256 fingerprints for the run are recorded in D:/base papers considered/Test creation/experiments/final_multirepo_evaluation_audit_2026-10-20/reproducibility_manifest.txt; the run is not reproducible from any git commit."
+  },
+  "read_only_git_commands_per_case": [
+    "git -C D:/clones/<repo> cat-file -e <sha>^{commit}",
+    "git -C D:/clones/<repo> merge-base --is-ancestor <origin> <pin>",
+    "git -C D:/clones/<repo> rev-list --count <origin>..<pin>",
+    "git -C D:/clones/<repo> log --format=%H --topo-order -n 50 <pin>",
+    "git -C D:/clones/<repo> rev-parse <origin>"
+  ],
+  "case_counts": {
+    "in_reconciliation": 46,
+    "evaluated_in_run": 45,
+    "excluded_before_evaluation": 1,
+    "by_role": {
+      "primary_verified_rename_in_window": 5,
+      "needs_review_reachable": 6,
+      "needs_review_unreachable": 14,
+      "rejected_ground_truth": 4,
+      "current_code_control": 3,
+      "anchor_origin_is_pin": 2,
+      "cross_language_origin_verified": 3,
+      "cross_language_origin_missing": 8
+    },
+    "eligible_for_historical_claims": 33,
+    "ineligible_for_historical_claims": 12
+  },
+  "role_definitions": {
+    "primary_verified_rename_in_window": "Category B case with audit_status=verified in the Oct 19 Category B audit (automated, not human-adjudicated).",
+    "needs_review_reachable": "Category B audit_status=needs_review and origin commit within the first 50 commits of git log --topo-order <pin>.",
+    "needs_review_unreachable": "Category B audit_status=needs_review and origin commit is an ancestor of the pin but NOT within the first 50 topo-ordered commits.",
+    "rejected_ground_truth": "Category B audit_status=rejected (quarantine_manifest.json). The audit directs exclusion from all evaluation runs. Ranks are reported for transparency only; not negatives, not positives.",
+    "current_code_control": "Structural pilot case with no origin commit (no refactoring event). Measures fusion effect on current-code queries only.",
+    "anchor_origin_is_pin": "Historical pilot case whose recorded origin commit equals the pin (k=0); there is no prior history to traverse.",
+    "cross_language_origin_verified": "Cross-language pilot case whose origin commit exists in the clone and is an ancestor of the pin.",
+    "cross_language_origin_missing": "Cross-language pilot case whose recorded origin commit does not exist in the full clone. Provenance invalid: not usable as historical-retrieval evidence. Not inferred to be outside the horizon."
+  },
+  "outputs": {
+    "per_case_results_corrected.csv": "42525891e417b6f96619c32a981814eb10fd81cd1721c67adc8f62f839b054f2",
+    "results_by_group.csv": "6bd9103d3a3b0acb107326406e7ed67016b80bba8c6aca61e76867d1162b9231",
+    "results.json": "16b7c712438c970c17e7a7c34cc502e79af3477892643c8b8a17ff6d9fd697ef",
+    "corrected_experiment_report.md": "0069ca961e227c2fdf16de97fa4379cb92ac72eadeb90f735b4d7671f4a53af1"
+  }
+}

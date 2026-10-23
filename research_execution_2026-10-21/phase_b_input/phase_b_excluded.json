@@ -1,0 +1,44 @@
+[
+  {
+    "case_id": "py_bot_09",
+    "repository": "bottle",
+    "language": "python",
+    "evolution_type": "hard_negative",
+    "reason": "no ground-truth target (has_answer=False or target missing); not rankable"
+  },
+  {
+    "case_id": "py_bot_10",
+    "repository": "bottle",
+    "language": "python",
+    "evolution_type": "hard_negative",
+    "reason": "no ground-truth target (has_answer=False or target missing); not rankable"
+  },
+  {
+    "case_id": "ts_zod_03",
+    "repository": "zod",
+    "language": "typescript",
+    "evolution_type": "hard_negative",
+    "reason": "no ground-truth target (has_answer=False or target missing); not rankable"
+  },
+  {
+    "case_id": "ts_zod_10",
+    "repository": "zod",
+    "language": "typescript",
+    "evolution_type": "hard_negative",
+    "reason": "no ground-truth target (has_answer=False or target missing); not rankable"
+  },
+  {
+    "case_id": "java_gsn_09",
+    "repository": "gson",
+    "language": "java",
+    "evolution_type": "hard_negative",
+    "reason": "no ground-truth target (has_answer=False or target missing); not rankable"
+  },
+  {
+    "case_id": "java_gsn_10",
+    "repository": "gson",
+    "language": "java",
+    "evolution_type": "hard_negative",
+    "reason": "no ground-truth target (has_answer=False or target missing); not rankable"
+  }
+]

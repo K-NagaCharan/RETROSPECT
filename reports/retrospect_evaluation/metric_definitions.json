@@ -1,0 +1,94 @@
+{
+  "metrics": [
+    {
+      "name": "Recall@K",
+      "formula": "Count(rank(q) <= K for q in Q_ans) / |Q_ans|",
+      "cutoffs": [
+        1,
+        5,
+        10,
+        20,
+        50,
+        100
+      ],
+      "denominator": "|Q_ans| (Total answerable queries with valid target)",
+      "valid_range": "[0.0, 1.0]",
+      "interpretation": "Fraction of answerable queries where the correct modern target symbol appears in the top-K returned ranking.",
+      "status": "MEASURED_DIAGNOSTIC"
+    },
+    {
+      "name": "Mean Reciprocal Rank (MRR@K)",
+      "formula": "(1 / |Q_ans|) * sum(1 / rank(q) for q in Q_ans where 1 <= rank(q) <= K, else 0)",
+      "cutoffs": [
+        10,
+        100
+      ],
+      "denominator": "|Q_ans|",
+      "valid_range": "[0.0, 1.0]",
+      "interpretation": "Harmonic mean rank of the target symbol. Heavily rewards placing target at rank 1 (1.0), rank 2 (0.5), or rank 3 (0.33).",
+      "status": "MEASURED_DIAGNOSTIC"
+    },
+    {
+      "name": "Precision@5",
+      "formula": "Count(target in top 5) * 0.20 / |Q_ans|",
+      "cutoffs": [
+        5
+      ],
+      "denominator": "|Q_ans|",
+      "valid_range": "[0.0, 0.20] for single-target queries",
+      "interpretation": "Precision under single-target assumption where retrieving 1 target in top-5 yields 0.20.",
+      "status": "MEASURED_DIAGNOSTIC"
+    },
+    {
+      "name": "False Positive Rate (FPR) / False Answer Rate on Category D",
+      "formula": "Count(top1.score >= tau for q in Q_neg) / |Q_neg|",
+      "cutoffs": [
+        1
+      ],
+      "denominator": "|Q_neg| (Unanswerable queries targeting deleted symbols)",
+      "valid_range": "[0.0, 1.0]",
+      "interpretation": "Fraction of unanswerable queries incorrectly answered because top candidate score exceeded abstention threshold.",
+      "status": "MEASURED_WITH_FLAW_DISCLOSED (Historic 0.20 threshold invalidated; calibrated dev threshold reported)"
+    },
+    {
+      "name": "No-Result Accuracy",
+      "formula": "1.0 - FPR",
+      "cutoffs": [
+        1
+      ],
+      "denominator": "|Q_neg|",
+      "valid_range": "[0.0, 1.0]",
+      "interpretation": "Fraction of unanswerable queries correctly rejected/abstained.",
+      "status": "MEASURED_WITH_FLAW_DISCLOSED"
+    },
+    {
+      "name": "Predecessor Identification Accuracy",
+      "formula": "Count(predecessor_name in top1.historyProfile.historicalNames) / |Q_pred|",
+      "cutoffs": [
+        1
+      ],
+      "denominator": "|Q_pred| (Answerable queries with verified historical predecessor)",
+      "valid_range": "[0.0, 1.0]",
+      "interpretation": "Accuracy with which top-ranked symbol explicitly retains the correct predecessor identifier in its lineage profile.",
+      "status": "MEASURED_DIAGNOSTIC (Phase 2 V2: 7.4% accuracy)"
+    },
+    {
+      "name": "Average Retrieval Latency",
+      "formula": "(1 / |Q|) * sum(query_time_ms)",
+      "cutoffs": null,
+      "denominator": "|Q|",
+      "valid_range": "[0.0, inf) milliseconds",
+      "interpretation": "Mean end-to-end latency to process query and rank candidate pool.",
+      "status": "MEASURED_DIAGNOSTIC (26.75ms - 174.55ms across configurations)"
+    },
+    {
+      "name": "Downstream Context Utility (LLM Pass Rate)",
+      "formula": "Count(LLM answer correct given retrieved context) / |Q_downstream|",
+      "cutoffs": null,
+      "denominator": "|Q_downstream|",
+      "valid_range": "[0.0, 1.0]",
+      "interpretation": "Proportion of downstream coding tasks solved by an LLM when provided top-K retrieved symbols as context.",
+      "status": "NOT_YET_MEASURED (Protocol approval and downstream task execution required)"
+    }
+  ]
+}

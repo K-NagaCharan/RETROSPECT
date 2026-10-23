@@ -1,0 +1,18 @@
+
+------------------------------------------------------------
+Processing Snapshot: bottle @ 8ec5fe2942 (8 cases)
+------------------------------------------------------------
+  Checking out 8ec5fe2942...
+  Structural Index: indexed 1044 symbols in 0.37s
+  Historical Index: analyzed 1044 historical profiles in 17.33s
+    Case py_bot_01            | B1: null | B2:    1 (s=0.2544) | B4:    6 | REACHABLE | EXACT_PREDECESSOR
+    Case py_bot_02            | B1:    3 | B2:    1 (s=0.156) | B4:    1 | REACHABLE | EXACT_PREDECESSOR
+    Case py_bot_03            | B1:    1 | B2:    1 (s=0.229) | B4:    1 | REACHABLE | EXACT_PREDECESSOR
+    Case py_bot_04            | B1: null | B2: null (s=0) | B4: null | OUTSIDE_SEARCH_HORIZON | EXACT_PREDECESSOR
+    Case py_bot_05            | B1: null | B2:    7 (s=0.113) | B4:    9 | REACHABLE | EXACT_PREDECESSOR
+    Case py_bot_06            | B1: null | B2:   38 (s=0.1075) | B4:   39 | REACHABLE | EXACT_PREDECESSOR
+    Case py_bot_07            | B1: null | B2:   84 (s=0.0589) | B4:   84 | REACHABLE | EXACT_PREDECESSOR
+    Case py_bot_08            | B1: null | B2:    2 (s=0.318) | B4:    8 | REACHABLE | EXACT_PREDECESSOR
+  Restoring bottle to main...
+
+--- stderr ---

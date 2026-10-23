@@ -1,0 +1,886 @@
+[
+  {
+    "case_id": "py_bot_01",
+    "repository_id": "bottle",
+    "target_language": "python",
+    "source_revision_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+    "query": {
+      "query_text": "Inspect callback functions to extract parameter specifications across different Python versions"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "get_undecorated_callback",
+        "file_path": "bottle.py"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "750fcbebbc90ef871c58a225ab333f3508a7a1dd",
+      "change_type": "rewrite"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rewrite",
+      "predecessor_name": "get_undecorated_callback",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "py_bot_02",
+    "repository_id": "bottle",
+    "target_language": "python",
+    "source_revision_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+    "query": {
+      "query_text": "Construct reverse URLs with multiple repeating query string parameters"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "build",
+        "file_path": "bottle.py"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "b5631d1d8ab9dd8e7a149a83a0be9a883468ef9f",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "build",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "py_bot_03",
+    "repository_id": "bottle",
+    "target_language": "python",
+    "source_revision_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+    "query": {
+      "query_text": "Serve static assets from disk and handle conditional cache headers and entity tags"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "static_file",
+        "file_path": "bottle.py"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "457a8fa82f2c96d18c6f5934288387ad83ac12fa",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "static_file",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "py_bot_04",
+    "repository_id": "bottle",
+    "target_language": "python",
+    "source_revision_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+    "query": {
+      "query_text": "Convert server adapter into human-readable text for logging and diagnostics"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "__repr__",
+        "file_path": "bottle.py"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "1d5b4415a4286c8bf355f6611889f8b6271230b8",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "__repr__",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "py_bot_05",
+    "repository_id": "bottle",
+    "target_language": "python",
+    "source_revision_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+    "query": {
+      "query_text": "Convert raw bytes or bytearrays into decoded unicode text safely"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "touni",
+        "file_path": "bottle.py"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "8804dd957f544255e71a5a4bade7bd7483ba8073",
+      "change_type": "rewrite"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rewrite",
+      "predecessor_name": "touni",
+      "is_valid_predecessor": true,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "py_bot_06",
+    "repository_id": "bottle",
+    "target_language": "python",
+    "source_revision_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+    "query": {
+      "query_text": "Declare configuration keys with fallback values in application settings dictionary"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "_define",
+        "file_path": "bottle.py"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "ba4efd126b964ecfcba926a2636ab44ce4a521aa",
+      "change_type": "signature_change"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "signature_change",
+      "predecessor_name": "_define",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "py_bot_07",
+    "repository_id": "bottle",
+    "target_language": "python",
+    "source_revision_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+    "query": {
+      "query_text": "Warn users about obsolete configuration keys that will be removed in future releases"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "depr",
+        "file_path": "bottle.py"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "7a7e544495f780ea4d5f52296fc8e26cb69b37ea",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "depr",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "py_bot_08",
+    "repository_id": "bottle",
+    "target_language": "python",
+    "source_revision_sha": "8ec5fe29420d14998c0d86885083983eaea8b839",
+    "query": {
+      "query_text": "Build list of HTTP response headers without duplicate thread-local operations"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "headerlist",
+        "file_path": "bottle.py"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "775fd577fcb3a5d63cf152e627a17e5baf730ed7",
+      "change_type": "rewrite"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rewrite",
+      "predecessor_name": "headerlist",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "js_exp_01",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Dispatch HTTP response body handling byte streams and content length calculation"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "send",
+        "file_path": "lib/response.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "9a34acf03cb818ff3f8bc40e44176e277a25cbb9",
+      "change_type": "rewrite"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rewrite",
+      "predecessor_name": "send",
+      "is_valid_predecessor": true,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "js_exp_02",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Compile and output view template when custom rendering options are omitted"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "render",
+        "file_path": "lib/application.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "c9ecf7b658388ccaa2b8470aabad92aabde458a2",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "render",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "js_exp_03",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Start HTTP server listener and forward port arguments using sliced arguments"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "listen",
+        "file_path": "lib/application.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "54af593b739ea44674e4a445efa15b8024f093da",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "listen",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "js_exp_04",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Match requested language preferences against supported server locales"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "acceptsLanguages",
+        "file_path": "lib/request.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "3dc96995df98cd76d8d31f3b6825401f25899be0",
+      "change_type": "signature_change"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "signature_change",
+      "predecessor_name": "acceptsLanguages",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "js_exp_05",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Send HTTP redirect with fallback HTML content for legacy clients"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "redirect",
+        "file_path": "lib/response.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "9a3f7ff4120d7920a2d13809ff5ae78648c8a3d6",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "redirect",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "js_exp_06",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Print uncaught exception details during request processing failure"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "logerror",
+        "file_path": "lib/application.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "90ec6206d3275fdf2787f2028c6f48a2d92e8042",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "logerror",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "js_exp_07",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Determine if incoming connection is running over HTTPS or plain HTTP"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "protocol",
+        "file_path": "lib/request.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "89f198c6a50ab0cb65b741767791dd1b647e3b2c",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "protocol",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "js_exp_08",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Determine if client HTTP cache validator matches the current resource representation"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "fresh",
+        "file_path": "lib/request.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "ae6dd37680e3a00618d6c8a3e522f0ee4eeba1a4",
+      "change_type": "routine_modification"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "routine_modification",
+      "predecessor_name": "fresh",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "js_exp_09",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Set target redirection header without actually terminating the response"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "location",
+        "file_path": "lib/response.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "91d333b4cfea158c9798d32e6665d36bd8e37c3d",
+      "change_type": "hard_negative"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "hard_negative",
+      "predecessor_name": null,
+      "is_valid_predecessor": false,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "js_exp_10",
+    "repository_id": "express",
+    "target_language": "javascript",
+    "source_revision_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+    "query": {
+      "query_text": "Negotiate client character encoding against acceptable charset headers"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "acceptsCharsets",
+        "file_path": "lib/request.js"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "6cd404eb28ff861180f435b3015f8d0c8c0b44d4",
+      "change_type": "signature_change"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "signature_change",
+      "predecessor_name": "acceptsCharsets",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "ts_zod_01",
+    "repository_id": "zod",
+    "target_language": "typescript",
+    "source_revision_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+    "query": {
+      "query_text": "Generate JSON schema representation from internal schema definition"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "processSchema",
+        "file_path": "packages/zod/src/v4/core/to-json-schema.ts"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "18e71c71daff6e79ab8f00a48db252ccb340da1f",
+      "change_type": "rename"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rename",
+      "predecessor_name": "process",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "ts_zod_02",
+    "repository_id": "zod",
+    "target_language": "typescript",
+    "source_revision_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+    "query": {
+      "query_text": "Memoize schema evaluation using single prototype-backed caching utility"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "cached",
+        "file_path": "packages/zod/src/v4/core/util.ts"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "51caf01038d3339d7b9db94b959482c549aba2e3",
+      "change_type": "rename"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rename",
+      "predecessor_name": "cachedInternal",
+      "is_valid_predecessor": true,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "ts_zod_04",
+    "repository_id": "zod",
+    "target_language": "typescript",
+    "source_revision_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+    "query": {
+      "query_text": "Validation rule for standard international currency codes"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "currencyCode",
+        "file_path": "packages/zod/src/v4/classic/schemas.ts"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "d6bc1e30ac35fe8d2dfcb2c929dc76c87b274e94",
+      "change_type": "new_symbol"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "is_valid_predecessor": false,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "ts_zod_05",
+    "repository_id": "zod",
+    "target_language": "typescript",
+    "source_revision_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+    "query": {
+      "query_text": "Define schema validation rules for object properties in class declarations"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "properties",
+        "file_path": "packages/zod/src/v4/classic/schemas.ts"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "56222cd1532c07bcb91b67df529cab4c0a215330",
+      "change_type": "signature_change"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "signature_change",
+      "predecessor_name": "properties",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "ts_zod_06",
+    "repository_id": "zod",
+    "target_language": "typescript",
+    "source_revision_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+    "query": {
+      "query_text": "Validate international bank account numbers using mod-97 check digits"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "iban",
+        "file_path": "packages/zod/src/v4/classic/schemas.ts"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "22bed613281143efa3815fe26ab666c6c56586af",
+      "change_type": "new_symbol"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "is_valid_predecessor": false,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "ts_zod_07",
+    "repository_id": "zod",
+    "target_language": "typescript",
+    "source_revision_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+    "query": {
+      "query_text": "Execute boolean schema validation and stop processing on first issue encounter"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "validate",
+        "file_path": "packages/zod/src/v4/core/parse.ts"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "764ac59f1afc1a46e7ecc2d5e8e86c57b7d66164",
+      "change_type": "rewrite"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rewrite",
+      "predecessor_name": "validate",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "ts_zod_08",
+    "repository_id": "zod",
+    "target_language": "typescript",
+    "source_revision_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+    "query": {
+      "query_text": "Ensure array size stays within defined limits during schema validation"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "$ZodArray",
+        "file_path": "packages/zod/src/v4/core/schemas.ts"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "e06a510b6fc1e6e28e3201fd116ca2a76212f6be",
+      "change_type": "rewrite"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rewrite",
+      "predecessor_name": "$ZodArray",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "ts_zod_09",
+    "repository_id": "zod",
+    "target_language": "typescript",
+    "source_revision_sha": "284243fb0d6532665afdc9239188773bb624f73c",
+    "query": {
+      "query_text": "Validate payment card numbers using the Luhn checksum algorithm"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "creditCard",
+        "file_path": "packages/zod/src/v4/classic/schemas.ts"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "22bed613281143efa3815fe26ab666c6c56586af",
+      "change_type": "hard_negative"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "hard_negative",
+      "predecessor_name": null,
+      "is_valid_predecessor": false,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "java_gsn_01",
+    "repository_id": "gson",
+    "target_language": "java",
+    "source_revision_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+    "query": {
+      "query_text": "Remove matching elements from list without performance degradation"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "removeIf",
+        "file_path": "gson/src/main/java/com/google/gson/internal/NonNullElementWrapperList.java"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "115bcc7e1136f50eb89c9f7ae579e340fd27d117",
+      "change_type": "new_symbol"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "is_valid_predecessor": false,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "java_gsn_02",
+    "repository_id": "gson",
+    "target_language": "java",
+    "source_revision_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+    "query": {
+      "query_text": "Determine whether a class field should be excluded from serialization using modifier rules"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "excludeField",
+        "file_path": "gson/src/main/java/com/google/gson/internal/Excluder.java"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "ff521d70b2ecf2ed85dd1012081493ad7d8c0ba6",
+      "change_type": "rewrite"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rewrite",
+      "predecessor_name": "excludeField",
+      "is_valid_predecessor": true,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "java_gsn_03",
+    "repository_id": "gson",
+    "target_language": "java",
+    "source_revision_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+    "query": {
+      "query_text": "Check if field reflection modifiers include transient or static flags"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "isExcludedByModifier",
+        "file_path": "gson/src/main/java/com/google/gson/internal/Excluder.java"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "ff521d70b2ecf2ed85dd1012081493ad7d8c0ba6",
+      "change_type": "new_symbol"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "is_valid_predecessor": false,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": false
+    }
+  },
+  {
+    "case_id": "java_gsn_04",
+    "repository_id": "gson",
+    "target_language": "java",
+    "source_revision_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+    "query": {
+      "query_text": "Track current read position in character stream during JSON parsing"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "getCharacterOffset",
+        "file_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "61f2c646066e959f65cb99a826a2a759be42dbdd",
+      "change_type": "new_symbol"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "is_valid_predecessor": false,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "java_gsn_05",
+    "repository_id": "gson",
+    "target_language": "java",
+    "source_revision_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+    "query": {
+      "query_text": "Calculate hash code value for JSON primitive value wrappers"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "hashCode",
+        "file_path": "gson/src/main/java/com/google/gson/JsonPrimitive.java"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "5e277e42786ab6441b7dd6b1a8c34d545d132307",
+      "change_type": "rewrite"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rewrite",
+      "predecessor_name": "hashCode",
+      "is_valid_predecessor": true,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "java_gsn_06",
+    "repository_id": "gson",
+    "target_language": "java",
+    "source_revision_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+    "query": {
+      "query_text": "Order lazily parsed numeric values in comparison operations"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "compareTo",
+        "file_path": "gson/src/main/java/com/google/gson/internal/LazilyParsedNumber.java"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "4b46b6ce6c175d0742a6f9f813219053fb5e36c3",
+      "change_type": "new_symbol"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "new_symbol",
+      "predecessor_name": null,
+      "is_valid_predecessor": false,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "java_gsn_07",
+    "repository_id": "gson",
+    "target_language": "java",
+    "source_revision_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+    "query": {
+      "query_text": "Check that parsed floating point numbers are neither NaN nor infinite"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "checkValidFloatingPoint",
+        "file_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "286843d4a90a4690e5e1f438c944569b3fbfb1d2",
+      "change_type": "move"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "move",
+      "predecessor_name": "checkValidFloatingPoint",
+      "is_valid_predecessor": true,
+      "verification_status": "verified_with_corrections",
+      "query_was_sanitized": true
+    }
+  },
+  {
+    "case_id": "java_gsn_08",
+    "repository_id": "gson",
+    "target_language": "java",
+    "source_revision_sha": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+    "query": {
+      "query_text": "Update JSON path navigation pointer when reading object key names"
+    },
+    "target_symbols": [
+      {
+        "symbol_name": "promoteNameToValue",
+        "file_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java"
+      }
+    ],
+    "historical_evidence": {
+      "origin_commit_sha": "b3f4ca20087f9066de4c340522ff84e0558e1ad1",
+      "change_type": "rewrite"
+    },
+    "phase_b_metadata": {
+      "evolution_type": "rewrite",
+      "predecessor_name": "promoteNameToValue",
+      "is_valid_predecessor": true,
+      "verification_status": "manually_verified",
+      "query_was_sanitized": true
+    }
+  }
+]

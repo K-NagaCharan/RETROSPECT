@@ -1,0 +1,268 @@
+{
+  "repoSlug": "express",
+  "repoPath": "D:\\clones_eval_2026-10-22\\phaseb_express",
+  "pinSha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+  "cases": [
+    {
+      "case_id": "js_exp_01",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "9a34acf03cb818ff3f8bc40e44176e277a25cbb9",
+      "commit_distance_k": 11,
+      "query_text": "Dispatch HTTP response body handling byte streams and content length calculation",
+      "target": {
+        "symbol_name": "send",
+        "short_name": "send",
+        "file_path": "lib/response.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "9a34acf03cb818ff3f8bc40e44176e277a25cbb9",
+        "change_type": "rewrite"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "js_exp_02",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "c9ecf7b658388ccaa2b8470aabad92aabde458a2",
+      "commit_distance_k": 60,
+      "query_text": "Compile and output view template when custom rendering options are omitted",
+      "target": {
+        "symbol_name": "render",
+        "short_name": "render",
+        "file_path": "lib/application.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "c9ecf7b658388ccaa2b8470aabad92aabde458a2",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "js_exp_03",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "54af593b739ea44674e4a445efa15b8024f093da",
+      "commit_distance_k": 88,
+      "query_text": "Start HTTP server listener and forward port arguments using sliced arguments",
+      "target": {
+        "symbol_name": "listen",
+        "short_name": "listen",
+        "file_path": "lib/application.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "54af593b739ea44674e4a445efa15b8024f093da",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "js_exp_04",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "3dc96995df98cd76d8d31f3b6825401f25899be0",
+      "commit_distance_k": 131,
+      "query_text": "Match requested language preferences against supported server locales",
+      "target": {
+        "symbol_name": "acceptsLanguages",
+        "short_name": "acceptsLanguages",
+        "file_path": "lib/request.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "3dc96995df98cd76d8d31f3b6825401f25899be0",
+        "change_type": "signature_change"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "js_exp_05",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "9a3f7ff4120d7920a2d13809ff5ae78648c8a3d6",
+      "commit_distance_k": 65,
+      "query_text": "Send HTTP redirect with fallback HTML content for legacy clients",
+      "target": {
+        "symbol_name": "redirect",
+        "short_name": "redirect",
+        "file_path": "lib/response.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "9a3f7ff4120d7920a2d13809ff5ae78648c8a3d6",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "js_exp_06",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "90ec6206d3275fdf2787f2028c6f48a2d92e8042",
+      "commit_distance_k": 32,
+      "query_text": "Print uncaught exception details during request processing failure",
+      "target": {
+        "symbol_name": "logerror",
+        "short_name": "logerror",
+        "file_path": "lib/application.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "90ec6206d3275fdf2787f2028c6f48a2d92e8042",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "js_exp_07",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "89f198c6a50ab0cb65b741767791dd1b647e3b2c",
+      "commit_distance_k": 103,
+      "query_text": "Determine if incoming connection is running over HTTPS or plain HTTP",
+      "target": {
+        "symbol_name": "protocol",
+        "short_name": "protocol",
+        "file_path": "lib/request.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "89f198c6a50ab0cb65b741767791dd1b647e3b2c",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "js_exp_08",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "ae6dd37680e3a00618d6c8a3e522f0ee4eeba1a4",
+      "commit_distance_k": 24,
+      "query_text": "Determine if client HTTP cache validator matches the current resource representation",
+      "target": {
+        "symbol_name": "fresh",
+        "short_name": "fresh",
+        "file_path": "lib/request.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "ae6dd37680e3a00618d6c8a3e522f0ee4eeba1a4",
+        "change_type": "routine_modification"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "js_exp_09",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "91d333b4cfea158c9798d32e6665d36bd8e37c3d",
+      "commit_distance_k": 20,
+      "query_text": "Set target redirection header without actually terminating the response",
+      "target": {
+        "symbol_name": "location",
+        "short_name": "location",
+        "file_path": "lib/response.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "91d333b4cfea158c9798d32e6665d36bd8e37c3d",
+        "change_type": "hard_negative"
+      },
+      "origin_exists": true
+    },
+    {
+      "case_id": "js_exp_10",
+      "dataset_source": "category_b_repaired",
+      "cohort": "distance_stratified_diagnostic",
+      "language": "javascript",
+      "repository_id": "express",
+      "pin_sha": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "origin_commit": "6cd404eb28ff861180f435b3015f8d0c8c0b44d4",
+      "commit_distance_k": 72,
+      "query_text": "Negotiate client character encoding against acceptable charset headers",
+      "target": {
+        "symbol_name": "acceptsCharsets",
+        "short_name": "acceptsCharsets",
+        "file_path": "lib/request.js",
+        "line_range": [
+          0,
+          0
+        ]
+      },
+      "hard_negatives": [],
+      "historical_evidence": {
+        "origin_commit_sha": "6cd404eb28ff861180f435b3015f8d0c8c0b44d4",
+        "change_type": "signature_change"
+      },
+      "origin_exists": true
+    }
+  ],
+  "searchHorizon": 50
+}
