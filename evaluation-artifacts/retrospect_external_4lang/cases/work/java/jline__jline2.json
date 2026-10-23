@@ -1,0 +1,40 @@
+{
+ "repository": "jline/jline2",
+ "url": "https://github.com/jline/jline2.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 2,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "1eb3b624b288a4b1a054420d3efb05b8f1d28517",
+   "old": "print",
+   "new": "rawPrint",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "1eb3b624b288a4b1a054420d3efb05b8f1d28517",
+   "old": "print",
+   "new": "rawPrint",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\jline__jline2",
+  "seconds": 1.398,
+  "bytes": 2742176,
+  "default_branch": "master",
+  "head": "12b98d94589e3bd6a60719c495b0ab911c571329"
+ },
+ "seconds": 1.437
+}

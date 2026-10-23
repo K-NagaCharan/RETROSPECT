@@ -1,0 +1,22 @@
+{
+  "repository": "svelte",
+  "language": "javascript",
+  "pin": "40bb08482f4857d91221638dec544a532bc35389",
+  "window": 1500,
+  "commits": 1498,
+  "mergesSkipped": 2,
+  "commitsWithChanges": 1201,
+  "events": {
+    "signature_change": 202,
+    "deletion_no_successor": 111,
+    "move": 17,
+    "extraction": 29,
+    "ambiguous_pairing": 32,
+    "scope_change": 42,
+    "rename": 12,
+    "inlining": 5,
+    "rename_move": 2,
+    "split_part": 2
+  },
+  "parseFailures": 0
+}

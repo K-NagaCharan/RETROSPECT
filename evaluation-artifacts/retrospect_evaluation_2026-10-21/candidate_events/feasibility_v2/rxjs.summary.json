@@ -1,0 +1,16 @@
+{
+  "repository": "rxjs",
+  "language": "typescript",
+  "pin": "54796b38a57e6309f9861e174737479bb3f63f61",
+  "window": 150,
+  "commits": 150,
+  "mergesSkipped": 0,
+  "commitsWithChanges": 109,
+  "events": {
+    "signature_change": 8,
+    "deletion_no_successor": 4,
+    "ambiguous_pairing": 1,
+    "split_part": 2
+  },
+  "parseFailures": 0
+}

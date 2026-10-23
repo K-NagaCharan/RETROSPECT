@@ -1,0 +1,33 @@
+{
+ "repository": "sinclairzx81/typebox",
+ "url": "https://github.com/sinclairzx81/typebox.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "e47a11c2d7ae217166e814d4cb99b8a4a8337bc7",
+   "old": "IsEvaluated",
+   "new": "IsAccelerated",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\sinclairzx81__typebox",
+  "seconds": 7.358,
+  "bytes": 27186739,
+  "default_branch": "main",
+  "head": "ed9d84abeaec53af8da0bdc45c107e0eb5189de8"
+ },
+ "seconds": 13.027
+}

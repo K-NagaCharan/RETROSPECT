@@ -1,0 +1,19 @@
+{
+  "repository": "fastify",
+  "language": "javascript",
+  "pin": "f736849a10a9b2ca57fb09437feb8294cda76234",
+  "window": 1500,
+  "commits": 1470,
+  "mergesSkipped": 30,
+  "commitsWithChanges": 435,
+  "events": {
+    "signature_change": 20,
+    "deletion_no_successor": 21,
+    "extraction": 6,
+    "rename": 4,
+    "scope_change": 2,
+    "move": 1,
+    "ambiguous_pairing": 5
+  },
+  "parseFailures": 0
+}

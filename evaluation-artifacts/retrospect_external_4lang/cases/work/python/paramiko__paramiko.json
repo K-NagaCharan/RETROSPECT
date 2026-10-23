@@ -1,0 +1,68 @@
+{
+ "repository": "paramiko/paramiko",
+ "url": "https://github.com/paramiko/paramiko.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "3a8887a42083dda796f50e1e9b32f625abcb5d5a",
+  "parent": "daa8a2ec0d6d3706ea3864fcab5ed56597f3612a",
+  "old": "auth_key",
+  "new": "auth_publickey",
+  "message": "[project @ Arch-1:robey@lag.net--2003-public%secsh--dev--1.0--patch-19]\nrenamed auth_key -> auth_publickey; more docs.\nrenamed Transport.auth_key to auth_publickey for consistency.  and lots more\ndocumentation.",
+  "commit_url": "https://github.com/paramiko/paramiko/commit/3a8887a42083dda796f50e1e9b32f625abcb5d5a",
+  "similarity": 1,
+  "before": {
+   "name": "auth_key",
+   "qualifiedName": "Transport.auth_key",
+   "file": "paramiko/auth_transport.py",
+   "startLine": 59
+  },
+  "after": {
+   "name": "auth_publickey",
+   "qualifiedName": "Transport.auth_publickey",
+   "file": "paramiko/auth_transport.py",
+   "startLine": 59
+  },
+  "pin": "440b3de06abfd358e93e698fde178ef0c5c85939",
+  "first_containing": "3a8887a42083dda796f50e1e9b32f625abcb5d5a",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 69,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 440b3de06abfd358e93e698fde178ef0c5c85939"
+  },
+  "target": {
+   "file": "paramiko/auth_transport.py",
+   "qualifiedName": "Transport.auth_publickey",
+   "name": "auth_publickey"
+  },
+  "a_query": "Authenticate to the server using a private key.",
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\paramiko__paramiko",
+  "seconds": 2.737,
+  "bytes": 7948023,
+  "default_branch": "main",
+  "head": "0e9ccb91e0f9a68f2587233d523ad7fe46e730fe"
+ },
+ "seconds": 14.562
+}

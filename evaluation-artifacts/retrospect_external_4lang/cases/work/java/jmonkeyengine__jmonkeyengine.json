@@ -1,0 +1,33 @@
+{
+ "repository": "jmonkeyengine/jmonkeyengine",
+ "url": "https://github.com/jMonkeyEngine/jmonkeyengine.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "5989711f7315abe4c3da0f1516a3eb3a81da6716",
+   "old": "removeSelectedNode",
+   "new": "removeSelected",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\jmonkeyengine__jmonkeyengine",
+  "seconds": 254.334,
+  "bytes": 1497466125,
+  "default_branch": "master",
+  "head": "b03312cbe2c59ca47c30e165297990df784da44b"
+ },
+ "seconds": 254.42
+}

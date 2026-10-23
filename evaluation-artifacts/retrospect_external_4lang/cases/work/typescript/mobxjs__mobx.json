@@ -1,0 +1,68 @@
+{
+ "repository": "mobxjs/mobx",
+ "url": "https://github.com/mobxjs/mobx.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 4,
+  "passed_extractor_check": 4,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "38cfd18922bc41ca206fd48f3fea336a559f8e57",
+  "parent": "2909d441fa0c7f498548c1d50266ba10de9b10d9",
+  "old": "isReactive",
+  "new": "isObservable",
+  "message": "isReactive -> isObservable",
+  "commit_url": "https://github.com/mobxjs/mobx/commit/38cfd18922bc41ca206fd48f3fea336a559f8e57",
+  "similarity": 1,
+  "before": {
+   "name": "isReactive",
+   "qualifiedName": "isReactive",
+   "file": "lib/core.ts",
+   "startLine": 96
+  },
+  "after": {
+   "name": "isObservable",
+   "qualifiedName": "isObservable",
+   "file": "lib/core.ts",
+   "startLine": 96
+  },
+  "pin": "330fbf7c7bedc16cd29a372ae7110b49abe688af",
+  "first_containing": "38cfd18922bc41ca206fd48f3fea336a559f8e57",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 86,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 85,
+   "window_command": "git log --format=%H --topo-order -n 400 330fbf7c7bedc16cd29a372ae7110b49abe688af"
+  },
+  "target": {
+   "file": "src/core.ts",
+   "qualifiedName": "isObservable",
+   "name": "isObservable"
+  },
+  "a_query": "Returns true if the provided value is reactive.",
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\mobxjs__mobx",
+  "seconds": 10.048,
+  "bytes": 36027003,
+  "default_branch": "main",
+  "head": "b06078408dba2eb7504f0799f9ad66befdcbe4fc"
+ },
+ "seconds": 62.846
+}

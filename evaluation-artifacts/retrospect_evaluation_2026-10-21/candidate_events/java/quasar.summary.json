@@ -1,0 +1,22 @@
+{
+  "repository": "quasar",
+  "language": "java",
+  "pin": "db0ac29f55bc0515023d67ab86a2178c5e6eeb94",
+  "window": 1500,
+  "commits": 1318,
+  "mergesSkipped": 182,
+  "commitsWithChanges": 839,
+  "events": {
+    "deletion_no_successor": 743,
+    "signature_change": 133,
+    "rename": 45,
+    "scope_change": 145,
+    "inlining": 14,
+    "move": 25,
+    "extraction": 36,
+    "ambiguous_pairing": 48,
+    "split_part": 7,
+    "rename_move": 5
+  },
+  "parseFailures": 0
+}

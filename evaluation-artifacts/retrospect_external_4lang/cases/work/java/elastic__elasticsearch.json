@@ -1,0 +1,15 @@
+{
+ "repository": "elastic/elasticsearch",
+ "url": "https://github.com/elastic/elasticsearch.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "skipped",
+ "reason": "clone exceeds 1.5 GB (1.81 GB)",
+ "funnel": {
+  "clone_seconds": 349.809
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

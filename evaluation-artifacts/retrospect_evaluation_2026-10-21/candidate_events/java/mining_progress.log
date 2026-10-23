@@ -1,0 +1,16 @@
+2026-10-21T18:26:08Z start jfinal D:/clones/jfinal window=1500
+{"repository":"jfinal","language":"java","pin":"0e0af1599b93ac3c6b2f14a318a647372da52924","window":1500,"commits":1435,"mergesSkipped":65,"commitsWithChanges":1298,"events":{"signature_change":57,"deletion_no_successor":65,"scope_change":17,"rename":14,"ambiguous_pairing":6,"extraction":17,"move":8},"parseFailures":0}
+2026-10-21T18:39:18Z done jfinal in 790s
+2026-10-21T18:39:18Z start quasar D:/clones/quasar window=1500
+{"repository":"quasar","language":"java","pin":"db0ac29f55bc0515023d67ab86a2178c5e6eeb94","window":1500,"commits":1318,"mergesSkipped":182,"commitsWithChanges":839,"events":{"deletion_no_successor":743,"signature_change":133,"rename":45,"scope_change":145,"inlining":14,"move":25,"extraction":36,"ambiguous_pairing":48,"split_part":7,"rename_move":5},"parseFailures":0}
+2026-10-21T18:50:40Z done quasar in 682s
+2026-10-21T18:50:40Z start guava D:/clones/guava window=1500
+{"repository":"guava","language":"java","pin":"669a232b4e20ae6e8bc6efc62caaf2f830d56327","window":1500,"commits":1500,"mergesSkipped":0,"commitsWithChanges":837,"events":{"deletion_no_successor":97,"ambiguous_pairing":96,"rename":9,"scope_change":7,"inlining":4,"extraction":16,"signature_change":33,"move":1,"split_part":3},"parseFailures":8358}
+2026-10-21T19:28:40Z FAILED guava
+2026-10-21T19:28:40Z start spring-boot D:/clones/spring-boot window=1500
+{"repository":"spring-boot","language":"java","pin":"57a1ca37c36f3cf355211aa8dea8c500b2dd3a09","window":1500,"commits":868,"mergesSkipped":632,"commitsWithChanges":226,"events":{"deletion_no_successor":46,"rename":4,"extraction":10,"ambiguous_pairing":8,"signature_change":71,"inlining":2,"scope_change":6,"move":3},"parseFailures":0}
+2026-10-21T19:42:05Z done spring-boot in 805s
+2026-10-21T19:42:05Z start sonarqube D:/clones/sonarqube window=1500
+{"repository":"sonarqube","language":"java","pin":"e3b4618c6a748dbc5f2b9659cb039d34726bb8bf","window":1500,"commits":1500,"mergesSkipped":0,"commitsWithChanges":633,"events":{"ambiguous_pairing":58,"signature_change":127,"rename":22,"extraction":26,"deletion_no_successor":1472,"split_part":32,"move":17,"scope_change":25,"rename_move":1},"parseFailures":7468}
+2026-10-21T20:20:12Z FAILED sonarqube
+2026-10-21T20:20:12Z batch complete

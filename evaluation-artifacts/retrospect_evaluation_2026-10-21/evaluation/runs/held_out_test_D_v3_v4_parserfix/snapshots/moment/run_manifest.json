@@ -1,0 +1,47 @@
+{
+  "started_utc": "2026-10-22T18:17:45.963Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "D:\\base papers considered\\Test creation\\retrospect_evaluation_2026-10-21\\evaluation\\runs\\held_out_test_D_v3_v4_parserfix\\snapshots\\moment.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "moment",
+      "path": "D:/clones/moment",
+      "pin": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+      "head_before": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 7609,
+      "index_seconds": 34.978,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 121.696,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 951,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 2168.71,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 2475,
+      "history_commits_analyzed_H400": 348,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+      "clean_after": true,
+      "seconds_total": 2329.202
+    }
+  ],
+  "finished_utc": "2026-10-22T18:56:35.282Z"
+}

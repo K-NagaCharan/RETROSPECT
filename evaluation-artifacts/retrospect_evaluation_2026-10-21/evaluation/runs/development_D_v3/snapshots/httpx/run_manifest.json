@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T14:06:26.400Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\development_D_v3\\snapshots\\httpx.cases.jsonl",
+  "case_count": 15,
+  "snapshots": [
+    {
+      "repository": "httpx",
+      "path": "D:/clones/httpx",
+      "pin": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+      "head_before": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+      "clean_before": true,
+      "cases": 15,
+      "symbols": 1206,
+      "index_seconds": 0.4,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 13.553,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 110.868,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+      "clean_after": true,
+      "seconds_total": 135.752
+    }
+  ],
+  "finished_utc": "2026-10-22T14:08:42.236Z"
+}

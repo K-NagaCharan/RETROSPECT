@@ -1,0 +1,13 @@
+{
+ "repository": "facebook/jest",
+ "url": "https://github.com/facebook/jest.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:jest)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

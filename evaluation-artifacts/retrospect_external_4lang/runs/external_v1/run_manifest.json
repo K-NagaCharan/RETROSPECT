@@ -1,0 +1,1103 @@
+{
+  "cases_file": "cases/cases.jsonl",
+  "tasks": null,
+  "horizons": "400",
+  "match": "exact",
+  "driver": "run_benchmark_resumable.js (one process per repository, 2 in parallel)",
+  "case_count": 182,
+  "finished_utc": "2026-10-23T08:39:59.420Z",
+  "snapshots": [
+    {
+      "repository": "aio-libs/aiohttp",
+      "path": "D:/clones_external/aio-libs__aiohttp",
+      "pin": "2b7cb1629f4b78637da5208b9d62332c3f3d486c",
+      "head_before": "2b7cb1629f4b78637da5208b9d62332c3f3d486c",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 3614,
+      "index_seconds": 0.885,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 128.108,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 1887,
+      "history_commits_analyzed_H400": 331,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "2b7cb1629f4b78637da5208b9d62332c3f3d486c",
+      "clean_after": true,
+      "seconds_total": 130.642
+    },
+    {
+      "repository": "angular/angular",
+      "path": "D:/clones_external/angular__angular",
+      "pin": "fad3b6434c529965500dade72ea0ef4735d270f0",
+      "head_before": "fad3b6434c529965500dade72ea0ef4735d270f0",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 7880,
+      "index_seconds": 7.26,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 336.609,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 4811,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "fad3b6434c529965500dade72ea0ef4735d270f0",
+      "clean_after": true,
+      "seconds_total": 345.895
+    },
+    {
+      "repository": "babel/babel",
+      "path": "D:/clones_external/babel__babel",
+      "pin": "edd3363e4812275945a5c25542710f7729e70832",
+      "head_before": "edd3363e4812275945a5c25542710f7729e70832",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 1213,
+      "index_seconds": 17.495,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 159.865,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 867,
+      "history_commits_analyzed_H400": 386,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "edd3363e4812275945a5c25542710f7729e70832",
+      "clean_after": true,
+      "seconds_total": 178.632
+    },
+    {
+      "repository": "buildcraft/buildcraft",
+      "path": "D:/clones_external/buildcraft__buildcraft",
+      "pin": "2ff0d03b9770241339e0d6c3ac7546cbd3a62f55",
+      "head_before": "2ff0d03b9770241339e0d6c3ac7546cbd3a62f55",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 8433,
+      "index_seconds": 2.355,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 331.753,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3586,
+      "history_commits_analyzed_H400": 342,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "2ff0d03b9770241339e0d6c3ac7546cbd3a62f55",
+      "clean_after": true,
+      "seconds_total": 336.136
+    },
+    {
+      "repository": "celery/celery",
+      "path": "D:/clones_external/celery__celery",
+      "pin": "b8cf78eb1d2b38ea0d8bb039cf8383384b9e166d",
+      "head_before": "b8cf78eb1d2b38ea0d8bb039cf8383384b9e166d",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 2854,
+      "index_seconds": 0.656,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 115.586,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 1835,
+      "history_commits_analyzed_H400": 375,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "b8cf78eb1d2b38ea0d8bb039cf8383384b9e166d",
+      "clean_after": true,
+      "seconds_total": 117.651
+    },
+    {
+      "repository": "date-fns/date-fns",
+      "path": "D:/clones_external/date-fns__date-fns",
+      "pin": "4d1d86493aa6d49f0f5690c0e539fdf2953cac72",
+      "head_before": "4d1d86493aa6d49f0f5690c0e539fdf2953cac72",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 3064,
+      "index_seconds": 13.332,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 324.389,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3064,
+      "history_commits_analyzed_H400": 310,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "4d1d86493aa6d49f0f5690c0e539fdf2953cac72",
+      "clean_after": true,
+      "seconds_total": 339.037
+    },
+    {
+      "repository": "droolsjbpm/drools",
+      "path": "D:/clones_external/droolsjbpm__drools",
+      "pin": "9acd02bacd77c19d5393a164dcfda91cd597c3c4",
+      "head_before": "9acd02bacd77c19d5393a164dcfda91cd597c3c4",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 46780,
+      "index_seconds": 13.484,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 441.349,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 10190,
+      "history_commits_analyzed_H400": 375,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "9acd02bacd77c19d5393a164dcfda91cd597c3c4",
+      "clean_after": true,
+      "seconds_total": 462.4
+    },
+    {
+      "repository": "droolsjbpm/jbpm",
+      "path": "D:/clones_external/droolsjbpm__jbpm",
+      "pin": "3c963ac55965d16d81db6ec7a114b86bb65e02bc",
+      "head_before": "3c963ac55965d16d81db6ec7a114b86bb65e02bc",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 5855,
+      "index_seconds": 2.009,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 314.442,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3286,
+      "history_commits_analyzed_H400": 396,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "3c963ac55965d16d81db6ec7a114b86bb65e02bc",
+      "clean_after": true,
+      "seconds_total": 318.329
+    },
+    {
+      "repository": "encode/starlette",
+      "path": "D:/clones_external/encode__starlette",
+      "pin": "060f0593bc9a9b2edff520ce8ac2ea7116941232",
+      "head_before": "060f0593bc9a9b2edff520ce8ac2ea7116941232",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 462,
+      "index_seconds": 0.148,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 33.113,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 455,
+      "history_commits_analyzed_H400": 141,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "060f0593bc9a9b2edff520ce8ac2ea7116941232",
+      "clean_after": true,
+      "seconds_total": 34.318
+    },
+    {
+      "repository": "facebook/presto",
+      "path": "D:/clones_external/facebook__presto",
+      "pin": "a502e0777c3c3442bb97e347497931ce82912e9f",
+      "head_before": "a502e0777c3c3442bb97e347497931ce82912e9f",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 23656,
+      "index_seconds": 6.066,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 156.571,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3904,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "a502e0777c3c3442bb97e347497931ce82912e9f",
+      "clean_after": true,
+      "seconds_total": 166.532
+    },
+    {
+      "repository": "gcanti/io-ts",
+      "path": "D:/clones_external/gcanti__io-ts",
+      "pin": "c3fa731bb1f51e5d016ef53a5d62b2fe88092611",
+      "head_before": "c3fa731bb1f51e5d016ef53a5d62b2fe88092611",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 93,
+      "index_seconds": 0.152,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 22.758,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 93,
+      "history_commits_analyzed_H400": 75,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "c3fa731bb1f51e5d016ef53a5d62b2fe88092611",
+      "clean_after": true,
+      "seconds_total": 23.936
+    },
+    {
+      "repository": "google/closure-compiler",
+      "path": "D:/clones_external/google__closure-compiler",
+      "pin": "188947c4d37d9e6707f375f292031b53f784e883",
+      "head_before": "188947c4d37d9e6707f375f292031b53f784e883",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 41337,
+      "index_seconds": 16.357,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 246.808,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 5147,
+      "history_commits_analyzed_H400": 373,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "188947c4d37d9e6707f375f292031b53f784e883",
+      "clean_after": true,
+      "seconds_total": 268.294
+    },
+    {
+      "repository": "gwtproject/gwt",
+      "path": "D:/clones_external/gwtproject__gwt",
+      "pin": "000139ebaadff674146624462d656f6bfafde363",
+      "head_before": "000139ebaadff674146624462d656f6bfafde363",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 91203,
+      "index_seconds": 24.221,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 486.997,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 10137,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "000139ebaadff674146624462d656f6bfafde363",
+      "clean_after": true,
+      "seconds_total": 523.49
+    },
+    {
+      "repository": "hazelcast/hazelcast",
+      "path": "D:/clones_external/hazelcast__hazelcast",
+      "pin": "b96d66795b4522623beff117db3a8cb6493a4012",
+      "head_before": "b96d66795b4522623beff117db3a8cb6493a4012",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 48634,
+      "index_seconds": 13.32,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 299.212,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 10751,
+      "history_commits_analyzed_H400": 256,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "b96d66795b4522623beff117db3a8cb6493a4012",
+      "clean_after": true,
+      "seconds_total": 323.587
+    },
+    {
+      "repository": "ignatov/intellij-erlang",
+      "path": "D:/clones_external/ignatov__intellij-erlang",
+      "pin": "1a01237163479e03d668d4d09bd7171fd4364d78",
+      "head_before": "1a01237163479e03d668d4d09bd7171fd4364d78",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 6594,
+      "index_seconds": 1.724,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 219.231,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3526,
+      "history_commits_analyzed_H400": 352,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "1a01237163479e03d668d4d09bd7171fd4364d78",
+      "clean_after": true,
+      "seconds_total": 223.58
+    },
+    {
+      "repository": "infinispan/infinispan",
+      "path": "D:/clones_external/infinispan__infinispan",
+      "pin": "d56d788a8767f6d71f09b0adf4e84f7ec1b58f5e",
+      "head_before": "d56d788a8767f6d71f09b0adf4e84f7ec1b58f5e",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 49260,
+      "index_seconds": 15.977,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 445.509,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 14471,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "d56d788a8767f6d71f09b0adf4e84f7ec1b58f5e",
+      "clean_after": true,
+      "seconds_total": 475.393
+    },
+    {
+      "repository": "junit-team/junit5",
+      "path": "D:/clones_external/junit-team__junit5",
+      "pin": "d693a3af0e4e4c5a3598923a3513656edede7662",
+      "head_before": "d693a3af0e4e4c5a3598923a3513656edede7662",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 3037,
+      "index_seconds": 1.035,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 157.201,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 1622,
+      "history_commits_analyzed_H400": 366,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "d693a3af0e4e4c5a3598923a3513656edede7662",
+      "clean_after": true,
+      "seconds_total": 160.197
+    },
+    {
+      "repository": "nestjs/nest",
+      "path": "D:/clones_external/nestjs__nest",
+      "pin": "7d92d336149c56ffab337c5d066065e8b3c3cc14",
+      "head_before": "7d92d336149c56ffab337c5d066065e8b3c3cc14",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 4883,
+      "index_seconds": 5.394,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 86.144,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 604,
+      "history_commits_analyzed_H400": 242,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "7d92d336149c56ffab337c5d066065e8b3c3cc14",
+      "clean_after": true,
+      "seconds_total": 94.065
+    },
+    {
+      "repository": "prisma/prisma",
+      "path": "D:/clones_external/prisma__prisma",
+      "pin": "8d66dc1dcd1e75434791e05ede6563b7aef2b79b",
+      "head_before": "8d66dc1dcd1e75434791e05ede6563b7aef2b79b",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 3852,
+      "index_seconds": 6.664,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 234.86,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 1979,
+      "history_commits_analyzed_H400": 396,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "8d66dc1dcd1e75434791e05ede6563b7aef2b79b",
+      "clean_after": true,
+      "seconds_total": 243.816
+    },
+    {
+      "repository": "pydantic/pydantic",
+      "path": "D:/clones_external/pydantic__pydantic",
+      "pin": "82bfb19d267c56f053add97974f679754165bffe",
+      "head_before": "82bfb19d267c56f053add97974f679754165bffe",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 2491,
+      "index_seconds": 0.936,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 161.207,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 1917,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "82bfb19d267c56f053add97974f679754165bffe",
+      "clean_after": true,
+      "seconds_total": 163.717
+    },
+    {
+      "repository": "pylint-dev/pylint",
+      "path": "D:/clones_external/pylint-dev__pylint",
+      "pin": "784ddd5828cc98aebdbaf797964ede6ad91cffe8",
+      "head_before": "784ddd5828cc98aebdbaf797964ede6ad91cffe8",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 1471,
+      "index_seconds": 0.522,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 124.069,
+      "history_extraction_failures_H400": {
+        "count": 1,
+        "firstError": "95e39254ef70:test/messages/func_w0701.txt: FunctionExtractor: No supported language adapter found for file 'test/messages/func_w0701.txt' (languageId: '')"
+      },
+      "history_symbols_with_history_H400": 860,
+      "history_commits_analyzed_H400": 389,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "784ddd5828cc98aebdbaf797964ede6ad91cffe8",
+      "clean_after": true,
+      "seconds_total": 126.117
+    },
+    {
+      "repository": "reduxjs/redux-toolkit",
+      "path": "D:/clones_external/reduxjs__redux-toolkit",
+      "pin": "571854283b4c5696623b30fa039794410a928300",
+      "head_before": "571854283b4c5696623b30fa039794410a928300",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 1345,
+      "index_seconds": 3.084,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 85.672,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 312,
+      "history_commits_analyzed_H400": 299,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "571854283b4c5696623b30fa039794410a928300",
+      "clean_after": true,
+      "seconds_total": 90.313
+    },
+    {
+      "repository": "sindresorhus/ts-extras",
+      "path": "D:/clones_external/sindresorhus__ts-extras",
+      "pin": "323908522c9f90f07f99378b43891da742f2319f",
+      "head_before": "323908522c9f90f07f99378b43891da742f2319f",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 97,
+      "index_seconds": 0.363,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 27.281,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 97,
+      "history_commits_analyzed_H400": 91,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "323908522c9f90f07f99378b43891da742f2319f",
+      "clean_after": true,
+      "seconds_total": 28.808
+    },
+    {
+      "repository": "storybookjs/storybook",
+      "path": "D:/clones_external/storybookjs__storybook",
+      "pin": "728b3726e8f7503d6cc8c104188bdf6557ebb60e",
+      "head_before": "728b3726e8f7503d6cc8c104188bdf6557ebb60e",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 8653,
+      "index_seconds": 23.906,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 65.083,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 190,
+      "history_commits_analyzed_H400": 281,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "728b3726e8f7503d6cc8c104188bdf6557ebb60e",
+      "clean_after": true,
+      "seconds_total": 93.098
+    },
+    {
+      "repository": "trpc/trpc",
+      "path": "D:/clones_external/trpc__trpc",
+      "pin": "e9e19e4d86da2e6677cfd0d5486f2270a491c096",
+      "head_before": "e9e19e4d86da2e6677cfd0d5486f2270a491c096",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 502,
+      "index_seconds": 1.14,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 87.991,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 320,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "e9e19e4d86da2e6677cfd0d5486f2270a491c096",
+      "clean_after": true,
+      "seconds_total": 90.416
+    },
+    {
+      "repository": "typescript-eslint/typescript-eslint",
+      "path": "D:/clones_external/typescript-eslint__typescript-eslint",
+      "pin": "760d299930d35878e55bb3a77d9845044a9a8ec3",
+      "head_before": "760d299930d35878e55bb3a77d9845044a9a8ec3",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 4305,
+      "index_seconds": 8.863,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 132.76,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 584,
+      "history_commits_analyzed_H400": 397,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "760d299930d35878e55bb3a77d9845044a9a8ec3",
+      "clean_after": true,
+      "seconds_total": 143.834
+    },
+    {
+      "repository": "validatorjs/validator.js",
+      "path": "D:/clones_external/validatorjs__validator.js",
+      "pin": "cd4e7bf983e2c378de25424fb711e5c2d8d9066d",
+      "head_before": "cd4e7bf983e2c378de25424fb711e5c2d8d9066d",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 177,
+      "index_seconds": 4.121,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 172.785,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 117,
+      "history_commits_analyzed_H400": 354,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "cd4e7bf983e2c378de25424fb711e5c2d8d9066d",
+      "clean_after": true,
+      "seconds_total": 178.055
+    },
+    {
+      "repository": "webpack/webpack",
+      "path": "D:/clones_external/webpack__webpack",
+      "pin": "2f18ee08b843a1d14ba869c65a0f859a50a41e8e",
+      "head_before": "2f18ee08b843a1d14ba869c65a0f859a50a41e8e",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 13362,
+      "index_seconds": 213.29,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 1475.714,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3915,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "2f18ee08b843a1d14ba869c65a0f859a50a41e8e",
+      "clean_after": true,
+      "seconds_total": 1693.667
+    },
+    {
+      "repository": "apache/cassandra",
+      "path": "D:/clones_external/apache__cassandra",
+      "pin": "c35bfc09cca4add42afed0733a29d6f6843dbba0",
+      "head_before": "c35bfc09cca4add42afed0733a29d6f6843dbba0",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 25291,
+      "index_seconds": 8.833,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 403.392,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 9620,
+      "history_commits_analyzed_H400": 229,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "c35bfc09cca4add42afed0733a29d6f6843dbba0",
+      "clean_after": true,
+      "seconds_total": 419.68
+    },
+    {
+      "repository": "asyml/texar",
+      "path": "D:/clones_external/asyml__texar",
+      "pin": "a29bc5c0860b7f3169e9c84f88b31727b35f9e17",
+      "head_before": "a29bc5c0860b7f3169e9c84f88b31727b35f9e17",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 517,
+      "index_seconds": 0.24,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 81.874,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 517,
+      "history_commits_analyzed_H400": 197,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "a29bc5c0860b7f3169e9c84f88b31727b35f9e17",
+      "clean_after": true,
+      "seconds_total": 83.569
+    },
+    {
+      "repository": "bitcoinj/bitcoinj",
+      "path": "D:/clones_external/bitcoinj__bitcoinj",
+      "pin": "eab413c81494cd96fad6f646cb12a0c468685dc9",
+      "head_before": "eab413c81494cd96fad6f646cb12a0c468685dc9",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 11756,
+      "index_seconds": 5.07,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 179.494,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3490,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "eab413c81494cd96fad6f646cb12a0c468685dc9",
+      "clean_after": true,
+      "seconds_total": 188.404
+    },
+    {
+      "repository": "django/django",
+      "path": "D:/clones_external/django__django",
+      "pin": "05ef002048d88b8c2bcf643694ab9349c818b464",
+      "head_before": "05ef002048d88b8c2bcf643694ab9349c818b464",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 6766,
+      "index_seconds": 2.235,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 119.417,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3018,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "05ef002048d88b8c2bcf643694ab9349c818b464",
+      "clean_after": true,
+      "seconds_total": 124.43
+    },
+    {
+      "repository": "jashkenas/underscore",
+      "path": "D:/clones_external/jashkenas__underscore",
+      "pin": "bdb06bcfcdcc85bfe3b494d9907762945f7d7c49",
+      "head_before": "bdb06bcfcdcc85bfe3b494d9907762945f7d7c49",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 856,
+      "index_seconds": 0.916,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 73.517,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 268,
+      "history_commits_analyzed_H400": 251,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "bdb06bcfcdcc85bfe3b494d9907762945f7d7c49",
+      "clean_after": true,
+      "seconds_total": 75.827
+    },
+    {
+      "repository": "mobxjs/mobx",
+      "path": "D:/clones_external/mobxjs__mobx",
+      "pin": "330fbf7c7bedc16cd29a372ae7110b49abe688af",
+      "head_before": "330fbf7c7bedc16cd29a372ae7110b49abe688af",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 516,
+      "index_seconds": 0.543,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 144.37,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 492,
+      "history_commits_analyzed_H400": 377,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "330fbf7c7bedc16cd29a372ae7110b49abe688af",
+      "clean_after": true,
+      "seconds_total": 146.261
+    },
+    {
+      "repository": "pallets/werkzeug",
+      "path": "D:/clones_external/pallets__werkzeug",
+      "pin": "6cd4daf59464b9f814bd5dba7dc9629971886134",
+      "head_before": "6cd4daf59464b9f814bd5dba7dc9629971886134",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 907,
+      "index_seconds": 0.554,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 83.043,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 899,
+      "history_commits_analyzed_H400": 352,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "6cd4daf59464b9f814bd5dba7dc9629971886134",
+      "clean_after": true,
+      "seconds_total": 85.059
+    },
+    {
+      "repository": "paramiko/paramiko",
+      "path": "D:/clones_external/paramiko__paramiko",
+      "pin": "440b3de06abfd358e93e698fde178ef0c5c85939",
+      "head_before": "440b3de06abfd358e93e698fde178ef0c5c85939",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 365,
+      "index_seconds": 0.153,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 33.36,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 364,
+      "history_commits_analyzed_H400": 68,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "440b3de06abfd358e93e698fde178ef0c5c85939",
+      "clean_after": true,
+      "seconds_total": 34.968
+    },
+    {
+      "repository": "pypa/pip",
+      "path": "D:/clones_external/pypa__pip",
+      "pin": "c0bdc8aad56eb391f184548c22a3ed8c6037eb3e",
+      "head_before": "c0bdc8aad56eb391f184548c22a3ed8c6037eb3e",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 6262,
+      "index_seconds": 2.176,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 104.175,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 955,
+      "history_commits_analyzed_H400": 288,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "c0bdc8aad56eb391f184548c22a3ed8c6037eb3e",
+      "clean_after": true,
+      "seconds_total": 109.338
+    },
+    {
+      "repository": "python-trio/trio",
+      "path": "D:/clones_external/python-trio__trio",
+      "pin": "332e564dd29c03e16f89cfa31773c3f4ad053bad",
+      "head_before": "332e564dd29c03e16f89cfa31773c3f4ad053bad",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 1326,
+      "index_seconds": 0.452,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 115.794,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 1015,
+      "history_commits_analyzed_H400": 317,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "332e564dd29c03e16f89cfa31773c3f4ad053bad",
+      "clean_after": true,
+      "seconds_total": 118.055
+    },
+    {
+      "repository": "ramda/ramda",
+      "path": "D:/clones_external/ramda__ramda",
+      "pin": "0018f70176f5876085cff5320ce1bcdb0d615128",
+      "head_before": "0018f70176f5876085cff5320ce1bcdb0d615128",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 1989,
+      "index_seconds": 3.744,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 76.502,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 621,
+      "history_commits_analyzed_H400": 261,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "0018f70176f5876085cff5320ce1bcdb0d615128",
+      "clean_after": true,
+      "seconds_total": 81.808
+    },
+    {
+      "repository": "scikit-learn/scikit-learn",
+      "path": "D:/clones_external/scikit-learn__scikit-learn",
+      "pin": "5a8c45f390faa818a1b21f46be55e1faed4e4515",
+      "head_before": "5a8c45f390faa818a1b21f46be55e1faed4e4515",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 1859,
+      "index_seconds": 0.846,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 64.382,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 387,
+      "history_commits_analyzed_H400": 330,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "5a8c45f390faa818a1b21f46be55e1faed4e4515",
+      "clean_after": true,
+      "seconds_total": 67.191
+    },
+    {
+      "repository": "tj/commander.js",
+      "path": "D:/clones_external/tj__commander.js",
+      "pin": "b040db4a905830a64eed42bf06642b0ee1603d8b",
+      "head_before": "b040db4a905830a64eed42bf06642b0ee1603d8b",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 242,
+      "index_seconds": 2.713,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 77.738,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 239,
+      "history_commits_analyzed_H400": 316,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "b040db4a905830a64eed42bf06642b0ee1603d8b",
+      "clean_after": true,
+      "seconds_total": 81.768
+    },
+    {
+      "repository": "typestrong/ts-node",
+      "path": "D:/clones_external/typestrong__ts-node",
+      "pin": "10025b0b8b484171f3795f8a44c3930a43490a1f",
+      "head_before": "10025b0b8b484171f3795f8a44c3930a43490a1f",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 415,
+      "index_seconds": 1.499,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 88.761,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 396,
+      "history_commits_analyzed_H400": 397,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "10025b0b8b484171f3795f8a44c3930a43490a1f",
+      "clean_after": true,
+      "seconds_total": 91.649
+    }
+  ]
+}

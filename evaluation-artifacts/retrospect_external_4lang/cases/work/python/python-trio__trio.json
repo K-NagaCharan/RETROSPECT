@@ -1,0 +1,160 @@
+{
+ "repository": "python-trio/trio",
+ "url": "https://github.com/python-trio/trio.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 24,
+  "passed_extractor_check": 11,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "0030ac8c3c95dbde6a7115151a762d03c9c97f5e",
+   "old": "_raise",
+   "new": "as_safe_channel",
+   "source": "S3",
+   "reason": "body similarity 0.018 < 0.5"
+  },
+  {
+   "commit": "0655003c264deb3513700fbee25958e1a30aaf38",
+   "old": "open_channel",
+   "new": "open_memory_channel",
+   "source": "S3",
+   "reason": "body similarity 0.350 < 0.5"
+  },
+  {
+   "commit": "7554f3b4896d9117bde3dd30036db8766e45542b",
+   "old": "assert_no_yields",
+   "new": "assert_no_checkpoints",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ae7cc2d4220e97137e4ce8d714418734d33aaad7",
+   "old": "assert_yields",
+   "new": "assert_checkpoints",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "09ebe37f94d1875eb6fd721b7364831cd6fe0ab6",
+   "old": "forceful_close",
+   "new": "aclose",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "09ebe37f94d1875eb6fd721b7364831cd6fe0ab6",
+   "old": "forceful_close",
+   "new": "aclose_forcefully",
+   "source": "S3",
+   "reason": "body similarity 0.098 < 0.5"
+  },
+  {
+   "commit": "09ebe37f94d1875eb6fd721b7364831cd6fe0ab6",
+   "old": "graceful_close",
+   "new": "aclose_forcefully",
+   "source": "S3",
+   "reason": "body similarity 0.215 < 0.5"
+  },
+  {
+   "commit": "77fde94640f7f483f022e3e9575b59fbebb0b894",
+   "old": "open",
+   "new": "open_file",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "77fde94640f7f483f022e3e9575b59fbebb0b894",
+   "old": "wrap",
+   "new": "open_file",
+   "source": "S3",
+   "reason": "body similarity 0.191 < 0.5"
+  },
+  {
+   "commit": "77fde94640f7f483f022e3e9575b59fbebb0b894",
+   "old": "open",
+   "new": "wrap_file",
+   "source": "S3",
+   "reason": "body similarity 0.177 < 0.5"
+  },
+  {
+   "commit": "77fde94640f7f483f022e3e9575b59fbebb0b894",
+   "old": "wrap",
+   "new": "wrap_file",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "07c3aa562d41a024630b26471f5bd11cff42e82c",
+   "old": "advance",
+   "new": "jump",
+   "source": "S3",
+   "reason": "body similarity 0.415 < 0.5"
+  },
+  {
+   "commit": "60d9ebc993f375553a480554be92d361fc33bd5a",
+   "old": "ki_protected",
+   "new": "currently_ki_protected",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "8083a79fb02acf510b2a9d4c46c80c8463e67b92",
+  "parent": "2655b1ca003cc5168b317875582251aea15399a7",
+  "old": "open_ssl_tcp_stream",
+  "new": "open_ssl_over_tcp_stream",
+  "message": "Rename open_ssl_tcp_stream -> open_ssl_over_tcp_stream",
+  "commit_url": "https://github.com/python-trio/trio/commit/8083a79fb02acf510b2a9d4c46c80c8463e67b92",
+  "similarity": 1,
+  "before": {
+   "name": "open_ssl_tcp_stream",
+   "qualifiedName": "open_ssl_tcp_stream",
+   "file": "trio/_ssl_stream_helpers.py",
+   "startLine": 20
+  },
+  "after": {
+   "name": "open_ssl_over_tcp_stream",
+   "qualifiedName": "open_ssl_over_tcp_stream",
+   "file": "trio/_ssl_stream_helpers.py",
+   "startLine": 20
+  },
+  "pin": "332e564dd29c03e16f89cfa31773c3f4ad053bad",
+  "first_containing": "fef22159895532b06086f0bf9504f6ebdee79e18",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 208,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 214,
+   "window_command": "git log --format=%H --topo-order -n 400 332e564dd29c03e16f89cfa31773c3f4ad053bad"
+  },
+  "target": {
+   "file": "trio/_highlevel_ssl_helpers.py",
+   "qualifiedName": "open_ssl_over_tcp_stream",
+   "name": "open_ssl_over_tcp_stream"
+  },
+  "a_query": "Make a TLS-encrypted Connection to the given host and port over TCP.",
+  "name_subtoken_overlap": 0.8
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\python-trio__trio",
+  "seconds": 3.02,
+  "bytes": 13991393,
+  "default_branch": "main",
+  "head": "6e1781cb126e96a2c18c070fb161a414f366def8"
+ },
+ "seconds": 39.265
+}

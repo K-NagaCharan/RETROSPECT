@@ -1,0 +1,21 @@
+{
+  "repository": "dit",
+  "language": "python",
+  "pin": "23fcb940c7bcdd9b7ddf426a4b423da8e6b76361",
+  "window": 1500,
+  "commits": 1436,
+  "mergesSkipped": 64,
+  "commitsWithChanges": 808,
+  "events": {
+    "deletion_no_successor": 254,
+    "move": 57,
+    "scope_change": 72,
+    "signature_change": 363,
+    "extraction": 10,
+    "ambiguous_pairing": 72,
+    "rename_move": 6,
+    "split_part": 162,
+    "rename": 39
+  },
+  "parseFailures": 0
+}

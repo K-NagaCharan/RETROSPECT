@@ -1,0 +1,25 @@
+{
+ "repository": "prettier/prettier",
+ "url": "https://github.com/prettier/prettier.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\prettier__prettier",
+  "seconds": 53.086,
+  "bytes": 217587847,
+  "default_branch": "main",
+  "head": "35d29898d24272f301811033f0bbb98ed0e55123"
+ },
+ "seconds": 88.458
+}

@@ -1,0 +1,68 @@
+{
+ "repository": "sindresorhus/ts-extras",
+ "url": "https://github.com/sindresorhus/ts-extras.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "03a66fd9310ce25d7775e45de22bd2b2c5a01564",
+  "parent": "614d777c615d35f3ac08dd5f976e4da92c2194ef",
+  "old": "asMutable",
+  "new": "asWritable",
+  "message": "Rename `asMutable` to `asWritable`",
+  "commit_url": "https://github.com/sindresorhus/ts-extras/commit/03a66fd9310ce25d7775e45de22bd2b2c5a01564",
+  "similarity": 1,
+  "before": {
+   "name": "asMutable",
+   "qualifiedName": "asMutable",
+   "file": "source/as-mutable.ts",
+   "startLine": 17
+  },
+  "after": {
+   "name": "asWritable",
+   "qualifiedName": "asWritable",
+   "file": "source/as-writable.ts",
+   "startLine": 17
+  },
+  "pin": "323908522c9f90f07f99378b43891da742f2319f",
+  "first_containing": "03a66fd9310ce25d7775e45de22bd2b2c5a01564",
+  "pin_offset": 46,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 47,
+   "window_size": 92,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 46,
+   "window_command": "git log --format=%H --topo-order -n 400 323908522c9f90f07f99378b43891da742f2319f"
+  },
+  "target": {
+   "file": "source/as-writable.ts",
+   "qualifiedName": "asWritable",
+   "name": "asWritable"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\sindresorhus__ts-extras",
+  "seconds": 1.291,
+  "bytes": 405443,
+  "default_branch": "main",
+  "head": "323908522c9f90f07f99378b43891da742f2319f"
+ },
+ "seconds": 2.048
+}

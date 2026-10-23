@@ -1,0 +1,119 @@
+{
+  "updated_utc": "2026-10-22T14:09:39.056812Z",
+  "status": "complete for this dataset version (results provisional until owner review of review_queue/review_queue.csv)",
+  "completed_steps": [
+    {
+      "step": "current evidence consolidation",
+      "outputs": [
+        "CURRENT_EVIDENCE_INVENTORY.md",
+        "CURRENT_PROJECT_RESULTS.md",
+        "CURRENT_PROJECT_RESULTS.json",
+        "CURRENT_PROJECT_CASE_RESULTS.csv"
+      ]
+    },
+    {
+      "step": "repository screening",
+      "outputs": [
+        "REPOSITORY_INVENTORY.csv"
+      ],
+      "repositories_screened": 31
+    },
+    {
+      "step": "mining (window 1500)",
+      "outputs": [
+        "candidate_events/<lang>/<repo>.jsonl"
+      ],
+      "repositories_mined": 26,
+      "candidate_events": 17484
+    },
+    {
+      "step": "verification",
+      "outputs": [
+        "ground_truth/evolution_events.jsonl",
+        "ground_truth/exclusions.jsonl",
+        "verified_events/"
+      ],
+      "verified_events": 11678
+    },
+    {
+      "step": "case building (frozen)",
+      "outputs": [
+        "ground_truth/retrieval_cases.jsonl",
+        "ground_truth/case_exclusions.jsonl"
+      ],
+      "cases": 1358,
+      "superseded": [
+        "ground_truth/superseded_v1_before_dedup/"
+      ]
+    },
+    {
+      "step": "splits + manifests (frozen)",
+      "outputs": [
+        "retrieval_cases/*/cases.jsonl",
+        "manifests/"
+      ]
+    },
+    {
+      "step": "review queue",
+      "outputs": [
+        "review_queue/review_queue.csv"
+      ],
+      "events": 1005,
+      "reviewed": 0
+    },
+    {
+      "step": "benchmark B/C/A",
+      "outputs": [
+        "evaluation/runs/held_out_test_BCA_v3",
+        "evaluation/runs/validation_BCA_v3",
+        "evaluation/runs/development_BCA_v3"
+      ]
+    },
+    {
+      "step": "benchmark D",
+      "outputs": [
+        "evaluation/runs/held_out_test_D_v3",
+        "evaluation/runs/validation_D_v3",
+        "evaluation/runs/development_D_v3"
+      ]
+    },
+    {
+      "step": "analysis",
+      "outputs": [
+        "evaluation/analysis/BCA_v3",
+        "evaluation/analysis/D_v3",
+        "reports/final_results.md"
+      ]
+    }
+  ],
+  "remaining_steps": [
+    {
+      "step": "owner review of review_queue/review_queue.csv",
+      "then": "rerun analyze_benchmark.py restricted to confirmed events (sensitivity)"
+    },
+    {
+      "step": "fix or report Tree-sitter WASM abort in Retrospect history indexing (production code; not changed here)"
+    }
+  ],
+  "failed_operations": [
+    {
+      "op": "held_out_test_v1 / development_v1 runs",
+      "reason": "interrupted; development_v1 invalid (0 symbols after guava WASM abort)",
+      "status": "superseded, see evaluation/runs/SUPERSEDED.md"
+    },
+    {
+      "op": "held_out_test_BCA_v2",
+      "reason": "stopped to add parser-health probes",
+      "status": "superseded"
+    },
+    {
+      "op": "per-repository exit=1 for lodash, moment, typeorm, guava, zod",
+      "reason": "Tree-sitter WASM exit(1) during H=400 history pass; results written and flagged parser_healthy_after_history_H400=false"
+    }
+  ],
+  "resume_commands": {
+    "mining": "bash scripts/event_mining/run_mining_batch.sh <lang> 1500 name=path ...",
+    "benchmark": "node scripts/evaluation/run_benchmark_resumable.js --cases retrieval_cases/<split>/cases.jsonl --out evaluation/runs/<new> --tasks B_identifier,C_docstring,A_current_doc",
+    "analysis": "python -I scripts/evaluation/analyze_benchmark.py --runs <run dirs> --out evaluation/analysis/<new>"
+  }
+}

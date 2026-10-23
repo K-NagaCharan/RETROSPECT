@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T10:49:54.760Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\validation_D_v3\\snapshots\\moment.cases.jsonl",
+  "case_count": 2,
+  "snapshots": [
+    {
+      "repository": "moment",
+      "path": "D:/clones/moment",
+      "pin": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+      "head_before": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+      "clean_before": true,
+      "cases": 2,
+      "symbols": 7609,
+      "index_seconds": 6.611,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 124.236,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 751.311,
+      "parser_healthy_after_history_H400": false,
+      "head_after": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+      "clean_after": true,
+      "seconds_total": 884.166
+    }
+  ],
+  "finished_utc": "2026-10-22T11:04:39.013Z"
+}

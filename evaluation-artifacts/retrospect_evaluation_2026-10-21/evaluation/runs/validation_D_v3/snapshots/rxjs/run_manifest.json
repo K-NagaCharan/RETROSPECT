@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T11:58:45.933Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\validation_D_v3\\snapshots\\rxjs.cases.jsonl",
+  "case_count": 19,
+  "snapshots": [
+    {
+      "repository": "rxjs",
+      "path": "D:/clones/rxjs",
+      "pin": "54796b38a57e6309f9861e174737479bb3f63f61",
+      "head_before": "54796b38a57e6309f9861e174737479bb3f63f61",
+      "clean_before": true,
+      "cases": 19,
+      "symbols": 4829,
+      "index_seconds": 8.024,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 12.44,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 145.51,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "54796b38a57e6309f9861e174737479bb3f63f61",
+      "clean_after": true,
+      "seconds_total": 181.76
+    }
+  ],
+  "finished_utc": "2026-10-22T12:01:47.818Z"
+}

@@ -1,0 +1,4 @@
+bottle: 8 cases, 1044 symbols, 17.155s
+express: 10 cases, 3101 symbols, 17.268s
+zod: 8 cases, 3675 symbols, 50.69s
+gson: 8 cases, 4239 symbols, 20.597s

@@ -1,0 +1,25 @@
+{
+ "repository": "gulpjs/gulp",
+ "url": "https://github.com/gulpjs/gulp.git",
+ "language": "javascript",
+ "source": "S3b",
+ "mode": "s3b",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\gulpjs__gulp",
+  "seconds": 1.88,
+  "bytes": 1798532,
+  "default_branch": "master",
+  "head": "61f22dc11bb14234b555253095fa1d224ce0eab1"
+ },
+ "seconds": 0.638
+}

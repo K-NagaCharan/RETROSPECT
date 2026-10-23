@@ -1,0 +1,11 @@
+{
+  "v3_run": "held_out_test_D_v3",
+  "v3_rows_kept": 885,
+  "replaced_repositories": [
+    "lodash",
+    "moment",
+    "typeorm"
+  ],
+  "v4_run": "held_out_test_D_v3_v4_parserfix",
+  "total_rows": 903
+}

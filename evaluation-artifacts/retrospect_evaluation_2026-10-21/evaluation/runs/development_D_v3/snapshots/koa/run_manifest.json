@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T12:10:40.587Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\development_D_v3\\snapshots\\koa.cases.jsonl",
+  "case_count": 1,
+  "snapshots": [
+    {
+      "repository": "koa",
+      "path": "D:/clones/koa",
+      "pin": "2fecd029c6ce6b79d65158d28a76538f7f6b0378",
+      "head_before": "2fecd029c6ce6b79d65158d28a76538f7f6b0378",
+      "clean_before": true,
+      "cases": 1,
+      "symbols": 138,
+      "index_seconds": 0.291,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 9.481,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 110.588,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "2fecd029c6ce6b79d65158d28a76538f7f6b0378",
+      "clean_after": true,
+      "seconds_total": 121.101
+    }
+  ],
+  "finished_utc": "2026-10-22T12:12:41.771Z"
+}

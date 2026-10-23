@@ -1,0 +1,15 @@
+{
+ "repository": "apache/drill",
+ "url": "https://github.com/apache/drill.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "skipped",
+ "reason": "clone failed: fatal: cannot create directory at 'contrib/format-deltalake/src/test/resources/data-reader-partition-values/as_int=0/as_long=0/as_byte=0/as_short=0/as_boolean=true/as_float=0.0/as_double=0.0/as_string",
+ "funnel": {
+  "clone_seconds": 22.738
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

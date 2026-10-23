@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T09:21:08.870Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_D_v3\\snapshots\\dit.cases.jsonl",
+  "case_count": 22,
+  "snapshots": [
+    {
+      "repository": "dit",
+      "path": "D:/base papers considered/laya testing/data/repos/dit",
+      "pin": "23fcb940c7bcdd9b7ddf426a4b423da8e6b76361",
+      "head_before": "23fcb940c7bcdd9b7ddf426a4b423da8e6b76361",
+      "clean_before": true,
+      "cases": 22,
+      "symbols": 4780,
+      "index_seconds": 1.672,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 22.425,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 338.49,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "23fcb940c7bcdd9b7ddf426a4b423da8e6b76361",
+      "clean_after": true,
+      "seconds_total": 380.977
+    }
+  ],
+  "finished_utc": "2026-10-22T09:27:29.918Z"
+}

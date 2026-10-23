@@ -1,0 +1,25 @@
+{
+ "repository": "jquense/yup",
+ "url": "https://github.com/jquense/yup.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\jquense__yup",
+  "seconds": 7.846,
+  "bytes": 5218696,
+  "default_branch": "master",
+  "head": "ff31eee8a2b10c938bb3a22544d9e33957a8cf01"
+ },
+ "seconds": 9.134
+}

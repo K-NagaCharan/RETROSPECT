@@ -1,0 +1,13 @@
+{
+ "repository": "encode/httpx",
+ "url": "https://github.com/encode/httpx.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:httpx)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

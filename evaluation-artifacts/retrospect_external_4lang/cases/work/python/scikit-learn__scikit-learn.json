@@ -1,0 +1,538 @@
+{
+ "repository": "scikit-learn/scikit-learn",
+ "url": "https://github.com/scikit-learn/scikit-learn.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 96,
+  "passed_extractor_check": 29,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "6528e14085d059f9d0c94f93378e7e3c0b967f27",
+   "old": "test_ridge",
+   "new": "test_ridge_regression_unpenalized",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "6528e14085d059f9d0c94f93378e7e3c0b967f27",
+   "old": "test_ridge_singular",
+   "new": "test_ridge_regression_unpenalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "6528e14085d059f9d0c94f93378e7e3c0b967f27",
+   "old": "test_ridge_sample_weights",
+   "new": "test_ridge_regression_unpenalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "6528e14085d059f9d0c94f93378e7e3c0b967f27",
+   "old": "test_toy_ridge_object",
+   "new": "test_ridge_regression_unpenalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "6528e14085d059f9d0c94f93378e7e3c0b967f27",
+   "old": "test_ridge_sparse_svd",
+   "new": "test_ridge_regression_unpenalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_sparse_mb_k_means_callable_init",
+   "new": "test_predict_dense_sparse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_mini_batch_k_means_random_init_partial_fit",
+   "new": "test_predict_dense_sparse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_minibatch_tol",
+   "new": "test_predict_dense_sparse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_minibatch_set_init_size",
+   "new": "test_predict_dense_sparse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_predict_equal_labels",
+   "new": "test_predict_dense_sparse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_full_vs_elkan",
+   "new": "test_predict_dense_sparse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_sparse_mb_k_means_callable_init",
+   "new": "test_kmeans_init_fitted_centers",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_mini_batch_k_means_random_init_partial_fit",
+   "new": "test_kmeans_init_fitted_centers",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_minibatch_tol",
+   "new": "test_kmeans_init_fitted_centers",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_minibatch_set_init_size",
+   "new": "test_kmeans_init_fitted_centers",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_predict_equal_labels",
+   "new": "test_kmeans_init_fitted_centers",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_full_vs_elkan",
+   "new": "test_kmeans_init_fitted_centers",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_sparse_mb_k_means_callable_init",
+   "new": "test_kmeans_empty_cluster_relocated",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_mini_batch_k_means_random_init_partial_fit",
+   "new": "test_kmeans_empty_cluster_relocated",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_minibatch_tol",
+   "new": "test_kmeans_empty_cluster_relocated",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_minibatch_set_init_size",
+   "new": "test_kmeans_empty_cluster_relocated",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_predict_equal_labels",
+   "new": "test_kmeans_empty_cluster_relocated",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4f496868c6aa7f50db99229847285efbe50040c2",
+   "old": "test_full_vs_elkan",
+   "new": "test_kmeans_empty_cluster_relocated",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d788dcb1990fffd765c73bea1b63854f0ca6fe20",
+   "old": "set_testing_parameters",
+   "new": "assert_allclose_dense_sparse",
+   "source": "S3",
+   "reason": "body similarity 0.023 < 0.5"
+  },
+  {
+   "commit": "7efeb5ab60518b81eaa10d3397e46ff2c3eb555e",
+   "old": "_kmeans_single",
+   "new": "_kmeans_single_lloyd",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "7efeb5ab60518b81eaa10d3397e46ff2c3eb555e",
+   "old": "_kmeans_single",
+   "new": "partition",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "bc02bd524373232718bb2690b844dd0cd6439c4b",
+   "old": "decision_paths",
+   "new": "decision_path",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "141eb0b27c8a3ff7f30dc7fdfe4c46ac2f74a7f2",
+   "old": "sample",
+   "new": "sample_y",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "515defe7a416d7341abc5530476f5cac4aa5c293",
+   "old": "auto_correlation",
+   "new": "auto",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "515defe7a416d7341abc5530476f5cac4aa5c293",
+   "old": "cross_correlation",
+   "new": "auto",
+   "source": "S3",
+   "reason": "body similarity 0.250 < 0.5"
+  },
+  {
+   "commit": "515defe7a416d7341abc5530476f5cac4aa5c293",
+   "old": "auto_correlation",
+   "new": "cross",
+   "source": "S3",
+   "reason": "body similarity 0.250 < 0.5"
+  },
+  {
+   "commit": "515defe7a416d7341abc5530476f5cac4aa5c293",
+   "old": "cross_correlation",
+   "new": "cross",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "a8000405de6d8a56425e739a65f0e39e67577943",
+   "old": "get_n_jobs",
+   "new": "_modified_weiszfeld_step",
+   "source": "S3",
+   "reason": "body similarity 0.095 < 0.5"
+  },
+  {
+   "commit": "de2be61e460023c0d0a15d419fe9fb9bddce2502",
+   "old": "fit_and_score",
+   "new": "_fit_and_score",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "aaa4f81b67710bec9ff6e6d6ba0a9b868ef84bf2",
+   "old": "_split",
+   "new": "_split_with_kernel",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "711bfd2285682f318cbefe45a3a69b3e3446b6d5",
+   "old": "pairwise_distances_argmin",
+   "new": "pairwise_distances_argmin_min",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "808799c1469c6becfefe61495d6212e145a6d2a6",
+   "old": "multiclass_log_loss",
+   "new": "log_loss",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "b22c0ca5e1d903b0884ed91d55d577695e0297ad",
+   "old": "mean_h",
+   "new": "mean_hiddens",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "97c9760ce12acb225a55a1ca98d1b0fce2573046",
+   "old": "_sigmoid",
+   "new": "_logistic_sigmoid",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "017afab7afdff92a5906ffc53a5b4bc734324bab",
+   "old": "_apply_transform",
+   "new": "_transform_selected",
+   "source": "S3",
+   "reason": "body similarity 0.265 < 0.5"
+  },
+  {
+   "commit": "b5d3e93e7723a84685e13ceef976f87bc4b3a031",
+   "old": "boost",
+   "new": "_boost",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "60c730d21e93652dedf8de8ab689c3f124be446a",
+   "old": "get_loss_function",
+   "new": "_get_loss_function",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "193ac024a4bd1125ea132bb4c0c2c0a6cbf2680c",
+   "old": "mutual_information",
+   "new": "mutual_information_score",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c496a6eed25457239fcb4f0c7e6836d545dfbf1f",
+   "old": "_check_cv",
+   "new": "check_cv",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_classif",
+   "new": "make_classification",
+   "source": "S3",
+   "reason": "body similarity 0.161 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_reg",
+   "new": "make_classification",
+   "source": "S3",
+   "reason": "body similarity 0.130 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "make_regression_dataset",
+   "new": "make_classification",
+   "source": "S3",
+   "reason": "body similarity 0.170 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_classif",
+   "new": "make_regression",
+   "source": "S3",
+   "reason": "body similarity 0.202 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_reg",
+   "new": "make_regression",
+   "source": "S3",
+   "reason": "body similarity 0.190 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "make_regression_dataset",
+   "new": "make_regression",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_classif",
+   "new": "make_friedman1",
+   "source": "S3",
+   "reason": "body similarity 0.218 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_reg",
+   "new": "make_friedman1",
+   "source": "S3",
+   "reason": "body similarity 0.199 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "make_regression_dataset",
+   "new": "make_friedman1",
+   "source": "S3",
+   "reason": "body similarity 0.171 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_classif",
+   "new": "make_friedman2",
+   "source": "S3",
+   "reason": "body similarity 0.189 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_reg",
+   "new": "make_friedman2",
+   "source": "S3",
+   "reason": "body similarity 0.175 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "make_regression_dataset",
+   "new": "make_friedman2",
+   "source": "S3",
+   "reason": "body similarity 0.146 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_classif",
+   "new": "make_friedman3",
+   "source": "S3",
+   "reason": "body similarity 0.196 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_reg",
+   "new": "make_friedman3",
+   "source": "S3",
+   "reason": "body similarity 0.182 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "make_regression_dataset",
+   "new": "make_friedman3",
+   "source": "S3",
+   "reason": "body similarity 0.143 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_classif",
+   "new": "make_s_curve",
+   "source": "S3",
+   "reason": "body similarity 0.242 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "test_dataset_reg",
+   "new": "make_s_curve",
+   "source": "S3",
+   "reason": "body similarity 0.256 < 0.5"
+  },
+  {
+   "commit": "032f76dec46e34f83b19c26191c348f1904dc578",
+   "old": "make_regression_dataset",
+   "new": "make_s_curve",
+   "source": "S3",
+   "reason": "body similarity 0.123 < 0.5"
+  },
+  {
+   "commit": "130b84d724af3d5dc218ac1be084030b9e02302e",
+   "old": "f_chi2",
+   "new": "chi2",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "94f65ccb717ce97dbf9fb650b7a07cc9a6f95064",
+   "old": "barycenter",
+   "new": "barycenter_weights",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f3b6f57749d666fcdc1786ec4429e7a7857e406e",
+   "old": "barycenter_weights",
+   "new": "barycenter",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c75f88e5da0a40a78b685af2711b8bfb045d02dc",
+   "old": "grid",
+   "new": "iter_grid",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "27d3900dceac69273f9208e983752a5338574a58",
+   "old": "compute_rsquared",
+   "new": "__str__",
+   "source": "S3",
+   "reason": "constructor/dunder or name <= 3 chars"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "4d0793fc4e6449d66d24938d35ab95f6baea6537",
+  "parent": "edbdf48f8dc79b3386cd71e755606ccb4709b8be",
+  "old": "silhouette_coefficient",
+  "new": "silhouette_score",
+  "message": "silhouette_coefficient -> silhouette_score",
+  "commit_url": "https://github.com/scikit-learn/scikit-learn/commit/4d0793fc4e6449d66d24938d35ab95f6baea6537",
+  "similarity": 0.982,
+  "before": {
+   "name": "silhouette_coefficient",
+   "qualifiedName": "silhouette_coefficient",
+   "file": "sklearn/metrics/unsupervised.py",
+   "startLine": 13
+  },
+  "after": {
+   "name": "silhouette_score",
+   "qualifiedName": "silhouette_score",
+   "file": "sklearn/metrics/unsupervised.py",
+   "startLine": 13
+  },
+  "pin": "5a8c45f390faa818a1b21f46be55e1faed4e4515",
+  "first_containing": "8dfe631489c0dce50d0ce405bfdf0ed1d3adf7a8",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 76,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 852,
+   "window_command": "git log --format=%H --topo-order -n 400 5a8c45f390faa818a1b21f46be55e1faed4e4515"
+  },
+  "target": {
+   "file": "sklearn/metrics/cluster/unsupervised.py",
+   "qualifiedName": "silhouette_score",
+   "name": "silhouette_score"
+  },
+  "a_query": "Compute the mean Silhouette Coefficient of all samples.",
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\scikit-learn__scikit-learn",
+  "seconds": 48.05,
+  "bytes": 220504346,
+  "default_branch": "main",
+  "head": "289c4d5cfa1b5c74c2c03420ed809c499ddf7287"
+ },
+ "seconds": 345.531
+}

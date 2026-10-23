@@ -1,0 +1,19 @@
+{
+  "repository": "marshmallow",
+  "language": "python",
+  "pin": "d08471b17880c62b789971ada638707a11d3f8d4",
+  "window": 1500,
+  "commits": 1256,
+  "mergesSkipped": 244,
+  "commitsWithChanges": 736,
+  "events": {
+    "signature_change": 500,
+    "deletion_no_successor": 53,
+    "scope_change": 38,
+    "ambiguous_pairing": 5,
+    "inlining": 1,
+    "rename": 2,
+    "extraction": 1
+  },
+  "parseFailures": 0
+}

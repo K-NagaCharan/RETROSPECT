@@ -1,0 +1,19 @@
+{
+  "repository": "pytest",
+  "language": "python",
+  "pin": "420cf37a3fc8c03c9a4769c2635a03773d27be10",
+  "window": 1500,
+  "commits": 1194,
+  "mergesSkipped": 306,
+  "commitsWithChanges": 558,
+  "events": {
+    "signature_change": 152,
+    "deletion_no_successor": 32,
+    "rename": 4,
+    "extraction": 8,
+    "ambiguous_pairing": 10,
+    "scope_change": 10,
+    "move": 23
+  },
+  "parseFailures": 0
+}

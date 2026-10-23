@@ -1,0 +1,33 @@
+{
+ "repository": "apache/camel",
+ "url": "https://github.com/apache/camel.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "c30deabcaed4726bce4371d76257db63f2eba87c",
+   "old": "testTransferExeption",
+   "new": "testTransferException",
+   "source": "S1",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\apache__camel",
+  "seconds": 365.489,
+  "bytes": 1603243935,
+  "default_branch": "main",
+  "head": "5aac7df76b839abfd87effb477fae7723dcf88b1"
+ },
+ "seconds": 368.129
+}

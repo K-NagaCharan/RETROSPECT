@@ -1,0 +1,1862 @@
+{
+ "repository": "angular/angular",
+ "url": "https://github.com/angular/angular.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 287,
+  "passed_extractor_check": 32,
+  "dropped_at_pin": 1
+ },
+ "rejects": [
+  {
+   "commit": "b2f08574e8f473907a501c688f294d6826cd1a24",
+   "old": "setUpControl",
+   "new": "ngControlCreate",
+   "source": "S3",
+   "reason": "body similarity 0.096 < 0.5"
+  },
+  {
+   "commit": "b2f08574e8f473907a501c688f294d6826cd1a24",
+   "old": "setUpControl",
+   "new": "ngControlUpdate",
+   "source": "S3",
+   "reason": "body similarity 0.110 < 0.5"
+  },
+  {
+   "commit": "b2f08574e8f473907a501c688f294d6826cd1a24",
+   "old": "setUpControl",
+   "new": "setUpControlValueAccessor",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "dc3131c639542ad6a463bff3da5ca84c6f8ecb6f",
+   "old": "getFixture",
+   "new": "getLastFixture",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ae0c59028a2f393ea5716bf222db2c38e7a3989f",
+   "old": "field",
+   "new": "fieldTree",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "884765be56a4da39cdd82773b7fd36b72f1daabb",
+   "old": "hasProperty",
+   "new": "metadata",
+   "source": "S3",
+   "reason": "body similarity 0.158 < 0.5"
+  },
+  {
+   "commit": "884765be56a4da39cdd82773b7fd36b72f1daabb",
+   "old": "property",
+   "new": "hasMetadata",
+   "source": "S3",
+   "reason": "body similarity 0.158 < 0.5"
+  },
+  {
+   "commit": "b29e6469eddad36f391dc5579e711665739f29f9",
+   "old": "property",
+   "new": "aggregateMetadata",
+   "source": "S3",
+   "reason": "body similarity 0.300 < 0.5"
+  },
+  {
+   "commit": "b29e6469eddad36f391dc5579e711665739f29f9",
+   "old": "aggregateProperty",
+   "new": "metadata",
+   "source": "S3",
+   "reason": "body similarity 0.264 < 0.5"
+  },
+  {
+   "commit": "e711f99d81ea7dbd4526f859c363244fccdf0626",
+   "old": "provideExperimentalCheckNoChangesForDebug",
+   "new": "provideCheckNoChangesConfig",
+   "source": "S3",
+   "reason": "body similarity 0.271 < 0.5"
+  },
+  {
+   "commit": "8562667b0e89a16ab4fd3bae744f3004ed57275e",
+   "old": "elementPropertyInternal",
+   "new": "setPropertyAndInputs",
+   "source": "S3",
+   "reason": "body similarity 0.385 < 0.5"
+  },
+  {
+   "commit": "e1d2a9c591f3c9fef6f8f8e9da06d7c5905d7404",
+   "old": "applyProviderOverridesToModule",
+   "new": "applyProviderOverridesInScope",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "7a971ca3791b860af9e7396f5e0774c00745d1e9",
+   "old": "fineRenameLocations",
+   "new": "findRenameLocations",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1b9193b3fb3481ef3a404bdfff0a94742d0364f7",
+   "old": "debugMatch",
+   "new": "matchDebug",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "16039d837e4a52ac6ef4ae9fd4748badf9e8b8c1",
+   "old": "markTaskCompleted",
+   "new": "markAsCompleted",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "21f6b736f5e2203038af3807166f2383fdd980ec",
+   "old": "getComponentName",
+   "new": "getDirectiveName",
+   "source": "S3",
+   "reason": "body similarity 0.455 < 0.5"
+  },
+  {
+   "commit": "81cb54fc159c6936d5eda01b5affd3236eb018e5",
+   "old": "optionalOperator",
+   "new": "consumeOptionalOperator",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "bef14cf4241507583b80b2cd952cb816f9662df4",
+   "old": "optionalCharacter",
+   "new": "consumeOptionalCharacter",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c7ea3260bc2b99211c83311a9a0e2487d2a6aea9",
+   "old": "addCodeAndCallback",
+   "new": "expectContains",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c7ea3260bc2b99211c83311a9a0e2487d2a6aea9",
+   "old": "contains",
+   "new": "expectContains",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "182c08bee110edf9d88abac141b7bed2d332c38f",
+   "old": "getPrfromBranch",
+   "new": "getPrFromBranch",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c151f9cdc8a38ec1a5083b2e4f9e7e6318ef8227",
+   "old": "namespace",
+   "new": "setNS",
+   "source": "S3",
+   "reason": "body similarity 0.143 < 0.5"
+  },
+  {
+   "commit": "c151f9cdc8a38ec1a5083b2e4f9e7e6318ef8227",
+   "old": "namespaceHTML",
+   "new": "setNS",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c151f9cdc8a38ec1a5083b2e4f9e7e6318ef8227",
+   "old": "namespace",
+   "new": "setHtmlNS",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c151f9cdc8a38ec1a5083b2e4f9e7e6318ef8227",
+   "old": "namespaceHTML",
+   "new": "setHtmlNS",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0d06c866c69bb9dec51c570afc2bd77977aacd23",
+   "old": "setNS",
+   "new": "namespace",
+   "source": "S3",
+   "reason": "body similarity 0.143 < 0.5"
+  },
+  {
+   "commit": "0d06c866c69bb9dec51c570afc2bd77977aacd23",
+   "old": "setHtmlNS",
+   "new": "namespace",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0d06c866c69bb9dec51c570afc2bd77977aacd23",
+   "old": "setNS",
+   "new": "namespaceHTML",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0d06c866c69bb9dec51c570afc2bd77977aacd23",
+   "old": "setHtmlNS",
+   "new": "namespaceHTML",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "a0a01f1e1ec7283d8125f46ccf92e257aa266df4",
+   "old": "elementClass",
+   "new": "elementClassNamed",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "a0a01f1e1ec7283d8125f46ccf92e257aa266df4",
+   "old": "elementStyle",
+   "new": "elementClassNamed",
+   "source": "S3",
+   "reason": "body similarity 0.400 < 0.5"
+  },
+  {
+   "commit": "a0a01f1e1ec7283d8125f46ccf92e257aa266df4",
+   "old": "elementClass",
+   "new": "elementStyleNamed",
+   "source": "S3",
+   "reason": "body similarity 0.400 < 0.5"
+  },
+  {
+   "commit": "a0a01f1e1ec7283d8125f46ccf92e257aa266df4",
+   "old": "elementStyle",
+   "new": "elementStyleNamed",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "6a1ab61ccead0488966050cef6344f22a639e190",
+   "old": "getNgCanonicalFileName",
+   "new": "createCompilerHost",
+   "source": "S3",
+   "reason": "body similarity 0.055 < 0.5"
+  },
+  {
+   "commit": "adeea5d86a8068540a81d29fe2e56374e86acd0d",
+   "old": "resolveFileToImport",
+   "new": "moduleNameToFileName",
+   "source": "S3",
+   "reason": "body similarity 0.180 < 0.5"
+  },
+  {
+   "commit": "adeea5d86a8068540a81d29fe2e56374e86acd0d",
+   "old": "resolveImportToFile",
+   "new": "fileNameToModuleName",
+   "source": "S3",
+   "reason": "body similarity 0.180 < 0.5"
+  },
+  {
+   "commit": "d7de5c4f8ecce74139ce5cde9a895212d7b0abbc",
+   "old": "equalsTo",
+   "new": "reference",
+   "source": "S3",
+   "reason": "body similarity 0.100 < 0.5"
+  },
+  {
+   "commit": "8d746e3f6795c8840116f4649a37a1efb4243eb9",
+   "old": "setBaseTestProviders",
+   "new": "configureCompiler",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "8d746e3f6795c8840116f4649a37a1efb4243eb9",
+   "old": "setBaseTestProviders",
+   "new": "configureModule",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "8d746e3f6795c8840116f4649a37a1efb4243eb9",
+   "old": "setBaseTestProviders",
+   "new": "initTestEnvironment",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "8d746e3f6795c8840116f4649a37a1efb4243eb9",
+   "old": "setBaseTestProviders",
+   "new": "browserTestCompiler",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "8d746e3f6795c8840116f4649a37a1efb4243eb9",
+   "old": "setBaseTestProviders",
+   "new": "serverTestPlatform",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "0c600cf6e31b7f69f5a36f7dea959e4884217a4d",
+   "old": "createHostView",
+   "new": "resolveComponent",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "0c600cf6e31b7f69f5a36f7dea959e4884217a4d",
+   "old": "compileInHost",
+   "new": "instance",
+   "source": "S3",
+   "reason": "body similarity 0.034 < 0.5"
+  },
+  {
+   "commit": "0c600cf6e31b7f69f5a36f7dea959e4884217a4d",
+   "old": "createHostView",
+   "new": "instance",
+   "source": "S3",
+   "reason": "body similarity 0.017 < 0.5"
+  },
+  {
+   "commit": "0c600cf6e31b7f69f5a36f7dea959e4884217a4d",
+   "old": "compileInHost",
+   "new": "createComponent",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0c600cf6e31b7f69f5a36f7dea959e4884217a4d",
+   "old": "createHostView",
+   "new": "createComponent",
+   "source": "S3",
+   "reason": "body similarity 0.439 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "setDebugInfo",
+   "new": "methods",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "createEmbeddedViewInContainer",
+   "new": "methods",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "createHostViewInContainer",
+   "new": "methods",
+   "source": "S3",
+   "reason": "body similarity 0.017 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "setDebugInfo",
+   "new": "context",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "createEmbeddedViewInContainer",
+   "new": "context",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "createHostViewInContainer",
+   "new": "context",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "setDebugInfo",
+   "new": "component",
+   "source": "S3",
+   "reason": "body similarity 0.040 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "createEmbeddedViewInContainer",
+   "new": "component",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "createHostViewInContainer",
+   "new": "component",
+   "source": "S3",
+   "reason": "body similarity 0.018 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "setDebugInfo",
+   "new": "dirty",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "createEmbeddedViewInContainer",
+   "new": "dirty",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "2b34c88b69af8b0031fdb7006327bb8260e23dda",
+   "old": "createHostViewInContainer",
+   "new": "dirty",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "66cd84e0d5fd1e74fdc18834ce37eaf096dbec65",
+   "old": "serialize",
+   "new": "serializeXmb",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnTurnStart",
+   "new": "onUnstable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "onTurnStart",
+   "new": "onUnstable",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnTurnDone",
+   "new": "onUnstable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "onTurnDone",
+   "new": "onUnstable",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnEventDone",
+   "new": "onUnstable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "onEventDone",
+   "new": "onUnstable",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnErrorHandler",
+   "new": "onUnstable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnTurnStart",
+   "new": "onMicrotaskEmpty",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "onTurnStart",
+   "new": "onMicrotaskEmpty",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnTurnDone",
+   "new": "onMicrotaskEmpty",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "onTurnDone",
+   "new": "onMicrotaskEmpty",
+   "source": "S3",
+   "reason": "body similarity 0.200 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnEventDone",
+   "new": "onMicrotaskEmpty",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "onEventDone",
+   "new": "onMicrotaskEmpty",
+   "source": "S3",
+   "reason": "body similarity 0.200 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnErrorHandler",
+   "new": "onMicrotaskEmpty",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnTurnStart",
+   "new": "onStable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "onTurnStart",
+   "new": "onStable",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnTurnDone",
+   "new": "onStable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "onTurnDone",
+   "new": "onStable",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnEventDone",
+   "new": "onStable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "onEventDone",
+   "new": "onStable",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "310620fd12c0bb10fafda24b3a23fca057f53576",
+   "old": "overrideOnErrorHandler",
+   "new": "onStable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "body similarity 0.023 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "routerCanReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "body similarity 0.019 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "routerCanDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "routerOnActivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "routerOnDeactivate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "routerOnReuse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "ngDoCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "body similarity 0.067 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "body similarity 0.167 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "ngOnDestroy",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "body similarity 0.024 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "ngOnInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "body similarity 0.020 < 0.5"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "ngOnChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "ngAfterViewChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "ngAfterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "ngAfterContentInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canReuse",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "canDeactivate",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onActivate",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onDeactivate",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onReuse",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "doCheck",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onInit",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "onChanges",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewChecked",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentChecked",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterContentInit",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "604c8bbad54ffbcec1d6a5e407821adda8a74a19",
+   "old": "afterViewInit",
+   "new": "ngAfterViewInit",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "551d9a16882d144d62e38161670a1a1c9a0c4db9",
+   "old": "onCheck",
+   "new": "afterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "551d9a16882d144d62e38161670a1a1c9a0c4db9",
+   "old": "onChange",
+   "new": "afterContentChecked",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "551d9a16882d144d62e38161670a1a1c9a0c4db9",
+   "old": "onAllChangesDone",
+   "new": "doCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "551d9a16882d144d62e38161670a1a1c9a0c4db9",
+   "old": "onChange",
+   "new": "doCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "551d9a16882d144d62e38161670a1a1c9a0c4db9",
+   "old": "onAllChangesDone",
+   "new": "onChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "551d9a16882d144d62e38161670a1a1c9a0c4db9",
+   "old": "onCheck",
+   "new": "onChanges",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "551d9a16882d144d62e38161670a1a1c9a0c4db9",
+   "old": "onChange",
+   "new": "onChanges",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "4c8ea12903067a2ae281e9079f9ad7395e25bb44",
+   "old": "append",
+   "new": "extend",
+   "source": "S3",
+   "reason": "body similarity 0.437 < 0.5"
+  },
+  {
+   "commit": "c8bdacb195bb205277b0ca54e0f27c4fe284d7f0",
+   "old": "domElement",
+   "new": "nativeElement",
+   "source": "S3",
+   "reason": "body similarity 0.222 < 0.5"
+  },
+  {
+   "commit": "c8bdacb195bb205277b0ca54e0f27c4fe284d7f0",
+   "old": "domElement",
+   "new": "getNativeElementSync",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "5dee8e26cca16605af9bcdb78dbffb8d6470f15f",
+   "old": "loadIntoExistingLocation",
+   "new": "loadIntoLocation",
+   "source": "S3",
+   "reason": "body similarity 0.209 < 0.5"
+  },
+  {
+   "commit": "5dee8e26cca16605af9bcdb78dbffb8d6470f15f",
+   "old": "loadIntoNewLocation",
+   "new": "loadIntoLocation",
+   "source": "S3",
+   "reason": "body similarity 0.200 < 0.5"
+  },
+  {
+   "commit": "5dee8e26cca16605af9bcdb78dbffb8d6470f15f",
+   "old": "loadNextToExistingLocation",
+   "new": "loadIntoLocation",
+   "source": "S3",
+   "reason": "body similarity 0.164 < 0.5"
+  },
+  {
+   "commit": "5dee8e26cca16605af9bcdb78dbffb8d6470f15f",
+   "old": "detachFreeView",
+   "new": "loadIntoLocation",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "5dee8e26cca16605af9bcdb78dbffb8d6470f15f",
+   "old": "loadIntoExistingLocation",
+   "new": "loadNextToLocation",
+   "source": "S3",
+   "reason": "body similarity 0.339 < 0.5"
+  },
+  {
+   "commit": "5dee8e26cca16605af9bcdb78dbffb8d6470f15f",
+   "old": "detachFreeView",
+   "new": "loadNextToLocation",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "5030ffb01c6c322c91f6e88c01a15c65f8a6d62d",
+   "old": "getHostElement",
+   "new": "detachFreeView",
+   "source": "S3",
+   "reason": "body similarity 0.154 < 0.5"
+  },
+  {
+   "commit": "5030ffb01c6c322c91f6e88c01a15c65f8a6d62d",
+   "old": "getHostElement",
+   "new": "getRootNodes",
+   "source": "S3",
+   "reason": "body similarity 0.143 < 0.5"
+  }
+ ],
+ "drops": [
+  {
+   "commit": "884765be56a4da39cdd82773b7fd36b72f1daabb",
+   "old": "property",
+   "new": "metadata",
+   "source": "S3",
+   "reason": "OLD still exists as a callable at pin"
+  }
+ ],
+ "selected": {
+  "source": "S3",
+  "commit": "0c600cf6e31b7f69f5a36f7dea959e4884217a4d",
+  "parent": "41404057cf38719d6473158f12b5cbdd22573898",
+  "old": "compileInHost",
+  "new": "resolveComponent",
+  "message": "refactor(core): introduce ComponentFactory.\n\nEach compile template now exposes a `<CompName>NgFactory` variable\nwith an instance of a `ComponentFactory`.\nCalling `ComponentFactory.create` returns a `ComponentRef` that can\nbe used directly.\n\nBREAKING CHANGE:\n- `Compiler` is renamed to `ComponentResolver`,\n  `Compiler.compileInHost` has been renamed to `ComponentResolver.resolveComponent`.\n- `ComponentRef.dispose` is renamed to `ComponentRef.destroy`\n- `ViewContainerRef.createHostView` is renamed ",
+  "commit_url": "https://github.com/angular/angular/commit/0c600cf6e31b7f69f5a36f7dea959e4884217a4d",
+  "similarity": 0.878,
+  "before": {
+   "name": "compileInHost",
+   "qualifiedName": "RuntimeCompiler.compileInHost",
+   "file": "modules/angular2/src/compiler/runtime_compiler.ts",
+   "startLine": 81
+  },
+  "after": {
+   "name": "resolveComponent",
+   "qualifiedName": "RuntimeCompiler.resolveComponent",
+   "file": "modules/angular2/src/compiler/runtime_compiler.ts",
+   "startLine": 81
+  },
+  "pin": "fad3b6434c529965500dade72ea0ef4735d270f0",
+  "first_containing": "0c600cf6e31b7f69f5a36f7dea959e4884217a4d",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 fad3b6434c529965500dade72ea0ef4735d270f0"
+  },
+  "target": {
+   "file": "modules/angular2/src/compiler/runtime_compiler.ts",
+   "qualifiedName": "RuntimeCompiler.resolveComponent",
+   "name": "resolveComponent"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\angular__angular",
+  "seconds": 141.223,
+  "bytes": 632444077,
+  "default_branch": "main",
+  "head": "48b7e2ec868719e66ee13b32a88a6eb50939cb43"
+ },
+ "seconds": 1216.403
+}

@@ -1,0 +1,111 @@
+{
+ "repository": "pylint-dev/pylint",
+ "url": "https://github.com/pylint-dev/pylint.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 8,
+  "passed_extractor_check": 2,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "996da9ef9b6ce3cdefaa35afbb2550c5f795c635",
+   "old": "init_linter",
+   "new": "initialized_linter",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "e38dfbbf597a25d9f5f96e5c9030cf43ef58257e",
+   "old": "get_tests",
+   "new": "get_functional_test_files_from_directory",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "5073ebd9fb907ce258ec9e3e15f092c43132f25e",
+   "old": "_ini_format_section",
+   "new": "format_section",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "da67a9da682e51844fbc674229ff6619eb9c816a",
+   "old": "get_message_definition",
+   "new": "get_message_definitions",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "7b6b63a12f18ba7c2bce72866cfcce9b4494f60e",
+   "old": "_check_name_identical_to_args",
+   "new": "_has_homonym_in_upper_function_scope",
+   "source": "S3",
+   "reason": "body similarity 0.203 < 0.5"
+  },
+  {
+   "commit": "3ebf31c0d7b02a43c593bddc90663f6c509eb39b",
+   "old": "get_astroid",
+   "new": "get_ast",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "8394e37ed45a500b5bde544859fa79568bbbb371",
+  "parent": "5d23bc763026b0170c64e757229430f547b21ca0",
+  "old": "show_message",
+  "new": "show_sourcefile",
+  "message": "Rename show_message to the more appropriate show_sourcefile\n\n--HG--\nbranch : source_view",
+  "commit_url": "https://github.com/pylint-dev/pylint/commit/8394e37ed45a500b5bde544859fa79568bbbb371",
+  "similarity": 1,
+  "before": {
+   "name": "show_message",
+   "qualifiedName": "LintGui.show_message",
+   "file": "gui.py",
+   "startLine": 475
+  },
+  "after": {
+   "name": "show_sourcefile",
+   "qualifiedName": "LintGui.show_sourcefile",
+   "file": "gui.py",
+   "startLine": 475
+  },
+  "pin": "784ddd5828cc98aebdbaf797964ede6ad91cffe8",
+  "first_containing": "d463a2b7bd376ed11d270903760b6a9ac762ef21",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 54,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 54,
+   "window_command": "git log --format=%H --topo-order -n 400 784ddd5828cc98aebdbaf797964ede6ad91cffe8"
+  },
+  "target": {
+   "file": "gui.py",
+   "qualifiedName": "LintGui.show_sourcefile",
+   "name": "show_sourcefile"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\pylint-dev__pylint",
+  "seconds": 16.337,
+  "bytes": 52865333,
+  "default_branch": "main",
+  "head": "4bcc991378f8f877df8b41a367288703809cbec4"
+ },
+ "seconds": 92.986
+}

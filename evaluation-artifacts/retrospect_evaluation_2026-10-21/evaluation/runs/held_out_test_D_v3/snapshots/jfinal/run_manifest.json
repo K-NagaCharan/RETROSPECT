@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T08:40:45.403Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_D_v3\\snapshots\\jfinal.cases.jsonl",
+  "case_count": 8,
+  "snapshots": [
+    {
+      "repository": "jfinal",
+      "path": "D:/clones/jfinal",
+      "pin": "0e0af1599b93ac3c6b2f14a318a647372da52924",
+      "head_before": "0e0af1599b93ac3c6b2f14a318a647372da52924",
+      "clean_before": true,
+      "cases": 8,
+      "symbols": 5059,
+      "index_seconds": 1.392,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 13.029,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 115.023,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "0e0af1599b93ac3c6b2f14a318a647372da52924",
+      "clean_after": true,
+      "seconds_total": 136.509
+    }
+  ],
+  "finished_utc": "2026-10-22T08:43:01.987Z"
+}

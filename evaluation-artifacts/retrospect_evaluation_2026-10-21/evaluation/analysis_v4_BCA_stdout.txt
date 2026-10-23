@@ -1,0 +1,57 @@
+{
+ "java": {
+  "population": 6,
+  "clusters": 6,
+  "MRR_b1": 0.0846,
+  "MRR_b4": 0.2329,
+  "dMRR": 0.1482,
+  "p": 0.03125,
+  "p_holm": 0.125,
+  "tr": {
+   "rescue@10": 2,
+   "improved": 3,
+   "unchanged": 1
+  },
+  "decision": "INCONCLUSIVE"
+ },
+ "python": {
+  "population": 2,
+  "clusters": 2,
+  "MRR_b1": 0.6667,
+  "MRR_b4": 0.6667,
+  "dMRR": 0.0,
+  "p": 1.0,
+  "p_holm": 1.0,
+  "tr": {
+   "unchanged": 2
+  },
+  "decision": "NOT_TESTABLE (<6 clusters)"
+ },
+ "javascript": {
+  "population": 1,
+  "clusters": 1,
+  "MRR_b1": 0.3333,
+  "MRR_b4": 0.5,
+  "dMRR": 0.1667,
+  "p": 1.0,
+  "p_holm": 1.0,
+  "tr": {
+   "improved": 1
+  },
+  "decision": "NOT_TESTABLE (<6 clusters)"
+ },
+ "typescript": {
+  "population": 5,
+  "clusters": 3,
+  "MRR_b1": 0.7043,
+  "MRR_b4": 0.7286,
+  "dMRR": 0.0135,
+  "p": 1.0,
+  "p_holm": 1.0,
+  "tr": {
+   "unchanged": 4,
+   "rescue@10": 1
+  },
+  "decision": "NOT_TESTABLE (<6 clusters)"
+ }
+}

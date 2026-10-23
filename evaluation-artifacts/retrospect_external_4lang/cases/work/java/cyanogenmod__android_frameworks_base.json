@@ -1,0 +1,15 @@
+{
+ "repository": "cyanogenmod/android_frameworks_base",
+ "url": "https://github.com/CyanogenMod/android_frameworks_base.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "skipped",
+ "reason": "clone exceeded 10 minutes",
+ "funnel": {
+  "clone_seconds": 600.01
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

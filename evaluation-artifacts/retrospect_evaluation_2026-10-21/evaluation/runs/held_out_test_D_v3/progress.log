@@ -1,0 +1,48 @@
+2026-10-22T07:49:46.773Z start cases=retrieval_cases/held_out_test/cases.jsonl tasks=D_negative repos=23 cases=903
+2026-10-22T07:49:46.776Z run koa (1 cases)
+2026-10-22T07:51:45.310Z done koa
+2026-10-22T07:51:45.314Z run redux (1 cases)
+2026-10-22T07:52:59.245Z done redux
+2026-10-22T07:52:59.246Z run axios (2 cases)
+2026-10-22T07:55:43.924Z done axios
+2026-10-22T07:55:43.928Z run lodash (2 cases)
+2026-10-22T08:03:49.913Z FAILED lodash exit=1
+2026-10-22T08:03:49.915Z run vue (2 cases)
+2026-10-22T08:06:16.274Z done vue
+2026-10-22T08:06:16.275Z run spring-boot (3 cases)
+2026-10-22T08:21:35.741Z done spring-boot
+2026-10-22T08:21:35.742Z run fastapi (4 cases)
+2026-10-22T08:22:45.480Z done fastapi
+2026-10-22T08:22:45.481Z run moment (4 cases)
+2026-10-22T08:35:57.214Z FAILED moment exit=1
+2026-10-22T08:35:57.215Z run pytest (7 cases)
+2026-10-22T08:38:05.851Z done pytest
+2026-10-22T08:38:05.854Z run fastify (8 cases)
+2026-10-22T08:40:45.317Z done fastify
+2026-10-22T08:40:45.318Z run jfinal (8 cases)
+2026-10-22T08:43:02.028Z done jfinal
+2026-10-22T08:43:02.029Z run typeorm (12 cases)
+2026-10-22T09:08:31.077Z FAILED typeorm exit=1
+2026-10-22T09:08:31.078Z run quasar (13 cases)
+2026-10-22T09:11:09.298Z done quasar
+2026-10-22T09:11:09.299Z run marshmallow (15 cases)
+2026-10-22T09:13:06.393Z done marshmallow
+2026-10-22T09:13:06.394Z run flask (17 cases)
+2026-10-22T09:14:37.283Z done flask
+2026-10-22T09:14:37.284Z run jest (18 cases)
+2026-10-22T09:19:12.939Z done jest
+2026-10-22T09:19:12.940Z run mocha (19 cases)
+2026-10-22T09:21:08.789Z done mocha
+2026-10-22T09:21:08.790Z run dit (22 cases)
+2026-10-22T09:27:30.058Z done dit
+2026-10-22T09:27:30.059Z run svelte (25 cases)
+2026-10-22T09:32:14.878Z done svelte
+2026-10-22T09:32:14.879Z run black (33 cases)
+2026-10-22T09:34:59.804Z done black
+2026-10-22T09:34:59.806Z run httpx (57 cases)
+2026-10-22T09:37:35.104Z done httpx
+2026-10-22T09:37:35.106Z run rxjs (87 cases)
+2026-10-22T09:41:35.171Z done rxjs
+2026-10-22T09:41:35.175Z run sonarqube (543 cases)
+2026-10-22T10:44:18.517Z done sonarqube
+2026-10-22T10:44:18.654Z ALL DONE: 903 case rows merged

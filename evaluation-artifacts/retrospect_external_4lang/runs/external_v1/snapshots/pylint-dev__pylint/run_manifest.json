@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T08:04:22.573Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\pylint-dev__pylint.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "pylint-dev/pylint",
+      "path": "D:/clones_external/pylint-dev__pylint",
+      "pin": "784ddd5828cc98aebdbaf797964ede6ad91cffe8",
+      "head_before": "784ddd5828cc98aebdbaf797964ede6ad91cffe8",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 1471,
+      "index_seconds": 0.522,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 124.069,
+      "history_extraction_failures_H400": {
+        "count": 1,
+        "firstError": "95e39254ef70:test/messages/func_w0701.txt: FunctionExtractor: No supported language adapter found for file 'test/messages/func_w0701.txt' (languageId: '')"
+      },
+      "history_symbols_with_history_H400": 860,
+      "history_commits_analyzed_H400": 389,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "784ddd5828cc98aebdbaf797964ede6ad91cffe8",
+      "clean_after": true,
+      "seconds_total": 126.117
+    }
+  ],
+  "finished_utc": "2026-10-23T08:06:28.817Z"
+}

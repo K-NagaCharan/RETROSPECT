@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T05:12:10.540Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_BCA_v3\\snapshots\\axios.cases.jsonl",
+  "case_count": 1,
+  "snapshots": [
+    {
+      "repository": "axios",
+      "path": "D:/clones/axios",
+      "pin": "8d8e84401d38c2a9c62acd18b3df17478a0caf6b",
+      "head_before": "8d8e84401d38c2a9c62acd18b3df17478a0caf6b",
+      "clean_before": true,
+      "cases": 1,
+      "symbols": 1890,
+      "index_seconds": 1.598,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 18.987,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 134.076,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "8d8e84401d38c2a9c62acd18b3df17478a0caf6b",
+      "clean_after": true,
+      "seconds_total": 155.41
+    }
+  ],
+  "finished_utc": "2026-10-22T05:14:46.031Z"
+}

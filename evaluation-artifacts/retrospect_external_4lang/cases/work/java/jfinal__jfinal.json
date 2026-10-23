@@ -1,0 +1,13 @@
+{
+ "repository": "jfinal/jfinal",
+ "url": "https://github.com/jfinal/jfinal.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:jfinal)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

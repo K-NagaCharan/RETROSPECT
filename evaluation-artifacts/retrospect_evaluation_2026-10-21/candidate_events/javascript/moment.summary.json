@@ -1,0 +1,21 @@
+{
+  "repository": "moment",
+  "language": "javascript",
+  "pin": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+  "window": 1500,
+  "commits": 1163,
+  "mergesSkipped": 337,
+  "commitsWithChanges": 806,
+  "events": {
+    "ambiguous_pairing": 648,
+    "rename": 558,
+    "rename_move": 15,
+    "signature_change": 597,
+    "extraction": 14,
+    "deletion_no_successor": 363,
+    "inlining": 13,
+    "split_part": 1944,
+    "scope_change": 1
+  },
+  "parseFailures": 1534
+}

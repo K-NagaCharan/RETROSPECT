@@ -212,9 +212,7 @@ The owner reviewed the 29 developer-attested events and confirmed 26.
 
 | Repos | MRR B1 | MRR G | R@1 B1 | R@1 G | R@10 B1 | R@10 G | Δ (G − B1) | 95% CI | p (two-sided) | Rescues / harms @10 | Decision |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 42 | 0.3628 | 0.7747 | 0.2619 | 0.7143 | 0.5238 | 0.8571 | 0.4119 | [0.279, 0.5489] | 9.9999e-06 | 14 / 0 | **SUPPORTED** |
-
-The p-value is the smallest value attainable with 100,000 Monte Carlo assignments.
+| 42 | 0.3628 | 0.7747 | 0.2619 | 0.7143 | 0.5238 | 0.8571 | 0.4119 | [0.279, 0.5489] | < 0.0001 (minimum attainable with 100,000 Monte Carlo assignments) | 14 / 0 | **SUPPORTED** |
 
 **Harm check (task A, current-docstring queries, G vs B1):** 14 repositories, MRR B1 0.6512 vs G 0.6452, Δ −0.006, CI [−0.0179, 0.0], harms@10 = 0. Result: **PASS** (the rule is harms@10 = 0 and Δ ≥ −0.01).
 
@@ -222,7 +220,7 @@ The p-value is the smallest value attainable with 100,000 Monte Carlo assignment
 
 | Repos | MRR B1 | MRR G | Δ | 95% CI | p | Rescues / harms @10 |
 |---|---|---|---|---|---|---|
-| 39 | 0.3856 | 0.7574 | 0.3718 | [0.2348, 0.5091] | 9.9999e-06 | 12 / 0 |
+| 39 | 0.3856 | 0.7574 | 0.3718 | [0.2348, 0.5091] | < 0.0001 (minimum attainable with 100,000 Monte Carlo assignments) | 12 / 0 |
 
 ### Main four-language benchmark (v4, parser-fix re-measurement)
 
@@ -273,15 +271,17 @@ The figures below are held-out task B (old identifier), pooled, cluster-level.
 | `eval-v1` | `1ac3b358c248fab5db2d7618de4cc057a856c9d4` | Code used for the external confirmation: B1–B4, the parser-leak fix, and G |
 | `cli-v1.0.0` | `13cdb3a0165eddb7276b7344c3e4c76812051105` | `retrospect-cli` v1.0.0 (`rtro`); retrieval code identical to `eval-v1` |
 
-**Evaluation workspaces.** Both live outside this repository, under `D:\base papers considered\Test creation\`:
+**Evaluation workspaces.** Verbatim copies of both workspaces are published in [evaluation-artifacts/](evaluation-artifacts/). See its [README](evaluation-artifacts/README.md) for what each workspace is and which files are authoritative.
 
-- **`retrospect_evaluation_2026-10-21\`** (main four-language benchmark):
-  - **authoritative analysis:** `evaluation\analysis\v4_parserfix\`;
-  - **re-measurement and E3-Reach comparison:** `reports\parserfix_remeasurement.md`.
-- **`retrospect_external_4lang\`** (external confirmation):
-  - **results:** `analysis\external_v1\results.json`, and `analysis\external_v1_posthoc\results_posthoc.json` for the sensitivity and post-hoc rows;
-  - **pre-registration:** `protocol.md`;
-  - **code version:** `VERSION.md`.
+- **[evaluation-artifacts/retrospect_evaluation_2026-10-21/](evaluation-artifacts/retrospect_evaluation_2026-10-21/)** (main four-language benchmark):
+  - **authoritative analysis:** `evaluation-artifacts/retrospect_evaluation_2026-10-21/evaluation/analysis/v4_parserfix/`;
+  - **re-measurement and E3-Reach comparison:** [reports/parserfix_remeasurement.md](evaluation-artifacts/retrospect_evaluation_2026-10-21/reports/parserfix_remeasurement.md).
+- **[evaluation-artifacts/retrospect_external_4lang/](evaluation-artifacts/retrospect_external_4lang/)** (external confirmation):
+  - **results:** [analysis/external_v1/results.json](evaluation-artifacts/retrospect_external_4lang/analysis/external_v1/results.json), and [analysis/external_v1_posthoc/results_posthoc.json](evaluation-artifacts/retrospect_external_4lang/analysis/external_v1_posthoc/results_posthoc.json) for the sensitivity and post-hoc rows;
+  - **pre-registration:** [protocol.md](evaluation-artifacts/retrospect_external_4lang/protocol.md);
+  - **code version:** [VERSION.md](evaluation-artifacts/retrospect_external_4lang/VERSION.md).
+
+The copies keep the absolute local paths of the machine that produced them; read those paths as provenance.
 
 **Tests.** Run the safe subset:
 
@@ -297,14 +297,14 @@ A complete map of the documentation, including which documents are historical re
 
 ## 7. License and citation
 
-ISC. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
 
 If you use Retrospect in academic work, please cite:
 
 ```
 @misc{retrospect2026,
   title  = {Retrospect: Evolution-Aware Code Retrieval},
-  author = {TODO},
+  author = {K-NagaCharan},
   year   = {2026},
   note   = {Citation placeholder; to be replaced with the paper reference}
 }

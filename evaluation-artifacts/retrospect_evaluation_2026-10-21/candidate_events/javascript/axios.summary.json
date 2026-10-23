@@ -1,0 +1,20 @@
+{
+  "repository": "axios",
+  "language": "javascript",
+  "pin": "8d8e84401d38c2a9c62acd18b3df17478a0caf6b",
+  "window": 1500,
+  "commits": 1463,
+  "mergesSkipped": 37,
+  "commitsWithChanges": 647,
+  "events": {
+    "scope_change": 19,
+    "signature_change": 59,
+    "rename": 4,
+    "deletion_no_successor": 59,
+    "move": 11,
+    "extraction": 4,
+    "rename_move": 1,
+    "ambiguous_pairing": 8
+  },
+  "parseFailures": 1
+}

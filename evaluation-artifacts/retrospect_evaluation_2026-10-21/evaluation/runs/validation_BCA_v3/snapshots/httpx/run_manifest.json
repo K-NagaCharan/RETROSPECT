@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T07:01:28.217Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\validation_BCA_v3\\snapshots\\httpx.cases.jsonl",
+  "case_count": 3,
+  "snapshots": [
+    {
+      "repository": "httpx",
+      "path": "D:/clones/httpx",
+      "pin": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+      "head_before": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+      "clean_before": true,
+      "cases": 3,
+      "symbols": 1206,
+      "index_seconds": 0.333,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 14.177,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 110.841,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+      "clean_after": true,
+      "seconds_total": 127.52
+    }
+  ],
+  "finished_utc": "2026-10-22T07:03:35.812Z"
+}

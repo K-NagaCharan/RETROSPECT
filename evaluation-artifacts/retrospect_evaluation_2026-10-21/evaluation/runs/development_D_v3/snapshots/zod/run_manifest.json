@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T13:51:55.193Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\development_D_v3\\snapshots\\zod.cases.jsonl",
+  "case_count": 11,
+  "snapshots": [
+    {
+      "repository": "zod",
+      "path": "D:/clones/zod",
+      "pin": "680d19f7d1e042e55934209caeb79bc843b94f44",
+      "head_before": "680d19f7d1e042e55934209caeb79bc843b94f44",
+      "clean_before": true,
+      "cases": 11,
+      "symbols": 3674,
+      "index_seconds": 16.151,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 187.574,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 657.623,
+      "parser_healthy_after_history_H400": false,
+      "head_after": "680d19f7d1e042e55934209caeb79bc843b94f44",
+      "clean_after": true,
+      "seconds_total": 870.588
+    }
+  ],
+  "finished_utc": "2026-10-22T14:06:26.085Z"
+}

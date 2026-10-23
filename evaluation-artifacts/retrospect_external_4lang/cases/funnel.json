@@ -1,0 +1,71 @@
+{
+ "by_language_source": {
+  "java/S1": {
+   "repositories_considered": 46,
+   "excluded": 4,
+   "clone_skipped": 6,
+   "no_valid_event": 24,
+   "selected": 12,
+   "candidate_events": 181,
+   "passed_extractor_check": 45,
+   "dropped_at_pin": 12
+  },
+  "python/S3": {
+   "repositories_considered": 19,
+   "excluded": 5,
+   "clone_skipped": 0,
+   "no_valid_event": 3,
+   "selected": 11,
+   "candidate_events": 420,
+   "passed_extractor_check": 114,
+   "dropped_at_pin": 3
+  },
+  "python/S2": {
+   "repositories_considered": 3,
+   "excluded": 1,
+   "clone_skipped": 0,
+   "no_valid_event": 1,
+   "selected": 1,
+   "candidate_events": 38,
+   "passed_extractor_check": 9,
+   "dropped_at_pin": 0
+  },
+  "javascript/S3": {
+   "repositories_considered": 25,
+   "excluded": 8,
+   "clone_skipped": 0,
+   "no_valid_event": 12,
+   "selected": 5,
+   "candidate_events": 144,
+   "passed_extractor_check": 24,
+   "dropped_at_pin": 7
+  },
+  "javascript/S3b": {
+   "repositories_considered": 12,
+   "excluded": 0,
+   "clone_skipped": 0,
+   "no_valid_event": 10,
+   "selected": 2,
+   "candidate_events": 93,
+   "passed_extractor_check": 5,
+   "dropped_at_pin": 2
+  },
+  "typescript/S3": {
+   "repositories_considered": 25,
+   "excluded": 4,
+   "clone_skipped": 1,
+   "no_valid_event": 9,
+   "selected": 11,
+   "candidate_events": 1500,
+   "passed_extractor_check": 139,
+   "dropped_at_pin": 15
+  }
+ },
+ "selected_per_language": {
+  "java": 12,
+  "python": 12,
+  "javascript": 7,
+  "typescript": 11
+ },
+ "total_selected": 42
+}

@@ -1,0 +1,13 @@
+{
+  "frozen_utc": "2026-10-23T07:23:22.093Z",
+  "seed": "20261023",
+  "retrospect_head": "1ac3b358c248fab5db2d7618de4cc057a856c9d4",
+  "files": {
+    "cases/cases.jsonl": "13760875089d6b4800a40b87fc92c1c2b12a9f56b0b78d65e25a02c19993f00b",
+    "cases/exclusion_log.csv": "a6891f94c55458ccfd4c7a409dea235a87e917a33c6defc7ab1b9f66f534286f",
+    "cases/review_sheet.csv": "706ee6f48fa460e8e1085b4c0858d2609091cef422d07eb59d3d87a335e01928",
+    "cases/funnel.json": "b70bdd8ab036c70f52e3c32fc7de1549cbb0bf474c8298be60cf9c090811f9a8",
+    "REPOSITORY_INVENTORY.csv": "320c61b21c5ea73f4f3b44cd96f3c0f5116233bf835c19e338de12ebd56e08a6",
+    "cases/excluded_repositories.json": "6a36acb840e36a9c9db465481b11a78a6a7d9d89e97cecbb966aed91053d41ec"
+  }
+}

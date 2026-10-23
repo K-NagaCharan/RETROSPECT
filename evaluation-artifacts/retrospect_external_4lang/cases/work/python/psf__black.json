@@ -1,0 +1,13 @@
+{
+ "repository": "psf/black",
+ "url": "https://github.com/psf/black.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:black)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

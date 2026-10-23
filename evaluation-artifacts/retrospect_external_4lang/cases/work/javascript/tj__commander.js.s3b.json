@@ -1,0 +1,622 @@
+{
+ "repository": "tj/commander.js",
+ "url": "https://github.com/tj/commander.js.git",
+ "language": "javascript",
+ "source": "S3b",
+ "mode": "s3b",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 81,
+  "passed_extractor_check": 2,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "fullDescription",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.015 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_lazyHasImplicitHelpCommand",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "prepareCommands",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.196 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestCommandLength",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.050 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestOptionLength",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestArgLength",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.053 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_hasVisibleOptions",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionHelp",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "padOptionDetails",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "commandHelp",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.108 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "pad",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "constructor/dunder or name <= 3 chars"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "commandUsage",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "fullDescription",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_lazyHasImplicitHelpCommand",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "prepareCommands",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.047 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestCommandLength",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestOptionLength",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestArgLength",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_hasVisibleOptions",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionHelp",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.013 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "padOptionDetails",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.063 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "commandHelp",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "pad",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "constructor/dunder or name <= 3 chars"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "commandDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_lazyHasImplicitHelpCommand",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.018 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "prepareCommands",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.060 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestCommandLength",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.033 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestOptionLength",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.078 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestArgLength",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.034 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_hasVisibleOptions",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.037 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionHelp",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.091 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "padOptionDetails",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.034 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "commandHelp",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "pad",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "constructor/dunder or name <= 3 chars"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "optionDescription",
+   "source": "S3b",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "fullDescription",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.054 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_lazyHasImplicitHelpCommand",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.007 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "prepareCommands",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.094 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestCommandLength",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestOptionLength",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestArgLength",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.014 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_hasVisibleOptions",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.014 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionHelp",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.084 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "padOptionDetails",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.028 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "commandHelp",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.147 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "pad",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "constructor/dunder or name <= 3 chars"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "formatHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.017 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "fullDescription",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_lazyHasImplicitHelpCommand",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "prepareCommands",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestCommandLength",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestOptionLength",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestArgLength",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_hasVisibleOptions",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionHelp",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "padOptionDetails",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "commandHelp",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "pad",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "constructor/dunder or name <= 3 chars"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "createHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "fullDescription",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_lazyHasImplicitHelpCommand",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "prepareCommands",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestCommandLength",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestOptionLength",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "largestArgLength",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "_hasVisibleOptions",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionHelp",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "padOptionDetails",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "commandHelp",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "pad",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "constructor/dunder or name <= 3 chars"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "configureHelp",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "a05a8bc27cdd4d61e49f80ccc7c851e721beca47",
+   "old": "_optionEx",
+   "new": "default",
+   "source": "S3b",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "a05a8bc27cdd4d61e49f80ccc7c851e721beca47",
+   "old": "_optionEx",
+   "new": "argParser",
+   "source": "S3b",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "a05a8bc27cdd4d61e49f80ccc7c851e721beca47",
+   "old": "_optionEx",
+   "new": "argumentRejected",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "a05a8bc27cdd4d61e49f80ccc7c851e721beca47",
+   "old": "_optionEx",
+   "new": "choices",
+   "source": "S3b",
+   "reason": "body similarity 0.019 < 0.5"
+  },
+  {
+   "commit": "d26a26d23289f632e99637147d094961d3c76f68",
+   "old": "cb",
+   "new": "write",
+   "source": "S3b",
+   "reason": "constructor/dunder or name <= 3 chars"
+  },
+  {
+   "commit": "d26a26d23289f632e99637147d094961d3c76f68",
+   "old": "_helpAndError",
+   "new": "write",
+   "source": "S3b",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "d26a26d23289f632e99637147d094961d3c76f68",
+   "old": "cb",
+   "new": "addHelpText",
+   "source": "S3b",
+   "reason": "constructor/dunder or name <= 3 chars"
+  },
+  {
+   "commit": "d26a26d23289f632e99637147d094961d3c76f68",
+   "old": "_helpAndError",
+   "new": "addHelpText",
+   "source": "S3b",
+   "reason": "body similarity 0.015 < 0.5"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3b",
+  "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+  "parent": "b0c58847407b087b03f3ca922861d27ef555fb33",
+  "old": "fullDescription",
+  "new": "optionDescription",
+  "message": "Refactor help internals into separate interface/class (#1365)\n\n* Start filling out HelpUtils to try pattern\r\n\r\n* Shift the largestFoo routines into helper\r\n\r\n* Update generation of Commands section of help\r\n\r\n* Rework helpInformation in consistent new style\r\n\r\n* Remove unused routines\r\n\r\n* Make columns part of HelpUtils\r\n\r\n* Offer a light weight override to HelpUtils\r\n\r\n* Tweak comment\r\n\r\n* Add chain test for helpUtilOverrides\r\n\r\n* Add itemIndent as another proof of concept of allowing overrides",
+  "commit_url": "https://github.com/tj/commander.js/commit/19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+  "similarity": 0.8,
+  "before": {
+   "name": "fullDescription",
+   "qualifiedName": "Option.fullDescription",
+   "file": "index.js",
+   "startLine": 66
+  },
+  "after": {
+   "name": "optionDescription",
+   "qualifiedName": "Help.optionDescription",
+   "file": "index.js",
+   "startLine": 217
+  },
+  "pin": "b040db4a905830a64eed42bf06642b0ee1603d8b",
+  "first_containing": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 60,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 59,
+   "window_command": "git log --format=%H --topo-order -n 400 b040db4a905830a64eed42bf06642b0ee1603d8b"
+  },
+  "target": {
+   "file": "index.js",
+   "qualifiedName": "Help.optionDescription",
+   "name": "optionDescription"
+  },
+  "a_query": "Get the option description to show in the list of options.",
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\tj__commander.js",
+  "seconds": 2.428,
+  "bytes": 5364669,
+  "default_branch": "master",
+  "head": "ba6d13ddb4243e5913367734f8c159089ffe7834"
+ },
+ "seconds": 16.658
+}

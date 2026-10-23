@@ -1,0 +1,699 @@
+{
+ "repository": "webpack/webpack",
+ "url": "https://github.com/webpack/webpack.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 95,
+  "passed_extractor_check": 5,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "52a0426943aad163479ecb8516e940508c0b1efd",
+   "old": "delta",
+   "new": "bytes",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "fill",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "next",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.027 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "type",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "start",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "unit",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "name",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.072 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "declarations",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.058 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "token",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.023 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "grammar",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.020 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "_joinRuleEntries",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.027 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "printer",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.007 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "node",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.028 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "parent",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.028 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "source",
+   "new": "takeRetractable",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "fill",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "next",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "type",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "start",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "unit",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "name",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "declarations",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "token",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "grammar",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "_joinRuleEntries",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "printer",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "node",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "parent",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74ce129a3d5605da3335db03e4d621ecdf2f150d",
+   "old": "source",
+   "new": "unprefixed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4410afecbed7d6e0e5d4a06c9813f5e1522f48f7",
+   "old": "collectGenericFontFamilies",
+   "new": "collectAlternationKeywords",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "removeOpenAt",
+   "source": "S3",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "removeOpenAt",
+   "source": "S3",
+   "reason": "body similarity 0.023 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "popOpen",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "popOpen",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "_enterNode",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "_exitNode",
+   "source": "S3",
+   "reason": "body similarity 0.185 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "_exitNode",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "_canFlush",
+   "source": "S3",
+   "reason": "body similarity 0.104 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "_canFlush",
+   "source": "S3",
+   "reason": "body similarity 0.061 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "_walkRun",
+   "source": "S3",
+   "reason": "body similarity 0.054 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "_walkRun",
+   "source": "S3",
+   "reason": "body similarity 0.054 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "_streamRewind",
+   "source": "S3",
+   "reason": "body similarity 0.080 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "_streamRewind",
+   "source": "S3",
+   "reason": "body similarity 0.060 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "_streamFlush",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "_streamFlush",
+   "source": "S3",
+   "reason": "body similarity 0.035 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "_streamSync",
+   "source": "S3",
+   "reason": "body similarity 0.055 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "_streamSync",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "_streamFinish",
+   "source": "S3",
+   "reason": "body similarity 0.072 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "_streamFinish",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "enter",
+   "new": "print",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "78d0d4c2084495a67832c31b1f2398ee33b0b641",
+   "old": "exit",
+   "new": "print",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "064db336b72dfb7a65678c570cd0478b88456972",
+   "old": "walkTokens",
+   "new": "parseHtml",
+   "source": "S3",
+   "reason": "body similarity 0.089 < 0.5"
+  },
+  {
+   "commit": "064db336b72dfb7a65678c570cd0478b88456972",
+   "old": "walkTokens",
+   "new": "tokenizeDescriptor",
+   "source": "S3",
+   "reason": "body similarity 0.015 < 0.5"
+  },
+  {
+   "commit": "064db336b72dfb7a65678c570cd0478b88456972",
+   "old": "buildAst",
+   "new": "tokenizeDescriptor",
+   "source": "S3",
+   "reason": "body similarity 0.017 < 0.5"
+  },
+  {
+   "commit": "064db336b72dfb7a65678c570cd0478b88456972",
+   "old": "walkTokens",
+   "new": "expand",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "064db336b72dfb7a65678c570cd0478b88456972",
+   "old": "buildAst",
+   "new": "expand",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "node",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "parent",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "type",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "start",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "source",
+   "source": "S3",
+   "reason": "body similarity 0.115 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "name",
+   "source": "S3",
+   "reason": "body similarity 0.147 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "children",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "tagName",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "namespace",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "attributes",
+   "source": "S3",
+   "reason": "body similarity 0.122 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "attributeCount",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "attributeAt",
+   "source": "S3",
+   "reason": "body similarity 0.091 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "findAttribute",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "attributeName",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "attributeValue",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "attributeNameStart",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "attributeValueEnd",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "doctypePublicId",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "doctypeSystemId",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "firstChild",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "nextSibling",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "e6fb5473224f4cf574e907019499d99b44282d2b",
+   "old": "findAttr",
+   "new": "parentOf",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "606712d6b9c4f1cfea83cc21cfe2d75f299b05f4",
+   "old": "isIdentStartCodePoint",
+   "new": "_setName",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "606712d6b9c4f1cfea83cc21cfe2d75f299b05f4",
+   "old": "isIdentStartCodePoint",
+   "new": "_mkLeaf",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "606712d6b9c4f1cfea83cc21cfe2d75f299b05f4",
+   "old": "isIdentStartCodePoint",
+   "new": "_mkContainer",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "5ba12650ce1a2f144963ecc429129a90efa6271f",
+   "old": "generateCssText",
+   "new": "_generateImportExpressions",
+   "source": "S3",
+   "reason": "body similarity 0.092 < 0.5"
+  },
+  {
+   "commit": "5ba12650ce1a2f144963ecc429129a90efa6271f",
+   "old": "generateCssText",
+   "new": "_renderMergedCss",
+   "source": "S3",
+   "reason": "body similarity 0.143 < 0.5"
+  },
+  {
+   "commit": "5ba12650ce1a2f144963ecc429129a90efa6271f",
+   "old": "generateCssText",
+   "new": "_renderCss",
+   "source": "S3",
+   "reason": "body similarity 0.081 < 0.5"
+  },
+  {
+   "commit": "5ba12650ce1a2f144963ecc429129a90efa6271f",
+   "old": "generateCssText",
+   "new": "_generateCssText",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "75525437cd67b8e6dca71168aa9a10406dae2b32",
+   "old": "stripBackslashes",
+   "new": "unescapedName",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "75525437cd67b8e6dca71168aa9a10406dae2b32",
+   "old": "stripBackslashes",
+   "new": "unescaped",
+   "source": "S3",
+   "reason": "body similarity 0.030 < 0.5"
+  },
+  {
+   "commit": "b9f96bfae77243c7b3ebaabf1bbbe507796595a0",
+   "old": "provide",
+   "new": "getOrInsert",
+   "source": "S3",
+   "reason": "body similarity 0.486 < 0.5"
+  },
+  {
+   "commit": "4e99d94bc7bbe7bf1276834a8b645a22e6b30528",
+   "old": "ignore",
+   "new": "keep",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "18ae73dad4bb761593a9f5529a182601e1b57520",
+   "old": "chunk",
+   "new": "chunks",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "064db336b72dfb7a65678c570cd0478b88456972",
+  "parent": "dfe8a7dc9402f55af9812ad61aaa9065c071afee",
+  "old": "buildAst",
+  "new": "parseHtml",
+  "message": "refactor: unify CSS and HTML syntax parser interfaces and add parser benchmarks (#21450)\n\n* refactor: unify css/html tokenizer export as walkTokens and rename buildAst to parseHtml\n\nRename CSS syntax's readToken export to walkTokens so both lib/css/syntax.js\nand lib/html/syntax.js expose the tokenizer under one name, and rename HTML\nsyntax's buildAst to parseHtml to match the CSS parse* naming. Update all\nconsumers (HtmlGenerator, tests, snapshot) accordingly.\n\n* test: consolidate css/html synta",
+  "commit_url": "https://github.com/webpack/webpack/commit/064db336b72dfb7a65678c570cd0478b88456972",
+  "similarity": 0.999,
+  "before": {
+   "name": "buildAst",
+   "qualifiedName": "buildAst",
+   "file": "lib/html/syntax.js",
+   "startLine": 5219
+  },
+  "after": {
+   "name": "parseHtml",
+   "qualifiedName": "parseHtml",
+   "file": "lib/html/syntax.js",
+   "startLine": 5228
+  },
+  "pin": "2f18ee08b843a1d14ba869c65a0f859a50a41e8e",
+  "first_containing": "064db336b72dfb7a65678c570cd0478b88456972",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 2f18ee08b843a1d14ba869c65a0f859a50a41e8e"
+  },
+  "target": {
+   "file": "lib/html/syntax.js",
+   "qualifiedName": "parseHtml",
+   "name": "parseHtml"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\webpack__webpack",
+  "seconds": 53.397,
+  "bytes": 198013951,
+  "default_branch": "main",
+  "head": "759b5396ad0cb7e8e02bf9404acf8a9ad63449c8"
+ },
+ "seconds": 322.93
+}

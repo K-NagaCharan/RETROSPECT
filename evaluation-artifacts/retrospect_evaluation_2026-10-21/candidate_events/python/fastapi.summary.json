@@ -1,0 +1,19 @@
+{
+  "repository": "fastapi",
+  "language": "python",
+  "pin": "3070b5105fe02c4afdba5e3aea6c2cf2e3796c7f",
+  "window": 1500,
+  "commits": 1500,
+  "mergesSkipped": 0,
+  "commitsWithChanges": 193,
+  "events": {
+    "signature_change": 298,
+    "rename": 3,
+    "deletion_no_successor": 434,
+    "extraction": 2,
+    "ambiguous_pairing": 3,
+    "move": 3,
+    "split_part": 40
+  },
+  "parseFailures": 0
+}

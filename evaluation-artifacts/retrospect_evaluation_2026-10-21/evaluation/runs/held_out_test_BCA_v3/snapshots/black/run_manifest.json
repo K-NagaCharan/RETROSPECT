@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T06:29:20.141Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_BCA_v3\\snapshots\\black.cases.jsonl",
+  "case_count": 22,
+  "snapshots": [
+    {
+      "repository": "black",
+      "path": "D:/clones/black",
+      "pin": "56a7ee682ada03e086f62d66ac01b752fbda21db",
+      "head_before": "56a7ee682ada03e086f62d66ac01b752fbda21db",
+      "clean_before": true,
+      "cases": 22,
+      "symbols": 415,
+      "index_seconds": 0.219,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 19.295,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 114.544,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "56a7ee682ada03e086f62d66ac01b752fbda21db",
+      "clean_after": true,
+      "seconds_total": 148.586
+    }
+  ],
+  "finished_utc": "2026-10-22T06:31:48.808Z"
+}

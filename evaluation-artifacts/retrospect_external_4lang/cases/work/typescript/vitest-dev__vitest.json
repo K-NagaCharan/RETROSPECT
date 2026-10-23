@@ -1,0 +1,33 @@
+{
+ "repository": "vitest-dev/vitest",
+ "url": "https://github.com/vitest-dev/vitest.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "ebfde798fbaeeb1fc7542d734dff216f39272201",
+   "old": "matchesTagsFilter",
+   "new": "matchesTags",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\vitest-dev__vitest",
+  "seconds": 25.216,
+  "bytes": 113766509,
+  "default_branch": "main",
+  "head": "272296e5d67db0d571084a64b244ebc452c33f0c"
+ },
+ "seconds": 78.019
+}

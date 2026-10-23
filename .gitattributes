@@ -1,0 +1,2 @@
+# Evaluation artifacts are verbatim copies: store bytes as-is (no line-ending conversion), so their checksums stay valid.
+evaluation-artifacts/** -text

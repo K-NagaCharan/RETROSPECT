@@ -1,0 +1,47 @@
+{
+  "started_utc": "2026-10-22T15:52:15.741Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "D:\\base papers considered\\Test creation\\retrospect_evaluation_2026-10-21\\evaluation\\runs\\development_D_v3_v4_parserfix\\snapshots\\typeorm.cases.jsonl",
+  "case_count": 6,
+  "snapshots": [
+    {
+      "repository": "typeorm",
+      "path": "D:/clones/typeorm",
+      "pin": "fe92394287516feeada6e9c308ebe22deca2458e",
+      "head_before": "fe92394287516feeada6e9c308ebe22deca2458e",
+      "clean_before": true,
+      "cases": 6,
+      "symbols": 7504,
+      "index_seconds": 6.89,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 370.581,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 6838,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 1195.958,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 7494,
+      "history_commits_analyzed_H400": 398,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "fe92394287516feeada6e9c308ebe22deca2458e",
+      "clean_after": true,
+      "seconds_total": 1581.909
+    }
+  ],
+  "finished_utc": "2026-10-22T16:18:37.787Z"
+}

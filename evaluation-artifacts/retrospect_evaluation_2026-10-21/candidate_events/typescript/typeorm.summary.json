@@ -1,0 +1,18 @@
+{
+  "repository": "typeorm",
+  "language": "typescript",
+  "pin": "fe92394287516feeada6e9c308ebe22deca2458e",
+  "window": 1500,
+  "commits": 1497,
+  "mergesSkipped": 3,
+  "commitsWithChanges": 902,
+  "events": {
+    "signature_change": 297,
+    "extraction": 13,
+    "deletion_no_successor": 88,
+    "rename": 3,
+    "scope_change": 3,
+    "ambiguous_pairing": 2
+  },
+  "parseFailures": 3134
+}

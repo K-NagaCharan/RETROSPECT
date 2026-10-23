@@ -1,0 +1,33 @@
+{
+ "repository": "hibernate/hibernate-orm",
+ "url": "https://github.com/hibernate/hibernate-orm.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "0b6ea757e34a63b1421b77ed5fbb61398377aab1",
+   "old": "testJpaFlushEntityEventListener",
+   "new": "execute",
+   "source": "S1",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\hibernate__hibernate-orm",
+  "seconds": 126.632,
+  "bytes": 421666823,
+  "default_branch": "main",
+  "head": "37616099b745e01500f65eb580f9cef270550cdb"
+ },
+ "seconds": 127.871
+}

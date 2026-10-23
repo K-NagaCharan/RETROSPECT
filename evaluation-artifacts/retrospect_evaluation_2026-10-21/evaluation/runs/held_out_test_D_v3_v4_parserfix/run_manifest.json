@@ -1,0 +1,113 @@
+{
+  "cases_file": "D:\\base papers considered\\Test creation\\retrospect_evaluation_2026-10-21\\evaluation\\runs\\held_out_test_D_v3_v4_parserfix\\input_cases.jsonl",
+  "tasks": "D_negative",
+  "horizons": "50,400",
+  "match": "exact",
+  "driver": "run_benchmark_resumable.js (one process per repository)",
+  "case_count": 18,
+  "finished_utc": "2026-10-22T19:22:50.392Z",
+  "snapshots": [
+    {
+      "repository": "lodash",
+      "path": "D:/clones/lodash",
+      "pin": "2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8",
+      "head_before": "2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8",
+      "clean_before": true,
+      "cases": 2,
+      "symbols": 4438,
+      "index_seconds": 5.077,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 150.685,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 165,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 1383.277,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 333,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8",
+      "clean_after": true,
+      "seconds_total": 1541.802
+    },
+    {
+      "repository": "moment",
+      "path": "D:/clones/moment",
+      "pin": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+      "head_before": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 7609,
+      "index_seconds": 34.978,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 121.696,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 951,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 2168.71,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 2475,
+      "history_commits_analyzed_H400": 348,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+      "clean_after": true,
+      "seconds_total": 2329.202
+    },
+    {
+      "repository": "typeorm",
+      "path": "D:/clones/typeorm",
+      "pin": "fe92394287516feeada6e9c308ebe22deca2458e",
+      "head_before": "fe92394287516feeada6e9c308ebe22deca2458e",
+      "clean_before": true,
+      "cases": 12,
+      "symbols": 7504,
+      "index_seconds": 10.327,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 401.809,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 6838,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 1150.901,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 7494,
+      "history_commits_analyzed_H400": 398,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "fe92394287516feeada6e9c308ebe22deca2458e",
+      "clean_after": true,
+      "seconds_total": 1574.583
+    }
+  ]
+}

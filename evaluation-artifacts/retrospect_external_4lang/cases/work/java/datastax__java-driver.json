@@ -1,0 +1,13 @@
+{
+ "repository": "datastax/java-driver",
+ "url": "https://github.com/datastax/java-driver.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:datastax-java-driver)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

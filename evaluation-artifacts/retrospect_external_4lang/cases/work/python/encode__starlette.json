@@ -1,0 +1,76 @@
+{
+ "repository": "encode/starlette",
+ "url": "https://github.com/encode/starlette.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 3,
+  "passed_extractor_check": 2,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "6d2e9f4faecfe7615ee8184182c659e70abb1395",
+   "old": "replace",
+   "new": "replace_components",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "2519f83765022ffb0c82a96b99024f8e68e90723",
+  "parent": "00a972c7196d05d29fb059b7de79aba3808ca74c",
+  "old": "wsconnect",
+  "new": "websocket_connect",
+  "message": "client.wsconnect -> client.websocket_connect",
+  "commit_url": "https://github.com/encode/starlette/commit/2519f83765022ffb0c82a96b99024f8e68e90723",
+  "similarity": 1,
+  "before": {
+   "name": "wsconnect",
+   "qualifiedName": "_TestClient.wsconnect",
+   "file": "starlette/testclient.py",
+   "startLine": 235
+  },
+  "after": {
+   "name": "websocket_connect",
+   "qualifiedName": "_TestClient.websocket_connect",
+   "file": "starlette/testclient.py",
+   "startLine": 235
+  },
+  "pin": "060f0593bc9a9b2edff520ce8ac2ea7116941232",
+  "first_containing": "9cfb1af592a4d99fc6615ff16092883b2f7c34a1",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 55,
+   "window_size": 158,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 55,
+   "window_command": "git log --format=%H --topo-order -n 400 060f0593bc9a9b2edff520ce8ac2ea7116941232"
+  },
+  "target": {
+   "file": "starlette/testclient.py",
+   "qualifiedName": "_TestClient.websocket_connect",
+   "name": "websocket_connect"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\encode__starlette",
+  "seconds": 2.861,
+  "bytes": 12259921,
+  "default_branch": "main",
+  "head": "61123a5c76ebb9d5786758008945c4fbbb380bf6"
+ },
+ "seconds": 9.675
+}

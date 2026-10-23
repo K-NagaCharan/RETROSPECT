@@ -1,0 +1,187 @@
+{
+ "repository": "kkroening/ffmpeg-python",
+ "url": "https://github.com/kkroening/ffmpeg-python.git",
+ "language": "python",
+ "source": "S2",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 23,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "6887ad8bac178483b7debcefa1c52de979ec0085",
+   "old": "test_repr",
+   "new": "test_node_repr",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "6887ad8bac178483b7debcefa1c52de979ec0085",
+   "old": "operator",
+   "new": "stream_operator",
+   "source": "S2",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_compile",
+   "new": "test__compile",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_filter__custom",
+   "new": "test__filter__custom",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_filter__custom_fluent",
+   "new": "test__filter__custom_fluent",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_get_args_complex_filter",
+   "new": "test__get_args__complex_filter",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_get_args_simple",
+   "new": "test__get_args__simple",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_merge_outputs",
+   "new": "test__merge_outputs",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_ffprobe",
+   "new": "test__probe",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_ffprobe_exception",
+   "new": "test__probe__exception",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_run",
+   "new": "test__run",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_run__capture_out",
+   "new": "test__run__capture_out",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_run__dummy_cmd",
+   "new": "test__run__dummy_cmd",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_run__dummy_cmd_list",
+   "new": "test__run__dummy_cmd_list",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_run__error",
+   "new": "test__run__error",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_run__input_output",
+   "new": "test__run__input_output",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a487e8603bf881519cd04afe34c1272adfa7d15",
+   "old": "test_run__multi_output",
+   "new": "test__run__multi_output",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac57e2df132d4ea05dacee642de74d057bd98f5d",
+   "old": "test_custom_filter",
+   "new": "test_filter__custom",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac57e2df132d4ea05dacee642de74d057bd98f5d",
+   "old": "test_custom_filter_fluent",
+   "new": "test_filter__custom_fluent",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac57e2df132d4ea05dacee642de74d057bd98f5d",
+   "old": "test_run_dummy_cmd",
+   "new": "test_run__dummy_cmd",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac57e2df132d4ea05dacee642de74d057bd98f5d",
+   "old": "test_run_dummy_cmd_list",
+   "new": "test_run__dummy_cmd_list",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac57e2df132d4ea05dacee642de74d057bd98f5d",
+   "old": "test_run_multi_output",
+   "new": "test_run__multi_output",
+   "source": "S2",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c162eab2a9d4af50653d460cf2ed30eff00f4475",
+   "old": "test_filter_with_bad_selectors",
+   "new": "test_get_item_with_bad_selectors",
+   "source": "S2",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\kkroening__ffmpeg-python",
+  "seconds": 1.489,
+  "bytes": 8648824,
+  "default_branch": "master",
+  "head": "df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6"
+ },
+ "seconds": 4.089
+}

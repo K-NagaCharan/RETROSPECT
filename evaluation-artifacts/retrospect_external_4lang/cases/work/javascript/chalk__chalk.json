@@ -1,0 +1,25 @@
+{
+ "repository": "chalk/chalk",
+ "url": "https://github.com/chalk/chalk.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\chalk__chalk",
+  "seconds": 1.521,
+  "bytes": 1638355,
+  "default_branch": "main",
+  "head": "72110019e147683f60e13fa0ff5c14a0c27cd9fe"
+ },
+ "seconds": 1.798
+}

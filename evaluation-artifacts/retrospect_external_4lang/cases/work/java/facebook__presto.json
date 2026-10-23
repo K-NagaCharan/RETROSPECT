@@ -1,0 +1,71 @@
+{
+ "repository": "facebook/presto",
+ "url": "https://github.com/facebook/presto.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 2,
+  "passed_extractor_check": 2,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": {
+  "source": "S1",
+  "commit": "364f50274d4b4b83d40930c0d2c4d0e57fb34589",
+  "commit_url": "https://github.com/facebook/presto/commit/364f50274d4b4b83d40930c0d2c4d0e57fb34589",
+  "type": "Rename Method",
+  "description": "Rename Method public setHashPartitionedOutput(partitionKeys List<Symbol>, hash Optional<Symbol>) : FragmentProperties renamed to public setPartitionedOutput(partitionKeys Optional<List<Symbol>>, hash Optional<Symbol>) : FragmentProperties in class com.facebook.presto.sql.planner.PlanFragmenter.FragmentProperties",
+  "old": "setHashPartitionedOutput",
+  "new": "setPartitionedOutput",
+  "oldClass": "com.facebook.presto.sql.planner.PlanFragmenter.FragmentProperties",
+  "newClass": "com.facebook.presto.sql.planner.PlanFragmenter.FragmentProperties",
+  "parent": "e9bc15c646ee7666777f884dcbefc372095f1c90",
+  "similarity": 0.814,
+  "before": {
+   "name": "setHashPartitionedOutput",
+   "qualifiedName": "com.facebook.presto.sql.planner.PlanFragmenter.FragmentProperties.setHashPartitionedOutput",
+   "file": "presto-main/src/main/java/com/facebook/presto/sql/planner/PlanFragmenter.java",
+   "startLine": 273
+  },
+  "after": {
+   "name": "setPartitionedOutput",
+   "qualifiedName": "com.facebook.presto.sql.planner.PlanFragmenter.FragmentProperties.setPartitionedOutput",
+   "file": "presto-main/src/main/java/com/facebook/presto/sql/planner/PlanFragmenter.java",
+   "startLine": 273
+  },
+  "pin": "a502e0777c3c3442bb97e347497931ce82912e9f",
+  "first_containing": "364f50274d4b4b83d40930c0d2c4d0e57fb34589",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 a502e0777c3c3442bb97e347497931ce82912e9f"
+  },
+  "target": {
+   "file": "presto-main/src/main/java/com/facebook/presto/sql/planner/PlanFragmenter.java",
+   "qualifiedName": "com.facebook.presto.sql.planner.PlanFragmenter.FragmentProperties.setPartitionedOutput",
+   "name": "setPartitionedOutput"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0.75
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\facebook__presto",
+  "seconds": 70.716,
+  "bytes": 394929159,
+  "default_branch": "master",
+  "head": "91479c26597232456b006c2934cb8567fb4a8912"
+ },
+ "seconds": 73.741
+}

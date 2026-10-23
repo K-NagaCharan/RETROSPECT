@@ -1,0 +1,117 @@
+{
+ "repository": "google/truth",
+ "url": "https://github.com/google/truth.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 13,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "1768840bf1e69892fd2a23776817f620edfed536",
+   "old": "listContainsExactlyArray",
+   "new": "iterableContainsExactlyArray",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1768840bf1e69892fd2a23776817f620edfed536",
+   "old": "listIsStrictlyOrdered",
+   "new": "iterableIsStrictlyOrdered",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1768840bf1e69892fd2a23776817f620edfed536",
+   "old": "listIsOrdered",
+   "new": "iterableIsOrdered",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1768840bf1e69892fd2a23776817f620edfed536",
+   "old": "listIsStrictlyOrderedWithComparator",
+   "new": "iterableIsStrictlyOrderedWithComparator",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1768840bf1e69892fd2a23776817f620edfed536",
+   "old": "listIsStrictlyOrderedWithComparatorFailure",
+   "new": "iterableIsStrictlyOrderedWithComparatorFailure",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1768840bf1e69892fd2a23776817f620edfed536",
+   "old": "listIsOrderedWithComparator",
+   "new": "iterableIsOrderedWithComparator",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1768840bf1e69892fd2a23776817f620edfed536",
+   "old": "listIsOrderedWithComparatorFailure",
+   "new": "iterableIsOrderedWithComparatorFailure",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1768840bf1e69892fd2a23776817f620edfed536",
+   "old": "listOrderedByBaseClassComparator",
+   "new": "iterableOrderedByBaseClassComparator",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "200f1577d238a6d3fbcf99cb2a2585b2071214a6",
+   "old": "listIsPartiallyOrderedWithComparatorFailure",
+   "new": "listIsOrderedWithComparatorFailure",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "200f1577d238a6d3fbcf99cb2a2585b2071214a6",
+   "old": "isPartiallyOrderedFailure",
+   "new": "isOrderedFailure",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "200f1577d238a6d3fbcf99cb2a2585b2071214a6",
+   "old": "isPartiallyOrderedWithNonComparableElementsFailure",
+   "new": "isOrderedWithNonComparableElementsFailure",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "200f1577d238a6d3fbcf99cb2a2585b2071214a6",
+   "old": "listIsPartiallyOrdered",
+   "new": "listIsOrdered",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "200f1577d238a6d3fbcf99cb2a2585b2071214a6",
+   "old": "listIsPartiallyOrderedWithComparator",
+   "new": "listIsOrderedWithComparator",
+   "source": "S1",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\google__truth",
+  "seconds": 4.089,
+  "bytes": 10831711,
+  "default_branch": "master",
+  "head": "67bc67430c5eabedf6134e364dcb04d1efc57ae9"
+ },
+ "seconds": 5.531
+}

@@ -1,0 +1,48 @@
+{
+ "repository": "geoserver/geoserver",
+ "url": "https://github.com/geoserver/geoserver.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "all candidate events dropped at pin checks",
+ "funnel": {
+  "candidate_events": 3,
+  "passed_extractor_check": 2,
+  "dropped_at_pin": 2
+ },
+ "rejects": [
+  {
+   "commit": "e78cda0fcf23de3973b659bc54f58a4e9b1f3bd3",
+   "old": "getGdalData",
+   "new": "getEnvironment",
+   "source": "S1",
+   "reason": "OLD still a callable in child (changed files)"
+  }
+ ],
+ "drops": [
+  {
+   "commit": "e78cda0fcf23de3973b659bc54f58a4e9b1f3bd3",
+   "old": "getOgrExecutable",
+   "new": "getExecutable",
+   "source": "S1",
+   "reason": "not IN_WINDOW+diffed at H=400 with pin offset +50 or +10 (status OUTSIDE_WINDOW, position null)"
+  },
+  {
+   "commit": "e78cda0fcf23de3973b659bc54f58a4e9b1f3bd3",
+   "old": "setOgrExecutable",
+   "new": "setExecutable",
+   "source": "S1",
+   "reason": "not IN_WINDOW+diffed at H=400 with pin offset +50 or +10 (status OUTSIDE_WINDOW, position null)"
+  }
+ ],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\geoserver__geoserver",
+  "seconds": 112.689,
+  "bytes": 673491714,
+  "default_branch": "main",
+  "head": "1399a70079759920e7361f2ec1cd09e4fe58939c"
+ },
+ "seconds": 118.06
+}

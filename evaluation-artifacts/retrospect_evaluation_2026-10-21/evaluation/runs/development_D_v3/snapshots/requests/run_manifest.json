@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T12:19:44.542Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\development_D_v3\\snapshots\\requests.cases.jsonl",
+  "case_count": 2,
+  "snapshots": [
+    {
+      "repository": "requests",
+      "path": "D:/clones/requests",
+      "pin": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+      "head_before": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+      "clean_before": true,
+      "cases": 2,
+      "symbols": 745,
+      "index_seconds": 0.292,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 10.297,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 71.095,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+      "clean_after": true,
+      "seconds_total": 83.341
+    }
+  ],
+  "finished_utc": "2026-10-22T12:21:07.963Z"
+}

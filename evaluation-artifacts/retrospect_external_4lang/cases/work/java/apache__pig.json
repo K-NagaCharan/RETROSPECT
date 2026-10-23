@@ -1,0 +1,33 @@
+{
+ "repository": "apache/pig",
+ "url": "https://github.com/apache/pig.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "7a1659c12d76b510809dea1dea1f5100bcf4cd60",
+   "old": "startSparkJob",
+   "new": "addFilesToSparkJob",
+   "source": "S1",
+   "reason": "commit not in default-branch clone"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\apache__pig",
+  "seconds": 29.379,
+  "bytes": 127281124,
+  "default_branch": "trunk",
+  "head": "09588bb38843de4f4673980e969f51406ec9ceb0"
+ },
+ "seconds": 29.472
+}

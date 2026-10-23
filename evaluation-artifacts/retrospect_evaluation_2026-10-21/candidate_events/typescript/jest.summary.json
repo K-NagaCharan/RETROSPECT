@@ -1,0 +1,21 @@
+{
+  "repository": "jest",
+  "language": "typescript",
+  "pin": "61050e9323e742539dc2360236671110e37329e6",
+  "window": 1500,
+  "commits": 1500,
+  "mergesSkipped": 0,
+  "commitsWithChanges": 658,
+  "events": {
+    "signature_change": 207,
+    "deletion_no_successor": 77,
+    "move": 32,
+    "rename_move": 15,
+    "extraction": 34,
+    "rename": 18,
+    "scope_change": 11,
+    "ambiguous_pairing": 37,
+    "inlining": 1
+  },
+  "parseFailures": 0
+}

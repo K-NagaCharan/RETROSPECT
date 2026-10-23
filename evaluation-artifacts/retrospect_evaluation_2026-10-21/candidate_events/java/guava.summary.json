@@ -1,0 +1,21 @@
+{
+  "repository": "guava",
+  "language": "java",
+  "pin": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+  "window": 1500,
+  "commits": 1500,
+  "mergesSkipped": 0,
+  "commitsWithChanges": 837,
+  "events": {
+    "deletion_no_successor": 97,
+    "ambiguous_pairing": 96,
+    "rename": 9,
+    "scope_change": 7,
+    "inlining": 4,
+    "extraction": 16,
+    "signature_change": 33,
+    "move": 1,
+    "split_part": 3
+  },
+  "parseFailures": 8358
+}

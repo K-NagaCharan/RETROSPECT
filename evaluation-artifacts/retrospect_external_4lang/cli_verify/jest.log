@@ -1,0 +1,95 @@
+warning: in the working copy of 'app.js', LF will be replaced by CRLF the next time Git touches it
+Switched to a new branch 'feature-pr'
+warning: in the working copy of 'app.js', LF will be replaced by CRLF the next time Git touches it
+Switched to branch 'main'
+warning: in the working copy of 'readme.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'base.txt', LF will be replaced by CRLF the next time Git touches it
+Switched to a new branch 'branch-a'
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+Switched to branch 'main'
+Switched to a new branch 'branch-b'
+warning: in the working copy of 'b.txt', LF will be replaced by CRLF the next time Git touches it
+Switched to branch 'main'
+warning: in the working copy of 'main.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'base.txt', LF will be replaced by CRLF the next time Git touches it
+Switched to a new branch 'feat1'
+warning: in the working copy of 'feat1.txt', LF will be replaced by CRLF the next time Git touches it
+Switched to branch 'main'
+Switched to a new branch 'feat2'
+warning: in the working copy of 'feat2.txt', LF will be replaced by CRLF the next time Git touches it
+Switched to branch 'main'
+warning: in the working copy of 'm.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'base.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'base.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'base.txt', LF will be replaced by CRLF the next time Git touches it
+Switched to a new branch 'future-divergent'
+warning: in the working copy of 'unmerged.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'unmerged.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+Switched to a new branch 'feature-branch'
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+Switched to branch 'main'
+warning: in the working copy of 'main.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/calc.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/math.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/service.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/Util.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/calc.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/helper.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/math.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/calc.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/helper.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/math.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/legacy/Util.java', LF will be replaced by CRLF the next time Git touches it
+Switched to a new branch 'feature-branch'
+warning: in the working copy of 'src/feature.py', LF will be replaced by CRLF the next time Git touches it
+Switched to branch 'main'
+warning: in the working copy of 'src/main_update.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/calc.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/calc.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/calc.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/calc.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/xml.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/xml.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/xml.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/xml.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/xml.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/workers.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/demo/Report.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/demo/Report.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/demo/Report.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/auth.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/auth.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/schemas.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/schemas.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/schemas.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+  console.warn
+    [HistoryStore] Skipping corrupted record line in C:\Users\ASUS\AppData\Local\Temp\retrospect-test-storage-g8wwdX\test-repo_c1.jsonl
+
+    [0m [90m 71 |[39m       } [36mcatch[39m (err) {
+     [90m 72 |[39m         [90m// Skip corrupted lines gracefully[39m
+    [31m[1m>[22m[39m[90m 73 |[39m         console[33m.[39mwarn([32m`[HistoryStore] Skipping corrupted record line in ${filePath}`[39m)[33m;[39m
+     [90m    |[39m                 [31m[1m^[22m[39m
+     [90m 74 |[39m       }
+     [90m 75 |[39m     }
+     [90m 76 |[39m[0m
+
+      at HistoryStore.warn [as loadGraph] (src/storage/HistoryStore.js:73:17)
+      at Object.<anonymous> (tests/unit/storage.test.js:76:20)
+
+Test Suites: 28 passed, 28 total
+Tests:       227 passed, 227 total
+Snapshots:   0 total
+Time:        916.149 s
+Ran all test suites.

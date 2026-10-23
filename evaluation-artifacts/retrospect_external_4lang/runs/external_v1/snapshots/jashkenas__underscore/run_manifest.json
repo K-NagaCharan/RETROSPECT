@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T08:25:04.936Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\jashkenas__underscore.cases.jsonl",
+  "case_count": 5,
+  "snapshots": [
+    {
+      "repository": "jashkenas/underscore",
+      "path": "D:/clones_external/jashkenas__underscore",
+      "pin": "bdb06bcfcdcc85bfe3b494d9907762945f7d7c49",
+      "head_before": "bdb06bcfcdcc85bfe3b494d9907762945f7d7c49",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 856,
+      "index_seconds": 0.916,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 73.517,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 268,
+      "history_commits_analyzed_H400": 251,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "bdb06bcfcdcc85bfe3b494d9907762945f7d7c49",
+      "clean_after": true,
+      "seconds_total": 75.827
+    }
+  ],
+  "finished_utc": "2026-10-23T08:26:20.841Z"
+}

@@ -1,0 +1,3498 @@
+{
+  "protocol": "protocol.md",
+  "run": "runs/external_v1",
+  "seed": 20261023,
+  "horizon": 400,
+  "skipped_cases": 0,
+  "integrity": {
+    "not_indexed": [
+      "a609f0bf15cee565",
+      "6ceb021e2f511c4f",
+      "d03f2b334ea2b2f8",
+      "9a847b0efd617332"
+    ],
+    "parser_unhealthy_H400": [],
+    "not_in_window_or_not_diffed": [],
+    "g_equals_b1_when_L_empty_violations": []
+  },
+  "confirmatory": {
+    "task": "B_id",
+    "comparison": "G vs B1",
+    "repositories": 42,
+    "cases": 42,
+    "mrr_b1": 0.3628,
+    "mrr_g": 0.7747,
+    "delta": 0.4119,
+    "ci95_repository_bootstrap": [
+      0.279,
+      0.5489
+    ],
+    "p_two_sided": 9.99990000099999e-06,
+    "test": "monte_carlo_100000",
+    "transitions": {
+      "unchanged": 18,
+      "rescue@10": 14,
+      "improved": 9,
+      "regressed": 1
+    },
+    "metrics": {
+      "b1": {
+        "n": 42,
+        "R@1": 0.2619,
+        "R@5": 0.4762,
+        "R@10": 0.5238,
+        "MRR": 0.3628,
+        "median_rank": 7.0,
+        "not_retrieved": 0.2381
+      },
+      "g": {
+        "n": 42,
+        "R@1": 0.7143,
+        "R@5": 0.8571,
+        "R@10": 0.8571,
+        "MRR": 0.7747,
+        "median_rank": 1.0,
+        "not_retrieved": 0.0952
+      }
+    },
+    "rescues@10": 14,
+    "harms@10": 0,
+    "decision": "SUPPORTED"
+  },
+  "harm_check": {
+    "task": "A",
+    "comparison": "G vs B1",
+    "repositories": 14,
+    "cases": 14,
+    "mrr_b1": 0.6512,
+    "mrr_g": 0.6452,
+    "delta": -0.006,
+    "ci95_repository_bootstrap": [
+      -0.0179,
+      0.0
+    ],
+    "p_two_sided": 1.0,
+    "test": "exact",
+    "transitions": {
+      "unchanged": 13,
+      "regressed": 1
+    },
+    "harms@10": 0,
+    "result": "PASS"
+  },
+  "descriptive": {
+    "B_id": {
+      "metrics": {
+        "b1": {
+          "n": 42,
+          "R@1": 0.2619,
+          "R@5": 0.4762,
+          "R@10": 0.5238,
+          "MRR": 0.3628,
+          "median_rank": 7.0,
+          "not_retrieved": 0.2381
+        },
+        "b2": {
+          "n": 42,
+          "R@1": 0.5952,
+          "R@5": 0.7381,
+          "R@10": 0.7619,
+          "MRR": 0.653,
+          "median_rank": 1.0,
+          "not_retrieved": 0.0714
+        },
+        "b3": {
+          "n": 42,
+          "R@1": 0.4524,
+          "R@5": 0.6905,
+          "R@10": 0.8333,
+          "MRR": 0.5533,
+          "median_rank": 2.5,
+          "not_retrieved": 0.0476
+        },
+        "b4": {
+          "n": 42,
+          "R@1": 0.4524,
+          "R@5": 0.619,
+          "R@10": 0.7143,
+          "MRR": 0.5203,
+          "median_rank": 3.5,
+          "not_retrieved": 0.0476
+        },
+        "g": {
+          "n": 42,
+          "R@1": 0.7143,
+          "R@5": 0.8571,
+          "R@10": 0.8571,
+          "MRR": 0.7747,
+          "median_rank": 1.0,
+          "not_retrieved": 0.0952
+        }
+      },
+      "g_vs_b1": {
+        "repositories": 42,
+        "cases": 42,
+        "mrr_b1": 0.3628,
+        "mrr_g": 0.7747,
+        "delta": 0.4119,
+        "ci95_repository_bootstrap": [
+          0.279,
+          0.5489
+        ],
+        "p_two_sided": 9.99990000099999e-06,
+        "test": "monte_carlo_100000",
+        "transitions": {
+          "unchanged": 18,
+          "rescue@10": 14,
+          "improved": 9,
+          "regressed": 1
+        }
+      },
+      "b2_vs_b1": {
+        "repositories": 42,
+        "cases": 42,
+        "mrr_b1": 0.3628,
+        "mrr_b2": 0.653,
+        "delta": 0.2902,
+        "ci95_repository_bootstrap": [
+          0.125,
+          0.4511
+        ],
+        "p_two_sided": 0.0014999850001499984,
+        "test": "monte_carlo_100000",
+        "transitions": {
+          "improved": 9,
+          "rescue@10": 14,
+          "unchanged": 11,
+          "harm@10": 4,
+          "regressed": 4
+        }
+      },
+      "b3_vs_b1": {
+        "repositories": 42,
+        "cases": 42,
+        "mrr_b1": 0.3628,
+        "mrr_b3": 0.5533,
+        "delta": 0.1905,
+        "ci95_repository_bootstrap": [
+          0.062,
+          0.3192
+        ],
+        "p_two_sided": 0.005599944000559995,
+        "test": "monte_carlo_100000",
+        "transitions": {
+          "rescue@10": 14,
+          "improved": 10,
+          "unchanged": 13,
+          "harm@10": 1,
+          "regressed": 4
+        }
+      },
+      "b4_vs_b1": {
+        "repositories": 42,
+        "cases": 42,
+        "mrr_b1": 0.3628,
+        "mrr_b4": 0.5203,
+        "delta": 0.1576,
+        "ci95_repository_bootstrap": [
+          0.0458,
+          0.2754
+        ],
+        "p_two_sided": 0.00959990400095999,
+        "test": "monte_carlo_100000",
+        "transitions": {
+          "rescue@10": 10,
+          "unchanged": 17,
+          "improved": 10,
+          "harm@10": 2,
+          "regressed": 3
+        }
+      }
+    },
+    "B_nl": {
+      "metrics": {
+        "b1": {
+          "n": 126,
+          "R@1": 0.1746,
+          "R@5": 0.3095,
+          "R@10": 0.373,
+          "MRR": 0.2398,
+          "median_rank": "not_retrieved",
+          "not_retrieved": 0.5
+        },
+        "b2": {
+          "n": 126,
+          "R@1": 0.6032,
+          "R@5": 0.7937,
+          "R@10": 0.7937,
+          "MRR": 0.6756,
+          "median_rank": 1.0,
+          "not_retrieved": 0.0714
+        },
+        "b3": {
+          "n": 126,
+          "R@1": 0.5714,
+          "R@5": 0.7857,
+          "R@10": 0.8413,
+          "MRR": 0.6599,
+          "median_rank": 1.0,
+          "not_retrieved": 0.0556
+        },
+        "b4": {
+          "n": 126,
+          "R@1": 0.4524,
+          "R@5": 0.6508,
+          "R@10": 0.7302,
+          "MRR": 0.5478,
+          "median_rank": 2.0,
+          "not_retrieved": 0.0556
+        },
+        "g": {
+          "n": 126,
+          "R@1": 0.6667,
+          "R@5": 0.8016,
+          "R@10": 0.8016,
+          "MRR": 0.7242,
+          "median_rank": 1.0,
+          "not_retrieved": 0.1667
+        }
+      },
+      "g_vs_b1": {
+        "repositories": 42,
+        "cases": 126,
+        "mrr_b1": 0.2398,
+        "mrr_g": 0.7242,
+        "delta": 0.4844,
+        "ci95_repository_bootstrap": [
+          0.365,
+          0.6036
+        ],
+        "p_two_sided": 9.99990000099999e-06,
+        "test": "monte_carlo_100000",
+        "transitions": {
+          "unchanged": 50,
+          "rescue@10": 54,
+          "improved": 20,
+          "regressed": 2
+        }
+      },
+      "b2_vs_b1": {
+        "repositories": 42,
+        "cases": 126,
+        "mrr_b1": 0.2398,
+        "mrr_b2": 0.6756,
+        "delta": 0.4358,
+        "ci95_repository_bootstrap": [
+          0.2881,
+          0.5793
+        ],
+        "p_two_sided": 9.99990000099999e-06,
+        "test": "monte_carlo_100000",
+        "transitions": {
+          "improved": 21,
+          "unchanged": 28,
+          "regressed": 12,
+          "rescue@10": 59,
+          "harm@10": 6
+        }
+      },
+      "b3_vs_b1": {
+        "repositories": 42,
+        "cases": 126,
+        "mrr_b1": 0.2398,
+        "mrr_b3": 0.6599,
+        "delta": 0.4201,
+        "ci95_repository_bootstrap": [
+          0.3033,
+          0.5363
+        ],
+        "p_two_sided": 9.99990000099999e-06,
+        "test": "monte_carlo_100000",
+        "transitions": {
+          "rescue@10": 61,
+          "unchanged": 34,
+          "improved": 22,
+          "harm@10": 2,
+          "regressed": 7
+        }
+      },
+      "b4_vs_b1": {
+        "repositories": 42,
+        "cases": 126,
+        "mrr_b1": 0.2398,
+        "mrr_b4": 0.5478,
+        "delta": 0.308,
+        "ci95_repository_bootstrap": [
+          0.2109,
+          0.403
+        ],
+        "p_two_sided": 9.99990000099999e-06,
+        "test": "monte_carlo_100000",
+        "transitions": {
+          "rescue@10": 48,
+          "unchanged": 42,
+          "improved": 26,
+          "harm@10": 3,
+          "regressed": 7
+        }
+      }
+    },
+    "A": {
+      "metrics": {
+        "b1": {
+          "n": 14,
+          "R@1": 0.4286,
+          "R@5": 1.0,
+          "R@10": 1.0,
+          "MRR": 0.6512,
+          "median_rank": 2.0,
+          "not_retrieved": 0.0
+        },
+        "b2": {
+          "n": 14,
+          "R@1": 0.1429,
+          "R@5": 0.5,
+          "R@10": 0.5,
+          "MRR": 0.2752,
+          "median_rank": 13.0,
+          "not_retrieved": 0.0
+        },
+        "b3": {
+          "n": 14,
+          "R@1": 0.3571,
+          "R@5": 0.7857,
+          "R@10": 1.0,
+          "MRR": 0.5466,
+          "median_rank": 2.5,
+          "not_retrieved": 0.0
+        },
+        "b4": {
+          "n": 14,
+          "R@1": 0.2857,
+          "R@5": 0.8571,
+          "R@10": 0.9286,
+          "MRR": 0.5481,
+          "median_rank": 2.0,
+          "not_retrieved": 0.0
+        },
+        "g": {
+          "n": 14,
+          "R@1": 0.4286,
+          "R@5": 1.0,
+          "R@10": 1.0,
+          "MRR": 0.6452,
+          "median_rank": 2.0,
+          "not_retrieved": 0.0
+        }
+      },
+      "g_vs_b1": {
+        "repositories": 14,
+        "cases": 14,
+        "mrr_b1": 0.6512,
+        "mrr_g": 0.6452,
+        "delta": -0.006,
+        "ci95_repository_bootstrap": [
+          -0.0179,
+          0.0
+        ],
+        "p_two_sided": 1.0,
+        "test": "exact",
+        "transitions": {
+          "unchanged": 13,
+          "regressed": 1
+        }
+      },
+      "b2_vs_b1": {
+        "repositories": 14,
+        "cases": 14,
+        "mrr_b1": 0.6512,
+        "mrr_b2": 0.2752,
+        "delta": -0.3759,
+        "ci95_repository_bootstrap": [
+          -0.6366,
+          -0.0878
+        ],
+        "p_two_sided": 0.0247802734375,
+        "test": "exact",
+        "transitions": {
+          "harm@10": 7,
+          "regressed": 5,
+          "improved": 2
+        }
+      },
+      "b3_vs_b1": {
+        "repositories": 14,
+        "cases": 14,
+        "mrr_b1": 0.6512,
+        "mrr_b3": 0.5466,
+        "delta": -0.1046,
+        "ci95_repository_bootstrap": [
+          -0.3304,
+          0.1179
+        ],
+        "p_two_sided": 0.3984375,
+        "test": "exact",
+        "transitions": {
+          "regressed": 6,
+          "unchanged": 6,
+          "improved": 2
+        }
+      },
+      "b4_vs_b1": {
+        "repositories": 14,
+        "cases": 14,
+        "mrr_b1": 0.6512,
+        "mrr_b4": 0.5481,
+        "delta": -0.1031,
+        "ci95_repository_bootstrap": [
+          -0.3185,
+          0.1163
+        ],
+        "p_two_sided": 0.390625,
+        "test": "exact",
+        "transitions": {
+          "regressed": 5,
+          "unchanged": 6,
+          "improved": 2,
+          "harm@10": 1
+        }
+      }
+    },
+    "per_language": {
+      "java": {
+        "B_id": {
+          "metrics": {
+            "b1": {
+              "n": 12,
+              "R@1": 0.1667,
+              "R@5": 0.4167,
+              "R@10": 0.4167,
+              "MRR": 0.278,
+              "median_rank": 24.0,
+              "not_retrieved": 0.25
+            },
+            "b2": {
+              "n": 12,
+              "R@1": 0.3333,
+              "R@5": 0.4167,
+              "R@10": 0.4167,
+              "MRR": 0.3678,
+              "median_rank": 100.0,
+              "not_retrieved": 0.25
+            },
+            "b3": {
+              "n": 12,
+              "R@1": 0.25,
+              "R@5": 0.5,
+              "R@10": 0.5833,
+              "MRR": 0.3253,
+              "median_rank": 5.5,
+              "not_retrieved": 0.1667
+            },
+            "b4": {
+              "n": 12,
+              "R@1": 0.1667,
+              "R@5": 0.4167,
+              "R@10": 0.5,
+              "MRR": 0.2398,
+              "median_rank": 10.5,
+              "not_retrieved": 0.1667
+            },
+            "g": {
+              "n": 12,
+              "R@1": 0.5,
+              "R@5": 0.6667,
+              "R@10": 0.6667,
+              "MRR": 0.5697,
+              "median_rank": 1.5,
+              "not_retrieved": 0.25
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 12,
+            "cases": 12,
+            "mrr_b1": 0.278,
+            "mrr_g": 0.5697,
+            "delta": 0.2917,
+            "ci95_repository_bootstrap": [
+              0.0932,
+              0.5174
+            ],
+            "p_two_sided": 0.0625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 3,
+              "unchanged": 7,
+              "improved": 2
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 12,
+            "cases": 12,
+            "mrr_b1": 0.278,
+            "mrr_b2": 0.3678,
+            "delta": 0.0898,
+            "ci95_repository_bootstrap": [
+              -0.209,
+              0.3875
+            ],
+            "p_two_sided": 0.609375,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 3,
+              "unchanged": 4,
+              "improved": 1,
+              "harm@10": 3,
+              "regressed": 1
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 12,
+            "cases": 12,
+            "mrr_b1": 0.278,
+            "mrr_b3": 0.3253,
+            "delta": 0.0474,
+            "ci95_repository_bootstrap": [
+              -0.1889,
+              0.2906
+            ],
+            "p_two_sided": 0.69140625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 3,
+              "unchanged": 4,
+              "improved": 3,
+              "harm@10": 1,
+              "regressed": 1
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 12,
+            "cases": 12,
+            "mrr_b1": 0.278,
+            "mrr_b4": 0.2398,
+            "delta": -0.0381,
+            "ci95_repository_bootstrap": [
+              -0.2195,
+              0.1177
+            ],
+            "p_two_sided": 0.7421875,
+            "test": "exact",
+            "transitions": {
+              "improved": 2,
+              "rescue@10": 2,
+              "unchanged": 5,
+              "harm@10": 1,
+              "regressed": 2
+            }
+          }
+        },
+        "B_nl": {
+          "metrics": {
+            "b1": {
+              "n": 36,
+              "R@1": 0.1389,
+              "R@5": 0.2778,
+              "R@10": 0.3333,
+              "MRR": 0.2044,
+              "median_rank": "not_retrieved",
+              "not_retrieved": 0.5
+            },
+            "b2": {
+              "n": 36,
+              "R@1": 0.3333,
+              "R@5": 0.5,
+              "R@10": 0.5,
+              "MRR": 0.382,
+              "median_rank": 116.5,
+              "not_retrieved": 0.25
+            },
+            "b3": {
+              "n": 36,
+              "R@1": 0.3333,
+              "R@5": 0.4722,
+              "R@10": 0.5556,
+              "MRR": 0.405,
+              "median_rank": 6.0,
+              "not_retrieved": 0.1944
+            },
+            "b4": {
+              "n": 36,
+              "R@1": 0.2222,
+              "R@5": 0.3611,
+              "R@10": 0.4444,
+              "MRR": 0.2989,
+              "median_rank": 13.5,
+              "not_retrieved": 0.1944
+            },
+            "g": {
+              "n": 36,
+              "R@1": 0.4722,
+              "R@5": 0.6111,
+              "R@10": 0.6111,
+              "MRR": 0.5281,
+              "median_rank": 2.0,
+              "not_retrieved": 0.3333
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 12,
+            "cases": 36,
+            "mrr_b1": 0.2044,
+            "mrr_g": 0.5281,
+            "delta": 0.3237,
+            "ci95_repository_bootstrap": [
+              0.1218,
+              0.5496
+            ],
+            "p_two_sided": 0.03125,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 10,
+              "unchanged": 21,
+              "improved": 5
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 12,
+            "cases": 36,
+            "mrr_b1": 0.2044,
+            "mrr_b2": 0.382,
+            "delta": 0.1776,
+            "ci95_repository_bootstrap": [
+              -0.1086,
+              0.4776
+            ],
+            "p_two_sided": 0.279296875,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 10,
+              "unchanged": 13,
+              "improved": 5,
+              "harm@10": 4,
+              "regressed": 4
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 12,
+            "cases": 36,
+            "mrr_b1": 0.2044,
+            "mrr_b3": 0.405,
+            "delta": 0.2006,
+            "ci95_repository_bootstrap": [
+              -0.0396,
+              0.4543
+            ],
+            "p_two_sided": 0.142578125,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 10,
+              "unchanged": 15,
+              "improved": 6,
+              "harm@10": 2,
+              "regressed": 3
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 12,
+            "cases": 36,
+            "mrr_b1": 0.2044,
+            "mrr_b4": 0.2989,
+            "delta": 0.0945,
+            "ci95_repository_bootstrap": [
+              -0.0827,
+              0.2742
+            ],
+            "p_two_sided": 0.341796875,
+            "test": "exact",
+            "transitions": {
+              "improved": 8,
+              "rescue@10": 6,
+              "unchanged": 16,
+              "harm@10": 2,
+              "regressed": 4
+            }
+          }
+        }
+      },
+      "python": {
+        "B_id": {
+          "metrics": {
+            "b1": {
+              "n": 12,
+              "R@1": 0.4167,
+              "R@5": 0.6667,
+              "R@10": 0.6667,
+              "MRR": 0.5333,
+              "median_rank": 2.0,
+              "not_retrieved": 0.1667
+            },
+            "b2": {
+              "n": 12,
+              "R@1": 0.5,
+              "R@5": 0.75,
+              "R@10": 0.8333,
+              "MRR": 0.6285,
+              "median_rank": 1.5,
+              "not_retrieved": 0.0
+            },
+            "b3": {
+              "n": 12,
+              "R@1": 0.5833,
+              "R@5": 0.8333,
+              "R@10": 0.8333,
+              "MRR": 0.6811,
+              "median_rank": 1.0,
+              "not_retrieved": 0.0
+            },
+            "b4": {
+              "n": 12,
+              "R@1": 0.5833,
+              "R@5": 0.75,
+              "R@10": 0.8333,
+              "MRR": 0.6688,
+              "median_rank": 1.0,
+              "not_retrieved": 0.0
+            },
+            "g": {
+              "n": 12,
+              "R@1": 0.75,
+              "R@5": 0.9167,
+              "R@10": 0.9167,
+              "MRR": 0.8362,
+              "median_rank": 1.0,
+              "not_retrieved": 0.0
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 12,
+            "cases": 12,
+            "mrr_b1": 0.5333,
+            "mrr_g": 0.8362,
+            "delta": 0.303,
+            "ci95_repository_bootstrap": [
+              0.0556,
+              0.5503
+            ],
+            "p_two_sided": 0.078125,
+            "test": "exact",
+            "transitions": {
+              "unchanged": 5,
+              "improved": 3,
+              "rescue@10": 3,
+              "regressed": 1
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 12,
+            "cases": 12,
+            "mrr_b1": 0.5333,
+            "mrr_b2": 0.6285,
+            "delta": 0.0953,
+            "ci95_repository_bootstrap": [
+              -0.168,
+              0.3701
+            ],
+            "p_two_sided": 0.50390625,
+            "test": "exact",
+            "transitions": {
+              "improved": 4,
+              "rescue@10": 2,
+              "unchanged": 3,
+              "regressed": 3
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 12,
+            "cases": 12,
+            "mrr_b1": 0.5333,
+            "mrr_b3": 0.6811,
+            "delta": 0.1479,
+            "ci95_repository_bootstrap": [
+              -0.102,
+              0.3999
+            ],
+            "p_two_sided": 0.2734375,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 2,
+              "improved": 3,
+              "unchanged": 5,
+              "regressed": 2
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 12,
+            "cases": 12,
+            "mrr_b1": 0.5333,
+            "mrr_b4": 0.6688,
+            "delta": 0.1355,
+            "ci95_repository_bootstrap": [
+              -0.0346,
+              0.3045
+            ],
+            "p_two_sided": 0.1484375,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 2,
+              "improved": 3,
+              "unchanged": 6,
+              "regressed": 1
+            }
+          }
+        },
+        "B_nl": {
+          "metrics": {
+            "b1": {
+              "n": 36,
+              "R@1": 0.2778,
+              "R@5": 0.4167,
+              "R@10": 0.4444,
+              "MRR": 0.3474,
+              "median_rank": 36.5,
+              "not_retrieved": 0.4444
+            },
+            "b2": {
+              "n": 36,
+              "R@1": 0.5,
+              "R@5": 0.8611,
+              "R@10": 0.8611,
+              "MRR": 0.6617,
+              "median_rank": 1.5,
+              "not_retrieved": 0.0
+            },
+            "b3": {
+              "n": 36,
+              "R@1": 0.6111,
+              "R@5": 0.9167,
+              "R@10": 0.9167,
+              "MRR": 0.7219,
+              "median_rank": 1.0,
+              "not_retrieved": 0.0
+            },
+            "b4": {
+              "n": 36,
+              "R@1": 0.4722,
+              "R@5": 0.7778,
+              "R@10": 0.8611,
+              "MRR": 0.6124,
+              "median_rank": 2.0,
+              "not_retrieved": 0.0
+            },
+            "g": {
+              "n": 36,
+              "R@1": 0.6667,
+              "R@5": 0.8611,
+              "R@10": 0.8611,
+              "MRR": 0.7657,
+              "median_rank": 1.0,
+              "not_retrieved": 0.0833
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 12,
+            "cases": 36,
+            "mrr_b1": 0.3474,
+            "mrr_g": 0.7657,
+            "delta": 0.4183,
+            "ci95_repository_bootstrap": [
+              0.2113,
+              0.6323
+            ],
+            "p_two_sided": 0.005859375,
+            "test": "exact",
+            "transitions": {
+              "unchanged": 14,
+              "improved": 5,
+              "rescue@10": 15,
+              "regressed": 2
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 12,
+            "cases": 36,
+            "mrr_b1": 0.3474,
+            "mrr_b2": 0.6617,
+            "delta": 0.3143,
+            "ci95_repository_bootstrap": [
+              0.0965,
+              0.5393
+            ],
+            "p_two_sided": 0.0283203125,
+            "test": "exact",
+            "transitions": {
+              "improved": 7,
+              "unchanged": 7,
+              "regressed": 7,
+              "rescue@10": 15
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 12,
+            "cases": 36,
+            "mrr_b1": 0.3474,
+            "mrr_b3": 0.7219,
+            "delta": 0.3746,
+            "ci95_repository_bootstrap": [
+              0.1914,
+              0.5618
+            ],
+            "p_two_sided": 0.00341796875,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 17,
+              "unchanged": 11,
+              "improved": 6,
+              "regressed": 2
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 12,
+            "cases": 36,
+            "mrr_b1": 0.3474,
+            "mrr_b4": 0.6124,
+            "delta": 0.265,
+            "ci95_repository_bootstrap": [
+              0.1191,
+              0.4156
+            ],
+            "p_two_sided": 0.0068359375,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 15,
+              "unchanged": 13,
+              "improved": 6,
+              "regressed": 2
+            }
+          }
+        }
+      },
+      "javascript": {
+        "B_id": {
+          "metrics": {
+            "b1": {
+              "n": 7,
+              "R@1": 0.2857,
+              "R@5": 0.5714,
+              "R@10": 0.7143,
+              "MRR": 0.4106,
+              "median_rank": 5,
+              "not_retrieved": 0.1429
+            },
+            "b2": {
+              "n": 7,
+              "R@1": 1.0,
+              "R@5": 1.0,
+              "R@10": 1.0,
+              "MRR": 1.0,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b3": {
+              "n": 7,
+              "R@1": 0.5714,
+              "R@5": 0.8571,
+              "R@10": 1.0,
+              "MRR": 0.7143,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b4": {
+              "n": 7,
+              "R@1": 0.7143,
+              "R@5": 0.7143,
+              "R@10": 1.0,
+              "MRR": 0.7506,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "g": {
+              "n": 7,
+              "R@1": 1.0,
+              "R@5": 1.0,
+              "R@10": 1.0,
+              "MRR": 1.0,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 7,
+            "cases": 7,
+            "mrr_b1": 0.4106,
+            "mrr_g": 1.0,
+            "delta": 0.5894,
+            "ci95_repository_bootstrap": [
+              0.2619,
+              0.8731
+            ],
+            "p_two_sided": 0.0625,
+            "test": "exact",
+            "transitions": {
+              "improved": 3,
+              "unchanged": 2,
+              "rescue@10": 2
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 7,
+            "cases": 7,
+            "mrr_b1": 0.4106,
+            "mrr_b2": 1.0,
+            "delta": 0.5894,
+            "ci95_repository_bootstrap": [
+              0.2619,
+              0.8731
+            ],
+            "p_two_sided": 0.0625,
+            "test": "exact",
+            "transitions": {
+              "improved": 3,
+              "unchanged": 2,
+              "rescue@10": 2
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 7,
+            "cases": 7,
+            "mrr_b1": 0.4106,
+            "mrr_b3": 0.7143,
+            "delta": 0.3037,
+            "ci95_repository_bootstrap": [
+              0.117,
+              0.5095
+            ],
+            "p_two_sided": 0.0625,
+            "test": "exact",
+            "transitions": {
+              "improved": 3,
+              "unchanged": 2,
+              "rescue@10": 2
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 7,
+            "cases": 7,
+            "mrr_b1": 0.4106,
+            "mrr_b4": 0.7506,
+            "delta": 0.34,
+            "ci95_repository_bootstrap": [
+              0.0918,
+              0.5966
+            ],
+            "p_two_sided": 0.0625,
+            "test": "exact",
+            "transitions": {
+              "improved": 3,
+              "unchanged": 2,
+              "rescue@10": 2
+            }
+          }
+        },
+        "B_nl": {
+          "metrics": {
+            "b1": {
+              "n": 21,
+              "R@1": 0.1905,
+              "R@5": 0.3333,
+              "R@10": 0.4762,
+              "MRR": 0.2701,
+              "median_rank": 112,
+              "not_retrieved": 0.4286
+            },
+            "b2": {
+              "n": 21,
+              "R@1": 1.0,
+              "R@5": 1.0,
+              "R@10": 1.0,
+              "MRR": 1.0,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b3": {
+              "n": 21,
+              "R@1": 0.7619,
+              "R@5": 0.9524,
+              "R@10": 1.0,
+              "MRR": 0.8452,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b4": {
+              "n": 21,
+              "R@1": 0.7143,
+              "R@5": 0.8571,
+              "R@10": 1.0,
+              "MRR": 0.7899,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "g": {
+              "n": 21,
+              "R@1": 1.0,
+              "R@5": 1.0,
+              "R@10": 1.0,
+              "MRR": 1.0,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 7,
+            "cases": 21,
+            "mrr_b1": 0.2701,
+            "mrr_g": 1.0,
+            "delta": 0.7299,
+            "ci95_repository_bootstrap": [
+              0.5083,
+              0.9201
+            ],
+            "p_two_sided": 0.015625,
+            "test": "exact",
+            "transitions": {
+              "improved": 6,
+              "rescue@10": 11,
+              "unchanged": 4
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 7,
+            "cases": 21,
+            "mrr_b1": 0.2701,
+            "mrr_b2": 1.0,
+            "delta": 0.7299,
+            "ci95_repository_bootstrap": [
+              0.5083,
+              0.9201
+            ],
+            "p_two_sided": 0.015625,
+            "test": "exact",
+            "transitions": {
+              "improved": 6,
+              "rescue@10": 11,
+              "unchanged": 4
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 7,
+            "cases": 21,
+            "mrr_b1": 0.2701,
+            "mrr_b3": 0.8452,
+            "delta": 0.5751,
+            "ci95_repository_bootstrap": [
+              0.4286,
+              0.7213
+            ],
+            "p_two_sided": 0.015625,
+            "test": "exact",
+            "transitions": {
+              "improved": 6,
+              "rescue@10": 11,
+              "unchanged": 4
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 7,
+            "cases": 21,
+            "mrr_b1": 0.2701,
+            "mrr_b4": 0.7899,
+            "delta": 0.5198,
+            "ci95_repository_bootstrap": [
+              0.4009,
+              0.641
+            ],
+            "p_two_sided": 0.015625,
+            "test": "exact",
+            "transitions": {
+              "improved": 6,
+              "rescue@10": 11,
+              "unchanged": 4
+            }
+          }
+        }
+      },
+      "typescript": {
+        "B_id": {
+          "metrics": {
+            "b1": {
+              "n": 11,
+              "R@1": 0.1818,
+              "R@5": 0.2727,
+              "R@10": 0.3636,
+              "MRR": 0.2388,
+              "median_rank": 14,
+              "not_retrieved": 0.3636
+            },
+            "b2": {
+              "n": 11,
+              "R@1": 0.7273,
+              "R@5": 0.9091,
+              "R@10": 0.9091,
+              "MRR": 0.77,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b3": {
+              "n": 11,
+              "R@1": 0.4545,
+              "R@5": 0.6364,
+              "R@10": 1.0,
+              "MRR": 0.5601,
+              "median_rank": 3,
+              "not_retrieved": 0.0
+            },
+            "b4": {
+              "n": 11,
+              "R@1": 0.4545,
+              "R@5": 0.6364,
+              "R@10": 0.6364,
+              "MRR": 0.5178,
+              "median_rank": 4,
+              "not_retrieved": 0.0
+            },
+            "g": {
+              "n": 11,
+              "R@1": 0.7273,
+              "R@5": 0.9091,
+              "R@10": 0.9091,
+              "MRR": 0.7879,
+              "median_rank": 1,
+              "not_retrieved": 0.0909
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 11,
+            "cases": 11,
+            "mrr_b1": 0.2388,
+            "mrr_g": 0.7879,
+            "delta": 0.5491,
+            "ci95_repository_bootstrap": [
+              0.2777,
+              0.8126
+            ],
+            "p_two_sided": 0.015625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 6,
+              "improved": 1,
+              "unchanged": 4
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 11,
+            "cases": 11,
+            "mrr_b1": 0.2388,
+            "mrr_b2": 0.77,
+            "delta": 0.5312,
+            "ci95_repository_bootstrap": [
+              0.2251,
+              0.8193
+            ],
+            "p_two_sided": 0.01953125,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 7,
+              "improved": 1,
+              "unchanged": 2,
+              "harm@10": 1
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 11,
+            "cases": 11,
+            "mrr_b1": 0.2388,
+            "mrr_b3": 0.5601,
+            "delta": 0.3212,
+            "ci95_repository_bootstrap": [
+              0.085,
+              0.5759
+            ],
+            "p_two_sided": 0.02734375,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 7,
+              "improved": 1,
+              "unchanged": 2,
+              "regressed": 1
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 11,
+            "cases": 11,
+            "mrr_b1": 0.2388,
+            "mrr_b4": 0.5178,
+            "delta": 0.279,
+            "ci95_repository_bootstrap": [
+              0.0382,
+              0.5495
+            ],
+            "p_two_sided": 0.08984375,
+            "test": "exact",
+            "transitions": {
+              "unchanged": 4,
+              "rescue@10": 4,
+              "improved": 2,
+              "harm@10": 1
+            }
+          }
+        },
+        "B_nl": {
+          "metrics": {
+            "b1": {
+              "n": 33,
+              "R@1": 0.0909,
+              "R@5": 0.2121,
+              "R@10": 0.2727,
+              "MRR": 0.1417,
+              "median_rank": "not_retrieved",
+              "not_retrieved": 0.6061
+            },
+            "b2": {
+              "n": 33,
+              "R@1": 0.7576,
+              "R@5": 0.9091,
+              "R@10": 0.9091,
+              "MRR": 0.8046,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b3": {
+              "n": 33,
+              "R@1": 0.6667,
+              "R@5": 0.8788,
+              "R@10": 0.9697,
+              "MRR": 0.7523,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b4": {
+              "n": 33,
+              "R@1": 0.5152,
+              "R@5": 0.697,
+              "R@10": 0.7273,
+              "MRR": 0.5946,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "g": {
+              "n": 33,
+              "R@1": 0.6667,
+              "R@5": 0.8182,
+              "R@10": 0.8182,
+              "MRR": 0.7172,
+              "median_rank": 1,
+              "not_retrieved": 0.1818
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 11,
+            "cases": 33,
+            "mrr_b1": 0.1417,
+            "mrr_g": 0.7172,
+            "delta": 0.5755,
+            "ci95_repository_bootstrap": [
+              0.3433,
+              0.8016
+            ],
+            "p_two_sided": 0.00390625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 18,
+              "unchanged": 11,
+              "improved": 4
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 11,
+            "cases": 33,
+            "mrr_b1": 0.1417,
+            "mrr_b2": 0.8046,
+            "delta": 0.6629,
+            "ci95_repository_bootstrap": [
+              0.4077,
+              0.8837
+            ],
+            "p_two_sided": 0.001953125,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 23,
+              "improved": 3,
+              "unchanged": 4,
+              "regressed": 1,
+              "harm@10": 2
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 11,
+            "cases": 33,
+            "mrr_b1": 0.1417,
+            "mrr_b3": 0.7523,
+            "delta": 0.6106,
+            "ci95_repository_bootstrap": [
+              0.3919,
+              0.7952
+            ],
+            "p_two_sided": 0.001953125,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 23,
+              "improved": 4,
+              "unchanged": 4,
+              "regressed": 2
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 11,
+            "cases": 33,
+            "mrr_b1": 0.1417,
+            "mrr_b4": 0.5946,
+            "delta": 0.4529,
+            "ci95_repository_bootstrap": [
+              0.2778,
+              0.6079
+            ],
+            "p_two_sided": 0.001953125,
+            "test": "exact",
+            "transitions": {
+              "improved": 6,
+              "rescue@10": 16,
+              "unchanged": 9,
+              "harm@10": 1,
+              "regressed": 1
+            }
+          }
+        }
+      }
+    },
+    "source_stratum": {
+      "S1+S2": {
+        "B_id": {
+          "metrics": {
+            "b1": {
+              "n": 13,
+              "R@1": 0.2308,
+              "R@5": 0.4615,
+              "R@10": 0.4615,
+              "MRR": 0.3335,
+              "median_rank": 11,
+              "not_retrieved": 0.2308
+            },
+            "b2": {
+              "n": 13,
+              "R@1": 0.3846,
+              "R@5": 0.4615,
+              "R@10": 0.4615,
+              "MRR": 0.4164,
+              "median_rank": 14,
+              "not_retrieved": 0.2308
+            },
+            "b3": {
+              "n": 13,
+              "R@1": 0.3077,
+              "R@5": 0.5385,
+              "R@10": 0.6154,
+              "MRR": 0.3772,
+              "median_rank": 5,
+              "not_retrieved": 0.1538
+            },
+            "b4": {
+              "n": 13,
+              "R@1": 0.2308,
+              "R@5": 0.4615,
+              "R@10": 0.5385,
+              "MRR": 0.2983,
+              "median_rank": 8,
+              "not_retrieved": 0.1538
+            },
+            "g": {
+              "n": 13,
+              "R@1": 0.5385,
+              "R@5": 0.6923,
+              "R@10": 0.6923,
+              "MRR": 0.6028,
+              "median_rank": 1,
+              "not_retrieved": 0.2308
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 13,
+            "cases": 13,
+            "mrr_b1": 0.3335,
+            "mrr_g": 0.6028,
+            "delta": 0.2693,
+            "ci95_repository_bootstrap": [
+              0.0769,
+              0.4875
+            ],
+            "p_two_sided": 0.0625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 3,
+              "unchanged": 8,
+              "improved": 2
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 13,
+            "cases": 13,
+            "mrr_b1": 0.3335,
+            "mrr_b2": 0.4164,
+            "delta": 0.0829,
+            "ci95_repository_bootstrap": [
+              -0.197,
+              0.3553
+            ],
+            "p_two_sided": 0.609375,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 3,
+              "unchanged": 5,
+              "improved": 1,
+              "harm@10": 3,
+              "regressed": 1
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 13,
+            "cases": 13,
+            "mrr_b1": 0.3335,
+            "mrr_b3": 0.3772,
+            "delta": 0.0437,
+            "ci95_repository_bootstrap": [
+              -0.1757,
+              0.2633
+            ],
+            "p_two_sided": 0.69140625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 3,
+              "unchanged": 5,
+              "improved": 3,
+              "harm@10": 1,
+              "regressed": 1
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 13,
+            "cases": 13,
+            "mrr_b1": 0.3335,
+            "mrr_b4": 0.2983,
+            "delta": -0.0352,
+            "ci95_repository_bootstrap": [
+              -0.204,
+              0.1072
+            ],
+            "p_two_sided": 0.7421875,
+            "test": "exact",
+            "transitions": {
+              "improved": 2,
+              "rescue@10": 2,
+              "unchanged": 6,
+              "harm@10": 1,
+              "regressed": 2
+            }
+          }
+        },
+        "B_nl": {
+          "metrics": {
+            "b1": {
+              "n": 39,
+              "R@1": 0.1795,
+              "R@5": 0.3077,
+              "R@10": 0.359,
+              "MRR": 0.24,
+              "median_rank": 370,
+              "not_retrieved": 0.4872
+            },
+            "b2": {
+              "n": 39,
+              "R@1": 0.3846,
+              "R@5": 0.5385,
+              "R@10": 0.5385,
+              "MRR": 0.4295,
+              "median_rank": 5,
+              "not_retrieved": 0.2308
+            },
+            "b3": {
+              "n": 39,
+              "R@1": 0.3846,
+              "R@5": 0.5128,
+              "R@10": 0.5897,
+              "MRR": 0.4508,
+              "median_rank": 5,
+              "not_retrieved": 0.1795
+            },
+            "b4": {
+              "n": 39,
+              "R@1": 0.2821,
+              "R@5": 0.4103,
+              "R@10": 0.4872,
+              "MRR": 0.3528,
+              "median_rank": 11,
+              "not_retrieved": 0.1795
+            },
+            "g": {
+              "n": 39,
+              "R@1": 0.5128,
+              "R@5": 0.641,
+              "R@10": 0.641,
+              "MRR": 0.5644,
+              "median_rank": 1,
+              "not_retrieved": 0.3077
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 13,
+            "cases": 39,
+            "mrr_b1": 0.24,
+            "mrr_g": 0.5644,
+            "delta": 0.3244,
+            "ci95_repository_bootstrap": [
+              0.1381,
+              0.531
+            ],
+            "p_two_sided": 0.015625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 11,
+              "unchanged": 23,
+              "improved": 5
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 13,
+            "cases": 39,
+            "mrr_b1": 0.24,
+            "mrr_b2": 0.4295,
+            "delta": 0.1896,
+            "ci95_repository_bootstrap": [
+              -0.0764,
+              0.4631
+            ],
+            "p_two_sided": 0.212890625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 11,
+              "unchanged": 15,
+              "improved": 5,
+              "harm@10": 4,
+              "regressed": 4
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 13,
+            "cases": 39,
+            "mrr_b1": 0.24,
+            "mrr_b3": 0.4508,
+            "delta": 0.2108,
+            "ci95_repository_bootstrap": [
+              -0.0152,
+              0.4431
+            ],
+            "p_two_sided": 0.0986328125,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 11,
+              "unchanged": 17,
+              "improved": 6,
+              "harm@10": 2,
+              "regressed": 3
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 13,
+            "cases": 39,
+            "mrr_b1": 0.24,
+            "mrr_b4": 0.3528,
+            "delta": 0.1129,
+            "ci95_repository_bootstrap": [
+              -0.0557,
+              0.2777
+            ],
+            "p_two_sided": 0.2294921875,
+            "test": "exact",
+            "transitions": {
+              "improved": 8,
+              "rescue@10": 7,
+              "unchanged": 18,
+              "harm@10": 2,
+              "regressed": 4
+            }
+          }
+        }
+      },
+      "S3+S3b": {
+        "B_id": {
+          "metrics": {
+            "b1": {
+              "n": 29,
+              "R@1": 0.2759,
+              "R@5": 0.4828,
+              "R@10": 0.5517,
+              "MRR": 0.3759,
+              "median_rank": 6,
+              "not_retrieved": 0.2414
+            },
+            "b2": {
+              "n": 29,
+              "R@1": 0.6897,
+              "R@5": 0.8621,
+              "R@10": 0.8966,
+              "MRR": 0.759,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b3": {
+              "n": 29,
+              "R@1": 0.5172,
+              "R@5": 0.7586,
+              "R@10": 0.931,
+              "MRR": 0.6322,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b4": {
+              "n": 29,
+              "R@1": 0.5517,
+              "R@5": 0.6897,
+              "R@10": 0.7931,
+              "MRR": 0.6198,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "g": {
+              "n": 29,
+              "R@1": 0.7931,
+              "R@5": 0.931,
+              "R@10": 0.931,
+              "MRR": 0.8518,
+              "median_rank": 1,
+              "not_retrieved": 0.0345
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 29,
+            "cases": 29,
+            "mrr_b1": 0.3759,
+            "mrr_g": 0.8518,
+            "delta": 0.4759,
+            "ci95_repository_bootstrap": [
+              0.3056,
+              0.6408
+            ],
+            "p_two_sided": 3.999960000399996e-05,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "unchanged": 10,
+              "rescue@10": 11,
+              "improved": 7,
+              "regressed": 1
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 29,
+            "cases": 29,
+            "mrr_b1": 0.3759,
+            "mrr_b2": 0.759,
+            "delta": 0.3832,
+            "ci95_repository_bootstrap": [
+              0.1859,
+              0.5726
+            ],
+            "p_two_sided": 0.000969990300096999,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "improved": 8,
+              "rescue@10": 11,
+              "unchanged": 6,
+              "regressed": 3,
+              "harm@10": 1
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 29,
+            "cases": 29,
+            "mrr_b1": 0.3759,
+            "mrr_b3": 0.6322,
+            "delta": 0.2564,
+            "ci95_repository_bootstrap": [
+              0.1037,
+              0.407
+            ],
+            "p_two_sided": 0.0027099729002709972,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "rescue@10": 11,
+              "improved": 7,
+              "unchanged": 8,
+              "regressed": 3
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 29,
+            "cases": 29,
+            "mrr_b1": 0.3759,
+            "mrr_b4": 0.6198,
+            "delta": 0.244,
+            "ci95_repository_bootstrap": [
+              0.1107,
+              0.3841
+            ],
+            "p_two_sided": 0.0015799842001579985,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "rescue@10": 8,
+              "unchanged": 11,
+              "improved": 8,
+              "regressed": 1,
+              "harm@10": 1
+            }
+          }
+        },
+        "B_nl": {
+          "metrics": {
+            "b1": {
+              "n": 87,
+              "R@1": 0.1724,
+              "R@5": 0.3103,
+              "R@10": 0.3793,
+              "MRR": 0.2397,
+              "median_rank": "not_retrieved",
+              "not_retrieved": 0.5057
+            },
+            "b2": {
+              "n": 87,
+              "R@1": 0.7011,
+              "R@5": 0.908,
+              "R@10": 0.908,
+              "MRR": 0.7859,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b3": {
+              "n": 87,
+              "R@1": 0.6552,
+              "R@5": 0.908,
+              "R@10": 0.954,
+              "MRR": 0.7536,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b4": {
+              "n": 87,
+              "R@1": 0.5287,
+              "R@5": 0.7586,
+              "R@10": 0.8391,
+              "MRR": 0.6351,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "g": {
+              "n": 87,
+              "R@1": 0.7356,
+              "R@5": 0.8736,
+              "R@10": 0.8736,
+              "MRR": 0.7958,
+              "median_rank": 1,
+              "not_retrieved": 0.1034
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 29,
+            "cases": 87,
+            "mrr_b1": 0.2397,
+            "mrr_g": 0.7958,
+            "delta": 0.5561,
+            "ci95_repository_bootstrap": [
+              0.4169,
+              0.6945
+            ],
+            "p_two_sided": 9.99990000099999e-06,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "unchanged": 27,
+              "rescue@10": 43,
+              "improved": 15,
+              "regressed": 2
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 29,
+            "cases": 87,
+            "mrr_b1": 0.2397,
+            "mrr_b2": 0.7859,
+            "delta": 0.5462,
+            "ci95_repository_bootstrap": [
+              0.3877,
+              0.6985
+            ],
+            "p_two_sided": 9.99990000099999e-06,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "improved": 16,
+              "unchanged": 13,
+              "regressed": 8,
+              "rescue@10": 48,
+              "harm@10": 2
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 29,
+            "cases": 87,
+            "mrr_b1": 0.2397,
+            "mrr_b3": 0.7536,
+            "delta": 0.5139,
+            "ci95_repository_bootstrap": [
+              0.3903,
+              0.6341
+            ],
+            "p_two_sided": 9.99990000099999e-06,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "rescue@10": 50,
+              "unchanged": 17,
+              "improved": 16,
+              "regressed": 4
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 29,
+            "cases": 87,
+            "mrr_b1": 0.2397,
+            "mrr_b4": 0.6351,
+            "delta": 0.3954,
+            "ci95_repository_bootstrap": [
+              0.292,
+              0.4947
+            ],
+            "p_two_sided": 9.99990000099999e-06,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "rescue@10": 41,
+              "unchanged": 24,
+              "improved": 18,
+              "regressed": 3,
+              "harm@10": 1
+            }
+          }
+        }
+      }
+    },
+    "per_template": {
+      "1": {
+        "metrics": {
+          "b1": {
+            "n": 42,
+            "R@1": 0.2381,
+            "R@5": 0.4762,
+            "R@10": 0.5714,
+            "MRR": 0.3488,
+            "median_rank": 6.5,
+            "not_retrieved": 0.1905
+          },
+          "b2": {
+            "n": 42,
+            "R@1": 0.5952,
+            "R@5": 0.7857,
+            "R@10": 0.7857,
+            "MRR": 0.671,
+            "median_rank": 1.0,
+            "not_retrieved": 0.0714
+          },
+          "b3": {
+            "n": 42,
+            "R@1": 0.5714,
+            "R@5": 0.8095,
+            "R@10": 0.8571,
+            "MRR": 0.6676,
+            "median_rank": 1.0,
+            "not_retrieved": 0.0476
+          },
+          "b4": {
+            "n": 42,
+            "R@1": 0.4048,
+            "R@5": 0.6429,
+            "R@10": 0.6905,
+            "MRR": 0.5118,
+            "median_rank": 2.5,
+            "not_retrieved": 0.0476
+          },
+          "g": {
+            "n": 42,
+            "R@1": 0.6667,
+            "R@5": 0.8333,
+            "R@10": 0.8333,
+            "MRR": 0.7391,
+            "median_rank": 1.0,
+            "not_retrieved": 0.119
+          }
+        },
+        "g_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.3488,
+          "mrr_g": 0.7391,
+          "delta": 0.3902,
+          "ci95_repository_bootstrap": [
+            0.2572,
+            0.5236
+          ],
+          "p_two_sided": 9.99990000099999e-06,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "unchanged": 19,
+            "rescue@10": 11,
+            "improved": 11,
+            "regressed": 1
+          }
+        },
+        "b2_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.3488,
+          "mrr_b2": 0.671,
+          "delta": 0.3221,
+          "ci95_repository_bootstrap": [
+            0.1457,
+            0.4924
+          ],
+          "p_two_sided": 0.001019989800101999,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "improved": 12,
+            "rescue@10": 12,
+            "unchanged": 9,
+            "harm@10": 3,
+            "regressed": 6
+          }
+        },
+        "b3_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.3488,
+          "mrr_b3": 0.6676,
+          "delta": 0.3187,
+          "ci95_repository_bootstrap": [
+            0.1805,
+            0.4559
+          ],
+          "p_two_sided": 4.999950000499995e-05,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "rescue@10": 13,
+            "improved": 12,
+            "unchanged": 12,
+            "harm@10": 1,
+            "regressed": 4
+          }
+        },
+        "b4_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.3488,
+          "mrr_b4": 0.5118,
+          "delta": 0.1629,
+          "ci95_repository_bootstrap": [
+            0.0588,
+            0.2694
+          ],
+          "p_two_sided": 0.0042999570004299955,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "rescue@10": 7,
+            "improved": 16,
+            "unchanged": 14,
+            "harm@10": 2,
+            "regressed": 3
+          }
+        }
+      },
+      "2": {
+        "metrics": {
+          "b1": {
+            "n": 42,
+            "R@1": 0.0,
+            "R@5": 0.0,
+            "R@10": 0.0,
+            "MRR": 0.0,
+            "median_rank": "not_retrieved",
+            "not_retrieved": 1.0
+          },
+          "b2": {
+            "n": 42,
+            "R@1": 0.619,
+            "R@5": 0.8095,
+            "R@10": 0.8095,
+            "MRR": 0.6907,
+            "median_rank": 1.0,
+            "not_retrieved": 0.0714
+          },
+          "b3": {
+            "n": 42,
+            "R@1": 0.619,
+            "R@5": 0.7857,
+            "R@10": 0.8095,
+            "MRR": 0.6899,
+            "median_rank": 1.0,
+            "not_retrieved": 0.0714
+          },
+          "b4": {
+            "n": 42,
+            "R@1": 0.5,
+            "R@5": 0.7381,
+            "R@10": 0.7857,
+            "MRR": 0.6079,
+            "median_rank": 1.5,
+            "not_retrieved": 0.0714
+          },
+          "g": {
+            "n": 42,
+            "R@1": 0.619,
+            "R@5": 0.7143,
+            "R@10": 0.7143,
+            "MRR": 0.6587,
+            "median_rank": 1.0,
+            "not_retrieved": 0.2857
+          }
+        },
+        "g_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.0,
+          "mrr_g": 0.6587,
+          "delta": 0.6587,
+          "ci95_repository_bootstrap": [
+            0.5159,
+            0.7897
+          ],
+          "p_two_sided": 9.99990000099999e-06,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "unchanged": 12,
+            "rescue@10": 30
+          }
+        },
+        "b2_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.0,
+          "mrr_b2": 0.6907,
+          "delta": 0.6907,
+          "ci95_repository_bootstrap": [
+            0.5628,
+            0.8137
+          ],
+          "p_two_sided": 9.99990000099999e-06,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "unchanged": 8,
+            "rescue@10": 34
+          }
+        },
+        "b3_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.0,
+          "mrr_b3": 0.6899,
+          "delta": 0.6899,
+          "ci95_repository_bootstrap": [
+            0.562,
+            0.8136
+          ],
+          "p_two_sided": 9.99990000099999e-06,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "unchanged": 8,
+            "rescue@10": 34
+          }
+        },
+        "b4_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.0,
+          "mrr_b4": 0.6079,
+          "delta": 0.6079,
+          "ci95_repository_bootstrap": [
+            0.48,
+            0.7327
+          ],
+          "p_two_sided": 9.99990000099999e-06,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "unchanged": 9,
+            "rescue@10": 33
+          }
+        }
+      },
+      "3": {
+        "metrics": {
+          "b1": {
+            "n": 42,
+            "R@1": 0.2857,
+            "R@5": 0.4524,
+            "R@10": 0.5476,
+            "MRR": 0.3705,
+            "median_rank": 7.5,
+            "not_retrieved": 0.3095
+          },
+          "b2": {
+            "n": 42,
+            "R@1": 0.5952,
+            "R@5": 0.7857,
+            "R@10": 0.7857,
+            "MRR": 0.6652,
+            "median_rank": 1.0,
+            "not_retrieved": 0.0714
+          },
+          "b3": {
+            "n": 42,
+            "R@1": 0.5238,
+            "R@5": 0.7619,
+            "R@10": 0.8571,
+            "MRR": 0.6222,
+            "median_rank": 1.0,
+            "not_retrieved": 0.0476
+          },
+          "b4": {
+            "n": 42,
+            "R@1": 0.4524,
+            "R@5": 0.5714,
+            "R@10": 0.7143,
+            "MRR": 0.5236,
+            "median_rank": 3.0,
+            "not_retrieved": 0.0476
+          },
+          "g": {
+            "n": 42,
+            "R@1": 0.7143,
+            "R@5": 0.8571,
+            "R@10": 0.8571,
+            "MRR": 0.7747,
+            "median_rank": 1.0,
+            "not_retrieved": 0.0952
+          }
+        },
+        "g_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.3705,
+          "mrr_g": 0.7747,
+          "delta": 0.4042,
+          "ci95_repository_bootstrap": [
+            0.2687,
+            0.5444
+          ],
+          "p_two_sided": 1.999980000199998e-05,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "unchanged": 19,
+            "rescue@10": 13,
+            "improved": 9,
+            "regressed": 1
+          }
+        },
+        "b2_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.3705,
+          "mrr_b2": 0.6652,
+          "delta": 0.2947,
+          "ci95_repository_bootstrap": [
+            0.117,
+            0.4673
+          ],
+          "p_two_sided": 0.0024999750002499977,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "regressed": 6,
+            "rescue@10": 13,
+            "improved": 9,
+            "unchanged": 11,
+            "harm@10": 3
+          }
+        },
+        "b3_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.3705,
+          "mrr_b3": 0.6222,
+          "delta": 0.2517,
+          "ci95_repository_bootstrap": [
+            0.1203,
+            0.3842
+          ],
+          "p_two_sided": 0.0007299927000729993,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "rescue@10": 14,
+            "improved": 10,
+            "unchanged": 14,
+            "harm@10": 1,
+            "regressed": 3
+          }
+        },
+        "b4_vs_b1": {
+          "repositories": 42,
+          "cases": 42,
+          "mrr_b1": 0.3705,
+          "mrr_b4": 0.5236,
+          "delta": 0.1531,
+          "ci95_repository_bootstrap": [
+            0.0382,
+            0.2732
+          ],
+          "p_two_sided": 0.013589864101358986,
+          "test": "monte_carlo_100000",
+          "transitions": {
+            "rescue@10": 8,
+            "unchanged": 19,
+            "improved": 10,
+            "harm@10": 1,
+            "regressed": 4
+          }
+        }
+      }
+    },
+    "name_overlap": {
+      "zero_subtoken_overlap": {
+        "B_id": {
+          "metrics": {
+            "b1": {
+              "n": 11,
+              "R@1": 0.0,
+              "R@5": 0.0909,
+              "R@10": 0.0909,
+              "MRR": 0.0525,
+              "median_rank": "not_retrieved",
+              "not_retrieved": 0.5455
+            },
+            "b2": {
+              "n": 11,
+              "R@1": 0.6364,
+              "R@5": 0.7273,
+              "R@10": 0.8182,
+              "MRR": 0.6836,
+              "median_rank": 1,
+              "not_retrieved": 0.0
+            },
+            "b3": {
+              "n": 11,
+              "R@1": 0.1818,
+              "R@5": 0.4545,
+              "R@10": 0.8182,
+              "MRR": 0.3304,
+              "median_rank": 6,
+              "not_retrieved": 0.0
+            },
+            "b4": {
+              "n": 11,
+              "R@1": 0.1818,
+              "R@5": 0.2727,
+              "R@10": 0.4545,
+              "MRR": 0.2593,
+              "median_rank": 13,
+              "not_retrieved": 0.0
+            },
+            "g": {
+              "n": 11,
+              "R@1": 0.6364,
+              "R@5": 0.8182,
+              "R@10": 0.8182,
+              "MRR": 0.7153,
+              "median_rank": 1,
+              "not_retrieved": 0.0909
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 11,
+            "cases": 11,
+            "mrr_b1": 0.0525,
+            "mrr_g": 0.7153,
+            "delta": 0.6628,
+            "ci95_repository_bootstrap": [
+              0.4209,
+              0.8876
+            ],
+            "p_two_sided": 0.00390625,
+            "test": "exact",
+            "transitions": {
+              "unchanged": 2,
+              "rescue@10": 8,
+              "improved": 1
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 11,
+            "cases": 11,
+            "mrr_b1": 0.0525,
+            "mrr_b2": 0.6836,
+            "delta": 0.6312,
+            "ci95_repository_bootstrap": [
+              0.3783,
+              0.8698
+            ],
+            "p_two_sided": 0.0009765625,
+            "test": "exact",
+            "transitions": {
+              "improved": 2,
+              "rescue@10": 8,
+              "unchanged": 1
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 11,
+            "cases": 11,
+            "mrr_b1": 0.0525,
+            "mrr_b3": 0.3304,
+            "delta": 0.2779,
+            "ci95_repository_bootstrap": [
+              0.1479,
+              0.449
+            ],
+            "p_two_sided": 0.0009765625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 8,
+              "improved": 1,
+              "unchanged": 2
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 11,
+            "cases": 11,
+            "mrr_b1": 0.0525,
+            "mrr_b4": 0.2593,
+            "delta": 0.2068,
+            "ci95_repository_bootstrap": [
+              0.0662,
+              0.3977
+            ],
+            "p_two_sided": 0.0009765625,
+            "test": "exact",
+            "transitions": {
+              "rescue@10": 4,
+              "unchanged": 4,
+              "improved": 3
+            }
+          }
+        }
+      },
+      "some_overlap": {
+        "B_id": {
+          "metrics": {
+            "b1": {
+              "n": 31,
+              "R@1": 0.3548,
+              "R@5": 0.6129,
+              "R@10": 0.6774,
+              "MRR": 0.4729,
+              "median_rank": 3,
+              "not_retrieved": 0.129
+            },
+            "b2": {
+              "n": 31,
+              "R@1": 0.5806,
+              "R@5": 0.7419,
+              "R@10": 0.7419,
+              "MRR": 0.6421,
+              "median_rank": 1,
+              "not_retrieved": 0.0968
+            },
+            "b3": {
+              "n": 31,
+              "R@1": 0.5484,
+              "R@5": 0.7742,
+              "R@10": 0.8387,
+              "MRR": 0.6324,
+              "median_rank": 1,
+              "not_retrieved": 0.0645
+            },
+            "b4": {
+              "n": 31,
+              "R@1": 0.5484,
+              "R@5": 0.7419,
+              "R@10": 0.8065,
+              "MRR": 0.6129,
+              "median_rank": 1,
+              "not_retrieved": 0.0645
+            },
+            "g": {
+              "n": 31,
+              "R@1": 0.7419,
+              "R@5": 0.871,
+              "R@10": 0.871,
+              "MRR": 0.7958,
+              "median_rank": 1,
+              "not_retrieved": 0.0968
+            }
+          },
+          "g_vs_b1": {
+            "repositories": 31,
+            "cases": 31,
+            "mrr_b1": 0.4729,
+            "mrr_g": 0.7958,
+            "delta": 0.3229,
+            "ci95_repository_bootstrap": [
+              0.1756,
+              0.4721
+            ],
+            "p_two_sided": 0.00033999660003399966,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "improved": 8,
+              "unchanged": 16,
+              "rescue@10": 6,
+              "regressed": 1
+            }
+          },
+          "b2_vs_b1": {
+            "repositories": 31,
+            "cases": 31,
+            "mrr_b1": 0.4729,
+            "mrr_b2": 0.6421,
+            "delta": 0.1693,
+            "ci95_repository_bootstrap": [
+              -0.0153,
+              0.3553
+            ],
+            "p_two_sided": 0.08941910580894191,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "improved": 7,
+              "unchanged": 10,
+              "rescue@10": 6,
+              "harm@10": 4,
+              "regressed": 4
+            }
+          },
+          "b3_vs_b1": {
+            "repositories": 31,
+            "cases": 31,
+            "mrr_b1": 0.4729,
+            "mrr_b3": 0.6324,
+            "delta": 0.1595,
+            "ci95_repository_bootstrap": [
+              0.0012,
+              0.3226
+            ],
+            "p_two_sided": 0.06786932130678693,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "improved": 9,
+              "unchanged": 11,
+              "rescue@10": 6,
+              "harm@10": 1,
+              "regressed": 4
+            }
+          },
+          "b4_vs_b1": {
+            "repositories": 31,
+            "cases": 31,
+            "mrr_b1": 0.4729,
+            "mrr_b4": 0.6129,
+            "delta": 0.1401,
+            "ci95_repository_bootstrap": [
+              0.0023,
+              0.2852
+            ],
+            "p_two_sided": 0.06643933560664393,
+            "test": "monte_carlo_100000",
+            "transitions": {
+              "improved": 7,
+              "unchanged": 13,
+              "rescue@10": 6,
+              "harm@10": 2,
+              "regressed": 3
+            }
+          }
+        }
+      }
+    },
+    "b_nl_ids_extracted": {
+      "1": 39,
+      "2": 39,
+      "3": 42
+    },
+    "cost_per_repository": {
+      "aio-libs/aiohttp": {
+        "clone_seconds": 13.186,
+        "index_seconds": 0.885,
+        "history_seconds_H400": 128.108,
+        "history_profile_size_H400": 1887,
+        "symbols": 3614,
+        "median_latency_ms_b1": 63.52,
+        "median_latency_ms_g": 86.19,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "angular/angular": {
+        "clone_seconds": 141.223,
+        "index_seconds": 7.26,
+        "history_seconds_H400": 336.609,
+        "history_profile_size_H400": 4811,
+        "symbols": 7880,
+        "median_latency_ms_b1": 135.68,
+        "median_latency_ms_g": 187.03,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "babel/babel": {
+        "clone_seconds": 51.832,
+        "index_seconds": 17.495,
+        "history_seconds_H400": 159.865,
+        "history_profile_size_H400": 867,
+        "symbols": 1213,
+        "median_latency_ms_b1": 14.63,
+        "median_latency_ms_g": 21.99,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "buildcraft/buildcraft": {
+        "clone_seconds": 11.952,
+        "index_seconds": 2.355,
+        "history_seconds_H400": 331.753,
+        "history_profile_size_H400": 3586,
+        "symbols": 8433,
+        "median_latency_ms_b1": 149.68,
+        "median_latency_ms_g": 200.05,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "celery/celery": {
+        "clone_seconds": 11.669,
+        "index_seconds": 0.656,
+        "history_seconds_H400": 115.586,
+        "history_profile_size_H400": 1835,
+        "symbols": 2854,
+        "median_latency_ms_b1": 43.51,
+        "median_latency_ms_g": 64.05,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "date-fns/date-fns": {
+        "clone_seconds": 12.571,
+        "index_seconds": 13.332,
+        "history_seconds_H400": 324.389,
+        "history_profile_size_H400": 3064,
+        "symbols": 3064,
+        "median_latency_ms_b1": 32.91,
+        "median_latency_ms_g": 51.19,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "droolsjbpm/drools": {
+        "clone_seconds": 211.627,
+        "index_seconds": 13.484,
+        "history_seconds_H400": 441.349,
+        "history_profile_size_H400": 10190,
+        "symbols": 46780,
+        "median_latency_ms_b1": 1189.79,
+        "median_latency_ms_g": 1389.01,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "droolsjbpm/jbpm": {
+        "clone_seconds": 16.175,
+        "index_seconds": 2.009,
+        "history_seconds_H400": 314.442,
+        "history_profile_size_H400": 3286,
+        "symbols": 5855,
+        "median_latency_ms_b1": 133.42,
+        "median_latency_ms_g": 176.75,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "encode/starlette": {
+        "clone_seconds": 2.861,
+        "index_seconds": 0.148,
+        "history_seconds_H400": 33.113,
+        "history_profile_size_H400": 455,
+        "symbols": 462,
+        "median_latency_ms_b1": 5.59,
+        "median_latency_ms_g": 8.88,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "facebook/presto": {
+        "clone_seconds": 70.716,
+        "index_seconds": 6.066,
+        "history_seconds_H400": 156.571,
+        "history_profile_size_H400": 3904,
+        "symbols": 23656,
+        "median_latency_ms_b1": 471.1,
+        "median_latency_ms_g": 570.84,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "gcanti/io-ts": {
+        "clone_seconds": 1.835,
+        "index_seconds": 0.152,
+        "history_seconds_H400": 22.758,
+        "history_profile_size_H400": 93,
+        "symbols": 93,
+        "median_latency_ms_b1": 1.84,
+        "median_latency_ms_g": 2.67,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "google/closure-compiler": {
+        "clone_seconds": 51.571,
+        "index_seconds": 16.357,
+        "history_seconds_H400": 246.808,
+        "history_profile_size_H400": 5147,
+        "symbols": 41337,
+        "median_latency_ms_b1": 642.41,
+        "median_latency_ms_g": 790.92,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "gwtproject/gwt": {
+        "clone_seconds": 80.732,
+        "index_seconds": 24.221,
+        "history_seconds_H400": 486.997,
+        "history_profile_size_H400": 10137,
+        "symbols": 91203,
+        "median_latency_ms_b1": 2053.92,
+        "median_latency_ms_g": 2332.16,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "hazelcast/hazelcast": {
+        "clone_seconds": 127.304,
+        "index_seconds": 13.32,
+        "history_seconds_H400": 299.212,
+        "history_profile_size_H400": 10751,
+        "symbols": 48634,
+        "median_latency_ms_b1": 1873.49,
+        "median_latency_ms_g": 2147.69,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "ignatov/intellij-erlang": {
+        "clone_seconds": 24.515,
+        "index_seconds": 1.724,
+        "history_seconds_H400": 219.231,
+        "history_profile_size_H400": 3526,
+        "symbols": 6594,
+        "median_latency_ms_b1": 226.66,
+        "median_latency_ms_g": 306.93,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "infinispan/infinispan": {
+        "clone_seconds": 55.625,
+        "index_seconds": 15.977,
+        "history_seconds_H400": 445.509,
+        "history_profile_size_H400": 14471,
+        "symbols": 49260,
+        "median_latency_ms_b1": 2249.67,
+        "median_latency_ms_g": 2585.45,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "junit-team/junit5": {
+        "clone_seconds": 12.621,
+        "index_seconds": 1.035,
+        "history_seconds_H400": 157.201,
+        "history_profile_size_H400": 1622,
+        "symbols": 3037,
+        "median_latency_ms_b1": 115.5,
+        "median_latency_ms_g": 156.82,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "nestjs/nest": {
+        "clone_seconds": 136.969,
+        "index_seconds": 5.394,
+        "history_seconds_H400": 86.144,
+        "history_profile_size_H400": 604,
+        "symbols": 4883,
+        "median_latency_ms_b1": 125.85,
+        "median_latency_ms_g": 156.82,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "prisma/prisma": {
+        "clone_seconds": 39.842,
+        "index_seconds": 6.664,
+        "history_seconds_H400": 234.86,
+        "history_profile_size_H400": 1979,
+        "symbols": 3852,
+        "median_latency_ms_b1": 135.09,
+        "median_latency_ms_g": 192.83,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "pydantic/pydantic": {
+        "clone_seconds": 11.815,
+        "index_seconds": 0.936,
+        "history_seconds_H400": 161.207,
+        "history_profile_size_H400": 1917,
+        "symbols": 2491,
+        "median_latency_ms_b1": 67.56,
+        "median_latency_ms_g": 103.6,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "pylint-dev/pylint": {
+        "clone_seconds": 16.337,
+        "index_seconds": 0.522,
+        "history_seconds_H400": 124.069,
+        "history_profile_size_H400": 860,
+        "symbols": 1471,
+        "median_latency_ms_b1": 42.53,
+        "median_latency_ms_g": 59.26,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 1
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "reduxjs/redux-toolkit": {
+        "clone_seconds": 11.474,
+        "index_seconds": 3.084,
+        "history_seconds_H400": 85.672,
+        "history_profile_size_H400": 312,
+        "symbols": 1345,
+        "median_latency_ms_b1": 43.26,
+        "median_latency_ms_g": 54.85,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "sindresorhus/ts-extras": {
+        "clone_seconds": 1.291,
+        "index_seconds": 0.363,
+        "history_seconds_H400": 27.281,
+        "history_profile_size_H400": 97,
+        "symbols": 97,
+        "median_latency_ms_b1": 3.04,
+        "median_latency_ms_g": 4.12,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "storybookjs/storybook": {
+        "clone_seconds": 269.094,
+        "index_seconds": 23.906,
+        "history_seconds_H400": 65.083,
+        "history_profile_size_H400": 190,
+        "symbols": 8653,
+        "median_latency_ms_b1": 264.21,
+        "median_latency_ms_g": 332.17,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "trpc/trpc": {
+        "clone_seconds": 36.68,
+        "index_seconds": 1.14,
+        "history_seconds_H400": 87.991,
+        "history_profile_size_H400": 320,
+        "symbols": 502,
+        "median_latency_ms_b1": 15.3,
+        "median_latency_ms_g": 20.75,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "typescript-eslint/typescript-eslint": {
+        "clone_seconds": 52.061,
+        "index_seconds": 8.863,
+        "history_seconds_H400": 132.76,
+        "history_profile_size_H400": 584,
+        "symbols": 4305,
+        "median_latency_ms_b1": 152.08,
+        "median_latency_ms_g": 187.29,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "validatorjs/validator.js": {
+        "clone_seconds": 2.734,
+        "index_seconds": 4.121,
+        "history_seconds_H400": 172.785,
+        "history_profile_size_H400": 117,
+        "symbols": 177,
+        "median_latency_ms_b1": 6.59,
+        "median_latency_ms_g": 9.01,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "webpack/webpack": {
+        "clone_seconds": 53.397,
+        "index_seconds": 213.29,
+        "history_seconds_H400": 1475.714,
+        "history_profile_size_H400": 3915,
+        "symbols": 13362,
+        "median_latency_ms_b1": 469.2,
+        "median_latency_ms_g": 612.08,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "apache/cassandra": {
+        "clone_seconds": 144.912,
+        "index_seconds": 8.833,
+        "history_seconds_H400": 403.392,
+        "history_profile_size_H400": 9620,
+        "symbols": 25291,
+        "median_latency_ms_b1": 943.59,
+        "median_latency_ms_g": 1072.12,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "asyml/texar": {
+        "clone_seconds": 1.83,
+        "index_seconds": 0.24,
+        "history_seconds_H400": 81.874,
+        "history_profile_size_H400": 517,
+        "symbols": 517,
+        "median_latency_ms_b1": 21.29,
+        "median_latency_ms_g": 31.43,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "bitcoinj/bitcoinj": {
+        "clone_seconds": 11.042,
+        "index_seconds": 5.07,
+        "history_seconds_H400": 179.494,
+        "history_profile_size_H400": 3490,
+        "symbols": 11756,
+        "median_latency_ms_b1": 356.76,
+        "median_latency_ms_g": 431.3,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "django/django": {
+        "clone_seconds": 54.31,
+        "index_seconds": 2.235,
+        "history_seconds_H400": 119.417,
+        "history_profile_size_H400": 3018,
+        "symbols": 6766,
+        "median_latency_ms_b1": 211.28,
+        "median_latency_ms_g": 265.62,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "jashkenas/underscore": {
+        "clone_seconds": 3.168,
+        "index_seconds": 0.916,
+        "history_seconds_H400": 73.517,
+        "history_profile_size_H400": 268,
+        "symbols": 856,
+        "median_latency_ms_b1": 9.9,
+        "median_latency_ms_g": 25.42,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "mobxjs/mobx": {
+        "clone_seconds": 10.048,
+        "index_seconds": 0.543,
+        "history_seconds_H400": 144.37,
+        "history_profile_size_H400": 492,
+        "symbols": 516,
+        "median_latency_ms_b1": 10.19,
+        "median_latency_ms_g": 15.17,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "pallets/werkzeug": {
+        "clone_seconds": 7.234,
+        "index_seconds": 0.554,
+        "history_seconds_H400": 83.043,
+        "history_profile_size_H400": 899,
+        "symbols": 907,
+        "median_latency_ms_b1": 26.86,
+        "median_latency_ms_g": 39.96,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "paramiko/paramiko": {
+        "clone_seconds": 2.737,
+        "index_seconds": 0.153,
+        "history_seconds_H400": 33.36,
+        "history_profile_size_H400": 364,
+        "symbols": 365,
+        "median_latency_ms_b1": 12.09,
+        "median_latency_ms_g": 18.44,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "pypa/pip": {
+        "clone_seconds": 27.051,
+        "index_seconds": 2.176,
+        "history_seconds_H400": 104.175,
+        "history_profile_size_H400": 955,
+        "symbols": 6262,
+        "median_latency_ms_b1": 190.93,
+        "median_latency_ms_g": 231.89,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "python-trio/trio": {
+        "clone_seconds": 3.02,
+        "index_seconds": 0.452,
+        "history_seconds_H400": 115.794,
+        "history_profile_size_H400": 1015,
+        "symbols": 1326,
+        "median_latency_ms_b1": 36.66,
+        "median_latency_ms_g": 53.52,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "ramda/ramda": {
+        "clone_seconds": 4.243,
+        "index_seconds": 3.744,
+        "history_seconds_H400": 76.502,
+        "history_profile_size_H400": 621,
+        "symbols": 1989,
+        "median_latency_ms_b1": 45.68,
+        "median_latency_ms_g": 59.41,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "scikit-learn/scikit-learn": {
+        "clone_seconds": 48.05,
+        "index_seconds": 0.846,
+        "history_seconds_H400": 64.382,
+        "history_profile_size_H400": 387,
+        "symbols": 1859,
+        "median_latency_ms_b1": 63.24,
+        "median_latency_ms_g": 76.64,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "tj/commander.js": {
+        "clone_seconds": 2.428,
+        "index_seconds": 2.713,
+        "history_seconds_H400": 77.738,
+        "history_profile_size_H400": 239,
+        "symbols": 242,
+        "median_latency_ms_b1": 7.69,
+        "median_latency_ms_g": 11.88,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      },
+      "typestrong/ts-node": {
+        "clone_seconds": 2.114,
+        "index_seconds": 1.499,
+        "history_seconds_H400": 88.761,
+        "history_profile_size_H400": 396,
+        "symbols": 415,
+        "median_latency_ms_b1": 13.7,
+        "median_latency_ms_g": 20.66,
+        "extraction_failures": {
+          "structural": 0,
+          "history_H400": 0
+        },
+        "parser_healthy_H400": true,
+        "clean_at_pin_before_after": true
+      }
+    }
+  },
+  "worked_examples": {
+    "java": {
+      "repository": "droolsjbpm/drools",
+      "source": "S1",
+      "commit_url": "https://github.com/droolsjbpm/drools/commit/1bf2875e9d73e2d1cd3b58200d5300485f890ff5",
+      "old_name": "isHighestSalience",
+      "new_name": "isHigherSalience",
+      "target": {
+        "file": "drools-core/src/main/java/org/drools/core/phreak/RuleExecutor.java",
+        "qualifiedName": "org.drools.core.phreak.RuleExecutor.isHigherSalience",
+        "name": "isHigherSalience"
+      },
+      "pin": "9acd02bacd77c19d5393a164dcfda91cd597c3c4",
+      "b_id_ranks": {
+        "b1": 37,
+        "b2": 1,
+        "b3": 1,
+        "b4": 8,
+        "g": 1
+      },
+      "g_lineage_matches": 1,
+      "b_nl_ranks_by_template": {
+        "1": {
+          "b1": 175,
+          "b2": 1,
+          "b3": 1,
+          "b4": 13,
+          "g": 1
+        },
+        "2": {
+          "b1": null,
+          "b2": 1,
+          "b3": 1,
+          "b4": 1,
+          "g": 1
+        },
+        "3": {
+          "b1": 69,
+          "b2": 1,
+          "b3": 1,
+          "b4": 9,
+          "g": 1
+        }
+      }
+    },
+    "python": {
+      "repository": "pylint-dev/pylint",
+      "source": "S3",
+      "commit_url": "https://github.com/pylint-dev/pylint/commit/8394e37ed45a500b5bde544859fa79568bbbb371",
+      "old_name": "show_message",
+      "new_name": "show_sourcefile",
+      "target": {
+        "file": "gui.py",
+        "qualifiedName": "LintGui.show_sourcefile",
+        "name": "show_sourcefile"
+      },
+      "pin": "784ddd5828cc98aebdbaf797964ede6ad91cffe8",
+      "b_id_ranks": {
+        "b1": null,
+        "b2": 36,
+        "b3": 53,
+        "b4": 74,
+        "g": 1
+      },
+      "g_lineage_matches": 1,
+      "b_nl_ranks_by_template": {
+        "1": {
+          "b1": null,
+          "b2": 26,
+          "b3": 79,
+          "b4": 76,
+          "g": 1
+        },
+        "2": {
+          "b1": null,
+          "b2": 4,
+          "b3": 4,
+          "b4": 4,
+          "g": 1
+        },
+        "3": {
+          "b1": null,
+          "b2": 15,
+          "b3": 38,
+          "b4": 54,
+          "g": 1
+        }
+      }
+    },
+    "javascript": {
+      "repository": "ramda/ramda",
+      "source": "S3",
+      "commit_url": "https://github.com/ramda/ramda/commit/92c182c2d94d2cd5287f08cecb54d97b56938cb0",
+      "old_name": "filterObject",
+      "new_name": "pickWith",
+      "target": {
+        "file": "ramda.js",
+        "qualifiedName": "pickWith",
+        "name": "pickWith"
+      },
+      "pin": "0018f70176f5876085cff5320ce1bcdb0d615128",
+      "b_id_ranks": {
+        "b1": null,
+        "b2": 1,
+        "b3": 3,
+        "b4": 7,
+        "g": 1
+      },
+      "g_lineage_matches": 1,
+      "b_nl_ranks_by_template": {
+        "1": {
+          "b1": 112,
+          "b2": 1,
+          "b3": 1,
+          "b4": 9,
+          "g": 1
+        },
+        "2": {
+          "b1": null,
+          "b2": 1,
+          "b3": 1,
+          "b4": 1,
+          "g": 1
+        },
+        "3": {
+          "b1": null,
+          "b2": 1,
+          "b3": 3,
+          "b4": 6,
+          "g": 1
+        }
+      }
+    },
+    "typescript": {
+      "repository": "angular/angular",
+      "source": "S3",
+      "commit_url": "https://github.com/angular/angular/commit/0c600cf6e31b7f69f5a36f7dea959e4884217a4d",
+      "old_name": "compileInHost",
+      "new_name": "resolveComponent",
+      "target": {
+        "file": "modules/angular2/src/compiler/runtime_compiler.ts",
+        "qualifiedName": "RuntimeCompiler.resolveComponent",
+        "name": "resolveComponent"
+      },
+      "pin": "fad3b6434c529965500dade72ea0ef4735d270f0",
+      "b_id_ranks": {
+        "b1": null,
+        "b2": 1,
+        "b3": 6,
+        "b4": 31,
+        "g": 1
+      },
+      "g_lineage_matches": 1,
+      "b_nl_ranks_by_template": {
+        "1": {
+          "b1": 255,
+          "b2": 1,
+          "b3": 1,
+          "b4": 14,
+          "g": 1
+        },
+        "2": {
+          "b1": null,
+          "b2": 1,
+          "b3": 1,
+          "b4": 1,
+          "g": 1
+        },
+        "3": {
+          "b1": null,
+          "b2": 1,
+          "b3": 1,
+          "b4": 32,
+          "g": 1
+        }
+      }
+    }
+  },
+  "funnel": {
+    "by_language_source": {
+      "java/S1": {
+        "repositories_considered": 46,
+        "excluded": 4,
+        "clone_skipped": 6,
+        "no_valid_event": 24,
+        "selected": 12,
+        "candidate_events": 181,
+        "passed_extractor_check": 45,
+        "dropped_at_pin": 12
+      },
+      "python/S3": {
+        "repositories_considered": 19,
+        "excluded": 5,
+        "clone_skipped": 0,
+        "no_valid_event": 3,
+        "selected": 11,
+        "candidate_events": 420,
+        "passed_extractor_check": 114,
+        "dropped_at_pin": 3
+      },
+      "python/S2": {
+        "repositories_considered": 3,
+        "excluded": 1,
+        "clone_skipped": 0,
+        "no_valid_event": 1,
+        "selected": 1,
+        "candidate_events": 38,
+        "passed_extractor_check": 9,
+        "dropped_at_pin": 0
+      },
+      "javascript/S3": {
+        "repositories_considered": 25,
+        "excluded": 8,
+        "clone_skipped": 0,
+        "no_valid_event": 12,
+        "selected": 5,
+        "candidate_events": 144,
+        "passed_extractor_check": 24,
+        "dropped_at_pin": 7
+      },
+      "javascript/S3b": {
+        "repositories_considered": 12,
+        "excluded": 0,
+        "clone_skipped": 0,
+        "no_valid_event": 10,
+        "selected": 2,
+        "candidate_events": 93,
+        "passed_extractor_check": 5,
+        "dropped_at_pin": 2
+      },
+      "typescript/S3": {
+        "repositories_considered": 25,
+        "excluded": 4,
+        "clone_skipped": 1,
+        "no_valid_event": 9,
+        "selected": 11,
+        "candidate_events": 1500,
+        "passed_extractor_check": 139,
+        "dropped_at_pin": 15
+      }
+    },
+    "selected_per_language": {
+      "java": 12,
+      "python": 12,
+      "javascript": 7,
+      "typescript": 11
+    },
+    "total_selected": 42
+  }
+}

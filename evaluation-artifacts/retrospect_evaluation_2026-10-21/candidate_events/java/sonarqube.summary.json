@@ -1,0 +1,21 @@
+{
+  "repository": "sonarqube",
+  "language": "java",
+  "pin": "e3b4618c6a748dbc5f2b9659cb039d34726bb8bf",
+  "window": 1500,
+  "commits": 1500,
+  "mergesSkipped": 0,
+  "commitsWithChanges": 633,
+  "events": {
+    "ambiguous_pairing": 58,
+    "signature_change": 127,
+    "rename": 22,
+    "extraction": 26,
+    "deletion_no_successor": 1472,
+    "split_part": 32,
+    "move": 17,
+    "scope_change": 25,
+    "rename_move": 1
+  },
+  "parseFailures": 7468
+}

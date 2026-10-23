@@ -1,0 +1,432 @@
+{
+  "protocol": "reports/evaluation_protocol.md",
+  "runs": [
+    "evaluation/runs/merged_v4_parserfix/held_out_test_D_v3",
+    "evaluation/runs/merged_v4_parserfix/validation_D_v3",
+    "evaluation/runs/merged_v4_parserfix/development_D_v3"
+  ],
+  "skipped_cases": 0,
+  "primary": {
+    "java": {
+      "population": 0,
+      "metrics": {
+        "b1": {
+          "n": 0
+        },
+        "b2": {
+          "n": 0
+        },
+        "b3": {
+          "n": 0
+        },
+        "b4": {
+          "n": 0
+        }
+      },
+      "b4_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {},
+        "p_holm": null,
+        "decision": "NOT_TESTABLE (<6 clusters)"
+      },
+      "b2_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      },
+      "b3_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      }
+    },
+    "python": {
+      "population": 0,
+      "metrics": {
+        "b1": {
+          "n": 0
+        },
+        "b2": {
+          "n": 0
+        },
+        "b3": {
+          "n": 0
+        },
+        "b4": {
+          "n": 0
+        }
+      },
+      "b4_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {},
+        "p_holm": null,
+        "decision": "NOT_TESTABLE (<6 clusters)"
+      },
+      "b2_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      },
+      "b3_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      }
+    },
+    "javascript": {
+      "population": 0,
+      "metrics": {
+        "b1": {
+          "n": 0
+        },
+        "b2": {
+          "n": 0
+        },
+        "b3": {
+          "n": 0
+        },
+        "b4": {
+          "n": 0
+        }
+      },
+      "b4_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {},
+        "p_holm": null,
+        "decision": "NOT_TESTABLE (<6 clusters)"
+      },
+      "b2_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      },
+      "b3_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      }
+    },
+    "typescript": {
+      "population": 0,
+      "metrics": {
+        "b1": {
+          "n": 0
+        },
+        "b2": {
+          "n": 0
+        },
+        "b3": {
+          "n": 0
+        },
+        "b4": {
+          "n": 0
+        }
+      },
+      "b4_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {},
+        "p_holm": null,
+        "decision": "NOT_TESTABLE (<6 clusters)"
+      },
+      "b2_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      },
+      "b3_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      }
+    }
+  },
+  "secondary": {
+    "H50/held_out_test/java/D_negative": {
+      "cases": 567,
+      "clusters": 34,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/held_out_test/python/D_negative": {
+      "cases": 155,
+      "clusters": 70,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/held_out_test/javascript/D_negative": {
+      "cases": 61,
+      "clusters": 40,
+      "false_lineage_claim_rate_top10": 0.0164
+    },
+    "H50/held_out_test/typescript/D_negative": {
+      "cases": 120,
+      "clusters": 36,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/held_out_test/pooled/D_negative": {
+      "cases": 903,
+      "clusters": 180,
+      "false_lineage_claim_rate_top10": 0.0011
+    },
+    "H50/validation/java/D_negative": {
+      "cases": 78,
+      "clusters": 9,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/validation/python/D_negative": {
+      "cases": 23,
+      "clusters": 10,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/validation/javascript/D_negative": {
+      "cases": 23,
+      "clusters": 11,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/validation/typescript/D_negative": {
+      "cases": 27,
+      "clusters": 11,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/validation/pooled/D_negative": {
+      "cases": 151,
+      "clusters": 41,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/development/java/D_negative": {
+      "cases": 20,
+      "clusters": 14,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/development/python/D_negative": {
+      "cases": 42,
+      "clusters": 23,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/development/javascript/D_negative": {
+      "cases": 7,
+      "clusters": 6,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H50/development/typescript/D_negative": {
+      "cases": 24,
+      "clusters": 17,
+      "false_lineage_claim_rate_top10": 0.0417
+    },
+    "H50/development/pooled/D_negative": {
+      "cases": 93,
+      "clusters": 60,
+      "false_lineage_claim_rate_top10": 0.0108
+    },
+    "H400/held_out_test/java/D_negative": {
+      "cases": 567,
+      "clusters": 34,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/held_out_test/python/D_negative": {
+      "cases": 155,
+      "clusters": 70,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/held_out_test/javascript/D_negative": {
+      "cases": 61,
+      "clusters": 40,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/held_out_test/typescript/D_negative": {
+      "cases": 120,
+      "clusters": 36,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/held_out_test/pooled/D_negative": {
+      "cases": 903,
+      "clusters": 180,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/validation/java/D_negative": {
+      "cases": 78,
+      "clusters": 9,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/validation/python/D_negative": {
+      "cases": 23,
+      "clusters": 10,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/validation/javascript/D_negative": {
+      "cases": 23,
+      "clusters": 11,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/validation/typescript/D_negative": {
+      "cases": 27,
+      "clusters": 11,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/validation/pooled/D_negative": {
+      "cases": 151,
+      "clusters": 41,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/development/java/D_negative": {
+      "cases": 20,
+      "clusters": 14,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/development/python/D_negative": {
+      "cases": 42,
+      "clusters": 23,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/development/javascript/D_negative": {
+      "cases": 7,
+      "clusters": 6,
+      "false_lineage_claim_rate_top10": 0.0
+    },
+    "H400/development/typescript/D_negative": {
+      "cases": 24,
+      "clusters": 17,
+      "false_lineage_claim_rate_top10": 0.0417
+    },
+    "H400/development/pooled/D_negative": {
+      "cases": 93,
+      "clusters": 60,
+      "false_lineage_claim_rate_top10": 0.0108
+    }
+  },
+  "sensitivity_parser_healthy_only": {
+    "java": {
+      "population": 0,
+      "b4_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      }
+    },
+    "python": {
+      "population": 0,
+      "b4_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      }
+    },
+    "javascript": {
+      "population": 0,
+      "b4_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      }
+    },
+    "typescript": {
+      "population": 0,
+      "b4_vs_b1": {
+        "cases": 0,
+        "clusters": 0,
+        "delta_mrr_cluster_mean": null,
+        "delta_mrr_case_mean": null,
+        "p_two_sided": null,
+        "test": null,
+        "ci95_bootstrap": null,
+        "transitions": {}
+      }
+    }
+  },
+  "diagnostics": {
+    "parser_aborted_during_H400_history_by_language": {
+      "java": [],
+      "python": [],
+      "javascript": [],
+      "typescript": []
+    },
+    "not_indexed_by_language": {},
+    "reach_by_language": {
+      "java": {},
+      "python": {},
+      "javascript": {},
+      "typescript": {}
+    },
+    "by_repository_heldout_inwindow": {},
+    "by_label_heldout_inwindow": {},
+    "by_overlap_heldout_inwindow": {},
+    "by_b1_success_heldout_inwindow": {}
+  }
+}

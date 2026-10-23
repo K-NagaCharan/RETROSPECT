@@ -1,0 +1,33 @@
+{
+ "repository": "github/android",
+ "url": "https://github.com/github/android.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "all candidate events dropped at pin checks",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 1
+ },
+ "rejects": [],
+ "drops": [
+  {
+   "commit": "a7401e5091c06c68fae499ea1972b40143c66fa9",
+   "old": "endAccess",
+   "new": "endAuth",
+   "source": "S1",
+   "reason": "successor absent at pin"
+  }
+ ],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\github__android",
+  "seconds": 5.298,
+  "bytes": 16767023,
+  "default_branch": "master",
+  "head": "8228cb8f7197a7c2227e67ee48a2c8dc843fb553"
+ },
+ "seconds": 6.131
+}

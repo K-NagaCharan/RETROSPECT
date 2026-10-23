@@ -1,0 +1,33 @@
+{
+ "repository": "antlr/antlr4",
+ "url": "https://github.com/antlr/antlr4.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "a9ca2efae56815dc464189b055ffe9da23766f7f",
+   "old": "testInterp",
+   "new": "testAmbiguousTrees",
+   "source": "S1",
+   "reason": "OLD still a callable in child (changed files)"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\antlr__antlr4",
+  "seconds": 22.977,
+  "bytes": 87059972,
+  "default_branch": "dev",
+  "head": "7d5770395bb7b02eb56e7c62662cb1d7c08f42a3"
+ },
+ "seconds": 23.479
+}

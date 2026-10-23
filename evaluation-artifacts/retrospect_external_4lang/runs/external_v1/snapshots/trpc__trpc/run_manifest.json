@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T08:06:57.883Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\trpc__trpc.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "trpc/trpc",
+      "path": "D:/clones_external/trpc__trpc",
+      "pin": "e9e19e4d86da2e6677cfd0d5486f2270a491c096",
+      "head_before": "e9e19e4d86da2e6677cfd0d5486f2270a491c096",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 502,
+      "index_seconds": 1.14,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 87.991,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 320,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "e9e19e4d86da2e6677cfd0d5486f2270a491c096",
+      "clean_after": true,
+      "seconds_total": 90.416
+    }
+  ],
+  "finished_utc": "2026-10-23T08:08:28.479Z"
+}

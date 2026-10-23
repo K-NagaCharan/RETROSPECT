@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T07:03:36.038Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\development_BCA_v3\\snapshots\\guava.cases.jsonl",
+  "case_count": 1,
+  "snapshots": [
+    {
+      "repository": "guava",
+      "path": "D:/clones/guava",
+      "pin": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+      "head_before": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+      "clean_before": true,
+      "cases": 1,
+      "symbols": 66211,
+      "index_seconds": 21.293,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 75.531,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 727.491,
+      "parser_healthy_after_history_H400": false,
+      "head_after": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+      "clean_after": true,
+      "seconds_total": 930.804
+    }
+  ],
+  "finished_utc": "2026-10-22T07:19:06.923Z"
+}

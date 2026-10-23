@@ -1,0 +1,22 @@
+{
+  "repository": "httpx",
+  "language": "python",
+  "pin": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+  "window": 1500,
+  "commits": 1460,
+  "mergesSkipped": 40,
+  "commitsWithChanges": 869,
+  "events": {
+    "signature_change": 1342,
+    "rename_move": 13,
+    "deletion_no_successor": 274,
+    "ambiguous_pairing": 71,
+    "extraction": 15,
+    "inlining": 2,
+    "move": 85,
+    "scope_change": 139,
+    "rename": 49,
+    "split_part": 9
+  },
+  "parseFailures": 0
+}

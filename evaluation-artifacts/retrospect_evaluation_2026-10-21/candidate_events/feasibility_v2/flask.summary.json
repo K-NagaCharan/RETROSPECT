@@ -1,0 +1,16 @@
+{
+  "repository": "flask",
+  "language": "python",
+  "pin": "d086db856be187255b8ec61ef409357393020f32",
+  "window": 150,
+  "commits": 89,
+  "mergesSkipped": 61,
+  "commitsWithChanges": 38,
+  "events": {
+    "extraction": 1,
+    "signature_change": 25,
+    "deletion_no_successor": 6,
+    "ambiguous_pairing": 1
+  },
+  "parseFailures": 0
+}

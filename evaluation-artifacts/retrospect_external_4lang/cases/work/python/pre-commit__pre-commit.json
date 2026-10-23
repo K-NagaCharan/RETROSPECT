@@ -1,0 +1,25 @@
+{
+ "repository": "pre-commit/pre-commit",
+ "url": "https://github.com/pre-commit/pre-commit.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\pre-commit__pre-commit",
+  "seconds": 4.641,
+  "bytes": 6305915,
+  "default_branch": "main",
+  "head": "8cb5845c835b1ff72240eb2484239411ec481d92"
+ },
+ "seconds": 15.227
+}

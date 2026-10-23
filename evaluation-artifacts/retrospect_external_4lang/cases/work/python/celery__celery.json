@@ -1,0 +1,972 @@
+{
+ "repository": "celery/celery",
+ "url": "https://github.com/celery/celery.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 145,
+  "passed_extractor_check": 16,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "7d2cda1851e2aed265bc5ceecc8d18b6f39547e8",
+   "old": "test_terminated_task_logs",
+   "new": "test_terminated_task_logs_correct_error",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f1b367b83c594414d7883ca3255ad64debf302c3",
+   "old": "restart",
+   "new": "suicide_exhaust_hdd",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fcd8fdd725f7766d7b9d28f4fc828b18b05fb19d",
+   "old": "passt",
+   "new": "pass_value",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b5bc40f04aad9cbff5e0c605103009cf9cb0e282",
+   "old": "teardown",
+   "new": "setup_method",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b5bc40f04aad9cbff5e0c605103009cf9cb0e282",
+   "old": "teardown",
+   "new": "teardown_method",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "reconnect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "reconnect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "reconnect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "reconnect",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "reconnect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "reconnect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "style",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "style",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "style",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "style",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "style",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "style",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "echo",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "echo",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "echo",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "echo",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "echo",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "echo",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "beat",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "beat",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "beat",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "beat",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "beat",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "beat",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "celery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "celery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "celery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "celery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "celery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "celery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "status",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "status",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "status",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "status",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "status",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "status",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "inspect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "inspect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "inspect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "inspect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "inspect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "inspect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "graph",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "graph",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "graph",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "graph",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "graph",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "graph",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "bindings",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "bindings",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "bindings",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "bindings",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "bindings",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "bindings",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "logtool",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "logtool",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "logtool",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "logtool",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "logtool",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "logtool",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "migrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "migrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "migrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "migrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "migrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "migrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "multi",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "multi",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "multi",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "multi",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "multi",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "multi",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "purge",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "purge",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "purge",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "purge",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "purge",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "purge",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "result",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "result",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "result",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "result",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "result",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "result",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "shell",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "shell",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "shell",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "shell",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "shell",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "shell",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "upgrade",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "upgrade",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "upgrade",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "upgrade",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "upgrade",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "upgrade",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "worker_main",
+   "new": "worker",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "default",
+   "new": "worker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "dispatch",
+   "new": "worker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "connect",
+   "new": "worker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "load",
+   "new": "worker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "01651d2f5d9ad20dfb9812d92831510147974b23",
+   "old": "execute",
+   "new": "worker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "91af06d50bbfb23ccd74ca24f2402a7b70e2847e",
+   "old": "publisher",
+   "new": "producer",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "b985771edbdc8380d6f72da6f902129688c2bd04",
+   "old": "from_serializable",
+   "new": "as_tuple",
+   "source": "S3",
+   "reason": "body similarity 0.094 < 0.5"
+  },
+  {
+   "commit": "b985771edbdc8380d6f72da6f902129688c2bd04",
+   "old": "serializable",
+   "new": "result_from_tuple",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "35566bb511d2d6b2998ec6b31ce217f85d4836c6",
+   "old": "stop_verify",
+   "new": "stopwait",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1850efb9f63ce7bbeb6d7655579ea449c6467cc6",
+   "old": "registered_tasks",
+   "new": "registered",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "53c0844cc3b54b4e28e8cc814e5d60e27a1d674d",
+   "old": "__error_handler",
+   "new": "_error_handler",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "reset_signal",
+   "new": "signum",
+   "source": "S3",
+   "reason": "body similarity 0.107 < 0.5"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "ignore_signal",
+   "new": "signum",
+   "source": "S3",
+   "reason": "body similarity 0.111 < 0.5"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "install_signal_handler",
+   "new": "signum",
+   "source": "S3",
+   "reason": "body similarity 0.155 < 0.5"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "get_signal",
+   "new": "reset",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "reset_signal",
+   "new": "reset",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "ignore_signal",
+   "new": "reset",
+   "source": "S3",
+   "reason": "body similarity 0.395 < 0.5"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "install_signal_handler",
+   "new": "reset",
+   "source": "S3",
+   "reason": "body similarity 0.304 < 0.5"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "get_signal",
+   "new": "ignore",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "reset_signal",
+   "new": "ignore",
+   "source": "S3",
+   "reason": "body similarity 0.385 < 0.5"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "ignore_signal",
+   "new": "ignore",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f0962a90db6255816bcd71282d290ed54368d43d",
+   "old": "install_signal_handler",
+   "new": "ignore",
+   "source": "S3",
+   "reason": "body similarity 0.283 < 0.5"
+  },
+  {
+   "commit": "58c87073c4161e11b6e8be65c5878be129554b58",
+   "old": "ConsumerSet",
+   "new": "Consumer",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "057d099140c21828240cc070b4e7b9fae0e23183",
+   "old": "detach",
+   "new": "start",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fce1de5f9d976977b1b67f61d8437067d89f4a4e",
+   "old": "detach",
+   "new": "start",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "51817d48ae9bd2e92aa19c58f4c9ab71037a1762",
+   "old": "task_response",
+   "new": "http_task_response",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "ebafb15ba9c38d78830997cc7f9f2502bca4ac80",
+   "old": "wait_for",
+   "new": "wait",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "6891f9368337ff2c104b5ad68df9d12d7215d906",
+  "parent": "3b28b859db19514b9537e6509c2950d938402863",
+  "old": "kill_job",
+  "new": "terminate_job",
+  "message": "Fixed typo kill_job -> terminate_job",
+  "commit_url": "https://github.com/celery/celery/commit/6891f9368337ff2c104b5ad68df9d12d7215d906",
+  "similarity": 0.857,
+  "before": {
+   "name": "kill_job",
+   "qualifiedName": "BasePool.kill_job",
+   "file": "celery/concurrency/base.py",
+   "startLine": 44
+  },
+  "after": {
+   "name": "terminate_job",
+   "qualifiedName": "BasePool.terminate_job",
+   "file": "celery/concurrency/base.py",
+   "startLine": 44
+  },
+  "pin": "b8cf78eb1d2b38ea0d8bb039cf8383384b9e166d",
+  "first_containing": "72ab0930fa66d38262c699a5cad3d0ba341d292c",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 383,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 383,
+   "window_command": "git log --format=%H --topo-order -n 400 b8cf78eb1d2b38ea0d8bb039cf8383384b9e166d"
+  },
+  "target": {
+   "file": "celery/concurrency/base.py",
+   "qualifiedName": "BasePool.terminate_job",
+   "name": "terminate_job"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\celery__celery",
+  "seconds": 11.669,
+  "bytes": 47831467,
+  "default_branch": "main",
+  "head": "682754c16ac9cd0768275eab5325b78b5342b0b0"
+ },
+ "seconds": 150.233
+}

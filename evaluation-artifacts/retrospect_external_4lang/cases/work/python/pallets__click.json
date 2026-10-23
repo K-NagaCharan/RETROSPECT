@@ -1,0 +1,25 @@
+{
+ "repository": "pallets/click",
+ "url": "https://github.com/pallets/click.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\pallets__click",
+  "seconds": 2.023,
+  "bytes": 7847898,
+  "default_branch": "main",
+  "head": "2247b35ea1c47c727d7a06e51fa280e12a863ff6"
+ },
+ "seconds": 6.521
+}

@@ -1,0 +1,3614 @@
+{
+  "generated_utc": "2026-10-21T18:14:52+00:00",
+  "configurations": {
+    "b1": "B1_structural_only",
+    "b2": "B2_historical_only",
+    "b3": "B3_linear_fusion_0.6S_0.4H",
+    "b4": "B4_rrf_v2_k60_0.5_0.5"
+  },
+  "E1_java_H50": {
+    "all_29_reference": {
+      "cases": 29,
+      "independent_clusters": 18,
+      "B1_structural_only": {
+        "recall@1": 0.0345,
+        "recall@5": 0.2414,
+        "recall@10": 0.5862,
+        "mrr": 0.1664,
+        "median_rank_unranked_as_inf": 8,
+        "median_rank_among_ranked": 8,
+        "pct_not_retrieved": 13.8
+      },
+      "B2_historical_only": {
+        "recall@1": 0.0345,
+        "recall@5": 0.2759,
+        "recall@10": 0.3103,
+        "mrr": 0.1196,
+        "median_rank_unranked_as_inf": null,
+        "median_rank_among_ranked": 4,
+        "pct_not_retrieved": 55.2
+      },
+      "B3_linear_fusion_0.6S_0.4H": {
+        "recall@1": 0.069,
+        "recall@5": 0.4138,
+        "recall@10": 0.5862,
+        "mrr": 0.2289,
+        "median_rank_unranked_as_inf": 8,
+        "median_rank_among_ranked": 7,
+        "pct_not_retrieved": 6.9
+      },
+      "B4_rrf_v2_k60_0.5_0.5": {
+        "recall@1": 0.069,
+        "recall@5": 0.3103,
+        "recall@10": 0.4483,
+        "mrr": 0.1886,
+        "median_rank_unranked_as_inf": 12,
+        "median_rank_among_ranked": 11,
+        "pct_not_retrieved": 6.9
+      },
+      "B4_vs_B1": {
+        "rescues@10": {
+          "count": 3,
+          "case_ids": [
+            "CASE-HIST-JAVA-0019",
+            "CASE-HIST-JAVA-0013",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 7,
+          "case_ids": [
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0058",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0078",
+            "CASE-HIST-JAVA-0039",
+            "CASE-HIST-JAVA-0047",
+            "CASE-HIST-JAVA-0043"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 6,
+          "case_ids": [
+            "CASE-HIST-JAVA-0105",
+            "CASE-HIST-JAVA-0101",
+            "CASE-HIST-JAVA-0020",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0046",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 10,
+          "case_ids": [
+            "CASE-HIST-JAVA-0099",
+            "CASE-HIST-JAVA-0097",
+            "CASE-HIST-JAVA-0038",
+            "CASE-HIST-JAVA-0034",
+            "CASE-HIST-JAVA-0029",
+            "CASE-HIST-JAVA-0005",
+            "CASE-HIST-JAVA-0001",
+            "CASE-HIST-JAVA-0028",
+            "CASE-HIST-JAVA-0031",
+            "CASE-HIST-JAVA-0048"
+          ]
+        }
+      },
+      "B2_vs_B1": {
+        "rescues@10": {
+          "count": 3,
+          "case_ids": [
+            "CASE-HIST-JAVA-0019",
+            "CASE-HIST-JAVA-0013",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 11,
+          "case_ids": [
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0058",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0078",
+            "CASE-HIST-JAVA-0039",
+            "CASE-HIST-JAVA-0029",
+            "CASE-HIST-JAVA-0005",
+            "CASE-HIST-JAVA-0028",
+            "CASE-HIST-JAVA-0031",
+            "CASE-HIST-JAVA-0047",
+            "CASE-HIST-JAVA-0043"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 6,
+          "case_ids": [
+            "CASE-HIST-JAVA-0105",
+            "CASE-HIST-JAVA-0101",
+            "CASE-HIST-JAVA-0020",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0046",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 1,
+          "case_ids": [
+            "CASE-HIST-JAVA-0048"
+          ]
+        }
+      },
+      "B2_no_historical_score": {
+        "count": 16
+      },
+      "cluster_sign_flip_B4_minus_B1_mrr": {
+        "clusters": 18,
+        "observed_mean_delta": -0.0471,
+        "p_exact_two_sided": 0.56999,
+        "min_attainable_p": 1e-05
+      }
+    },
+    "primary_18": {
+      "cases": 18,
+      "independent_clusters": 13,
+      "B1_structural_only": {
+        "recall@1": 0.0,
+        "recall@5": 0.2778,
+        "recall@10": 0.7222,
+        "mrr": 0.1623,
+        "median_rank_unranked_as_inf": 7.5,
+        "median_rank_among_ranked": 7,
+        "pct_not_retrieved": 5.6
+      },
+      "B2_historical_only": {
+        "recall@1": 0.0,
+        "recall@5": 0.3333,
+        "recall@10": 0.3889,
+        "mrr": 0.118,
+        "median_rank_unranked_as_inf": null,
+        "median_rank_among_ranked": 3.5,
+        "pct_not_retrieved": 55.6
+      },
+      "B3_linear_fusion_0.6S_0.4H": {
+        "recall@1": 0.0556,
+        "recall@5": 0.4444,
+        "recall@10": 0.6667,
+        "mrr": 0.2394,
+        "median_rank_unranked_as_inf": 6.5,
+        "median_rank_among_ranked": 6.5,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_rrf_v2_k60_0.5_0.5": {
+        "recall@1": 0.0556,
+        "recall@5": 0.3889,
+        "recall@10": 0.5,
+        "mrr": 0.2159,
+        "median_rank_unranked_as_inf": 9.5,
+        "median_rank_among_ranked": 9.5,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_vs_B1": {
+        "rescues@10": {
+          "count": 2,
+          "case_ids": [
+            "CASE-HIST-JAVA-0013",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 6,
+          "case_ids": [
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0058",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0078",
+            "CASE-HIST-JAVA-0047",
+            "CASE-HIST-JAVA-0043"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 5,
+          "case_ids": [
+            "CASE-HIST-JAVA-0105",
+            "CASE-HIST-JAVA-0101",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0046",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 5,
+          "case_ids": [
+            "CASE-HIST-JAVA-0099",
+            "CASE-HIST-JAVA-0097",
+            "CASE-HIST-JAVA-0029",
+            "CASE-HIST-JAVA-0001",
+            "CASE-HIST-JAVA-0028"
+          ]
+        }
+      },
+      "B2_vs_B1": {
+        "rescues@10": {
+          "count": 2,
+          "case_ids": [
+            "CASE-HIST-JAVA-0013",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 8,
+          "case_ids": [
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0058",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0078",
+            "CASE-HIST-JAVA-0029",
+            "CASE-HIST-JAVA-0028",
+            "CASE-HIST-JAVA-0047",
+            "CASE-HIST-JAVA-0043"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 5,
+          "case_ids": [
+            "CASE-HIST-JAVA-0105",
+            "CASE-HIST-JAVA-0101",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0046",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 0,
+          "case_ids": []
+        }
+      },
+      "B2_no_historical_score": {
+        "count": 10
+      },
+      "cluster_sign_flip_B4_minus_B1_mrr": {
+        "clusters": 13,
+        "observed_mean_delta": 0.0656,
+        "p_exact_two_sided": 0.54272,
+        "min_attainable_p": 0.00024
+      }
+    },
+    "primary_in_window": {
+      "cases": 8,
+      "independent_clusters": 6,
+      "B1_structural_only": {
+        "recall@1": 0.0,
+        "recall@5": 0.25,
+        "recall@10": 0.75,
+        "mrr": 0.1277,
+        "median_rank_unranked_as_inf": 9.0,
+        "median_rank_among_ranked": 8,
+        "pct_not_retrieved": 12.5
+      },
+      "B2_historical_only": {
+        "recall@1": 0.0,
+        "recall@5": 0.75,
+        "recall@10": 0.875,
+        "mrr": 0.2654,
+        "median_rank_unranked_as_inf": 3.5,
+        "median_rank_among_ranked": 3.5,
+        "pct_not_retrieved": 0.0
+      },
+      "B3_linear_fusion_0.6S_0.4H": {
+        "recall@1": 0.125,
+        "recall@5": 0.75,
+        "recall@10": 0.875,
+        "mrr": 0.3987,
+        "median_rank_unranked_as_inf": 3.0,
+        "median_rank_among_ranked": 3.0,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_rrf_v2_k60_0.5_0.5": {
+        "recall@1": 0.125,
+        "recall@5": 0.625,
+        "recall@10": 0.875,
+        "mrr": 0.3815,
+        "median_rank_unranked_as_inf": 3.0,
+        "median_rank_among_ranked": 3.0,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_vs_B1": {
+        "rescues@10": {
+          "count": 2,
+          "case_ids": [
+            "CASE-HIST-JAVA-0013",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 1,
+          "case_ids": [
+            "CASE-HIST-JAVA-0047"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 5,
+          "case_ids": [
+            "CASE-HIST-JAVA-0105",
+            "CASE-HIST-JAVA-0101",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0046",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 0,
+          "case_ids": []
+        }
+      },
+      "B2_vs_B1": {
+        "rescues@10": {
+          "count": 2,
+          "case_ids": [
+            "CASE-HIST-JAVA-0013",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 1,
+          "case_ids": [
+            "CASE-HIST-JAVA-0047"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 5,
+          "case_ids": [
+            "CASE-HIST-JAVA-0105",
+            "CASE-HIST-JAVA-0101",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0046",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 0,
+          "case_ids": []
+        }
+      },
+      "B2_no_historical_score": {
+        "count": 0
+      },
+      "cluster_sign_flip_B4_minus_B1_mrr": {
+        "clusters": 6,
+        "observed_mean_delta": 0.2921,
+        "p_exact_two_sided": 0.0625,
+        "min_attainable_p": 0.03125
+      }
+    },
+    "primary_outside_window": {
+      "cases": 10,
+      "independent_clusters": 7,
+      "B1_structural_only": {
+        "recall@1": 0.0,
+        "recall@5": 0.3,
+        "recall@10": 0.7,
+        "mrr": 0.1901,
+        "median_rank_unranked_as_inf": 7.0,
+        "median_rank_among_ranked": 7.0,
+        "pct_not_retrieved": 0.0
+      },
+      "B2_historical_only": {
+        "recall@1": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "mrr": 0.0,
+        "median_rank_unranked_as_inf": null,
+        "median_rank_among_ranked": null,
+        "pct_not_retrieved": 100.0
+      },
+      "B3_linear_fusion_0.6S_0.4H": {
+        "recall@1": 0.0,
+        "recall@5": 0.2,
+        "recall@10": 0.5,
+        "mrr": 0.1119,
+        "median_rank_unranked_as_inf": 26.0,
+        "median_rank_among_ranked": 26.0,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_rrf_v2_k60_0.5_0.5": {
+        "recall@1": 0.0,
+        "recall@5": 0.2,
+        "recall@10": 0.2,
+        "mrr": 0.0834,
+        "median_rank_unranked_as_inf": 17.5,
+        "median_rank_among_ranked": 17.5,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_vs_B1": {
+        "rescues@10": {
+          "count": 0,
+          "case_ids": []
+        },
+        "harms@10": {
+          "count": 5,
+          "case_ids": [
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0058",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0078",
+            "CASE-HIST-JAVA-0043"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 0,
+          "case_ids": []
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 5,
+          "case_ids": [
+            "CASE-HIST-JAVA-0099",
+            "CASE-HIST-JAVA-0097",
+            "CASE-HIST-JAVA-0029",
+            "CASE-HIST-JAVA-0001",
+            "CASE-HIST-JAVA-0028"
+          ]
+        }
+      },
+      "B2_vs_B1": {
+        "rescues@10": {
+          "count": 0,
+          "case_ids": []
+        },
+        "harms@10": {
+          "count": 7,
+          "case_ids": [
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0058",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0078",
+            "CASE-HIST-JAVA-0029",
+            "CASE-HIST-JAVA-0028",
+            "CASE-HIST-JAVA-0043"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 0,
+          "case_ids": []
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 0,
+          "case_ids": []
+        }
+      },
+      "B2_no_historical_score": {
+        "count": 10
+      },
+      "cluster_sign_flip_B4_minus_B1_mrr": {
+        "clusters": 7,
+        "observed_mean_delta": -0.1284,
+        "p_exact_two_sided": 0.01562,
+        "min_attainable_p": 0.01562
+      }
+    }
+  },
+  "E3_reach_java_H400": {
+    "primary_18": {
+      "cases": 18,
+      "independent_clusters": 13,
+      "B1_structural_only": {
+        "recall@1": 0.0,
+        "recall@5": 0.2778,
+        "recall@10": 0.7222,
+        "mrr": 0.1623,
+        "median_rank_unranked_as_inf": 7.5,
+        "median_rank_among_ranked": 7,
+        "pct_not_retrieved": 5.6
+      },
+      "B2_historical_only": {
+        "recall@1": 0.0556,
+        "recall@5": 0.7222,
+        "recall@10": 0.8333,
+        "mrr": 0.2794,
+        "median_rank_unranked_as_inf": 3.5,
+        "median_rank_among_ranked": 3.5,
+        "pct_not_retrieved": 0.0
+      },
+      "B3_linear_fusion_0.6S_0.4H": {
+        "recall@1": 0.0,
+        "recall@5": 0.6111,
+        "recall@10": 0.9444,
+        "mrr": 0.2861,
+        "median_rank_unranked_as_inf": 4.0,
+        "median_rank_among_ranked": 4.0,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_rrf_v2_k60_0.5_0.5": {
+        "recall@1": 0.0,
+        "recall@5": 0.6111,
+        "recall@10": 0.8333,
+        "mrr": 0.2825,
+        "median_rank_unranked_as_inf": 3.5,
+        "median_rank_among_ranked": 3.5,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_vs_B1": {
+        "rescues@10": {
+          "count": 4,
+          "case_ids": [
+            "CASE-HIST-JAVA-0099",
+            "CASE-HIST-JAVA-0097",
+            "CASE-HIST-JAVA-0001",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 2,
+          "case_ids": [
+            "CASE-HIST-JAVA-0078",
+            "CASE-HIST-JAVA-0047"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 9,
+          "case_ids": [
+            "CASE-HIST-JAVA-0105",
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0058",
+            "CASE-HIST-JAVA-0101",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0029",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0046",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 1,
+          "case_ids": [
+            "CASE-HIST-JAVA-0043"
+          ]
+        }
+      },
+      "B2_vs_B1": {
+        "rescues@10": {
+          "count": 5,
+          "case_ids": [
+            "CASE-HIST-JAVA-0099",
+            "CASE-HIST-JAVA-0097",
+            "CASE-HIST-JAVA-0013",
+            "CASE-HIST-JAVA-0001",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 3,
+          "case_ids": [
+            "CASE-HIST-JAVA-0078",
+            "CASE-HIST-JAVA-0047",
+            "CASE-HIST-JAVA-0043"
+          ]
+        },
+        "rank_improved_same_top10_status": {
+          "count": 8,
+          "case_ids": [
+            "CASE-HIST-JAVA-0105",
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0101",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0029",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0046",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 1,
+          "case_ids": [
+            "CASE-HIST-JAVA-0028"
+          ]
+        }
+      },
+      "B2_no_historical_score": {
+        "count": 0
+      },
+      "cluster_sign_flip_B4_minus_B1_mrr": {
+        "clusters": 13,
+        "observed_mean_delta": 0.1068,
+        "p_exact_two_sided": 0.06641,
+        "min_attainable_p": 0.00024
+      }
+    },
+    "strict_rename_9": {
+      "cases": 9,
+      "independent_clusters": 5,
+      "B1_structural_only": {
+        "recall@1": 0.0,
+        "recall@5": 0.1111,
+        "recall@10": 0.5556,
+        "mrr": 0.1052,
+        "median_rank_unranked_as_inf": 8,
+        "median_rank_among_ranked": 7.5,
+        "pct_not_retrieved": 11.1
+      },
+      "B2_historical_only": {
+        "recall@1": 0.0,
+        "recall@5": 0.8889,
+        "recall@10": 1.0,
+        "mrr": 0.2796,
+        "median_rank_unranked_as_inf": 4,
+        "median_rank_among_ranked": 4,
+        "pct_not_retrieved": 0.0
+      },
+      "B3_linear_fusion_0.6S_0.4H": {
+        "recall@1": 0.0,
+        "recall@5": 0.6667,
+        "recall@10": 1.0,
+        "mrr": 0.2685,
+        "median_rank_unranked_as_inf": 4,
+        "median_rank_among_ranked": 4,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_rrf_v2_k60_0.5_0.5": {
+        "recall@1": 0.0,
+        "recall@5": 0.6667,
+        "recall@10": 0.8889,
+        "mrr": 0.2956,
+        "median_rank_unranked_as_inf": 3,
+        "median_rank_among_ranked": 3,
+        "pct_not_retrieved": 0.0
+      },
+      "B4_vs_B1": {
+        "rescues@10": {
+          "count": 3,
+          "case_ids": [
+            "CASE-HIST-JAVA-0099",
+            "CASE-HIST-JAVA-0097",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 0,
+          "case_ids": []
+        },
+        "rank_improved_same_top10_status": {
+          "count": 5,
+          "case_ids": [
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0058",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 0,
+          "case_ids": []
+        }
+      },
+      "B2_vs_B1": {
+        "rescues@10": {
+          "count": 4,
+          "case_ids": [
+            "CASE-HIST-JAVA-0099",
+            "CASE-HIST-JAVA-0097",
+            "CASE-HIST-JAVA-0013",
+            "CASE-HIST-JAVA-0049"
+          ]
+        },
+        "harms@10": {
+          "count": 0,
+          "case_ids": []
+        },
+        "rank_improved_same_top10_status": {
+          "count": 4,
+          "case_ids": [
+            "CASE-HIST-JAVA-0096",
+            "CASE-HIST-JAVA-0055",
+            "CASE-HIST-JAVA-0044",
+            "CASE-HIST-JAVA-0045"
+          ]
+        },
+        "rank_regressed_same_top10_status": {
+          "count": 0,
+          "case_ids": []
+        }
+      },
+      "B2_no_historical_score": {
+        "count": 0
+      },
+      "cluster_sign_flip_B4_minus_B1_mrr": {
+        "clusters": 5,
+        "observed_mean_delta": 0.206,
+        "p_exact_two_sided": 0.0625,
+        "min_attainable_p": 0.0625
+      }
+    },
+    "by_transformation": {
+      "generalized_successor": {
+        "cases": 1,
+        "independent_clusters": 1,
+        "B1_structural_only": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.25,
+          "median_rank_unranked_as_inf": 4,
+          "median_rank_among_ranked": 4,
+          "pct_not_retrieved": 0.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.3333,
+          "median_rank_unranked_as_inf": 3,
+          "median_rank_among_ranked": 3,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.5,
+          "median_rank_unranked_as_inf": 2,
+          "median_rank_among_ranked": 2,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.3333,
+          "median_rank_unranked_as_inf": 3,
+          "median_rank_among_ranked": 3,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0105"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0105"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 1,
+          "observed_mean_delta": 0.0833,
+          "p_exact_two_sided": 1.0,
+          "min_attainable_p": 1.0
+        }
+      },
+      "signature_change": {
+        "cases": 2,
+        "independent_clusters": 2,
+        "B1_structural_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.5,
+          "recall@10": 0.5,
+          "mrr": 0.2121,
+          "median_rank_unranked_as_inf": 7.0,
+          "median_rank_among_ranked": 7.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.5,
+          "recall@10": 0.5,
+          "mrr": 0.1673,
+          "median_rank_unranked_as_inf": 381.0,
+          "median_rank_among_ranked": 381.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "mrr": 0.2167,
+          "median_rank_unranked_as_inf": 6.5,
+          "median_rank_among_ranked": 6.5,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 0.5,
+          "recall@10": 0.5,
+          "mrr": 0.1458,
+          "median_rank_unranked_as_inf": 14.0,
+          "median_rank_among_ranked": 14.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0001"
+            ]
+          },
+          "harms@10": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0078"
+            ]
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0001"
+            ]
+          },
+          "harms@10": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0078"
+            ]
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 2,
+          "observed_mean_delta": -0.0663,
+          "p_exact_two_sided": 1.0,
+          "min_attainable_p": 0.5
+        }
+      },
+      "signature_semantic_change": {
+        "cases": 1,
+        "independent_clusters": 1,
+        "B1_structural_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 1.0,
+          "mrr": 0.1,
+          "median_rank_unranked_as_inf": 10,
+          "median_rank_among_ranked": 10,
+          "pct_not_retrieved": 0.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.3333,
+          "median_rank_unranked_as_inf": 3,
+          "median_rank_among_ranked": 3,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.5,
+          "median_rank_unranked_as_inf": 2,
+          "median_rank_among_ranked": 2,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.5,
+          "median_rank_unranked_as_inf": 2,
+          "median_rank_among_ranked": 2,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0101"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0101"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 1,
+          "observed_mean_delta": 0.4,
+          "p_exact_two_sided": 1.0,
+          "min_attainable_p": 1.0
+        }
+      },
+      "strict_rename": {
+        "cases": 8,
+        "independent_clusters": 4,
+        "B1_structural_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.125,
+          "recall@10": 0.625,
+          "mrr": 0.1183,
+          "median_rank_unranked_as_inf": 7.5,
+          "median_rank_among_ranked": 7.5,
+          "pct_not_retrieved": 0.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.875,
+          "recall@10": 1.0,
+          "mrr": 0.2521,
+          "median_rank_unranked_as_inf": 4.5,
+          "median_rank_among_ranked": 4.5,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 0.625,
+          "recall@10": 1.0,
+          "mrr": 0.2708,
+          "median_rank_unranked_as_inf": 4.0,
+          "median_rank_among_ranked": 4.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 0.75,
+          "recall@10": 1.0,
+          "mrr": 0.3229,
+          "median_rank_unranked_as_inf": 3.0,
+          "median_rank_among_ranked": 3.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "CASE-HIST-JAVA-0099",
+              "CASE-HIST-JAVA-0097",
+              "CASE-HIST-JAVA-0049"
+            ]
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 5,
+            "case_ids": [
+              "CASE-HIST-JAVA-0096",
+              "CASE-HIST-JAVA-0058",
+              "CASE-HIST-JAVA-0055",
+              "CASE-HIST-JAVA-0044",
+              "CASE-HIST-JAVA-0045"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "CASE-HIST-JAVA-0099",
+              "CASE-HIST-JAVA-0097",
+              "CASE-HIST-JAVA-0049"
+            ]
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 4,
+            "case_ids": [
+              "CASE-HIST-JAVA-0096",
+              "CASE-HIST-JAVA-0055",
+              "CASE-HIST-JAVA-0044",
+              "CASE-HIST-JAVA-0045"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 4,
+          "observed_mean_delta": 0.2383,
+          "p_exact_two_sided": 0.125,
+          "min_attainable_p": 0.125
+        }
+      },
+      "strict_rename (co-renamed type)": {
+        "cases": 1,
+        "independent_clusters": 1,
+        "B1_structural_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 0.0,
+          "mrr": 0.0,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": null,
+          "pct_not_retrieved": 100.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.5,
+          "median_rank_unranked_as_inf": 2,
+          "median_rank_among_ranked": 2,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.25,
+          "median_rank_unranked_as_inf": 4,
+          "median_rank_among_ranked": 4,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 0.0,
+          "mrr": 0.0769,
+          "median_rank_unranked_as_inf": 13,
+          "median_rank_among_ranked": 13,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0013"
+            ]
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 1,
+          "observed_mean_delta": 0.0769,
+          "p_exact_two_sided": 1.0,
+          "min_attainable_p": 1.0
+        }
+      },
+      "template_split": {
+        "cases": 2,
+        "independent_clusters": 2,
+        "B1_structural_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 1.0,
+          "mrr": 0.1339,
+          "median_rank_unranked_as_inf": 7.5,
+          "median_rank_among_ranked": 7.5,
+          "pct_not_retrieved": 0.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 0.0,
+          "mrr": 0.0059,
+          "median_rank_unranked_as_inf": 170.0,
+          "median_rank_among_ranked": 170.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 0.5,
+          "mrr": 0.0669,
+          "median_rank_unranked_as_inf": 26.5,
+          "median_rank_among_ranked": 26.5,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 0.5,
+          "mrr": 0.0781,
+          "median_rank_unranked_as_inf": 20.0,
+          "median_rank_among_ranked": 20.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0047"
+            ]
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0043"
+            ]
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 2,
+            "case_ids": [
+              "CASE-HIST-JAVA-0047",
+              "CASE-HIST-JAVA-0043"
+            ]
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 2,
+          "observed_mean_delta": -0.0558,
+          "p_exact_two_sided": 0.5,
+          "min_attainable_p": 0.5
+        }
+      },
+      "transformation": {
+        "cases": 2,
+        "independent_clusters": 2,
+        "B1_structural_only": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.4167,
+          "median_rank_unranked_as_inf": 2.5,
+          "median_rank_among_ranked": 2.5,
+          "pct_not_retrieved": 0.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.5,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.6667,
+          "median_rank_unranked_as_inf": 2.0,
+          "median_rank_among_ranked": 2.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.5,
+          "median_rank_unranked_as_inf": 2.0,
+          "median_rank_among_ranked": 2.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr": 0.5,
+          "median_rank_unranked_as_inf": 2.0,
+          "median_rank_among_ranked": 2.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0029"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0029"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0028"
+            ]
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 2,
+          "observed_mean_delta": 0.0833,
+          "p_exact_two_sided": 1.0,
+          "min_attainable_p": 0.5
+        }
+      },
+      "transformation_competing_successor": {
+        "cases": 1,
+        "independent_clusters": 1,
+        "B1_structural_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 1.0,
+          "mrr": 0.1,
+          "median_rank_unranked_as_inf": 10,
+          "median_rank_among_ranked": 10,
+          "pct_not_retrieved": 0.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 1.0,
+          "mrr": 0.1667,
+          "median_rank_unranked_as_inf": 6,
+          "median_rank_among_ranked": 6,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 1.0,
+          "mrr": 0.1667,
+          "median_rank_unranked_as_inf": 6,
+          "median_rank_among_ranked": 6,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 1.0,
+          "mrr": 0.1429,
+          "median_rank_unranked_as_inf": 7,
+          "median_rank_among_ranked": 7,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0046"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "CASE-HIST-JAVA-0046"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 1,
+          "observed_mean_delta": 0.0429,
+          "p_exact_two_sided": 1.0,
+          "min_attainable_p": 1.0
+        }
+      }
+    },
+    "preregistered_outcome_from_analysis_file": {
+      "outcome": "INCONCLUSIVE",
+      "delta_mrr_b4_b1": 0.1068,
+      "p": 0.06641,
+      "clusters": 13,
+      "fusion_rescues": 4,
+      "fusion_harms": 2
+    },
+    "preregistered_validity": true
+  },
+  "E2_phase_b_dev": {
+    "java": {
+      "all": {
+        "cases": 8,
+        "independent_clusters": 7,
+        "B1_structural_only": {
+          "recall@1": 0.25,
+          "recall@5": 0.25,
+          "recall@10": 0.375,
+          "mrr": 0.2971,
+          "median_rank_unranked_as_inf": 14.0,
+          "median_rank_among_ranked": 9.5,
+          "pct_not_retrieved": 25.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 0.5,
+          "mrr": 0.0676,
+          "median_rank_unranked_as_inf": 23.0,
+          "median_rank_among_ranked": 10,
+          "pct_not_retrieved": 12.5
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 0.25,
+          "recall@10": 0.875,
+          "mrr": 0.1835,
+          "median_rank_unranked_as_inf": 8.0,
+          "median_rank_among_ranked": 8.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 0.5,
+          "recall@10": 0.75,
+          "mrr": 0.2011,
+          "median_rank_unranked_as_inf": 6.0,
+          "median_rank_among_ranked": 6.0,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "java_gsn_01",
+              "java_gsn_02",
+              "java_gsn_05"
+            ]
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "java_gsn_04"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 2,
+            "case_ids": [
+              "java_gsn_06",
+              "java_gsn_07"
+            ]
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "java_gsn_02",
+              "java_gsn_05",
+              "java_gsn_08"
+            ]
+          },
+          "harms@10": {
+            "count": 2,
+            "case_ids": [
+              "java_gsn_06",
+              "java_gsn_07"
+            ]
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 2,
+            "case_ids": [
+              "java_gsn_01",
+              "java_gsn_04"
+            ]
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 1
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 7,
+          "observed_mean_delta": -0.1411,
+          "p_exact_two_sided": 0.5,
+          "min_attainable_p": 0.01562
+        }
+      },
+      "evidence_commit_in_window": {
+        "cases": 7,
+        "independent_clusters": 6,
+        "B1_structural_only": {
+          "recall@1": 0.1429,
+          "recall@5": 0.1429,
+          "recall@10": 0.2857,
+          "mrr": 0.1967,
+          "median_rank_unranked_as_inf": 15,
+          "median_rank_among_ranked": 13,
+          "pct_not_retrieved": 28.6
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 0.5714,
+          "mrr": 0.0773,
+          "median_rank_unranked_as_inf": 10,
+          "median_rank_among_ranked": 10,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.0,
+          "recall@5": 0.2857,
+          "recall@10": 0.8571,
+          "mrr": 0.1938,
+          "median_rank_unranked_as_inf": 8,
+          "median_rank_among_ranked": 8,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.0,
+          "recall@5": 0.5714,
+          "recall@10": 0.7143,
+          "mrr": 0.2094,
+          "median_rank_unranked_as_inf": 5,
+          "median_rank_among_ranked": 5,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "java_gsn_01",
+              "java_gsn_02",
+              "java_gsn_05"
+            ]
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "java_gsn_04"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "java_gsn_06"
+            ]
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "java_gsn_02",
+              "java_gsn_05",
+              "java_gsn_08"
+            ]
+          },
+          "harms@10": {
+            "count": 1,
+            "case_ids": [
+              "java_gsn_06"
+            ]
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 2,
+            "case_ids": [
+              "java_gsn_01",
+              "java_gsn_04"
+            ]
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 6,
+          "observed_mean_delta": -0.0218,
+          "p_exact_two_sided": 1.0,
+          "min_attainable_p": 0.03125
+        }
+      },
+      "by_transformation": {
+        "move": {
+          "cases": 1,
+          "independent_clusters": 1,
+          "B1_structural_only": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "median_rank_unranked_as_inf": 1,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 0.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 1.0,
+            "mrr": 0.1111,
+            "median_rank_unranked_as_inf": 9,
+            "median_rank_among_ranked": 9,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 1.0,
+            "mrr": 0.1429,
+            "median_rank_unranked_as_inf": 7,
+            "median_rank_among_ranked": 7,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 1,
+              "case_ids": [
+                "java_gsn_07"
+              ]
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 1,
+              "case_ids": [
+                "java_gsn_07"
+              ]
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 1
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 1,
+            "observed_mean_delta": -0.8571,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 1.0
+          }
+        },
+        "new_symbol": {
+          "cases": 4,
+          "independent_clusters": 4,
+          "B1_structural_only": {
+            "recall@1": 0.25,
+            "recall@5": 0.25,
+            "recall@10": 0.5,
+            "mrr": 0.3109,
+            "median_rank_unranked_as_inf": 9.5,
+            "median_rank_among_ranked": 6,
+            "pct_not_retrieved": 25.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.25,
+            "mrr": 0.0361,
+            "median_rank_unranked_as_inf": 72.0,
+            "median_rank_among_ranked": 72.0,
+            "pct_not_retrieved": 0.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.25,
+            "recall@10": 0.75,
+            "mrr": 0.1579,
+            "median_rank_unranked_as_inf": 7.0,
+            "median_rank_among_ranked": 7.0,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.75,
+            "recall@10": 0.75,
+            "mrr": 0.1975,
+            "median_rank_unranked_as_inf": 4.5,
+            "median_rank_among_ranked": 4.5,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 1,
+              "case_ids": [
+                "java_gsn_01"
+              ]
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 1,
+              "case_ids": [
+                "java_gsn_04"
+              ]
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 1,
+              "case_ids": [
+                "java_gsn_06"
+              ]
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 1,
+              "case_ids": [
+                "java_gsn_06"
+              ]
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 2,
+              "case_ids": [
+                "java_gsn_01",
+                "java_gsn_04"
+              ]
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 0
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 4,
+            "observed_mean_delta": -0.1134,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 0.125
+          }
+        },
+        "rewrite": {
+          "cases": 3,
+          "independent_clusters": 3,
+          "B1_structural_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0444,
+            "median_rank_unranked_as_inf": 15,
+            "median_rank_among_ranked": 15.0,
+            "pct_not_retrieved": 33.3
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 1.0,
+            "mrr": 0.1323,
+            "median_rank_unranked_as_inf": 7,
+            "median_rank_among_ranked": 7,
+            "pct_not_retrieved": 0.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.3333,
+            "recall@10": 1.0,
+            "mrr": 0.2417,
+            "median_rank_unranked_as_inf": 8,
+            "median_rank_among_ranked": 8,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.3333,
+            "recall@10": 0.6667,
+            "mrr": 0.2254,
+            "median_rank_unranked_as_inf": 7,
+            "median_rank_among_ranked": 7,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 2,
+              "case_ids": [
+                "java_gsn_02",
+                "java_gsn_05"
+              ]
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 3,
+              "case_ids": [
+                "java_gsn_02",
+                "java_gsn_05",
+                "java_gsn_08"
+              ]
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 0
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 3,
+            "observed_mean_delta": 0.181,
+            "p_exact_two_sided": 0.25,
+            "min_attainable_p": 0.25
+          }
+        }
+      }
+    },
+    "python": {
+      "all": {
+        "cases": 8,
+        "independent_clusters": 8,
+        "B1_structural_only": {
+          "recall@1": 0.125,
+          "recall@5": 0.25,
+          "recall@10": 0.25,
+          "mrr": 0.1667,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 2.0,
+          "pct_not_retrieved": 75.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.375,
+          "recall@5": 0.5,
+          "recall@10": 0.625,
+          "mrr": 0.4601,
+          "median_rank_unranked_as_inf": 4.5,
+          "median_rank_among_ranked": 2,
+          "pct_not_retrieved": 12.5
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.25,
+          "recall@5": 0.375,
+          "recall@10": 0.625,
+          "mrr": 0.3144,
+          "median_rank_unranked_as_inf": 7.5,
+          "median_rank_among_ranked": 6,
+          "pct_not_retrieved": 12.5
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.25,
+          "recall@5": 0.25,
+          "recall@10": 0.625,
+          "mrr": 0.305,
+          "median_rank_unranked_as_inf": 8.5,
+          "median_rank_among_ranked": 8,
+          "pct_not_retrieved": 12.5
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "py_bot_01",
+              "py_bot_05",
+              "py_bot_08"
+            ]
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "py_bot_02"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "py_bot_01",
+              "py_bot_05",
+              "py_bot_08"
+            ]
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "py_bot_02"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 1
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 8,
+          "observed_mean_delta": 0.1384,
+          "p_exact_two_sided": 0.03125,
+          "min_attainable_p": 0.00781
+        }
+      },
+      "evidence_commit_in_window": {
+        "cases": 7,
+        "independent_clusters": 7,
+        "B1_structural_only": {
+          "recall@1": 0.1429,
+          "recall@5": 0.2857,
+          "recall@10": 0.2857,
+          "mrr": 0.1905,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 2.0,
+          "pct_not_retrieved": 71.4
+        },
+        "B2_historical_only": {
+          "recall@1": 0.4286,
+          "recall@5": 0.5714,
+          "recall@10": 0.7143,
+          "mrr": 0.5259,
+          "median_rank_unranked_as_inf": 2,
+          "median_rank_among_ranked": 2,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.2857,
+          "recall@5": 0.4286,
+          "recall@10": 0.7143,
+          "mrr": 0.3593,
+          "median_rank_unranked_as_inf": 6,
+          "median_rank_among_ranked": 6,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.2857,
+          "recall@5": 0.2857,
+          "recall@10": 0.7143,
+          "mrr": 0.3486,
+          "median_rank_unranked_as_inf": 8,
+          "median_rank_among_ranked": 8,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "py_bot_01",
+              "py_bot_05",
+              "py_bot_08"
+            ]
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "py_bot_02"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 3,
+            "case_ids": [
+              "py_bot_01",
+              "py_bot_05",
+              "py_bot_08"
+            ]
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "py_bot_02"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 7,
+          "observed_mean_delta": 0.1581,
+          "p_exact_two_sided": 0.03125,
+          "min_attainable_p": 0.01562
+        }
+      },
+      "by_transformation": {
+        "rewrite": {
+          "cases": 3,
+          "independent_clusters": 3,
+          "B1_structural_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.3333,
+            "recall@5": 0.6667,
+            "recall@10": 1.0,
+            "mrr": 0.5476,
+            "median_rank_unranked_as_inf": 2,
+            "median_rank_among_ranked": 2,
+            "pct_not_retrieved": 0.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.3333,
+            "recall@10": 1.0,
+            "mrr": 0.1593,
+            "median_rank_unranked_as_inf": 6,
+            "median_rank_among_ranked": 6,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 1.0,
+            "mrr": 0.1343,
+            "median_rank_unranked_as_inf": 8,
+            "median_rank_among_ranked": 8,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 3,
+              "case_ids": [
+                "py_bot_01",
+                "py_bot_05",
+                "py_bot_08"
+              ]
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 3,
+              "case_ids": [
+                "py_bot_01",
+                "py_bot_05",
+                "py_bot_08"
+              ]
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 0
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 3,
+            "observed_mean_delta": 0.1343,
+            "p_exact_two_sided": 0.25,
+            "min_attainable_p": 0.25
+          }
+        },
+        "routine_modification": {
+          "cases": 4,
+          "independent_clusters": 4,
+          "B1_structural_only": {
+            "recall@1": 0.25,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.3333,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 2.0,
+            "pct_not_retrieved": 50.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.503,
+            "median_rank_unranked_as_inf": 42.5,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 25.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.503,
+            "median_rank_unranked_as_inf": 42.5,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 25.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.503,
+            "median_rank_unranked_as_inf": 42.5,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 25.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 1,
+              "case_ids": [
+                "py_bot_02"
+              ]
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 1,
+              "case_ids": [
+                "py_bot_02"
+              ]
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 1
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 4,
+            "observed_mean_delta": 0.1696,
+            "p_exact_two_sided": 0.5,
+            "min_attainable_p": 0.125
+          }
+        },
+        "signature_change": {
+          "cases": 1,
+          "independent_clusters": 1,
+          "B1_structural_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0263,
+            "median_rank_unranked_as_inf": 38,
+            "median_rank_among_ranked": 38,
+            "pct_not_retrieved": 0.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0256,
+            "median_rank_unranked_as_inf": 39,
+            "median_rank_among_ranked": 39,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0256,
+            "median_rank_unranked_as_inf": 39,
+            "median_rank_among_ranked": 39,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 0
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 1,
+            "observed_mean_delta": 0.0256,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 1.0
+          }
+        }
+      }
+    },
+    "javascript": {
+      "all": {
+        "cases": 10,
+        "independent_clusters": 10,
+        "B1_structural_only": {
+          "recall@1": 0.2,
+          "recall@5": 0.4,
+          "recall@10": 0.4,
+          "mrr": 0.275,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 1.5,
+          "pct_not_retrieved": 60.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.1,
+          "recall@5": 0.1,
+          "recall@10": 0.1,
+          "mrr": 0.1,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 1,
+          "pct_not_retrieved": 90.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.2,
+          "recall@5": 0.4,
+          "recall@10": 0.4,
+          "mrr": 0.245,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 2.5,
+          "pct_not_retrieved": 60.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.2,
+          "recall@5": 0.4,
+          "recall@10": 0.4,
+          "mrr": 0.25,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 2.5,
+          "pct_not_retrieved": 60.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "js_exp_05"
+            ]
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 3,
+            "case_ids": [
+              "js_exp_02",
+              "js_exp_05",
+              "js_exp_10"
+            ]
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 9
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 10,
+          "observed_mean_delta": -0.025,
+          "p_exact_two_sided": 1.0,
+          "min_attainable_p": 0.00195
+        }
+      },
+      "evidence_commit_in_window": {
+        "cases": 4,
+        "independent_clusters": 4,
+        "B1_structural_only": {
+          "recall@1": 0.25,
+          "recall@5": 0.25,
+          "recall@10": 0.25,
+          "mrr": 0.25,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 1,
+          "pct_not_retrieved": 75.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.25,
+          "recall@5": 0.25,
+          "recall@10": 0.25,
+          "mrr": 0.25,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 1,
+          "pct_not_retrieved": 75.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.25,
+          "recall@5": 0.25,
+          "recall@10": 0.25,
+          "mrr": 0.25,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 1,
+          "pct_not_retrieved": 75.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.25,
+          "recall@5": 0.25,
+          "recall@10": 0.25,
+          "mrr": 0.25,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 1,
+          "pct_not_retrieved": 75.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 3
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 4,
+          "observed_mean_delta": 0.0,
+          "p_exact_two_sided": 1.0,
+          "min_attainable_p": 0.125
+        }
+      },
+      "by_transformation": {
+        "hard_negative": {
+          "cases": 1,
+          "independent_clusters": 1,
+          "B1_structural_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 1
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 1,
+            "observed_mean_delta": 0.0,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 1.0
+          }
+        },
+        "rewrite": {
+          "cases": 1,
+          "independent_clusters": 1,
+          "B1_structural_only": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "median_rank_unranked_as_inf": 1,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 0.0
+          },
+          "B2_historical_only": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "median_rank_unranked_as_inf": 1,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 0.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "median_rank_unranked_as_inf": 1,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "median_rank_unranked_as_inf": 1,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 0
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 1,
+            "observed_mean_delta": 0.0,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 1.0
+          }
+        },
+        "routine_modification": {
+          "cases": 6,
+          "independent_clusters": 6,
+          "B1_structural_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.3333,
+            "recall@10": 0.3333,
+            "mrr": 0.125,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 3.0,
+            "pct_not_retrieved": 66.7
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.3333,
+            "recall@10": 0.3333,
+            "mrr": 0.075,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 4.5,
+            "pct_not_retrieved": 66.7
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.3333,
+            "recall@10": 0.3333,
+            "mrr": 0.0833,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 4.0,
+            "pct_not_retrieved": 66.7
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 1,
+              "case_ids": [
+                "js_exp_05"
+              ]
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 2,
+              "case_ids": [
+                "js_exp_02",
+                "js_exp_05"
+              ]
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 6
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 6,
+            "observed_mean_delta": -0.0417,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 0.03125
+          }
+        },
+        "signature_change": {
+          "cases": 2,
+          "independent_clusters": 2,
+          "B1_structural_only": {
+            "recall@1": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.5,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 50.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.5,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 50.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.5,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 50.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 1,
+              "case_ids": [
+                "js_exp_10"
+              ]
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 2
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 2,
+            "observed_mean_delta": 0.0,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 0.5
+          }
+        }
+      }
+    },
+    "typescript": {
+      "all": {
+        "cases": 8,
+        "independent_clusters": 7,
+        "B1_structural_only": {
+          "recall@1": 0.125,
+          "recall@5": 0.375,
+          "recall@10": 0.375,
+          "mrr": 0.2036,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 3.5,
+          "pct_not_retrieved": 50.0
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 0.0,
+          "mrr": 0.0093,
+          "median_rank_unranked_as_inf": null,
+          "median_rank_among_ranked": 43,
+          "pct_not_retrieved": 62.5
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.125,
+          "recall@5": 0.25,
+          "recall@10": 0.25,
+          "mrr": 0.1728,
+          "median_rank_unranked_as_inf": 129.0,
+          "median_rank_among_ranked": 43,
+          "pct_not_retrieved": 37.5
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.25,
+          "recall@5": 0.375,
+          "recall@10": 0.375,
+          "mrr": 0.28,
+          "median_rank_unranked_as_inf": 51.5,
+          "median_rank_among_ranked": 5,
+          "pct_not_retrieved": 37.5
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "ts_zod_05"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 2,
+            "case_ids": [
+              "ts_zod_01",
+              "ts_zod_07"
+            ]
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 3,
+            "case_ids": [
+              "ts_zod_04",
+              "ts_zod_05",
+              "ts_zod_07"
+            ]
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 5
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 7,
+          "observed_mean_delta": 0.0873,
+          "p_exact_two_sided": 0.875,
+          "min_attainable_p": 0.01562
+        }
+      },
+      "evidence_commit_in_window": {
+        "cases": 3,
+        "independent_clusters": 3,
+        "B1_structural_only": {
+          "recall@1": 0.3333,
+          "recall@5": 0.6667,
+          "recall@10": 0.6667,
+          "mrr": 0.4167,
+          "median_rank_unranked_as_inf": 4,
+          "median_rank_among_ranked": 2.5,
+          "pct_not_retrieved": 33.3
+        },
+        "B2_historical_only": {
+          "recall@1": 0.0,
+          "recall@5": 0.0,
+          "recall@10": 0.0,
+          "mrr": 0.0248,
+          "median_rank_unranked_as_inf": 43,
+          "median_rank_among_ranked": 43,
+          "pct_not_retrieved": 0.0
+        },
+        "B3_linear_fusion_0.6S_0.4H": {
+          "recall@1": 0.3333,
+          "recall@5": 0.6667,
+          "recall@10": 0.6667,
+          "mrr": 0.4514,
+          "median_rank_unranked_as_inf": 3,
+          "median_rank_among_ranked": 3,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_rrf_v2_k60_0.5_0.5": {
+          "recall@1": 0.6667,
+          "recall@5": 0.6667,
+          "recall@10": 0.6667,
+          "mrr": 0.6722,
+          "median_rank_unranked_as_inf": 1,
+          "median_rank_among_ranked": 1,
+          "pct_not_retrieved": 0.0
+        },
+        "B4_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_improved_same_top10_status": {
+            "count": 1,
+            "case_ids": [
+              "ts_zod_05"
+            ]
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_vs_B1": {
+          "rescues@10": {
+            "count": 0,
+            "case_ids": []
+          },
+          "harms@10": {
+            "count": 2,
+            "case_ids": [
+              "ts_zod_04",
+              "ts_zod_05"
+            ]
+          },
+          "rank_improved_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          },
+          "rank_regressed_same_top10_status": {
+            "count": 0,
+            "case_ids": []
+          }
+        },
+        "B2_no_historical_score": {
+          "count": 0
+        },
+        "cluster_sign_flip_B4_minus_B1_mrr": {
+          "clusters": 3,
+          "observed_mean_delta": 0.2556,
+          "p_exact_two_sided": 0.5,
+          "min_attainable_p": 0.25
+        }
+      },
+      "by_transformation": {
+        "hard_negative": {
+          "cases": 1,
+          "independent_clusters": 1,
+          "B1_structural_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 1
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 1,
+            "observed_mean_delta": 0.0,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 1.0
+          }
+        },
+        "new_symbol": {
+          "cases": 2,
+          "independent_clusters": 2,
+          "B1_structural_only": {
+            "recall@1": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.5,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 50.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0017,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 290,
+            "pct_not_retrieved": 50.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.1667,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 3,
+            "pct_not_retrieved": 50.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.5,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.5,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 50.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 1,
+              "case_ids": [
+                "ts_zod_04"
+              ]
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 1
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 2,
+            "observed_mean_delta": 0.0,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 0.5
+          }
+        },
+        "rename": {
+          "cases": 2,
+          "independent_clusters": 2,
+          "B1_structural_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0227,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 22,
+            "pct_not_retrieved": 50.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": null,
+            "pct_not_retrieved": 100.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0024,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 210,
+            "pct_not_retrieved": 50.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0116,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 43,
+            "pct_not_retrieved": 50.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 1,
+              "case_ids": [
+                "ts_zod_01"
+              ]
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 2
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 2,
+            "observed_mean_delta": -0.0111,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 0.5
+          }
+        },
+        "rewrite": {
+          "cases": 2,
+          "independent_clusters": 2,
+          "B1_structural_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.1667,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 3,
+            "pct_not_retrieved": 50.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0116,
+            "median_rank_unranked_as_inf": null,
+            "median_rank_among_ranked": 43,
+            "pct_not_retrieved": 50.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.022,
+            "median_rank_unranked_as_inf": 45.5,
+            "median_rank_among_ranked": 45.5,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 0.0,
+            "recall@5": 0.5,
+            "recall@10": 0.5,
+            "mrr": 0.1083,
+            "median_rank_unranked_as_inf": 32.5,
+            "median_rank_among_ranked": 32.5,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 1,
+              "case_ids": [
+                "ts_zod_07"
+              ]
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 1,
+              "case_ids": [
+                "ts_zod_07"
+              ]
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 1
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 2,
+            "observed_mean_delta": -0.0583,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 0.5
+          }
+        },
+        "signature_change": {
+          "cases": 1,
+          "independent_clusters": 1,
+          "B1_structural_only": {
+            "recall@1": 0.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.25,
+            "median_rank_unranked_as_inf": 4,
+            "median_rank_among_ranked": 4,
+            "pct_not_retrieved": 0.0
+          },
+          "B2_historical_only": {
+            "recall@1": 0.0,
+            "recall@5": 0.0,
+            "recall@10": 0.0,
+            "mrr": 0.0476,
+            "median_rank_unranked_as_inf": 21,
+            "median_rank_among_ranked": 21,
+            "pct_not_retrieved": 0.0
+          },
+          "B3_linear_fusion_0.6S_0.4H": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "median_rank_unranked_as_inf": 1,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_rrf_v2_k60_0.5_0.5": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "median_rank_unranked_as_inf": 1,
+            "median_rank_among_ranked": 1,
+            "pct_not_retrieved": 0.0
+          },
+          "B4_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_improved_same_top10_status": {
+              "count": 1,
+              "case_ids": [
+                "ts_zod_05"
+              ]
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_vs_B1": {
+            "rescues@10": {
+              "count": 0,
+              "case_ids": []
+            },
+            "harms@10": {
+              "count": 1,
+              "case_ids": [
+                "ts_zod_05"
+              ]
+            },
+            "rank_improved_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            },
+            "rank_regressed_same_top10_status": {
+              "count": 0,
+              "case_ids": []
+            }
+          },
+          "B2_no_historical_score": {
+            "count": 0
+          },
+          "cluster_sign_flip_B4_minus_B1_mrr": {
+            "clusters": 1,
+            "observed_mean_delta": 0.75,
+            "p_exact_two_sided": 1.0,
+            "min_attainable_p": 1.0
+          }
+        }
+      }
+    }
+  },
+  "E_lineage": {
+    "python": {
+      "cases": 7,
+      "WRONG_COMMIT": 1,
+      "CORRECT": 6
+    },
+    "javascript": {
+      "cases": 4,
+      "CORRECT": 3,
+      "NO_COMMIT": 1
+    },
+    "typescript": {
+      "cases": 3,
+      "WRONG_COMMIT": 1,
+      "CORRECT": 2
+    },
+    "java": {
+      "cases": 7,
+      "CORRECT": 7
+    }
+  },
+  "E_lineage_clusters": {
+    "python": 7,
+    "javascript": 4,
+    "typescript": 3,
+    "java": 6
+  },
+  "E1_reproduction": {
+    "E1_comparison.txt": "E1 REPRODUCTION: PASS (116/116 ranks identical)",
+    "E1_after_fix_comparison.txt": "E1 REPRODUCTION: PASS (116/116 ranks identical)",
+    "E1_after_fix2_comparison.txt": "E1 REPRODUCTION: PASS (116/116 ranks identical)"
+  },
+  "inputs": {
+    "D:/base papers considered/Retrospect/research_execution_2026-10-21/E1_after_fix2/per_case_results.csv": "0545d2c97b49db57b1643e619354f8a37b5df7f8ecdf658790e1048024d7a843",
+    "D:/base papers considered/Retrospect/research_execution_2026-10-21/E3_reach/per_case_results.csv": "b92e35f299e420cd04ae9d810f1c6000ef101ef6c9171950af8d05b12798e30b",
+    "D:/base papers considered/Retrospect/research_execution_2026-10-21/E2_after_fix2/per_case_results.csv": "3d9c8cdf7d24f897479803b69c7211f46f05a116357ec2a79d5c00a19b8c52f8",
+    "D:/base papers considered/Retrospect/research_execution_2026-10-21/e3_reach_case_sets.json": "29cbfc0a3d6bdb5c6f14c1e20013c46c3c73e26bfd7b068a8b13b34f6fb14692",
+    "D:/base papers considered/Retrospect/research_execution_2026-10-21/E_lineage/e_lineage_results.json": "d3219644f8fb38dc7df72bfd29a9a4945bf75b03bd838456aea0e73c405dbec0",
+    "D:/base papers considered/Retrospect/research_execution_2026-10-21/E3_reach_analysis/e3_reach_results.json": "100949a0080ec78d8097d4a605c2108c8aaf16fb6a10250219d2f6a6c09e9b61",
+    "D:/base papers considered/Retrospect/research_corrected_2026-10-21/per_case_results_corrected.csv": "42525891e417b6f96619c32a981814eb10fd81cd1721c67adc8f62f839b054f2",
+    "D:/base papers considered/Retrospect/research_execution_2026-10-21/phase_b_input/phase_b_case_study_input.json": "f01059543ebc277440e890b594a7a8403e09f2f89d6a25c9c9432018651df979"
+  }
+}

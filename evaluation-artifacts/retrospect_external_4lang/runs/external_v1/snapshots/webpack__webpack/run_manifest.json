@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T08:10:31.457Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\webpack__webpack.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "webpack/webpack",
+      "path": "D:/clones_external/webpack__webpack",
+      "pin": "2f18ee08b843a1d14ba869c65a0f859a50a41e8e",
+      "head_before": "2f18ee08b843a1d14ba869c65a0f859a50a41e8e",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 13362,
+      "index_seconds": 213.29,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 1475.714,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3915,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "2f18ee08b843a1d14ba869c65a0f859a50a41e8e",
+      "clean_after": true,
+      "seconds_total": 1693.667
+    }
+  ],
+  "finished_utc": "2026-10-23T08:38:45.640Z"
+}

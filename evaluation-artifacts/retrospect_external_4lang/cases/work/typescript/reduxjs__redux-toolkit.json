@@ -1,0 +1,146 @@
+{
+ "repository": "reduxjs/redux-toolkit",
+ "url": "https://github.com/reduxjs/redux-toolkit.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 15,
+  "passed_extractor_check": 4,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "7058b93a8581d84d74a6d75d6878c689a852ca19",
+   "old": "injectSlice",
+   "new": "inject",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "41f70e84aed9885e7c50e5f8f4416805721b25e6",
+   "old": "removeListener",
+   "new": "startListening",
+   "source": "S3",
+   "reason": "body similarity 0.235 < 0.5"
+  },
+  {
+   "commit": "41f70e84aed9885e7c50e5f8f4416805721b25e6",
+   "old": "listener",
+   "new": "startListening",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "41f70e84aed9885e7c50e5f8f4416805721b25e6",
+   "old": "addListener",
+   "new": "stopListening",
+   "source": "S3",
+   "reason": "body similarity 0.235 < 0.5"
+  },
+  {
+   "commit": "41f70e84aed9885e7c50e5f8f4416805721b25e6",
+   "old": "listener",
+   "new": "stopListening",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "41f70e84aed9885e7c50e5f8f4416805721b25e6",
+   "old": "addListener",
+   "new": "effect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "41f70e84aed9885e7c50e5f8f4416805721b25e6",
+   "old": "removeListener",
+   "new": "effect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "41f70e84aed9885e7c50e5f8f4416805721b25e6",
+   "old": "listener",
+   "new": "effect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b0f8346cc455e35ec5d15a50b7fef2949166907b",
+   "old": "updateQueryResult",
+   "new": "patchQueryData",
+   "source": "S3",
+   "reason": "body similarity 0.129 < 0.5"
+  },
+  {
+   "commit": "b0f8346cc455e35ec5d15a50b7fef2949166907b",
+   "old": "patchQueryResult",
+   "new": "updateQueryData",
+   "source": "S3",
+   "reason": "body similarity 0.129 < 0.5"
+  },
+  {
+   "commit": "ab0d17e08940cc4dda2f36d4f9d3748fcf37864d",
+   "old": "subSelector",
+   "new": "selectFromResult",
+   "source": "S3",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "41f70e84aed9885e7c50e5f8f4416805721b25e6",
+  "parent": "faf5438ce6dd1ec751ddf108dc6c78bd77c180ec",
+  "old": "removeListener",
+  "new": "stopListening",
+  "message": "Rename listener middleware public APIs and rework return value\n\nThis commit makes major breaking changes to the listener middleware.\n\nFirst, we've renamed all the public methods and action creators,\nso that we have a consistent naming scheme without clashes:\n\n- API: `createListenerMiddleware`\n- Returns: `{middleware, startListening, stopListening, clearListeners}`\n- Docs examples show the object as `listenerMiddleware`\n- One entry: \"listener\"\n- Field in that listener entry: `effect`\n- Action cre",
+  "commit_url": "https://github.com/reduxjs/redux-toolkit/commit/41f70e84aed9885e7c50e5f8f4416805721b25e6",
+  "similarity": 0.793,
+  "before": {
+   "name": "removeListener",
+   "qualifiedName": "createListenerMiddleware.removeListener",
+   "file": "packages/action-listener-middleware/src/index.ts",
+   "startLine": 315
+  },
+  "after": {
+   "name": "stopListening",
+   "qualifiedName": "createListenerMiddleware.stopListening",
+   "file": "packages/action-listener-middleware/src/index.ts",
+   "startLine": 312
+  },
+  "pin": "571854283b4c5696623b30fa039794410a928300",
+  "first_containing": "bc62c9e4fee8149b8c47d3b6c15c911c19b7a3b7",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 132,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 139,
+   "window_command": "git log --format=%H --topo-order -n 400 571854283b4c5696623b30fa039794410a928300"
+  },
+  "target": {
+   "file": "packages/toolkit/src/listenerMiddleware/index.ts",
+   "qualifiedName": "createListenerMiddleware.stopListening",
+   "name": "stopListening"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\reduxjs__redux-toolkit",
+  "seconds": 11.474,
+  "bytes": 48856660,
+  "default_branch": "master",
+  "head": "0fd611cc79d44990ac9a040dec4d5cb446233440"
+ },
+ "seconds": 34.796
+}

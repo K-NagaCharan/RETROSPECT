@@ -1,0 +1,25 @@
+{
+ "repository": "pallets/jinja",
+ "url": "https://github.com/pallets/jinja.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\pallets__jinja",
+  "seconds": 2.453,
+  "bytes": 8717641,
+  "default_branch": "main",
+  "head": "5ef70112a1ff19c05324ff889dd30405b1002044"
+ },
+ "seconds": 19.391
+}

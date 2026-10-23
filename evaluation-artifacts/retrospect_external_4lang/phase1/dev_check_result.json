@@ -1,0 +1,83 @@
+{
+ "cases": 27,
+ "skipped": 0,
+ "evaluated": 27,
+ "L_empty": 22,
+ "L_nonempty": 5,
+ "assertion": "G == B1 whenever L is empty",
+ "violations": [],
+ "pass": true,
+ "snapshots": [
+  [
+   "guava",
+   66211,
+   true,
+   0,
+   ""
+  ],
+  [
+   "quasar",
+   7206,
+   true,
+   0,
+   ""
+  ],
+  [
+   "sonarqube",
+   66300,
+   true,
+   0,
+   ""
+  ],
+  [
+   "black",
+   415,
+   true,
+   0,
+   ""
+  ],
+  [
+   "dit",
+   4780,
+   true,
+   0,
+   ""
+  ],
+  [
+   "httpx",
+   1206,
+   true,
+   0,
+   ""
+  ],
+  [
+   "axios",
+   1890,
+   true,
+   0,
+   ""
+  ],
+  [
+   "jest",
+   4429,
+   true,
+   0,
+   ""
+  ],
+  [
+   "vue",
+   4894,
+   true,
+   0,
+   ""
+  ],
+  [
+   "zod",
+   3674,
+   true,
+   0,
+   ""
+  ]
+ ],
+ "note": "G MRR on the development split is deliberately not computed or reported (no tuning)."
+}

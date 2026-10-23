@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T08:34:35.860Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\ramda__ramda.cases.jsonl",
+  "case_count": 5,
+  "snapshots": [
+    {
+      "repository": "ramda/ramda",
+      "path": "D:/clones_external/ramda__ramda",
+      "pin": "0018f70176f5876085cff5320ce1bcdb0d615128",
+      "head_before": "0018f70176f5876085cff5320ce1bcdb0d615128",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 1989,
+      "index_seconds": 3.744,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 76.502,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 621,
+      "history_commits_analyzed_H400": 261,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "0018f70176f5876085cff5320ce1bcdb0d615128",
+      "clean_after": true,
+      "seconds_total": 81.808
+    }
+  ],
+  "finished_utc": "2026-10-23T08:35:57.787Z"
+}

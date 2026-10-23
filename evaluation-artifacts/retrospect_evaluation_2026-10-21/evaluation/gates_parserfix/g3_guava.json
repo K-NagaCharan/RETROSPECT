@@ -1,0 +1,36 @@
+{
+  "started_utc": "2026-10-22T15:07:49.646Z",
+  "retrospect_head": "ed02019c88d805017a2a356aeb9236ca71063f1d",
+  "stress": {
+    "file": "D:\\clones\\guava\\guava\\src\\com\\google\\thirdparty\\publicsuffix\\PublicSuffixPatterns.java",
+    "bytes": 316846,
+    "iterations": 6000,
+    "failed_at": null,
+    "error": null,
+    "seconds": 401.258,
+    "probe_after": true
+  },
+  "index": {
+    "pin": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+    "symbols": 66211,
+    "extractionFailures": {
+      "count": 0,
+      "firstError": null
+    },
+    "seconds": 14.728,
+    "probe_after": true
+  },
+  "history_H400": {
+    "commitsAnalyzed": 399,
+    "changedFilesAnalyzed": 6712,
+    "symbolsWithHistory": 25548,
+    "extractionFailures": {
+      "count": 0,
+      "firstError": null
+    },
+    "seconds": 935.722,
+    "probe_after": true
+  },
+  "pass": true,
+  "finished_utc": "2026-10-22T15:30:21.437Z"
+}

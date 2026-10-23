@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T12:12:41.886Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\development_D_v3\\snapshots\\pytest.cases.jsonl",
+  "case_count": 1,
+  "snapshots": [
+    {
+      "repository": "pytest",
+      "path": "D:/clones/pytest",
+      "pin": "420cf37a3fc8c03c9a4769c2635a03773d27be10",
+      "head_before": "420cf37a3fc8c03c9a4769c2635a03773d27be10",
+      "clean_before": true,
+      "cases": 1,
+      "symbols": 6165,
+      "index_seconds": 1.876,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 14.996,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 110.221,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "420cf37a3fc8c03c9a4769c2635a03773d27be10",
+      "clean_after": true,
+      "seconds_total": 128.392
+    }
+  ],
+  "finished_utc": "2026-10-22T12:14:50.360Z"
+}

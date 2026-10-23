@@ -1,0 +1,13 @@
+{
+ "repository": "fastify/fastify",
+ "url": "https://github.com/fastify/fastify.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:fastify)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

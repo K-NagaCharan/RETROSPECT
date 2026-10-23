@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T06:11:23.134Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_BCA_v3\\snapshots\\mocha.cases.jsonl",
+  "case_count": 3,
+  "snapshots": [
+    {
+      "repository": "mocha",
+      "path": "D:/clones/mocha",
+      "pin": "cb21a4eba550da665fb2c3fa1ce021777a191e23",
+      "head_before": "cb21a4eba550da665fb2c3fa1ce021777a191e23",
+      "clean_before": true,
+      "cases": 3,
+      "symbols": 5165,
+      "index_seconds": 11.835,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 7.684,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 90.597,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "cb21a4eba550da665fb2c3fa1ce021777a191e23",
+      "clean_after": true,
+      "seconds_total": 112.849
+    }
+  ],
+  "finished_utc": "2026-10-22T06:13:16.088Z"
+}

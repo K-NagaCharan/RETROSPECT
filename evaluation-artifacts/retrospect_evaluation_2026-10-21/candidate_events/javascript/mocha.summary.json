@@ -1,0 +1,21 @@
+{
+  "repository": "mocha",
+  "language": "javascript",
+  "pin": "cb21a4eba550da665fb2c3fa1ce021777a191e23",
+  "window": 1500,
+  "commits": 1499,
+  "mergesSkipped": 1,
+  "commitsWithChanges": 504,
+  "events": {
+    "ambiguous_pairing": 16,
+    "move": 10,
+    "extraction": 5,
+    "signature_change": 96,
+    "deletion_no_successor": 85,
+    "rename": 46,
+    "scope_change": 23,
+    "split_part": 3,
+    "rename_move": 3
+  },
+  "parseFailures": 1
+}

@@ -1,0 +1,15 @@
+{
+ "repository": "elastic/elasticsearch",
+ "url": "https://github.com/elastic/elasticsearch.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "skipped",
+ "reason": "clone failed: fatal: cannot create directory at 'x-pack/plugin/esql/src/test/resources/org/elasticsearch/xpack/esql/analysis/golden_tests/AnalyzerSubqueryGoldenTests/testSameConversionResolvedOnLaterPassOverMultiTy",
+ "funnel": {
+  "clone_seconds": 382.235
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

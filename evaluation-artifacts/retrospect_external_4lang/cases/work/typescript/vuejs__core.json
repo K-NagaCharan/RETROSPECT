@@ -1,0 +1,13 @@
+{
+ "repository": "vuejs/core",
+ "url": "https://github.com/vuejs/core.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:vue)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

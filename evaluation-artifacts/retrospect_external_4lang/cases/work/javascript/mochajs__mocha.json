@@ -1,0 +1,13 @@
+{
+ "repository": "mochajs/mocha",
+ "url": "https://github.com/mochajs/mocha.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:mocha)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

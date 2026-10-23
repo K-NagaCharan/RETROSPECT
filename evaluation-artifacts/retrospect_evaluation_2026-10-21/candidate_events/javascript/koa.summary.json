@@ -1,0 +1,19 @@
+{
+  "repository": "koa",
+  "language": "javascript",
+  "pin": "2fecd029c6ce6b79d65158d28a76538f7f6b0378",
+  "window": 1500,
+  "commits": 1147,
+  "mergesSkipped": 165,
+  "commitsWithChanges": 401,
+  "events": {
+    "signature_change": 6,
+    "extraction": 9,
+    "rename": 4,
+    "deletion_no_successor": 10,
+    "ambiguous_pairing": 1,
+    "move": 2,
+    "rename_move": 1
+  },
+  "parseFailures": 0
+}

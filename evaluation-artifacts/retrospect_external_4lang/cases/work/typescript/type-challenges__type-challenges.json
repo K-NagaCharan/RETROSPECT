@@ -1,0 +1,25 @@
+{
+ "repository": "type-challenges/type-challenges",
+ "url": "https://github.com/type-challenges/type-challenges.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\type-challenges__type-challenges",
+  "seconds": 1.744,
+  "bytes": 5563586,
+  "default_branch": "main",
+  "head": "0b0b0b18bcb7ac42dc22ce26ffb438231d4754b1"
+ },
+ "seconds": 2.44
+}

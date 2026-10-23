@@ -1,0 +1,13 @@
+{
+ "repository": "koajs/koa",
+ "url": "https://github.com/koajs/koa.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:koa)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

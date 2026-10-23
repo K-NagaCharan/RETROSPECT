@@ -1,0 +1,54 @@
+{
+ "repository": "typestack/class-validator",
+ "url": "https://github.com/typestack/class-validator.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "all candidate events dropped at pin checks",
+ "funnel": {
+  "candidate_events": 4,
+  "passed_extractor_check": 4,
+  "dropped_at_pin": 4
+ },
+ "rejects": [],
+ "drops": [
+  {
+   "commit": "b43182d0dbd3d111bec76a4a2594275c14d4be95",
+   "old": "MinElements",
+   "new": "MinSize",
+   "source": "S3",
+   "reason": "successor absent at pin"
+  },
+  {
+   "commit": "b43182d0dbd3d111bec76a4a2594275c14d4be95",
+   "old": "MinElements",
+   "new": "MaxSize",
+   "source": "S3",
+   "reason": "successor absent at pin"
+  },
+  {
+   "commit": "b43182d0dbd3d111bec76a4a2594275c14d4be95",
+   "old": "MaxElements",
+   "new": "MinSize",
+   "source": "S3",
+   "reason": "successor absent at pin"
+  },
+  {
+   "commit": "b43182d0dbd3d111bec76a4a2594275c14d4be95",
+   "old": "MaxElements",
+   "new": "MaxSize",
+   "source": "S3",
+   "reason": "successor absent at pin"
+  }
+ ],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\typestack__class-validator",
+  "seconds": 2.05,
+  "bytes": 6540348,
+  "default_branch": "develop",
+  "head": "2e1a5c27dbd65b80e27fe96b49bd6e6641fa3603"
+ },
+ "seconds": 7.482
+}

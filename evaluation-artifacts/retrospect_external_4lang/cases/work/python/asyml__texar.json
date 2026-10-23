@@ -1,0 +1,113 @@
+{
+ "repository": "asyml/texar",
+ "url": "https://github.com/asyml/texar.git",
+ "language": "python",
+ "source": "S2",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 15,
+  "passed_extractor_check": 9,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "13608828e7f18419a60e1cbd244c2af070d5737c",
+   "old": "normalize",
+   "new": "layer_normalize",
+   "source": "S2",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "226214dcccb7ccc160943291d582cd70a5fe884c",
+   "old": "eval",
+   "new": "evaluate",
+   "source": "S2",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "9610625a1fc6f697d234c5cfc8b532c02880bd01",
+   "old": "_get_initializer",
+   "new": "get_initializer",
+   "source": "S2",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "9610625a1fc6f697d234c5cfc8b532c02880bd01",
+   "old": "_get_regularizer",
+   "new": "get_regularizer",
+   "source": "S2",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "b3b6fc5e9d5f136bbb811a6a1d9774683cd7fea4",
+   "old": "_default_mono_text_dataset_hparams",
+   "new": "_default_q_mono_text_dataset_hparams",
+   "source": "S2",
+   "reason": "OLD still a callable in child (changed files)"
+  },
+  {
+   "commit": "b3c391228e6132419735febb397f31089458240d",
+   "old": "_default_regularizer_hparams",
+   "new": "default_regularizer_hparams",
+   "source": "S2",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S2",
+  "commit": "c7dc812ea30ff28db0667ecdca11705a5b268758",
+  "commit_url": "https://github.com/asyml/texar/commit/c7dc812ea30ff28db0667ecdca11705a5b268758",
+  "type": "Rename Method",
+  "description": "Location: txtgen/core/layers.py\nThe method \"sinuoid_positional_encoding\" is renamed to \"sinusoid_positional_encoding\"",
+  "old": "sinuoid_positional_encoding",
+  "new": "sinusoid_positional_encoding",
+  "file_hint": "txtgen/core/layers.py",
+  "parent": "620a76a94ec2f0ef884a3c5d8de66a40dd46f166",
+  "similarity": 0.621,
+  "before": {
+   "name": "sinuoid_positional_encoding",
+   "qualifiedName": "sinuoid_positional_encoding",
+   "file": "txtgen/core/layers.py",
+   "startLine": 252
+  },
+  "after": {
+   "name": "sinusoid_positional_encoding",
+   "qualifiedName": "sinusoid_positional_encoding",
+   "file": "txtgen/core/layers.py",
+   "startLine": 253
+  },
+  "pin": "a29bc5c0860b7f3169e9c84f88b31727b35f9e17",
+  "first_containing": "70b672e3127bf9bbe655be0575912da1391ff066",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 118,
+   "window_size": 239,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 126,
+   "window_command": "git log --format=%H --topo-order -n 400 a29bc5c0860b7f3169e9c84f88b31727b35f9e17"
+  },
+  "target": {
+   "file": "texar/core/layers.py",
+   "qualifiedName": "sinusoid_positional_encoding",
+   "name": "sinusoid_positional_encoding"
+  },
+  "a_query": "obtain a positional encoding of inputs Args: inputs: [Tensor] A Tensor of shape `[batch_size, max_time, hidden_dim]` max_time: [Int], max time steps hidden_dim: [Int], hidden size of embedding zero_pad: [Boolean], If",
+  "name_subtoken_overlap": 0.5
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\asyml__texar",
+  "seconds": 1.83,
+  "bytes": 6678843,
+  "default_branch": "master",
+  "head": "83b1f22a6c8b070d45d2b4511e2b961a2e60d95e"
+ },
+ "seconds": 5.71
+}

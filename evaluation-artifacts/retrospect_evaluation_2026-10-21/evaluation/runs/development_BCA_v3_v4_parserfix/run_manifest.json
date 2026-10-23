@@ -1,0 +1,79 @@
+{
+  "cases_file": "D:\\base papers considered\\Test creation\\retrospect_evaluation_2026-10-21\\evaluation\\runs\\development_BCA_v3_v4_parserfix\\input_cases.jsonl",
+  "tasks": "B_identifier,C_docstring,A_current_doc",
+  "horizons": "50,400",
+  "match": "exact",
+  "driver": "run_benchmark_resumable.js (one process per repository)",
+  "case_count": 6,
+  "finished_utc": "2026-10-22T17:28:31.110Z",
+  "snapshots": [
+    {
+      "repository": "guava",
+      "path": "D:/clones/guava",
+      "pin": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+      "head_before": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+      "clean_before": true,
+      "cases": 1,
+      "symbols": 66211,
+      "index_seconds": 15.212,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 64.016,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 3615,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 936.392,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 25548,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+      "clean_after": true,
+      "seconds_total": 1026.923
+    },
+    {
+      "repository": "zod",
+      "path": "D:/clones/zod",
+      "pin": "680d19f7d1e042e55934209caeb79bc843b94f44",
+      "head_before": "680d19f7d1e042e55934209caeb79bc843b94f44",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 3674,
+      "index_seconds": 4.152,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 42.252,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 446,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 222.081,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 1872,
+      "history_commits_analyzed_H400": 398,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "680d19f7d1e042e55934209caeb79bc843b94f44",
+      "clean_after": true,
+      "seconds_total": 272.152
+    }
+  ]
+}

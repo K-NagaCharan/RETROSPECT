@@ -1,0 +1,20 @@
+{
+  "repository": "zod",
+  "language": "typescript",
+  "pin": "680d19f7d1e042e55934209caeb79bc843b94f44",
+  "window": 1500,
+  "commits": 1497,
+  "mergesSkipped": 3,
+  "commitsWithChanges": 745,
+  "events": {
+    "deletion_no_successor": 159,
+    "signature_change": 82,
+    "scope_change": 12,
+    "extraction": 8,
+    "rename": 7,
+    "ambiguous_pairing": 57,
+    "split_part": 6,
+    "move": 4
+  },
+  "parseFailures": 1138
+}

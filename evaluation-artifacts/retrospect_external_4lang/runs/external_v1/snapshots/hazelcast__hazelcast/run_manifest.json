@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T07:47:25.590Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\hazelcast__hazelcast.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "hazelcast/hazelcast",
+      "path": "D:/clones_external/hazelcast__hazelcast",
+      "pin": "b96d66795b4522623beff117db3a8cb6493a4012",
+      "head_before": "b96d66795b4522623beff117db3a8cb6493a4012",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 48634,
+      "index_seconds": 13.32,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 299.212,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 10751,
+      "history_commits_analyzed_H400": 256,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "b96d66795b4522623beff117db3a8cb6493a4012",
+      "clean_after": true,
+      "seconds_total": 323.587
+    }
+  ],
+  "finished_utc": "2026-10-23T07:52:57.661Z"
+}

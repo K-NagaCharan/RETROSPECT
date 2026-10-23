@@ -1,0 +1,86 @@
+2026-10-23T07:23:28.876Z start cases=cases/cases.jsonl tasks=all repos=42 cases=182
+2026-10-23T07:23:28.878Z run aio-libs/aiohttp (4 cases)
+2026-10-23T07:23:28.886Z run angular/angular (4 cases)
+2026-10-23T07:25:39.935Z done aio-libs/aiohttp
+2026-10-23T07:25:39.936Z run babel/babel (4 cases)
+2026-10-23T07:28:38.754Z done babel/babel
+2026-10-23T07:28:38.755Z run buildcraft/buildcraft (4 cases)
+2026-10-23T07:29:15.232Z done angular/angular
+2026-10-23T07:29:15.234Z run celery/celery (4 cases)
+2026-10-23T07:31:13.149Z done celery/celery
+2026-10-23T07:31:13.151Z run date-fns/date-fns (4 cases)
+2026-10-23T07:34:15.269Z done buildcraft/buildcraft
+2026-10-23T07:34:15.270Z run droolsjbpm/drools (4 cases)
+2026-10-23T07:36:52.348Z done date-fns/date-fns
+2026-10-23T07:36:52.350Z run droolsjbpm/jbpm (4 cases)
+2026-10-23T07:41:58.322Z done droolsjbpm/drools
+2026-10-23T07:41:58.322Z run encode/starlette (4 cases)
+2026-10-23T07:42:11.079Z done droolsjbpm/jbpm
+2026-10-23T07:42:11.079Z run facebook/presto (4 cases)
+2026-10-23T07:42:32.790Z done encode/starlette
+2026-10-23T07:42:32.790Z run gcanti/io-ts (4 cases)
+2026-10-23T07:42:56.852Z done gcanti/io-ts
+2026-10-23T07:42:56.853Z run google/closure-compiler (4 cases)
+2026-10-23T07:44:58.546Z done facebook/presto
+2026-10-23T07:44:58.547Z run gwtproject/gwt (4 cases)
+2026-10-23T07:47:25.434Z done google/closure-compiler
+2026-10-23T07:47:25.435Z run hazelcast/hazelcast (4 cases)
+2026-10-23T07:52:57.784Z done hazelcast/hazelcast
+2026-10-23T07:52:57.785Z run ignatov/intellij-erlang (4 cases)
+2026-10-23T07:53:42.562Z done gwtproject/gwt
+2026-10-23T07:53:42.565Z run infinispan/infinispan (4 cases)
+2026-10-23T07:56:41.784Z done ignatov/intellij-erlang
+2026-10-23T07:56:41.785Z run junit-team/junit5 (4 cases)
+2026-10-23T07:59:22.381Z done junit-team/junit5
+2026-10-23T07:59:22.382Z run nestjs/nest (4 cases)
+2026-10-23T08:00:56.961Z done nestjs/nest
+2026-10-23T08:00:56.961Z run prisma/prisma (4 cases)
+2026-10-23T08:01:38.481Z done infinispan/infinispan
+2026-10-23T08:01:38.482Z run pydantic/pydantic (4 cases)
+2026-10-23T08:04:22.507Z done pydantic/pydantic
+2026-10-23T08:04:22.508Z run pylint-dev/pylint (4 cases)
+2026-10-23T08:05:01.514Z done prisma/prisma
+2026-10-23T08:05:01.515Z run reduxjs/redux-toolkit (4 cases)
+2026-10-23T08:06:28.854Z done pylint-dev/pylint
+2026-10-23T08:06:28.855Z run sindresorhus/ts-extras (4 cases)
+2026-10-23T08:06:32.209Z done reduxjs/redux-toolkit
+2026-10-23T08:06:32.210Z run storybookjs/storybook (4 cases)
+2026-10-23T08:06:57.809Z done sindresorhus/ts-extras
+2026-10-23T08:06:57.810Z run trpc/trpc (4 cases)
+2026-10-23T08:08:06.292Z done storybookjs/storybook
+2026-10-23T08:08:06.293Z run typescript-eslint/typescript-eslint (4 cases)
+2026-10-23T08:08:28.496Z done trpc/trpc
+2026-10-23T08:08:28.497Z run validatorjs/validator.js (4 cases)
+2026-10-23T08:10:31.383Z done typescript-eslint/typescript-eslint
+2026-10-23T08:10:31.384Z run webpack/webpack (4 cases)
+2026-10-23T08:11:26.761Z done validatorjs/validator.js
+2026-10-23T08:11:26.762Z run apache/cassandra (5 cases)
+2026-10-23T08:18:27.212Z done apache/cassandra
+2026-10-23T08:18:27.213Z run asyml/texar (5 cases)
+2026-10-23T08:19:50.966Z done asyml/texar
+2026-10-23T08:19:50.967Z run bitcoinj/bitcoinj (5 cases)
+2026-10-23T08:22:59.848Z done bitcoinj/bitcoinj
+2026-10-23T08:22:59.849Z run django/django (5 cases)
+2026-10-23T08:25:04.870Z done django/django
+2026-10-23T08:25:04.871Z run jashkenas/underscore (5 cases)
+2026-10-23T08:26:20.872Z done jashkenas/underscore
+2026-10-23T08:26:20.873Z run mobxjs/mobx (5 cases)
+2026-10-23T08:28:47.305Z done mobxjs/mobx
+2026-10-23T08:28:47.309Z run pallets/werkzeug (5 cases)
+2026-10-23T08:30:12.568Z done pallets/werkzeug
+2026-10-23T08:30:12.569Z run paramiko/paramiko (5 cases)
+2026-10-23T08:30:47.712Z done paramiko/paramiko
+2026-10-23T08:30:47.713Z run pypa/pip (5 cases)
+2026-10-23T08:32:37.473Z done pypa/pip
+2026-10-23T08:32:37.474Z run python-trio/trio (5 cases)
+2026-10-23T08:34:35.762Z done python-trio/trio
+2026-10-23T08:34:35.763Z run ramda/ramda (5 cases)
+2026-10-23T08:35:57.830Z done ramda/ramda
+2026-10-23T08:35:57.831Z run scikit-learn/scikit-learn (5 cases)
+2026-10-23T08:37:05.499Z done scikit-learn/scikit-learn
+2026-10-23T08:37:05.500Z run tj/commander.js (5 cases)
+2026-10-23T08:38:27.455Z done tj/commander.js
+2026-10-23T08:38:27.455Z run typestrong/ts-node (5 cases)
+2026-10-23T08:38:46.084Z done webpack/webpack
+2026-10-23T08:39:59.315Z done typestrong/ts-node
+2026-10-23T08:39:59.420Z ALL DONE: 182 case rows merged

@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T07:31:13.220Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\date-fns__date-fns.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "date-fns/date-fns",
+      "path": "D:/clones_external/date-fns__date-fns",
+      "pin": "4d1d86493aa6d49f0f5690c0e539fdf2953cac72",
+      "head_before": "4d1d86493aa6d49f0f5690c0e539fdf2953cac72",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 3064,
+      "index_seconds": 13.332,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 324.389,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3064,
+      "history_commits_analyzed_H400": 310,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "4d1d86493aa6d49f0f5690c0e539fdf2953cac72",
+      "clean_after": true,
+      "seconds_total": 339.037
+    }
+  ],
+  "finished_utc": "2026-10-23T07:36:52.324Z"
+}

@@ -1,0 +1,128 @@
+2026-10-23T07:23:28.876Z start cases=cases/cases.jsonl tasks=all repos=42 cases=182
+2026-10-23T07:23:28.878Z run aio-libs/aiohttp (4 cases)
+2026-10-23T07:23:28.886Z run angular/angular (4 cases)
+aio-libs/aiohttp: 4 cases, 3614 symbols, 130.642s
+2026-10-23T07:25:39.935Z done aio-libs/aiohttp
+2026-10-23T07:25:39.936Z run babel/babel (4 cases)
+babel/babel: 4 cases, 1213 symbols, 178.632s
+2026-10-23T07:28:38.754Z done babel/babel
+2026-10-23T07:28:38.755Z run buildcraft/buildcraft (4 cases)
+angular/angular: 4 cases, 7880 symbols, 345.895s
+2026-10-23T07:29:15.232Z done angular/angular
+2026-10-23T07:29:15.234Z run celery/celery (4 cases)
+celery/celery: 4 cases, 2854 symbols, 117.651s
+2026-10-23T07:31:13.149Z done celery/celery
+2026-10-23T07:31:13.151Z run date-fns/date-fns (4 cases)
+buildcraft/buildcraft: 4 cases, 8433 symbols, 336.136s
+2026-10-23T07:34:15.269Z done buildcraft/buildcraft
+2026-10-23T07:34:15.270Z run droolsjbpm/drools (4 cases)
+date-fns/date-fns: 4 cases, 3064 symbols, 339.037s
+2026-10-23T07:36:52.348Z done date-fns/date-fns
+2026-10-23T07:36:52.350Z run droolsjbpm/jbpm (4 cases)
+droolsjbpm/drools: 4 cases, 46780 symbols, 462.4s
+2026-10-23T07:41:58.322Z done droolsjbpm/drools
+2026-10-23T07:41:58.322Z run encode/starlette (4 cases)
+droolsjbpm/jbpm: 4 cases, 5855 symbols, 318.329s
+2026-10-23T07:42:11.079Z done droolsjbpm/jbpm
+2026-10-23T07:42:11.079Z run facebook/presto (4 cases)
+encode/starlette: 4 cases, 462 symbols, 34.318s
+2026-10-23T07:42:32.790Z done encode/starlette
+2026-10-23T07:42:32.790Z run gcanti/io-ts (4 cases)
+gcanti/io-ts: 4 cases, 93 symbols, 23.936s
+2026-10-23T07:42:56.852Z done gcanti/io-ts
+2026-10-23T07:42:56.853Z run google/closure-compiler (4 cases)
+facebook/presto: 4 cases, 23656 symbols, 166.532s
+2026-10-23T07:44:58.546Z done facebook/presto
+2026-10-23T07:44:58.547Z run gwtproject/gwt (4 cases)
+google/closure-compiler: 4 cases, 41337 symbols, 268.294s
+2026-10-23T07:47:25.434Z done google/closure-compiler
+2026-10-23T07:47:25.435Z run hazelcast/hazelcast (4 cases)
+hazelcast/hazelcast: 4 cases, 48634 symbols, 323.587s
+2026-10-23T07:52:57.784Z done hazelcast/hazelcast
+2026-10-23T07:52:57.785Z run ignatov/intellij-erlang (4 cases)
+gwtproject/gwt: 4 cases, 91203 symbols, 523.49s
+2026-10-23T07:53:42.562Z done gwtproject/gwt
+2026-10-23T07:53:42.565Z run infinispan/infinispan (4 cases)
+ignatov/intellij-erlang: 4 cases, 6594 symbols, 223.58s
+2026-10-23T07:56:41.784Z done ignatov/intellij-erlang
+2026-10-23T07:56:41.785Z run junit-team/junit5 (4 cases)
+junit-team/junit5: 4 cases, 3037 symbols, 160.197s
+2026-10-23T07:59:22.381Z done junit-team/junit5
+2026-10-23T07:59:22.382Z run nestjs/nest (4 cases)
+nestjs/nest: 4 cases, 4883 symbols, 94.065s
+2026-10-23T08:00:56.961Z done nestjs/nest
+2026-10-23T08:00:56.961Z run prisma/prisma (4 cases)
+infinispan/infinispan: 4 cases, 49260 symbols, 475.393s
+2026-10-23T08:01:38.481Z done infinispan/infinispan
+2026-10-23T08:01:38.482Z run pydantic/pydantic (4 cases)
+pydantic/pydantic: 4 cases, 2491 symbols, 163.717s
+2026-10-23T08:04:22.507Z done pydantic/pydantic
+2026-10-23T08:04:22.508Z run pylint-dev/pylint (4 cases)
+prisma/prisma: 4 cases, 3852 symbols, 243.816s
+2026-10-23T08:05:01.514Z done prisma/prisma
+2026-10-23T08:05:01.515Z run reduxjs/redux-toolkit (4 cases)
+pylint-dev/pylint: 4 cases, 1471 symbols, 126.117s
+2026-10-23T08:06:28.854Z done pylint-dev/pylint
+2026-10-23T08:06:28.855Z run sindresorhus/ts-extras (4 cases)
+reduxjs/redux-toolkit: 4 cases, 1345 symbols, 90.313s
+2026-10-23T08:06:32.209Z done reduxjs/redux-toolkit
+2026-10-23T08:06:32.210Z run storybookjs/storybook (4 cases)
+sindresorhus/ts-extras: 4 cases, 97 symbols, 28.808s
+2026-10-23T08:06:57.809Z done sindresorhus/ts-extras
+2026-10-23T08:06:57.810Z run trpc/trpc (4 cases)
+storybookjs/storybook: 4 cases, 8653 symbols, 93.098s
+2026-10-23T08:08:06.292Z done storybookjs/storybook
+2026-10-23T08:08:06.293Z run typescript-eslint/typescript-eslint (4 cases)
+trpc/trpc: 4 cases, 502 symbols, 90.416s
+2026-10-23T08:08:28.496Z done trpc/trpc
+2026-10-23T08:08:28.497Z run validatorjs/validator.js (4 cases)
+typescript-eslint/typescript-eslint: 4 cases, 4305 symbols, 143.834s
+2026-10-23T08:10:31.383Z done typescript-eslint/typescript-eslint
+2026-10-23T08:10:31.384Z run webpack/webpack (4 cases)
+validatorjs/validator.js: 4 cases, 177 symbols, 178.055s
+2026-10-23T08:11:26.761Z done validatorjs/validator.js
+2026-10-23T08:11:26.762Z run apache/cassandra (5 cases)
+apache/cassandra: 5 cases, 25291 symbols, 419.68s
+2026-10-23T08:18:27.212Z done apache/cassandra
+2026-10-23T08:18:27.213Z run asyml/texar (5 cases)
+asyml/texar: 5 cases, 517 symbols, 83.569s
+2026-10-23T08:19:50.966Z done asyml/texar
+2026-10-23T08:19:50.967Z run bitcoinj/bitcoinj (5 cases)
+bitcoinj/bitcoinj: 5 cases, 11756 symbols, 188.404s
+2026-10-23T08:22:59.848Z done bitcoinj/bitcoinj
+2026-10-23T08:22:59.849Z run django/django (5 cases)
+django/django: 5 cases, 6766 symbols, 124.43s
+2026-10-23T08:25:04.870Z done django/django
+2026-10-23T08:25:04.871Z run jashkenas/underscore (5 cases)
+jashkenas/underscore: 5 cases, 856 symbols, 75.827s
+2026-10-23T08:26:20.872Z done jashkenas/underscore
+2026-10-23T08:26:20.873Z run mobxjs/mobx (5 cases)
+mobxjs/mobx: 5 cases, 516 symbols, 146.261s
+2026-10-23T08:28:47.305Z done mobxjs/mobx
+2026-10-23T08:28:47.309Z run pallets/werkzeug (5 cases)
+pallets/werkzeug: 5 cases, 907 symbols, 85.059s
+2026-10-23T08:30:12.568Z done pallets/werkzeug
+2026-10-23T08:30:12.569Z run paramiko/paramiko (5 cases)
+paramiko/paramiko: 5 cases, 365 symbols, 34.968s
+2026-10-23T08:30:47.712Z done paramiko/paramiko
+2026-10-23T08:30:47.713Z run pypa/pip (5 cases)
+pypa/pip: 5 cases, 6262 symbols, 109.338s
+2026-10-23T08:32:37.473Z done pypa/pip
+2026-10-23T08:32:37.474Z run python-trio/trio (5 cases)
+python-trio/trio: 5 cases, 1326 symbols, 118.055s
+2026-10-23T08:34:35.762Z done python-trio/trio
+2026-10-23T08:34:35.763Z run ramda/ramda (5 cases)
+ramda/ramda: 5 cases, 1989 symbols, 81.808s
+2026-10-23T08:35:57.830Z done ramda/ramda
+2026-10-23T08:35:57.831Z run scikit-learn/scikit-learn (5 cases)
+scikit-learn/scikit-learn: 5 cases, 1859 symbols, 67.191s
+2026-10-23T08:37:05.499Z done scikit-learn/scikit-learn
+2026-10-23T08:37:05.500Z run tj/commander.js (5 cases)
+tj/commander.js: 5 cases, 242 symbols, 81.768s
+2026-10-23T08:38:27.455Z done tj/commander.js
+2026-10-23T08:38:27.455Z run typestrong/ts-node (5 cases)
+webpack/webpack: 4 cases, 13362 symbols, 1693.667s
+2026-10-23T08:38:46.084Z done webpack/webpack
+typestrong/ts-node: 5 cases, 415 symbols, 91.649s
+2026-10-23T08:39:59.315Z done typestrong/ts-node
+2026-10-23T08:39:59.420Z ALL DONE: 182 case rows merged

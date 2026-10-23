@@ -1,0 +1,76 @@
+{
+ "repository": "ramda/ramda",
+ "url": "https://github.com/ramda/ramda.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 2,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "70a5ddadd31aa544a35d8efcc103fb902865be04",
+   "old": "partialCopy",
+   "new": "filterObject",
+   "source": "S3",
+   "reason": "body similarity 0.286 < 0.5"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "92c182c2d94d2cd5287f08cecb54d97b56938cb0",
+  "parent": "70a5ddadd31aa544a35d8efcc103fb902865be04",
+  "old": "filterObject",
+  "new": "pickWith",
+  "message": "filterObject->pickWith to match naming convention",
+  "commit_url": "https://github.com/ramda/ramda/commit/92c182c2d94d2cd5287f08cecb54d97b56938cb0",
+  "similarity": 1,
+  "before": {
+   "name": "filterObject",
+   "qualifiedName": "filterObject",
+   "file": "ramda.js",
+   "startLine": 1297
+  },
+  "after": {
+   "name": "pickWith",
+   "qualifiedName": "pickWith",
+   "file": "ramda.js",
+   "startLine": 1297
+  },
+  "pin": "0018f70176f5876085cff5320ce1bcdb0d615128",
+  "first_containing": "37bcad53564c5d61bff4f7d2ee020738aa870037",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 174,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 182,
+   "window_command": "git log --format=%H --topo-order -n 400 0018f70176f5876085cff5320ce1bcdb0d615128"
+  },
+  "target": {
+   "file": "ramda.js",
+   "qualifiedName": "pickWith",
+   "name": "pickWith"
+  },
+  "a_query": "TODO: JSDoc-style documentation for this function / // internal helper function",
+  "name_subtoken_overlap": 0
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\ramda__ramda",
+  "seconds": 4.243,
+  "bytes": 11482337,
+  "default_branch": "master",
+  "head": "f4b2e35ff433e18c751326b82acc3c6ab3585e18"
+ },
+ "seconds": 45.931
+}

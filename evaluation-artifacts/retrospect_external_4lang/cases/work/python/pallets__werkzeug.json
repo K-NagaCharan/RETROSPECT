@@ -1,0 +1,104 @@
+{
+ "repository": "pallets/werkzeug",
+ "url": "https://github.com/pallets/werkzeug.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 8,
+  "passed_extractor_check": 3,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "50f5cfb31b39f8c10c12dda5ef8176fd2c1aeaf7",
+   "old": "parse_age",
+   "new": "_load_age",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "50f5cfb31b39f8c10c12dda5ef8176fd2c1aeaf7",
+   "old": "dump_age",
+   "new": "_load_age",
+   "source": "S3",
+   "reason": "body similarity 0.160 < 0.5"
+  },
+  {
+   "commit": "50f5cfb31b39f8c10c12dda5ef8176fd2c1aeaf7",
+   "old": "parse_age",
+   "new": "_dump_age",
+   "source": "S3",
+   "reason": "body similarity 0.231 < 0.5"
+  },
+  {
+   "commit": "50f5cfb31b39f8c10c12dda5ef8176fd2c1aeaf7",
+   "old": "dump_age",
+   "new": "_dump_age",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "7a2e3a36bf21512a8c2d5e00b0e6d0901391eaae",
+   "old": "assert_strict_equal",
+   "new": "strict_eq",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "51e070e31d4060a53b533ec2aded08a8204b746a",
+  "parent": "126c3051949b9f415faad8e0eb923730126c4c07",
+  "old": "make_profiler_action",
+  "new": "make_action",
+  "message": "renamed make_profiler_action to make_action\n\n--HG--\nbranch : trunk",
+  "commit_url": "https://github.com/pallets/werkzeug/commit/51e070e31d4060a53b533ec2aded08a8204b746a",
+  "similarity": 1,
+  "before": {
+   "name": "make_profiler_action",
+   "qualifiedName": "make_profiler_action",
+   "file": "werkzeug/contrib/profiler.py",
+   "startLine": 78
+  },
+  "after": {
+   "name": "make_action",
+   "qualifiedName": "make_action",
+   "file": "werkzeug/contrib/profiler.py",
+   "startLine": 78
+  },
+  "pin": "6cd4daf59464b9f814bd5dba7dc9629971886134",
+  "first_containing": "51e070e31d4060a53b533ec2aded08a8204b746a",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 54,
+   "window_size": 367,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 53,
+   "window_command": "git log --format=%H --topo-order -n 400 6cd4daf59464b9f814bd5dba7dc9629971886134"
+  },
+  "target": {
+   "file": "werkzeug/contrib/profiler.py",
+   "qualifiedName": "make_action",
+   "name": "make_action"
+  },
+  "a_query": "Return a new callback for werkzeug scripts that starts a local server for profiling.",
+  "name_subtoken_overlap": 0.667
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\pallets__werkzeug",
+  "seconds": 7.234,
+  "bytes": 22013921,
+  "default_branch": "main",
+  "head": "6c4c680f5392342a68065114987f39160388064c"
+ },
+ "seconds": 29.828
+}

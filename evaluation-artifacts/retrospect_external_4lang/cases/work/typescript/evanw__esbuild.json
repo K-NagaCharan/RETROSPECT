@@ -1,0 +1,25 @@
+{
+ "repository": "evanw/esbuild",
+ "url": "https://github.com/evanw/esbuild.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\evanw__esbuild",
+  "seconds": 10.808,
+  "bytes": 31468718,
+  "default_branch": "main",
+  "head": "f6058f8364fe7ab91ca57a83e02577ed74c9cae4"
+ },
+ "seconds": 18.103
+}

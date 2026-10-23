@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T07:52:57.856Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\ignatov__intellij-erlang.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "ignatov/intellij-erlang",
+      "path": "D:/clones_external/ignatov__intellij-erlang",
+      "pin": "1a01237163479e03d668d4d09bd7171fd4364d78",
+      "head_before": "1a01237163479e03d668d4d09bd7171fd4364d78",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 6594,
+      "index_seconds": 1.724,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 219.231,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3526,
+      "history_commits_analyzed_H400": 352,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "1a01237163479e03d668d4d09bd7171fd4364d78",
+      "clean_after": true,
+      "seconds_total": 223.58
+    }
+  ],
+  "finished_utc": "2026-10-23T07:56:41.702Z"
+}

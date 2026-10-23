@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T07:28:38.842Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\buildcraft__buildcraft.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "buildcraft/buildcraft",
+      "path": "D:/clones_external/buildcraft__buildcraft",
+      "pin": "2ff0d03b9770241339e0d6c3ac7546cbd3a62f55",
+      "head_before": "2ff0d03b9770241339e0d6c3ac7546cbd3a62f55",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 8433,
+      "index_seconds": 2.355,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 331.753,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3586,
+      "history_commits_analyzed_H400": 342,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "2ff0d03b9770241339e0d6c3ac7546cbd3a62f55",
+      "clean_after": true,
+      "seconds_total": 336.136
+    }
+  ],
+  "finished_utc": "2026-10-23T07:34:15.222Z"
+}

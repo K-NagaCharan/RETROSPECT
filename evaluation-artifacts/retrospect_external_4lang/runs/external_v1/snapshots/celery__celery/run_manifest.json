@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T07:29:15.345Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\celery__celery.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "celery/celery",
+      "path": "D:/clones_external/celery__celery",
+      "pin": "b8cf78eb1d2b38ea0d8bb039cf8383384b9e166d",
+      "head_before": "b8cf78eb1d2b38ea0d8bb039cf8383384b9e166d",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 2854,
+      "index_seconds": 0.656,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 115.586,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 1835,
+      "history_commits_analyzed_H400": 375,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "b8cf78eb1d2b38ea0d8bb039cf8383384b9e166d",
+      "clean_after": true,
+      "seconds_total": 117.651
+    }
+  ],
+  "finished_utc": "2026-10-23T07:31:13.110Z"
+}

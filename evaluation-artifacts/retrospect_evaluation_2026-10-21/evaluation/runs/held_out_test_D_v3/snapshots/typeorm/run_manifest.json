@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T08:43:02.104Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_D_v3\\snapshots\\typeorm.cases.jsonl",
+  "case_count": 12,
+  "snapshots": [
+    {
+      "repository": "typeorm",
+      "path": "D:/clones/typeorm",
+      "pin": "fe92394287516feeada6e9c308ebe22deca2458e",
+      "head_before": "fe92394287516feeada6e9c308ebe22deca2458e",
+      "clean_before": true,
+      "cases": 12,
+      "symbols": 7504,
+      "index_seconds": 10.044,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 431.339,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 1076.656,
+      "parser_healthy_after_history_H400": false,
+      "head_after": "fe92394287516feeada6e9c308ebe22deca2458e",
+      "clean_after": true,
+      "seconds_total": 1528.704
+    }
+  ],
+  "finished_utc": "2026-10-22T09:08:30.913Z"
+}

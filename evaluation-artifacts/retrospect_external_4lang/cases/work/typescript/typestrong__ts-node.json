@@ -1,0 +1,125 @@
+{
+ "repository": "typestrong/ts-node",
+ "url": "https://github.com/TypeStrong/ts-node.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 9,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "ba741fa3ecdd86cdb64bb3cc6a269ce34bb56d07",
+   "old": "getStream",
+   "new": "ctxTmpDir",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ba741fa3ecdd86cdb64bb3cc6a269ce34bb56d07",
+   "old": "once",
+   "new": "ctxTmpDir",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ba741fa3ecdd86cdb64bb3cc6a269ce34bb56d07",
+   "old": "test",
+   "new": "ctxTmpDir",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "dc0fed275a47557ecc74f12d3e7f3bf19495d75c",
+   "old": "_eval",
+   "new": "evalCodeInternal",
+   "source": "S3",
+   "reason": "body similarity 0.061 < 0.5"
+  },
+  {
+   "commit": "dc0fed275a47557ecc74f12d3e7f3bf19495d75c",
+   "old": "startRepl",
+   "new": "evalCodeInternal",
+   "source": "S3",
+   "reason": "body similarity 0.041 < 0.5"
+  },
+  {
+   "commit": "dc0fed275a47557ecc74f12d3e7f3bf19495d75c",
+   "old": "_eval",
+   "new": "startInternal",
+   "source": "S3",
+   "reason": "body similarity 0.148 < 0.5"
+  },
+  {
+   "commit": "dc0fed275a47557ecc74f12d3e7f3bf19495d75c",
+   "old": "_eval",
+   "new": "wait",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "dc0fed275a47557ecc74f12d3e7f3bf19495d75c",
+   "old": "startRepl",
+   "new": "wait",
+   "source": "S3",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "dc0fed275a47557ecc74f12d3e7f3bf19495d75c",
+  "parent": "e8a4d76ad6e9772296e31b871560ae6bd78a1165",
+  "old": "startRepl",
+  "new": "startInternal",
+  "message": "feat: add REPL top level await support (#1383)\n\n* feat: add repl top level await support\r\n\r\n* refactor: add more files as dist-raw, adjust primordial imports\r\n\r\n* refactor: add flag support for experimental repl await\r\n\r\n* refactor: add support for Typescript input in experimental repl await\r\n\r\n* refactor: conditionally await eval result\r\n\r\n* chore: update node-repl-await file\r\n\r\n* refactor: dynamically exclude TLA diagnostics when --experimental-repl-await is set\r\n\r\n* refactor: exclude sourceMa",
+  "commit_url": "https://github.com/TypeStrong/ts-node/commit/dc0fed275a47557ecc74f12d3e7f3bf19495d75c",
+  "similarity": 0.734,
+  "before": {
+   "name": "startRepl",
+   "qualifiedName": "startRepl",
+   "file": "src/repl.ts",
+   "startLine": 276
+  },
+  "after": {
+   "name": "startInternal",
+   "qualifiedName": "createRepl.startInternal",
+   "file": "src/repl.ts",
+   "startLine": 313
+  },
+  "pin": "10025b0b8b484171f3795f8a44c3930a43490a1f",
+  "first_containing": "dc0fed275a47557ecc74f12d3e7f3bf19495d75c",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 10025b0b8b484171f3795f8a44c3930a43490a1f"
+  },
+  "target": {
+   "file": "src/repl.ts",
+   "qualifiedName": "createRepl.startInternal",
+   "name": "startInternal"
+  },
+  "a_query": "Note: `code` argument is deprecated",
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\typestrong__ts-node",
+  "seconds": 2.114,
+  "bytes": 9363967,
+  "default_branch": "main",
+  "head": "ddb05ef23be92a90c3ecac5a0220435c65ebbd2a"
+ },
+ "seconds": 15.351
+}

@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T07:23:29.162Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\aio-libs__aiohttp.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "aio-libs/aiohttp",
+      "path": "D:/clones_external/aio-libs__aiohttp",
+      "pin": "2b7cb1629f4b78637da5208b9d62332c3f3d486c",
+      "head_before": "2b7cb1629f4b78637da5208b9d62332c3f3d486c",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 3614,
+      "index_seconds": 0.885,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 128.108,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 1887,
+      "history_commits_analyzed_H400": 331,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "2b7cb1629f4b78637da5208b9d62332c3f3d486c",
+      "clean_after": true,
+      "seconds_total": 130.642
+    }
+  ],
+  "finished_utc": "2026-10-23T07:25:39.896Z"
+}

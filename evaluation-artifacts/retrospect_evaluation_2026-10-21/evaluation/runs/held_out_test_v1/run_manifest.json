@@ -1,0 +1,57 @@
+{
+  "started_utc": "2026-10-21T21:03:10.246Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "retrieval_cases/held_out_test/cases.jsonl",
+  "case_count": 1069,
+  "snapshots": [
+    {
+      "repository": "jfinal",
+      "path": "D:/clones/jfinal",
+      "pin": "0e0af1599b93ac3c6b2f14a318a647372da52924",
+      "head_before": "0e0af1599b93ac3c6b2f14a318a647372da52924",
+      "clean_before": true,
+      "cases": 18,
+      "symbols": 5059,
+      "index_seconds": 1.621,
+      "history_seconds_H50": 14.627,
+      "history_seconds_H400": 136.283,
+      "head_after": "0e0af1599b93ac3c6b2f14a318a647372da52924",
+      "clean_after": true,
+      "seconds_total": 171.021
+    },
+    {
+      "repository": "quasar",
+      "path": "D:/clones/quasar",
+      "pin": "db0ac29f55bc0515023d67ab86a2178c5e6eeb94",
+      "head_before": "db0ac29f55bc0515023d67ab86a2178c5e6eeb94",
+      "clean_before": true,
+      "cases": 19,
+      "symbols": 7206,
+      "index_seconds": 2.626,
+      "history_seconds_H50": 44.37,
+      "history_seconds_H400": 125.006,
+      "head_after": "db0ac29f55bc0515023d67ab86a2178c5e6eeb94",
+      "clean_after": true,
+      "seconds_total": 192.256
+    },
+    {
+      "repository": "sonarqube",
+      "path": "D:/clones/sonarqube",
+      "pin": "e3b4618c6a748dbc5f2b9659cb039d34726bb8bf",
+      "head_before": "e3b4618c6a748dbc5f2b9659cb039d34726bb8bf",
+      "clean_before": true,
+      "cases": 549,
+      "symbols": 66300,
+      "index_seconds": 35.967,
+      "history_seconds_H50": 17.072,
+      "history_seconds_H400": 228.017,
+      "head_after": "e3b4618c6a748dbc5f2b9659cb039d34726bb8bf",
+      "clean_after": true,
+      "seconds_total": 4700.002
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+2026-10-21T18:26:08Z start black D:/clones/black window=1500
+{"repository":"black","language":"python","pin":"56a7ee682ada03e086f62d66ac01b752fbda21db","window":1500,"commits":1500,"mergesSkipped":0,"commitsWithChanges":647,"events":{"extraction":15,"signature_change":377,"deletion_no_successor":74,"ambiguous_pairing":15,"rename":5,"move":135,"scope_change":1,"rename_move":9},"parseFailures":0}
+2026-10-21T18:34:02Z done black in 474s
+2026-10-21T18:34:02Z start httpx D:/clones/httpx window=1500
+{"repository":"httpx","language":"python","pin":"b5addb64f0161ff6bfe94c124ef76f6a1fba5254","window":1500,"commits":1460,"mergesSkipped":40,"commitsWithChanges":869,"events":{"signature_change":1342,"rename_move":13,"deletion_no_successor":274,"ambiguous_pairing":71,"extraction":15,"inlining":2,"move":85,"scope_change":139,"rename":49,"split_part":9},"parseFailures":0}
+2026-10-21T18:44:50Z done httpx in 647s
+2026-10-21T18:44:50Z start marshmallow D:/clones/marshmallow window=1500
+{"repository":"marshmallow","language":"python","pin":"d08471b17880c62b789971ada638707a11d3f8d4","window":1500,"commits":1256,"mergesSkipped":244,"commitsWithChanges":736,"events":{"signature_change":500,"deletion_no_successor":53,"scope_change":38,"ambiguous_pairing":5,"inlining":1,"rename":2,"extraction":1},"parseFailures":0}
+2026-10-21T18:49:51Z done marshmallow in 301s
+2026-10-21T18:49:51Z start flask D:/base papers considered/phase_d_eval_repos/flask window=1500
+{"repository":"flask","language":"python","pin":"d086db856be187255b8ec61ef409357393020f32","window":1500,"commits":868,"mergesSkipped":632,"commitsWithChanges":364,"events":{"extraction":6,"signature_change":479,"deletion_no_successor":79,"ambiguous_pairing":9,"scope_change":29,"move":35,"inlining":2},"parseFailures":0}
+2026-10-21T18:53:16Z done flask in 205s
+2026-10-21T18:53:16Z start dit D:/base papers considered/laya testing/data/repos/dit window=1500
+{"repository":"dit","language":"python","pin":"23fcb940c7bcdd9b7ddf426a4b423da8e6b76361","window":1500,"commits":1436,"mergesSkipped":64,"commitsWithChanges":808,"events":{"deletion_no_successor":254,"move":57,"scope_change":72,"signature_change":363,"extraction":10,"ambiguous_pairing":72,"rename_move":6,"split_part":162,"rename":39},"parseFailures":0}
+2026-10-21T19:03:56Z done dit in 640s
+2026-10-21T19:03:56Z start fastapi D:/clones/fastapi window=1500
+{"repository":"fastapi","language":"python","pin":"3070b5105fe02c4afdba5e3aea6c2cf2e3796c7f","window":1500,"commits":1500,"mergesSkipped":0,"commitsWithChanges":193,"events":{"signature_change":298,"rename":3,"deletion_no_successor":434,"extraction":2,"ambiguous_pairing":3,"move":3,"split_part":40},"parseFailures":0}
+2026-10-21T19:09:35Z done fastapi in 339s
+2026-10-21T19:09:36Z start pytest D:/clones/pytest window=1500
+{"repository":"pytest","language":"python","pin":"420cf37a3fc8c03c9a4769c2635a03773d27be10","window":1500,"commits":1194,"mergesSkipped":306,"commitsWithChanges":558,"events":{"signature_change":152,"deletion_no_successor":32,"rename":4,"extraction":8,"ambiguous_pairing":10,"scope_change":10,"move":23},"parseFailures":0}
+2026-10-21T19:14:54Z done pytest in 318s
+2026-10-21T19:14:54Z start requests D:/clones/requests window=1500
+{"repository":"requests","language":"python","pin":"611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60","window":1500,"commits":1148,"mergesSkipped":352,"commitsWithChanges":321,"events":{"signature_change":145,"deletion_no_successor":4},"parseFailures":0}
+2026-10-21T19:17:59Z done requests in 185s
+2026-10-21T19:17:59Z batch complete

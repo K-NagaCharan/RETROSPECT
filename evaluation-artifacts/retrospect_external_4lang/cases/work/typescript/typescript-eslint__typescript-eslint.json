@@ -1,0 +1,76 @@
+{
+ "repository": "typescript-eslint/typescript-eslint",
+ "url": "https://github.com/typescript-eslint/typescript-eslint.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 3,
+  "passed_extractor_check": 2,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "e5ea1d05603e6212093de541e5da49f139571454",
+   "old": "isGenericOfClassDecl",
+   "new": "isGenericOfClass",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "5d15bc21fe6cabdd72e5c12161e01c3a98360eaf",
+  "parent": "f780c1d5da41f5749b5384d7cf2eb4f3304a7c38",
+  "old": "isKnownSafePromiseReturn",
+  "new": "isKnownSafePromiseCall",
+  "message": "fix(eslint-plugin): [no-floating-promises] allowForKnownSafeCalls now supports function names (fixes #11423) (#11430)\n\n* Chore: add test cases for no-floating-promises allowForKnownSafeCalls option\n\nAdd test cases to verify that function name-based allowForKnownSafeCalls\nconfiguration works correctly for locally defined async functions.\n\n* Fix: no-floating-promises allowForKnownSafeCalls not working for function names (#11423)\n\nThe allowForKnownSafeCalls option was only checking type-based match",
+  "commit_url": "https://github.com/typescript-eslint/typescript-eslint/commit/5d15bc21fe6cabdd72e5c12161e01c3a98360eaf",
+  "similarity": 0.708,
+  "before": {
+   "name": "isKnownSafePromiseReturn",
+   "qualifiedName": "create.isKnownSafePromiseReturn",
+   "file": "packages/eslint-plugin/src/rules/no-floating-promises.ts",
+   "startLine": 238
+  },
+  "after": {
+   "name": "isKnownSafePromiseCall",
+   "qualifiedName": "create.isKnownSafePromiseCall",
+   "file": "packages/eslint-plugin/src/rules/no-floating-promises.ts",
+   "startLine": 239
+  },
+  "pin": "760d299930d35878e55bb3a77d9845044a9a8ec3",
+  "first_containing": "5d15bc21fe6cabdd72e5c12161e01c3a98360eaf",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 760d299930d35878e55bb3a77d9845044a9a8ec3"
+  },
+  "target": {
+   "file": "packages/eslint-plugin/src/rules/no-floating-promises.ts",
+   "qualifiedName": "create.isKnownSafePromiseCall",
+   "name": "isKnownSafePromiseCall"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0.667
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\typescript-eslint__typescript-eslint",
+  "seconds": 52.061,
+  "bytes": 116190544,
+  "default_branch": "main",
+  "head": "f720c169e044bfc0613371cba5202ef39c09e3bf"
+ },
+ "seconds": 157.058
+}

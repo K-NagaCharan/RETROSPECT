@@ -1,0 +1,47 @@
+{
+ "repository": "codinguser/gnucash-android",
+ "url": "https://github.com/codinguser/gnucash-android.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 3,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "bba4af3f52064b5a2de2c9a57f9d34ba67dcdd8c",
+   "old": "testDeletingAccountShouldDeleteSplits",
+   "new": "shouldDeleteSplitsWhenAccountDeleted",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "bba4af3f52064b5a2de2c9a57f9d34ba67dcdd8c",
+   "old": "testAlphabeticalSorting",
+   "new": "shouldBeAlphabeticallySortedByDefault",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "bba4af3f52064b5a2de2c9a57f9d34ba67dcdd8c",
+   "old": "testAddAccountWithTransaction",
+   "new": "shouldAddAccountsToDatabase",
+   "source": "S1",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\codinguser__gnucash-android",
+  "seconds": 6.827,
+  "bytes": 26584959,
+  "default_branch": "master",
+  "head": "2ad44adf6dd846aabf8883d41be3719b723bf4f1"
+ },
+ "seconds": 7.534
+}

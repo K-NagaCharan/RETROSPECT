@@ -1,0 +1,25 @@
+{
+ "repository": "markedjs/marked",
+ "url": "https://github.com/markedjs/marked.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\markedjs__marked",
+  "seconds": 6.307,
+  "bytes": 13140826,
+  "default_branch": "master",
+  "head": "4b7b5b2d1e05d24c85ac2c2fa96bbfe6952e6770"
+ },
+ "seconds": 14.816
+}

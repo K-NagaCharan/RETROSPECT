@@ -1,0 +1,170 @@
+{
+ "repository": "infinispan/infinispan",
+ "url": "https://github.com/infinispan/infinispan.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 18,
+  "passed_extractor_check": 4,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "ce4f6292d6350a2c6b82d995352fdf6d07042c9c",
+   "old": "removeRecoveryInformationFromCluster",
+   "new": "removeRecoveryInformation",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "ce4f6292d6350a2c6b82d995352fdf6d07042c9c",
+   "old": "removeRecoveryInformationFromCluster",
+   "new": "removeRecoveryInformation",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "ce4f6292d6350a2c6b82d995352fdf6d07042c9c",
+   "old": "removeRecoveryInformationFromCluster",
+   "new": "removeRecoveryInformation",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "35b6c869546a7968b6fd2f640add6eea87e03c22",
+   "old": "testEmbeddedQuery",
+   "new": "testEmbeddedLuceneQuery",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "35b6c869546a7968b6fd2f640add6eea87e03c22",
+   "old": "createAccount",
+   "new": "createAccountPB",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "35b6c869546a7968b6fd2f640add6eea87e03c22",
+   "old": "parseQuery",
+   "new": "transformJpaToLucene",
+   "source": "S1",
+   "reason": "NEW already a callable in parent (changed files)"
+  },
+  {
+   "commit": "35b6c869546a7968b6fd2f640add6eea87e03c22",
+   "old": "executeIndexedQuery",
+   "new": "buildLuceneQuery",
+   "source": "S1",
+   "reason": "NEW already a callable in parent (changed files)"
+  },
+  {
+   "commit": "35b6c869546a7968b6fd2f640add6eea87e03c22",
+   "old": "testEmbeddedQuery",
+   "new": "testEmbeddedLuceneQuery",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "35b6c869546a7968b6fd2f640add6eea87e03c22",
+   "old": "eqAndInterval",
+   "new": "optimizeEqAndInterval",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "35b6c869546a7968b6fd2f640add6eea87e03c22",
+   "old": "notEqAndInterval",
+   "new": "optimizeNotEqAndInterval",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "8f446b6ddf540e1b1fefca34dd10f45ba7256095",
+   "old": "parseStack",
+   "new": "parseChannels",
+   "source": "S1",
+   "reason": "OLD still a callable in child (changed files)"
+  },
+  {
+   "commit": "8f446b6ddf540e1b1fefca34dd10f45ba7256095",
+   "old": "getEnvironment",
+   "new": "getNodeName",
+   "source": "S1",
+   "reason": "no OLD/NEW callables in the oracle classes"
+  },
+  {
+   "commit": "8f446b6ddf540e1b1fefca34dd10f45ba7256095",
+   "old": "writeProtocol",
+   "new": "writeTransport",
+   "source": "S1",
+   "reason": "OLD still a callable in child (changed files)"
+  },
+  {
+   "commit": "8f446b6ddf540e1b1fefca34dd10f45ba7256095",
+   "old": "getDefaults",
+   "new": "getDefaultProperties",
+   "source": "S1",
+   "reason": "no OLD/NEW callables in the oracle classes"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S1",
+  "commit": "8f446b6ddf540e1b1fefca34dd10f45ba7256095",
+  "commit_url": "https://github.com/infinispan/infinispan/commit/8f446b6ddf540e1b1fefca34dd10f45ba7256095",
+  "type": "Rename Method",
+  "description": "Rename Method public getEnvironment() : ServerEnvironment renamed to public getNodeName() : String in class org.infinispan.server.jgroups.spi.ProtocolStackConfiguration",
+  "old": "getEnvironment",
+  "new": "getNodeName",
+  "oldClass": "org.infinispan.server.jgroups.spi.ProtocolStackConfiguration",
+  "newClass": "org.infinispan.server.jgroups.spi.ProtocolStackConfiguration",
+  "parent": "100712a453a4dc8f6a425b2fccd3f271c17862a4",
+  "similarity": 0,
+  "before": {
+   "name": "getEnvironment",
+   "qualifiedName": "org.jboss.as.clustering.jgroups.ProtocolStackConfiguration.getEnvironment",
+   "file": "server/integration/jgroups/src/main/java/org/jboss/as/clustering/jgroups/ProtocolStackConfiguration.java",
+   "startLine": 46
+  },
+  "after": {
+   "name": "getNodeName",
+   "qualifiedName": "org.infinispan.server.jgroups.ForkChannelFactory.ForkProtocolStackConfiguration.getNodeName",
+   "file": "server/integration/jgroups/src/main/java/org/infinispan/server/jgroups/ForkChannelFactory.java",
+   "startLine": 125
+  },
+  "pin": "d56d788a8767f6d71f09b0adf4e84f7ec1b58f5e",
+  "first_containing": "8f446b6ddf540e1b1fefca34dd10f45ba7256095",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 d56d788a8767f6d71f09b0adf4e84f7ec1b58f5e"
+  },
+  "target": {
+   "file": "server/integration/jgroups/src/main/java/org/infinispan/server/jgroups/ForkChannelFactory.java",
+   "qualifiedName": "org.infinispan.server.jgroups.ForkChannelFactory.ForkProtocolStackConfiguration.getNodeName",
+   "name": "getNodeName"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0.25
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\infinispan__infinispan",
+  "seconds": 55.625,
+  "bytes": 223284117,
+  "default_branch": "main",
+  "head": "d08d1ffbb10817ae36c58e3f5f72537a690c9e3f"
+ },
+ "seconds": 69.58
+}

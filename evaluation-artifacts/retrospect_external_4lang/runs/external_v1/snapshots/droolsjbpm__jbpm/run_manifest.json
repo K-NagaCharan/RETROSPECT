@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T07:36:52.417Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\droolsjbpm__jbpm.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "droolsjbpm/jbpm",
+      "path": "D:/clones_external/droolsjbpm__jbpm",
+      "pin": "3c963ac55965d16d81db6ec7a114b86bb65e02bc",
+      "head_before": "3c963ac55965d16d81db6ec7a114b86bb65e02bc",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 5855,
+      "index_seconds": 2.009,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 314.442,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 3286,
+      "history_commits_analyzed_H400": 396,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "3c963ac55965d16d81db6ec7a114b86bb65e02bc",
+      "clean_after": true,
+      "seconds_total": 318.329
+    }
+  ],
+  "finished_utc": "2026-10-23T07:42:10.992Z"
+}

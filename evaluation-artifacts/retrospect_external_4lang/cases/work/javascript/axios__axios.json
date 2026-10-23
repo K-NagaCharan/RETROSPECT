@@ -1,0 +1,13 @@
+{
+ "repository": "axios/axios",
+ "url": "https://github.com/axios/axios.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:axios)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

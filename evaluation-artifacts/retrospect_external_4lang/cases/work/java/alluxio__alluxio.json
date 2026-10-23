@@ -1,0 +1,33 @@
+{
+ "repository": "alluxio/alluxio",
+ "url": "https://github.com/Alluxio/alluxio.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "0ba343846f21649e29ffc600f30a7f3e463fb24c",
+   "old": "getTmpPath",
+   "new": "getPath",
+   "source": "S1",
+   "reason": "commit not in default-branch clone"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\alluxio__alluxio",
+  "seconds": 64.074,
+  "bytes": 304606995,
+  "default_branch": "main",
+  "head": "ca893e832f73eeb315f650fad73104173fecf9f1"
+ },
+ "seconds": 64.22
+}

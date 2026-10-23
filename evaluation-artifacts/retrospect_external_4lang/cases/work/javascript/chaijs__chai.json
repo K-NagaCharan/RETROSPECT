@@ -1,0 +1,25 @@
+{
+ "repository": "chaijs/chai",
+ "url": "https://github.com/chaijs/chai.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\chaijs__chai",
+  "seconds": 2.747,
+  "bytes": 6904302,
+  "default_branch": "main",
+  "head": "78d9637c79e211ed4f2455d9ba9b8a47be22dc6c"
+ },
+ "seconds": 10.732
+}

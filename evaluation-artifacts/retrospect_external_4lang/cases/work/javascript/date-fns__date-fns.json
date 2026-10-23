@@ -1,0 +1,140 @@
+{
+ "repository": "date-fns/date-fns",
+ "url": "https://github.com/date-fns/date-fns.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 13,
+  "passed_extractor_check": 4,
+  "dropped_at_pin": 1
+ },
+ "rejects": [
+  {
+   "commit": "4d70e4e0cd98c9e7286a313a8dbf117f5e82d374",
+   "old": "buildFormatLong",
+   "new": "buildFormatLongFn",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "382509bc7ee69f1899d62bc1cbb5565d3d5b7ad2",
+   "old": "distanceInWordsStrict",
+   "new": "formatDistance",
+   "source": "S3",
+   "reason": "body similarity 0.338 < 0.5"
+  },
+  {
+   "commit": "382509bc7ee69f1899d62bc1cbb5565d3d5b7ad2",
+   "old": "meridiem",
+   "new": "formatDistance",
+   "source": "S3",
+   "reason": "body similarity 0.003 < 0.5"
+  },
+  {
+   "commit": "382509bc7ee69f1899d62bc1cbb5565d3d5b7ad2",
+   "old": "distanceInWords",
+   "new": "formatRelative",
+   "source": "S3",
+   "reason": "body similarity 0.082 < 0.5"
+  },
+  {
+   "commit": "382509bc7ee69f1899d62bc1cbb5565d3d5b7ad2",
+   "old": "distanceInWordsStrict",
+   "new": "formatRelative",
+   "source": "S3",
+   "reason": "body similarity 0.118 < 0.5"
+  },
+  {
+   "commit": "382509bc7ee69f1899d62bc1cbb5565d3d5b7ad2",
+   "old": "meridiem",
+   "new": "formatRelative",
+   "source": "S3",
+   "reason": "body similarity 0.118 < 0.5"
+  },
+  {
+   "commit": "ce7e9bb926986804a30a643ff5deec5c790b2e95",
+   "old": "convertToFp",
+   "new": "convertToFP",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f16cf38d28a698eb9a825a8e5d13b4ca07a26634",
+   "old": "buildFormattingTokensRegExp",
+   "new": "buildTokensRegExp",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "67a4840f42ec871071508891fefca6ebc83d0e9b",
+   "old": "eachDay",
+   "new": "eachDayOfInterval",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [
+  {
+   "commit": "594421755f0feec3a73bcf5475855243780f32eb",
+   "old": "getTimeInMilliseconds",
+   "new": "getTimeSinceMidnight",
+   "source": "S3",
+   "reason": "successor absent at pin"
+  }
+ ],
+ "selected": {
+  "source": "S3",
+  "commit": "8547d2338cd253603ed13abcb0b24b690b3eee8f",
+  "parent": "3b0b8b7bd840096cc2b21f9a2dc66fc8934967b4",
+  "old": "closestToIndex",
+  "new": "closestIndexTo",
+  "message": "Rename closestToIndex to closestIndexTo",
+  "commit_url": "https://github.com/date-fns/date-fns/commit/8547d2338cd253603ed13abcb0b24b690b3eee8f",
+  "similarity": 1,
+  "before": {
+   "name": "closestToIndex",
+   "qualifiedName": "closestToIndex",
+   "file": "src/closest_to_index/index.js",
+   "startLine": 26
+  },
+  "after": {
+   "name": "closestIndexTo",
+   "qualifiedName": "closestIndexTo",
+   "file": "src/closest_index_to/index.js",
+   "startLine": 26
+  },
+  "pin": "4d1d86493aa6d49f0f5690c0e539fdf2953cac72",
+  "first_containing": "8547d2338cd253603ed13abcb0b24b690b3eee8f",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 101,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 100,
+   "window_command": "git log --format=%H --topo-order -n 400 4d1d86493aa6d49f0f5690c0e539fdf2953cac72"
+  },
+  "target": {
+   "file": "src/closest_index_to/index.js",
+   "qualifiedName": "closestIndexTo",
+   "name": "closestIndexTo"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 1
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\date-fns__date-fns",
+  "seconds": 12.571,
+  "bytes": 38141233,
+  "default_branch": "main",
+  "head": "df2af046e45f0cca0f592fff5b36dc70d00d0f10"
+ },
+ "seconds": 213.19
+}

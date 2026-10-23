@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T05:59:59.135Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_BCA_v3\\snapshots\\fastapi.cases.jsonl",
+  "case_count": 3,
+  "snapshots": [
+    {
+      "repository": "fastapi",
+      "path": "D:/clones/fastapi",
+      "pin": "3070b5105fe02c4afdba5e3aea6c2cf2e3796c7f",
+      "head_before": "3070b5105fe02c4afdba5e3aea6c2cf2e3796c7f",
+      "clean_before": true,
+      "cases": 3,
+      "symbols": 5770,
+      "index_seconds": 2.746,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 9.446,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 64.408,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "3070b5105fe02c4afdba5e3aea6c2cf2e3796c7f",
+      "clean_after": true,
+      "seconds_total": 80.199
+    }
+  ],
+  "finished_utc": "2026-10-22T06:01:19.452Z"
+}

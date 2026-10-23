@@ -1,0 +1,36 @@
+2026-10-22T05:12:10.438Z start cases=retrieval_cases/held_out_test/cases.jsonl tasks=B_identifier,C_docstring,A_current_doc repos=17 cases=166
+2026-10-22T05:12:10.443Z run axios (1 cases)
+2026-10-22T05:14:46.087Z done axios
+2026-10-22T05:14:46.088Z run fastify (1 cases)
+2026-10-22T05:16:54.406Z done fastify
+2026-10-22T05:16:54.409Z run spring-boot (1 cases)
+2026-10-22T05:30:59.213Z done spring-boot
+2026-10-22T05:30:59.215Z run vue (1 cases)
+2026-10-22T05:33:31.945Z done vue
+2026-10-22T05:33:31.948Z run typeorm (2 cases)
+2026-10-22T05:59:59.030Z FAILED typeorm exit=1
+2026-10-22T05:59:59.036Z run fastapi (3 cases)
+2026-10-22T06:01:19.511Z done fastapi
+2026-10-22T06:01:19.515Z run lodash (3 cases)
+2026-10-22T06:11:23.042Z FAILED lodash exit=1
+2026-10-22T06:11:23.047Z run mocha (3 cases)
+2026-10-22T06:13:16.123Z done mocha
+2026-10-22T06:13:16.127Z run pytest (6 cases)
+2026-10-22T06:15:30.504Z done pytest
+2026-10-22T06:15:30.506Z run quasar (6 cases)
+2026-10-22T06:18:01.662Z done quasar
+2026-10-22T06:18:01.665Z run sonarqube (6 cases)
+2026-10-22T06:22:41.914Z done sonarqube
+2026-10-22T06:22:41.918Z run jfinal (10 cases)
+2026-10-22T06:24:56.708Z done jfinal
+2026-10-22T06:24:56.712Z run svelte (16 cases)
+2026-10-22T06:29:20.068Z done svelte
+2026-10-22T06:29:20.070Z run black (22 cases)
+2026-10-22T06:31:48.903Z done black
+2026-10-22T06:31:48.907Z run jest (27 cases)
+2026-10-22T06:36:43.527Z done jest
+2026-10-22T06:36:43.532Z run dit (28 cases)
+2026-10-22T06:42:52.176Z done dit
+2026-10-22T06:42:52.180Z run httpx (30 cases)
+2026-10-22T06:45:20.739Z done httpx
+2026-10-22T06:45:20.772Z ALL DONE: 166 case rows merged

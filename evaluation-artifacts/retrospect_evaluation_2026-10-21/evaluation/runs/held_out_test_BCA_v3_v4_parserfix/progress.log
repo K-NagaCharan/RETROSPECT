@@ -1,0 +1,10 @@
+2026-10-22T16:45:18.642Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\held_out_test_BCA_v3_v4_parserfix\input_cases.jsonl tasks=B_identifier,C_docstring,A_current_doc repos=2 cases=5
+2026-10-22T16:45:18.645Z run typeorm (2 cases)
+2026-10-22T17:10:48.491Z done typeorm
+2026-10-22T17:10:48.492Z run lodash (3 cases)
+2026-10-22T17:28:31.248Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\held_out_test_BCA_v3_v4_parserfix\input_cases.jsonl tasks=B_identifier,C_docstring,A_current_doc repos=2 cases=5
+2026-10-22T17:28:31.251Z skip typeorm (finished)
+2026-10-22T17:28:31.251Z moved unfinished lodash -> lodash.incomplete-1792690111251
+2026-10-22T17:28:31.252Z run lodash (3 cases)
+2026-10-22T17:52:02.050Z done lodash
+2026-10-22T17:52:02.056Z ALL DONE: 5 case rows merged

@@ -1,0 +1,329 @@
+{
+ "repository": "django/django",
+ "url": "https://github.com/django/django.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 59,
+  "passed_extractor_check": 24,
+  "dropped_at_pin": 2
+ },
+ "rejects": [
+  {
+   "commit": "ddf0002bb760e5f1df664a81bd2a554c522f2c0f",
+   "old": "_new_instance",
+   "new": "create",
+   "source": "S3",
+   "reason": "body similarity 0.364 < 0.5"
+  },
+  {
+   "commit": "e700a3714fe668157e5f84ddabfd32d6aac08079",
+   "old": "_assert_template_used",
+   "new": "_get_template_used",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "87bb746ea6bb4bf6fb9f87065d5daaca857a130c",
+   "old": "setup",
+   "new": "setup_run_tests",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "87bb746ea6bb4bf6fb9f87065d5daaca857a130c",
+   "old": "teardown",
+   "new": "setup_run_tests",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "87bb746ea6bb4bf6fb9f87065d5daaca857a130c",
+   "old": "setup",
+   "new": "teardown_run_tests",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "87bb746ea6bb4bf6fb9f87065d5daaca857a130c",
+   "old": "teardown",
+   "new": "teardown_run_tests",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "859eeaa0f0b04c2644237ff04e6632b2f40475cb",
+   "old": "_format_value",
+   "new": "format_value",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "deed00c0d803d324a3dfdeba52458b6b009c1a90",
+   "old": "_has_changed",
+   "new": "has_changed",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "12e9804d163777af17cc2a3dfdfff49e5f750ebd",
+   "old": "allow_syncdb",
+   "new": "allow_migrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "5c09c59bc76510a5388623259b3827ee894cd66b",
+   "old": "next",
+   "new": "__next__",
+   "source": "S3",
+   "reason": "constructor/dunder or name <= 3 chars"
+  },
+  {
+   "commit": "c5ef65bcf324f4c90b53be90f4aec069a68e8c59",
+   "old": "smart_str",
+   "new": "smart_text",
+   "source": "S3",
+   "reason": "body similarity 0.222 < 0.5"
+  },
+  {
+   "commit": "c5ef65bcf324f4c90b53be90f4aec069a68e8c59",
+   "old": "smart_unicode",
+   "new": "smart_bytes",
+   "source": "S3",
+   "reason": "body similarity 0.240 < 0.5"
+  },
+  {
+   "commit": "33d8fcde8a317184a627492f008a4eab9333ed88",
+   "old": "staticfiles",
+   "new": "static",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "33d8fcde8a317184a627492f008a4eab9333ed88",
+   "old": "staticfiles",
+   "new": "get_static_prefix",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "72c39410c80ee842bf3de22418086d102cb2b768",
+   "old": "reverse",
+   "new": "reverse_geom",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c2ba59fc1da5287d6286e2c2aca4083d5bafe056",
+   "old": "get_manipulator_field_objs",
+   "new": "value_to_string",
+   "source": "S3",
+   "reason": "body similarity 0.066 < 0.5"
+  },
+  {
+   "commit": "c2ba59fc1da5287d6286e2c2aca4083d5bafe056",
+   "old": "get_manipulator_field_names",
+   "new": "value_to_string",
+   "source": "S3",
+   "reason": "body similarity 0.143 < 0.5"
+  },
+  {
+   "commit": "c2ba59fc1da5287d6286e2c2aca4083d5bafe056",
+   "old": "prepare_field_objs_and_params",
+   "new": "value_to_string",
+   "source": "S3",
+   "reason": "body similarity 0.039 < 0.5"
+  },
+  {
+   "commit": "c2ba59fc1da5287d6286e2c2aca4083d5bafe056",
+   "old": "get_manipulator_fields",
+   "new": "value_to_string",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "c2ba59fc1da5287d6286e2c2aca4083d5bafe056",
+   "old": "get_manipulator_new_data",
+   "new": "value_to_string",
+   "source": "S3",
+   "reason": "body similarity 0.108 < 0.5"
+  },
+  {
+   "commit": "c2ba59fc1da5287d6286e2c2aca4083d5bafe056",
+   "old": "get_follow",
+   "new": "value_to_string",
+   "source": "S3",
+   "reason": "body similarity 0.037 < 0.5"
+  },
+  {
+   "commit": "c2ba59fc1da5287d6286e2c2aca4083d5bafe056",
+   "old": "get_followed_related_objects",
+   "new": "value_to_string",
+   "source": "S3",
+   "reason": "body similarity 0.048 < 0.5"
+  },
+  {
+   "commit": "c2ba59fc1da5287d6286e2c2aca4083d5bafe056",
+   "old": "get_data_holders",
+   "new": "value_to_string",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "c2ba59fc1da5287d6286e2c2aca4083d5bafe056",
+   "old": "has_field_type",
+   "new": "value_to_string",
+   "source": "S3",
+   "reason": "body similarity 0.049 < 0.5"
+  },
+  {
+   "commit": "65be56816fc173f823566728ab78b72d061bb466",
+   "old": "save_add",
+   "new": "save_form",
+   "source": "S3",
+   "reason": "body similarity 0.075 < 0.5"
+  },
+  {
+   "commit": "65be56816fc173f823566728ab78b72d061bb466",
+   "old": "save_change",
+   "new": "save_form",
+   "source": "S3",
+   "reason": "body similarity 0.084 < 0.5"
+  },
+  {
+   "commit": "65be56816fc173f823566728ab78b72d061bb466",
+   "old": "save_model",
+   "new": "response_add",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "65be56816fc173f823566728ab78b72d061bb466",
+   "old": "save_change",
+   "new": "response_add",
+   "source": "S3",
+   "reason": "body similarity 0.385 < 0.5"
+  },
+  {
+   "commit": "65be56816fc173f823566728ab78b72d061bb466",
+   "old": "save_model",
+   "new": "response_change",
+   "source": "S3",
+   "reason": "body similarity 0.047 < 0.5"
+  },
+  {
+   "commit": "65be56816fc173f823566728ab78b72d061bb466",
+   "old": "save_add",
+   "new": "response_change",
+   "source": "S3",
+   "reason": "body similarity 0.386 < 0.5"
+  },
+  {
+   "commit": "a28b75b0ba9650ae3bd46e38d12d95d48f5c5664",
+   "old": "chunk",
+   "new": "chunks",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "7969c1ba05ef342725083d060b038a8a874e69e6",
+   "old": "cache_ready",
+   "new": "app_cache_ready",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "46b0713315020d63fa8ce7c4ea14d99daf256e47",
+   "old": "to_python",
+   "new": "as_table",
+   "source": "S3",
+   "reason": "body similarity 0.054 < 0.5"
+  },
+  {
+   "commit": "46b0713315020d63fa8ce7c4ea14d99daf256e47",
+   "old": "to_python",
+   "new": "as_table_with_errors",
+   "source": "S3",
+   "reason": "body similarity 0.035 < 0.5"
+  },
+  {
+   "commit": "46b0713315020d63fa8ce7c4ea14d99daf256e47",
+   "old": "to_python",
+   "new": "as_ul_with_errors",
+   "source": "S3",
+   "reason": "body similarity 0.039 < 0.5"
+  }
+ ],
+ "drops": [
+  {
+   "commit": "72c39410c80ee842bf3de22418086d102cb2b768",
+   "old": "reverse",
+   "new": "geohash",
+   "source": "S3",
+   "reason": "OLD still exists as a callable at pin"
+  },
+  {
+   "commit": "46b0713315020d63fa8ce7c4ea14d99daf256e47",
+   "old": "to_python",
+   "new": "clean",
+   "source": "S3",
+   "reason": "OLD still exists as a callable at pin"
+  }
+ ],
+ "selected": {
+  "source": "S3",
+  "commit": "65be56816fc173f823566728ab78b72d061bb466",
+  "parent": "50e6928c5bcf03b7f18f26d3d9af50295a7bc46f",
+  "old": "save_add",
+  "new": "response_add",
+  "message": "Fixed #5780 -- Adjusted the ModelAdmin API to allow the created/updated objects\nto be passed to the formsets prior to validation.\n\nThis is a backward incompatible change for anyone overridding save_add or\nsave_change. They have been removed in favor of more granular methods\nintroduced in [8266] and the new response_add and response_change nethods.\nsave_model has been renamed to save_form due to its slightly changed behavior.\n\n\ngit-svn-id: http://code.djangoproject.com/svn/django/trunk@8273 bcc19",
+  "commit_url": "https://github.com/django/django/commit/65be56816fc173f823566728ab78b72d061bb466",
+  "similarity": 0.738,
+  "before": {
+   "name": "save_add",
+   "qualifiedName": "ModelAdmin.save_add",
+   "file": "django/contrib/admin/options.py",
+   "startLine": 468
+  },
+  "after": {
+   "name": "response_add",
+   "qualifiedName": "ModelAdmin.response_add",
+   "file": "django/contrib/admin/options.py",
+   "startLine": 494
+  },
+  "pin": "05ef002048d88b8c2bcf643694ab9349c818b464",
+  "first_containing": "65be56816fc173f823566728ab78b72d061bb466",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 05ef002048d88b8c2bcf643694ab9349c818b464"
+  },
+  "target": {
+   "file": "django/contrib/admin/options.py",
+   "qualifiedName": "ModelAdmin.response_add",
+   "name": "response_add"
+  },
+  "a_query": "Determines the HttpResponse for the add_view stage.",
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\django__django",
+  "seconds": 54.31,
+  "bytes": 272902075,
+  "default_branch": "main",
+  "head": "8e4e95da9b5b751923cd80989d9ece4b6c6fb1a3"
+ },
+ "seconds": 227.03
+}

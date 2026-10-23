@@ -43,11 +43,11 @@ The full classification of every document is in [docs/DOCS_INDEX.md](docs/DOCS_I
 
 | Number(s) written | Where | Source |
 |---|---|---|
-| External confirmatory: 42 repos; MRR 0.3628 / 0.7747; R@1 0.2619 / 0.7143; R@10 0.5238 / 0.8571; Δ 0.4119; CI [0.279, 0.5489]; p 9.9999e-06 (value 9.99990000099999e-06); 14 / 0; SUPPORTED | README §4, external STATUS.md | `retrospect_external_4lang/analysis/external_v1/results.json` → `confirmatory` |
+| External confirmatory: 42 repos; MRR 0.3628 / 0.7747; R@1 0.2619 / 0.7143; R@10 0.5238 / 0.8571; Δ 0.4119; CI [0.279, 0.5489]; p 9.99990000099999e-06, written "< 0.0001 (minimum attainable with 100,000 Monte Carlo assignments)" in README and 9.9999e-06 in external STATUS.md; 14 / 0; SUPPORTED | README §4, external STATUS.md | `evaluation-artifacts/retrospect_external_4lang/analysis/external_v1/results.json` → `confirmatory` |
 | Harm check: 14 repos; 0.6512 / 0.6452; Δ −0.006; CI [−0.0179, 0.0]; harms 0; PASS | README §4, external STATUS.md | same file → `harm_check` |
 | Funnel: Java 12, Python 12, JavaScript 7, TypeScript 11; total 42 | README §4, external STATUS.md | same file → `funnel.selected_per_language` |
 | Integrity: 4 not-indexed cases (jbpm), 0 parser-unhealthy, 0 out-of-window, 0 G≠B1 violations; pylint 1 history extraction failure | README §5, external STATUS.md | same file → `integrity`, `descriptive.cost_per_repository["pylint-dev/pylint"]` |
-| Sensitivity: 29 reviewed, 26 confirmed, 3 rejected; 39 repos; 0.3856 / 0.7574; Δ 0.3718; CI [0.2348, 0.5091]; p 9.9999e-06; 12 / 0 | README §4, external STATUS.md | `retrospect_external_4lang/analysis/external_v1_posthoc/results_posthoc.json` → `sensitivity_owner_confirmed` |
+| Sensitivity: 29 reviewed, 26 confirmed, 3 rejected; 39 repos; 0.3856 / 0.7574; Δ 0.3718; CI [0.2348, 0.5091]; p 9.99990000099999e-06 (README: "< 0.0001 (minimum attainable with 100,000 Monte Carlo assignments)"; STATUS.md: 9.9999e-06); 12 / 0 | README §4, external STATUS.md | `evaluation-artifacts/retrospect_external_4lang/analysis/external_v1_posthoc/results_posthoc.json` → `sensitivity_owner_confirmed` |
 | Post-hoc B_nl templates 1 and 3: 42; 0.3597 / 0.7569; Δ 0.3972; CI [0.2681, 0.529]; p 9.9999e-06; 24 / 0. S1-only B_id: 12; 0.278 / 0.5697; 0.2917; [0.0932, 0.5174]; 0.0625; 3 / 0. S1-only B_nl: 12; 0.2044 / 0.5281; 0.3237; [0.1218, 0.5496]; 0.03125; 10 / 0 | external STATUS.md | same file → `posthoc_bnl_without_template2`, `posthoc_s1_only` |
 | Main benchmark in window H=400: 14 / 12; MRR 0.4069 / 0.6496 / 0.528 / 0.491; +0.0914; 3 / 0 | README §4 | `retrospect_evaluation_2026-10-21/evaluation/analysis/v4_parserfix/BCA/analysis_results.json` → `secondary["H400/held_out_test/pooled/B_identifier/in_window"]` (identical in `reports/parserfix_remeasurement.md`) |
 | Main benchmark all indexed H=400: 63 / 49; 0.4329 / 0.2486 / 0.3464 / 0.2695; −0.0837; 4 / 23 | README §4 | same file → `secondary["H400/held_out_test/pooled/B_identifier/all_indexed"]` |
@@ -74,3 +74,26 @@ The four checks below were run before committing. Their outcomes are in the comm
 - **CLI help:** `node bin/rtro.js --help` was re-run, and so was `--help` for each command.
 - **Tests:** jest suite, excluding `author_pack_blinding`.
 - **Changes:** `git status` shows only `.md` changes, plus the new `docs/DOCS_INDEX.md` and `DOC_AUDIT.md`.
+
+## Follow-up (2026-10-23): relicensing and published artifacts
+
+| Item | Action |
+|---|---|
+| `LICENSE` | ISC → MIT ("Copyright (c) 2026 K-NagaCharan"). `package.json` `"license": "MIT"`. README §7 updated |
+| `evaluation-artifacts/` | **Created.** Verbatim copies of both evaluation workspaces, all files including superseded runs, excluding only `node_modules/` and `__pycache__/`. Every file was checksum-verified against its original (0 mismatches), and the originals are unchanged. `.gitattributes` marks the folder `-text` so the bytes, and the checksums inside, are kept exactly |
+| `evaluation-artifacts/README.md` | **Created.** What each workspace is, its ground truth, its authoritative files, and the verbatim-copy and local-path note |
+| `README.md` §4, §6, §7 | p-values below 0.0001 written as "< 0.0001 (minimum attainable with 100,000 Monte Carlo assignments)". The local `D:\` workspace paths are replaced with repo-relative `evaluation-artifacts/` links. Citation author set to K-NagaCharan. The `cli-v1.0.0` hash is updated in a follow-up commit |
+| `docs/DOCS_INDEX.md` | Scopes C and D and *Where results live* now point to `evaluation-artifacts/`. Rows added for `LICENSE` (now MIT) and `evaluation-artifacts/README.md` |
+| `npm pack` | Still 47 files, with no `evaluation-artifacts/` entries (the `files` whitelist is unchanged) |
+
+**Copied artifacts** (sizes measured with `os.walk`, excluding `node_modules`, `__pycache__` and `.git`):
+
+| Workspace | Files | Size |
+|---|---|---|
+| `retrospect_evaluation_2026-10-21` | 571 | 83.02 MB |
+| `retrospect_external_4lang` | 331 | 2.57 MB |
+| **Combined** | | **85.59 MB** (limit raised to 90 MB by the owner) |
+
+**Scan of the copies:**
+- **Secrets:** 0 secret-pattern matches and 0 credential-like file names. The patterns covered Anthropic/OpenAI/GitHub/AWS/Slack keys, private keys and `api_key`/`secret`/`password`/`token` assignments.
+- **Absolute local paths:** 694 occurrences in 320 files (381 in the main workspace, 313 in the external workspace). These are mostly `D:\base papers considered\…` and `D:\clones\…`. As instructed, they are left unedited.

@@ -1,0 +1,68 @@
+{
+ "repository": "tj/commander.js",
+ "url": "https://github.com/tj/commander.js.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 6,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "commandUsage",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "commandDescription",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "optionDescription",
+   "source": "S3",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "formatHelp",
+   "source": "S3",
+   "reason": "body similarity 0.017 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "createHelp",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "19ae912184f7454f3da94a52bc0de4cf0bf953b0",
+   "old": "optionalWrap",
+   "new": "configureHelp",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\tj__commander.js",
+  "seconds": 2.428,
+  "bytes": 5364669,
+  "default_branch": "master",
+  "head": "ba6d13ddb4243e5913367734f8c159089ffe7834"
+ },
+ "seconds": 32.987
+}

@@ -1,0 +1,47 @@
+{
+ "repository": "eclipse/vert.x",
+ "url": "https://github.com/eclipse/vert.x.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 3,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "0ef66582ffaba9a8df1cad846880df2074d34505",
+   "old": "setDSync",
+   "new": "setDsync",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "0ef66582ffaba9a8df1cad846880df2074d34505",
+   "old": "setWebsocketSubProtocol",
+   "new": "setWebsocketSubProtocols",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "0ef66582ffaba9a8df1cad846880df2074d34505",
+   "old": "isDSync",
+   "new": "isDsync",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\eclipse__vert.x",
+  "seconds": 15.567,
+  "bytes": 53393630,
+  "default_branch": "master",
+  "head": "1877ab6b09f20891b4873b08b8860c83d7f231e9"
+ },
+ "seconds": 15.624
+}

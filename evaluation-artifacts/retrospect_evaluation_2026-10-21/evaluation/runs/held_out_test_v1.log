@@ -1,0 +1,11 @@
+jfinal: 18 cases, 5059 symbols, 171.021s
+quasar: 19 cases, 7206 symbols, 192.256s
+sonarqube: 549 cases, 66300 symbols, 4700.002s
+Debugger listening on ws://127.0.0.1:9229/60859722-37d9-44f9-8b4e-c00d19675483
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+Debugger ending on ws://127.0.0.1:9229/60859722-37d9-44f9-8b4e-c00d19675483
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+Debugger ending on ws://127.0.0.1:9229/60859722-37d9-44f9-8b4e-c00d19675483
+For help, see: https://nodejs.org/en/docs/inspector

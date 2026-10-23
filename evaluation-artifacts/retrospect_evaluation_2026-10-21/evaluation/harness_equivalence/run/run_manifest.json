@@ -1,0 +1,68 @@
+{
+  "started_utc": "2026-10-21T18:29:07.337Z",
+  "horizons": [
+    50
+  ],
+  "match": "worker",
+  "cases_file": "evaluation/harness_equivalence/phase_b_cases.jsonl",
+  "case_count": 34,
+  "snapshots": [
+    {
+      "repository": "bottle",
+      "path": "D:/clones_eval_2026-10-22/phaseb_bottle",
+      "pin": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "head_before": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "clean_before": true,
+      "cases": 8,
+      "symbols": 1044,
+      "index_seconds": 0.566,
+      "history_seconds_H50": 28.912,
+      "head_after": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "clean_after": true,
+      "seconds_total": 35.041
+    },
+    {
+      "repository": "express",
+      "path": "D:/clones_eval_2026-10-22/phaseb_express",
+      "pin": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "head_before": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "clean_before": true,
+      "cases": 10,
+      "symbols": 3101,
+      "index_seconds": 6.25,
+      "history_seconds_H50": 14.923,
+      "head_after": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "clean_after": true,
+      "seconds_total": 28.712
+    },
+    {
+      "repository": "zod",
+      "path": "D:/clones_eval_2026-10-22/phaseb_zod",
+      "pin": "284243fb0d6532665afdc9239188773bb624f73c",
+      "head_before": "284243fb0d6532665afdc9239188773bb624f73c",
+      "clean_before": true,
+      "cases": 8,
+      "symbols": 3675,
+      "index_seconds": 7.305,
+      "history_seconds_H50": 88.326,
+      "head_after": "284243fb0d6532665afdc9239188773bb624f73c",
+      "clean_after": true,
+      "seconds_total": 102.343
+    },
+    {
+      "repository": "gson",
+      "path": "D:/clones_eval_2026-10-22/phaseb_gson",
+      "pin": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "head_before": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "clean_before": true,
+      "cases": 8,
+      "symbols": 4239,
+      "index_seconds": 2.276,
+      "history_seconds_H50": 40.058,
+      "head_after": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "clean_after": true,
+      "seconds_total": 50.019
+    }
+  ],
+  "finished_utc": "2026-10-21T18:32:43.990Z"
+}

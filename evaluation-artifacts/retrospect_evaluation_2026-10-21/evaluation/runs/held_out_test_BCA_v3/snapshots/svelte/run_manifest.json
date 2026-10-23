@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T06:24:56.788Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_BCA_v3\\snapshots\\svelte.cases.jsonl",
+  "case_count": 16,
+  "snapshots": [
+    {
+      "repository": "svelte",
+      "path": "D:/clones/svelte",
+      "pin": "40bb08482f4857d91221638dec544a532bc35389",
+      "head_before": "40bb08482f4857d91221638dec544a532bc35389",
+      "clean_before": true,
+      "cases": 16,
+      "symbols": 6104,
+      "index_seconds": 67.173,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 19.413,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 159.2,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "40bb08482f4857d91221638dec544a532bc35389",
+      "clean_after": true,
+      "seconds_total": 263.032
+    }
+  ],
+  "finished_utc": "2026-10-22T06:29:19.988Z"
+}

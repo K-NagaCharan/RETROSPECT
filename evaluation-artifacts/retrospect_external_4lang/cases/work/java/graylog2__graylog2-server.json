@@ -1,0 +1,54 @@
+{
+ "repository": "graylog2/graylog2-server",
+ "url": "https://github.com/Graylog2/graylog2-server.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 4,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "2ef067fc70055fc4d55c75937303414ddcf07e0e",
+   "old": "getServerUrl",
+   "new": "getDefaultServerUrl",
+   "source": "S1",
+   "reason": "commit not in default-branch clone"
+  },
+  {
+   "commit": "2ef067fc70055fc4d55c75937303414ddcf07e0e",
+   "old": "setupTestSuite",
+   "new": "before",
+   "source": "S1",
+   "reason": "commit not in default-branch clone"
+  },
+  {
+   "commit": "2ef067fc70055fc4d55c75937303414ddcf07e0e",
+   "old": "onTestStart",
+   "new": "apply",
+   "source": "S1",
+   "reason": "commit not in default-branch clone"
+  },
+  {
+   "commit": "2ef067fc70055fc4d55c75937303414ddcf07e0e",
+   "old": "run",
+   "new": "apply",
+   "source": "S1",
+   "reason": "constructor/dunder or name <= 3 chars"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\graylog2__graylog2-server",
+  "seconds": 75.208,
+  "bytes": 278924221,
+  "default_branch": "master",
+  "head": "4685aa4e0e64676f6923c98052f8ac93f827d60b"
+ },
+ "seconds": 75.465
+}

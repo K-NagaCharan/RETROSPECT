@@ -1,0 +1,13 @@
+{
+ "repository": "dit/dit",
+ "url": "https://github.com/dit/dit.git",
+ "language": "python",
+ "source": "S2",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:dit)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

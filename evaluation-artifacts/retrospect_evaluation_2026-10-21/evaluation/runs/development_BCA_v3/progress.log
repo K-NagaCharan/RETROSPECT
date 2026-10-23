@@ -1,0 +1,22 @@
+2026-10-22T07:03:35.967Z start cases=retrieval_cases/development/cases.jsonl tasks=B_identifier,C_docstring,A_current_doc repos=10 cases=36
+2026-10-22T07:03:35.970Z run guava (1 cases)
+2026-10-22T07:19:07.428Z FAILED guava exit=1
+2026-10-22T07:19:07.431Z run black (2 cases)
+2026-10-22T07:22:11.887Z done black
+2026-10-22T07:22:11.888Z run httpx (2 cases)
+2026-10-22T07:24:01.930Z done httpx
+2026-10-22T07:24:01.932Z run jest (2 cases)
+2026-10-22T07:27:45.147Z done jest
+2026-10-22T07:27:45.148Z run quasar (2 cases)
+2026-10-22T07:29:51.798Z done quasar
+2026-10-22T07:29:51.798Z run sonarqube (2 cases)
+2026-10-22T07:33:26.690Z done sonarqube
+2026-10-22T07:33:26.690Z run axios (3 cases)
+2026-10-22T07:35:59.991Z done axios
+2026-10-22T07:35:59.992Z run vue (3 cases)
+2026-10-22T07:38:28.283Z done vue
+2026-10-22T07:38:28.284Z run zod (5 cases)
+2026-10-22T07:43:39.590Z FAILED zod exit=1
+2026-10-22T07:43:39.591Z run dit (14 cases)
+2026-10-22T07:49:27.386Z done dit
+2026-10-22T07:49:27.415Z ALL DONE: 36 case rows merged

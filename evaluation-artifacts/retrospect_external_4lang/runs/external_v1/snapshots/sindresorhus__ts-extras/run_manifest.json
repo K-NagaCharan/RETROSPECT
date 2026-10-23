@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T08:06:28.929Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\sindresorhus__ts-extras.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "sindresorhus/ts-extras",
+      "path": "D:/clones_external/sindresorhus__ts-extras",
+      "pin": "323908522c9f90f07f99378b43891da742f2319f",
+      "head_before": "323908522c9f90f07f99378b43891da742f2319f",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 97,
+      "index_seconds": 0.363,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 27.281,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 97,
+      "history_commits_analyzed_H400": 91,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "323908522c9f90f07f99378b43891da742f2319f",
+      "clean_after": true,
+      "seconds_total": 28.808
+    }
+  ],
+  "finished_utc": "2026-10-23T08:06:57.797Z"
+}

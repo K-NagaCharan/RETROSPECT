@@ -1,0 +1,15 @@
+{
+ "repository": "facebook/buck",
+ "url": "https://github.com/facebook/buck.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "skipped",
+ "reason": "clone exceeds 1.5 GB (1.92 GB)",
+ "funnel": {
+  "clone_seconds": 394.526
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

@@ -1,0 +1,18 @@
+{
+  "repository": "redux",
+  "language": "typescript",
+  "pin": "56abca4749921d68f40cda20afd2043af9751f72",
+  "window": 1500,
+  "commits": 1206,
+  "mergesSkipped": 294,
+  "commitsWithChanges": 147,
+  "events": {
+    "signature_change": 24,
+    "deletion_no_successor": 4,
+    "extraction": 1,
+    "ambiguous_pairing": 1,
+    "scope_change": 2,
+    "inlining": 1
+  },
+  "parseFailures": 0
+}

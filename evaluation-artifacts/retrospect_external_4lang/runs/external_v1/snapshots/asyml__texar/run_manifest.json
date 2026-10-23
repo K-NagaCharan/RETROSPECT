@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T08:18:27.281Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\asyml__texar.cases.jsonl",
+  "case_count": 5,
+  "snapshots": [
+    {
+      "repository": "asyml/texar",
+      "path": "D:/clones_external/asyml__texar",
+      "pin": "a29bc5c0860b7f3169e9c84f88b31727b35f9e17",
+      "head_before": "a29bc5c0860b7f3169e9c84f88b31727b35f9e17",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 517,
+      "index_seconds": 0.24,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 81.874,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 517,
+      "history_commits_analyzed_H400": 197,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "a29bc5c0860b7f3169e9c84f88b31727b35f9e17",
+      "clean_after": true,
+      "seconds_total": 83.569
+    }
+  ],
+  "finished_utc": "2026-10-23T08:19:50.938Z"
+}

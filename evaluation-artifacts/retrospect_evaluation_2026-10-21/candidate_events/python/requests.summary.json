@@ -1,0 +1,14 @@
+{
+  "repository": "requests",
+  "language": "python",
+  "pin": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+  "window": 1500,
+  "commits": 1148,
+  "mergesSkipped": 352,
+  "commitsWithChanges": 321,
+  "events": {
+    "signature_change": 145,
+    "deletion_no_successor": 4
+  },
+  "parseFailures": 0
+}

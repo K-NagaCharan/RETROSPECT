@@ -1,0 +1,15 @@
+{
+ "repository": "microsoft/typescript",
+ "url": "https://github.com/microsoft/TypeScript.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "skipped",
+ "reason": "clone exceeded 10 minutes",
+ "funnel": {
+  "clone_seconds": 600.025
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

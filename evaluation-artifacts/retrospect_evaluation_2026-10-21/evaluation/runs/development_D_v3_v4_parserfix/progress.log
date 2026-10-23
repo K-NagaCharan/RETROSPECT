@@ -1,0 +1,13 @@
+2026-10-22T15:52:15.668Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\development_D_v3_v4_parserfix\input_cases.jsonl tasks=D_negative repos=3 cases=26
+2026-10-22T15:52:15.671Z run typeorm (6 cases)
+2026-10-22T16:18:38.017Z done typeorm
+2026-10-22T16:18:38.018Z run guava (9 cases)
+2026-10-22T16:40:29.699Z done guava
+2026-10-22T16:40:29.702Z run zod (11 cases)
+2026-10-22T16:45:18.570Z done zod
+2026-10-22T16:45:18.578Z ALL DONE: 26 case rows merged
+2026-10-22T17:28:31.171Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\development_D_v3_v4_parserfix\input_cases.jsonl tasks=D_negative repos=3 cases=26
+2026-10-22T17:28:31.175Z skip typeorm (finished)
+2026-10-22T17:28:31.177Z skip guava (finished)
+2026-10-22T17:28:31.179Z skip zod (finished)
+2026-10-22T17:28:31.188Z ALL DONE: 26 case rows merged

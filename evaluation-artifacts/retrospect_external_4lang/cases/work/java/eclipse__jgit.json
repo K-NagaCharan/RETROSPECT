@@ -1,0 +1,15 @@
+{
+ "repository": "eclipse/jgit",
+ "url": "https://github.com/eclipse/jgit.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "skipped",
+ "reason": "clone failed: remote: Repository not found.\nfatal: repository 'https://github.com/eclipse/jgit.git/' not found",
+ "funnel": {
+  "clone_seconds": 0.979
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

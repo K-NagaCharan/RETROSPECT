@@ -1,0 +1,20 @@
+{
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.5",
+  "node": "v22.17.1",
+  "git": "git version 2.50.1.windows.1",
+  "retrospect_head": "17ea399217737f8d5fe2c32c310b69c2f812b84d",
+  "retrospect_uncommitted_entries": 55,
+  "retrospect_source_sha256": {
+    "src/retrieval/HistoricalRetrievalAdapter.js": "374f85f33000fe8096623deb1d47b9238abdbfea3ba0ebf23354ccd17faceb4e",
+    "src/retrieval/RRFv2.js": "d1e555d9640bd95d195bf7fa151d27c8875c2e1b89bead9bf59479a4a30d6e21",
+    "src/git/GitHistoryReader.js": "ace5960be5468a2f76c6edb7a07ebcb2b1f966705f5da9f9841a865fdad9672b",
+    "src/git/historyWindow.js": "5aaec3edb85391b68141a8574ee0d5ca5129200d86bf11a57dd27114baa1dec0",
+    "src/structural/retrieval/StructuralRetriever.js": "9380234c73deebdbbc12b498ced34469cd99de6deb20daf94aabfa31cbd2fdd6",
+    "src/structural/query/QueryProcessor.js": "28ad87904fe03c46895465e9303d0f4c43166503832b9d2b1f3a3d2237684cb7",
+    "src/languages/JavaScriptAdapter.js": "0641eeebac973f421d43eb3070ea631bb1e8314f5e3d724e16b1aa459e625db3",
+    "src/languages/TypeScriptAdapter.js": "61035db6c22f11f5c178c2ad96add9f7a563bbec39cccd5c5c67bb05f85aaa1f"
+  },
+  "gpu": "not used",
+  "paid_api_calls": "none"
+}

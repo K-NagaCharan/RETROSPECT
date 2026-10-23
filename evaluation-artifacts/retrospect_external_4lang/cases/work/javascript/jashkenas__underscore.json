@@ -1,0 +1,40 @@
+{
+ "repository": "jashkenas/underscore",
+ "url": "https://github.com/jashkenas/underscore.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "all candidate events dropped at pin checks",
+ "funnel": {
+  "candidate_events": 2,
+  "passed_extractor_check": 2,
+  "dropped_at_pin": 2
+ },
+ "rejects": [],
+ "drops": [
+  {
+   "commit": "6564431e80020c994d2093f41a74d66048434717",
+   "old": "restArgs",
+   "new": "restArguments",
+   "source": "S3",
+   "reason": "successor not unique at pin"
+  },
+  {
+   "commit": "d2cf33d215cc1c1cb4b31c6f3f14977811629840",
+   "old": "typeTester",
+   "new": "tagTester",
+   "source": "S3",
+   "reason": "successor not unique at pin"
+  }
+ ],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\jashkenas__underscore",
+  "seconds": 3.168,
+  "bytes": 15636690,
+  "default_branch": "master",
+  "head": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b"
+ },
+ "seconds": 22.241
+}

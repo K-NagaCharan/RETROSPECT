@@ -1,0 +1,279 @@
+{
+ "repository": "pydantic/pydantic",
+ "url": "https://github.com/pydantic/pydantic.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 33,
+  "passed_extractor_check": 3,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "11edcb2cb136ae65900e0eb4c091095c248d7df5",
+   "old": "serializer",
+   "new": "field_serializer",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "json",
+   "new": "model_dump",
+   "source": "S3",
+   "reason": "body similarity 0.438 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "parse_obj",
+   "new": "model_dump",
+   "source": "S3",
+   "reason": "body similarity 0.011 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "construct",
+   "new": "model_dump",
+   "source": "S3",
+   "reason": "body similarity 0.032 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "dict",
+   "new": "model_dump_json",
+   "source": "S3",
+   "reason": "body similarity 0.417 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "json",
+   "new": "model_dump_json",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "parse_obj",
+   "new": "model_dump_json",
+   "source": "S3",
+   "reason": "body similarity 0.006 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "construct",
+   "new": "model_dump_json",
+   "source": "S3",
+   "reason": "body similarity 0.037 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "dict",
+   "new": "model_validate",
+   "source": "S3",
+   "reason": "body similarity 0.011 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "json",
+   "new": "model_validate",
+   "source": "S3",
+   "reason": "body similarity 0.006 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "construct",
+   "new": "model_validate",
+   "source": "S3",
+   "reason": "body similarity 0.209 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "dict",
+   "new": "model_construct",
+   "source": "S3",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "json",
+   "new": "model_construct",
+   "source": "S3",
+   "reason": "body similarity 0.037 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "parse_obj",
+   "new": "model_construct",
+   "source": "S3",
+   "reason": "body similarity 0.209 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "construct",
+   "new": "model_construct",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "dict",
+   "new": "model_json_schema",
+   "source": "S3",
+   "reason": "body similarity 0.071 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "json",
+   "new": "model_json_schema",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "parse_obj",
+   "new": "model_json_schema",
+   "source": "S3",
+   "reason": "body similarity 0.082 < 0.5"
+  },
+  {
+   "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+   "old": "construct",
+   "new": "model_json_schema",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "594effa279668bd955e98f1cd5c036b37d3bbd40",
+   "old": "errors",
+   "new": "get_type_hints",
+   "source": "S3",
+   "reason": "body similarity 0.004 < 0.5"
+  },
+  {
+   "commit": "594effa279668bd955e98f1cd5c036b37d3bbd40",
+   "old": "is_union",
+   "new": "get_type_hints",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "594effa279668bd955e98f1cd5c036b37d3bbd40",
+   "old": "errors",
+   "new": "model_post_init",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "594effa279668bd955e98f1cd5c036b37d3bbd40",
+   "old": "is_union",
+   "new": "model_post_init",
+   "source": "S3",
+   "reason": "body similarity 0.125 < 0.5"
+  },
+  {
+   "commit": "594effa279668bd955e98f1cd5c036b37d3bbd40",
+   "old": "errors",
+   "new": "model_rebuild",
+   "source": "S3",
+   "reason": "body similarity 0.019 < 0.5"
+  },
+  {
+   "commit": "594effa279668bd955e98f1cd5c036b37d3bbd40",
+   "old": "is_union",
+   "new": "model_rebuild",
+   "source": "S3",
+   "reason": "body similarity 0.051 < 0.5"
+  },
+  {
+   "commit": "81b13ff3b4f67560dc1b5292ab5bb30e91276fd7",
+   "old": "schema",
+   "new": "schema_of",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c38c463137caa7f7955493966c685dc8711e708c",
+   "old": "is_union_origin",
+   "new": "is_union",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "21d002ec6e5ac4d38eed88b1ec1808f5c44b24e6",
+   "old": "is_union",
+   "new": "is_union_origin",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "6b8d2babaaca420d20aab52bfe5f42cf5e382f1d",
+   "old": "resolve_type_hint",
+   "new": "replace_types",
+   "source": "S3",
+   "reason": "body similarity 0.070 < 0.5"
+  },
+  {
+   "commit": "6b8d2babaaca420d20aab52bfe5f42cf5e382f1d",
+   "old": "resolve_type_hint",
+   "new": "all_identical",
+   "source": "S3",
+   "reason": "body similarity 0.028 < 0.5"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "f55515820a407c5d31c45a7b0307925eecf21f34",
+  "parent": "08f7cf63c93836ae78514a0a200a6833cbac4b6a",
+  "old": "parse_obj",
+  "new": "model_validate",
+  "message": "Rename model methods (#4889)\n\n* renaming .json -> .model_dump_json\r\n\r\n* renaming .dict -> .model_dump\r\n\r\n* renaming .__fields__ -> .model_fields\r\n\r\n* renaming .schema -> .model_json_schema\r\n\r\n* renaming .construct -> .model_construct\r\n\r\n* renaming .parse_obj -> .model_validate\r\n\r\n* make linters happy\r\n\r\n* add changes md-file\r\n\r\nCo-authored-by: Samuel Colvin <s@muelcolvin.com>",
+  "commit_url": "https://github.com/pydantic/pydantic/commit/f55515820a407c5d31c45a7b0307925eecf21f34",
+  "similarity": 1,
+  "before": {
+   "name": "parse_obj",
+   "qualifiedName": "BaseModel.parse_obj",
+   "file": "pydantic/main.py",
+   "startLine": 273
+  },
+  "after": {
+   "name": "model_validate",
+   "qualifiedName": "BaseModel.model_validate",
+   "file": "pydantic/main.py",
+   "startLine": 275
+  },
+  "pin": "82bfb19d267c56f053add97974f679754165bffe",
+  "first_containing": "f55515820a407c5d31c45a7b0307925eecf21f34",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 82bfb19d267c56f053add97974f679754165bffe"
+  },
+  "target": {
+   "file": "pydantic/main.py",
+   "qualifiedName": "BaseModel.model_validate",
+   "name": "model_validate"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\pydantic__pydantic",
+  "seconds": 11.815,
+  "bytes": 45529070,
+  "default_branch": "main",
+  "head": "374a11de11d95e014060204bb9dd1354c2fcbbbd"
+ },
+ "seconds": 77.836
+}

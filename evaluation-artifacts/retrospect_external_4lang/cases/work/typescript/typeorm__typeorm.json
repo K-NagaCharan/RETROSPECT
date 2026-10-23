@@ -1,0 +1,13 @@
+{
+ "repository": "typeorm/typeorm",
+ "url": "https://github.com/typeorm/typeorm.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:typeorm)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

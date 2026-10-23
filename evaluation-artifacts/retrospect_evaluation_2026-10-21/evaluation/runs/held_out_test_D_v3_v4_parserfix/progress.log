@@ -1,0 +1,8 @@
+2026-10-22T17:52:02.128Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\held_out_test_D_v3_v4_parserfix\input_cases.jsonl tasks=D_negative repos=3 cases=18
+2026-10-22T17:52:02.131Z run lodash (2 cases)
+2026-10-22T18:17:44.674Z done lodash
+2026-10-22T18:17:44.676Z run moment (4 cases)
+2026-10-22T18:56:35.469Z done moment
+2026-10-22T18:56:35.471Z run typeorm (12 cases)
+2026-10-22T19:22:50.385Z done typeorm
+2026-10-22T19:22:50.395Z ALL DONE: 18 case rows merged

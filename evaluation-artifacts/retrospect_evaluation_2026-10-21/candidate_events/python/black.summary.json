@@ -1,0 +1,20 @@
+{
+  "repository": "black",
+  "language": "python",
+  "pin": "56a7ee682ada03e086f62d66ac01b752fbda21db",
+  "window": 1500,
+  "commits": 1500,
+  "mergesSkipped": 0,
+  "commitsWithChanges": 647,
+  "events": {
+    "extraction": 15,
+    "signature_change": 377,
+    "deletion_no_successor": 74,
+    "ambiguous_pairing": 15,
+    "rename": 5,
+    "move": 135,
+    "scope_change": 1,
+    "rename_move": 9
+  },
+  "parseFailures": 0
+}

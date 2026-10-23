@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T13:26:45.141Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\development_D_v3\\snapshots\\marshmallow.cases.jsonl",
+  "case_count": 7,
+  "snapshots": [
+    {
+      "repository": "marshmallow",
+      "path": "D:/clones/marshmallow",
+      "pin": "d08471b17880c62b789971ada638707a11d3f8d4",
+      "head_before": "d08471b17880c62b789971ada638707a11d3f8d4",
+      "clean_before": true,
+      "cases": 7,
+      "symbols": 1172,
+      "index_seconds": 0.392,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 8.111,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 97.334,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "d08471b17880c62b789971ada638707a11d3f8d4",
+      "clean_after": true,
+      "seconds_total": 111.108
+    }
+  ],
+  "finished_utc": "2026-10-22T13:28:36.328Z"
+}

@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T06:31:48.982Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_BCA_v3\\snapshots\\jest.cases.jsonl",
+  "case_count": 27,
+  "snapshots": [
+    {
+      "repository": "jest",
+      "path": "D:/clones/jest",
+      "pin": "61050e9323e742539dc2360236671110e37329e6",
+      "head_before": "61050e9323e742539dc2360236671110e37329e6",
+      "clean_before": true,
+      "cases": 27,
+      "symbols": 4429,
+      "index_seconds": 24.71,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 36.435,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 208.707,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "61050e9323e742539dc2360236671110e37329e6",
+      "clean_after": true,
+      "seconds_total": 294.319
+    }
+  ],
+  "finished_utc": "2026-10-22T06:36:43.421Z"
+}

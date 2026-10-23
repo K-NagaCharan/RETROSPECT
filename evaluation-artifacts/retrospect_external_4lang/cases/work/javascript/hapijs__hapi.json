@@ -1,0 +1,33 @@
+{
+ "repository": "hapijs/hapi",
+ "url": "https://github.com/hapijs/hapi.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "ca79be9413ccb359df3483a964a2c5c8589e5eea",
+   "old": "marshall",
+   "new": "marshal",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\hapijs__hapi",
+  "seconds": 7.146,
+  "bytes": 20043591,
+  "default_branch": "master",
+  "head": "58630f377f819d3d172fcfb1c301f2aa29334f9e"
+ },
+ "seconds": 33.538
+}

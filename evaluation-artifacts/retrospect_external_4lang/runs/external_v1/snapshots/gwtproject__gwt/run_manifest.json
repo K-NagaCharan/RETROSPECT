@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T07:44:58.619Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\gwtproject__gwt.cases.jsonl",
+  "case_count": 4,
+  "snapshots": [
+    {
+      "repository": "gwtproject/gwt",
+      "path": "D:/clones_external/gwtproject__gwt",
+      "pin": "000139ebaadff674146624462d656f6bfafde363",
+      "head_before": "000139ebaadff674146624462d656f6bfafde363",
+      "clean_before": true,
+      "cases": 4,
+      "symbols": 91203,
+      "index_seconds": 24.221,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 486.997,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 10137,
+      "history_commits_analyzed_H400": 399,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "000139ebaadff674146624462d656f6bfafde363",
+      "clean_after": true,
+      "seconds_total": 523.49
+    }
+  ],
+  "finished_utc": "2026-10-23T07:53:42.393Z"
+}

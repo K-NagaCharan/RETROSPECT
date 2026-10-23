@@ -1,0 +1,20 @@
+{
+  "repository": "vue",
+  "language": "typescript",
+  "pin": "08f5abf9bc89594f94ac22882bcbc2ed55b1c9df",
+  "window": 1500,
+  "commits": 1485,
+  "mergesSkipped": 15,
+  "commitsWithChanges": 820,
+  "events": {
+    "signature_change": 142,
+    "extraction": 11,
+    "inlining": 5,
+    "deletion_no_successor": 16,
+    "ambiguous_pairing": 6,
+    "move": 5,
+    "rename": 10,
+    "scope_change": 2
+  },
+  "parseFailures": 0
+}

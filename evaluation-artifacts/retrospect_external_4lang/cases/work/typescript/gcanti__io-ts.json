@@ -1,0 +1,76 @@
+{
+ "repository": "gcanti/io-ts",
+ "url": "https://github.com/gcanti/io-ts.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 5,
+  "passed_extractor_check": 4,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "710077ce5fba06d0af1d36c5fdba162080fcf947",
+   "old": "instanceOf",
+   "new": "dictionary",
+   "source": "S3",
+   "reason": "body similarity 0.071 < 0.5"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "710077ce5fba06d0af1d36c5fdba162080fcf947",
+  "parent": "64355a6cead653828c41d8732c9e57969f9bd542",
+  "old": "mapping",
+  "new": "dictionary",
+  "message": "Dictionary type + interface, dictionary combinators (#20)\n\n* fix wrong behaviour with respect to TypeScript's type system\r\n\r\n* avoid useless copy\r\n\r\n* Dictionary type + interface, dictionary combinators\r\n- **New Feature**\r\n  - add support for jsnext\r\n\r\n- **Breaking Changes**\r\n  - `t.Object` type. Renamed to `t.Dictionary`, now accepts arrays so is fully equivalent to `{ [key: string]: any }`.\r\n  - `t.instanceOf` combinator. Removed.\r\n  - `t.object` combinator. Renamed to `t.interface`. `ObjectTy",
+  "commit_url": "https://github.com/gcanti/io-ts/commit/710077ce5fba06d0af1d36c5fdba162080fcf947",
+  "similarity": 0.941,
+  "before": {
+   "name": "mapping",
+   "qualifiedName": "mapping",
+   "file": "src/index.ts",
+   "startLine": 309
+  },
+  "after": {
+   "name": "dictionary",
+   "qualifiedName": "dictionary",
+   "file": "src/index.ts",
+   "startLine": 297
+  },
+  "pin": "c3fa731bb1f51e5d016ef53a5d62b2fe88092611",
+  "first_containing": "710077ce5fba06d0af1d36c5fdba162080fcf947",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 76,
+   "window_size": 87,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 75,
+   "window_command": "git log --format=%H --topo-order -n 400 c3fa731bb1f51e5d016ef53a5d62b2fe88092611"
+  },
+  "target": {
+   "file": "src/index.ts",
+   "qualifiedName": "dictionary",
+   "name": "dictionary"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\gcanti__io-ts",
+  "seconds": 1.835,
+  "bytes": 4489580,
+  "default_branch": "master",
+  "head": "864a3a2f03c5d7b974afeb1da0faf46c21758779"
+ },
+ "seconds": 11.036
+}

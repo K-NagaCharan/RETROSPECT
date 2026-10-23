@@ -1,0 +1,40 @@
+{
+ "repository": "crate/crate",
+ "url": "https://github.com/crate/crate.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 2,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "563d281b61e9f8748858e911eaa810e981f1e953",
+   "old": "validateNoUnsupportedFields",
+   "new": "rewriteAndValidateFields",
+   "source": "S1",
+   "reason": "commit not in default-branch clone"
+  },
+  {
+   "commit": "563d281b61e9f8748858e911eaa810e981f1e953",
+   "old": "testSelectById",
+   "new": "testSelectByIdWithCustomRouting",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\crate__crate",
+  "seconds": 50.195,
+  "bytes": 218181186,
+  "default_branch": "master",
+  "head": "33429e62454d0b87638f023051b2848c64257207"
+ },
+ "seconds": 50.326
+}

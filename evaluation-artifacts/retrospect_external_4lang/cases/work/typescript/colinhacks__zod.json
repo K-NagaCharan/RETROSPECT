@@ -1,0 +1,13 @@
+{
+ "repository": "colinhacks/zod",
+ "url": "https://github.com/colinhacks/zod.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:zod)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

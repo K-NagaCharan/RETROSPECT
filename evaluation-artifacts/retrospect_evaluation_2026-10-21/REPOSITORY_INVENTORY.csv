@@ -1,0 +1,32 @@
+repository,local_path,remote_url,primary_language,prod_files_java,prod_files_python,prod_files_javascript,prod_files_typescript,license,head,branch,shallow,commits,tags,first_commit_date,last_commit_date,dev_usage,held_out_eligible
+axios,D:/clones/axios,https://github.com/axios/axios.git,javascript,0,0,80,1,MIT,8d8e84401d38c2a9c62acd18b3df17478a0caf6b,v1.x,False,2238,147,2014-08-18,2026-10-19,,True
+black,D:/clones/black,https://github.com/psf/black.git,python,0,49,0,0,MIT,56a7ee682ada03e086f62d66ac01b752fbda21db,main,False,2401,75,2018-03-14,2026-10-18,,True
+checkstyle,D:/clones/checkstyle,https://github.com/checkstyle/checkstyle.git,java,2592,0,8,0,LGPL,7092d5fe55832a2eb554604266b63f9824207407,master,False,18037,225,2001-06-22,2026-10-15,Category B (E1/E3),False
+datastax-java-driver,D:/clones/datastax-java-driver,https://github.com/datastax/java-driver.git,java,1196,0,0,0,Apache-2.0,c2043c577fd9a61ca196f08ac45d568f1d00e8b5,trunk,False,1959,181,2017-03-29,2026-09-16,Category B (E1/E3),False
+fastapi,D:/clones/fastapi,https://github.com/tiangolo/fastapi.git,python,0,511,1,0,MIT,3070b5105fe02c4afdba5e3aea6c2cf2e3796c7f,master,False,7849,319,2018-12-05,2026-10-18,,True
+graphhopper,D:/clones/graphhopper,https://github.com/graphhopper/graphhopper.git,java,683,1,20,0,Apache-2.0,df9327858e17158cb2dcf1304644100a18273fd6,master,False,7107,171,2012-04-03,2026-10-18,Category B (E1/E3),False
+guava,D:/clones/guava,https://github.com/google/guava.git,java,1279,0,2,0,Apache-2.0,669a232b4e20ae6e8bc6efc62caaf2f830d56327,master,False,7559,124,2009-06-18,2026-10-18,structural control in census (2 cases),False
+httpx,D:/clones/httpx,https://github.com/encode/httpx.git,python,0,23,0,0,BSD,b5addb64f0161ff6bfe94c124ef76f6a1fba5254,master,False,1523,88,2019-04-04,2026-02-23,,True
+jest,D:/clones/jest,https://github.com/facebook/jest.git,typescript,0,0,415,429,MIT,61050e9323e742539dc2360236671110e37329e6,main,False,7786,325,2014-05-14,2026-10-02,,True
+jfinal,D:/clones/jfinal,https://github.com/jfinal/jfinal.git,java,448,0,0,0,Apache-2.0,0e0af1599b93ac3c6b2f14a318a647372da52924,master,False,1794,79,2013-11-03,2026-09-18,,True
+koa,D:/clones/koa,https://github.com/koajs/koa.git,javascript,0,0,9,0,MIT,2fecd029c6ce6b79d65158d28a76538f7f6b0378,master,False,1312,125,2013-08-17,2026-10-09,,True
+lodash,D:/clones/lodash,https://github.com/lodash/lodash.git,javascript,0,0,21,0,MIT,2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8,main,False,7710,440,2009-10-25,2026-09-11,,True
+marshmallow,D:/clones/marshmallow,https://github.com/marshmallow-code/marshmallow.git,python,0,15,0,0,MIT,d08471b17880c62b789971ada638707a11d3f8d4,dev,False,3751,201,2013-11-08,2026-10-05,,True
+mocha,D:/clones/mocha,https://github.com/mochajs/mocha.git,javascript,0,0,71,0,MIT,cb21a4eba550da665fb2c3fa1ce021777a191e23,main,False,4226,260,2011-08-28,2026-10-17,,True
+moment,D:/clones/moment,https://github.com/moment/moment.git,javascript,0,0,404,3,MIT,c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4,develop,False,4132,90,2011-02-28,2026-10-08,,True
+pytest,D:/clones/pytest,https://github.com/pytest-dev/pytest.git,python,0,82,0,0,MIT,420cf37a3fc8c03c9a4769c2635a03773d27be10,main,False,17826,224,2007-01-24,2026-10-17,,True
+quasar,D:/clones/quasar,https://github.com/puniverse/quasar.git,java,452,0,0,0,EPL,db0ac29f55bc0515023d67ab86a2178c5e6eeb94,master,False,2494,20,2013-03-27,2018-11-03,,True
+requests,D:/clones/requests,https://github.com/psf/requests.git,python,0,20,0,0,Apache-2.0,611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60,main,False,6495,162,2011-02-13,2026-09-21,structural control in census (1 case),False
+robovm,D:/clones/robovm,https://github.com/robovm/robovm.git,java,7297,0,0,0,not found,ef091902377c00dc0fb2db87e8d79c8afb5e9010,master,False,2823,31,2010-08-01,2015-11-01,,True
+rxjs,D:/clones/rxjs,https://github.com/ReactiveX/rxjs.git,typescript,0,0,86,250,Apache-2.0,54796b38a57e6309f9861e174737479bb3f63f61,master,False,5976,178,2015-03-14,2026-08-05,,True
+sonarqube,D:/clones/sonarqube,https://github.com/sonarsource/sonarqube.git,java,5606,0,0,0,LGPL,e3b4618c6a748dbc5f2b9659cb039d34726bb8bf,master,False,40181,267,2010-09-06,2026-10-16,,True
+spring-boot,D:/clones/spring-boot,https://github.com/spring-projects/spring-boot.git,java,4379,0,3,0,Apache-2.0,57a1ca37c36f3cf355211aa8dea8c500b2dd3a09,main,False,63361,395,2012-10-21,2026-10-18,,True
+svelte,D:/clones/svelte,https://github.com/sveltejs/svelte.git,javascript,0,0,386,1,MIT,40bb08482f4857d91221638dec544a532bc35389,main,False,11446,1034,2016-11-15,2026-10-15,,True
+typeorm,D:/clones/typeorm,https://github.com/typeorm/typeorm.git,typescript,0,0,7,566,MIT,fe92394287516feeada6e9c308ebe22deca2458e,master,False,6086,114,2016-02-21,2026-10-11,,True
+undertow,D:/clones/undertow,https://github.com/undertow-io/undertow.git,java,859,0,0,0,Apache-2.0,77dc917cea6f40468ea481e1bafa7e15657eb887,main,False,6295,353,2012-07-18,2026-10-08,Category B (E1/E3),False
+vue,D:/clones/vue,https://github.com/vuejs/core.git,typescript,0,0,25,274,MIT,08f5abf9bc89594f94ac22882bcbc2ed55b1c9df,main,False,7231,305,2018-09-19,2026-10-19,,True
+zod,D:/clones/zod,https://github.com/colinhacks/zod.git,typescript,0,0,4,162,MIT,680d19f7d1e042e55934209caeb79bc843b94f44,main,False,3247,219,2020-03-07,2026-10-13,Phase B dev + TypeScript diagnosis,False
+fastify,D:/base papers considered/phase_d_eval_repos/fastify,https://github.com/fastify/fastify.git,javascript,0,0,34,0,MIT,f736849a10a9b2ca57fb09437feb8294cda76234,main,False,4902,335,2016-09-28,2026-10-14,,True
+flask,D:/base papers considered/phase_d_eval_repos/flask,https://github.com/pallets/flask.git,python,0,24,0,0,BSD,d086db856be187255b8ec61ef409357393020f32,main,False,5562,69,2010-04-06,2026-10-07,,True
+dit,D:/base papers considered/laya testing/data/repos/dit,https://github.com/dit/dit.git,python,0,263,1,0,BSD,23fcb940c7bcdd9b7ddf426a4b423da8e6b76361,main,False,2107,32,2013-01-10,2026-10-07,,True
+redux,D:/base papers considered/laya testing/data/repos/redux,https://github.com/reduxjs/redux.git,typescript,0,0,5,39,MIT,56abca4749921d68f40cda20afd2043af9751f72,master,False,4304,72,2015-05-30,2026-09-29,,True

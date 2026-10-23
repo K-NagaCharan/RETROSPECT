@@ -1,0 +1,338 @@
+{
+  "rules": {
+    "strong_similarity": 0.8,
+    "margin": 0.1,
+    "continuity": 0.5,
+    "containment": 0.6
+  },
+  "by_language_repo_label": {
+    "java": {
+      "guava": {
+        "unresolved_deletion": 69,
+        "ambiguous": 96,
+        "strict_rename": 7,
+        "move": 8,
+        "excluded": 2,
+        "inlining": 4,
+        "no_valid_lineage": 28,
+        "extraction": 16,
+        "signature_change": 27,
+        "split": 3,
+        "rewrite_same_name": 6
+      },
+      "jfinal": {
+        "signature_change": 52,
+        "rewrite_same_name": 5,
+        "unresolved_deletion": 53,
+        "no_valid_lineage": 12,
+        "move": 25,
+        "strict_rename": 9,
+        "ambiguous": 11,
+        "extraction": 17
+      },
+      "quasar": {
+        "unresolved_deletion": 630,
+        "signature_change": 111,
+        "ambiguous": 57,
+        "move": 147,
+        "no_valid_lineage": 113,
+        "strict_rename": 25,
+        "rewrite_same_name": 22,
+        "inlining": 13,
+        "excluded": 34,
+        "extraction": 35,
+        "rename_signature_change": 6,
+        "split": 7,
+        "rename_move": 1
+      },
+      "sonarqube": {
+        "excluded": 384,
+        "rewrite_same_name": 35,
+        "signature_change": 87,
+        "strict_rename": 12,
+        "extraction": 24,
+        "unresolved_deletion": 552,
+        "no_valid_lineage": 600,
+        "move": 22,
+        "ambiguous": 36,
+        "rename_signature_change": 2,
+        "split": 25,
+        "rename_move": 1
+      },
+      "spring-boot": {
+        "no_valid_lineage": 13,
+        "strict_rename": 1,
+        "extraction": 10,
+        "ambiguous": 8,
+        "rewrite_same_name": 2,
+        "unresolved_deletion": 23,
+        "inlining": 2,
+        "signature_change": 29,
+        "excluded": 52,
+        "move": 9,
+        "rename_signature_change": 1
+      }
+    },
+    "python": {
+      "black": {
+        "extraction": 15,
+        "signature_change": 353,
+        "rewrite_same_name": 15,
+        "unresolved_deletion": 24,
+        "no_valid_lineage": 34,
+        "excluded": 25,
+        "ambiguous": 15,
+        "strict_rename": 4,
+        "move": 136,
+        "rename_signature_change": 1,
+        "rename_move": 9
+      },
+      "dit": {
+        "unresolved_deletion": 205,
+        "move": 128,
+        "no_valid_lineage": 49,
+        "signature_change": 331,
+        "extraction": 10,
+        "rewrite_same_name": 32,
+        "ambiguous": 97,
+        "rename_move": 5,
+        "split": 162,
+        "strict_rename": 15,
+        "excluded": 1
+      },
+      "fastapi": {
+        "signature_change": 291,
+        "rename_signature_change": 2,
+        "no_valid_lineage": 16,
+        "extraction": 2,
+        "excluded": 437,
+        "strict_rename": 1,
+        "unresolved_deletion": 31,
+        "rewrite_same_name": 1,
+        "ambiguous": 1,
+        "move": 1
+      },
+      "flask": {
+        "extraction": 6,
+        "signature_change": 461,
+        "unresolved_deletion": 54,
+        "ambiguous": 9,
+        "rewrite_same_name": 18,
+        "no_valid_lineage": 25,
+        "move": 64,
+        "inlining": 2
+      },
+      "httpx": {
+        "signature_change": 1289,
+        "rewrite_same_name": 53,
+        "rename_move": 12,
+        "unresolved_deletion": 169,
+        "ambiguous": 82,
+        "no_valid_lineage": 105,
+        "extraction": 15,
+        "inlining": 2,
+        "move": 224,
+        "strict_rename": 33,
+        "rename_signature_change": 6,
+        "split": 9
+      },
+      "marshmallow": {
+        "signature_change": 484,
+        "no_valid_lineage": 23,
+        "rewrite_same_name": 16,
+        "unresolved_deletion": 30,
+        "move": 38,
+        "ambiguous": 7,
+        "inlining": 1,
+        "extraction": 1
+      },
+      "pytest": {
+        "signature_change": 143,
+        "unresolved_deletion": 21,
+        "strict_rename": 4,
+        "extraction": 8,
+        "rewrite_same_name": 9,
+        "no_valid_lineage": 11,
+        "ambiguous": 10,
+        "move": 30,
+        "excluded": 3
+      },
+      "requests": {
+        "signature_change": 142,
+        "rewrite_same_name": 3,
+        "no_valid_lineage": 2,
+        "unresolved_deletion": 2
+      }
+    },
+    "javascript": {
+      "axios": {
+        "move": 28,
+        "signature_change": 38,
+        "ambiguous": 8,
+        "unresolved_deletion": 29,
+        "extraction": 4,
+        "no_valid_lineage": 4,
+        "rewrite_same_name": 14,
+        "excluded": 38,
+        "rename_move": 1,
+        "strict_rename": 1
+      },
+      "fastify": {
+        "signature_change": 18,
+        "unresolved_deletion": 6,
+        "no_valid_lineage": 15,
+        "rewrite_same_name": 2,
+        "extraction": 6,
+        "strict_rename": 2,
+        "move": 3,
+        "ambiguous": 7
+      },
+      "koa": {
+        "signature_change": 2,
+        "rewrite_same_name": 4,
+        "extraction": 9,
+        "ambiguous": 6,
+        "unresolved_deletion": 6,
+        "no_valid_lineage": 4,
+        "move": 2
+      },
+      "lodash": {
+        "excluded": 661,
+        "signature_change": 8,
+        "ambiguous": 3,
+        "rewrite_same_name": 1,
+        "extraction": 6,
+        "unresolved_deletion": 4,
+        "strict_rename": 1,
+        "move": 5,
+        "no_valid_lineage": 2
+      },
+      "mocha": {
+        "ambiguous": 56,
+        "move": 33,
+        "extraction": 5,
+        "signature_change": 84,
+        "no_valid_lineage": 29,
+        "unresolved_deletion": 54,
+        "strict_rename": 5,
+        "rewrite_same_name": 11,
+        "excluded": 3,
+        "split": 3,
+        "rename_signature_change": 1,
+        "rename_move": 3
+      },
+      "moment": {
+        "excluded": 4107,
+        "ambiguous": 1,
+        "rewrite_same_name": 18,
+        "signature_change": 8,
+        "extraction": 2,
+        "unresolved_deletion": 9,
+        "no_valid_lineage": 6,
+        "rename_signature_change": 1,
+        "move": 1
+      },
+      "svelte": {
+        "signature_change": 164,
+        "no_valid_lineage": 39,
+        "move": 53,
+        "extraction": 24,
+        "rewrite_same_name": 31,
+        "unresolved_deletion": 65,
+        "excluded": 37,
+        "ambiguous": 26,
+        "strict_rename": 6,
+        "inlining": 5,
+        "rename_move": 1,
+        "rename_signature_change": 1,
+        "split": 2
+      }
+    },
+    "typescript": {
+      "jest": {
+        "signature_change": 185,
+        "no_valid_lineage": 28,
+        "move": 43,
+        "rename_move": 14,
+        "rewrite_same_name": 22,
+        "extraction": 34,
+        "unresolved_deletion": 49,
+        "strict_rename": 5,
+        "ambiguous": 41,
+        "rename_signature_change": 10,
+        "inlining": 1
+      },
+      "redux": {
+        "rewrite_same_name": 1,
+        "unresolved_deletion": 2,
+        "no_valid_lineage": 2,
+        "extraction": 1,
+        "ambiguous": 1,
+        "signature_change": 23,
+        "move": 2,
+        "inlining": 1
+      },
+      "rxjs": {
+        "signature_change": 119,
+        "no_valid_lineage": 132,
+        "rewrite_same_name": 26,
+        "ambiguous": 6,
+        "unresolved_deletion": 243,
+        "split": 2,
+        "excluded": 15,
+        "move": 37,
+        "extraction": 1,
+        "inlining": 2
+      },
+      "typeorm": {
+        "signature_change": 291,
+        "extraction": 13,
+        "no_valid_lineage": 30,
+        "unresolved_deletion": 58,
+        "rename_signature_change": 1,
+        "move": 3,
+        "ambiguous": 2,
+        "rewrite_same_name": 6,
+        "strict_rename": 2
+      },
+      "vue": {
+        "signature_change": 134,
+        "rewrite_same_name": 8,
+        "extraction": 11,
+        "inlining": 5,
+        "unresolved_deletion": 10,
+        "no_valid_lineage": 6,
+        "ambiguous": 8,
+        "move": 7,
+        "strict_rename": 8
+      },
+      "zod": {
+        "no_valid_lineage": 13,
+        "signature_change": 71,
+        "rewrite_same_name": 10,
+        "unresolved_deletion": 145,
+        "excluded": 7,
+        "move": 16,
+        "extraction": 3,
+        "ambiguous": 62,
+        "rename_signature_change": 1,
+        "strict_rename": 1,
+        "split": 6
+      }
+    }
+  },
+  "verified_events": 11678,
+  "excluded_candidates": 5806,
+  "clusters_by_language": {
+    "java": 426,
+    "python": 873,
+    "javascript": 384,
+    "typescript": 542
+  },
+  "exclusion_reasons": {
+    "before_symbol_not_at_recorded_line": 120,
+    "after_symbol_not_at_recorded_line": 81,
+    "duplicate_of": 41,
+    "non_production_path": 5677
+  }
+}

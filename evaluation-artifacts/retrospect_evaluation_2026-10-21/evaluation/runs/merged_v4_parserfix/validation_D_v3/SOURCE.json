@@ -1,0 +1,9 @@
+{
+  "v3_run": "validation_D_v3",
+  "v3_rows_kept": 149,
+  "replaced_repositories": [
+    "moment"
+  ],
+  "v4_run": "validation_D_v3_v4_parserfix",
+  "total_rows": 151
+}

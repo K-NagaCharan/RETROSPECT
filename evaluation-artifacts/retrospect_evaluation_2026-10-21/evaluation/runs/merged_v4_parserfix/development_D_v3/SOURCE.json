@@ -1,0 +1,11 @@
+{
+  "v3_run": "development_D_v3",
+  "v3_rows_kept": 67,
+  "replaced_repositories": [
+    "guava",
+    "typeorm",
+    "zod"
+  ],
+  "v4_run": "development_D_v3_v4_parserfix",
+  "total_rows": 93
+}

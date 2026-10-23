@@ -1,0 +1,116 @@
+{
+  "started_utc": "2026-10-23T09:46:34.970Z",
+  "horizons": [
+    50
+  ],
+  "match": "worker",
+  "cases_file": "D:/base papers considered/Test creation/retrospect_evaluation_2026-10-21/evaluation/harness_equivalence/phase_b_cases.jsonl",
+  "case_count": 34,
+  "snapshots": [
+    {
+      "repository": "bottle",
+      "path": "D:/clones_eval_2026-10-22/phaseb_bottle",
+      "pin": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "head_before": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "clean_before": true,
+      "cases": 8,
+      "symbols": 1044,
+      "index_seconds": 0.281,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 14.391,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 267,
+      "history_commits_analyzed_H50": 48,
+      "parser_healthy_after_history_H50": true,
+      "head_after": "8ec5fe29420d14998c0d86885083983eaea8b839",
+      "clean_after": true,
+      "seconds_total": 17.155
+    },
+    {
+      "repository": "express",
+      "path": "D:/clones_eval_2026-10-22/phaseb_express",
+      "pin": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "head_before": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "clean_before": true,
+      "cases": 10,
+      "symbols": 3101,
+      "index_seconds": 7.091,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 6.685,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 9,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "head_after": "a419aa7350389a275ab45fde2e849ed1f02449ef",
+      "clean_after": true,
+      "seconds_total": 17.268
+    },
+    {
+      "repository": "zod",
+      "path": "D:/clones_eval_2026-10-22/phaseb_zod",
+      "pin": "284243fb0d6532665afdc9239188773bb624f73c",
+      "head_before": "284243fb0d6532665afdc9239188773bb624f73c",
+      "clean_before": true,
+      "cases": 8,
+      "symbols": 3675,
+      "index_seconds": 5.038,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 42.495,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 434,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "head_after": "284243fb0d6532665afdc9239188773bb624f73c",
+      "clean_after": true,
+      "seconds_total": 50.69
+    },
+    {
+      "repository": "gson",
+      "path": "D:/clones_eval_2026-10-22/phaseb_gson",
+      "pin": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "head_before": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "clean_before": true,
+      "cases": 8,
+      "symbols": 4239,
+      "index_seconds": 1.131,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 16.428,
+      "history_extraction_failures_H50": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H50": 503,
+      "history_commits_analyzed_H50": 49,
+      "parser_healthy_after_history_H50": true,
+      "head_after": "845664ba1c307e6c1910d07cfed2f622e0ad8df1",
+      "clean_after": true,
+      "seconds_total": 20.597
+    }
+  ],
+  "finished_utc": "2026-10-23T09:48:20.946Z"
+}

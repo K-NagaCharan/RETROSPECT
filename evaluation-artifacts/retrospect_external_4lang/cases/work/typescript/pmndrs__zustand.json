@@ -1,0 +1,61 @@
+{
+ "repository": "pmndrs/zustand",
+ "url": "https://github.com/pmndrs/zustand.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 5,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "99cddcf76f382010f6a88e529d3b6ce53e3eaf2c",
+   "old": "devtools",
+   "new": "createStoreImpl",
+   "source": "S3",
+   "reason": "body similarity 0.094 < 0.5"
+  },
+  {
+   "commit": "99cddcf76f382010f6a88e529d3b6ce53e3eaf2c",
+   "old": "persist",
+   "new": "createStoreImpl",
+   "source": "S3",
+   "reason": "body similarity 0.059 < 0.5"
+  },
+  {
+   "commit": "99cddcf76f382010f6a88e529d3b6ce53e3eaf2c",
+   "old": "redux",
+   "new": "createStoreImpl",
+   "source": "S3",
+   "reason": "body similarity 0.059 < 0.5"
+  },
+  {
+   "commit": "99cddcf76f382010f6a88e529d3b6ce53e3eaf2c",
+   "old": "create",
+   "new": "createStoreImpl",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "99cddcf76f382010f6a88e529d3b6ce53e3eaf2c",
+   "old": "immer",
+   "new": "createStoreImpl",
+   "source": "S3",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\pmndrs__zustand",
+  "seconds": 3.43,
+  "bytes": 10683317,
+  "default_branch": "main",
+  "head": "382d29c485e67018c06e75ec7235130d0968522c"
+ },
+ "seconds": 13.529
+}

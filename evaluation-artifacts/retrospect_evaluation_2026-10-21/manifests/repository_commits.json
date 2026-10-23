@@ -1,0 +1,184 @@
+{
+  "axios": {
+    "path": "D:/clones/axios",
+    "remote": "https://github.com/axios/axios.git",
+    "pin": "8d8e84401d38c2a9c62acd18b3df17478a0caf6b",
+    "current_head": "8d8e84401d38c2a9c62acd18b3df17478a0caf6b",
+    "license": "MIT"
+  },
+  "black": {
+    "path": "D:/clones/black",
+    "remote": "https://github.com/psf/black.git",
+    "pin": "56a7ee682ada03e086f62d66ac01b752fbda21db",
+    "current_head": "56a7ee682ada03e086f62d66ac01b752fbda21db",
+    "license": "MIT"
+  },
+  "dit": {
+    "path": "D:/base papers considered/laya testing/data/repos/dit",
+    "remote": "https://github.com/dit/dit.git",
+    "pin": "23fcb940c7bcdd9b7ddf426a4b423da8e6b76361",
+    "current_head": "23fcb940c7bcdd9b7ddf426a4b423da8e6b76361",
+    "license": "BSD"
+  },
+  "fastapi": {
+    "path": "D:/clones/fastapi",
+    "remote": "https://github.com/tiangolo/fastapi.git",
+    "pin": "3070b5105fe02c4afdba5e3aea6c2cf2e3796c7f",
+    "current_head": "3070b5105fe02c4afdba5e3aea6c2cf2e3796c7f",
+    "license": "MIT"
+  },
+  "fastify": {
+    "path": "D:/base papers considered/phase_d_eval_repos/fastify",
+    "remote": "https://github.com/fastify/fastify.git",
+    "pin": "f736849a10a9b2ca57fb09437feb8294cda76234",
+    "current_head": "f736849a10a9b2ca57fb09437feb8294cda76234",
+    "license": "MIT"
+  },
+  "flask": {
+    "path": "D:/base papers considered/phase_d_eval_repos/flask",
+    "remote": "https://github.com/pallets/flask.git",
+    "pin": "d086db856be187255b8ec61ef409357393020f32",
+    "current_head": "d086db856be187255b8ec61ef409357393020f32",
+    "license": "BSD"
+  },
+  "guava": {
+    "path": "D:/clones/guava",
+    "remote": "https://github.com/google/guava.git",
+    "pin": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+    "current_head": "669a232b4e20ae6e8bc6efc62caaf2f830d56327",
+    "license": "Apache-2.0"
+  },
+  "httpx": {
+    "path": "D:/clones/httpx",
+    "remote": "https://github.com/encode/httpx.git",
+    "pin": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+    "current_head": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+    "license": "BSD"
+  },
+  "jest": {
+    "path": "D:/clones/jest",
+    "remote": "https://github.com/facebook/jest.git",
+    "pin": "61050e9323e742539dc2360236671110e37329e6",
+    "current_head": "61050e9323e742539dc2360236671110e37329e6",
+    "license": "MIT"
+  },
+  "jfinal": {
+    "path": "D:/clones/jfinal",
+    "remote": "https://github.com/jfinal/jfinal.git",
+    "pin": "0e0af1599b93ac3c6b2f14a318a647372da52924",
+    "current_head": "0e0af1599b93ac3c6b2f14a318a647372da52924",
+    "license": "Apache-2.0"
+  },
+  "koa": {
+    "path": "D:/clones/koa",
+    "remote": "https://github.com/koajs/koa.git",
+    "pin": "2fecd029c6ce6b79d65158d28a76538f7f6b0378",
+    "current_head": "2fecd029c6ce6b79d65158d28a76538f7f6b0378",
+    "license": "MIT"
+  },
+  "lodash": {
+    "path": "D:/clones/lodash",
+    "remote": "https://github.com/lodash/lodash.git",
+    "pin": "2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8",
+    "current_head": "2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8",
+    "license": "MIT"
+  },
+  "marshmallow": {
+    "path": "D:/clones/marshmallow",
+    "remote": "https://github.com/marshmallow-code/marshmallow.git",
+    "pin": "d08471b17880c62b789971ada638707a11d3f8d4",
+    "current_head": "d08471b17880c62b789971ada638707a11d3f8d4",
+    "license": "MIT"
+  },
+  "mocha": {
+    "path": "D:/clones/mocha",
+    "remote": "https://github.com/mochajs/mocha.git",
+    "pin": "cb21a4eba550da665fb2c3fa1ce021777a191e23",
+    "current_head": "cb21a4eba550da665fb2c3fa1ce021777a191e23",
+    "license": "MIT"
+  },
+  "moment": {
+    "path": "D:/clones/moment",
+    "remote": "https://github.com/moment/moment.git",
+    "pin": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+    "current_head": "c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4",
+    "license": "MIT"
+  },
+  "pytest": {
+    "path": "D:/clones/pytest",
+    "remote": "https://github.com/pytest-dev/pytest.git",
+    "pin": "420cf37a3fc8c03c9a4769c2635a03773d27be10",
+    "current_head": "420cf37a3fc8c03c9a4769c2635a03773d27be10",
+    "license": "MIT"
+  },
+  "quasar": {
+    "path": "D:/clones/quasar",
+    "remote": "https://github.com/puniverse/quasar.git",
+    "pin": "db0ac29f55bc0515023d67ab86a2178c5e6eeb94",
+    "current_head": "db0ac29f55bc0515023d67ab86a2178c5e6eeb94",
+    "license": "EPL"
+  },
+  "redux": {
+    "path": "D:/base papers considered/laya testing/data/repos/redux",
+    "remote": "https://github.com/reduxjs/redux.git",
+    "pin": "56abca4749921d68f40cda20afd2043af9751f72",
+    "current_head": "56abca4749921d68f40cda20afd2043af9751f72",
+    "license": "MIT"
+  },
+  "requests": {
+    "path": "D:/clones/requests",
+    "remote": "https://github.com/psf/requests.git",
+    "pin": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+    "current_head": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+    "license": "Apache-2.0"
+  },
+  "rxjs": {
+    "path": "D:/clones/rxjs",
+    "remote": "https://github.com/ReactiveX/rxjs.git",
+    "pin": "54796b38a57e6309f9861e174737479bb3f63f61",
+    "current_head": "54796b38a57e6309f9861e174737479bb3f63f61",
+    "license": "Apache-2.0"
+  },
+  "sonarqube": {
+    "path": "D:/clones/sonarqube",
+    "remote": "https://github.com/sonarsource/sonarqube.git",
+    "pin": "e3b4618c6a748dbc5f2b9659cb039d34726bb8bf",
+    "current_head": "e3b4618c6a748dbc5f2b9659cb039d34726bb8bf",
+    "license": "LGPL"
+  },
+  "spring-boot": {
+    "path": "D:/clones/spring-boot",
+    "remote": "https://github.com/spring-projects/spring-boot.git",
+    "pin": "57a1ca37c36f3cf355211aa8dea8c500b2dd3a09",
+    "current_head": "57a1ca37c36f3cf355211aa8dea8c500b2dd3a09",
+    "license": "Apache-2.0"
+  },
+  "svelte": {
+    "path": "D:/clones/svelte",
+    "remote": "https://github.com/sveltejs/svelte.git",
+    "pin": "40bb08482f4857d91221638dec544a532bc35389",
+    "current_head": "40bb08482f4857d91221638dec544a532bc35389",
+    "license": "MIT"
+  },
+  "typeorm": {
+    "path": "D:/clones/typeorm",
+    "remote": "https://github.com/typeorm/typeorm.git",
+    "pin": "fe92394287516feeada6e9c308ebe22deca2458e",
+    "current_head": "fe92394287516feeada6e9c308ebe22deca2458e",
+    "license": "MIT"
+  },
+  "vue": {
+    "path": "D:/clones/vue",
+    "remote": "https://github.com/vuejs/core.git",
+    "pin": "08f5abf9bc89594f94ac22882bcbc2ed55b1c9df",
+    "current_head": "08f5abf9bc89594f94ac22882bcbc2ed55b1c9df",
+    "license": "MIT"
+  },
+  "zod": {
+    "path": "D:/clones/zod",
+    "remote": "https://github.com/colinhacks/zod.git",
+    "pin": "680d19f7d1e042e55934209caeb79bc843b94f44",
+    "current_head": "680d19f7d1e042e55934209caeb79bc843b94f44",
+    "license": "MIT"
+  }
+}

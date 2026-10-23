@@ -1,0 +1,22 @@
+2026-10-21T18:26:08Z start koa D:/clones/koa window=1500
+{"repository":"koa","language":"javascript","pin":"2fecd029c6ce6b79d65158d28a76538f7f6b0378","window":1500,"commits":1147,"mergesSkipped":165,"commitsWithChanges":401,"events":{"signature_change":6,"extraction":9,"rename":4,"deletion_no_successor":10,"ambiguous_pairing":1,"move":2,"rename_move":1},"parseFailures":0}
+2026-10-21T18:29:31Z done koa in 203s
+2026-10-21T18:29:31Z start mocha D:/clones/mocha window=1500
+{"repository":"mocha","language":"javascript","pin":"cb21a4eba550da665fb2c3fa1ce021777a191e23","window":1500,"commits":1499,"mergesSkipped":1,"commitsWithChanges":504,"events":{"ambiguous_pairing":16,"move":10,"extraction":5,"signature_change":96,"deletion_no_successor":85,"rename":46,"scope_change":23,"split_part":3,"rename_move":3},"parseFailures":1}
+2026-10-21T18:37:52Z done mocha in 501s
+2026-10-21T18:37:52Z start axios D:/clones/axios window=1500
+{"repository":"axios","language":"javascript","pin":"8d8e84401d38c2a9c62acd18b3df17478a0caf6b","window":1500,"commits":1463,"mergesSkipped":37,"commitsWithChanges":647,"events":{"scope_change":19,"signature_change":59,"rename":4,"deletion_no_successor":59,"move":11,"extraction":4,"rename_move":1,"ambiguous_pairing":8},"parseFailures":1}
+2026-10-21T18:44:36Z done axios in 404s
+2026-10-21T18:44:36Z start lodash D:/clones/lodash window=1500
+{"repository":"lodash","language":"javascript","pin":"2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8","window":1500,"commits":1500,"mergesSkipped":0,"commitsWithChanges":878,"events":{"deletion_no_successor":667,"signature_change":9,"rename":3,"extraction":6,"move":1,"scope_change":4,"ambiguous_pairing":1},"parseFailures":696}
+2026-10-21T18:52:39Z done lodash in 483s
+2026-10-21T18:52:39Z start fastify D:/base papers considered/phase_d_eval_repos/fastify window=1500
+{"repository":"fastify","language":"javascript","pin":"f736849a10a9b2ca57fb09437feb8294cda76234","window":1500,"commits":1470,"mergesSkipped":30,"commitsWithChanges":435,"events":{"signature_change":20,"deletion_no_successor":21,"extraction":6,"rename":4,"scope_change":2,"move":1,"ambiguous_pairing":5},"parseFailures":0}
+2026-10-21T18:56:47Z done fastify in 248s
+2026-10-21T18:56:47Z start moment D:/clones/moment window=1500
+{"repository":"moment","language":"javascript","pin":"c2a703a4d84aa57ee2722ff8fb4a8016279fb3c4","window":1500,"commits":1163,"mergesSkipped":337,"commitsWithChanges":806,"events":{"ambiguous_pairing":648,"rename":558,"rename_move":15,"signature_change":597,"extraction":14,"deletion_no_successor":363,"inlining":13,"split_part":1944,"scope_change":1},"parseFailures":1534}
+2026-10-21T19:12:33Z FAILED moment
+2026-10-21T19:12:33Z start svelte D:/clones/svelte window=1500
+{"repository":"svelte","language":"javascript","pin":"40bb08482f4857d91221638dec544a532bc35389","window":1500,"commits":1498,"mergesSkipped":2,"commitsWithChanges":1201,"events":{"signature_change":202,"deletion_no_successor":111,"move":17,"extraction":29,"ambiguous_pairing":32,"scope_change":42,"rename":12,"inlining":5,"rename_move":2,"split_part":2},"parseFailures":0}
+2026-10-21T19:25:11Z done svelte in 758s
+2026-10-21T19:25:11Z batch complete

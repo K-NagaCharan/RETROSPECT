@@ -6,10 +6,10 @@ This index covers every Markdown and text document in four places:
 |---|---|---|
 | A | The Retrospect repository | Every Markdown and text document |
 | B | `D:\base papers considered\Test creation\` | Top-level files only |
-| C | `…\Test creation\retrospect_evaluation_2026-10-21\` | `README.md` and `PROGRESS_MANIFEST.md` |
-| D | `…\Test creation\retrospect_external_4lang\` | Its top-level documents |
+| C | `evaluation-artifacts/retrospect_evaluation_2026-10-21/` (verbatim copy of `…\Test creation\retrospect_evaluation_2026-10-21\`) | `README.md` and `PROGRESS_MANIFEST.md` |
+| D | `evaluation-artifacts/retrospect_external_4lang/` (verbatim copy of `…\Test creation\retrospect_external_4lang\`) | Its top-level documents |
 
-Paths in A are relative to the repository root. Paths in B–D are outside the repository and are given as plain text.
+Paths in A, C and D are relative to the repository root. C and D are published as verbatim copies under [evaluation-artifacts/](../evaluation-artifacts/), and their originals are unchanged. B is outside the repository, so its paths are given as plain text.
 
 **Classification:**
 - **LIVING:** describes the current system or state, and is kept up to date.
@@ -23,7 +23,8 @@ Paths in A are relative to the repository root. Paths in B–D are outside the r
 | [STRUCTURAL_RETRIEVAL.md](../STRUCTURAL_RETRIEVAL.md) | LIVING | Structural (B1) pipeline: discovery, index, scoring, API. Its §6 figures are from the original mini-benchmark (noted in the file) | — |
 | [docs/DOCS_INDEX.md](DOCS_INDEX.md) | LIVING | This index | — |
 | [DOC_AUDIT.md](../DOC_AUDIT.md) | LIVING | 2026-10-23 documentation audit: actions and number sources | — |
-| [LICENSE](../LICENSE) | LIVING | ISC license | — |
+| [LICENSE](../LICENSE) | LIVING | MIT license | — |
+| [evaluation-artifacts/README.md](../evaluation-artifacts/README.md) | LIVING | What the two published evaluation workspaces are, which files are authoritative, and the verbatim-copy note | — |
 | [docs/demo/ramda_transcript.txt](demo/ramda_transcript.txt) | LIVING | `rtro` demo transcript (ramda, benchmark pin) | — |
 | [docs/demo/pylint_transcript.txt](demo/pylint_transcript.txt) | LIVING | `rtro` demo transcript (pylint, benchmark pin) | — |
 | [docs/benchmark_schema_specification.md](benchmark_schema_specification.md) | HISTORICAL (2026-10-19 spec; one-line applicability note added) | Case schema for the Category-B evaluator (`BenchmarkCaseLoader.js`) | Case files of the 2026-10-21 benchmark and the external benchmark (see *Where results live*) |
@@ -70,33 +71,35 @@ Paths in A are relative to the repository root. Paths in B–D are outside the r
 | `Test creation\Report_dataset.md` | HISTORICAL (2026-10-19; banner added) | Dataset architecture dossier | Same two workspaces |
 | `Test creation\debug_out.txt` | HISTORICAL | Debug output | — |
 
-## C. `retrospect_evaluation_2026-10-21\` (main four-language benchmark)
+## C. [`evaluation-artifacts/retrospect_evaluation_2026-10-21/`](../evaluation-artifacts/retrospect_evaluation_2026-10-21/) (main four-language benchmark)
 
 | Path | Class | Purpose | Superseded by |
 |---|---|---|---|
-| `README.md` | LIVING (Status 2026-10-23 added) | Workspace entry point | — |
-| `PROGRESS_MANIFEST.md` | LIVING (v4 row added) | Steps and resume commands | — |
+| [README.md](../evaluation-artifacts/retrospect_evaluation_2026-10-21/README.md) | LIVING (Status 2026-10-23 added) | Workspace entry point | — |
+| [PROGRESS_MANIFEST.md](../evaluation-artifacts/retrospect_evaluation_2026-10-21/PROGRESS_MANIFEST.md) | LIVING (v4 row added) | Steps and resume commands | — |
 
-## D. `retrospect_external_4lang\` (external confirmation)
+## D. [`evaluation-artifacts/retrospect_external_4lang/`](../evaluation-artifacts/retrospect_external_4lang/) (external confirmation)
 
 | Path | Class | Purpose | Superseded by |
 |---|---|---|---|
-| `README.md` | LIVING (new) | Workspace entry point: layout, reproduction, authoritative files | — |
-| `STATUS.md` | LIVING (rewritten: COMPLETE) | Final status of Phases 0–5 | — |
-| `VERSION.md` | LIVING | Code version (`eval-v1`) and gates | — |
-| `protocol.md` | HISTORICAL (pre-registered; §9 deviations appended at the time) | Pre-registration | — |
-| `REPORT.md` | HISTORICAL (generated from `results.json`; sensitivity and post-hoc sections appended) | Results report | — |
-| `paper_tables.md` | HISTORICAL (generated) | Paper tables (Markdown + LaTeX) | — |
+| [README.md](../evaluation-artifacts/retrospect_external_4lang/README.md) | LIVING (new) | Workspace entry point: layout, reproduction, authoritative files | — |
+| [STATUS.md](../evaluation-artifacts/retrospect_external_4lang/STATUS.md) | LIVING (rewritten: COMPLETE) | Final status of Phases 0–5 | — |
+| [VERSION.md](../evaluation-artifacts/retrospect_external_4lang/VERSION.md) | LIVING | Code version (`eval-v1`) and gates | — |
+| [protocol.md](../evaluation-artifacts/retrospect_external_4lang/protocol.md) | HISTORICAL (pre-registered; §9 deviations appended at the time) | Pre-registration | — |
+| [REPORT.md](../evaluation-artifacts/retrospect_external_4lang/REPORT.md) | HISTORICAL (generated from `results.json`; sensitivity and post-hoc sections appended) | Results report | — |
+| [paper_tables.md](../evaluation-artifacts/retrospect_external_4lang/paper_tables.md) | HISTORICAL (generated) | Paper tables (Markdown + LaTeX) | — |
 
 ## Where results live
 
+Paths below are relative to the repository root. `EA/` stands for `evaluation-artifacts/`.
+
 | Experiment | Authoritative files | Notes |
 |---|---|---|
-| **E1** (Java rename case study, reproduction) | `research_execution_2026-10-21/E1_after_fix2/per_case_results.csv`, with the reference `research_corrected_2026-10-21/per_case_results_corrected.csv` | 116/116 ranks reproduced (`E1_after_fix2_comparison.txt`). Re-checked at `eval-v1`: `retrospect_external_4lang\phase0\e1_compare.txt` |
-| **E2** (Phase B, four languages) | `research_execution_2026-10-21/E2_after_fix2/per_case_results.csv` | Harness equivalence (G2, 136/136): `retrospect_external_4lang\phase0\g2_compare.txt` and `cli_verify\g2_compare.txt` |
-| **E3-Reach** (pre-registered, Java, H = 400) | `research_execution_2026-10-21/E3_reach_analysis/e3_reach_results.json` (original). Fixed code: `research_execution_2026-10-21/E3_reach_parserfix_analysis/e3_reach_results.json` | Comparison: `retrospect_evaluation_2026-10-21\reports\parserfix_remeasurement.md` (0 of 72 ranks changed) |
+| **E1** (Java rename case study, reproduction) | `research_execution_2026-10-21/E1_after_fix2/per_case_results.csv`, with the reference `research_corrected_2026-10-21/per_case_results_corrected.csv` | 116/116 ranks reproduced (`E1_after_fix2_comparison.txt`). Re-checked at `eval-v1`: `EA/retrospect_external_4lang/phase0/e1_compare.txt` |
+| **E2** (Phase B, four languages) | `research_execution_2026-10-21/E2_after_fix2/per_case_results.csv` | Harness equivalence (G2, 136/136): `EA/retrospect_external_4lang/phase0/g2_compare.txt` and `EA/retrospect_external_4lang/cli_verify/g2_compare.txt` |
+| **E3-Reach** (pre-registered, Java, H = 400) | `research_execution_2026-10-21/E3_reach_analysis/e3_reach_results.json` (original). Fixed code: `research_execution_2026-10-21/E3_reach_parserfix_analysis/e3_reach_results.json` | Comparison: [EA/retrospect_evaluation_2026-10-21/reports/parserfix_remeasurement.md](../evaluation-artifacts/retrospect_evaluation_2026-10-21/reports/parserfix_remeasurement.md) (0 of 72 ranks changed) |
 | **E-Lineage** | `research_execution_2026-10-21/E_lineage/e_lineage_results.json` | — |
-| **Main four-language benchmark, v3** (as run) | `retrospect_evaluation_2026-10-21\evaluation\analysis\BCA_v3\`, `…\D_v3\` (and `reports\final_results.md`) | Superseded for the snapshots that hit the parser abort |
-| **Main four-language benchmark, v4** (parser fix) — **authoritative** | `retrospect_evaluation_2026-10-21\evaluation\analysis\v4_parserfix\BCA\analysis_results.json`, `…\v4_parserfix\D\analysis_results.json` | Re-measurement report: `reports\parserfix_remeasurement.md`. Labels are machine-verified; the review queue is not done |
-| **External confirmation** (pre-registered) | `retrospect_external_4lang\analysis\external_v1\results.json`, `per_case.csv` | Report: `REPORT.md`. Pre-registration: `protocol.md` |
-| **Sensitivity and post-hoc rows** | `retrospect_external_4lang\analysis\external_v1_posthoc\results_posthoc.json` | Owner verdicts: `owner_review\review_sheet_owner.csv` (26/29 confirmed) |
+| **Main four-language benchmark, v3** (as run) | `EA/retrospect_evaluation_2026-10-21/evaluation/analysis/BCA_v3/`, `…/D_v3/` (and `reports/final_results.md`) | Superseded for the snapshots that hit the parser abort |
+| **Main four-language benchmark, v4** (parser fix): **authoritative** | `EA/retrospect_evaluation_2026-10-21/evaluation/analysis/v4_parserfix/BCA/analysis_results.json`, `…/v4_parserfix/D/analysis_results.json` | Re-measurement report: `reports/parserfix_remeasurement.md`. Labels are machine-verified; the review queue is not done |
+| **External confirmation** (pre-registered) | [EA/retrospect_external_4lang/analysis/external_v1/results.json](../evaluation-artifacts/retrospect_external_4lang/analysis/external_v1/results.json), `per_case.csv` | Report: `REPORT.md`. Pre-registration: `protocol.md` |
+| **Sensitivity and post-hoc rows** | [EA/retrospect_external_4lang/analysis/external_v1_posthoc/results_posthoc.json](../evaluation-artifacts/retrospect_external_4lang/analysis/external_v1_posthoc/results_posthoc.json) | Owner verdicts: `EA/retrospect_external_4lang/owner_review/review_sheet_owner.csv` (26/29 confirmed) |

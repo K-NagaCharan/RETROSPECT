@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T06:47:55.237Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\validation_BCA_v3\\snapshots\\vue.cases.jsonl",
+  "case_count": 1,
+  "snapshots": [
+    {
+      "repository": "vue",
+      "path": "D:/clones/vue",
+      "pin": "08f5abf9bc89594f94ac22882bcbc2ed55b1c9df",
+      "head_before": "08f5abf9bc89594f94ac22882bcbc2ed55b1c9df",
+      "clean_before": true,
+      "cases": 1,
+      "symbols": 4894,
+      "index_seconds": 4.586,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 21.145,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 140.024,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "08f5abf9bc89594f94ac22882bcbc2ed55b1c9df",
+      "clean_after": true,
+      "seconds_total": 166.885
+    }
+  ],
+  "finished_utc": "2026-10-22T06:50:42.193Z"
+}

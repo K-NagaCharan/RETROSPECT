@@ -1,0 +1,272 @@
+{
+  "seed": "retrospect-eval-2026-10-21",
+  "algorithm": "sha256(seed+cluster_id) % 100 -> <20 development, <35 validation, else held_out_test; development-only repositories forced to development",
+  "grouping_key": "cluster_id",
+  "cluster_leakage_check": "passed",
+  "splits": {
+    "development": {
+      "cases": 129,
+      "clusters": 73,
+      "by_language_task": {
+        "java/B_identifier": {
+          "cases": 5,
+          "clusters": 3
+        },
+        "java/D_negative": {
+          "cases": 20,
+          "clusters": 14
+        },
+        "javascript/A_current_doc": {
+          "cases": 1,
+          "clusters": 1
+        },
+        "javascript/B_identifier": {
+          "cases": 1,
+          "clusters": 1
+        },
+        "javascript/C_docstring": {
+          "cases": 1,
+          "clusters": 1
+        },
+        "javascript/D_negative": {
+          "cases": 7,
+          "clusters": 6
+        },
+        "python/A_current_doc": {
+          "cases": 7,
+          "clusters": 5
+        },
+        "python/B_identifier": {
+          "cases": 5,
+          "clusters": 3
+        },
+        "python/C_docstring": {
+          "cases": 6,
+          "clusters": 4
+        },
+        "python/D_negative": {
+          "cases": 42,
+          "clusters": 23
+        },
+        "typescript/A_current_doc": {
+          "cases": 1,
+          "clusters": 1
+        },
+        "typescript/B_identifier": {
+          "cases": 7,
+          "clusters": 5
+        },
+        "typescript/C_docstring": {
+          "cases": 2,
+          "clusters": 1
+        },
+        "typescript/D_negative": {
+          "cases": 24,
+          "clusters": 17
+        }
+      },
+      "by_label": {
+        "strict_rename": 25,
+        "no_valid_lineage": 93,
+        "rename_move": 9,
+        "rename_signature_change": 2
+      },
+      "repositories": {
+        "guava": 10,
+        "jfinal": 2,
+        "quasar": 6,
+        "sonarqube": 5,
+        "spring-boot": 2,
+        "black": 3,
+        "dit": 20,
+        "fastapi": 7,
+        "flask": 3,
+        "httpx": 17,
+        "marshmallow": 7,
+        "pytest": 1,
+        "requests": 2,
+        "axios": 4,
+        "koa": 1,
+        "svelte": 5,
+        "jest": 6,
+        "rxjs": 2,
+        "typeorm": 6,
+        "vue": 4,
+        "zod": 16
+      }
+    },
+    "held_out_test": {
+      "cases": 1069,
+      "clusters": 230,
+      "by_language_task": {
+        "java/A_current_doc": {
+          "cases": 2,
+          "clusters": 2
+        },
+        "java/B_identifier": {
+          "cases": 19,
+          "clusters": 18
+        },
+        "java/C_docstring": {
+          "cases": 2,
+          "clusters": 2
+        },
+        "java/D_negative": {
+          "cases": 567,
+          "clusters": 34
+        },
+        "javascript/A_current_doc": {
+          "cases": 5,
+          "clusters": 5
+        },
+        "javascript/B_identifier": {
+          "cases": 13,
+          "clusters": 13
+        },
+        "javascript/C_docstring": {
+          "cases": 6,
+          "clusters": 6
+        },
+        "javascript/D_negative": {
+          "cases": 61,
+          "clusters": 40
+        },
+        "python/A_current_doc": {
+          "cases": 36,
+          "clusters": 17
+        },
+        "python/B_identifier": {
+          "cases": 17,
+          "clusters": 13
+        },
+        "python/C_docstring": {
+          "cases": 36,
+          "clusters": 17
+        },
+        "python/D_negative": {
+          "cases": 155,
+          "clusters": 70
+        },
+        "typescript/A_current_doc": {
+          "cases": 5,
+          "clusters": 2
+        },
+        "typescript/B_identifier": {
+          "cases": 18,
+          "clusters": 7
+        },
+        "typescript/C_docstring": {
+          "cases": 7,
+          "clusters": 2
+        },
+        "typescript/D_negative": {
+          "cases": 120,
+          "clusters": 36
+        }
+      },
+      "by_label": {
+        "no_valid_lineage": 903,
+        "strict_rename": 88,
+        "rename_move": 52,
+        "rename_signature_change": 26
+      },
+      "repositories": {
+        "jfinal": 18,
+        "quasar": 19,
+        "sonarqube": 549,
+        "spring-boot": 4,
+        "black": 55,
+        "dit": 50,
+        "fastapi": 7,
+        "flask": 17,
+        "httpx": 87,
+        "marshmallow": 15,
+        "pytest": 13,
+        "axios": 3,
+        "fastify": 9,
+        "koa": 1,
+        "lodash": 5,
+        "mocha": 22,
+        "moment": 4,
+        "svelte": 41,
+        "jest": 45,
+        "redux": 1,
+        "rxjs": 87,
+        "typeorm": 14,
+        "vue": 3
+      }
+    },
+    "validation": {
+      "cases": 160,
+      "clusters": 46,
+      "by_language_task": {
+        "java/B_identifier": {
+          "cases": 3,
+          "clusters": 3
+        },
+        "java/D_negative": {
+          "cases": 78,
+          "clusters": 9
+        },
+        "javascript/D_negative": {
+          "cases": 23,
+          "clusters": 11
+        },
+        "python/A_current_doc": {
+          "cases": 2,
+          "clusters": 2
+        },
+        "python/B_identifier": {
+          "cases": 2,
+          "clusters": 2
+        },
+        "python/C_docstring": {
+          "cases": 1,
+          "clusters": 1
+        },
+        "python/D_negative": {
+          "cases": 23,
+          "clusters": 10
+        },
+        "typescript/B_identifier": {
+          "cases": 1,
+          "clusters": 1
+        },
+        "typescript/D_negative": {
+          "cases": 27,
+          "clusters": 11
+        }
+      },
+      "by_label": {
+        "no_valid_lineage": 151,
+        "strict_rename": 8,
+        "rename_signature_change": 1
+      },
+      "repositories": {
+        "jfinal": 1,
+        "quasar": 64,
+        "sonarqube": 9,
+        "spring-boot": 7,
+        "dit": 9,
+        "fastapi": 3,
+        "flask": 3,
+        "httpx": 11,
+        "pytest": 2,
+        "fastify": 3,
+        "koa": 1,
+        "mocha": 9,
+        "moment": 2,
+        "svelte": 8,
+        "jest": 4,
+        "redux": 1,
+        "rxjs": 19,
+        "vue": 4
+      }
+    }
+  },
+  "files": {
+    "development": "05da476eae9920d71fd1edca8cf7c08492785b57c2da7b1dff0ef972b6e9e871",
+    "held_out_test": "a5877be8912c554485db43cd5d901b2b1eb061d523649f24e54b80e896c7901c",
+    "validation": "0bea1c61b668bf2b88ed7615ba45b39376b3ef26069546fc476530d02ac030dd"
+  }
+}

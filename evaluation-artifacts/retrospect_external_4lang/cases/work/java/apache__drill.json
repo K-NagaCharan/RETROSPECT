@@ -1,0 +1,166 @@
+{
+ "repository": "apache/drill",
+ "url": "https://github.com/apache/drill.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 20,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "assertCompleteState",
+   "new": "assertStateCompleted",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "resumeFragment",
+   "new": "unpauseFragment",
+   "source": "S1",
+   "reason": "OLD still a callable in child (changed files)"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "cancelBeforeAnyResultsArrive",
+   "new": "cancelWhenQueryIdArrives",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "testInterruptingPartitionerThreadFragment",
+   "new": "interruptingPartitionerThreadFragment",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "testInterruptingAfterMSorterSetup",
+   "new": "failsAfterMSorterSetup",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "testInterruptingAfterMSorterSorting",
+   "new": "failsAfterMSorterSorting",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "testInterruptingBlockedFragmentsWaitingForData",
+   "new": "interruptingBlockedFragmentsWaitingForData",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "assertExceptionInjected",
+   "new": "assertExceptionMessage",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "settingNoopInjectionsAndQuery",
+   "new": "settingNoOpInjectionsAndQuery",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "testInterruptingWhileFragmentIsBlockedInAcquiringSendingTicket",
+   "new": "interruptingWhileFragmentIsBlockedInAcquiringSendingTicket",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "testInterruptingBlockedMergingRecordBatch",
+   "new": "interruptingBlockedMergingRecordBatch",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "testInterruptingBlockedUnorderedReceiverBatch",
+   "new": "interruptingBlockedUnorderedReceiverBatch",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "createSingleException",
+   "new": "createException",
+   "source": "S1",
+   "reason": "NEW already a callable in parent (changed files)"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "createSingleExceptionOnBit",
+   "new": "createExceptionOnBit",
+   "source": "S1",
+   "reason": "NEW already a callable in parent (changed files)"
+  },
+  {
+   "commit": "00aa01fb90f3210d1e3027d7f759fb1085b814bd",
+   "old": "createPauseInjection",
+   "new": "createPause",
+   "source": "S1",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c1b847acdc8cb90a1498b236b3bb5c81ca75c044",
+   "old": "getSchemaFile",
+   "new": "getPhysicalFileFromResource",
+   "source": "S1",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c1b847acdc8cb90a1498b236b3bb5c81ca75c044",
+   "old": "load",
+   "new": "getHiveReadEntryHelper",
+   "source": "S1",
+   "reason": "OLD still a callable in child (changed files)"
+  },
+  {
+   "commit": "c1b847acdc8cb90a1498b236b3bb5c81ca75c044",
+   "old": "addMiniDfsBasedStorage",
+   "new": "setup",
+   "source": "S1",
+   "reason": "OLD still a callable in child (changed files)"
+  },
+  {
+   "commit": "c1b847acdc8cb90a1498b236b3bb5c81ca75c044",
+   "old": "addMiniDfsBasedStorage",
+   "new": "setup",
+   "source": "S1",
+   "reason": "OLD still a callable in child (changed files)"
+  },
+  {
+   "commit": "c1b847acdc8cb90a1498b236b3bb5c81ca75c044",
+   "old": "addMiniDfsBasedStorageAndGenerateTestData",
+   "new": "setup",
+   "source": "S1",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\apache__drill",
+  "seconds": 21.548,
+  "bytes": 151456963,
+  "default_branch": "master",
+  "head": "12b33de984173238ec6ab18ac2414e7c14ab6b24"
+ },
+ "seconds": 24.723
+}

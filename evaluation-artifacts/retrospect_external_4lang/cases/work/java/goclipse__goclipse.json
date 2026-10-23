@@ -1,0 +1,33 @@
+{
+ "repository": "goclipse/goclipse",
+ "url": "https://github.com/GoClipse/goclipse.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "all candidate events dropped at pin checks",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 1
+ },
+ "rejects": [],
+ "drops": [
+  {
+   "commit": "851ab757698304e9d8d4ae24ab75be619ddae31a",
+   "old": "getInvocationOffest",
+   "new": "getInvocationOffset",
+   "source": "S1",
+   "reason": "not IN_WINDOW+diffed at H=400 with pin offset +50 or +10 (status OUTSIDE_WINDOW, position null)"
+  }
+ ],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\goclipse__goclipse",
+  "seconds": 36.313,
+  "bytes": 158432085,
+  "default_branch": "master",
+  "head": "aa4635546cfb50a2d544241e4f9425fd0a5042c3"
+ },
+ "seconds": 37.906
+}

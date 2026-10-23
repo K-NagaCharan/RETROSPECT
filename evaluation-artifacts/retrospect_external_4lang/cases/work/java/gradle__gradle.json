@@ -1,0 +1,48 @@
+{
+ "repository": "gradle/gradle",
+ "url": "https://github.com/gradle/gradle.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "all candidate events dropped at pin checks",
+ "funnel": {
+  "candidate_events": 3,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 1
+ },
+ "rejects": [
+  {
+   "commit": "79c66ceab11dae0b9fd1dade7bb4120028738705",
+   "old": "getAllSources",
+   "new": "getInputs",
+   "source": "S1",
+   "reason": "commit not in default-branch clone"
+  },
+  {
+   "commit": "527ac38334000e105daacb2aca25cb345d77c01e",
+   "old": "setDeploymentId",
+   "new": "setPlayToolProvider",
+   "source": "S1",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [
+  {
+   "commit": "f841d8dda2bf461f595755f85c3eba786783702d",
+   "old": "getPayload",
+   "new": "getFailure",
+   "source": "S1",
+   "reason": "successor absent at pin"
+  }
+ ],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\gradle__gradle",
+  "seconds": 192.759,
+  "bytes": 967656139,
+  "default_branch": "master",
+  "head": "64cc2825d4f74cb6e92ec5943d422a7cfe7ac149"
+ },
+ "seconds": 200.558
+}

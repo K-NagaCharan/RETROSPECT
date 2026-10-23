@@ -1,0 +1,76 @@
+{
+ "repository": "jashkenas/underscore",
+ "url": "https://github.com/jashkenas/underscore.git",
+ "language": "javascript",
+ "source": "S3b",
+ "mode": "s3b",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 2,
+  "passed_extractor_check": 2,
+  "dropped_at_pin": 1
+ },
+ "rejects": [],
+ "drops": [
+  {
+   "commit": "d2cf33d215cc1c1cb4b31c6f3f14977811629840",
+   "old": "typeTester",
+   "new": "tagTester",
+   "source": "S3b",
+   "reason": "successor not unique at pin"
+  }
+ ],
+ "selected": {
+  "source": "S3b",
+  "commit": "3caa2b453fa48bf9448f39fcbb2410e0bf368f90",
+  "parent": "4afa5391155be985b022f286144a7b9790e7e3dc",
+  "old": "restParam",
+  "new": "restArgs",
+  "message": "Rename to restArgs",
+  "commit_url": "https://github.com/jashkenas/underscore/commit/3caa2b453fa48bf9448f39fcbb2410e0bf368f90",
+  "similarity": 1,
+  "before": {
+   "name": "restParam",
+   "qualifiedName": "restParam",
+   "file": "underscore.js",
+   "startLine": 98
+  },
+  "after": {
+   "name": "restArgs",
+   "qualifiedName": "restArgs",
+   "file": "underscore.js",
+   "startLine": 98
+  },
+  "pin": "bdb06bcfcdcc85bfe3b494d9907762945f7d7c49",
+  "first_containing": "4f2474cca9818a0bfd0d8190042a84dfcce25485",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 93,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 92,
+   "window_command": "git log --format=%H --topo-order -n 400 bdb06bcfcdcc85bfe3b494d9907762945f7d7c49"
+  },
+  "target": {
+   "file": "underscore.js",
+   "qualifiedName": "restArgs",
+   "name": "restArgs"
+  },
+  "a_query": "Similar to ES6's rest param (http://ariya.ofilabs.com/2013/03/es6-and-rest-parameter.html) // This accumulates the arguments passed into an array, after a given index.",
+  "name_subtoken_overlap": 0.333
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\jashkenas__underscore",
+  "seconds": 3.168,
+  "bytes": 15636690,
+  "default_branch": "master",
+  "head": "5c1e5f686f8500af9c9d15614ed60289d6d35d6b"
+ },
+ "seconds": 6.171
+}

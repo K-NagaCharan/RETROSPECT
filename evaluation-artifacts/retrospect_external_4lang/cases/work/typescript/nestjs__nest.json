@@ -1,0 +1,90 @@
+{
+ "repository": "nestjs/nest",
+ "url": "https://github.com/nestjs/nest.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 4,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "964d02df6fe0dae7dde7640ffa79c93b26e64d81",
+   "old": "initialize",
+   "new": "initializeContext",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "a1d23d6af8fc41c51393f51ab70ed9e462d6a5d6",
+   "old": "GrpcStream",
+   "new": "GrpcStreamMethod",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "a1d23d6af8fc41c51393f51ab70ed9e462d6a5d6",
+   "old": "GrpcStream",
+   "new": "GrpcStreamCall",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "a1f17e2271642b0f0cbe52d8cb009fa25eccf51b",
+  "parent": "ecba3bafde15dd7b3b31974a00888e819ab39e22",
+  "old": "getPaths",
+  "new": "extractPathsFrom",
+  "message": "refactor: rename `getPaths` to `extractPathsFrom`",
+  "commit_url": "https://github.com/nestjs/nest/commit/a1f17e2271642b0f0cbe52d8cb009fa25eccf51b",
+  "similarity": 1,
+  "before": {
+   "name": "getPaths",
+   "qualifiedName": "RouteInfoPathExtractor.getPaths",
+   "file": "packages/core/middleware/route-info-path-extractor.ts",
+   "startLine": 18
+  },
+  "after": {
+   "name": "extractPathsFrom",
+   "qualifiedName": "RouteInfoPathExtractor.extractPathsFrom",
+   "file": "packages/core/middleware/route-info-path-extractor.ts",
+   "startLine": 18
+  },
+  "pin": "7d92d336149c56ffab337c5d066065e8b3c3cc14",
+  "first_containing": "c6ebbf7cb8436a8b7c9f4d427bef61285045891b",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 117,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 747,
+   "window_command": "git log --format=%H --topo-order -n 400 7d92d336149c56ffab337c5d066065e8b3c3cc14"
+  },
+  "target": {
+   "file": "packages/core/middleware/route-info-path-extractor.ts",
+   "qualifiedName": "RouteInfoPathExtractor.extractPathsFrom",
+   "name": "extractPathsFrom"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0.25
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\nestjs__nest",
+  "seconds": 136.969,
+  "bytes": 517113599,
+  "default_branch": "master",
+  "head": "c828ad160f25bf347df9fd8632191d07b66d2fb7"
+ },
+ "seconds": 251.887
+}

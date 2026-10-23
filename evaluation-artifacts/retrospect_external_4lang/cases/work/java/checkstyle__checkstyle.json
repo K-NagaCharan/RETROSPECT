@@ -1,0 +1,13 @@
+{
+ "repository": "checkstyle/checkstyle",
+ "url": "https://github.com/checkstyle/checkstyle.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:checkstyle)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

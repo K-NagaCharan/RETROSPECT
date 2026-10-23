@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T07:51:45.387Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_D_v3\\snapshots\\redux.cases.jsonl",
+  "case_count": 1,
+  "snapshots": [
+    {
+      "repository": "redux",
+      "path": "D:/base papers considered/laya testing/data/repos/redux",
+      "pin": "56abca4749921d68f40cda20afd2043af9751f72",
+      "head_before": "56abca4749921d68f40cda20afd2043af9751f72",
+      "clean_before": true,
+      "cases": 1,
+      "symbols": 372,
+      "index_seconds": 2.884,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 6.905,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 63.012,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "56abca4749921d68f40cda20afd2043af9751f72",
+      "clean_after": true,
+      "seconds_total": 73.503
+    }
+  ],
+  "finished_utc": "2026-10-22T07:52:59.226Z"
+}

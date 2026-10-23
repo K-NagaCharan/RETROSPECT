@@ -1,0 +1,15 @@
+{
+ "repository": "aws/aws-sdk-java",
+ "url": "https://github.com/aws/aws-sdk-java.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "skipped",
+ "reason": "clone exceeded 10 minutes",
+ "funnel": {
+  "clone_seconds": 600.006
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

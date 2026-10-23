@@ -1,0 +1,226 @@
+{
+  "computed_after_confirmatory_result": true,
+  "run": "runs/external_v1",
+  "owner_sheet": "owner_review/review_sheet_owner.csv",
+  "seed": 20261023,
+  "sensitivity_owner_confirmed": {
+    "label": "Sensitivity (protocol \u00a77): B_id, G vs B1, S1 + S2 + owner-confirmed S3/S3b",
+    "owner_verdicts": {
+      "confirm": 26,
+      "reject": 3,
+      "rejected_repositories": [
+        "django/django",
+        "tj/commander.js",
+        "trpc/trpc"
+      ]
+    },
+    "repositories": 39,
+    "cases": 39,
+    "mrr_b1": 0.3856,
+    "mrr_g": 0.7574,
+    "delta": 0.3718,
+    "ci95_repository_bootstrap": [
+      0.2348,
+      0.5091
+    ],
+    "p_two_sided": 9.99990000099999e-06,
+    "test": "monte_carlo_100000",
+    "transitions": {
+      "unchanged": 18,
+      "rescue@10": 12,
+      "improved": 8,
+      "regressed": 1
+    },
+    "metrics": {
+      "b1": {
+        "n": 39,
+        "R@1": 0.2821,
+        "R@5": 0.5128,
+        "R@10": 0.5385,
+        "MRR": 0.3856,
+        "median_rank": 5,
+        "not_retrieved": 0.2308
+      },
+      "g": {
+        "n": 39,
+        "R@1": 0.6923,
+        "R@5": 0.8462,
+        "R@10": 0.8462,
+        "MRR": 0.7574,
+        "median_rank": 1,
+        "not_retrieved": 0.1026
+      }
+    },
+    "rescues@10": 12,
+    "harms@10": 0
+  },
+  "posthoc_bnl_without_template2": {
+    "label": "post hoc: template 2 excluded because B1 returns no candidates above its 0.08 threshold",
+    "task": "B_nl (templates 1 and 3; per-repository mean)",
+    "metrics": {
+      "b1": {
+        "n": 84,
+        "R@1": 0.2619,
+        "R@5": 0.4643,
+        "R@10": 0.5595,
+        "MRR": 0.3597,
+        "median_rank": 7.0,
+        "not_retrieved": 0.25
+      },
+      "b2": {
+        "n": 84,
+        "R@1": 0.5952,
+        "R@5": 0.7857,
+        "R@10": 0.7857,
+        "MRR": 0.6681,
+        "median_rank": 1.0,
+        "not_retrieved": 0.0714
+      },
+      "b3": {
+        "n": 84,
+        "R@1": 0.5476,
+        "R@5": 0.7857,
+        "R@10": 0.8571,
+        "MRR": 0.6449,
+        "median_rank": 1.0,
+        "not_retrieved": 0.0476
+      },
+      "b4": {
+        "n": 84,
+        "R@1": 0.4286,
+        "R@5": 0.6071,
+        "R@10": 0.7024,
+        "MRR": 0.5177,
+        "median_rank": 3.0,
+        "not_retrieved": 0.0476
+      },
+      "g": {
+        "n": 84,
+        "R@1": 0.6905,
+        "R@5": 0.8452,
+        "R@10": 0.8452,
+        "MRR": 0.7569,
+        "median_rank": 1.0,
+        "not_retrieved": 0.1071
+      }
+    },
+    "g_vs_b1": {
+      "repositories": 42,
+      "cases": 84,
+      "mrr_b1": 0.3597,
+      "mrr_g": 0.7569,
+      "delta": 0.3972,
+      "ci95_repository_bootstrap": [
+        0.2681,
+        0.529
+      ],
+      "p_two_sided": 9.99990000099999e-06,
+      "test": "monte_carlo_100000",
+      "transitions": {
+        "unchanged": 38,
+        "rescue@10": 24,
+        "improved": 20,
+        "regressed": 2
+      }
+    },
+    "b2_vs_b1": {
+      "repositories": 42,
+      "cases": 84,
+      "mrr_b1": 0.3597,
+      "mrr_b2": 0.6681,
+      "delta": 0.3084,
+      "ci95_repository_bootstrap": [
+        0.1328,
+        0.4766
+      ],
+      "p_two_sided": 0.0013899861001389986,
+      "test": "monte_carlo_100000",
+      "transitions": {
+        "improved": 21,
+        "regressed": 12,
+        "rescue@10": 25,
+        "unchanged": 20,
+        "harm@10": 6
+      }
+    },
+    "b3_vs_b1": {
+      "repositories": 42,
+      "cases": 84,
+      "mrr_b1": 0.3597,
+      "mrr_b3": 0.6449,
+      "delta": 0.2852,
+      "ci95_repository_bootstrap": [
+        0.1557,
+        0.413
+      ],
+      "p_two_sided": 0.00011999880001199988,
+      "test": "monte_carlo_100000",
+      "transitions": {
+        "rescue@10": 27,
+        "improved": 22,
+        "unchanged": 26,
+        "harm@10": 2,
+        "regressed": 7
+      }
+    },
+    "b4_vs_b1": {
+      "repositories": 42,
+      "cases": 84,
+      "mrr_b1": 0.3597,
+      "mrr_b4": 0.5177,
+      "delta": 0.158,
+      "ci95_repository_bootstrap": [
+        0.0538,
+        0.2625
+      ],
+      "p_two_sided": 0.005089949100508995,
+      "test": "monte_carlo_100000",
+      "transitions": {
+        "rescue@10": 15,
+        "improved": 26,
+        "unchanged": 33,
+        "harm@10": 3,
+        "regressed": 7
+      }
+    }
+  },
+  "posthoc_s1_only": {
+    "label": "post hoc: S1 only (RefactoringMiner oracle, Java)",
+    "B_id": {
+      "repositories": 12,
+      "cases": 12,
+      "mrr_b1": 0.278,
+      "mrr_g": 0.5697,
+      "delta": 0.2917,
+      "ci95_repository_bootstrap": [
+        0.0932,
+        0.5174
+      ],
+      "p_two_sided": 0.0625,
+      "test": "exact",
+      "transitions": {
+        "rescue@10": 3,
+        "unchanged": 7,
+        "improved": 2
+      }
+    },
+    "B_nl": {
+      "repositories": 12,
+      "cases": 36,
+      "mrr_b1": 0.2044,
+      "mrr_g": 0.5281,
+      "delta": 0.3237,
+      "ci95_repository_bootstrap": [
+        0.1218,
+        0.5496
+      ],
+      "p_two_sided": 0.03125,
+      "test": "exact",
+      "transitions": {
+        "rescue@10": 10,
+        "unchanged": 21,
+        "improved": 5
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T05:16:54.485Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_BCA_v3\\snapshots\\spring-boot.cases.jsonl",
+  "case_count": 1,
+  "snapshots": [
+    {
+      "repository": "spring-boot",
+      "path": "D:/clones/spring-boot",
+      "pin": "57a1ca37c36f3cf355211aa8dea8c500b2dd3a09",
+      "head_before": "57a1ca37c36f3cf355211aa8dea8c500b2dd3a09",
+      "clean_before": true,
+      "cases": 1,
+      "symbols": 67543,
+      "index_seconds": 19.671,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 9.456,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 809.486,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "57a1ca37c36f3cf355211aa8dea8c500b2dd3a09",
+      "clean_after": true,
+      "seconds_total": 844.299
+    }
+  ],
+  "finished_utc": "2026-10-22T05:30:58.977Z"
+}

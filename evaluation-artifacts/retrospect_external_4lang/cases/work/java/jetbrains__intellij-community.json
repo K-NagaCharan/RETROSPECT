@@ -1,0 +1,15 @@
+{
+ "repository": "jetbrains/intellij-community",
+ "url": "https://github.com/JetBrains/intellij-community.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "skipped",
+ "reason": "clone exceeded 10 minutes",
+ "funnel": {
+  "clone_seconds": 600.012
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

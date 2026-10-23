@@ -1,0 +1,33 @@
+{
+ "repository": "cgeo/cgeo",
+ "url": "https://github.com/cgeo/cgeo.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "7e7e4f54801af4e49ebddb934d0c6ff33a2c2160",
+   "old": "testCanHandle",
+   "new": "testHandleTerraCaches",
+   "source": "S1",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\cgeo__cgeo",
+  "seconds": 156.734,
+  "bytes": 586210269,
+  "default_branch": "master",
+  "head": "fcca2c84cf92c5c2c70fbf2cd8870e5ba56ab00e"
+ },
+ "seconds": 157.296
+}

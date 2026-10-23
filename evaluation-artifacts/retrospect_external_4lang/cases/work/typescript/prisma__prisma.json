@@ -1,0 +1,6243 @@
+{
+ "repository": "prisma/prisma",
+ "url": "https://github.com/prisma/prisma.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 941,
+  "passed_extractor_check": 59,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "b43bc2ce73c501d02dc8671b0e490811b1ad16b3",
+   "old": "readWrittenValueForCodec",
+   "new": "applyDiscriminatorRule",
+   "source": "S3",
+   "reason": "body similarity 0.172 < 0.5"
+  },
+  {
+   "commit": "b43bc2ce73c501d02dc8671b0e490811b1ad16b3",
+   "old": "readWrittenValueForCodec",
+   "new": "readWrittenValueIntoCodec",
+   "source": "S3",
+   "reason": "body similarity 0.095 < 0.5"
+  },
+  {
+   "commit": "b43bc2ce73c501d02dc8671b0e490811b1ad16b3",
+   "old": "readWrittenValueForCodec",
+   "new": "stored",
+   "source": "S3",
+   "reason": "body similarity 0.012 < 0.5"
+  },
+  {
+   "commit": "b43bc2ce73c501d02dc8671b0e490811b1ad16b3",
+   "old": "readWrittenValueForCodec",
+   "new": "number",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b43bc2ce73c501d02dc8671b0e490811b1ad16b3",
+   "old": "readWrittenValueForCodec",
+   "new": "list",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b43bc2ce73c501d02dc8671b0e490811b1ad16b3",
+   "old": "readWrittenValueForCodec",
+   "new": "print",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b43bc2ce73c501d02dc8671b0e490811b1ad16b3",
+   "old": "readWrittenValueForCodec",
+   "new": "detection",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b43bc2ce73c501d02dc8671b0e490811b1ad16b3",
+   "old": "readWrittenValueForCodec",
+   "new": "base",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "bca8cc1473a6d4dd065b5c3deacdcd4bcc964dee",
+   "old": "enforceDataTypeInvariants",
+   "new": "enforceHelperCodecInvariants",
+   "source": "S3",
+   "reason": "body similarity 0.192 < 0.5"
+  },
+  {
+   "commit": "bca8cc1473a6d4dd065b5c3deacdcd4bcc964dee",
+   "old": "enforceDataTypeInvariants",
+   "new": "assembleDataTypeSupport",
+   "source": "S3",
+   "reason": "body similarity 0.101 < 0.5"
+  },
+  {
+   "commit": "bca8cc1473a6d4dd065b5c3deacdcd4bcc964dee",
+   "old": "enforceDataTypeInvariants",
+   "new": "readWrittenValueAs",
+   "source": "S3",
+   "reason": "body similarity 0.013 < 0.5"
+  },
+  {
+   "commit": "bca8cc1473a6d4dd065b5c3deacdcd4bcc964dee",
+   "old": "enforceDataTypeInvariants",
+   "new": "readExpressionAs",
+   "source": "S3",
+   "reason": "body similarity 0.056 < 0.5"
+  },
+  {
+   "commit": "bca8cc1473a6d4dd065b5c3deacdcd4bcc964dee",
+   "old": "enforceDataTypeInvariants",
+   "new": "refusal",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "bca8cc1473a6d4dd065b5c3deacdcd4bcc964dee",
+   "old": "enforceDataTypeInvariants",
+   "new": "sqlTargetTypeConstructors",
+   "source": "S3",
+   "reason": "body similarity 0.034 < 0.5"
+  },
+  {
+   "commit": "ef7e02bd5b62e1c0c351ae16cf55f3642ee56830",
+   "old": "errorRunnerFailed",
+   "new": "migrationRunnerFailure",
+   "source": "S3",
+   "reason": "body similarity 0.311 < 0.5"
+  },
+  {
+   "commit": "ef7e02bd5b62e1c0c351ae16cf55f3642ee56830",
+   "old": "buildRunnerFailure",
+   "new": "migrationRunnerFailure",
+   "source": "S3",
+   "reason": "body similarity 0.141 < 0.5"
+  },
+  {
+   "commit": "ef7e02bd5b62e1c0c351ae16cf55f3642ee56830",
+   "old": "errorRunnerFailed",
+   "new": "withFailingSpace",
+   "source": "S3",
+   "reason": "body similarity 0.120 < 0.5"
+  },
+  {
+   "commit": "ef7e02bd5b62e1c0c351ae16cf55f3642ee56830",
+   "old": "buildRunnerFailure",
+   "new": "withFailingSpace",
+   "source": "S3",
+   "reason": "body similarity 0.103 < 0.5"
+  },
+  {
+   "commit": "38290a22c2b34cb20bf9798b5542c9ae9fae7cc3",
+   "old": "literalType",
+   "new": "intervalEqualityKey",
+   "source": "S3",
+   "reason": "body similarity 0.032 < 0.5"
+  },
+  {
+   "commit": "38290a22c2b34cb20bf9798b5542c9ae9fae7cc3",
+   "old": "reason",
+   "new": "intervalEqualityKey",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac108237aae86b9a71d3d05918b735dd6beb662d",
+   "old": "createOrmClient",
+   "new": "checkCollectionClasses",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac108237aae86b9a71d3d05918b735dd6beb662d",
+   "old": "createOrmClient",
+   "new": "named",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "492241fb4f741f91ee31675dcca99a606becef6d",
+   "old": "normalizeSchemaNativeType",
+   "new": "resolved",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "492241fb4f741f91ee31675dcca99a606becef6d",
+   "old": "normalizeFormattedType",
+   "new": "resolved",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "492241fb4f741f91ee31675dcca99a606becef6d",
+   "old": "normalizeSqliteNativeType",
+   "new": "resolved",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "492241fb4f741f91ee31675dcca99a606becef6d",
+   "old": "normalizeSchemaNativeType",
+   "new": "reads",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "492241fb4f741f91ee31675dcca99a606becef6d",
+   "old": "normalizeFormattedType",
+   "new": "reads",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "492241fb4f741f91ee31675dcca99a606becef6d",
+   "old": "normalizeSqliteNativeType",
+   "new": "reads",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "applyModifiers",
+   "new": "assertDataTypeParams",
+   "source": "S3",
+   "reason": "body similarity 0.068 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "codecOutputType",
+   "new": "assertDataTypeParams",
+   "source": "S3",
+   "reason": "body similarity 0.067 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "resolveFieldType",
+   "new": "assertDataTypeParams",
+   "source": "S3",
+   "reason": "body similarity 0.025 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "vector",
+   "new": "assertDataTypeParams",
+   "source": "S3",
+   "reason": "body similarity 0.077 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "fieldTypesExpression",
+   "new": "assertDataTypeParams",
+   "source": "S3",
+   "reason": "body similarity 0.023 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "applyModifiers",
+   "new": "generic",
+   "source": "S3",
+   "reason": "body similarity 0.044 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "codecOutputType",
+   "new": "generic",
+   "source": "S3",
+   "reason": "body similarity 0.116 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "resolveFieldType",
+   "new": "generic",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "vector",
+   "new": "generic",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "applyModifiers",
+   "new": "resolveStorageValueSet",
+   "source": "S3",
+   "reason": "body similarity 0.096 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "codecOutputType",
+   "new": "resolveStorageValueSet",
+   "source": "S3",
+   "reason": "body similarity 0.070 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "resolveFieldType",
+   "new": "resolveStorageValueSet",
+   "source": "S3",
+   "reason": "body similarity 0.078 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "vector",
+   "new": "resolveStorageValueSet",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "da82c8c86450faeebfb3637c90569c6517bdcce7",
+   "old": "fieldTypesExpression",
+   "new": "resolveStorageValueSet",
+   "source": "S3",
+   "reason": "body similarity 0.029 < 0.5"
+  },
+  {
+   "commit": "ac9a548e75d588626a4decad1a3f1c816d9d2ebf",
+   "old": "sentence",
+   "new": "failed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac9a548e75d588626a4decad1a3f1c816d9d2ebf",
+   "old": "sentence",
+   "new": "shown",
+   "source": "S3",
+   "reason": "body similarity 0.364 < 0.5"
+  },
+  {
+   "commit": "ac9a548e75d588626a4decad1a3f1c816d9d2ebf",
+   "old": "sentence",
+   "new": "stored",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac9a548e75d588626a4decad1a3f1c816d9d2ebf",
+   "old": "sentence",
+   "new": "schema",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac9a548e75d588626a4decad1a3f1c816d9d2ebf",
+   "old": "sentence",
+   "new": "apply",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ac9a548e75d588626a4decad1a3f1c816d9d2ebf",
+   "old": "sentence",
+   "new": "verify",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "42fcd25bfa18e117264e1ec49b5621e9bf8e6b95",
+   "old": "deriveJsonSchema",
+   "new": "deriveCollectionValidators",
+   "source": "S3",
+   "reason": "body similarity 0.105 < 0.5"
+  },
+  {
+   "commit": "42fcd25bfa18e117264e1ec49b5621e9bf8e6b95",
+   "old": "derivePolymorphicJsonSchema",
+   "new": "deriveCollectionValidators",
+   "source": "S3",
+   "reason": "body similarity 0.056 < 0.5"
+  },
+  {
+   "commit": "42fcd25bfa18e117264e1ec49b5621e9bf8e6b95",
+   "old": "deriveJsonSchema",
+   "new": "objectId",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "42fcd25bfa18e117264e1ec49b5621e9bf8e6b95",
+   "old": "derivePolymorphicJsonSchema",
+   "new": "objectId",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "42fcd25bfa18e117264e1ec49b5621e9bf8e6b95",
+   "old": "deriveJsonSchema",
+   "new": "label",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "42fcd25bfa18e117264e1ec49b5621e9bf8e6b95",
+   "old": "derivePolymorphicJsonSchema",
+   "new": "label",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "42fcd25bfa18e117264e1ec49b5621e9bf8e6b95",
+   "old": "deriveJsonSchema",
+   "new": "closed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "42fcd25bfa18e117264e1ec49b5621e9bf8e6b95",
+   "old": "derivePolymorphicJsonSchema",
+   "new": "closed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "f66a491d91149ccf24e042cb7fb9b36aba362c41",
+   "old": "noCheck",
+   "new": "records",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "f66a491d91149ccf24e042cb7fb9b36aba362c41",
+   "old": "noCheck",
+   "new": "main",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "94fc045c629c9b369a1df449a43239523e810687",
+   "old": "createPostgresTypeMap",
+   "new": "geometry",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "94fc045c629c9b369a1df449a43239523e810687",
+   "old": "createPostgresTypeMap",
+   "new": "unclaimed",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "2564c63341099e6db56340ff8af3e162cc3d0b17",
+   "old": "resolveNamespaceIdForSqlTarget",
+   "new": "member",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "renameCollection",
+   "source": "S3",
+   "reason": "body similarity 0.072 < 0.5"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "step",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "renameField",
+   "source": "S3",
+   "reason": "body similarity 0.073 < 0.5"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "unsetField",
+   "source": "S3",
+   "reason": "body similarity 0.049 < 0.5"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "refused",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "refuse",
+   "source": "S3",
+   "reason": "body similarity 0.023 < 0.5"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "named",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "contract",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "refusal",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "documents",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9b9c290cb4d6585335b3dc65b8504cd816e614bb",
+   "old": "keepDataByHand",
+   "new": "project",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "beforeEncode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "beforeEncode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "beforeEncode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "beforeEncode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "beforeEncode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "beforeEncode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "beforeEncode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "activityEnded",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "activityEnded",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "activityEnded",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "activityEnded",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "activityEnded",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "activityEnded",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "activityEnded",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "state",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "state",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "state",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "state",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "state",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "state",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "state",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "started",
+   "source": "S3",
+   "reason": "body similarity 0.049 < 0.5"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "started",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "started",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "started",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "started",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "started",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "started",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "start",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "start",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "start",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "start",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "start",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "start",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "start",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "activityStarted",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "activityStarted",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "activityStarted",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "activityStarted",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "activityStarted",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "activityStarted",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "activityStarted",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "activityFinalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "activityFinalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "activityFinalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "activityFinalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "activityFinalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "activityFinalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "activityFinalized",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "onQuery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "onQuery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "onQuery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "onQuery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "onQuery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "onQuery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "onQuery",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "onExecute",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "onExecute",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "onExecute",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "onExecute",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "onExecute",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "onExecute",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "onExecute",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "lifecycle",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "lifecycle",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "lifecycle",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "lifecycle",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "lifecycle",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "lifecycle",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "lifecycle",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "open",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "open",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "open",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "open",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "open",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "open",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "open",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterQuery",
+   "new": "events",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeQuery",
+   "new": "events",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptQuery",
+   "new": "events",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "interceptExecute",
+   "new": "events",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterExecute",
+   "new": "events",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "beforeExecute",
+   "new": "events",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fab7a1276342d08d6ac88e5a341c63570dfb6adf",
+   "old": "afterTransaction",
+   "new": "events",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "unaliased",
+   "new": "createCollectionTables",
+   "source": "S3",
+   "reason": "body similarity 0.038 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "aliased",
+   "new": "createCollectionTables",
+   "source": "S3",
+   "reason": "body similarity 0.037 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "column",
+   "new": "createCollectionTables",
+   "source": "S3",
+   "reason": "body similarity 0.040 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "root",
+   "new": "createCollectionTables",
+   "source": "S3",
+   "reason": "body similarity 0.207 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "createTableRefRemapper",
+   "new": "createCollectionTables",
+   "source": "S3",
+   "reason": "body similarity 0.049 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "resolveChildTableSource",
+   "new": "createCollectionTables",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "unaliased",
+   "new": "alias",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "aliased",
+   "new": "alias",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "column",
+   "new": "alias",
+   "source": "S3",
+   "reason": "body similarity 0.030 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "root",
+   "new": "alias",
+   "source": "S3",
+   "reason": "body similarity 0.075 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "createTableRefRemapper",
+   "new": "alias",
+   "source": "S3",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "resolveChildTableSource",
+   "new": "alias",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "unaliased",
+   "new": "aliasTable",
+   "source": "S3",
+   "reason": "body similarity 0.111 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "aliased",
+   "new": "aliasTable",
+   "source": "S3",
+   "reason": "body similarity 0.139 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "column",
+   "new": "aliasTable",
+   "source": "S3",
+   "reason": "body similarity 0.054 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "root",
+   "new": "aliasTable",
+   "source": "S3",
+   "reason": "body similarity 0.091 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "createTableRefRemapper",
+   "new": "aliasTable",
+   "source": "S3",
+   "reason": "body similarity 0.101 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "resolveChildTableSource",
+   "new": "aliasTable",
+   "source": "S3",
+   "reason": "body similarity 0.109 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "unaliased",
+   "new": "copy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "aliased",
+   "new": "copy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "column",
+   "new": "copy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "root",
+   "new": "copy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "createTableRefRemapper",
+   "new": "copy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "eb907e1e4822b957ef9cd1ba0f269094ab9fbc41",
+   "old": "resolveChildTableSource",
+   "new": "copy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "rendersIndexBody",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "rendersIndexBody",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "accessMethodOf",
+   "source": "S3",
+   "reason": "body similarity 0.059 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "accessMethodOf",
+   "source": "S3",
+   "reason": "body similarity 0.091 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "indexTypeRegistryOf",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "indexTypeRegistryOf",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "fullText",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "fullText",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "indexes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "indexes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "outside",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "outside",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "fullTextDocument",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "fullTextDocument",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "fullTextIndexProblems",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "fullTextIndexProblems",
+   "source": "S3",
+   "reason": "body similarity 0.044 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "fullTextIndexDefinitionOf",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "fullTextIndexDefinitionOf",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "assertFullTextIndexes",
+   "source": "S3",
+   "reason": "body similarity 0.031 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "assertFullTextIndexes",
+   "source": "S3",
+   "reason": "body similarity 0.024 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "renderFullTextDocument",
+   "source": "S3",
+   "reason": "body similarity 0.052 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "renderFullTextDocument",
+   "source": "S3",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "renderFullTextIndexDocument",
+   "source": "S3",
+   "reason": "body similarity 0.066 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "renderFullTextIndexDocument",
+   "source": "S3",
+   "reason": "body similarity 0.014 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "postgresCodecTraitsOf",
+   "source": "S3",
+   "reason": "body similarity 0.125 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "postgresCodecTraitsOf",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "renderFullTextIndexExpression",
+   "new": "render",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "1923c35787fcc637e925fed8ee07d3b0e7f6f40d",
+   "old": "isFullTextIndexableCodec",
+   "new": "render",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "780a8208d7e13582e2ad802abb05b4b8aed045a7",
+   "old": "backingIndexColumnKeys",
+   "new": "reference",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "780a8208d7e13582e2ad802abb05b4b8aed045a7",
+   "old": "isBackedByColumnKeys",
+   "new": "reference",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "780a8208d7e13582e2ad802abb05b4b8aed045a7",
+   "old": "backingIndexColumnKeys",
+   "new": "declared",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "780a8208d7e13582e2ad802abb05b4b8aed045a7",
+   "old": "isBackedByColumnKeys",
+   "new": "declared",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "780a8208d7e13582e2ad802abb05b4b8aed045a7",
+   "old": "backingIndexColumnKeys",
+   "new": "indexes",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "780a8208d7e13582e2ad802abb05b4b8aed045a7",
+   "old": "isBackedByColumnKeys",
+   "new": "indexes",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "bf4943511afa93bec2a7a3efb46f58e0b8910723",
+   "old": "scopes",
+   "new": "fragment",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "bf4943511afa93bec2a7a3efb46f58e0b8910723",
+   "old": "scope",
+   "new": "fragments",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "bf4943511afa93bec2a7a3efb46f58e0b8910723",
+   "old": "scopes",
+   "new": "fragments",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "describeRefusal",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "describeRefusal",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "readWrittenValue",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "readWrittenValue",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "castTypedValue",
+   "source": "S3",
+   "reason": "body similarity 0.016 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "castTypedValue",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "admittedTags",
+   "source": "S3",
+   "reason": "body similarity 0.034 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "admittedTags",
+   "source": "S3",
+   "reason": "body similarity 0.025 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "describeAdmittedForms",
+   "source": "S3",
+   "reason": "body similarity 0.071 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "describeAdmittedForms",
+   "source": "S3",
+   "reason": "body similarity 0.040 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "dataTypeValue",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "dataTypeValue",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "text",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "readWrittenScalar",
+   "source": "S3",
+   "reason": "body similarity 0.028 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "readWrittenScalar",
+   "source": "S3",
+   "reason": "body similarity 0.017 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "parse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "parse",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "refusal",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "refusal",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "fail",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "fail",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "parseJsonText",
+   "source": "S3",
+   "reason": "body similarity 0.011 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "parseJsonText",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "checkSqlDefaultText",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "reservedSqlDefaultText",
+   "source": "S3",
+   "reason": "body similarity 0.067 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "reservedSqlDefaultText",
+   "source": "S3",
+   "reason": "body similarity 0.038 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "refused",
+   "source": "S3",
+   "reason": "body similarity 0.071 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "refused",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "body",
+   "new": "location",
+   "source": "S3",
+   "reason": "body similarity 0.053 < 0.5"
+  },
+  {
+   "commit": "b35bcd7d106416b4a750a5a7da5932220d7f52fd",
+   "old": "checkSqlDefaultBody",
+   "new": "location",
+   "source": "S3",
+   "reason": "body similarity 0.069 < 0.5"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "dbSign",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "space",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "marker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "signSpaces",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "json",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "snapshots",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "migrations",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "typeName",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "upgrade",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "count",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b32ec30b6da4cf543749825eb29011159db90fb4",
+   "old": "sign",
+   "new": "main",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c882b03377e70c090d7bbe05cf85bf04fe9e33b2",
+   "old": "parameters",
+   "new": "docComment",
+   "source": "S3",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "c882b03377e70c090d7bbe05cf85bf04fe9e33b2",
+   "old": "parameters",
+   "new": "model",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c882b03377e70c090d7bbe05cf85bf04fe9e33b2",
+   "old": "parameters",
+   "new": "field",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c882b03377e70c090d7bbe05cf85bf04fe9e33b2",
+   "old": "parameters",
+   "new": "hover",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a726c6a6a8bf5a015c0da34f813ca2116bbd752",
+   "old": "checkUncomposedNamespace",
+   "new": "bindPslSchema",
+   "source": "S3",
+   "reason": "body similarity 0.096 < 0.5"
+  },
+  {
+   "commit": "9a726c6a6a8bf5a015c0da34f813ca2116bbd752",
+   "old": "createMongoBinder",
+   "new": "bindPslSchema",
+   "source": "S3",
+   "reason": "body similarity 0.147 < 0.5"
+  },
+  {
+   "commit": "9a726c6a6a8bf5a015c0da34f813ca2116bbd752",
+   "old": "createSqlBinder",
+   "new": "bindPslSchema",
+   "source": "S3",
+   "reason": "body similarity 0.100 < 0.5"
+  },
+  {
+   "commit": "9a726c6a6a8bf5a015c0da34f813ca2116bbd752",
+   "old": "checkUncomposedNamespace",
+   "new": "context",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a726c6a6a8bf5a015c0da34f813ca2116bbd752",
+   "old": "createMongoBinder",
+   "new": "context",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a726c6a6a8bf5a015c0da34f813ca2116bbd752",
+   "old": "createSqlBinder",
+   "new": "context",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9a726c6a6a8bf5a015c0da34f813ca2116bbd752",
+   "old": "checkUncomposedNamespace",
+   "new": "instantiateFieldTypeConstructor",
+   "source": "S3",
+   "reason": "body similarity 0.019 < 0.5"
+  },
+  {
+   "commit": "9a726c6a6a8bf5a015c0da34f813ca2116bbd752",
+   "old": "createMongoBinder",
+   "new": "instantiateFieldTypeConstructor",
+   "source": "S3",
+   "reason": "body similarity 0.108 < 0.5"
+  },
+  {
+   "commit": "9a726c6a6a8bf5a015c0da34f813ca2116bbd752",
+   "old": "createSqlBinder",
+   "new": "instantiateFieldTypeConstructor",
+   "source": "S3",
+   "reason": "body similarity 0.121 < 0.5"
+  },
+  {
+   "commit": "9c31072185e714d97b129ca782c4112f0738091e",
+   "old": "entry",
+   "new": "deriveKeyFromContentHash",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9c31072185e714d97b129ca782c4112f0738091e",
+   "old": "entry",
+   "new": "invalidate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9c31072185e714d97b129ca782c4112f0738091e",
+   "old": "entry",
+   "new": "unset",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9c31072185e714d97b129ca782c4112f0738091e",
+   "old": "entry",
+   "new": "skipped",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9c31072185e714d97b129ca782c4112f0738091e",
+   "old": "entry",
+   "new": "cached",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d0ec42633fcf865bd8830db9446facd24384fec3",
+   "old": "lowerTaggedLiteral",
+   "new": "component",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d0ec42633fcf865bd8830db9446facd24384fec3",
+   "old": "sqlDefaultLiteralTagEntry",
+   "new": "component",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d0ec42633fcf865bd8830db9446facd24384fec3",
+   "old": "lowerTaggedLiteral",
+   "new": "sqlTextFromCanonical",
+   "source": "S3",
+   "reason": "body similarity 0.028 < 0.5"
+  },
+  {
+   "commit": "d0ec42633fcf865bd8830db9446facd24384fec3",
+   "old": "sqlDefaultLiteralTagEntry",
+   "new": "sqlTextFromCanonical",
+   "source": "S3",
+   "reason": "body similarity 0.082 < 0.5"
+  },
+  {
+   "commit": "d0ec42633fcf865bd8830db9446facd24384fec3",
+   "old": "lowerTaggedLiteral",
+   "new": "assertNothingCastsFromSqlExpression",
+   "source": "S3",
+   "reason": "body similarity 0.028 < 0.5"
+  },
+  {
+   "commit": "d0ec42633fcf865bd8830db9446facd24384fec3",
+   "old": "sqlDefaultLiteralTagEntry",
+   "new": "assertNothingCastsFromSqlExpression",
+   "source": "S3",
+   "reason": "body similarity 0.085 < 0.5"
+  },
+  {
+   "commit": "d0ec42633fcf865bd8830db9446facd24384fec3",
+   "old": "sqlDefaultLiteralTagEntry",
+   "new": "readTaggedLiteral",
+   "source": "S3",
+   "reason": "body similarity 0.276 < 0.5"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "decode",
+   "new": "jsonValue",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "validateExtensionBlockFromSymbol",
+   "new": "jsonValue",
+   "source": "S3",
+   "reason": "body similarity 0.024 < 0.5"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "readValueParam",
+   "new": "jsonValue",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "readListRefParams",
+   "new": "jsonValue",
+   "source": "S3",
+   "reason": "body similarity 0.039 < 0.5"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "unwrapQuotedString",
+   "new": "jsonValue",
+   "source": "S3",
+   "reason": "body similarity 0.009 < 0.5"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "decode",
+   "new": "blockSpecFactoryOf",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "validateExtensionBlockFromSymbol",
+   "new": "blockSpecFactoryOf",
+   "source": "S3",
+   "reason": "body similarity 0.037 < 0.5"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "readValueParam",
+   "new": "blockSpecFactoryOf",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "readListRefParams",
+   "new": "blockSpecFactoryOf",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "unwrapQuotedString",
+   "new": "blockSpecFactoryOf",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "decode",
+   "new": "entry",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "validateExtensionBlockFromSymbol",
+   "new": "entry",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "readValueParam",
+   "new": "entry",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "readListRefParams",
+   "new": "entry",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d13613775faa981338f3121b32bc8e2c8c3b11e0",
+   "old": "unwrapQuotedString",
+   "new": "entry",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "78998dfc5e75c25a59a7613b0b7b365f50b14287",
+   "old": "values",
+   "new": "buildExecutionSection",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "78998dfc5e75c25a59a7613b0b7b365f50b14287",
+   "old": "buildMongoExecutionSection",
+   "new": "execution",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "78998dfc5e75c25a59a7613b0b7b365f50b14287",
+   "old": "values",
+   "new": "execution",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "78998dfc5e75c25a59a7613b0b7b365f50b14287",
+   "old": "buildMongoExecutionSection",
+   "new": "contributor",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "78998dfc5e75c25a59a7613b0b7b365f50b14287",
+   "old": "values",
+   "new": "contributor",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "78998dfc5e75c25a59a7613b0b7b365f50b14287",
+   "old": "buildMongoExecutionSection",
+   "new": "apply",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "78998dfc5e75c25a59a7613b0b7b365f50b14287",
+   "old": "values",
+   "new": "apply",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1684b7e687111c514050613e18c9497bf75788f3",
+   "old": "createMongoRunnerDeps",
+   "new": "scalar",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "1684b7e687111c514050613e18c9497bf75788f3",
+   "old": "createMongoRunnerDeps",
+   "new": "int64",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "1684b7e687111c514050613e18c9497bf75788f3",
+   "old": "createMongoRunnerDeps",
+   "new": "decimal128",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "1684b7e687111c514050613e18c9497bf75788f3",
+   "old": "createMongoRunnerDeps",
+   "new": "binary",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "1684b7e687111c514050613e18c9497bf75788f3",
+   "old": "createMongoRunnerDeps",
+   "new": "json",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "1684b7e687111c514050613e18c9497bf75788f3",
+   "old": "createMongoRunnerDeps",
+   "new": "createRunnerDependencies",
+   "source": "S3",
+   "reason": "body similarity 0.346 < 0.5"
+  },
+  {
+   "commit": "62ceaab8541bdcdbc66c106bc894b7771b8be521",
+   "old": "resolveReferencedModel",
+   "new": "declaredSymbol",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "62ceaab8541bdcdbc66c106bc894b7771b8be521",
+   "old": "resolveReferencedModel",
+   "new": "symbolForNode",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "62ceaab8541bdcdbc66c106bc894b7771b8be521",
+   "old": "resolveReferencedModel",
+   "new": "createBinder",
+   "source": "S3",
+   "reason": "body similarity 0.069 < 0.5"
+  },
+  {
+   "commit": "62ceaab8541bdcdbc66c106bc894b7771b8be521",
+   "old": "resolveReferencedModel",
+   "new": "bind",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "62ceaab8541bdcdbc66c106bc894b7771b8be521",
+   "old": "resolveReferencedModel",
+   "new": "resolve",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "collectConfigIssues",
+   "new": "loadConfigFiles",
+   "source": "S3",
+   "reason": "body similarity 0.041 < 0.5"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "projectConfigPathFor",
+   "new": "loadConfigFiles",
+   "source": "S3",
+   "reason": "body similarity 0.030 < 0.5"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "extensions",
+   "new": "loadConfigFiles",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "collectConfigIssues",
+   "new": "ormConfigSchema",
+   "source": "S3",
+   "reason": "body similarity 0.038 < 0.5"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "projectConfigPathFor",
+   "new": "ormConfigSchema",
+   "source": "S3",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "extensions",
+   "new": "ormConfigSchema",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "collectConfigIssues",
+   "new": "family",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "projectConfigPathFor",
+   "new": "family",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "extensions",
+   "new": "family",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "collectConfigIssues",
+   "new": "fields",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "projectConfigPathFor",
+   "new": "fields",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "b313e84c588d02ddf9e2a2b7466ea11229393b3e",
+   "old": "extensions",
+   "new": "fields",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "200c2e2ece23d0e9b3ce9edcb5525ee8524f3f87",
+   "old": "findUnambiguousTip",
+   "new": "resolveDefaultOriginHash",
+   "source": "S3",
+   "reason": "body similarity 0.091 < 0.5"
+  },
+  {
+   "commit": "200c2e2ece23d0e9b3ce9edcb5525ee8524f3f87",
+   "old": "findDivergencePoint",
+   "new": "resolveDefaultOriginHash",
+   "source": "S3",
+   "reason": "body similarity 0.055 < 0.5"
+  },
+  {
+   "commit": "200c2e2ece23d0e9b3ce9edcb5525ee8524f3f87",
+   "old": "findReachableLeaves",
+   "new": "resolveDefaultOriginHash",
+   "source": "S3",
+   "reason": "body similarity 0.066 < 0.5"
+  },
+  {
+   "commit": "200c2e2ece23d0e9b3ce9edcb5525ee8524f3f87",
+   "old": "findLeaf",
+   "new": "resolveDefaultOriginHash",
+   "source": "S3",
+   "reason": "body similarity 0.029 < 0.5"
+  },
+  {
+   "commit": "200c2e2ece23d0e9b3ce9edcb5525ee8524f3f87",
+   "old": "findLatestMigration",
+   "new": "resolveDefaultOriginHash",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "ebfc118a257251af222e313eb8f7c9f3b39b6bbf",
+   "old": "text",
+   "new": "unregistered",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ebfc118a257251af222e313eb8f7c9f3b39b6bbf",
+   "old": "text",
+   "new": "dataType",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ebfc118a257251af222e313eb8f7c9f3b39b6bbf",
+   "old": "text",
+   "new": "codec",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ebfc118a257251af222e313eb8f7c9f3b39b6bbf",
+   "old": "text",
+   "new": "unchanged",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ebfc118a257251af222e313eb8f7c9f3b39b6bbf",
+   "old": "text",
+   "new": "tagged",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ebfc118a257251af222e313eb8f7c9f3b39b6bbf",
+   "old": "text",
+   "new": "asNumeralText",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "ebfc118a257251af222e313eb8f7c9f3b39b6bbf",
+   "old": "text",
+   "new": "entry",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "3cd6c618aead86ba4d63b196e97bff011edba1fd",
+   "old": "parseRawDefault",
+   "new": "unknown",
+   "source": "S3",
+   "reason": "body similarity 0.009 < 0.5"
+  },
+  {
+   "commit": "3cd6c618aead86ba4d63b196e97bff011edba1fd",
+   "old": "parseRawDefault",
+   "new": "load",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "3cd6c618aead86ba4d63b196e97bff011edba1fd",
+   "old": "parseRawDefault",
+   "new": "onDelete",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "3cd6c618aead86ba4d63b196e97bff011edba1fd",
+   "old": "parseRawDefault",
+   "new": "text",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "3cd6c618aead86ba4d63b196e97bff011edba1fd",
+   "old": "parseRawDefault",
+   "new": "prisma7Schema",
+   "source": "S3",
+   "reason": "body similarity 0.009 < 0.5"
+  },
+  {
+   "commit": "3cd6c618aead86ba4d63b196e97bff011edba1fd",
+   "old": "parseRawDefault",
+   "new": "column",
+   "source": "S3",
+   "reason": "body similarity 0.019 < 0.5"
+  },
+  {
+   "commit": "3cd6c618aead86ba4d63b196e97bff011edba1fd",
+   "old": "parseRawDefault",
+   "new": "output",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "74fc013feeeb37728192b46a44773f545b37920a",
+   "old": "readContractSnapshotDts",
+   "new": "renderSnapshotDeclarations",
+   "source": "S3",
+   "reason": "body similarity 0.048 < 0.5"
+  },
+  {
+   "commit": "b734ad970947018cce9ed8b2593c5435f76eb4a4",
+   "old": "readContractIR",
+   "new": "renderContractDts",
+   "source": "S3",
+   "reason": "body similarity 0.051 < 0.5"
+  },
+  {
+   "commit": "b734ad970947018cce9ed8b2593c5435f76eb4a4",
+   "old": "resolveRefAdvancementFields",
+   "new": "renderContractDts",
+   "source": "S3",
+   "reason": "body similarity 0.091 < 0.5"
+  },
+  {
+   "commit": "b734ad970947018cce9ed8b2593c5435f76eb4a4",
+   "old": "readContractIR",
+   "new": "emitArtifacts",
+   "source": "S3",
+   "reason": "body similarity 0.024 < 0.5"
+  },
+  {
+   "commit": "b734ad970947018cce9ed8b2593c5435f76eb4a4",
+   "old": "resolveRefAdvancementFields",
+   "new": "emitArtifacts",
+   "source": "S3",
+   "reason": "body similarity 0.053 < 0.5"
+  },
+  {
+   "commit": "680c1d4cd3c33c972cec54486eafabc0285bf38b",
+   "old": "buildIndexModelSpecs",
+   "new": "reportUnknownAttributes",
+   "source": "S3",
+   "reason": "body similarity 0.020 < 0.5"
+  },
+  {
+   "commit": "680c1d4cd3c33c972cec54486eafabc0285bf38b",
+   "old": "buildIndexModelSpecs",
+   "new": "specContextFor",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "680c1d4cd3c33c972cec54486eafabc0285bf38b",
+   "old": "buildIndexModelSpecs",
+   "new": "modelFieldElement",
+   "source": "S3",
+   "reason": "body similarity 0.077 < 0.5"
+  },
+  {
+   "commit": "680c1d4cd3c33c972cec54486eafabc0285bf38b",
+   "old": "buildIndexModelSpecs",
+   "new": "staticModelSpec",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "680c1d4cd3c33c972cec54486eafabc0285bf38b",
+   "old": "buildIndexModelSpecs",
+   "new": "staticFieldSpec",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "07580b3da8e9b4514116dcffbad1683fef52ddee",
+   "old": "buildDefaultSpec",
+   "new": "project",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "07580b3da8e9b4514116dcffbad1683fef52ddee",
+   "old": "buildEnumDefaultSpec",
+   "new": "project",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "07580b3da8e9b4514116dcffbad1683fef52ddee",
+   "old": "buildDefaultSpec",
+   "new": "field",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "07580b3da8e9b4514116dcffbad1683fef52ddee",
+   "old": "buildEnumDefaultSpec",
+   "new": "field",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "2a24da40967834cc88542acf39175f12e4df87b6",
+   "old": "seamExpectation",
+   "new": "runMigrationFile",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "2a24da40967834cc88542acf39175f12e4df87b6",
+   "old": "runMigrationEmit",
+   "new": "runMigrationFile",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "2a24da40967834cc88542acf39175f12e4df87b6",
+   "old": "seamExpectation",
+   "new": "selfEmitMigration",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "2a24da40967834cc88542acf39175f12e4df87b6",
+   "old": "runMigrationEmit",
+   "new": "selfEmitMigration",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "2a24da40967834cc88542acf39175f12e4df87b6",
+   "old": "seamExpectation",
+   "new": "planMigrationAndSelfEmit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "2a24da40967834cc88542acf39175f12e4df87b6",
+   "old": "runMigrationEmit",
+   "new": "planMigrationAndSelfEmit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "2a24da40967834cc88542acf39175f12e4df87b6",
+   "old": "seamExpectation",
+   "new": "latestMigrationDirName",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "2a24da40967834cc88542acf39175f12e4df87b6",
+   "old": "runMigrationEmit",
+   "new": "latestMigrationDirName",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "941195d032a1fc027f93ce32ce59f2a5617f71af",
+   "old": "NO_COLOR",
+   "new": "toneDrawing",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "configError",
+   "new": "collectConfigIssues",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "validateConfig",
+   "new": "collectConfigIssues",
+   "source": "S3",
+   "reason": "body similarity 0.083 < 0.5"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "configError",
+   "new": "record",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "validateConfig",
+   "new": "record",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "configError",
+   "new": "init",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "validateConfig",
+   "new": "init",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "configError",
+   "new": "dbInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "validateConfig",
+   "new": "dbInit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "configError",
+   "new": "migrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "validateConfig",
+   "new": "migrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "configError",
+   "new": "emit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "validateConfig",
+   "new": "emit",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "configError",
+   "new": "createFixtureControlClient",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "validateConfig",
+   "new": "createFixtureControlClient",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "configError",
+   "new": "requireConfigSections",
+   "source": "S3",
+   "reason": "body similarity 0.025 < 0.5"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "validateConfig",
+   "new": "requireConfigSections",
+   "source": "S3",
+   "reason": "body similarity 0.004 < 0.5"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "configError",
+   "new": "loadConfigForSections",
+   "source": "S3",
+   "reason": "body similarity 0.034 < 0.5"
+  },
+  {
+   "commit": "15308c672beb9bfc0f1a0b012846464fe5cf4427",
+   "old": "validateConfig",
+   "new": "loadConfigForSections",
+   "source": "S3",
+   "reason": "body similarity 0.003 < 0.5"
+  },
+  {
+   "commit": "e43c51aa2941f37a04a9570d919bfc35c09568ed",
+   "old": "expectConvergesOnDerivedChecks",
+   "new": "composeCheckWirePrefix",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "e43c51aa2941f37a04a9570d919bfc35c09568ed",
+   "old": "expectConvergesOnDerivedChecks",
+   "new": "noCheck",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "202819d12433a73b8d52b15783cbb9fa5718486e",
+   "old": "metaFor",
+   "new": "jsonEntryProjection",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "202819d12433a73b8d52b15783cbb9fa5718486e",
+   "old": "metaFor",
+   "new": "field",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "202819d12433a73b8d52b15783cbb9fa5718486e",
+   "old": "metaFor",
+   "new": "interval",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "202819d12433a73b8d52b15783cbb9fa5718486e",
+   "old": "metaFor",
+   "new": "nested",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "202819d12433a73b8d52b15783cbb9fa5718486e",
+   "old": "metaFor",
+   "new": "identity",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ca1f3a16bd4a3f7d913761c466f559862267b535",
+   "old": "resolveDbNativeTypeAttribute",
+   "new": "formatDbAttributeMigrationMessage",
+   "source": "S3",
+   "reason": "body similarity 0.099 < 0.5"
+  },
+  {
+   "commit": "40f0460fd2b9782f7873a9366fea8cdb40a1fc2b",
+   "old": "updateCount",
+   "new": "createAndCount",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "40f0460fd2b9782f7873a9366fea8cdb40a1fc2b",
+   "old": "deleteCount",
+   "new": "createAndCount",
+   "source": "S3",
+   "reason": "body similarity 0.323 < 0.5"
+  },
+  {
+   "commit": "40f0460fd2b9782f7873a9366fea8cdb40a1fc2b",
+   "old": "createCount",
+   "new": "updateAndCount",
+   "source": "S3",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "40f0460fd2b9782f7873a9366fea8cdb40a1fc2b",
+   "old": "createCount",
+   "new": "deleteAndCount",
+   "source": "S3",
+   "reason": "body similarity 0.323 < 0.5"
+  },
+  {
+   "commit": "cdd7463b899c133a76c3e8261fab70b39476c4fc",
+   "old": "normalizeHashPrefix",
+   "new": "emit",
+   "source": "S3",
+   "reason": "body similarity 0.059 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planInvalid",
+   "new": "isInternalError",
+   "source": "S3",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planUnsupported",
+   "new": "isInternalError",
+   "source": "S3",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planInvalid",
+   "new": "assertNever",
+   "source": "S3",
+   "reason": "body similarity 0.087 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planUnsupported",
+   "new": "assertNever",
+   "source": "S3",
+   "reason": "body similarity 0.087 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planInvalid",
+   "new": "isStructuredError",
+   "source": "S3",
+   "reason": "body similarity 0.115 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planUnsupported",
+   "new": "isStructuredError",
+   "source": "S3",
+   "reason": "body similarity 0.115 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planInvalid",
+   "new": "structuredError",
+   "source": "S3",
+   "reason": "body similarity 0.216 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planUnsupported",
+   "new": "structuredError",
+   "source": "S3",
+   "reason": "body similarity 0.216 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planInvalid",
+   "new": "docsUrlFor",
+   "source": "S3",
+   "reason": "body similarity 0.073 < 0.5"
+  },
+  {
+   "commit": "095b52c4eaf6b203a2ee94f4ecb24579bd6c0fa2",
+   "old": "planUnsupported",
+   "new": "docsUrlFor",
+   "source": "S3",
+   "reason": "body similarity 0.073 < 0.5"
+  },
+  {
+   "commit": "0df4f7a1e75240f72ea624e9fcd1ed13e538fde7",
+   "old": "bootstrapSupabaseShim",
+   "new": "allStorageElementsExternal",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "0df4f7a1e75240f72ea624e9fcd1ed13e538fde7",
+   "old": "bootstrapSupabaseShim",
+   "new": "setUpSupabaseMockSchema",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "0df4f7a1e75240f72ea624e9fcd1ed13e538fde7",
+   "old": "bootstrapSupabaseShim",
+   "new": "enableRowLevelSecurity",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "0df4f7a1e75240f72ea624e9fcd1ed13e538fde7",
+   "old": "bootstrapSupabaseShim",
+   "new": "createRlsPolicy",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "cfea1a265574ad71a819e7abc95202be9a28d487",
+   "old": "nodeIssueOrder",
+   "new": "orderIssuesByDependencies",
+   "source": "S3",
+   "reason": "body similarity 0.071 < 0.5"
+  },
+  {
+   "commit": "cfea1a265574ad71a819e7abc95202be9a28d487",
+   "old": "nodeIssueOrder",
+   "new": "down",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "cfea1a265574ad71a819e7abc95202be9a28d487",
+   "old": "nodeIssueOrder",
+   "new": "build",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "cfea1a265574ad71a819e7abc95202be9a28d487",
+   "old": "nodeIssueOrder",
+   "new": "extra",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultFunctionCall",
+   "new": "funcCall",
+   "source": "S3",
+   "reason": "body similarity 0.036 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultLiteralValue",
+   "new": "funcCall",
+   "source": "S3",
+   "reason": "body similarity 0.054 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseListDefaultExpression",
+   "new": "funcCall",
+   "source": "S3",
+   "reason": "body similarity 0.060 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "expectNoArgs",
+   "new": "funcCall",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseIntegerArgument",
+   "new": "funcCall",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseStringLiteral",
+   "new": "funcCall",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultFunctionCall",
+   "new": "nanoid",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultLiteralValue",
+   "new": "nanoid",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseListDefaultExpression",
+   "new": "nanoid",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "expectNoArgs",
+   "new": "nanoid",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseIntegerArgument",
+   "new": "nanoid",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseStringLiteral",
+   "new": "nanoid",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultFunctionCall",
+   "new": "buildDefaultSpec",
+   "source": "S3",
+   "reason": "body similarity 0.005 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultLiteralValue",
+   "new": "buildDefaultSpec",
+   "source": "S3",
+   "reason": "body similarity 0.027 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseListDefaultExpression",
+   "new": "buildDefaultSpec",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "expectNoArgs",
+   "new": "buildDefaultSpec",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseIntegerArgument",
+   "new": "buildDefaultSpec",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseStringLiteral",
+   "new": "buildDefaultSpec",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultFunctionCall",
+   "new": "literal",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultLiteralValue",
+   "new": "literal",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseListDefaultExpression",
+   "new": "literal",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "expectNoArgs",
+   "new": "literal",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseIntegerArgument",
+   "new": "literal",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseStringLiteral",
+   "new": "literal",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultFunctionCall",
+   "new": "buildEnumDefaultSpec",
+   "source": "S3",
+   "reason": "body similarity 0.014 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultLiteralValue",
+   "new": "buildEnumDefaultSpec",
+   "source": "S3",
+   "reason": "body similarity 0.016 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseListDefaultExpression",
+   "new": "buildEnumDefaultSpec",
+   "source": "S3",
+   "reason": "body similarity 0.018 < 0.5"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "expectNoArgs",
+   "new": "buildEnumDefaultSpec",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseIntegerArgument",
+   "new": "buildEnumDefaultSpec",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseStringLiteral",
+   "new": "buildEnumDefaultSpec",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultFunctionCall",
+   "new": "call",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseDefaultLiteralValue",
+   "new": "call",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseListDefaultExpression",
+   "new": "call",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "expectNoArgs",
+   "new": "call",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseIntegerArgument",
+   "new": "call",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a7344a30798f137f4bfa8aed7119d663566fc3f0",
+   "old": "parseStringLiteral",
+   "new": "call",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseObjectLiteralStringMap",
+   "new": "bool",
+   "source": "S3",
+   "reason": "body similarity 0.029 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseAttributeFieldList",
+   "new": "bool",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseControlPolicyAttribute",
+   "new": "bool",
+   "source": "S3",
+   "reason": "body similarity 0.032 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseObjectLiteralStringMap",
+   "new": "entityRef",
+   "source": "S3",
+   "reason": "body similarity 0.020 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseAttributeFieldList",
+   "new": "entityRef",
+   "source": "S3",
+   "reason": "body similarity 0.027 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseControlPolicyAttribute",
+   "new": "entityRef",
+   "source": "S3",
+   "reason": "body similarity 0.036 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseObjectLiteralStringMap",
+   "new": "record",
+   "source": "S3",
+   "reason": "body similarity 0.154 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseAttributeFieldList",
+   "new": "record",
+   "source": "S3",
+   "reason": "body similarity 0.091 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseControlPolicyAttribute",
+   "new": "record",
+   "source": "S3",
+   "reason": "body similarity 0.088 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseObjectLiteralStringMap",
+   "new": "modelAttribute",
+   "source": "S3",
+   "reason": "body similarity 0.024 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseAttributeFieldList",
+   "new": "modelAttribute",
+   "source": "S3",
+   "reason": "body similarity 0.036 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseControlPolicyAttribute",
+   "new": "modelAttribute",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseObjectLiteralStringMap",
+   "new": "findModelAttributeNode",
+   "source": "S3",
+   "reason": "body similarity 0.004 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseAttributeFieldList",
+   "new": "findModelAttributeNode",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseControlPolicyAttribute",
+   "new": "findModelAttributeNode",
+   "source": "S3",
+   "reason": "body similarity 0.028 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseObjectLiteralStringMap",
+   "new": "findFieldAttributeNode",
+   "source": "S3",
+   "reason": "body similarity 0.004 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseAttributeFieldList",
+   "new": "findFieldAttributeNode",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "a65e8bd54508eed563f575309947153bad1119a7",
+   "old": "parseControlPolicyAttribute",
+   "new": "findFieldAttributeNode",
+   "source": "S3",
+   "reason": "body similarity 0.028 < 0.5"
+  },
+  {
+   "commit": "1dbc0af6832f10a212ce4777b54e48c274de4c5f",
+   "old": "currentDocumentArtifact",
+   "new": "drop",
+   "source": "S3",
+   "reason": "body similarity 0.091 < 0.5"
+  },
+  {
+   "commit": "03730a53314c697b156bf6b5b436ea6eee92cfda",
+   "old": "parseRelationAttribute",
+   "new": "fieldRef",
+   "source": "S3",
+   "reason": "body similarity 0.063 < 0.5"
+  },
+  {
+   "commit": "03730a53314c697b156bf6b5b436ea6eee92cfda",
+   "old": "parseRelationAttribute",
+   "new": "identifier",
+   "source": "S3",
+   "reason": "body similarity 0.035 < 0.5"
+  },
+  {
+   "commit": "03730a53314c697b156bf6b5b436ea6eee92cfda",
+   "old": "parseRelationAttribute",
+   "new": "list",
+   "source": "S3",
+   "reason": "body similarity 0.060 < 0.5"
+  },
+  {
+   "commit": "03730a53314c697b156bf6b5b436ea6eee92cfda",
+   "old": "parseRelationAttribute",
+   "new": "oneOf",
+   "source": "S3",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "03730a53314c697b156bf6b5b436ea6eee92cfda",
+   "old": "parseRelationAttribute",
+   "new": "fieldAttribute",
+   "source": "S3",
+   "reason": "body similarity 0.027 < 0.5"
+  },
+  {
+   "commit": "03730a53314c697b156bf6b5b436ea6eee92cfda",
+   "old": "parseRelationAttribute",
+   "new": "interpretAttribute",
+   "source": "S3",
+   "reason": "body similarity 0.106 < 0.5"
+  },
+  {
+   "commit": "03730a53314c697b156bf6b5b436ea6eee92cfda",
+   "old": "parseRelationAttribute",
+   "new": "diagnostic",
+   "source": "S3",
+   "reason": "body similarity 0.020 < 0.5"
+  },
+  {
+   "commit": "03730a53314c697b156bf6b5b436ea6eee92cfda",
+   "old": "parseRelationAttribute",
+   "new": "optional",
+   "source": "S3",
+   "reason": "body similarity 0.007 < 0.5"
+  },
+  {
+   "commit": "03730a53314c697b156bf6b5b436ea6eee92cfda",
+   "old": "parseRelationAttribute",
+   "new": "leaf",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderEnumMemberLiteral",
+   "new": "renderValueSetType",
+   "source": "S3",
+   "reason": "body similarity 0.122 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "lookup",
+   "new": "renderValueSetType",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderValueSetLiteral",
+   "new": "renderValueSetType",
+   "source": "S3",
+   "reason": "body similarity 0.122 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderValueSetUnionBase",
+   "new": "renderValueSetType",
+   "source": "S3",
+   "reason": "body similarity 0.459 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderEnumMemberLiteral",
+   "new": "resolveFieldValueSet",
+   "source": "S3",
+   "reason": "body similarity 0.075 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderEnumValueUnion",
+   "new": "resolveFieldValueSet",
+   "source": "S3",
+   "reason": "body similarity 0.083 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "lookup",
+   "new": "resolveFieldValueSet",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderValueSetLiteral",
+   "new": "resolveFieldValueSet",
+   "source": "S3",
+   "reason": "body similarity 0.075 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderValueSetUnionBase",
+   "new": "resolveFieldValueSet",
+   "source": "S3",
+   "reason": "body similarity 0.066 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderEnumMemberLiteral",
+   "new": "renderValueLiteral",
+   "source": "S3",
+   "reason": "body similarity 0.286 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderEnumValueUnion",
+   "new": "renderValueLiteral",
+   "source": "S3",
+   "reason": "body similarity 0.182 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "lookup",
+   "new": "renderValueLiteral",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderValueSetLiteral",
+   "new": "renderValueLiteral",
+   "source": "S3",
+   "reason": "body similarity 0.286 < 0.5"
+  },
+  {
+   "commit": "4d8ab61b4a098d1ad5b37ac2bf008994db6eeff9",
+   "old": "renderValueSetUnionBase",
+   "new": "renderValueLiteral",
+   "source": "S3",
+   "reason": "body similarity 0.083 < 0.5"
+  },
+  {
+   "commit": "a0ed104ed90dfe4afe16a2189801f1de86c5e2ca",
+   "old": "diffNodes",
+   "new": "diffSchemas",
+   "source": "S3",
+   "reason": "body similarity 0.085 < 0.5"
+  },
+  {
+   "commit": "a0ed104ed90dfe4afe16a2189801f1de86c5e2ca",
+   "old": "identity",
+   "new": "diffSchemas",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a0ed104ed90dfe4afe16a2189801f1de86c5e2ca",
+   "old": "diffNodes",
+   "new": "children",
+   "source": "S3",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "a0ed104ed90dfe4afe16a2189801f1de86c5e2ca",
+   "old": "identity",
+   "new": "children",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a0ed104ed90dfe4afe16a2189801f1de86c5e2ca",
+   "old": "diffNodes",
+   "new": "diffPostgresSchema",
+   "source": "S3",
+   "reason": "body similarity 0.119 < 0.5"
+  },
+  {
+   "commit": "a0ed104ed90dfe4afe16a2189801f1de86c5e2ca",
+   "old": "identity",
+   "new": "diffPostgresSchema",
+   "source": "S3",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "9532c5f5a21aa6bb8f21cd77029d71af237c73fd",
+   "old": "fromTablesInput",
+   "new": "createTestSqlNamespace",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9532c5f5a21aa6bb8f21cd77029d71af237c73fd",
+   "old": "buildSqlNamespace",
+   "new": "createTestSqlNamespace",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9532c5f5a21aa6bb8f21cd77029d71af237c73fd",
+   "old": "buildSqlNamespaceMap",
+   "new": "createTestSqlNamespace",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9532c5f5a21aa6bb8f21cd77029d71af237c73fd",
+   "old": "defaultNamespaceId",
+   "new": "createTestSqlNamespace",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "25f11854bacb8d40f7553e99c7375de474bc48a7",
+   "old": "parsePslDocument",
+   "new": "buildSymbolTable",
+   "source": "S3",
+   "reason": "body similarity 0.092 < 0.5"
+  },
+  {
+   "commit": "25f11854bacb8d40f7553e99c7375de474bc48a7",
+   "old": "dedupeDiagnostics",
+   "new": "buildSymbolTable",
+   "source": "S3",
+   "reason": "body similarity 0.019 < 0.5"
+  },
+  {
+   "commit": "25f11854bacb8d40f7553e99c7375de474bc48a7",
+   "old": "parsePslDocument",
+   "new": "build",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "25f11854bacb8d40f7553e99c7375de474bc48a7",
+   "old": "dedupeDiagnostics",
+   "new": "build",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "25f11854bacb8d40f7553e99c7375de474bc48a7",
+   "old": "parsePslDocument",
+   "new": "reconstruct",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "25f11854bacb8d40f7553e99c7375de474bc48a7",
+   "old": "dedupeDiagnostics",
+   "new": "reconstruct",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "25f11854bacb8d40f7553e99c7375de474bc48a7",
+   "old": "parsePslDocument",
+   "new": "validate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "25f11854bacb8d40f7553e99c7375de474bc48a7",
+   "old": "dedupeDiagnostics",
+   "new": "validate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "46d58b1fd1fa200e9c747a7a1a6c296d85cfd735",
+   "old": "parseEnum",
+   "new": "parseQualifiedName",
+   "source": "S3",
+   "reason": "body similarity 0.148 < 0.5"
+  },
+  {
+   "commit": "46d58b1fd1fa200e9c747a7a1a6c296d85cfd735",
+   "old": "parseEnum",
+   "new": "parseQualifiedSegments",
+   "source": "S3",
+   "reason": "body similarity 0.078 < 0.5"
+  },
+  {
+   "commit": "46d58b1fd1fa200e9c747a7a1a6c296d85cfd735",
+   "old": "parseEnum",
+   "new": "printSyntax",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "46d58b1fd1fa200e9c747a7a1a6c296d85cfd735",
+   "old": "parseEnum",
+   "new": "path",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "46d58b1fd1fa200e9c747a7a1a6c296d85cfd735",
+   "old": "parseEnum",
+   "new": "space",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "46d58b1fd1fa200e9c747a7a1a6c296d85cfd735",
+   "old": "parseEnum",
+   "new": "namespace",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "46d58b1fd1fa200e9c747a7a1a6c296d85cfd735",
+   "old": "parseEnum",
+   "new": "identifier",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "46d58b1fd1fa200e9c747a7a1a6c296d85cfd735",
+   "old": "parseEnum",
+   "new": "isOverQualified",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "10d8b60569b38a8a6e7cd901f810c61dcd3898e5",
+   "old": "constraintExistsCheck",
+   "new": "join",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "10d8b60569b38a8a6e7cd901f810c61dcd3898e5",
+   "old": "constraintExistsCheck",
+   "new": "leftJoin",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "10d8b60569b38a8a6e7cd901f810c61dcd3898e5",
+   "old": "constraintExistsCheck",
+   "new": "project",
+   "source": "S3",
+   "reason": "body similarity 0.013 < 0.5"
+  },
+  {
+   "commit": "10d8b60569b38a8a6e7cd901f810c61dcd3898e5",
+   "old": "constraintExistsCheck",
+   "new": "limit",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "10d8b60569b38a8a6e7cd901f810c61dcd3898e5",
+   "old": "constraintExistsCheck",
+   "new": "exprSelect",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "10d8b60569b38a8a6e7cd901f810c61dcd3898e5",
+   "old": "constraintExistsCheck",
+   "new": "toRegclass",
+   "source": "S3",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "10d8b60569b38a8a6e7cd901f810c61dcd3898e5",
+   "old": "constraintExistsCheck",
+   "new": "tableExistsAst",
+   "source": "S3",
+   "reason": "body similarity 0.120 < 0.5"
+  },
+  {
+   "commit": "10d8b60569b38a8a6e7cd901f810c61dcd3898e5",
+   "old": "constraintExistsCheck",
+   "new": "checks",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "10d8b60569b38a8a6e7cd901f810c61dcd3898e5",
+   "old": "constraintExistsCheck",
+   "new": "hasExplicitSchema",
+   "source": "S3",
+   "reason": "body similarity 0.125 < 0.5"
+  },
+  {
+   "commit": "de2048aec5d1eb049c770005e699d551596019c7",
+   "old": "isRecord",
+   "new": "composeMongoEntityKinds",
+   "source": "S3",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "de2048aec5d1eb049c770005e699d551596019c7",
+   "old": "hydrateEntriesKind",
+   "new": "composeMongoEntityKinds",
+   "source": "S3",
+   "reason": "body similarity 0.120 < 0.5"
+  },
+  {
+   "commit": "de2048aec5d1eb049c770005e699d551596019c7",
+   "old": "createSqlEntrySchemaRegistry",
+   "new": "composeMongoEntityKinds",
+   "source": "S3",
+   "reason": "body similarity 0.171 < 0.5"
+  },
+  {
+   "commit": "de2048aec5d1eb049c770005e699d551596019c7",
+   "old": "isRecord",
+   "new": "composeSqlEntityKinds",
+   "source": "S3",
+   "reason": "body similarity 0.020 < 0.5"
+  },
+  {
+   "commit": "de2048aec5d1eb049c770005e699d551596019c7",
+   "old": "hydrateEntriesKind",
+   "new": "composeSqlEntityKinds",
+   "source": "S3",
+   "reason": "body similarity 0.105 < 0.5"
+  },
+  {
+   "commit": "de2048aec5d1eb049c770005e699d551596019c7",
+   "old": "createSqlEntrySchemaRegistry",
+   "new": "composeSqlEntityKinds",
+   "source": "S3",
+   "reason": "body similarity 0.197 < 0.5"
+  },
+  {
+   "commit": "04bead8c572a68415dd75636bd2083e432655d11",
+   "old": "literal",
+   "new": "lowerToExecuteRequest",
+   "source": "S3",
+   "reason": "body similarity 0.009 < 0.5"
+  },
+  {
+   "commit": "04bead8c572a68415dd75636bd2083e432655d11",
+   "old": "function",
+   "new": "lowerToExecuteRequest",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "04bead8c572a68415dd75636bd2083e432655d11",
+   "old": "renderLoweredDdl",
+   "new": "lowerToExecuteRequest",
+   "source": "S3",
+   "reason": "body similarity 0.136 < 0.5"
+  },
+  {
+   "commit": "0a694de9ba95b004b2f98994f64b0308caebf864",
+   "old": "createRuntime",
+   "new": "createDb",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "0a694de9ba95b004b2f98994f64b0308caebf864",
+   "old": "createRuntime",
+   "new": "supabase",
+   "source": "S3",
+   "reason": "body similarity 0.074 < 0.5"
+  },
+  {
+   "commit": "0a694de9ba95b004b2f98994f64b0308caebf864",
+   "old": "createRuntime",
+   "new": "asUser",
+   "source": "S3",
+   "reason": "body similarity 0.029 < 0.5"
+  },
+  {
+   "commit": "0a694de9ba95b004b2f98994f64b0308caebf864",
+   "old": "createRuntime",
+   "new": "asAnon",
+   "source": "S3",
+   "reason": "body similarity 0.024 < 0.5"
+  },
+  {
+   "commit": "0a694de9ba95b004b2f98994f64b0308caebf864",
+   "old": "createRuntime",
+   "new": "asServiceRole",
+   "source": "S3",
+   "reason": "body similarity 0.024 < 0.5"
+  },
+  {
+   "commit": "0a694de9ba95b004b2f98994f64b0308caebf864",
+   "old": "createRuntime",
+   "new": "next",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "parseContractMarkerRow",
+   "new": "build",
+   "source": "S3",
+   "reason": "body similarity 0.034 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "writeContractMarker",
+   "new": "build",
+   "source": "S3",
+   "reason": "body similarity 0.013 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildMergeMarkerStatements",
+   "new": "build",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildLedgerInsertStatement",
+   "new": "build",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildWriteMarkerStatements",
+   "new": "build",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "parseContractMarkerRow",
+   "new": "seedTestMarker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "writeContractMarker",
+   "new": "seedTestMarker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildMergeMarkerStatements",
+   "new": "seedTestMarker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildLedgerInsertStatement",
+   "new": "seedTestMarker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildWriteMarkerStatements",
+   "new": "seedTestMarker",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "parseContractMarkerRow",
+   "new": "text",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "writeContractMarker",
+   "new": "text",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildMergeMarkerStatements",
+   "new": "text",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildLedgerInsertStatement",
+   "new": "text",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildWriteMarkerStatements",
+   "new": "text",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "parseContractMarkerRow",
+   "new": "datetime",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "writeContractMarker",
+   "new": "datetime",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildMergeMarkerStatements",
+   "new": "datetime",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildLedgerInsertStatement",
+   "new": "datetime",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildWriteMarkerStatements",
+   "new": "datetime",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "parseContractMarkerRow",
+   "new": "readMarkerResult",
+   "source": "S3",
+   "reason": "body similarity 0.138 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "writeContractMarker",
+   "new": "readMarkerResult",
+   "source": "S3",
+   "reason": "body similarity 0.063 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildMergeMarkerStatements",
+   "new": "readMarkerResult",
+   "source": "S3",
+   "reason": "body similarity 0.103 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildLedgerInsertStatement",
+   "new": "readMarkerResult",
+   "source": "S3",
+   "reason": "body similarity 0.030 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildWriteMarkerStatements",
+   "new": "readMarkerResult",
+   "source": "S3",
+   "reason": "body similarity 0.086 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "parseContractMarkerRow",
+   "new": "mergeInvariants",
+   "source": "S3",
+   "reason": "body similarity 0.014 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "writeContractMarker",
+   "new": "mergeInvariants",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildMergeMarkerStatements",
+   "new": "mergeInvariants",
+   "source": "S3",
+   "reason": "body similarity 0.036 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildLedgerInsertStatement",
+   "new": "mergeInvariants",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c159cd4237d9af641a819d668bf6ae2900c269c8",
+   "old": "buildWriteMarkerStatements",
+   "new": "mergeInvariants",
+   "source": "S3",
+   "reason": "body similarity 0.032 < 0.5"
+  },
+  {
+   "commit": "20062df230d1dc254714c20d1619fa099a4df580",
+   "old": "filter",
+   "new": "defaultSubjectLabel",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "20062df230d1dc254714c20d1619fa099a4df580",
+   "old": "filter",
+   "new": "buildSubjectSuppressionWarning",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "20062df230d1dc254714c20d1619fa099a4df580",
+   "old": "filter",
+   "new": "partitionIssuesByControlPolicy",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "20062df230d1dc254714c20d1619fa099a4df580",
+   "old": "filter",
+   "new": "issue",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "20062df230d1dc254714c20d1619fa099a4df580",
+   "old": "filter",
+   "new": "formatPostgresControlPolicySubjectLabel",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "resolveSingleDomainNamespaceId",
+   "new": "resolveDomainModel",
+   "source": "S3",
+   "reason": "body similarity 0.182 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "contractModels",
+   "new": "resolveDomainModel",
+   "source": "S3",
+   "reason": "body similarity 0.205 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "contractValueObjects",
+   "new": "resolveDomainModel",
+   "source": "S3",
+   "reason": "body similarity 0.170 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "defaultSqlNamespaceIdForTarget",
+   "new": "resolveDomainModel",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "resolveSingleDomainNamespaceId",
+   "new": "assertSingleDomainNamespaceForEmission",
+   "source": "S3",
+   "reason": "body similarity 0.420 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "contractModels",
+   "new": "assertSingleDomainNamespaceForEmission",
+   "source": "S3",
+   "reason": "body similarity 0.177 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "contractValueObjects",
+   "new": "assertSingleDomainNamespaceForEmission",
+   "source": "S3",
+   "reason": "body similarity 0.172 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "defaultSqlNamespaceIdForTarget",
+   "new": "assertSingleDomainNamespaceForEmission",
+   "source": "S3",
+   "reason": "body similarity 0.023 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "resolveSingleDomainNamespaceId",
+   "new": "resolveStorageTable",
+   "source": "S3",
+   "reason": "body similarity 0.114 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "contractModels",
+   "new": "resolveStorageTable",
+   "source": "S3",
+   "reason": "body similarity 0.082 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "contractValueObjects",
+   "new": "resolveStorageTable",
+   "source": "S3",
+   "reason": "body similarity 0.078 < 0.5"
+  },
+  {
+   "commit": "abf413ce2656f194088e86d22db2686a1dd9f668",
+   "old": "defaultSqlNamespaceIdForTarget",
+   "new": "resolveStorageTable",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "9bf2531bb15280afb47ba78e537ab1be0b12ce48",
+   "old": "effectiveControl",
+   "new": "effectiveControlPolicy",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "07b6bd080e43da15c774e297700aba6606585c47",
+   "old": "selectIncludeStrategy",
+   "new": "compileSelectWithIncludes",
+   "source": "S3",
+   "reason": "body similarity 0.048 < 0.5"
+  },
+  {
+   "commit": "07b6bd080e43da15c774e297700aba6606585c47",
+   "old": "buildLateralIncludeArtifacts",
+   "new": "compileSelectWithIncludes",
+   "source": "S3",
+   "reason": "body similarity 0.084 < 0.5"
+  },
+  {
+   "commit": "07b6bd080e43da15c774e297700aba6606585c47",
+   "old": "compileSelectWithIncludeStrategy",
+   "new": "compileSelectWithIncludes",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "65be1ba74ab05800363310cc0936a63d079e0d82",
+   "old": "runVerifyAggregate",
+   "new": "verifyMigration",
+   "source": "S3",
+   "reason": "body similarity 0.031 < 0.5"
+  },
+  {
+   "commit": "65be1ba74ab05800363310cc0936a63d079e0d82",
+   "old": "verifyAggregate",
+   "new": "runVerifyMigration",
+   "source": "S3",
+   "reason": "body similarity 0.031 < 0.5"
+  },
+  {
+   "commit": "f90d56492d93c7da8641117278610fa52f812306",
+   "old": "executeAggregateApply",
+   "new": "applyMigration",
+   "source": "S3",
+   "reason": "body similarity 0.185 < 0.5"
+  },
+  {
+   "commit": "f90d56492d93c7da8641117278610fa52f812306",
+   "old": "planAggregate",
+   "new": "applyMigration",
+   "source": "S3",
+   "reason": "body similarity 0.094 < 0.5"
+  },
+  {
+   "commit": "f90d56492d93c7da8641117278610fa52f812306",
+   "old": "applyAggregate",
+   "new": "executeApply",
+   "source": "S3",
+   "reason": "body similarity 0.185 < 0.5"
+  },
+  {
+   "commit": "f90d56492d93c7da8641117278610fa52f812306",
+   "old": "planAggregate",
+   "new": "executeApply",
+   "source": "S3",
+   "reason": "body similarity 0.136 < 0.5"
+  },
+  {
+   "commit": "f90d56492d93c7da8641117278610fa52f812306",
+   "old": "applyAggregate",
+   "new": "planMigration",
+   "source": "S3",
+   "reason": "body similarity 0.094 < 0.5"
+  },
+  {
+   "commit": "f90d56492d93c7da8641117278610fa52f812306",
+   "old": "executeAggregateApply",
+   "new": "planMigration",
+   "source": "S3",
+   "reason": "body similarity 0.136 < 0.5"
+  },
+  {
+   "commit": "ccf094bb8c9bb98b82498d1e243df2f1d5795c67",
+   "old": "appContractShellForAggregateLoad",
+   "new": "migrationSpaceListEntriesFromAggregate",
+   "source": "S3",
+   "reason": "body similarity 0.030 < 0.5"
+  },
+  {
+   "commit": "ccf094bb8c9bb98b82498d1e243df2f1d5795c67",
+   "old": "loadMigrationPackages",
+   "new": "migrationSpaceListEntriesFromAggregate",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "ccf094bb8c9bb98b82498d1e243df2f1d5795c67",
+   "old": "appContractShellForAggregateLoad",
+   "new": "buildReadAggregate",
+   "source": "S3",
+   "reason": "body similarity 0.131 < 0.5"
+  },
+  {
+   "commit": "ccf094bb8c9bb98b82498d1e243df2f1d5795c67",
+   "old": "loadMigrationPackages",
+   "new": "buildReadAggregate",
+   "source": "S3",
+   "reason": "body similarity 0.041 < 0.5"
+  },
+  {
+   "commit": "ccf094bb8c9bb98b82498d1e243df2f1d5795c67",
+   "old": "enumerateMigrationSpaces",
+   "new": "buildReadAggregate",
+   "source": "S3",
+   "reason": "body similarity 0.031 < 0.5"
+  },
+  {
+   "commit": "ccf094bb8c9bb98b82498d1e243df2f1d5795c67",
+   "old": "appContractShellForAggregateLoad",
+   "new": "refsByContractHash",
+   "source": "S3",
+   "reason": "body similarity 0.060 < 0.5"
+  },
+  {
+   "commit": "ccf094bb8c9bb98b82498d1e243df2f1d5795c67",
+   "old": "loadMigrationPackages",
+   "new": "refsByContractHash",
+   "source": "S3",
+   "reason": "body similarity 0.033 < 0.5"
+  },
+  {
+   "commit": "ccf094bb8c9bb98b82498d1e243df2f1d5795c67",
+   "old": "enumerateMigrationSpaces",
+   "new": "refsByContractHash",
+   "source": "S3",
+   "reason": "body similarity 0.074 < 0.5"
+  },
+  {
+   "commit": "5d56a7cdb93dee8182053866283295ef3651fbea",
+   "old": "dispatchWithIncludeStrategy",
+   "new": "dispatchWithIncludes",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "dd12e5abf519f1c5cb309476e288fdbaa44b3890",
+   "old": "loadConfigForTelemetry",
+   "new": "loadProjectConfig",
+   "source": "S3",
+   "reason": "body similarity 0.341 < 0.5"
+  },
+  {
+   "commit": "559841a64c0dac133c42513030beb5022c644795",
+   "old": "runMigrationRef",
+   "new": "runRef",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "871d9fcaa0c9cd50472ce0a9cc3c15dcb60b8f55",
+   "old": "runMigrationApply",
+   "new": "createMigrateCommand",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "871d9fcaa0c9cd50472ce0a9cc3c15dcb60b8f55",
+   "old": "runMigrationApply",
+   "new": "runMigrate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "221b5c5902f56764f6b24235a6f20158ff96d751",
+   "old": "calculateNextStableVersion",
+   "new": "computeNextMinor",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "221b5c5902f56764f6b24235a6f20158ff96d751",
+   "old": "calculateNextStableVersion",
+   "new": "assertCanonicalBase",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "5443ce65f9a595280ffce74efc5f813daf7cf296",
+   "old": "extractTableNames",
+   "new": "extractStorageElementNames",
+   "source": "S3",
+   "reason": "body similarity 0.481 < 0.5"
+  },
+  {
+   "commit": "37c2ec08a06add5734aa0cd269cbfb1ee5d9a323",
+   "old": "ensureString",
+   "new": "asSdkPlaintext",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "validateParamRefRefs",
+   "new": "codecRefForColumn",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "forCodecId",
+   "new": "codecRefForColumn",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "validateParamRefRefs",
+   "new": "codecRefForStorageColumn",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "forCodecId",
+   "new": "codecRefForStorageColumn",
+   "source": "S3",
+   "reason": "body similarity 0.067 < 0.5"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "validateParamRefRefs",
+   "new": "forCodecRef",
+   "source": "S3",
+   "reason": "body similarity 0.182 < 0.5"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "forCodecId",
+   "new": "forCodecRef",
+   "source": "S3",
+   "reason": "body similarity 0.154 < 0.5"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "validateParamRefRefs",
+   "new": "assertColumnCodecIntegrity",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "forCodecId",
+   "new": "assertColumnCodecIntegrity",
+   "source": "S3",
+   "reason": "body similarity 0.139 < 0.5"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "validateParamRefRefs",
+   "new": "lowerAst",
+   "source": "S3",
+   "reason": "body similarity 0.053 < 0.5"
+  },
+  {
+   "commit": "c0d9dde7405cb4fb890c1d78eec3067c02550eb7",
+   "old": "forCodecId",
+   "new": "lowerAst",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "84e9d887058130ff2f7bc99c091cf135ab0f534d",
+   "old": "readMarkerStatement",
+   "new": "query",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "84e9d887058130ff2f7bc99c091cf135ab0f534d",
+   "old": "createStaleMarkerDriver",
+   "new": "query",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "84e9d887058130ff2f7bc99c091cf135ab0f534d",
+   "old": "readMarkerStatement",
+   "new": "cleanup",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "84e9d887058130ff2f7bc99c091cf135ab0f534d",
+   "old": "createStaleMarkerDriver",
+   "new": "cleanup",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "text",
+   "new": "validateIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "numeric",
+   "new": "validateIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "boolean",
+   "new": "validateIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "json",
+   "new": "validateIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "expression",
+   "new": "validateIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "bm25Index",
+   "new": "validateIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "text",
+   "new": "defineIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "numeric",
+   "new": "defineIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "boolean",
+   "new": "defineIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "json",
+   "new": "defineIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "expression",
+   "new": "defineIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "bm25Index",
+   "new": "defineIndexTypes",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "text",
+   "new": "register",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "numeric",
+   "new": "register",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "boolean",
+   "new": "register",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "json",
+   "new": "register",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "expression",
+   "new": "register",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "bm25Index",
+   "new": "register",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "text",
+   "new": "createIndexTypeRegistry",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "numeric",
+   "new": "createIndexTypeRegistry",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "boolean",
+   "new": "createIndexTypeRegistry",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "json",
+   "new": "createIndexTypeRegistry",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "expression",
+   "new": "createIndexTypeRegistry",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "bm25Index",
+   "new": "createIndexTypeRegistry",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "text",
+   "new": "indexExtrasMatch",
+   "source": "S3",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "numeric",
+   "new": "indexExtrasMatch",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "boolean",
+   "new": "indexExtrasMatch",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "json",
+   "new": "indexExtrasMatch",
+   "source": "S3",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "expression",
+   "new": "indexExtrasMatch",
+   "source": "S3",
+   "reason": "body similarity 0.023 < 0.5"
+  },
+  {
+   "commit": "0a857edd1f7d05dc775ef49dd2af1d01e5e2881d",
+   "old": "bm25Index",
+   "new": "indexExtrasMatch",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "b5d1e19d3fc89c5c891c64ed9c149221c0bc763f",
+   "old": "migrateMarkerSchemaSqlite",
+   "new": "detectLegacyMarkerShape",
+   "source": "S3",
+   "reason": "body similarity 0.170 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "synthesizeNonParameterizedDescriptor",
+   "new": "isParameterized",
+   "source": "S3",
+   "reason": "body similarity 0.017 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "register",
+   "new": "isParameterized",
+   "source": "S3",
+   "reason": "body similarity 0.025 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "codec",
+   "new": "isParameterized",
+   "source": "S3",
+   "reason": "body similarity 0.005 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "aliasCodec",
+   "new": "isParameterized",
+   "source": "S3",
+   "reason": "body similarity 0.012 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "parameterizedCodecs",
+   "new": "isParameterized",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "synthesizeNonParameterizedDescriptor",
+   "new": "encode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "register",
+   "new": "encode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "codec",
+   "new": "encode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "aliasCodec",
+   "new": "encode",
+   "source": "S3",
+   "reason": "body similarity 0.023 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "parameterizedCodecs",
+   "new": "encode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "synthesizeNonParameterizedDescriptor",
+   "new": "decode",
+   "source": "S3",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "register",
+   "new": "decode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "codec",
+   "new": "decode",
+   "source": "S3",
+   "reason": "body similarity 0.045 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "aliasCodec",
+   "new": "decode",
+   "source": "S3",
+   "reason": "body similarity 0.034 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "parameterizedCodecs",
+   "new": "decode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "synthesizeNonParameterizedDescriptor",
+   "new": "decodeJson",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "register",
+   "new": "decodeJson",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "codec",
+   "new": "decodeJson",
+   "source": "S3",
+   "reason": "body similarity 0.030 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "aliasCodec",
+   "new": "decodeJson",
+   "source": "S3",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "parameterizedCodecs",
+   "new": "decodeJson",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "synthesizeNonParameterizedDescriptor",
+   "new": "validateParamRefRefs",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "register",
+   "new": "validateParamRefRefs",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "codec",
+   "new": "validateParamRefRefs",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "aliasCodec",
+   "new": "validateParamRefRefs",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "parameterizedCodecs",
+   "new": "validateParamRefRefs",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "synthesizeNonParameterizedDescriptor",
+   "new": "assertVector",
+   "source": "S3",
+   "reason": "body similarity 0.006 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "register",
+   "new": "assertVector",
+   "source": "S3",
+   "reason": "body similarity 0.033 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "codec",
+   "new": "assertVector",
+   "source": "S3",
+   "reason": "body similarity 0.040 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "aliasCodec",
+   "new": "assertVector",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "parameterizedCodecs",
+   "new": "assertVector",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "synthesizeNonParameterizedDescriptor",
+   "new": "validate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "register",
+   "new": "validate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "codec",
+   "new": "validate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "aliasCodec",
+   "new": "validate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "parameterizedCodecs",
+   "new": "validate",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "synthesizeNonParameterizedDescriptor",
+   "new": "refsFromLeft",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "register",
+   "new": "refsFromLeft",
+   "source": "S3",
+   "reason": "body similarity 0.020 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "codec",
+   "new": "refsFromLeft",
+   "source": "S3",
+   "reason": "body similarity 0.012 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "aliasCodec",
+   "new": "refsFromLeft",
+   "source": "S3",
+   "reason": "body similarity 0.018 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "parameterizedCodecs",
+   "new": "refsFromLeft",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "synthesizeNonParameterizedDescriptor",
+   "new": "pgNumericRenderOutputType",
+   "source": "S3",
+   "reason": "body similarity 0.006 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "register",
+   "new": "pgNumericRenderOutputType",
+   "source": "S3",
+   "reason": "body similarity 0.038 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "codec",
+   "new": "pgNumericRenderOutputType",
+   "source": "S3",
+   "reason": "body similarity 0.022 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "aliasCodec",
+   "new": "pgNumericRenderOutputType",
+   "source": "S3",
+   "reason": "body similarity 0.036 < 0.5"
+  },
+  {
+   "commit": "14060ca7f283a2ad5f89a88dae2c8da51ba93779",
+   "old": "parameterizedCodecs",
+   "new": "pgNumericRenderOutputType",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "91a185386dbe0c371e4c648b501a64c11a4aaa97",
+   "old": "hasCapability",
+   "new": "capabilityFlag",
+   "source": "S3",
+   "reason": "body similarity 0.103 < 0.5"
+  },
+  {
+   "commit": "91a185386dbe0c371e4c648b501a64c11a4aaa97",
+   "old": "hasCapability",
+   "new": "withEmittedSqlCapabilities",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "91a185386dbe0c371e4c648b501a64c11a4aaa97",
+   "old": "hasCapability",
+   "new": "withCapabilities",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "a9cf7da3069823ce6a04f3877bcd54c703bce3a5",
+   "old": "parseArgs",
+   "new": "isDirectEntrypoint",
+   "source": "S3",
+   "reason": "body similarity 0.098 < 0.5"
+  },
+  {
+   "commit": "a9cf7da3069823ce6a04f3877bcd54c703bce3a5",
+   "old": "parseArgs",
+   "new": "_write",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fba7f45601dd2b96ff124bc53e427490689bb293",
+   "old": "sortRefs",
+   "new": "returning",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fba7f45601dd2b96ff124bc53e427490689bb293",
+   "old": "addColumnRefToRefSets",
+   "new": "returning",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fba7f45601dd2b96ff124bc53e427490689bb293",
+   "old": "mergeRefsInto",
+   "new": "returning",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fba7f45601dd2b96ff124bc53e427490689bb293",
+   "old": "collectRefs",
+   "new": "returning",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "fba7f45601dd2b96ff124bc53e427490689bb293",
+   "old": "resolveProjectionCodecs",
+   "new": "returning",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "ceab9ac1dfbcfc07d23d5da3807b6e9756b04d33",
+   "old": "buildWriteMarkerStatements",
+   "new": "markerColumns",
+   "source": "S3",
+   "reason": "body similarity 0.239 < 0.5"
+  },
+  {
+   "commit": "e71f9fa0e328f614d95560e76cad59c81d3a9015",
+   "old": "loadAllBundles",
+   "new": "loadMigrationPackages",
+   "source": "S3",
+   "reason": "body similarity 0.222 < 0.5"
+  },
+  {
+   "commit": "e71f9fa0e328f614d95560e76cad59c81d3a9015",
+   "old": "loadMigrationBundles",
+   "new": "loadAllMigrationPackages",
+   "source": "S3",
+   "reason": "body similarity 0.222 < 0.5"
+  },
+  {
+   "commit": "2db14c695442cb4aa8b7f4cfb9cc1c25775a8ca9",
+   "old": "metadataFromWire",
+   "new": "readExistingMetadata",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "2db14c695442cb4aa8b7f4cfb9cc1c25775a8ca9",
+   "old": "metadataToWire",
+   "new": "readExistingMetadata",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "computeMigrationId",
+   "new": "errorDuplicateMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.025 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "verifyMigrationBundle",
+   "new": "errorDuplicateMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorBundleCorrupt",
+   "new": "errorDuplicateMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.116 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "computeMigrationId",
+   "new": "errorMigrationHashMismatch",
+   "source": "S3",
+   "reason": "body similarity 0.039 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "verifyMigrationBundle",
+   "new": "errorMigrationHashMismatch",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorDuplicateMigrationId",
+   "new": "errorMigrationHashMismatch",
+   "source": "S3",
+   "reason": "body similarity 0.116 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "verifyMigrationBundle",
+   "new": "computeMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.015 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorDuplicateMigrationId",
+   "new": "computeMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.025 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorBundleCorrupt",
+   "new": "computeMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.039 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "computeMigrationId",
+   "new": "verifyMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.015 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "verifyMigrationBundle",
+   "new": "verifyMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.208 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorDuplicateMigrationId",
+   "new": "verifyMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorBundleCorrupt",
+   "new": "verifyMigrationHash",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "computeMigrationId",
+   "new": "metadataFromWire",
+   "source": "S3",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "verifyMigrationBundle",
+   "new": "metadataFromWire",
+   "source": "S3",
+   "reason": "body similarity 0.056 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorDuplicateMigrationId",
+   "new": "metadataFromWire",
+   "source": "S3",
+   "reason": "body similarity 0.040 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorBundleCorrupt",
+   "new": "metadataFromWire",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "computeMigrationId",
+   "new": "metadataToWire",
+   "source": "S3",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "verifyMigrationBundle",
+   "new": "metadataToWire",
+   "source": "S3",
+   "reason": "body similarity 0.027 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorDuplicateMigrationId",
+   "new": "metadataToWire",
+   "source": "S3",
+   "reason": "body similarity 0.020 < 0.5"
+  },
+  {
+   "commit": "44d73c6a9cac1e921551e4251e546e947408d0a9",
+   "old": "errorBundleCorrupt",
+   "new": "metadataToWire",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "aed2cc7288b43ae432cd9695f0338dc5ef7cbb06",
+   "old": "copyContractToMigrationDir",
+   "new": "copyFilesWithRename",
+   "source": "S3",
+   "reason": "body similarity 0.100 < 0.5"
+  },
+  {
+   "commit": "6dd32da533e601d13dcf038e9c26361386952278",
+   "old": "validatePslScalarTypeCodecIds",
+   "new": "assembleScalarTypeDescriptors",
+   "source": "S3",
+   "reason": "body similarity 0.182 < 0.5"
+  },
+  {
+   "commit": "6dd32da533e601d13dcf038e9c26361386952278",
+   "old": "createPostgresPslScalarTypeDescriptors",
+   "new": "assembleScalarTypeDescriptors",
+   "source": "S3",
+   "reason": "body similarity 0.067 < 0.5"
+  },
+  {
+   "commit": "6dd32da533e601d13dcf038e9c26361386952278",
+   "old": "assemblePslScalarTypeDescriptors",
+   "new": "validateScalarTypeCodecIds",
+   "source": "S3",
+   "reason": "body similarity 0.167 < 0.5"
+  },
+  {
+   "commit": "6dd32da533e601d13dcf038e9c26361386952278",
+   "old": "createPostgresPslScalarTypeDescriptors",
+   "new": "validateScalarTypeCodecIds",
+   "source": "S3",
+   "reason": "body similarity 0.091 < 0.5"
+  },
+  {
+   "commit": "6dd32da533e601d13dcf038e9c26361386952278",
+   "old": "assemblePslScalarTypeDescriptors",
+   "new": "createPostgresScalarTypeDescriptors",
+   "source": "S3",
+   "reason": "body similarity 0.066 < 0.5"
+  },
+  {
+   "commit": "6dd32da533e601d13dcf038e9c26361386952278",
+   "old": "validatePslScalarTypeCodecIds",
+   "new": "createPostgresScalarTypeDescriptors",
+   "source": "S3",
+   "reason": "body similarity 0.088 < 0.5"
+  },
+  {
+   "commit": "9161a4b725e46b4b2aad8fc67128e66395ee245d",
+   "old": "operations",
+   "new": "descriptor",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9161a4b725e46b4b2aad8fc67128e66395ee245d",
+   "old": "function",
+   "new": "descriptor",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9161a4b725e46b4b2aad8fc67128e66395ee245d",
+   "old": "name",
+   "new": "descriptor",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9161a4b725e46b4b2aad8fc67128e66395ee245d",
+   "old": "schema",
+   "new": "descriptor",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9161a4b725e46b4b2aad8fc67128e66395ee245d",
+   "old": "isColumnBuilder",
+   "new": "descriptor",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9161a4b725e46b4b2aad8fc67128e66395ee245d",
+   "old": "assembleOperationRegistry",
+   "new": "descriptor",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "67edcf2c79d603f242e8c3051d041ff80a0fc98b",
+   "old": "createMongoIR",
+   "new": "createMongoContract",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "irHeader",
+   "new": "validateContract",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "irMeta",
+   "new": "validateContract",
+   "source": "S3",
+   "reason": "body similarity 0.026 < 0.5"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "contractIR",
+   "new": "validateContract",
+   "source": "S3",
+   "reason": "body similarity 0.015 < 0.5"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "validateContractIR",
+   "new": "validateContract",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "normalizeProviderContractIR",
+   "new": "validateContract",
+   "source": "S3",
+   "reason": "body similarity 0.226 < 0.5"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "irHeader",
+   "new": "normalizeProviderContract",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "irMeta",
+   "new": "normalizeProviderContract",
+   "source": "S3",
+   "reason": "body similarity 0.033 < 0.5"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "contractIR",
+   "new": "normalizeProviderContract",
+   "source": "S3",
+   "reason": "body similarity 0.017 < 0.5"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "validateContractIR",
+   "new": "normalizeProviderContract",
+   "source": "S3",
+   "reason": "body similarity 0.226 < 0.5"
+  },
+  {
+   "commit": "8c1a6c82ec6ba2094d880fe010bb13199c109f2b",
+   "old": "normalizeProviderContractIR",
+   "new": "normalizeProviderContract",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "enrichContractIR",
+   "new": "enrichContract",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "interpretPslDocumentToMongoContractIR",
+   "new": "enrichContract",
+   "source": "S3",
+   "reason": "body similarity 0.020 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "interpretPslDocumentToSqlContractIR",
+   "new": "enrichContract",
+   "source": "S3",
+   "reason": "body similarity 0.012 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "buildContractIR",
+   "new": "enrichContract",
+   "source": "S3",
+   "reason": "body similarity 0.039 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "enrichContractIR",
+   "new": "interpretPslDocumentToMongoContract",
+   "source": "S3",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "interpretPslDocumentToMongoContractIR",
+   "new": "interpretPslDocumentToMongoContract",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "interpretPslDocumentToSqlContractIR",
+   "new": "interpretPslDocumentToMongoContract",
+   "source": "S3",
+   "reason": "body similarity 0.180 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "buildContractIR",
+   "new": "interpretPslDocumentToMongoContract",
+   "source": "S3",
+   "reason": "body similarity 0.133 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "enrichContractIR",
+   "new": "interpretPslDocumentToSqlContract",
+   "source": "S3",
+   "reason": "body similarity 0.010 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "interpretPslDocumentToMongoContractIR",
+   "new": "interpretPslDocumentToSqlContract",
+   "source": "S3",
+   "reason": "body similarity 0.179 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "interpretPslDocumentToSqlContractIR",
+   "new": "interpretPslDocumentToSqlContract",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "buildContractIR",
+   "new": "interpretPslDocumentToSqlContract",
+   "source": "S3",
+   "reason": "body similarity 0.083 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "enrichContractIR",
+   "new": "buildContract",
+   "source": "S3",
+   "reason": "body similarity 0.042 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "interpretPslDocumentToMongoContractIR",
+   "new": "buildContract",
+   "source": "S3",
+   "reason": "body similarity 0.122 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "interpretPslDocumentToSqlContractIR",
+   "new": "buildContract",
+   "source": "S3",
+   "reason": "body similarity 0.081 < 0.5"
+  },
+  {
+   "commit": "6e2bc2624bf9a04a759d8d0bdf653b95c8df1661",
+   "old": "buildContractIR",
+   "new": "buildContract",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "21e18822188b54115e2f5bcc0ac68c2b34d1b0a2",
+   "old": "createDb",
+   "new": "createClient",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "cee14b7f652d8ebf526cfcc3602340634b08b336",
+   "old": "getSql",
+   "new": "build",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "4e2297c4f3efe08163fb01db41ad21dad3762328",
+   "old": "parseCardinality",
+   "new": "resolveModelRelations",
+   "source": "S3",
+   "reason": "body similarity 0.047 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "entries",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "_gate",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "buildAst",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "createFieldProxy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "resolve",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "comparison",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "createFunctions",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "createAggregateFunctions",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "innerJoin",
+   "source": "S3",
+   "reason": "body similarity 0.016 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "outerLeftJoin",
+   "source": "S3",
+   "reason": "body similarity 0.016 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "first",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "firstOrThrow",
+   "source": "S3",
+   "reason": "body similarity 0.017 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "offset",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "distinct",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "groupBy",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "getRowFields",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "clone",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "getJoinOuterScope",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "insert",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "update",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "delete",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "collect",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "subquery",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "0e3ff281c15223bfec56c01877ce08868e1a97a4",
+   "old": "negateBinaryOp",
+   "new": "operation",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "findDescriptorByIndex",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.016 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "remapParamIndexes",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.044 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "collectParamIndexes",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "withIndex",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.065 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "assertBoundPayload",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.032 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "createBoundWhereExpr",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "isBoundWhereExpr",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.049 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "ensureBoundWhereExpr",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.029 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "offsetWhereExprParams",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.047 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "offsetBoundWhereExpr",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.069 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "combineWhereFilters",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "body similarity 0.066 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "bound",
+   "new": "deriveParamsFromAst",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "findDescriptorByIndex",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.111 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "remapParamIndexes",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.139 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "collectParamIndexes",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.074 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "withIndex",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.190 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "assertBoundPayload",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.034 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "createBoundWhereExpr",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "isBoundWhereExpr",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "ensureBoundWhereExpr",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "offsetWhereExprParams",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.057 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "offsetBoundWhereExpr",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "combineWhereFilters",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "body similarity 0.015 < 0.5"
+  },
+  {
+   "commit": "645c07c4ac03ab619dd00b49f56716b89b82ab91",
+   "old": "bound",
+   "new": "renderParamRef",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "deriveEdgeStatuses",
+   "source": "S3",
+   "reason": "body similarity 0.088 < 0.5"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "migrationGraphToRenderInput",
+   "source": "S3",
+   "reason": "body similarity 0.122 < 0.5"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "render",
+   "source": "S3",
+   "reason": "body similarity 0.053 < 0.5"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "extractRelevantSubgraph",
+   "source": "S3",
+   "reason": "body similarity 0.073 < 0.5"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "truncateGraph",
+   "source": "S3",
+   "reason": "body similarity 0.072 < 0.5"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "findSpinePath",
+   "source": "S3",
+   "reason": "body similarity 0.037 < 0.5"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "isLinearGraph",
+   "source": "S3",
+   "reason": "body similarity 0.006 < 0.5"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "nodes",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "node",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c746f16252fda4ddfaeb905fcf6fc32224689fbd",
+   "old": "formatMigrationStatusOutput",
+   "new": "edge",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "d85a517c299a17d863521614810a8ca826b643b1",
+   "old": "freezeOptionalObject",
+   "new": "frozenArrayCopy",
+   "source": "S3",
+   "reason": "body similarity 0.313 < 0.5"
+  },
+  {
+   "commit": "d85a517c299a17d863521614810a8ca826b643b1",
+   "old": "freezeRecord",
+   "new": "frozenArrayCopy",
+   "source": "S3",
+   "reason": "body similarity 0.294 < 0.5"
+  },
+  {
+   "commit": "d85a517c299a17d863521614810a8ca826b643b1",
+   "old": "freezeArray",
+   "new": "frozenOptionalRecordCopy",
+   "source": "S3",
+   "reason": "body similarity 0.313 < 0.5"
+  },
+  {
+   "commit": "d85a517c299a17d863521614810a8ca826b643b1",
+   "old": "freezeRecord",
+   "new": "frozenOptionalRecordCopy",
+   "source": "S3",
+   "reason": "body similarity 0.471 < 0.5"
+  },
+  {
+   "commit": "d85a517c299a17d863521614810a8ca826b643b1",
+   "old": "freezeArray",
+   "new": "frozenRecordCopy",
+   "source": "S3",
+   "reason": "body similarity 0.294 < 0.5"
+  },
+  {
+   "commit": "d85a517c299a17d863521614810a8ca826b643b1",
+   "old": "freezeOptionalObject",
+   "new": "frozenRecordCopy",
+   "source": "S3",
+   "reason": "body similarity 0.471 < 0.5"
+  },
+  {
+   "commit": "86aa29b03c38d98b66e8899728762ec1999fd8ee",
+   "old": "withProject",
+   "new": "withProjection",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "86aa29b03c38d98b66e8899728762ec1999fd8ee",
+   "old": "addProject",
+   "new": "withProjection",
+   "source": "S3",
+   "reason": "body similarity 0.214 < 0.5"
+  },
+  {
+   "commit": "86aa29b03c38d98b66e8899728762ec1999fd8ee",
+   "old": "withProject",
+   "new": "addProjection",
+   "source": "S3",
+   "reason": "body similarity 0.214 < 0.5"
+  },
+  {
+   "commit": "86aa29b03c38d98b66e8899728762ec1999fd8ee",
+   "old": "addProject",
+   "new": "addProjection",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "9d303673668bafad1e3ef3a8ec334364dd994a9b",
+   "old": "convertDefault",
+   "new": "resolveDisplayChain",
+   "source": "S3",
+   "reason": "body similarity 0.018 < 0.5"
+  },
+  {
+   "commit": "9d303673668bafad1e3ef3a8ec334364dd994a9b",
+   "old": "convertDefault",
+   "new": "findPathWithDecision",
+   "source": "S3",
+   "reason": "body similarity 0.028 < 0.5"
+  },
+  {
+   "commit": "9d303673668bafad1e3ef3a8ec334364dd994a9b",
+   "old": "convertDefault",
+   "new": "findDivergencePoint",
+   "source": "S3",
+   "reason": "body similarity 0.024 < 0.5"
+  },
+  {
+   "commit": "9d303673668bafad1e3ef3a8ec334364dd994a9b",
+   "old": "convertDefault",
+   "new": "findReachableLeaves",
+   "source": "S3",
+   "reason": "body similarity 0.033 < 0.5"
+  },
+  {
+   "commit": "c9c2e911e6040231c473885705849db0b275cf52",
+   "old": "runDbSchemaVerify",
+   "new": "errorInvalidVerifyMode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c9c2e911e6040231c473885705849db0b275cf52",
+   "old": "runDbSchemaVerify",
+   "new": "resolveDbVerifyMode",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c9c2e911e6040231c473885705849db0b275cf52",
+   "old": "runDbSchemaVerify",
+   "new": "renderVerifyHeader",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c9c2e911e6040231c473885705849db0b275cf52",
+   "old": "runDbSchemaVerify",
+   "new": "resolveVerifyPaths",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c9c2e911e6040231c473885705849db0b275cf52",
+   "old": "runDbSchemaVerify",
+   "new": "resolveVerifySetup",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c9c2e911e6040231c473885705849db0b275cf52",
+   "old": "runDbSchemaVerify",
+   "new": "createVerifyClient",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c9c2e911e6040231c473885705849db0b275cf52",
+   "old": "runDbSchemaVerify",
+   "new": "wrapVerifyError",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "c9c2e911e6040231c473885705849db0b275cf52",
+   "old": "runDbSchemaVerify",
+   "new": "executeDbSchemaOnlyVerifyCommand",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "95412fd001002be10258f693d509aa0c7a0fdb3d",
+   "old": "createTestContract",
+   "new": "getTestContract",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "50d586444a2e7c04eaef5ab6659a6c91aa42a6ed",
+   "old": "buildLossyOperationFromIssue",
+   "new": "buildReconciliationPlan",
+   "source": "S3",
+   "reason": "body similarity 0.145 < 0.5"
+  },
+  {
+   "commit": "50d586444a2e7c04eaef5ab6659a6c91aa42a6ed",
+   "old": "buildLossyPlan",
+   "new": "buildReconciliationOperationFromIssue",
+   "source": "S3",
+   "reason": "body similarity 0.145 < 0.5"
+  },
+  {
+   "commit": "3532618ddb653e7039dedcbf9b773f7f67518127",
+   "old": "columnIsNotNullCheck",
+   "new": "extractSqlDdl",
+   "source": "S3",
+   "reason": "body similarity 0.056 < 0.5"
+  },
+  {
+   "commit": "3532618ddb653e7039dedcbf9b773f7f67518127",
+   "old": "columnIsNullableCheck",
+   "new": "extractSqlDdl",
+   "source": "S3",
+   "reason": "body similarity 0.056 < 0.5"
+  },
+  {
+   "commit": "3532618ddb653e7039dedcbf9b773f7f67518127",
+   "old": "columnIsNotNullCheck",
+   "new": "prepareMigrationContext",
+   "source": "S3",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "3532618ddb653e7039dedcbf9b773f7f67518127",
+   "old": "columnIsNullableCheck",
+   "new": "prepareMigrationContext",
+   "source": "S3",
+   "reason": "body similarity 0.021 < 0.5"
+  },
+  {
+   "commit": "642f3eadbe6daef68feee2769e4e139f0c774d8d",
+   "old": "createPrismaNextControlClient",
+   "new": "createControlClient",
+   "source": "S3",
+   "reason": "body similarity 0.429 < 0.5"
+  },
+  {
+   "commit": "3b88c9635f83896cfefe2109e8d28bc2d6e07279",
+   "old": "defined",
+   "new": "ifDefined",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "f9127f1bf4298f7cffb85d6f5054afb80c05da78",
+   "old": "typeId",
+   "new": "type",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "d85a517c299a17d863521614810a8ca826b643b1",
+  "parent": "d22731459ea1e375d44b0530390c298cce879718",
+  "old": "freezeArray",
+  "new": "frozenArrayCopy",
+  "message": "refactor(relational-core): rename freeze helpers to clarify copy semantics\n\nfreezeArray -> frozenArrayCopy, freezeOptionalObject ->\nfrozenOptionalRecordCopy, freezeRecord -> frozenRecordCopy.\n\nAddresses SevInf review: names now communicate that these functions\nshallow-copy before freezing, and use consistent 'record' terminology\ninstead of mixing 'object' and 'record'.",
+  "commit_url": "https://github.com/prisma/prisma/commit/d85a517c299a17d863521614810a8ca826b643b1",
+  "similarity": 1,
+  "before": {
+   "name": "freezeArray",
+   "qualifiedName": "freezeArray",
+   "file": "packages/2-sql/4-lanes/relational-core/src/ast/types.ts",
+   "startLine": 69
+  },
+  "after": {
+   "name": "frozenArrayCopy",
+   "qualifiedName": "frozenArrayCopy",
+   "file": "packages/2-sql/4-lanes/relational-core/src/ast/types.ts",
+   "startLine": 69
+  },
+  "pin": "8d66dc1dcd1e75434791e05ede6563b7aef2b79b",
+  "first_containing": "d85a517c299a17d863521614810a8ca826b643b1",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 8d66dc1dcd1e75434791e05ede6563b7aef2b79b"
+  },
+  "target": {
+   "file": "packages/2-sql/4-lanes/relational-core/src/ast/types.ts",
+   "qualifiedName": "frozenArrayCopy",
+   "name": "frozenArrayCopy"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0.25
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\prisma__prisma",
+  "seconds": 39.842,
+  "bytes": 205533305,
+  "default_branch": "main",
+  "head": "10b7bedcefafc63484b0ac9a9ae34fdedee54b30"
+ },
+ "seconds": 3438.627
+}

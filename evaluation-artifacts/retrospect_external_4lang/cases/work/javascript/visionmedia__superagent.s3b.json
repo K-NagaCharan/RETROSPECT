@@ -1,0 +1,25 @@
+{
+ "repository": "visionmedia/superagent",
+ "url": "https://github.com/visionmedia/superagent.git",
+ "language": "javascript",
+ "source": "S3b",
+ "mode": "s3b",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\visionmedia__superagent",
+  "seconds": 2.994,
+  "bytes": 11478882,
+  "default_branch": "master",
+  "head": "d73b68f942c96cb8f61fe1d53600ceadc6d381b6"
+ },
+ "seconds": 1.554
+}

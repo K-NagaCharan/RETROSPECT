@@ -1,0 +1,19 @@
+{
+  "repository": "lodash",
+  "language": "javascript",
+  "pin": "2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8",
+  "window": 1500,
+  "commits": 1500,
+  "mergesSkipped": 0,
+  "commitsWithChanges": 878,
+  "events": {
+    "deletion_no_successor": 667,
+    "signature_change": 9,
+    "rename": 3,
+    "extraction": 6,
+    "move": 1,
+    "scope_change": 4,
+    "ambiguous_pairing": 1
+  },
+  "parseFailures": 696
+}

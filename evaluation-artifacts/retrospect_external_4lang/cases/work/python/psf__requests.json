@@ -1,0 +1,13 @@
+{
+ "repository": "psf/requests",
+ "url": "https://github.com/psf/requests.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:requests)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

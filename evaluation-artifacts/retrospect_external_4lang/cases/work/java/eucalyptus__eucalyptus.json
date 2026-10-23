@@ -1,0 +1,33 @@
+{
+ "repository": "eucalyptus/eucalyptus",
+ "url": "https://github.com/eucalyptus/eucalyptus.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "all candidate events dropped at pin checks",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 1
+ },
+ "rejects": [],
+ "drops": [
+  {
+   "commit": "5a38d0bca0e48853c3f7c00a0f098bada64797df",
+   "old": "addToPutMetricDataList",
+   "new": "addToQueueItems",
+   "source": "S1",
+   "reason": "successor absent at pin"
+  }
+ ],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\eucalyptus__eucalyptus",
+  "seconds": 38.667,
+  "bytes": 167451307,
+  "default_branch": "master",
+  "head": "95e0cef57eba3da26ed798317900da4eeac44263"
+ },
+ "seconds": 40.932
+}

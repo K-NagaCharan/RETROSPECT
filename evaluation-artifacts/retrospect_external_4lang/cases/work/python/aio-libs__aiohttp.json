@@ -1,0 +1,112 @@
+{
+ "repository": "aio-libs/aiohttp",
+ "url": "https://github.com/aio-libs/aiohttp.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 9,
+  "passed_extractor_check": 4,
+  "dropped_at_pin": 1
+ },
+ "rejects": [
+  {
+   "commit": "74810c2f9fdd459fadde0ae3d43c06dcae58064f",
+   "old": "handler",
+   "new": "server",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "625c7376050f3c18870f69402f9d6b2eb5fc8f76",
+   "old": "receive_msg",
+   "new": "receive",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "26491a998758c457c63bc0c9e84cc87d06eac62e",
+   "old": "POST",
+   "new": "post",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "a22ae7f510c70d04b5029ef02edd05b945bfc37a",
+   "old": "status_code",
+   "new": "status",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "1cb546c1ca40e20b568a2acdbfa53fafbfae91f9",
+   "old": "read_text",
+   "new": "text",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [
+  {
+   "commit": "15d7c5bb96c1f8f53d39ffd9f7b577b7dcd6f6b3",
+   "old": "cache_dns",
+   "new": "dns_cache",
+   "source": "S3",
+   "reason": "successor absent at pin"
+  }
+ ],
+ "selected": {
+  "source": "S3",
+  "commit": "e10767bec93fd618e0a6a82bb1fdddc6e4e2d088",
+  "parent": "a21178d9d510ce41a26e3cd313592c4a8ae20619",
+  "old": "readone",
+  "new": "readchunk",
+  "message": "Rename readone to readchunk",
+  "commit_url": "https://github.com/aio-libs/aiohttp/commit/e10767bec93fd618e0a6a82bb1fdddc6e4e2d088",
+  "similarity": 1,
+  "before": {
+   "name": "readone",
+   "qualifiedName": "StreamReader.readone",
+   "file": "aiohttp/streams.py",
+   "startLine": 321
+  },
+  "after": {
+   "name": "readchunk",
+   "qualifiedName": "StreamReader.readchunk",
+   "file": "aiohttp/streams.py",
+   "startLine": 321
+  },
+  "pin": "2b7cb1629f4b78637da5208b9d62332c3f3d486c",
+  "first_containing": "fd5e8210d1f1f885bbdaba92a03519a0f2a50f13",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 95,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 97,
+   "window_command": "git log --format=%H --topo-order -n 400 2b7cb1629f4b78637da5208b9d62332c3f3d486c"
+  },
+  "target": {
+   "file": "aiohttp/streams.py",
+   "qualifiedName": "StreamReader.readchunk",
+   "name": "readchunk"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\aio-libs__aiohttp",
+  "seconds": 13.186,
+  "bytes": 55022048,
+  "default_branch": "master",
+  "head": "7275bea9eae591d5246b8fd9e2e9ba004b6f30f7"
+ },
+ "seconds": 239.559
+}

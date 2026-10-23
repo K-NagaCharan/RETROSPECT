@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T08:30:47.778Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\pypa__pip.cases.jsonl",
+  "case_count": 5,
+  "snapshots": [
+    {
+      "repository": "pypa/pip",
+      "path": "D:/clones_external/pypa__pip",
+      "pin": "c0bdc8aad56eb391f184548c22a3ed8c6037eb3e",
+      "head_before": "c0bdc8aad56eb391f184548c22a3ed8c6037eb3e",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 6262,
+      "index_seconds": 2.176,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 104.175,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 955,
+      "history_commits_analyzed_H400": 288,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "c0bdc8aad56eb391f184548c22a3ed8c6037eb3e",
+      "clean_after": true,
+      "seconds_total": 109.338
+    }
+  ],
+  "finished_utc": "2026-10-23T08:32:37.407Z"
+}

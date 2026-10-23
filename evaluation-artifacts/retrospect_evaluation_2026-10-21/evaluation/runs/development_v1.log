@@ -1,0 +1,13 @@
+guava: 10 cases, 66211 symbols, 1008.166s
+jfinal: 2 cases, 0 symbols, 90.032s
+quasar: 6 cases, 0 symbols, 95.808s
+sonarqube: 5 cases, 0 symbols, 135.051s
+spring-boot: 2 cases, 0 symbols, 719.508s
+black: 3 cases, 0 symbols, 85.684s
+dit: 20 cases, 0 symbols, 248.437s
+fastapi: 7 cases, 0 symbols, 55.167s
+flask: 3 cases, 0 symbols, 54.286s
+httpx: 17 cases, 0 symbols, 91.349s
+marshmallow: 7 cases, 0 symbols, 70.681s
+pytest: 1 cases, 0 symbols, 100.874s
+requests: 2 cases, 0 symbols, 89.605s

@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T06:01:19.596Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_BCA_v3\\snapshots\\lodash.cases.jsonl",
+  "case_count": 3,
+  "snapshots": [
+    {
+      "repository": "lodash",
+      "path": "D:/clones/lodash",
+      "pin": "2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8",
+      "head_before": "2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8",
+      "clean_before": true,
+      "cases": 3,
+      "symbols": 4438,
+      "index_seconds": 7.102,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 177.295,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 415.62,
+      "parser_healthy_after_history_H400": false,
+      "head_after": "2b5e6f7399a7b48005140b5d5c6bc6c0e62919a8",
+      "clean_after": true,
+      "seconds_total": 603.141
+    }
+  ],
+  "finished_utc": "2026-10-22T06:11:22.823Z"
+}

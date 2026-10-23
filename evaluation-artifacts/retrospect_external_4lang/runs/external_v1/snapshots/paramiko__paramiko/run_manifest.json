@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-10-23T08:30:12.637Z",
+  "horizons": [
+    400
+  ],
+  "match": "exact",
+  "cases_file": "runs\\external_v1\\snapshots\\paramiko__paramiko.cases.jsonl",
+  "case_count": 5,
+  "snapshots": [
+    {
+      "repository": "paramiko/paramiko",
+      "path": "D:/clones_external/paramiko__paramiko",
+      "pin": "440b3de06abfd358e93e698fde178ef0c5c85939",
+      "head_before": "440b3de06abfd358e93e698fde178ef0c5c85939",
+      "clean_before": true,
+      "cases": 5,
+      "symbols": 365,
+      "index_seconds": 0.153,
+      "structural_extraction_failures": {
+        "count": 0,
+        "firstError": null
+      },
+      "parser_healthy_after_index": true,
+      "history_seconds_H400": 33.36,
+      "history_extraction_failures_H400": {
+        "count": 0,
+        "firstError": null
+      },
+      "history_symbols_with_history_H400": 364,
+      "history_commits_analyzed_H400": 68,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "440b3de06abfd358e93e698fde178ef0c5c85939",
+      "clean_after": true,
+      "seconds_total": 34.968
+    }
+  ],
+  "finished_utc": "2026-10-23T08:30:47.682Z"
+}

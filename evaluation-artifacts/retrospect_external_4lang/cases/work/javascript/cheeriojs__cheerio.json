@@ -1,0 +1,25 @@
+{
+ "repository": "cheeriojs/cheerio",
+ "url": "https://github.com/cheeriojs/cheerio.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 0,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\cheeriojs__cheerio",
+  "seconds": 46.949,
+  "bytes": 24607351,
+  "default_branch": "main",
+  "head": "f222764ff1e0dcb1649cb359389a6eba6a7a2cf0"
+ },
+ "seconds": 57.526
+}

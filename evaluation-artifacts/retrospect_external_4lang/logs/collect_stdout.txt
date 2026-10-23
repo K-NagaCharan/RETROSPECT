@@ -1,0 +1,350 @@
+2026-10-23T02:16:17.532Z collect java alluxio/alluxio (S1)
+2026-10-23T02:17:21.756Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 0
+2026-10-23T02:17:21.757Z collect java antlr/antlr4 (S1)
+2026-10-23T02:17:45.238Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 0
+2026-10-23T02:17:45.239Z collect java apache/camel (S1)
+2026-10-23T02:23:53.382Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 0
+2026-10-23T02:23:53.383Z collect java apache/cassandra (S1)
+2026-10-23T02:26:33.207Z   -> selected; selected so far 1
+2026-10-23T02:26:33.208Z collect java apache/drill (S1)
+2026-10-23T02:26:55.950Z   -> skipped (clone failed: fatal: cannot create directory at 'contrib/format-deltalake/src/test/resources/data-reader-partition-values/as_int=0/as_long=0/as_byte=0/as_short=0/as_boolean=true/as_float=0.0/as_double=0.0/as_string); selected so far 1
+2026-10-23T02:26:55.952Z collect java apache/hive (S1)
+2026-10-23T02:30:17.123Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 1
+2026-10-23T02:30:17.125Z collect java apache/pig (S1)
+2026-10-23T02:30:46.602Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 1
+2026-10-23T02:30:46.605Z collect java aws/aws-sdk-java (S1)
+2026-10-23T02:40:46.622Z   -> skipped (clone exceeded 10 minutes); selected so far 1
+2026-10-23T02:40:46.627Z collect java bitcoinj/bitcoinj (S1)
+2026-10-23T02:41:04.113Z   -> selected; selected so far 2
+2026-10-23T02:41:04.116Z collect java buildcraft/buildcraft (S1)
+2026-10-23T02:41:18.519Z   -> selected; selected so far 3
+2026-10-23T02:41:18.523Z collect java cgeo/cgeo (S1)
+2026-10-23T02:43:55.825Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 3
+2026-10-23T02:43:55.829Z collect java checkstyle/checkstyle (S1)
+2026-10-23T02:43:55.834Z   -> excluded (excluded repository (inventory:checkstyle)); selected so far 3
+2026-10-23T02:43:55.839Z collect java codinguser/gnucash-android (S1)
+2026-10-23T02:44:03.379Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 3
+2026-10-23T02:44:03.385Z collect java crate/crate (S1)
+2026-10-23T02:44:53.718Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 3
+2026-10-23T02:44:53.723Z collect java cyanogenmod/android_frameworks_base (S1)
+2026-10-23T02:54:53.749Z   -> skipped (clone exceeded 10 minutes); selected so far 3
+2026-10-23T02:54:53.763Z collect java datastax/java-driver (S1)
+2026-10-23T02:54:53.779Z   -> excluded (excluded repository (inventory:datastax-java-driver)); selected so far 3
+2026-10-23T02:54:53.794Z collect java deeplearning4j/deeplearning4j (S1)
+2026-10-23T02:55:43.496Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 3
+2026-10-23T02:55:43.503Z collect java droolsjbpm/drools (S1)
+2026-10-23T02:58:51.501Z   -> skipped (clone failed: fatal: cannot create directory at 'drools-test-coverage/test-integration-prebuilt/test-integration-prebuilt-jars/kjar-with-invoker/src/it/only-jar-pojo-not-kjar-no-kmodule/src/main/java/org/drools/com); selected so far 3
+2026-10-23T02:58:51.510Z collect java droolsjbpm/jbpm (S1)
+2026-10-23T02:59:11.246Z   -> selected; selected so far 4
+2026-10-23T02:59:11.252Z collect java eclipse/jgit (S1)
+2026-10-23T02:59:12.241Z   -> skipped (clone failed: remote: Repository not found.
+fatal: repository 'https://github.com/eclipse/jgit.git/' not found); selected so far 4
+2026-10-23T02:59:12.250Z collect java eclipse/vert.x (S1)
+2026-10-23T02:59:27.882Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T02:59:27.888Z collect java elastic/elasticsearch (S1)
+2026-10-23T03:05:50.136Z   -> skipped (clone failed: fatal: cannot create directory at 'x-pack/plugin/esql/src/test/resources/org/elasticsearch/xpack/esql/analysis/golden_tests/AnalyzerSubqueryGoldenTests/testSameConversionResolvedOnLaterPassOverMultiTy); selected so far 4
+2026-10-23T03:05:50.148Z collect java eucalyptus/eucalyptus (S1)
+2026-10-23T03:06:31.090Z   -> no_valid_event (all candidate events dropped at pin checks); selected so far 4
+2026-10-23T03:06:31.099Z collect java facebook/buck (S1)
+2026-10-23T03:08:19.025Z collect java alluxio/alluxio (S1)
+2026-10-23T03:08:19.028Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:19.029Z collect java antlr/antlr4 (S1)
+2026-10-23T03:08:19.030Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:19.031Z collect java apache/camel (S1)
+2026-10-23T03:08:19.031Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:19.032Z collect java apache/cassandra (S1)
+2026-10-23T03:08:19.033Z   -> selected; selected so far 4
+2026-10-23T03:08:19.034Z collect java apache/drill (S1)
+2026-10-23T03:08:19.035Z moved unfinished clone D:\clones_external\apache__drill -> D:\clones_external\apache__drill.incomplete-1792724899035
+2026-10-23T03:08:43.760Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:43.761Z collect java apache/hive (S1)
+2026-10-23T03:08:43.762Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:43.764Z collect java apache/pig (S1)
+2026-10-23T03:08:43.765Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:43.767Z collect java aws/aws-sdk-java (S1)
+2026-10-23T03:08:43.768Z   -> skipped (clone exceeded 10 minutes); selected so far 4
+2026-10-23T03:08:43.769Z collect java bitcoinj/bitcoinj (S1)
+2026-10-23T03:08:43.770Z   -> selected; selected so far 4
+2026-10-23T03:08:43.771Z collect java buildcraft/buildcraft (S1)
+2026-10-23T03:08:43.772Z   -> selected; selected so far 4
+2026-10-23T03:08:43.773Z collect java cgeo/cgeo (S1)
+2026-10-23T03:08:43.775Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:43.776Z collect java checkstyle/checkstyle (S1)
+2026-10-23T03:08:43.777Z   -> excluded (excluded repository (inventory:checkstyle)); selected so far 4
+2026-10-23T03:08:43.779Z collect java codinguser/gnucash-android (S1)
+2026-10-23T03:08:43.780Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:43.781Z collect java crate/crate (S1)
+2026-10-23T03:08:43.782Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:43.783Z collect java cyanogenmod/android_frameworks_base (S1)
+2026-10-23T03:08:43.784Z   -> skipped (clone exceeded 10 minutes); selected so far 4
+2026-10-23T03:08:43.786Z collect java datastax/java-driver (S1)
+2026-10-23T03:08:43.787Z   -> excluded (excluded repository (inventory:datastax-java-driver)); selected so far 4
+2026-10-23T03:08:43.788Z collect java deeplearning4j/deeplearning4j (S1)
+2026-10-23T03:08:43.789Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T03:08:43.790Z collect java droolsjbpm/drools (S1)
+2026-10-23T03:08:43.799Z moved unfinished clone D:\clones_external\droolsjbpm__drools -> D:\clones_external\droolsjbpm__drools.incomplete-1792724923791
+2026-10-23T03:12:22.284Z   -> selected; selected so far 5
+2026-10-23T03:12:22.286Z collect java droolsjbpm/jbpm (S1)
+2026-10-23T03:12:22.287Z   -> selected; selected so far 5
+2026-10-23T03:12:22.289Z collect java eclipse/jgit (S1)
+2026-10-23T03:12:22.291Z   -> skipped (clone failed: remote: Repository not found.
+fatal: repository 'https://github.com/eclipse/jgit.git/' not found); selected so far 5
+2026-10-23T03:12:22.292Z collect java eclipse/vert.x (S1)
+2026-10-23T03:12:22.294Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 5
+2026-10-23T03:12:22.295Z collect java elastic/elasticsearch (S1)
+2026-10-23T03:12:22.331Z moved unfinished clone D:\clones_external\elastic__elasticsearch -> D:\clones_external\elastic__elasticsearch.incomplete-1792725142295
+2026-10-23T03:18:12.899Z   -> skipped (clone exceeds 1.5 GB (1.81 GB)); selected so far 5
+2026-10-23T03:18:12.901Z collect java eucalyptus/eucalyptus (S1)
+2026-10-23T03:18:12.903Z   -> no_valid_event (all candidate events dropped at pin checks); selected so far 5
+2026-10-23T03:18:12.905Z collect java facebook/buck (S1)
+2026-10-23T03:18:12.905Z moved unfinished clone D:\clones_external\facebook__buck -> D:\clones_external\facebook__buck.incomplete-1792725492905
+2026-10-23T03:24:47.673Z   -> skipped (clone exceeds 1.5 GB (1.92 GB)); selected so far 5
+2026-10-23T03:24:47.677Z collect java facebook/presto (S1)
+2026-10-23T03:26:01.422Z   -> selected; selected so far 6
+2026-10-23T03:26:01.425Z collect java fasterxml/jackson-databind (S1)
+2026-10-23T03:26:32.604Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 6
+2026-10-23T03:26:32.608Z collect java geoserver/geoserver (S1)
+2026-10-23T03:28:30.676Z   -> no_valid_event (all candidate events dropped at pin checks); selected so far 6
+2026-10-23T03:28:30.680Z collect java github/android (S1)
+2026-10-23T03:28:36.816Z   -> no_valid_event (all candidate events dropped at pin checks); selected so far 6
+2026-10-23T03:28:36.819Z collect java go-lang-plugin-org/go-lang-idea-plugin (S1)
+2026-10-23T03:28:41.467Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 6
+2026-10-23T03:28:41.471Z collect java goclipse/goclipse (S1)
+2026-10-23T03:29:19.384Z   -> no_valid_event (all candidate events dropped at pin checks); selected so far 6
+2026-10-23T03:29:19.388Z collect java google/closure-compiler (S1)
+2026-10-23T03:30:16.137Z   -> selected; selected so far 7
+2026-10-23T03:30:16.141Z collect java google/truth (S1)
+2026-10-23T03:30:21.679Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 7
+2026-10-23T03:30:21.683Z collect java gradle/gradle (S1)
+2026-10-23T03:33:42.248Z   -> no_valid_event (all candidate events dropped at pin checks); selected so far 7
+2026-10-23T03:33:42.253Z collect java graphhopper/graphhopper (S1)
+2026-10-23T03:33:42.259Z   -> excluded (excluded repository (inventory:graphhopper)); selected so far 7
+2026-10-23T03:33:42.265Z collect java graylog2/graylog2-server (S1)
+2026-10-23T03:34:57.737Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 7
+2026-10-23T03:34:57.742Z collect java gwtproject/gwt (S1)
+2026-10-23T03:36:20.712Z   -> selected; selected so far 8
+2026-10-23T03:36:20.718Z collect java hazelcast/hazelcast (S1)
+2026-10-23T03:38:52.085Z   -> selected; selected so far 9
+2026-10-23T03:38:52.091Z collect java hibernate/hibernate-orm (S1)
+2026-10-23T03:40:59.986Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 9
+2026-10-23T03:40:59.998Z collect java ignatov/intellij-erlang (S1)
+2026-10-23T03:41:26.925Z   -> selected; selected so far 10
+2026-10-23T03:41:26.943Z collect java infinispan/infinispan (S1)
+2026-10-23T03:42:36.549Z   -> selected; selected so far 11
+2026-10-23T03:42:36.560Z collect java jersey/jersey (S1)
+2026-10-23T03:42:37.854Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 11
+2026-10-23T03:42:37.863Z collect java jetbrains/intellij-community (S1)
+2026-10-23T03:52:37.905Z   -> skipped (clone exceeded 10 minutes); selected so far 11
+2026-10-23T03:52:37.915Z collect java jfinal/jfinal (S1)
+2026-10-23T03:52:37.925Z   -> excluded (excluded repository (inventory:jfinal)); selected so far 11
+2026-10-23T03:52:37.935Z collect java jline/jline2 (S1)
+2026-10-23T03:52:39.382Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 11
+2026-10-23T03:52:39.390Z collect java jmonkeyengine/jmonkeyengine (S1)
+2026-10-23T03:56:53.820Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 11
+2026-10-23T03:56:53.829Z collect java junit-team/junit5 (S1)
+2026-10-23T03:57:07.630Z   -> selected; selected so far 12
+2026-10-23T03:57:07.640Z collect python asyml/texar (S2)
+2026-10-23T03:57:13.351Z   -> selected; selected so far 1
+2026-10-23T03:57:13.352Z collect python dit/dit (S2)
+2026-10-23T03:57:13.353Z   -> excluded (excluded repository (inventory:dit)); selected so far 1
+2026-10-23T03:57:13.354Z collect python kkroening/ffmpeg-python (S2)
+2026-10-23T03:57:17.446Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 1
+2026-10-23T03:57:17.448Z collect python aio-libs/aiohttp (S3)
+2026-10-23T04:01:17.010Z   -> selected; selected so far 2
+2026-10-23T04:01:17.013Z collect python celery/celery (S3)
+2026-10-23T04:03:47.249Z   -> selected; selected so far 3
+2026-10-23T04:03:47.251Z collect python django/django (S3)
+2026-10-23T04:07:34.288Z   -> selected; selected so far 4
+2026-10-23T04:07:34.291Z collect python encode/httpx (S3)
+2026-10-23T04:07:34.294Z   -> excluded (excluded repository (inventory:httpx)); selected so far 4
+2026-10-23T04:07:34.296Z collect python encode/starlette (S3)
+2026-10-23T04:07:43.974Z   -> selected; selected so far 5
+2026-10-23T04:07:43.977Z collect python pallets/click (S3)
+2026-10-23T04:07:50.502Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 5
+2026-10-23T04:07:50.505Z collect python pallets/flask (S3)
+2026-10-23T04:07:50.509Z   -> excluded (excluded repository (inventory:flask)); selected so far 5
+2026-10-23T04:07:50.512Z collect python pallets/jinja (S3)
+2026-10-23T04:08:09.907Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 5
+2026-10-23T04:08:09.911Z collect python pallets/werkzeug (S3)
+2026-10-23T04:08:39.744Z   -> selected; selected so far 6
+2026-10-23T04:08:39.747Z collect python paramiko/paramiko (S3)
+2026-10-23T04:08:54.315Z   -> selected; selected so far 7
+2026-10-23T04:08:54.319Z collect python pre-commit/pre-commit (S3)
+2026-10-23T04:09:09.552Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 7
+2026-10-23T04:09:09.560Z collect python psf/black (S3)
+2026-10-23T04:09:09.565Z   -> excluded (excluded repository (inventory:black)); selected so far 7
+2026-10-23T04:09:09.571Z collect python psf/requests (S3)
+2026-10-23T04:09:09.577Z   -> excluded (excluded repository (inventory:requests)); selected so far 7
+2026-10-23T04:09:09.581Z collect python pydantic/pydantic (S3)
+2026-10-23T04:10:27.427Z   -> selected; selected so far 8
+2026-10-23T04:10:27.432Z collect python pylint-dev/pylint (S3)
+2026-10-23T04:12:00.425Z   -> selected; selected so far 9
+2026-10-23T04:12:00.430Z collect python pypa/pip (S3)
+2026-10-23T04:13:23.501Z   -> selected; selected so far 10
+2026-10-23T04:13:23.508Z collect python pytest-dev/pytest (S3)
+2026-10-23T04:13:23.516Z   -> excluded (excluded repository (inventory:pytest)); selected so far 10
+2026-10-23T04:13:23.524Z collect python python-trio/trio (S3)
+2026-10-23T04:14:02.797Z   -> selected; selected so far 11
+2026-10-23T04:14:02.803Z collect python scikit-learn/scikit-learn (S3)
+2026-10-23T04:19:48.343Z   -> selected; selected so far 12
+2026-10-23T04:19:48.350Z collect javascript acornjs/acorn (S3)
+2026-10-23T04:19:54.804Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 0
+2026-10-23T04:19:54.808Z collect javascript auth0/node-jsonwebtoken (S3)
+2026-10-23T04:19:57.748Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 0
+2026-10-23T04:19:57.749Z collect javascript axios/axios (S3)
+2026-10-23T04:19:57.751Z   -> excluded (excluded repository (inventory:axios)); selected so far 0
+2026-10-23T04:19:57.752Z collect javascript babel/babel (S3)
+2026-10-23T04:38:54.665Z   -> selected; selected so far 1
+2026-10-23T04:38:54.675Z collect javascript chaijs/chai (S3)
+2026-10-23T04:39:05.413Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 1
+2026-10-23T04:39:05.418Z collect javascript chalk/chalk (S3)
+2026-10-23T04:39:07.232Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 1
+2026-10-23T04:39:07.240Z collect javascript cheeriojs/cheerio (S3)
+2026-10-23T04:40:04.778Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 1
+2026-10-23T04:40:04.791Z collect javascript date-fns/date-fns (S3)
+2026-10-23T04:43:37.991Z   -> selected; selected so far 2
+2026-10-23T04:43:38.001Z collect javascript expressjs/express (S3)
+2026-10-23T04:43:38.013Z   -> excluded (excluded repository (named:express)); selected so far 2
+2026-10-23T04:43:38.029Z collect javascript facebook/jest (S3)
+2026-10-23T04:43:38.045Z   -> excluded (excluded repository (inventory:jest)); selected so far 2
+2026-10-23T04:43:38.057Z collect javascript fastify/fastify (S3)
+2026-10-23T04:43:38.083Z   -> excluded (excluded repository (inventory:fastify)); selected so far 2
+2026-10-23T04:43:38.096Z collect javascript gulpjs/gulp (S3)
+2026-10-23T04:43:42.218Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 2
+2026-10-23T04:43:42.238Z collect javascript hapijs/hapi (S3)
+2026-10-23T04:44:15.800Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 2
+2026-10-23T04:44:15.822Z collect javascript jashkenas/underscore (S3)
+2026-10-23T04:44:38.098Z   -> no_valid_event (all candidate events dropped at pin checks); selected so far 2
+2026-10-23T04:44:38.143Z collect javascript koajs/koa (S3)
+2026-10-23T04:44:38.182Z   -> excluded (excluded repository (inventory:koa)); selected so far 2
+2026-10-23T04:44:38.213Z collect javascript lodash/lodash (S3)
+2026-10-23T04:44:38.246Z   -> excluded (excluded repository (inventory:lodash)); selected so far 2
+2026-10-23T04:44:38.272Z collect javascript markedjs/marked (S3)
+2026-10-23T04:44:53.127Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 2
+2026-10-23T04:44:53.164Z collect javascript mochajs/mocha (S3)
+2026-10-23T04:44:53.207Z   -> excluded (excluded repository (inventory:mocha)); selected so far 2
+2026-10-23T04:44:53.255Z collect javascript moment/moment (S3)
+2026-10-23T04:44:53.300Z   -> excluded (excluded repository (inventory:moment)); selected so far 2
+2026-10-23T04:44:53.339Z collect javascript ramda/ramda (S3)
+2026-10-23T04:45:39.306Z   -> selected; selected so far 3
+2026-10-23T04:45:39.350Z collect javascript socketio/socket.io (S3)
+2026-10-23T04:46:15.870Z   -> no_valid_event (all candidate events dropped at pin checks); selected so far 3
+2026-10-23T04:46:15.905Z collect javascript tj/commander.js (S3)
+2026-10-23T04:46:48.913Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 3
+2026-10-23T04:46:48.935Z collect javascript validatorjs/validator.js (S3)
+2026-10-23T04:47:02.246Z   -> selected; selected so far 4
+2026-10-23T04:47:02.269Z collect javascript visionmedia/superagent (S3)
+2026-10-23T04:47:10.429Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T04:47:10.457Z collect javascript webpack/webpack (S3)
+2026-10-23T04:56:59.585Z   -> selected; selected so far 5
+2026-10-23T04:56:59.586Z collect typescript angular/angular (S3)
+2026-10-23T05:17:15.993Z   -> selected; selected so far 1
+2026-10-23T05:17:15.996Z collect typescript colinhacks/zod (S3)
+2026-10-23T05:17:15.999Z   -> excluded (excluded repository (inventory:zod)); selected so far 1
+2026-10-23T05:17:16.003Z collect typescript evanw/esbuild (S3)
+2026-10-23T05:17:34.112Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 1
+2026-10-23T05:17:34.114Z collect typescript gcanti/io-ts (S3)
+2026-10-23T05:17:45.157Z   -> selected; selected so far 2
+2026-10-23T05:17:45.161Z collect typescript jquense/yup (S3)
+2026-10-23T05:17:54.302Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 2
+2026-10-23T05:17:54.307Z collect typescript microsoft/typescript (S3)
+2026-10-23T05:27:54.355Z   -> skipped (clone exceeded 10 minutes); selected so far 2
+2026-10-23T05:27:54.369Z collect typescript mobxjs/mobx (S3)
+2026-10-23T05:28:57.235Z   -> selected; selected so far 3
+2026-10-23T05:28:57.246Z collect typescript nestjs/nest (S3)
+2026-10-23T05:33:09.146Z   -> selected; selected so far 4
+2026-10-23T05:33:09.155Z collect typescript pmndrs/zustand (S3)
+2026-10-23T05:33:22.696Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T05:33:22.706Z collect typescript prettier/prettier (S3)
+2026-10-23T05:34:51.189Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 4
+2026-10-23T05:34:51.207Z collect typescript prisma/prisma (S3)
+2026-10-23T06:32:09.844Z   -> selected; selected so far 5
+2026-10-23T06:32:09.849Z collect typescript reduxjs/redux-toolkit (S3)
+2026-10-23T06:32:44.652Z   -> selected; selected so far 6
+2026-10-23T06:32:44.658Z collect typescript sinclairzx81/typebox (S3)
+2026-10-23T06:32:57.691Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 6
+2026-10-23T06:32:57.697Z collect typescript sindresorhus/ts-extras (S3)
+2026-10-23T06:32:59.752Z   -> selected; selected so far 7
+2026-10-23T06:32:59.758Z collect typescript storybookjs/storybook (S3)
+2026-10-23T06:48:56.257Z   -> selected; selected so far 8
+2026-10-23T06:48:56.263Z collect typescript sveltejs/svelte (S3)
+2026-10-23T06:48:56.271Z   -> excluded (excluded repository (inventory:svelte)); selected so far 8
+2026-10-23T06:48:56.279Z collect typescript tanstack/query (S3)
+2026-10-23T06:51:22.590Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 8
+2026-10-23T06:51:22.602Z collect typescript trpc/trpc (S3)
+2026-10-23T06:53:58.606Z   -> selected; selected so far 9
+2026-10-23T06:53:58.614Z collect typescript type-challenges/type-challenges (S3)
+2026-10-23T06:54:01.065Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 9
+2026-10-23T06:54:01.073Z collect typescript typeorm/typeorm (S3)
+2026-10-23T06:54:01.085Z   -> excluded (excluded repository (inventory:typeorm)); selected so far 9
+2026-10-23T06:54:01.095Z collect typescript typescript-eslint/typescript-eslint (S3)
+2026-10-23T06:56:38.165Z   -> selected; selected so far 10
+2026-10-23T06:56:38.173Z collect typescript typestack/class-validator (S3)
+2026-10-23T06:56:45.663Z   -> no_valid_event (all candidate events dropped at pin checks); selected so far 10
+2026-10-23T06:56:45.671Z collect typescript typestrong/ts-node (S3)
+2026-10-23T06:57:01.035Z   -> selected; selected so far 11
+2026-10-23T06:57:01.044Z collect typescript vitest-dev/vitest (S3)
+2026-10-23T06:58:19.076Z   -> no_valid_event (no candidate event passed the extractor check); selected so far 11
+2026-10-23T06:58:19.086Z collect typescript vuejs/core (S3)
+2026-10-23T06:58:19.098Z   -> excluded (excluded repository (inventory:vue)); selected so far 11
+{
+ "by_language_source": {
+  "java/S1": {
+   "repositories_considered": 46,
+   "excluded": 4,
+   "clone_skipped": 6,
+   "no_valid_event": 24,
+   "selected": 12,
+   "candidate_events": 181,
+   "passed_extractor_check": 45,
+   "dropped_at_pin": 12
+  },
+  "python/S3": {
+   "repositories_considered": 19,
+   "excluded": 5,
+   "clone_skipped": 0,
+   "no_valid_event": 3,
+   "selected": 11,
+   "candidate_events": 420,
+   "passed_extractor_check": 114,
+   "dropped_at_pin": 3
+  },
+  "python/S2": {
+   "repositories_considered": 3,
+   "excluded": 1,
+   "clone_skipped": 0,
+   "no_valid_event": 1,
+   "selected": 1,
+   "candidate_events": 38,
+   "passed_extractor_check": 9,
+   "dropped_at_pin": 0
+  },
+  "javascript/S3": {
+   "repositories_considered": 25,
+   "excluded": 8,
+   "clone_skipped": 0,
+   "no_valid_event": 12,
+   "selected": 5,
+   "candidate_events": 144,
+   "passed_extractor_check": 25,
+   "dropped_at_pin": 7
+  },
+  "typescript/S3": {
+   "repositories_considered": 25,
+   "excluded": 4,
+   "clone_skipped": 1,
+   "no_valid_event": 9,
+   "selected": 11,
+   "candidate_events": 1500,
+   "passed_extractor_check": 140,
+   "dropped_at_pin": 9
+  }
+ },
+ "selected_per_language": {
+  "java": 12,
+  "python": 12,
+  "javascript": 5,
+  "typescript": 11
+ },
+ "total_selected": 40
+}

@@ -1,0 +1,13 @@
+{
+ "repository": "expressjs/express",
+ "url": "https://github.com/expressjs/express.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (named:express)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

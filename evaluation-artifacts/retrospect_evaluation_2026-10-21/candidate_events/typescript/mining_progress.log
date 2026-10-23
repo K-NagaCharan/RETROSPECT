@@ -1,0 +1,19 @@
+2026-10-21T18:26:08Z start redux D:/base papers considered/laya testing/data/repos/redux window=1500
+{"repository":"redux","language":"typescript","pin":"56abca4749921d68f40cda20afd2043af9751f72","window":1500,"commits":1206,"mergesSkipped":294,"commitsWithChanges":147,"events":{"signature_change":24,"deletion_no_successor":4,"extraction":1,"ambiguous_pairing":1,"scope_change":2,"inlining":1},"parseFailures":0}
+2026-10-21T18:28:17Z done redux in 129s
+2026-10-21T18:28:17Z start rxjs D:/clones/rxjs window=1500
+{"repository":"rxjs","language":"typescript","pin":"54796b38a57e6309f9861e174737479bb3f63f61","window":1500,"commits":1450,"mergesSkipped":50,"commitsWithChanges":762,"events":{"signature_change":145,"deletion_no_successor":389,"ambiguous_pairing":4,"split_part":2,"rename":2,"extraction":2,"move":37,"inlining":2},"parseFailures":0}
+2026-10-21T18:46:36Z done rxjs in 1099s
+2026-10-21T18:46:36Z start vue D:/clones/vue window=1500
+{"repository":"vue","language":"typescript","pin":"08f5abf9bc89594f94ac22882bcbc2ed55b1c9df","window":1500,"commits":1485,"mergesSkipped":15,"commitsWithChanges":820,"events":{"signature_change":142,"extraction":11,"inlining":5,"deletion_no_successor":16,"ambiguous_pairing":6,"move":5,"rename":10,"scope_change":2},"parseFailures":0}
+2026-10-21T18:54:08Z done vue in 452s
+2026-10-21T18:54:08Z start typeorm D:/clones/typeorm window=1500
+{"repository":"typeorm","language":"typescript","pin":"fe92394287516feeada6e9c308ebe22deca2458e","window":1500,"commits":1497,"mergesSkipped":3,"commitsWithChanges":902,"events":{"signature_change":297,"extraction":13,"deletion_no_successor":88,"rename":3,"scope_change":3,"ambiguous_pairing":2},"parseFailures":3134}
+2026-10-21T19:17:00Z FAILED typeorm
+2026-10-21T19:17:00Z start jest D:/clones/jest window=1500
+{"repository":"jest","language":"typescript","pin":"61050e9323e742539dc2360236671110e37329e6","window":1500,"commits":1500,"mergesSkipped":0,"commitsWithChanges":658,"events":{"signature_change":207,"deletion_no_successor":77,"move":32,"rename_move":15,"extraction":34,"rename":18,"scope_change":11,"ambiguous_pairing":37,"inlining":1},"parseFailures":0}
+2026-10-21T19:28:07Z done jest in 667s
+2026-10-21T19:28:07Z start zod D:/clones/zod window=1500
+{"repository":"zod","language":"typescript","pin":"680d19f7d1e042e55934209caeb79bc843b94f44","window":1500,"commits":1497,"mergesSkipped":3,"commitsWithChanges":745,"events":{"deletion_no_successor":159,"signature_change":82,"scope_change":12,"extraction":8,"rename":7,"ambiguous_pairing":57,"split_part":6,"move":4},"parseFailures":1138}
+2026-10-21T19:37:58Z FAILED zod
+2026-10-21T19:37:58Z batch complete

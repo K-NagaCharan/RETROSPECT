@@ -1,0 +1,13 @@
+{
+ "repository": "lodash/lodash",
+ "url": "https://github.com/lodash/lodash.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "excluded",
+ "reason": "excluded repository (inventory:lodash)",
+ "funnel": {},
+ "rejects": [],
+ "drops": [],
+ "selected": null
+}

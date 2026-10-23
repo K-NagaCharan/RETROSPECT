@@ -1,0 +1,33 @@
+{
+ "repository": "acornjs/acorn",
+ "url": "https://github.com/acornjs/acorn.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "7b9a46710d21f4b359b4a61e7ed0ee3f27a39886",
+   "old": "node_t",
+   "new": "Node",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\acornjs__acorn",
+  "seconds": 2.957,
+  "bytes": 13361002,
+  "default_branch": "master",
+  "head": "69788e23ca00483aef84005502dc3b88f2af38df"
+ },
+ "seconds": 6.453
+}

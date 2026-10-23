@@ -1,0 +1,104 @@
+{
+ "repository": "trpc/trpc",
+ "url": "https://github.com/trpc/trpc.git",
+ "language": "typescript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 10,
+  "passed_extractor_check": 5,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "6ccaf04b0af4e06936e640bc45173fab5c8a2b0a",
+   "old": "closeOrAbort",
+   "new": "closeAll",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "061c49f0e01261d6de9c8b0bf35bab5789cc15a5",
+   "old": "ContentSlider",
+   "new": "ArticleCard",
+   "source": "S3",
+   "reason": "body similarity 0.279 < 0.5"
+  },
+  {
+   "commit": "ba8b131d87ca68c5f01dbb9173ed96cfc98ebd04",
+   "old": "createQueryClientOptions",
+   "new": "createQueryClientConfig",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "4d3d7ff1caafa227645c9535505806f7c64e6487",
+   "old": "createAppRouter",
+   "new": "createLegacyAppRouter",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "9347d26f4d22c0871747874b4f49309890f90c5d",
+   "old": "requestHandler",
+   "new": "nodeHTTPRequestHandler",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "9347d26f4d22c0871747874b4f49309890f90c5d",
+  "parent": "262321abe351e8600ce6bb56e9b1281a1a3c0bbc",
+  "old": "requestHandler",
+  "new": "resolveHTTPResponse",
+  "message": "refactor http internals (#880)\n\n- Expose lower-level function `resolveHTTPResponse()` to be used in place of `requestHandler()` when doing adapters\r\n- Rename `requestRequestHandler` to `nodeHTTPRequestHandler` and move to `adapters/node-http` *\r\n- Make naming consistent of `HTTP` rather than `Http` everywhere *\r\n- Move standalone http server to `adapters/standalone` *\r\n- Move websocket from `@trpc/ws` to `@trpc/adapters/ws` *\r\n\r\n***)** with backwards compatibility and deprecation warnings",
+  "commit_url": "https://github.com/trpc/trpc/commit/9347d26f4d22c0871747874b4f49309890f90c5d",
+  "similarity": 0.773,
+  "before": {
+   "name": "requestHandler",
+   "qualifiedName": "requestHandler",
+   "file": "packages/server/src/http/requestHandler.ts",
+   "startLine": 65
+  },
+  "after": {
+   "name": "resolveHTTPResponse",
+   "qualifiedName": "resolveHTTPResponse",
+   "file": "packages/server/src/http/resolveHTTPResponse.ts",
+   "startLine": 58
+  },
+  "pin": "e9e19e4d86da2e6677cfd0d5486f2270a491c096",
+  "first_containing": "9347d26f4d22c0871747874b4f49309890f90c5d",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 e9e19e4d86da2e6677cfd0d5486f2270a491c096"
+  },
+  "target": {
+   "file": "packages/server/src/http/resolveHTTPResponse.ts",
+   "qualifiedName": "resolveHTTPResponse",
+   "name": "resolveHTTPResponse"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\trpc__trpc",
+  "seconds": 36.68,
+  "bytes": 63783198,
+  "default_branch": "main",
+  "head": "1c9bf51ea572fd46fa52fb725999b8d0c6950386"
+ },
+ "seconds": 155.993
+}

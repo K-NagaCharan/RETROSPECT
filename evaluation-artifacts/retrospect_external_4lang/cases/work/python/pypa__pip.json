@@ -1,0 +1,174 @@
+{
+ "repository": "pypa/pip",
+ "url": "https://github.com/pypa/pip.git",
+ "language": "python",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 34,
+  "passed_extractor_check": 19,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "bebd69173b2eec1ecc263a12e6fefefa45d76fa4",
+   "old": "_generate_metadata_legacy",
+   "new": "generate_metadata",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "ad68984ec69848c3dcab34949795c86476d5f436",
+   "old": "build_location",
+   "new": "ensure_build_location",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "e8eda16ed84fa861dccb490167010db49a6828c8",
+   "old": "make_found_candidates",
+   "new": "compute_best_candidate",
+   "source": "S3",
+   "reason": "body similarity 0.368 < 0.5"
+  },
+  {
+   "commit": "e8eda16ed84fa861dccb490167010db49a6828c8",
+   "old": "get_best_candidate",
+   "new": "compute_best_candidate",
+   "source": "S3",
+   "reason": "body similarity 0.089 < 0.5"
+  },
+  {
+   "commit": "e8eda16ed84fa861dccb490167010db49a6828c8",
+   "old": "find_candidates",
+   "new": "compute_best_candidate",
+   "source": "S3",
+   "reason": "body similarity 0.076 < 0.5"
+  },
+  {
+   "commit": "e8eda16ed84fa861dccb490167010db49a6828c8",
+   "old": "make_found_candidates",
+   "new": "sort_best_candidate",
+   "source": "S3",
+   "reason": "body similarity 0.086 < 0.5"
+  },
+  {
+   "commit": "e8eda16ed84fa861dccb490167010db49a6828c8",
+   "old": "find_candidates",
+   "new": "sort_best_candidate",
+   "source": "S3",
+   "reason": "body similarity 0.066 < 0.5"
+  },
+  {
+   "commit": "e8eda16ed84fa861dccb490167010db49a6828c8",
+   "old": "make_found_candidates",
+   "new": "find_best_candidate",
+   "source": "S3",
+   "reason": "body similarity 0.318 < 0.5"
+  },
+  {
+   "commit": "e8eda16ed84fa861dccb490167010db49a6828c8",
+   "old": "get_best_candidate",
+   "new": "find_best_candidate",
+   "source": "S3",
+   "reason": "body similarity 0.066 < 0.5"
+  },
+  {
+   "commit": "edbd0822dc50f49ef92dc7bee27d5728ed3babb7",
+   "old": "setup_py",
+   "new": "setup_py_path",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "7908973c0781dc3bcf55aa24733d49a89e838c50",
+   "old": "dist",
+   "new": "get_pkg_resources_distribution",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "764e468f429f5fdfdd65a103f1337910cca7fa3a",
+   "old": "parse_content",
+   "new": "process_line",
+   "source": "S3",
+   "reason": "body similarity 0.425 < 0.5"
+  },
+  {
+   "commit": "764e468f429f5fdfdd65a103f1337910cca7fa3a",
+   "old": "parse_line",
+   "new": "process_line",
+   "source": "S3",
+   "reason": "body similarity 0.087 < 0.5"
+  },
+  {
+   "commit": "95996f08bc43dc041619a799e7030d6c00842d53",
+   "old": "correct_build_location",
+   "new": "_correct_build_location",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "99bf39bcd6c9256ac20cb465bab0c62b0eb98753",
+   "old": "_running_under_virtualenv",
+   "new": "running_under_virtualenv",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [],
+ "selected": {
+  "source": "S3",
+  "commit": "10c68e674b689673126475734dbed5e43e0177ad",
+  "parent": "651d6fe70598aee315d796c4af57fe11c5cf5162",
+  "old": "_link_package_versions",
+  "new": "evaluate_link",
+  "message": "Rename _link_package_versions() to evaluate_link().",
+  "commit_url": "https://github.com/pypa/pip/commit/10c68e674b689673126475734dbed5e43e0177ad",
+  "similarity": 0.941,
+  "before": {
+   "name": "_link_package_versions",
+   "qualifiedName": "CandidateEvaluator._link_package_versions",
+   "file": "src/pip/_internal/index.py",
+   "startLine": 285
+  },
+  "after": {
+   "name": "evaluate_link",
+   "qualifiedName": "CandidateEvaluator.evaluate_link",
+   "file": "src/pip/_internal/index.py",
+   "startLine": 293
+  },
+  "pin": "c0bdc8aad56eb391f184548c22a3ed8c6037eb3e",
+  "first_containing": "919ee314fc62b7d08da15c7de14cca1f890ab822",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 149,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 160,
+   "window_command": "git log --format=%H --topo-order -n 400 c0bdc8aad56eb391f184548c22a3ed8c6037eb3e"
+  },
+  "target": {
+   "file": "src/pip/_internal/index.py",
+   "qualifiedName": "CandidateEvaluator.evaluate_link",
+   "name": "evaluate_link"
+  },
+  "a_query": "Determine whether a link is a candidate for installation.",
+  "name_subtoken_overlap": 0.25
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\pypa__pip",
+  "seconds": 27.051,
+  "bytes": 97044461,
+  "default_branch": "main",
+  "head": "0d09686649a97c2dd304322b191e44eb06ab4d44"
+ },
+ "seconds": 83.065
+}

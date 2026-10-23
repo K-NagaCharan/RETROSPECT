@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T06:15:30.592Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\held_out_test_BCA_v3\\snapshots\\quasar.cases.jsonl",
+  "case_count": 6,
+  "snapshots": [
+    {
+      "repository": "quasar",
+      "path": "D:/clones/quasar",
+      "pin": "db0ac29f55bc0515023d67ab86a2178c5e6eeb94",
+      "head_before": "db0ac29f55bc0515023d67ab86a2178c5e6eeb94",
+      "clean_before": true,
+      "cases": 6,
+      "symbols": 7206,
+      "index_seconds": 2.025,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 40.224,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 102.783,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "db0ac29f55bc0515023d67ab86a2178c5e6eeb94",
+      "clean_after": true,
+      "seconds_total": 150.896
+    }
+  ],
+  "finished_utc": "2026-10-22T06:18:01.589Z"
+}

@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T11:30:37.935Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\validation_D_v3\\snapshots\\sonarqube.cases.jsonl",
+  "case_count": 7,
+  "snapshots": [
+    {
+      "repository": "sonarqube",
+      "path": "D:/clones/sonarqube",
+      "pin": "e3b4618c6a748dbc5f2b9659cb039d34726bb8bf",
+      "head_before": "e3b4618c6a748dbc5f2b9659cb039d34726bb8bf",
+      "clean_before": true,
+      "cases": 7,
+      "symbols": 66300,
+      "index_seconds": 31.996,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 16.723,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 216.006,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "e3b4618c6a748dbc5f2b9659cb039d34726bb8bf",
+      "clean_after": true,
+      "seconds_total": 310.835
+    }
+  ],
+  "finished_utc": "2026-10-22T11:35:48.895Z"
+}

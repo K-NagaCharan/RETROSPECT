@@ -1,0 +1,33 @@
+{
+ "repository": "go-lang-plugin-org/go-lang-idea-plugin",
+ "url": "https://github.com/go-lang-plugin-org/go-lang-idea-plugin.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "3d5e343df6a39ce3b41624b90974d83e9899541e",
+   "old": "getVariants",
+   "new": "processResolveVariants",
+   "source": "S1",
+   "reason": "OLD still a callable in child (changed files)"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\go-lang-plugin-org__go-lang-idea-plugin",
+  "seconds": 4.119,
+  "bytes": 17161229,
+  "default_branch": "master",
+  "head": "e73dab44213ffa76b3d6a853aecb109929c3e2b5"
+ },
+ "seconds": 4.643
+}

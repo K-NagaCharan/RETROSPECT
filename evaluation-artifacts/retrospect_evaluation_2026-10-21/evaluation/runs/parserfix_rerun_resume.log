@@ -1,0 +1,37 @@
+development_BCA_v3: repos=['guava', 'zod'] cases=6 -> D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\development_BCA_v3_v4_parserfix
+2026-10-22T17:28:31.097Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\development_BCA_v3_v4_parserfix\input_cases.jsonl tasks=B_identifier,C_docstring,A_current_doc repos=2 cases=6
+2026-10-22T17:28:31.100Z skip guava (finished)
+2026-10-22T17:28:31.101Z skip zod (finished)
+2026-10-22T17:28:31.110Z ALL DONE: 6 case rows merged
+development_D_v3: repos=['guava', 'typeorm', 'zod'] cases=26 -> D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\development_D_v3_v4_parserfix
+2026-10-22T17:28:31.171Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\development_D_v3_v4_parserfix\input_cases.jsonl tasks=D_negative repos=3 cases=26
+2026-10-22T17:28:31.175Z skip typeorm (finished)
+2026-10-22T17:28:31.177Z skip guava (finished)
+2026-10-22T17:28:31.179Z skip zod (finished)
+2026-10-22T17:28:31.188Z ALL DONE: 26 case rows merged
+held_out_test_BCA_v3: repos=['lodash', 'typeorm'] cases=5 -> D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\held_out_test_BCA_v3_v4_parserfix
+2026-10-22T17:28:31.248Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\held_out_test_BCA_v3_v4_parserfix\input_cases.jsonl tasks=B_identifier,C_docstring,A_current_doc repos=2 cases=5
+2026-10-22T17:28:31.251Z skip typeorm (finished)
+2026-10-22T17:28:31.251Z moved unfinished lodash -> lodash.incomplete-1792690111251
+2026-10-22T17:28:31.252Z run lodash (3 cases)
+lodash: 3 cases, 4438 symbols, 1410.278s
+2026-10-22T17:52:02.050Z done lodash
+2026-10-22T17:52:02.056Z ALL DONE: 5 case rows merged
+held_out_test_D_v3: repos=['lodash', 'moment', 'typeorm'] cases=18 -> D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\held_out_test_D_v3_v4_parserfix
+2026-10-22T17:52:02.128Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\held_out_test_D_v3_v4_parserfix\input_cases.jsonl tasks=D_negative repos=3 cases=18
+2026-10-22T17:52:02.131Z run lodash (2 cases)
+lodash: 2 cases, 4438 symbols, 1541.802s
+2026-10-22T18:17:44.674Z done lodash
+2026-10-22T18:17:44.676Z run moment (4 cases)
+moment: 4 cases, 7609 symbols, 2329.202s
+2026-10-22T18:56:35.469Z done moment
+2026-10-22T18:56:35.471Z run typeorm (12 cases)
+typeorm: 12 cases, 7504 symbols, 1574.583s
+2026-10-22T19:22:50.385Z done typeorm
+2026-10-22T19:22:50.395Z ALL DONE: 18 case rows merged
+validation_D_v3: repos=['moment'] cases=2 -> D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\validation_D_v3_v4_parserfix
+2026-10-22T19:22:50.517Z start cases=D:\base papers considered\Test creation\retrospect_evaluation_2026-10-21\evaluation\runs\validation_D_v3_v4_parserfix\input_cases.jsonl tasks=D_negative repos=1 cases=2
+2026-10-22T19:22:50.520Z run moment (2 cases)
+moment: 2 cases, 7609 symbols, 3114.085s
+2026-10-22T20:14:45.101Z done moment
+2026-10-22T20:14:45.111Z ALL DONE: 2 case rows merged

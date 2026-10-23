@@ -1,0 +1,10 @@
+guava: 1 cases, 66211 symbols, 881.912s
+quasar: 2 cases, 7206 symbols, 85.935s
+sonarqube: 2 cases, 66300 symbols, 183.644s
+black: 1 cases, 415 symbols, 88.981s
+dit: 10 cases, 4780 symbols, 292.359s
+httpx: 1 cases, 1206 symbols, 82.924s
+axios: 2 cases, 1890 symbols, 127.805s
+jest: 2 cases, 4429 symbols, 194.45s
+vue: 3 cases, 4894 symbols, 101.277s
+zod: 3 cases, 3674 symbols, 214.096s

@@ -1,0 +1,62 @@
+{
+ "repository": "socketio/socket.io",
+ "url": "https://github.com/socketio/socket.io.git",
+ "language": "javascript",
+ "source": "S3b",
+ "mode": "s3b",
+ "status": "no_valid_event",
+ "reason": "all candidate events dropped at pin checks",
+ "funnel": {
+  "candidate_events": 5,
+  "passed_extractor_check": 1,
+  "dropped_at_pin": 1
+ },
+ "rejects": [
+  {
+   "commit": "388dd928f3f2bf8925558909f584a898e7e42d9c",
+   "old": "io.util.Class",
+   "new": "ioClass",
+   "source": "S3b",
+   "reason": "body similarity 0.333 < 0.5"
+  },
+  {
+   "commit": "388dd928f3f2bf8925558909f584a898e7e42d9c",
+   "old": "io.util.Class.extend",
+   "new": "ioClass",
+   "source": "S3b",
+   "reason": "body similarity 0.043 < 0.5"
+  },
+  {
+   "commit": "388dd928f3f2bf8925558909f584a898e7e42d9c",
+   "old": "Class",
+   "new": "ioClass",
+   "source": "S3b",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "388dd928f3f2bf8925558909f584a898e7e42d9c",
+   "old": "Class.include",
+   "new": "ioClass",
+   "source": "S3b",
+   "reason": "body similarity 0.040 < 0.5"
+  }
+ ],
+ "drops": [
+  {
+   "commit": "c12f44b5bd4347a566e7978a00d0dbbdf5e31727",
+   "old": "removeAllListeners",
+   "new": "cleanup",
+   "source": "S3b",
+   "reason": "not IN_WINDOW+diffed at H=400 with pin offset +50 or +10 (status OUTSIDE_WINDOW, position null)"
+  }
+ ],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\socketio__socket.io",
+  "seconds": 12.127,
+  "bytes": 52023934,
+  "default_branch": "main",
+  "head": "1eaa582d3b453e3e6f522300ed05b10da0a0799b"
+ },
+ "seconds": 11.03
+}

@@ -1,0 +1,33 @@
+{
+ "repository": "apache/hive",
+ "url": "https://github.com/apache/hive.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "0fa45e4a562fc2586b1ef06a88e9c186a0835316",
+   "old": "doImport",
+   "new": "importAll",
+   "source": "S1",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\apache__hive",
+  "seconds": 200.523,
+  "bytes": 973524642,
+  "default_branch": "master",
+  "head": "5d3b68f49617f3bcb976b56b594b84aa14972245"
+ },
+ "seconds": 201.168
+}

@@ -1,0 +1,161 @@
+{
+ "repository": "babel/babel",
+ "url": "https://github.com/babel/babel.git",
+ "language": "javascript",
+ "source": "S3",
+ "mode": "collect",
+ "status": "selected",
+ "reason": null,
+ "funnel": {
+  "candidate_events": 20,
+  "passed_extractor_check": 9,
+  "dropped_at_pin": 2
+ },
+ "rejects": [
+  {
+   "commit": "9ba894c1230606560809ba1c82f840e883edc4ac",
+   "old": "raise",
+   "new": "toNodeDescription",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "9ba894c1230606560809ba1c82f840e883edc4ac",
+   "old": "raiseOverwrite",
+   "new": "toNodeDescription",
+   "source": "S3",
+   "reason": "body similarity 0.000 < 0.5"
+  },
+  {
+   "commit": "00f8ee34848ca01fe403eb0d3b2a574a11f0ae07",
+   "old": "generateAsserts",
+   "new": "generateHelpers",
+   "source": "S3",
+   "reason": "non-production path"
+  },
+  {
+   "commit": "17d62c3743ca7c529bc14ddcb890a6a31ed956b1",
+   "old": "helper",
+   "new": "getTag",
+   "source": "S3",
+   "reason": "body similarity 0.015 < 0.5"
+  },
+  {
+   "commit": "17d62c3743ca7c529bc14ddcb890a6a31ed956b1",
+   "old": "post",
+   "new": "getTag",
+   "source": "S3",
+   "reason": "body similarity 0.008 < 0.5"
+  },
+  {
+   "commit": "e62a00df50c056b7d8fe63e36e6328d6599a9aa1",
+   "old": "NumberLiteral",
+   "new": "RegExpLiteral",
+   "source": "S3",
+   "reason": "body similarity 0.400 < 0.5"
+  },
+  {
+   "commit": "e62a00df50c056b7d8fe63e36e6328d6599a9aa1",
+   "old": "RegexLiteral",
+   "new": "NumericLiteral",
+   "source": "S3",
+   "reason": "body similarity 0.400 < 0.5"
+  },
+  {
+   "commit": "c28007c0447609145fb7407dbe2642356ab3afec",
+   "old": "define",
+   "new": "defineType",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "9c3cca0d25954ecb1d5cf9fa8cb3ccd60cdf6dff",
+   "old": "isTypeAnnotationGeneric",
+   "new": "isTypeAnnotation",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "b18d1a79f48b79ebcc4980883bc5a591142ddcae",
+   "old": "build",
+   "new": "buildTest",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  },
+  {
+   "commit": "7b9a46710d21f4b359b4a61e7ed0ee3f27a39886",
+   "old": "node_t",
+   "new": "Node",
+   "source": "S3",
+   "reason": "OLD and NEW are nested substrings"
+  }
+ ],
+ "drops": [
+  {
+   "commit": "e62a00df50c056b7d8fe63e36e6328d6599a9aa1",
+   "old": "RegexLiteral",
+   "new": "RegExpLiteral",
+   "source": "S3",
+   "reason": "successor not unique at pin"
+  },
+  {
+   "commit": "e62a00df50c056b7d8fe63e36e6328d6599a9aa1",
+   "old": "NumberLiteral",
+   "new": "NumericLiteral",
+   "source": "S3",
+   "reason": "successor not unique at pin"
+  }
+ ],
+ "selected": {
+  "source": "S3",
+  "commit": "a47a7dc34745b93e9bf8de3cb3881b91640dc4b8",
+  "parent": "2c82b5a4b046e479d9f8caaf9b61e384b5102864",
+  "old": "parseNoProperties",
+  "new": "parseTemplate",
+  "message": "rename util.parseNoProperties to util.parseTemplate",
+  "commit_url": "https://github.com/babel/babel/commit/a47a7dc34745b93e9bf8de3cb3881b91640dc4b8",
+  "similarity": 1,
+  "before": {
+   "name": "parseNoProperties",
+   "qualifiedName": "parseNoProperties",
+   "file": "lib/6to5/util.js",
+   "startLine": 247
+  },
+  "after": {
+   "name": "parseTemplate",
+   "qualifiedName": "parseTemplate",
+   "file": "lib/6to5/util.js",
+   "startLine": 248
+  },
+  "pin": "edd3363e4812275945a5c25542710f7729e70832",
+  "first_containing": "a47a7dc34745b93e9bf8de3cb3881b91640dc4b8",
+  "pin_offset": 50,
+  "reach": {
+   "status": "IN_WINDOW",
+   "origin_exists": true,
+   "origin_is_ancestor": true,
+   "origin_is_merge": false,
+   "window_position": 51,
+   "window_size": 400,
+   "in_window": true,
+   "origin_diff_analyzed": true,
+   "rev_list_distance": 50,
+   "window_command": "git log --format=%H --topo-order -n 400 edd3363e4812275945a5c25542710f7729e70832"
+  },
+  "target": {
+   "file": "lib/6to5/util.js",
+   "qualifiedName": "parseTemplate",
+   "name": "parseTemplate"
+  },
+  "a_query": null,
+  "name_subtoken_overlap": 0.25
+ },
+ "clone": {
+  "dir": "D:\\clones_external\\babel__babel",
+  "seconds": 51.832,
+  "bytes": 203038569,
+  "default_branch": "main",
+  "head": "5735dc3dea1e8b6a446df33639d947400afae77a"
+ },
+ "seconds": 1136.904
+}

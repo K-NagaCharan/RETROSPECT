@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T11:08:02.901Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\validation_D_v3\\snapshots\\fastify.cases.jsonl",
+  "case_count": 3,
+  "snapshots": [
+    {
+      "repository": "fastify",
+      "path": "D:/base papers considered/phase_d_eval_repos/fastify",
+      "pin": "f736849a10a9b2ca57fb09437feb8294cda76234",
+      "head_before": "f736849a10a9b2ca57fb09437feb8294cda76234",
+      "clean_before": true,
+      "cases": 3,
+      "symbols": 2715,
+      "index_seconds": 2.301,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 16.14,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 130.571,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "f736849a10a9b2ca57fb09437feb8294cda76234",
+      "clean_after": true,
+      "seconds_total": 151.598
+    }
+  ],
+  "finished_utc": "2026-10-22T11:10:34.585Z"
+}

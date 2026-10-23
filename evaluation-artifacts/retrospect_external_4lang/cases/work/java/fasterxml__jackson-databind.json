@@ -1,0 +1,33 @@
+{
+ "repository": "fasterxml/jackson-databind",
+ "url": "https://github.com/FasterXML/jackson-databind.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "44dea1f292933192ea5287d9b3e14a7daaef3c0f",
+   "old": "testIssue222",
+   "new": "testExternalTypeWithProp222",
+   "source": "S1",
+   "reason": "non-production path"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\fasterxml__jackson-databind",
+  "seconds": 30.785,
+  "bytes": 104591845,
+  "default_branch": "3.x",
+  "head": "f61572bd23bfb1439c51cac49f18b0f3985b9fe2"
+ },
+ "seconds": 31.175
+}

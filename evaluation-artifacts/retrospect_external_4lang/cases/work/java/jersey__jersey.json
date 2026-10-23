@@ -1,0 +1,33 @@
+{
+ "repository": "jersey/jersey",
+ "url": "https://github.com/jersey/jersey.git",
+ "language": "java",
+ "source": "S1",
+ "mode": "collect",
+ "status": "no_valid_event",
+ "reason": "no candidate event passed the extractor check",
+ "funnel": {
+  "candidate_events": 1,
+  "passed_extractor_check": 0,
+  "dropped_at_pin": 0
+ },
+ "rejects": [
+  {
+   "commit": "d57b1401f874f96a53f1ec1c0f8a6089ae66a4ce",
+   "old": "listTypes",
+   "new": "listElements",
+   "source": "S1",
+   "reason": "commit not in default-branch clone"
+  }
+ ],
+ "drops": [],
+ "selected": null,
+ "clone": {
+  "dir": "D:\\clones_external\\jersey__jersey",
+  "seconds": 1.192,
+  "bytes": 36481,
+  "default_branch": "main",
+  "head": "5370944094e510dc78fe01382ddd181140ce679f"
+ },
+ "seconds": 1.283
+}

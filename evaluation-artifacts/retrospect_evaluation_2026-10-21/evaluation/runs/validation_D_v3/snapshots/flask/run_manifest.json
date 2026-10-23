@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-22T11:10:34.754Z",
+  "horizons": [
+    50,
+    400
+  ],
+  "match": "exact",
+  "cases_file": "evaluation\\runs\\validation_D_v3\\snapshots\\flask.cases.jsonl",
+  "case_count": 3,
+  "snapshots": [
+    {
+      "repository": "flask",
+      "path": "D:/base papers considered/phase_d_eval_repos/flask",
+      "pin": "d086db856be187255b8ec61ef409357393020f32",
+      "head_before": "d086db856be187255b8ec61ef409357393020f32",
+      "clean_before": true,
+      "cases": 3,
+      "symbols": 1460,
+      "index_seconds": 0.41,
+      "parser_healthy_after_index": true,
+      "history_seconds_H50": 10.855,
+      "parser_healthy_after_history_H50": true,
+      "history_seconds_H400": 67.726,
+      "parser_healthy_after_history_H400": true,
+      "head_after": "d086db856be187255b8ec61ef409357393020f32",
+      "clean_after": true,
+      "seconds_total": 82.39
+    }
+  ],
+  "finished_utc": "2026-10-22T11:11:57.221Z"
+}
