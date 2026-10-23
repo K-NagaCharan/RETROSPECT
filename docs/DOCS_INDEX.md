@@ -20,6 +20,7 @@ Paths in A, C and D are relative to the repository root. C and D are published a
 | Path | Class | Purpose | Superseded by |
 |---|---|---|---|
 | [README.md](../README.md) | LIVING | Project entry point: CLI, how it works, architecture, key results, limitations, reproducibility | — |
+| [docs/PROJECT_REPORT.md](PROJECT_REPORT.md) | LIVING | Comprehensive project report for supervisors and examiners: problem, design, internals, methodology, results, research journey, related work, limitations, the paper (with a number-provenance appendix) | — |
 | [STRUCTURAL_RETRIEVAL.md](../STRUCTURAL_RETRIEVAL.md) | LIVING | Structural (B1) pipeline: discovery, index, scoring, API. Its §6 figures are from the original mini-benchmark (noted in the file) | — |
 | [docs/DOCS_INDEX.md](DOCS_INDEX.md) | LIVING | This index | — |
 | [DOC_AUDIT.md](../DOC_AUDIT.md) | LIVING | 2026-10-23 documentation audit: actions and number sources | — |
