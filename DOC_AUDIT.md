@@ -60,7 +60,7 @@ The full classification of every document is in [docs/DOCS_INDEX.md](docs/DOCS_I
 | FunctionMatcher weights 0.35 / 0.25 / 0.15 / 0.15 / 0.10; thresholds 0.70 / 0.50; ambiguity 0.08 | README §2 | `src/matcher/FunctionMatcher.js` |
 | B1 minimum-score threshold 0.08; StructuralRetriever weights 0.35 / 0.25 / 0.15 / 0.10 / 0.05 / 0.05 / 0.05; graph score 0.8 / 0.6 | README §5, STRUCTURAL_RETRIEVAL.md, external STATUS.md | `src/structural/retrieval/StructuralRetriever.js` |
 | B3 0.6 / 0.4; B4 k = 60, 0.5 / 0.5 | README §2 | the harness copies (`run_benchmark.js`), `protocol.md` §3 |
-| Tags: `eval-v1` = `1ac3b358…`; `cli-v1.0.0` = `13cdb3a0…`; commits `9d112fa`, `03f89e9`, `ed02019`, `1ac3b35` | README §6, eval README, external STATUS.md | `git rev-parse` in the Retrospect repository |
+| Tags: `eval-v1` = `1ac3b358…`; `cli-v1.0.0` = `90feeeab…` (moved from `13cdb3a0…` to the relicensing commit); commits `9d112fa`, `03f89e9`, `ed02019`, `1ac3b35` | README §6, eval README, external STATUS.md | `git rev-parse` in the Retrospect repository |
 | Phase 0 gates: jest 195/195; G2 136/136; E1 116/116 | external STATUS.md | `retrospect_external_4lang/phase0/jest.log`, `phase0/g2_compare.txt`, `phase0/e1_compare.txt` |
 | File counts in DOCS_INDEX (12 run logs, 36 worker logs, and the per-folder counts above) | DOCS_INDEX, this file | `ls` / `git ls-files` of the repository |
 | Clone limits (10 minutes, 1.5 GB) | README §5 | `retrospect_external_4lang/scripts/build_external_cases.js` (`CLONE_TIMEOUT_MS`, `MAX_CLONE_BYTES`) |
