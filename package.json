@@ -41,7 +41,7 @@
     "llm",
     "cli"
   ],
-  "author": "",
+  "author": "K-NagaCharan",
   "license": "MIT",
   "dependencies": {
     "tree-sitter-wasms": "^0.1.13",
