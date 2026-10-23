@@ -374,7 +374,7 @@ Global keys (`provider`, `model`, `baseUrl`) live in `~/.retrospect/config.json`
 | Variable | Used for |
 |---|---|
 | `ANTHROPIC_API_KEY` | `--provider anthropic` (the default) |
-| `OPENAI_API_KEY` | `--provider openai-compatible` (OpenAI, Ollama, and other compatible servers) |
+| `OPENAI_API_KEY` | `--provider openai-compatible` (OpenAI and other remote servers). Not needed when the base URL's host is `localhost`, `127.0.0.1` or `::1` (Ollama, LM Studio); the Authorization header is then omitted. |
 | `OPENAI_BASE_URL` | Base URL for `openai-compatible` when `baseUrl` is not configured, e.g. `https://api.openai.com/v1` |
 | `RETROSPECT_MODEL` | Default model when neither `--model` nor the `model` config key is set |
 

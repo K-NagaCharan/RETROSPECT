@@ -2,6 +2,7 @@
  * LLM providers (Node built-in fetch; no dependencies). API keys are read from the environment only.
  *   anthropic          ANTHROPIC_API_KEY             (default provider)
  *   openai-compatible  OPENAI_API_KEY + base URL     (config baseUrl or OPENAI_BASE_URL; OpenAI, Ollama, other compatible servers)
+ *                      no key needed when the base URL host is localhost, 127.0.0.1 or ::1 (Authorization header omitted)
  * Model: --model, else global config "model", else RETROSPECT_MODEL.
  */
 const PROVIDERS = ['anthropic', 'openai-compatible'];
@@ -31,10 +32,25 @@ function resolveProvider({ flags = {}, globalConfig = {}, env = process.env } = 
   return out;
 }
 
-/** Resolve the API key for a resolved provider; throws naming the missing variable. */
+const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1', '[::1]']);
+
+/** True when the base URL points at this machine (Ollama, LM Studio and similar local servers need no key). */
+function isLocalBaseUrl(baseUrl) {
+  try {
+    return LOCAL_HOSTS.has(new URL(baseUrl).hostname.toLowerCase());
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Resolve the API key for a resolved provider; throws naming the missing variable.
+ * Returns null for an openai-compatible endpoint on localhost / 127.0.0.1 / ::1 when no key is set.
+ */
 function requireKey(resolved, env = process.env) {
-  const key = env[resolved.keyEnv];
-  if (!key) throw new LlmConfigError(`Missing API key: set the ${resolved.keyEnv} environment variable (keys are never read from config files).`);
+  const key = env[resolved.keyEnv] || null;
+  const local = resolved.provider === 'openai-compatible' && !!resolved.baseUrl && isLocalBaseUrl(resolved.baseUrl);
+  if (!key && !local) throw new LlmConfigError(`Missing API key: set the ${resolved.keyEnv} environment variable (keys are never read from config files).`);
   if (resolved.provider === 'openai-compatible' && !resolved.baseUrl) {
     throw new LlmConfigError('Missing base URL for openai-compatible: set OPENAI_BASE_URL or run: rtro config set baseUrl <url> --global (e.g. https://api.openai.com/v1).');
   }
@@ -70,9 +86,9 @@ async function complete(resolved, prompt, opts = {}) {
       { model: resolved.model, max_tokens: maxTokens, system: prompt.system, messages: [{ role: 'user', content: prompt.user }] }, fetchImpl);
     return (data.content || []).filter(c => c.type === 'text').map(c => c.text).join('').trim();
   }
-  const data = await postJson(`${resolved.baseUrl}/chat/completions`, { authorization: `Bearer ${key}` },
+  const data = await postJson(`${resolved.baseUrl}/chat/completions`, key ? { authorization: `Bearer ${key}` } : {},
     { model: resolved.model, max_tokens: maxTokens, messages: [{ role: 'system', content: prompt.system }, { role: 'user', content: prompt.user }] }, fetchImpl);
   return ((data.choices || [])[0] || {}).message ? data.choices[0].message.content.trim() : '';
 }
 
-module.exports = { PROVIDERS, LlmConfigError, resolveProvider, requireKey, complete };
+module.exports = { PROVIDERS, LlmConfigError, resolveProvider, requireKey, isLocalBaseUrl, complete };

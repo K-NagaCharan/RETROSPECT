@@ -54,6 +54,35 @@ describe('complete() request shape (mocked fetch, no network)', () => {
     expect(f.calls[0].init.body.messages).toEqual([{ role: 'system', content: 'SYS' }, { role: 'user', content: 'USER' }]);
   });
 
+  test('local openai-compatible endpoints need no key: request is sent without an Authorization header', async () => {
+    for (const baseUrl of ['http://localhost:11434/v1', 'http://127.0.0.1:1234/v1', 'http://[::1]:8080/v1']) {
+      const f = fakeFetch({ choices: [{ message: { content: 'local answer' } }] });
+      const r = resolveProvider({ flags: { provider: 'openai-compatible', model: 'llama3' }, env: { OPENAI_BASE_URL: baseUrl } });
+      expect(requireKey(r, {})).toBeNull();
+      await expect(complete(r, prompt, { env: {}, fetchImpl: f })).resolves.toBe('local answer');
+      expect(f.calls).toHaveLength(1);
+      expect(f.calls[0].url).toBe(`${baseUrl}/chat/completions`);
+      expect(Object.keys(f.calls[0].init.headers).map(h => h.toLowerCase())).not.toContain('authorization');
+    }
+  });
+
+  test('a key set for a local endpoint is still sent', async () => {
+    const f = fakeFetch({ choices: [{ message: { content: 'ok' } }] });
+    const r = resolveProvider({ flags: { provider: 'openai-compatible', model: 'm' }, env: { OPENAI_BASE_URL: 'http://localhost:11434/v1' } });
+    await complete(r, prompt, { env: { OPENAI_API_KEY: 'local-key' }, fetchImpl: f });
+    expect(f.calls[0].init.headers.authorization).toBe('Bearer local-key');
+  });
+
+  test('remote openai-compatible URL with no key keeps the existing error and sends nothing', async () => {
+    for (const baseUrl of ['https://api.openai.com/v1', 'http://localhost.example.com/v1', 'http://10.0.0.5:11434/v1']) {
+      const never = jest.fn();
+      const r = resolveProvider({ flags: { provider: 'openai-compatible', model: 'm' }, env: { OPENAI_BASE_URL: baseUrl } });
+      expect(() => requireKey(r, {})).toThrow(/set the OPENAI_API_KEY environment variable/);
+      await expect(complete(r, prompt, { env: {}, fetchImpl: never })).rejects.toThrow(/OPENAI_API_KEY/);
+      expect(never).not.toHaveBeenCalled();
+    }
+  });
+
   test('HTTP errors surface the provider message; missing key fails before any request', async () => {
     const bad = async () => ({ ok: false, status: 401, text: async () => JSON.stringify({ error: { message: 'invalid x-api-key' } }) });
     const r = resolveProvider({ flags: { model: 'm' }, env: {} });
