@@ -1,0 +1,269 @@
+# Retrospect CLI demo: ramda
+# repository: /d/clones_external/ramda__ramda (benchmark pin 0018f70176f5876085cff5320ce1bcdb0d615128)
+# retrospect: 1ac3b35 (eval-v1 retrieval code), node v22.17.1
+
+$ rtro init
+Initialising Retrospect in D:\clones_external\ramda__ramda
+Added ".retrospect/" to .git/info/exclude
+  structural index: 1989 symbols in 75 files (0.7s)
+  history index: 261 commits analysed, 621 symbols with history (80.0s, window 400)
+Indexed HEAD 0018f70176f5: 1989 symbols, 621 with history (80.7s total)
+
+$ rtro status
+Repository: D:\clones_external\ramda__ramda
+Initialised: yes
+Indexed HEAD: 0018f70176f5  Current HEAD: 0018f70176f5  -> fresh
+History window: 400 commits (config: 400)
+Index: 1989 symbols in 75 files; 621 with history; 261 commits analysed
+Index size on disk: structural 3412.3 KB, history 5545.0 KB
+Built: 2026-10-23T09:32:50.013Z
+LLM: provider anthropic, model (not set); ANTHROPIC_API_KEY is not set
+
+$ rtro search "where is filterObject now?"
+ 1. pickWith  ramda.js:2893
+    formerly filterObject (renamed in 92c182c, 2014-07-01)
+ 2. filter  ramda.js:1742
+ 3. filterIdx  ramda.js:1771
+ 4. filterLeaks  lib/test/mocha.js:4584
+ 5. genFilter  examples/generators.js:35
+ 6. anonymous  ext/lazylist/lazylist.js:41
+ 7. filter  ramda.api.js:51
+ 8. filter.idx  ramda.api.js:52
+ 9. anonymous  ramda.js:1428
+10. anonymous  ramda.js:1464
+
+$ rtro search "where is filterObject now?" --json
+{
+  "query": "where is filterObject now?",
+  "mode": "lineage_gate",
+  "extractedIdentifiers": [
+    "filterObject"
+  ],
+  "lineageMatches": 1,
+  "indexedHead": "0018f70176f5876085cff5320ce1bcdb0d615128",
+  "results": [
+    {
+      "rank": 1,
+      "name": "pickWith",
+      "qualifiedName": "pickWith",
+      "kind": "function",
+      "file": "ramda.js",
+      "line": 2893,
+      "endLine": 2904,
+      "score": 1.3,
+      "historyMatch": true,
+      "formerly": {
+        "oldName": "filterObject",
+        "commit": "92c182c2d94d2cd5287f08cecb54d97b56938cb0",
+        "date": "2014-07-01",
+        "subject": "filterObject->pickWith to match naming convention",
+        "changeClassification": "renamed"
+      }
+    },
+    {
+      "rank": 2,
+      "name": "filter",
+      "qualifiedName": "filter",
+      "kind": "function",
+      "file": "ramda.js",
+      "line": 1742,
+      "endLine": 1750,
+      "score": 0.3,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 3,
+      "name": "filterIdx",
+      "qualifiedName": "filterIdx",
+      "kind": "function",
+      "file": "ramda.js",
+      "line": 1771,
+      "endLine": 1779,
+      "score": 0.225,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 4,
+      "name": "filterLeaks",
+      "qualifiedName": "filterLeaks",
+      "kind": "function",
+      "file": "lib/test/mocha.js",
+      "line": 4584,
+      "endLine": 4594,
+      "score": 0.1779,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 5,
+      "name": "genFilter",
+      "qualifiedName": "genFilter",
+      "kind": "function",
+      "file": "examples/generators.js",
+      "line": 35,
+      "endLine": 45,
+      "score": 0.1588,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 6,
+      "name": "anonymous",
+      "qualifiedName": "anonymous",
+      "kind": "function",
+      "file": "ext/lazylist/lazylist.js",
+      "line": 41,
+      "endLine": 41,
+      "score": 0.15,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 7,
+      "name": "filter",
+      "qualifiedName": "filter",
+      "kind": "function",
+      "file": "ramda.api.js",
+      "line": 51,
+      "endLine": 51,
+      "score": 0.15,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 8,
+      "name": "filter.idx",
+      "qualifiedName": "filter.idx",
+      "kind": "function",
+      "file": "ramda.api.js",
+      "line": 52,
+      "endLine": 52,
+      "score": 0.15,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 9,
+      "name": "anonymous",
+      "qualifiedName": "anonymous",
+      "kind": "function",
+      "file": "ramda.js",
+      "line": 1428,
+      "endLine": 1428,
+      "score": 0.15,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 10,
+      "name": "anonymous",
+      "qualifiedName": "anonymous",
+      "kind": "function",
+      "file": "ramda.js",
+      "line": 1464,
+      "endLine": 1464,
+      "score": 0.15,
+      "historyMatch": false,
+      "formerly": null
+    }
+  ]
+}
+
+$ rtro ask "where is filterObject now?" --dry-run
+=== SYSTEM ===
+You are Retrospect, a code assistant that answers questions about a repository and its history.
+Answer only from the provided context (CURRENT CODE and HISTORICAL EVIDENCE). Do not use outside knowledge about this codebase.
+If the context is insufficient to answer, say so explicitly and state what is missing.
+Clearly distinguish current code (what exists now) from former names (what a symbol used to be called).
+Cite file paths (path:line) for every claim about current code, and commit shas for claims about history.
+=== USER ===
+QUESTION
+where is filterObject now?
+
+CURRENT CODE
+[1] pickWith (function) — ramda.js:2893-2904
+```
+function pickWith(test, obj) {
+            var copy = {},
+                props = keys(obj), prop, val;
+            for (var i = 0, len = props.length; i < len; i++) {
+                prop = props[i];
+                val = obj[prop];
+                if (test(val, prop, obj)) {
+                    copy[prop] = val;
+                }
+            }
+            return copy;
+        }
+```
+
+[2] filter (function) — ramda.js:1742-1750
+```
+filter = function _filter(fn, list) {
+            var idx = -1, len = list.length, result = [];
+            while (++idx < len) {
+                if (fn(list[idx])) {
+                    result.push(list[idx]);
+                }
+            }
+            return result;
+        }
+```
+
+[3] filterIdx (function) — ramda.js:1771-1779
+```
+function filterIdx(fn, list) {
+            var idx = -1, len = list.length, result = [];
+            while (++idx < len) {
+                if (fn(list[idx], idx, list)) {
+                    result.push(list[idx]);
+                }
+            }
+            return result;
+        }
+```
+
+[4] filterLeaks (function) — lib/test/mocha.js:4584-4594
+```
+function filterLeaks(ok, globals) {
+  return filter(globals, function(key){
+    var matched = filter(ok, function(ok){
+      if (~ok.indexOf('*')) return 0 == key.indexOf(ok.split('*')[0]);
+      // Opera and IE expose global variables for HTML element IDs (issue #243)
+      if (/^mocha-/.test(key)) return true;
+      return key == ok;
+    });
+    return matched.length == 0 && (!global.navigator || 'onerror' !== key);
+  });
+}
+```
+
+[5] genFilter (function) — examples/generators.js:35-45
+```
+genFilter = function(fn, gen) {
+        var head = gen.head;
+        while (!fn(head)) {
+            gen = gen.tail();
+            head = gen.head;
+        }
+        return {
+            head: head,
+            tail: function() {return genFilter(fn, gen.tail());}
+        };
+    }
+```
+
+HISTORICAL EVIDENCE
+- filterObject → pickWith (ramda.js); commit 92c182c2d94d, 2014-07-01; "filterObject->pickWith to match naming convention"
+- filter.idx → filterIdx (ramda.js); commit b2d1fe7f4c2c, 2014-06-29; "Custom currying; optimize reject"
+- filter.idx → filterIdx (ramda.js); commit 6e3e82310a63, 2014-06-24; "rewrite binary fns to remove repetition; one broken test in IO needs TLC"
+=== (dry run: no request sent) ===
+Sources:
+- ramda.js:2893 (pickWith) — history: commit 92c182c
+- ramda.js:1742 (filter)
+- ramda.js:1771 (filterIdx) — history: commit b2d1fe7
+- lib/test/mocha.js:4584 (filterLeaks)
+- examples/generators.js:35 (genFilter)
+

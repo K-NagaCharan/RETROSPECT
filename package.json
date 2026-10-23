@@ -1,16 +1,48 @@
 {
-  "name": "retrospect",
+  "name": "retrospect-cli",
   "version": "1.0.0",
+  "description": "Evolution-aware code search for git repositories: find current code by its former names, and ask questions grounded in code and history.",
   "main": "src/index.js",
+  "bin": {
+    "rtro": "bin/rtro.js",
+    "retrospect": "bin/rtro.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "!src/evaluation/benchmarks/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "test": "jest --runInBand --detectOpenHandles",
     "test:coverage": "jest --coverage --runInBand",
     "evaluate": "node src/evaluation/evaluationRunner.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K-NagaCharan/RETROSPECT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/K-NagaCharan/RETROSPECT/issues"
+  },
+  "homepage": "https://github.com/K-NagaCharan/RETROSPECT#readme",
+  "keywords": [
+    "code-search",
+    "git",
+    "git-history",
+    "refactoring",
+    "rename",
+    "retrieval",
+    "tree-sitter",
+    "llm",
+    "cli"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "tree-sitter-wasms": "^0.1.13",
     "web-tree-sitter": "^0.20.8"

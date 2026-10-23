@@ -305,6 +305,83 @@ node scripts/export_phase_c_author_pack.js
 
 ---
 
+## CLI usage (`rtro`)
+
+`retrospect-cli` installs two commands, `rtro` and `retrospect` (an alias). It needs Node 18 or newer and git on the `PATH`.
+
+### Install
+
+```bash
+npm install -g retrospect-cli
+```
+
+To install from a local checkout instead, run `npm pack` and then `npm install -g retrospect-cli-1.0.0.tgz`.
+
+### Index a repository: `rtro init`
+
+Run inside any git working tree:
+
+```bash
+rtro init                 # default history window: the 400 most recent commits
+rtro init --history 1000  # analyse a longer history
+```
+
+This builds the structural index and the history index, and stores them in `<repo>/.retrospect/` along with `config.json`. It also adds `.retrospect/` to `.git/info/exclude`. Tracked files are never modified.
+
+`rtro status` shows:
+- whether the index is fresh (indexed HEAD = current HEAD) or stale;
+- the history window and index sizes;
+- the active provider and model.
+
+### Search: `rtro search`
+
+```bash
+rtro search "where is filterObject now?"
+rtro search computeCartTotal --k 5
+rtro search "what happened to show_message?" --json   # machine-readable
+```
+
+Search uses Retrospect's lineage gate.
+- **Identifiers in the question** (`` `backticks` ``, camelCase, snake_case, dotted names, or a single bare token) are matched against former names recorded in git history. Matching symbols are listed first, each with a `formerly <oldName> (renamed in <sha>, <date>)` line.
+- **Without a lineage match**, results come from structural search over the current code.
+
+If HEAD has moved since the index was built, the index is rebuilt first.
+
+### Ask: `rtro ask`
+
+```bash
+rtro ask "what happened to show_message?" --dry-run    # print the full prompt; no network call
+rtro ask "what happened to show_message?" --model <model-name>
+rtro ask "where is filterObject now?" --provider openai-compatible --model llama3
+```
+
+`ask` takes the top results (`--k`, default 5) and builds a context within the token budget (default 4000). It sends a prompt with QUESTION, CURRENT CODE and HISTORICAL EVIDENCE sections. It prints the answer, then `Sources:` (file:line, plus the commit sha for historical evidence). The model is told to answer only from that context.
+
+### Configure: `rtro config`
+
+```bash
+rtro config get k
+rtro config set k 8                       # project keys: history, k, tokenBudget (.retrospect/config.json)
+rtro config set provider anthropic --global
+rtro config set model <model-name> --global
+rtro config set baseUrl http://localhost:11434/v1 --global   # for openai-compatible servers
+```
+
+Global keys (`provider`, `model`, `baseUrl`) live in `~/.retrospect/config.json`. API keys are never stored in any file.
+
+### Environment variables
+
+| Variable | Used for |
+|---|---|
+| `ANTHROPIC_API_KEY` | `--provider anthropic` (the default) |
+| `OPENAI_API_KEY` | `--provider openai-compatible` (OpenAI, Ollama, and other compatible servers) |
+| `OPENAI_BASE_URL` | Base URL for `openai-compatible` when `baseUrl` is not configured, e.g. `https://api.openai.com/v1` |
+| `RETROSPECT_MODEL` | Default model when neither `--model` nor the `model` config key is set |
+
+If a required key or model is missing, `rtro ask` names the variable or setting to provide. `--dry-run` never needs a key.
+
+---
+
 ## 7. CLI Reference
 
 ```bash

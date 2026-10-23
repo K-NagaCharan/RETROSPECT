@@ -1,0 +1,347 @@
+# Retrospect CLI demo: pylint
+# repository: /d/clones_external/pylint-dev__pylint (benchmark pin 784ddd5828cc98aebdbaf797964ede6ad91cffe8)
+# retrospect: 1ac3b35 (eval-v1 retrieval code), node v22.17.1
+
+$ rtro init
+Initialising Retrospect in D:\clones_external\pylint-dev__pylint
+Added ".retrospect/" to .git/info/exclude
+  structural index: 1471 symbols in 286 files (0.7s)
+  history index: 389 commits analysed, 860 symbols with history (129.4s, window 400)
+Indexed HEAD 784ddd5828cc: 1471 symbols, 860 with history (130.1s total)
+
+$ rtro status
+Repository: D:\clones_external\pylint-dev__pylint
+Initialised: yes
+Indexed HEAD: 784ddd5828cc  Current HEAD: 784ddd5828cc  -> fresh
+History window: 400 commits (config: 400)
+Index: 1471 symbols in 286 files; 860 with history; 389 commits analysed
+Index size on disk: structural 4360.6 KB, history 8619.7 KB
+Built: 2026-10-23T09:35:01.677Z
+LLM: provider anthropic, model (not set); ANTHROPIC_API_KEY is not set
+
+$ rtro search "what happened to show_message?"
+ 1. LintGui.show_sourcefile  gui.py:475
+    formerly show_message (renamed in 8394e37, 2013-06-01)
+ 2. MessagesHandlerMixIn.register_messages  utils.py:156
+ 3. MessagesHandlerMixIn.add_message  utils.py:353
+ 4. CheckerTestCase.assertAddsMessages  testutils.py:163
+ 5. check_messages  checkers/utils.py:265
+ 6. BaseChecker.add_message  checkers/__init__.py:97
+ 7. Run.cb_help_message  lint.py:1048
+ 8. Run.cb_list_messages  lint.py:1058
+ 9. CheckerTestCase.assertNoMessages  testutils.py:157
+10. MessagesHandlerMixIn.check_message_id  utils.py:290
+
+$ rtro search "what happened to show_message?" --json
+{
+  "query": "what happened to show_message?",
+  "mode": "lineage_gate",
+  "extractedIdentifiers": [
+    "show_message"
+  ],
+  "lineageMatches": 1,
+  "indexedHead": "784ddd5828cc98aebdbaf797964ede6ad91cffe8",
+  "results": [
+    {
+      "rank": 1,
+      "name": "show_sourcefile",
+      "qualifiedName": "LintGui.show_sourcefile",
+      "kind": "method",
+      "file": "gui.py",
+      "line": 475,
+      "endLine": 492,
+      "score": 1.2737,
+      "historyMatch": true,
+      "formerly": {
+        "oldName": "show_message",
+        "commit": "8394e37ed45a500b5bde544859fa79568bbbb371",
+        "date": "2013-06-01",
+        "subject": "Rename show_message to the more appropriate show_sourcefile",
+        "changeClassification": "renamed"
+      }
+    },
+    {
+      "rank": 2,
+      "name": "register_messages",
+      "qualifiedName": "MessagesHandlerMixIn.register_messages",
+      "kind": "method",
+      "file": "utils.py",
+      "line": 156,
+      "endLine": 195,
+      "score": 0.2737,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 3,
+      "name": "add_message",
+      "qualifiedName": "MessagesHandlerMixIn.add_message",
+      "kind": "method",
+      "file": "utils.py",
+      "line": 353,
+      "endLine": 406,
+      "score": 0.2687,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 4,
+      "name": "assertAddsMessages",
+      "qualifiedName": "CheckerTestCase.assertAddsMessages",
+      "kind": "method",
+      "file": "testutils.py",
+      "line": 163,
+      "endLine": 175,
+      "score": 0.2512,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 5,
+      "name": "check_messages",
+      "qualifiedName": "check_messages",
+      "kind": "function",
+      "file": "checkers/utils.py",
+      "line": 265,
+      "endLine": 271,
+      "score": 0.2425,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 6,
+      "name": "add_message",
+      "qualifiedName": "BaseChecker.add_message",
+      "kind": "method",
+      "file": "checkers/__init__.py",
+      "line": 97,
+      "endLine": 99,
+      "score": 0.2337,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 7,
+      "name": "cb_help_message",
+      "qualifiedName": "Run.cb_help_message",
+      "kind": "method",
+      "file": "lint.py",
+      "line": 1048,
+      "endLine": 1051,
+      "score": 0.2337,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 8,
+      "name": "cb_list_messages",
+      "qualifiedName": "Run.cb_list_messages",
+      "kind": "method",
+      "file": "lint.py",
+      "line": 1058,
+      "endLine": 1061,
+      "score": 0.2337,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 9,
+      "name": "assertNoMessages",
+      "qualifiedName": "CheckerTestCase.assertNoMessages",
+      "kind": "method",
+      "file": "testutils.py",
+      "line": 157,
+      "endLine": 160,
+      "score": 0.2337,
+      "historyMatch": false,
+      "formerly": null
+    },
+    {
+      "rank": 10,
+      "name": "check_message_id",
+      "qualifiedName": "MessagesHandlerMixIn.check_message_id",
+      "kind": "method",
+      "file": "utils.py",
+      "line": 290,
+      "endLine": 303,
+      "score": 0.2337,
+      "historyMatch": false,
+      "formerly": null
+    }
+  ]
+}
+
+$ rtro ask "what happened to show_message?" --dry-run
+=== SYSTEM ===
+You are Retrospect, a code assistant that answers questions about a repository and its history.
+Answer only from the provided context (CURRENT CODE and HISTORICAL EVIDENCE). Do not use outside knowledge about this codebase.
+If the context is insufficient to answer, say so explicitly and state what is missing.
+Clearly distinguish current code (what exists now) from former names (what a symbol used to be called).
+Cite file paths (path:line) for every claim about current code, and commit shas for claims about history.
+=== USER ===
+QUESTION
+what happened to show_message?
+
+CURRENT CODE
+[1] LintGui.show_sourcefile (method) — gui.py:475-492
+```
+def show_sourcefile(self, event=None):
+        selected = self.lbMessages.curselection()
+        if not selected:
+            return
+
+        msg = self.visible_msgs[int(selected[0])]
+        filename = msg[2]
+        fileline = int(msg[5])
+
+        scroll = fileline - 3
+        if scroll < 0:
+            scroll = 0
+
+        self.tabs["Source File"] = open(filename, "r").readlines()
+        self.box.set("Source File")
+        self.refresh_results_window()
+        self.results.yview(scroll)
+        self.results.select_set(fileline - 1)
+```
+
+[2] MessagesHandlerMixIn.register_messages (method) — utils.py:156-195
+```
+def register_messages(self, checker):
+        """register a dictionary of messages
+
+        Keys are message ids, values are a 2-uple with the message type and the
+        message itself
+
+        message ids should be a string of len 4, where the two first characters
+        are the checker id and the two last the message id in this checker
+        """
+        msgs_dict = checker.msgs
+        chkid = None
+
+        for msgid, msg_tuple in msgs_dict.iteritems():
+            if implements(checker, (IRawChecker, ITokenChecker)):
+                scope = WarningScope.LINE
+            else:
+                scope = WarningScope.NODE
+            if len(msg_tuple) > 2:
+                (msg, msgsymbol, msgdescr) = msg_tuple[:3]
+                assert msgsymbol not in self._messages_by_symbol, \
+                    'Message symbol %r is already defined' % msgsymbol
+                if len(msg_tuple) > 3 and 'scope' in msg_tuple[3]:
+                    scope = msg_tuple[3]['scope']
+            else:
+                # messages should have a symbol, but for backward compatibility
+                # they may not.
+                (msg, msgdescr) = msg_tuple
+                warn("[pylint 0.26] description of message %s doesn't include "
+                     "a symbolic name" % msgid, DeprecationWarning)
+                msgsymbol = None
+            # avoid duplicate / malformed ids
+            assert msgid not in self._messages, \
+                   'Message id %r is already defined' % msgid
+            assert chkid is None or chkid == msgid[1:3], \
+                   'Inconsistent checker part in message id %r' % msgid
+            chkid = msgid[1:3]
+            msg = Message(checker, msgid, msg, msgdescr, msgsymbol, scope)
+            self._messages[msgid] = msg
+            self._messages_by_symbol[msgsymbol] = msg
+            self._msgs_by_category.setdefault(msgid[0], []).append(msgid)
+```
+
+[3] MessagesHandlerMixIn.add_message (method) — utils.py:353-406
+```
+def add_message(self, msg_descr, line=None, node=None, args=None):
+        """Adds a message given by ID or name.
+
+        If provided, the message string is expanded using args
+
+        AST checkers should must the node argument (but may optionally 
+        provide line if the line number is different), raw and token checkers
+        must provide the line argument.
+        """
+        msg_info = self.check_message_id(msg_descr)
+        msgid = msg_info.msgid
+        # Fatal messages and reports are special, the node/scope distinction
+        # does not apply to them.
+        if msgid[0] not in _SCOPE_EXEMPT:
+            if msg_info.scope == WarningScope.LINE:
+                assert node is None and line is not None, (
+                    'Message %s must only provide line, got line=%s, node=%s' % (msgid, line, node))
+            elif msg_info.scope == WarningScope.NODE:
+                # Node-based warnings may provide an override line.
+                assert node is not None, 'Message %s must provide Node, got None'
+
+        if line is None and node is not None:
+            line = node.fromlineno
+        if hasattr(node, 'col_offset'):
+            col_offset = node.col_offset # XXX measured in bytes for utf-8, divide by two for chars?
+        else:
+            col_offset = None
+        # should this message be displayed
+        if not self.is_message_enabled(msgid, line):
+            self.handle_ignored_message(
+                self.get_message_state_scope(msgid, line), msgid, line, node, args)
+            return
+        # update stats
+        msg_cat = MSG_TYPES[msgid[0]]
+        self.msg_status |= MSG_TYPES_STATUS[msgid[0]]
+        self.stats[msg_cat] += 1
+        self.stats['by_module'][self.current_name][msg_cat] += 1
+        try:
+            self.stats['by_msg'][msgid] += 1
+        except KeyError:
+            self.stats['by_msg'][msgid] = 1
+        # expand message ?
+        msg = msg_info.msg
+        if args:
+            msg %= args
+        # get module and object
+        if node is None:
+            module, obj = self.current_name, ''
+            path = self.current_file
+        else:
+            module, obj = get_module_and_frameid(node)
+            path = node.root().file
+        # add the message
+        self.reporter.add_message(msgid, (path, module, obj, line or 1, col_offset or 0), msg)
+```
+
+[4] CheckerTestCase.assertAddsMessages (method) — testutils.py:163-175
+```
+def assertAddsMessages(self, *messages):
+        """Assert that exactly the given method adds the given messages.
+
+        The list of messages must exactly match *all* the messages added by the
+        method. Additionally, we check to see whether the args in each message can
+        actually be substituted into the message string.
+        """
+        yield
+        got = self.linter.release_messages()
+        msg = ('Expected messages did not match actual.\n'
+               'Expected:\n%s\nGot:\n%s' % ('\n'.join(repr(m) for m in messages),
+                                            '\n'.join(repr(m) for m in got)))
+        self.assertEqual(got, list(messages), msg)
+```
+
+[5] check_messages (function) — checkers/utils.py:265-271
+```
+def check_messages(*messages):
+    """decorator to store messages that are handled by a checker method"""
+
+    def store_messages(func):
+        func.checks_msgs = messages
+        return func
+    return store_messages
+```
+
+HISTORICAL EVIDENCE
+- show_message → LintGui.show_sourcefile (gui.py); commit 8394e37ed45a, 2013-06-01; "Rename show_message to the more appropriate show_sourcefile"
+=== (dry run: no request sent) ===
+Sources:
+- gui.py:475 (LintGui.show_sourcefile) — history: commit 8394e37
+- utils.py:156 (MessagesHandlerMixIn.register_messages)
+- utils.py:353 (MessagesHandlerMixIn.add_message)
+- testutils.py:163 (CheckerTestCase.assertAddsMessages)
+- checkers/utils.py:265 (check_messages)
+
