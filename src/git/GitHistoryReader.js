@@ -1,9 +1,10 @@
 const { execFile } = require('child_process');
 const path = require('path');
+const { buildHistoryWindowLogArgs } = require('./historyWindow');
 
 class GitHistoryReader {
   constructor(options = {}) {
-    this.timeout = options.timeout || 30000;
+    this.timeout = options.timeout || 60000;
     this.maxBuffer = options.maxBuffer || 20 * 1024 * 1024; // 20 MB
   }
 
@@ -12,7 +13,7 @@ class GitHistoryReader {
    */
   async _execGit(repoPath, args) {
     return new Promise((resolve, reject) => {
-      execFile('git', args, {
+      execFile('git', ['-c', 'core.longpaths=true', ...args], {
         cwd: repoPath,
         timeout: this.timeout,
         maxBuffer: this.maxBuffer,
@@ -76,19 +77,49 @@ class GitHistoryReader {
   }
 
   /**
-   * Get linear or first-parent commit history starting from a given commit
+   * Get linear, first-parent, or merge-aware commit history starting from a given commit.
+   *
+   * By default (options.firstParentOnly = false), uses merge-aware, topologically ordered
+   * traversal (`--topo-order`) discovering commits across merged pull-request branches.
+   *
+   * History Horizon:
+   * - In merge-aware mode (default): `maxCount` bounds the total number of ancestor commits
+   *   traversed across all branches in topological order.
+   * - In first-parent mode: `maxCount` bounds the number of first-parent steps along the primary spine.
+   *
+   * All retrieved commits are guaranteed to be ancestors of `startCommit` (the evaluation pin).
+   * Commits are deduplicated in order of topological appearance to prevent duplicate entries.
+   *
+   * @param {string} repoPath Path to git repository
+   * @param {string} [startCommit='HEAD'] Starting commit hash or ref (pin)
+   * @param {number} [maxCount=50] Maximum number of commits to retrieve (counts total traversed commits)
+   * @param {boolean|object} [options=false] Options object or boolean for firstParentOnly.
+   *        If boolean: true = firstParentOnly, false = merge-aware.
+   *        If object: { firstParentOnly: boolean, topoOrder: boolean }
+   * @returns {Promise<Array<object>>} List of commit objects in topological order
    */
-  async getCommitHistory(repoPath, startCommit = 'HEAD', maxCount = 50, firstParentOnly = true) {
+  async getCommitHistory(repoPath, startCommit = 'HEAD', maxCount = 50, options = false) {
+    const isBool = typeof options === 'boolean';
+    const firstParentOnly = isBool ? options : (options && options.firstParentOnly === true);
+    const topoOrder = !isBool && options && options.topoOrder !== undefined ? options.topoOrder : true;
+
     const resolvedStart = await this.resolveCommit(repoPath, startCommit);
-    const args = ['log', `--format=%H`, `-n`, String(maxCount)];
-    if (firstParentOnly) {
-      args.push('--first-parent');
-    }
-    args.push(resolvedStart);
+    // Shared with reachability labelling (historyWindow.js) so both read the same window.
+    const args = buildHistoryWindowLogArgs(resolvedStart, maxCount, { firstParentOnly: firstParentOnly === true, topoOrder });
 
     const out = await this._execGit(repoPath, args);
-    const hashes = out.split(/\r?\n/).map(h => h.trim()).filter(Boolean);
-    
+    const rawHashes = out.split(/\r?\n/).map(h => h.trim()).filter(Boolean);
+
+    // Deduplicate while preserving deterministic topological ordering
+    const seen = new Set();
+    const hashes = [];
+    for (const h of rawHashes) {
+      if (!seen.has(h)) {
+        seen.add(h);
+        hashes.push(h);
+      }
+    }
+
     const commits = [];
     for (const hash of hashes) {
       const commit = await this.getCommit(repoPath, hash);
@@ -108,14 +139,7 @@ class GitHistoryReader {
       const out = await this._execGit(repoPath, ['show', `${commitHash}:${gitPath}`]);
       return out;
     } catch (err) {
-      if (err.stderr && (err.stderr.includes('does not exist') || err.stderr.includes('fatal: path'))) {
-        return null;
-      }
-      // Also check exit code / message
-      if (err.message.includes('exists on disk, but not in') || err.message.includes('Path') || err.message.includes('does not exist')) {
-        return null;
-      }
-      throw err;
+      return null;
     }
   }
 

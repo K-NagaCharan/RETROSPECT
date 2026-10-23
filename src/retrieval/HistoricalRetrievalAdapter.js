@@ -305,12 +305,38 @@ class HistoricalRetrievalAdapter {
    * @param {number} structuralScore Normalized score from StructuralRetriever [0, 1]
    * @param {number} historicalScore Normalized score from HistoricalRetrievalAdapter [0, 1]
    * @param {object} [weights] Fusion weights { structural: 0.60, historical: 0.40 }
+   * @param {object} [options]
+   * @param {boolean} [options.normalizeActiveChannels=false] When true, normalizes score by sum of weights of active channels (score > 0)
    * @returns {number} Combined score [0, 1]
    */
-  static fuseScores(structuralScore = 0, historicalScore = 0, weights = { structural: 0.60, historical: 0.40 }) {
-    const structWeight = weights.structural ?? 0.60;
-    const histWeight = weights.historical ?? 0.40;
-    const combined = (structuralScore * structWeight) + (historicalScore * histWeight);
+  static fuseScores(structuralScore = 0, historicalScore = 0, weights = { structural: 0.60, historical: 0.40 }, options = {}) {
+    const s = Number.isFinite(structuralScore) && structuralScore > 0 ? structuralScore : 0.0;
+    const h = Number.isFinite(historicalScore) && historicalScore > 0 ? historicalScore : 0.0;
+    const structWeight = weights?.structural ?? 0.60;
+    const histWeight = weights?.historical ?? 0.40;
+
+    if (options && options.normalizeActiveChannels) {
+      let activeWeightSum = 0.0;
+      let weightedSum = 0.0;
+
+      if (s > 0 && structWeight > 0) {
+        weightedSum += s * structWeight;
+        activeWeightSum += structWeight;
+      }
+      if (h > 0 && histWeight > 0) {
+        weightedSum += h * histWeight;
+        activeWeightSum += histWeight;
+      }
+
+      if (activeWeightSum <= 0.0) {
+        return 0.0;
+      }
+
+      const normalized = weightedSum / activeWeightSum;
+      return parseFloat(normalized.toFixed(4));
+    }
+
+    const combined = (s * structWeight) + (h * histWeight);
     return parseFloat(combined.toFixed(4));
   }
 
@@ -440,9 +466,10 @@ class HistoricalRetrievalAdapter {
   async indexRepositoryHistory(repoPath, currentSymbols = [], options = {}) {
     const maxCommits = options.maxCommits || 100;
     const startCommit = options.startCommit || 'HEAD';
+    const firstParentOnly = options.firstParentOnly ?? false;
     const startTime = Date.now();
 
-    const commits = await this.gitReader.getCommitHistory(repoPath, startCommit, maxCommits, true);
+    const commits = await this.gitReader.getCommitHistory(repoPath, startCommit, maxCommits, { firstParentOnly });
     const fileCache = new Map();
 
     const getSymbols = async (commitHash, filePath) => {
@@ -467,6 +494,11 @@ class HistoricalRetrievalAdapter {
 
     for (let i = 0; i < commits.length - 1; i++) {
       const childCommit = commits[i];
+      // In merge-aware mode, skip merge commits because their changes are covered
+      // atomically by the traversed branch commits, avoiding noisy composite diffs.
+      if (!firstParentOnly && childCommit.parents.length > 1) {
+        continue;
+      }
       const parentHash = childCommit.parents[0];
       if (!parentHash) continue;
 

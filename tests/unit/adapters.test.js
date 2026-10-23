@@ -181,6 +181,70 @@ const regexConst = (/^[a-z]+$/);
       expect(names).not.toContain('regularConst');
       expect(names).not.toContain('regexConst');
     });
+
+    test('extracts named function expressions assigned to module.exports and preserves anonymous CommonJS exports', async () => {
+      const code = `
+module.exports = function lookupFiles(filepath, extensions = [], recursive = false) {
+  return filepath;
+};
+
+module.exports.helperMethod = function(a, b) {
+  return a + b;
+};
+
+exports.standaloneHelper = function(x) {
+  return x * 2;
+};
+`;
+      const result = await extractor.extract(code, 'lib/cli/lookup-files.js');
+      expect(result.language).toBe('javascript');
+      expect(result.hasSyntaxError).toBe(false);
+
+      const names = result.symbols.map(s => s.name);
+      expect(names).toContain('lookupFiles');
+      expect(names).toContain('helperMethod');
+      expect(names).toContain('standaloneHelper');
+      expect(names).not.toContain('module.exports');
+
+      const lookupSym = result.symbols.find(s => s.name === 'lookupFiles');
+      expect(lookupSym.symbolType).toBe('function');
+      expect(lookupSym.qualifiedName).toBe('lookupFiles');
+      expect(lookupSym.parameters.map(p => p.name)).toEqual(['filepath', 'extensions', 'recursive']);
+      expect(lookupSym.normalizedSignature).toBe('lookupFiles(filepath, extensions, recursive)');
+
+      // Anonymous function assigned directly to module.exports
+      const anonCode = `
+module.exports = function(filepath) {
+  return filepath;
+};
+`;
+      const anonResult = await extractor.extract(anonCode, 'lib/anon.js');
+      const anonNames = anonResult.symbols.map(s => s.name);
+      expect(anonNames).toContain('module.exports');
+      const anonSym = anonResult.symbols.find(s => s.name === 'module.exports');
+      expect(anonSym.symbolType).toBe('function');
+      expect(anonSym.qualifiedName).toBe('module.exports');
+
+      // Anonymous arrow function assigned directly to module.exports
+      const arrowCode = `
+module.exports = (filepath) => filepath;
+`;
+      const arrowResult = await extractor.extract(arrowCode, 'lib/arrow.js');
+      const arrowNames = arrowResult.symbols.map(s => s.name);
+      expect(arrowNames).toContain('module.exports');
+      const arrowSym = arrowResult.symbols.find(s => s.name === 'module.exports');
+      expect(arrowSym.symbolType).toBe('arrow_function');
+
+      // Object method assignment preserves method name
+      const objMethodCode = `
+obj.method = function customHandler(req, res) {
+  return true;
+};
+`;
+      const objResult = await extractor.extract(objMethodCode, 'lib/obj.js');
+      const objNames = objResult.symbols.map(s => s.name);
+      expect(objNames).toContain('obj.method');
+    });
   });
 
   describe('TypeScriptAdapter', () => {

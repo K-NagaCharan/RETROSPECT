@@ -235,6 +235,13 @@ class TypeScriptAdapter extends JavaScriptAdapter {
           }
           return;
         }
+
+        // Exported module-level factory definition: export const X = f(..., () => {...}). Adds one
+        // symbol for X; traversal then continues unchanged so nested symbols keep their names and ids.
+        const callback = scopeStack.length === 0 && this._isExportedDeclarator(node) ? this._findFactoryCallback(valueNode) : null;
+        if (callback && nameNode) {
+          symbols.push(this._factorySymbol(node, nameNode, valueNode, callback, sourceCode, filePath, hasSyntaxError));
+        }
       }
 
       for (let i = 0; i < node.childCount; i++) {
@@ -243,7 +250,33 @@ class TypeScriptAdapter extends JavaScriptAdapter {
     };
 
     traverse(tree.rootNode, []);
-    return symbols;
+    return this._collapseOverloadSignatures(symbols);
+  }
+
+  /**
+   * Overload signatures (`function f(a: A): X; function f(b: B): Y; function f(x) {...}`) are one
+   * callable. Drop signature-only entries when an implementation with the same qualified name exists;
+   * otherwise keep only the first signature. Single signatures (e.g. interface members) are untouched.
+   */
+  _collapseOverloadSignatures(symbols) {
+    const groups = new Map();
+    for (const s of symbols) {
+      if (!['function', 'method', 'constructor'].includes(s.symbolType)) continue;
+      if (!groups.has(s.qualifiedName)) groups.set(s.qualifiedName, []);
+      groups.get(s.qualifiedName).push(s);
+    }
+    const drop = new Set();
+    for (const group of groups.values()) {
+      const sigs = group.filter(s => s.metadata && s.metadata.isSignatureOnly);
+      if (sigs.length === 0 || group.length < 2) continue;
+      const impls = group.filter(s => !(s.metadata && s.metadata.isSignatureOnly));
+      const keep = impls.length > 0 ? impls[0] : sigs[0];
+      keep.metadata = { ...(keep.metadata || {}), overloadCount: sigs.length };
+      for (const s of sigs) {
+        if (s !== keep) drop.add(s);
+      }
+    }
+    return drop.size ? symbols.filter(s => !drop.has(s)) : symbols;
   }
 
   _findChildType(node, typeName) {

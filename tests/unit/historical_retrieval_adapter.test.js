@@ -184,6 +184,104 @@ describe('HistoricalRetrievalAdapter Unit Tests', () => {
     expect(combined).toBeCloseTo(0.73, 2);
   });
 
+  describe('Active-Channel Normalization for Linear Fusion (Option A)', () => {
+    const weights = { structural: 0.60, historical: 0.40 };
+
+    test('1. Structural-only candidate: normalizes score by structural weight (avoids 40% zero-signal penalty)', () => {
+      const sScore = 0.80;
+      const hScore = 0.00;
+      const unnormalized = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, weights, { normalizeActiveChannels: false });
+      const normalized = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, weights, { normalizeActiveChannels: true });
+
+      // Unnormalized: 0.80 * 0.60 = 0.48 (diluted by 40%)
+      expect(unnormalized).toBe(0.48);
+      // Normalized: (0.80 * 0.60) / 0.60 = 0.80
+      expect(normalized).toBe(0.80);
+    });
+
+    test('2. Historical-only candidate: normalizes score by historical weight (avoids 60% zero-signal penalty)', () => {
+      const sScore = 0.00;
+      const hScore = 0.50;
+      const unnormalized = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, weights, { normalizeActiveChannels: false });
+      const normalized = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, weights, { normalizeActiveChannels: true });
+
+      // Unnormalized: 0.50 * 0.40 = 0.20 (diluted by 60%)
+      expect(unnormalized).toBe(0.20);
+      // Normalized: (0.50 * 0.40) / 0.40 = 0.50
+      expect(normalized).toBe(0.50);
+    });
+
+    test('3. Candidates with evidence from both channels: applies weighted combination over active channel weights', () => {
+      const sScore = 0.80;
+      const hScore = 0.60;
+      const normalized = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, weights, { normalizeActiveChannels: true });
+
+      // (0.80 * 0.60 + 0.60 * 0.40) / (0.60 + 0.40) = (0.48 + 0.24) / 1.0 = 0.72
+      expect(normalized).toBe(0.72);
+    });
+
+    test('4. Candidates with no evidence: returns exactly 0.0 without division by zero', () => {
+      const sScore = 0.00;
+      const hScore = 0.00;
+      const normalized = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, weights, { normalizeActiveChannels: true });
+
+      expect(normalized).toBe(0.00);
+    });
+
+    test('5. Candidates with unequal scores across channels: demonstrates dilution when weak secondary signal is present', () => {
+      // Strong structural hit (0.90) with weak incidental historical match (0.10)
+      const sScore = 0.90;
+      const hScore = 0.10;
+      const dualNormalized = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, weights, { normalizeActiveChannels: true });
+      const structOnlyNormalized = HistoricalRetrievalAdapter.fuseScores(sScore, 0.00, weights, { normalizeActiveChannels: true });
+
+      // Dual: 0.60 * 0.90 + 0.40 * 0.10 = 0.54 + 0.04 = 0.58
+      expect(dualNormalized).toBe(0.58);
+      // Struct only: 0.90
+      expect(structOnlyNormalized).toBe(0.90);
+      // Demonstrates mathematical consequence: weak secondary evidence dilutes strong primary evidence under weighted averaging
+      expect(dualNormalized).toBeLessThan(structOnlyNormalized);
+    });
+
+    test('6. Missing or unavailable channels: handles zero or omitted channel weights gracefully', () => {
+      const sScore = 0.75;
+      const hScore = 0.45;
+
+      // Historical channel disabled (weight 0)
+      const structOnlyChannel = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, { structural: 0.70, historical: 0.00 }, { normalizeActiveChannels: true });
+      expect(structOnlyChannel).toBe(0.75);
+
+      // Structural channel disabled (weight 0)
+      const histOnlyChannel = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, { structural: 0.00, historical: 0.30 }, { normalizeActiveChannels: true });
+      expect(histOnlyChannel).toBe(0.45);
+
+      // Both weights 0
+      const zeroWeights = HistoricalRetrievalAdapter.fuseScores(sScore, hScore, { structural: 0.00, historical: 0.00 }, { normalizeActiveChannels: true });
+      expect(zeroWeights).toBe(0.00);
+    });
+
+    test('7. Ranking changes caused by normalization: demonstrates rank inversion between dual-evidence and single-evidence items', () => {
+      // Candidate A: moderate dual evidence (s=0.50, h=0.50)
+      // Candidate B: strong historical-only evidence (s=0.00, h=0.80)
+      const candA_base = HistoricalRetrievalAdapter.fuseScores(0.50, 0.50, weights, { normalizeActiveChannels: false });
+      const candB_base = HistoricalRetrievalAdapter.fuseScores(0.00, 0.80, weights, { normalizeActiveChannels: false });
+
+      // Under static linear baseline: Cand A = 0.50, Cand B = 0.32 -> Cand A outranks Cand B
+      expect(candA_base).toBe(0.50);
+      expect(candB_base).toBe(0.32);
+      expect(candA_base).toBeGreaterThan(candB_base);
+
+      // Under active-channel normalization: Cand A = 0.50, Cand B = 0.80 -> Cand B outranks Cand A!
+      const candA_norm = HistoricalRetrievalAdapter.fuseScores(0.50, 0.50, weights, { normalizeActiveChannels: true });
+      const candB_norm = HistoricalRetrievalAdapter.fuseScores(0.00, 0.80, weights, { normalizeActiveChannels: true });
+
+      expect(candA_norm).toBe(0.50);
+      expect(candB_norm).toBe(0.80);
+      // Rank inversion occurs: single-channel item surpasses dual-channel item
+      expect(candB_norm).toBeGreaterThan(candA_norm);
+    });
+  });
+
   describe('Transitive Historical Lineage Stitching', () => {
     test('Two-step rename (A -> B -> C): inherits names, commit messages, and diff tokens across multiple renames', () => {
       const currentSymbol = { id: 'symC', name: 'parseConfig', filePath: 'src/config.js' };

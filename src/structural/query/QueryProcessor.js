@@ -22,6 +22,24 @@ const DOMAIN_TERMS = new Set([
   'url', 'uri', 'sql', 'wasm', 'webassembly', 'ssl', 'tls'
 ]);
 
+// Common morphological prefixes in programming identifiers and behavioral queries
+const COMPOUND_PREFIXES = ['non', 'multi', 'sub', 'pre', 'post', 'un', 'auto', 'cross', 'read'];
+
+// Common non-compound English words that start with prefix substrings (avoids over-splitting)
+const NON_COMPOUND_WORDS = new Set([
+  'notice', 'nothing', 'uncle', 'under', 'until', 'union', 'unit', 'unique', 'auto', 'read', 'ready', 'real', 'post', 'multi'
+]);
+
+// Conservative canonical action verb mappings for common behavioral query variations
+const CANONICAL_ACTION_SYNONYMS = {
+  'dispatch': 'send',
+  'transmit': 'send',
+  'retrieve': 'get',
+  'fetch': 'get',
+  'construct': 'build',
+  'create': 'build'
+};
+
 class QueryProcessor {
   /**
    * Process a raw natural language or identifier query.
@@ -118,6 +136,30 @@ class QueryProcessor {
       }
     }
 
+    // Multi-token compound formation for adjacent prefix + word in sequential query token stream (e.g. 'non' + 'negative' -> 'nonnegative')
+    for (let i = 0; i < allTokens.length - 1; i++) {
+      const t1 = allTokens[i];
+      const t2 = allTokens[i + 1];
+      if (COMPOUND_PREFIXES.includes(t1) && t2.length >= 4 && !NON_COMPOUND_WORDS.has(t2) && !STOPWORDS.has(t2)) {
+        const compound = t1 + t2;
+        if (!terms.includes(compound)) {
+          terms.push(compound);
+        }
+      }
+    }
+
+    // Conservative behavioral action synonyms (e.g. 'dispatch' -> 'send')
+    const synonymAdditions = [];
+    for (const t of terms) {
+      const syn = CANONICAL_ACTION_SYNONYMS[t];
+      if (syn && !terms.includes(syn) && !synonymAdditions.includes(syn)) {
+        synonymAdditions.push(syn);
+      }
+    }
+    for (const syn of synonymAdditions) {
+      terms.push(syn);
+    }
+
     // Stem terms
     const stemmedTerms = terms.map(t => QueryProcessor.stem(t));
 
@@ -157,7 +199,23 @@ class QueryProcessor {
                           .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
                           .split(/\s+/);
       for (const cp of camelParts) {
-        if (cp) result.push(cp);
+        if (!cp) continue;
+        result.push(cp);
+
+        // Decompose compound prefix if present (e.g. 'nonnegative' -> 'non', 'negative')
+        const lower = cp.toLowerCase();
+        if (!NON_COMPOUND_WORDS.has(lower)) {
+          for (const pfx of COMPOUND_PREFIXES) {
+            if (lower.startsWith(pfx) && lower.length >= pfx.length + 4) {
+              const base = lower.slice(pfx.length);
+              if (!NON_COMPOUND_WORDS.has(base)) {
+                result.push(cp.slice(0, pfx.length));
+                result.push(cp.slice(pfx.length));
+                break;
+              }
+            }
+          }
+        }
       }
     }
 

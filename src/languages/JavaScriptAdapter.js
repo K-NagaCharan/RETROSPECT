@@ -188,6 +188,13 @@ class JavaScriptAdapter extends LanguageAdapter {
           }
           return;
         }
+
+        // Exported module-level factory definition: export const X = f(..., () => {...}). Adds one
+        // symbol for X; traversal then continues unchanged so nested symbols keep their names and ids.
+        const callback = scopeStack.length === 0 && this._isExportedDeclarator(node) ? this._findFactoryCallback(valueNode) : null;
+        if (callback && nameNode) {
+          symbols.push(this._factorySymbol(node, nameNode, valueNode, callback, sourceCode, filePath, hasSyntaxError));
+        }
       }
 
       // Handle assignment expression: obj.method = function() {} or exports.foo = () => {}
@@ -196,7 +203,18 @@ class JavaScriptAdapter extends LanguageAdapter {
         const rawRightNode = node.childForFieldName('right');
         const rightNode = this._unwrapFunctionValue(rawRightNode);
         if (rightNode && (rightNode.type === 'arrow_function' || rightNode.type === 'function_expression' || rightNode.type === 'function')) {
-          const name = leftNode ? this._nodeText(leftNode, sourceCode).replace(/^(exports\.|module\.exports\.)/, '') : 'anonymous';
+          let name = leftNode ? this._nodeText(leftNode, sourceCode).replace(/^(exports\.|module\.exports\.)/, '') : 'anonymous';
+          if (name === 'module.exports' || name === 'exports') {
+            const funcNameNode = (rightNode.type === 'function_expression' || rightNode.type === 'function')
+              ? rightNode.childForFieldName('name')
+              : null;
+            if (funcNameNode) {
+              const actualName = this._nodeText(funcNameNode, sourceCode).trim();
+              if (actualName) {
+                name = actualName;
+              }
+            }
+          }
           const paramsNode = rightNode.childForFieldName('parameters');
           const parameters = this._extractParameters(paramsNode, sourceCode);
           const normalizedSignature = this.normalizeSignature(name, parameters, null);
@@ -393,6 +411,57 @@ class JavaScriptAdapter extends LanguageAdapter {
     }
 
     return params;
+  }
+
+  _factorySymbol(declNode, nameNode, callNode, callback, sourceCode, filePath, hasSyntaxError) {
+    const name = this._nodeText(nameNode, sourceCode);
+    const parameters = this._extractParameters(callback.childForFieldName('parameters'), sourceCode);
+    const calleeNode = callNode.childForFieldName('function');
+    return new SymbolRecord({
+      name,
+      qualifiedName: name,
+      enclosingScope: [],
+      parameters,
+      normalizedSignature: this.normalizeSignature(name, parameters, null),
+      range: this._nodeRange(declNode),
+      source: this._nodeText(declNode, sourceCode),
+      language: this.languageId,
+      filePath,
+      symbolType: callback.type === 'arrow_function' ? 'arrow_function' : 'function',
+      modifiers: [],
+      docstring: this._extractLeadingComment(declNode, sourceCode),
+      calls: this._extractCalls(callback, sourceCode),
+      astSummary: { nodeType: callNode.type },
+      metadata: { factoryCall: calleeNode ? this._nodeText(calleeNode, sourceCode) : null },
+      extractionStatus: hasSyntaxError ? 'partial' : 'success'
+    });
+  }
+
+  /**
+   * Factory symbols are limited to exported declarations (`export const X = f(..., fn)`), so that
+   * computed values such as `const server = app.listen(port, cb)` or `const names = list.map(fn)`
+   * are not mistaken for definitions.
+   */
+  _isExportedDeclarator(declNode) {
+    const decl = declNode.parent;
+    return !!(decl && decl.parent && decl.parent.type === 'export_statement');
+  }
+
+  /**
+   * Module-level factory definitions: `const X = f(..., (a) => {...})`, e.g. zod's
+   * `core.$constructor("X", (inst, def) => {...})`. Returns the callback argument, or null.
+   */
+  _findFactoryCallback(valueNode) {
+    if (!valueNode || valueNode.type !== 'call_expression') return null;
+    const argsNode = valueNode.childForFieldName('arguments');
+    if (!argsNode) return null;
+    for (let i = 0; i < argsNode.namedChildCount; i++) {
+      const arg = this._unwrapFunctionValue(argsNode.namedChild(i));
+      if (arg && (arg.type === 'arrow_function' || arg.type === 'function_expression' || arg.type === 'function')) {
+        return arg;
+      }
+    }
+    return null;
   }
 
   _unwrapFunctionValue(node) {
