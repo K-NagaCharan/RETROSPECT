@@ -23,7 +23,8 @@ class LanguageAdapter {
   }
 
   async parse(sourceCode) {
-    const parser = await TreeSitterManager.createParser(this.languageId);
+    // One parser per language, reused: parsers live in WASM memory and were previously leaked on every call.
+    const parser = await TreeSitterManager.getParser(this.languageId);
     return parser.parse(sourceCode);
   }
 

@@ -23,16 +23,23 @@ class FunctionExtractor {
     }
 
     const tree = await adapter.parse(sourceCode);
-    const symbols = adapter.extractSymbols(sourceCode, tree, filePath || '');
-    const imports = typeof adapter.extractImports === 'function' ? adapter.extractImports(tree, sourceCode) : [];
+    try {
+      const symbols = adapter.extractSymbols(sourceCode, tree, filePath || '');
+      const imports = typeof adapter.extractImports === 'function' ? adapter.extractImports(tree, sourceCode) : [];
 
-    return {
-      language: adapter.getLanguageId(),
-      filePath: filePath || '',
-      symbols,
-      imports,
-      hasSyntaxError: tree.rootNode.hasError()
-    };
+      return {
+        language: adapter.getLanguageId(),
+        filePath: filePath || '',
+        symbols,
+        imports,
+        hasSyntaxError: tree.rootNode.hasError()
+      };
+    } finally {
+      // Trees live in WASM linear memory and are not garbage-collected; without delete() the WASM heap fills
+      // and the runtime aborts (ExitStatus exit(1)), after which every parse in the process fails.
+      // Extracted symbols hold only copied strings, never live tree nodes.
+      if (tree && typeof tree.delete === 'function') tree.delete();
+    }
   }
 }
 

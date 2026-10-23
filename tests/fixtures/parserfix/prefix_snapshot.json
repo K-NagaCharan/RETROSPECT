@@ -1,0 +1,2924 @@
+{
+ "java": {
+  "symbols": [
+   {
+    "id": "Sample.java::Sample::8",
+    "name": "Sample",
+    "qualifiedName": "com.example.parserfix..Sample",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "class Sample",
+    "returnType": null,
+    "range": {
+     "startLine": 8,
+     "startColumn": 0,
+     "endLine": 59,
+     "endColumn": 1
+    },
+    "source": "public class Sample<T extends Comparable<T>> {\n    private final List<T> items = new ArrayList<>();\n\n    /** Creates an empty sample. */\n    public Sample() {}\n\n    /** Creates a sample seeded with one item. */\n    public Sample(T first) { items.add(first); }\n\n    /**\n     * Adds an item and returns the new size.\n     * @param item the item\n     */\n    @Deprecated\n    public synchronized int add(T item) {\n        items.add(item);\n        return items.size();\n    }\n\n    public int add(T item, int times) {\n        for (int i = 0; i < times; i++) add(item);\n        return items.size();\n    }\n\n    // Finds the maximum item, or null.\n    public T max() {\n        T best = null;\n        for (T t : items) if (best == null || t.compareTo(best) > 0) best = t;\n        return best;\n    }\n\n    public <R> List<R> map(Function<T, R> fn) {\n        List<R> out = new ArrayList<>();\n        items.forEach(x -> out.add(fn.apply(x)));\n        return out;\n    }\n\n    static class Inner {\n        /** Inner helper. */\n        int helper(int x) { return x * 2; }\n    }\n\n    interface Visitor<V> {\n        V visit(Object o);\n        default V visitAll(List<Object> os) { return os.isEmpty() ? null : visit(os.get(0)); }\n    }\n\n    enum Mode {\n        FAST, SLOW;\n        boolean isFast() { return this == FAST; }\n    }\n}",
+    "sourceHash": "7dba13411f7e92d25cfea6c9c301885b2dedd4609db1cc44e59d62a862621523",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "class",
+    "modifiers": [
+     "public"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "public",
+     "class",
+     "sample",
+     "t",
+     "extends",
+     "comparable",
+     "t",
+     "private",
+     "final",
+     "list",
+     "t",
+     "items",
+     "new",
+     "arraylist",
+     "creates",
+     "an",
+     "empty",
+     "sample",
+     "public",
+     "sample",
+     "creates",
+     "a",
+     "sample",
+     "seeded",
+     "with",
+     "one",
+     "item",
+     "public",
+     "sample",
+     "t",
+     "first",
+     "items",
+     "add",
+     "first",
+     "adds",
+     "an",
+     "item",
+     "and",
+     "returns",
+     "the",
+     "new",
+     "size",
+     "param",
+     "item",
+     "the",
+     "item",
+     "deprecated",
+     "public",
+     "synchronized",
+     "int",
+     "add",
+     "t",
+     "item",
+     "items",
+     "add",
+     "item",
+     "return",
+     "items",
+     "size",
+     "public",
+     "int",
+     "add",
+     "t",
+     "item",
+     "int",
+     "times",
+     "for",
+     "int",
+     "i",
+     "0",
+     "i",
+     "times",
+     "i",
+     "add",
+     "item",
+     "return",
+     "items",
+     "size",
+     "finds",
+     "the",
+     "maximum",
+     "item",
+     "or",
+     "null",
+     "public",
+     "t",
+     "max",
+     "t",
+     "best",
+     "null",
+     "for",
+     "t",
+     "t",
+     "items",
+     "if",
+     "best",
+     "null",
+     "t",
+     "compareto",
+     "best",
+     "0",
+     "best",
+     "t",
+     "return",
+     "best",
+     "public",
+     "r",
+     "list",
+     "r",
+     "map",
+     "function",
+     "t",
+     "r",
+     "fn",
+     "list",
+     "r",
+     "out",
+     "new",
+     "arraylist",
+     "items",
+     "foreach",
+     "x",
+     "out",
+     "add",
+     "fn",
+     "apply",
+     "x",
+     "return",
+     "out",
+     "static",
+     "class",
+     "inner",
+     "inner",
+     "helper",
+     "int",
+     "helper",
+     "int",
+     "x",
+     "return",
+     "x",
+     "2",
+     "interface",
+     "visitor",
+     "v",
+     "v",
+     "visit",
+     "object",
+     "o",
+     "default",
+     "v",
+     "visitall",
+     "list",
+     "object",
+     "os",
+     "return",
+     "os",
+     "isempty",
+     "null",
+     "visit",
+     "os",
+     "get",
+     "0",
+     "enum",
+     "mode",
+     "fast",
+     "slow",
+     "boolean",
+     "isfast",
+     "return",
+     "this",
+     "fast"
+    ],
+    "astSummary": {},
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "isClass": true,
+     "typeKind": "class"
+    },
+    "docstring": "/** Repository of widgets used by the parser-fix equivalence fixture. */",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.Sample::12",
+    "name": "Sample",
+    "qualifiedName": "com.example.parserfix.Sample.Sample",
+    "enclosingScope": [
+     "Sample"
+    ],
+    "parameters": [],
+    "normalizedSignature": "Sample()",
+    "returnType": null,
+    "range": {
+     "startLine": 12,
+     "startColumn": 4,
+     "endLine": 12,
+     "endColumn": 22
+    },
+    "source": "public Sample() {}",
+    "sourceHash": "ee9d39e6af7e5123eb168213d072b42dc3ae4506cecc99c0f6db6f92730b0360",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "constructor",
+    "modifiers": [
+     "public"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "public",
+     "sample"
+    ],
+    "astSummary": {
+     "nodeType": "constructor_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "isOverloaded": true
+    },
+    "docstring": "/** Creates an empty sample. */",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.Sample::15",
+    "name": "Sample",
+    "qualifiedName": "com.example.parserfix.Sample.Sample",
+    "enclosingScope": [
+     "Sample"
+    ],
+    "parameters": [
+     {
+      "name": "first",
+      "type": "T"
+     }
+    ],
+    "normalizedSignature": "Sample(T first)",
+    "returnType": null,
+    "range": {
+     "startLine": 15,
+     "startColumn": 4,
+     "endLine": 15,
+     "endColumn": 48
+    },
+    "source": "public Sample(T first) { items.add(first); }",
+    "sourceHash": "b4f6b07c87db3037f46bc17f50c1ef39038b20eab7e473ee8f320fbcc75ad037",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "constructor",
+    "modifiers": [
+     "public"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "public",
+     "sample",
+     "t",
+     "first",
+     "items",
+     "add",
+     "first"
+    ],
+    "astSummary": {
+     "nodeType": "constructor_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "isOverloaded": true
+    },
+    "docstring": "/** Creates a sample seeded with one item. */",
+    "calls": [
+     "add"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.add::21",
+    "name": "add",
+    "qualifiedName": "com.example.parserfix.Sample.add",
+    "enclosingScope": [
+     "Sample"
+    ],
+    "parameters": [
+     {
+      "name": "item",
+      "type": "T"
+     }
+    ],
+    "normalizedSignature": "int add(T item)",
+    "returnType": "int",
+    "range": {
+     "startLine": 21,
+     "startColumn": 4,
+     "endLine": 25,
+     "endColumn": 5
+    },
+    "source": "@Deprecated\n    public synchronized int add(T item) {\n        items.add(item);\n        return items.size();\n    }",
+    "sourceHash": "821c61463cfad42254f8ba3c6a882c4b65c031c46d54ed8c068609c8f177a92e",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "method",
+    "modifiers": [
+     "public",
+     "synchronized"
+    ],
+    "decorators": [
+     "@Deprecated"
+    ],
+    "normalizedTokens": [
+     "deprecated",
+     "public",
+     "synchronized",
+     "int",
+     "add",
+     "t",
+     "item",
+     "items",
+     "add",
+     "item",
+     "return",
+     "items",
+     "size"
+    ],
+    "astSummary": {
+     "nodeType": "method_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "thrownExceptions": null
+    },
+    "docstring": "/**\n* Adds an item and returns the new size.\n* @param item the item\n*/",
+    "calls": [
+     "add",
+     "size"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.add::27",
+    "name": "add",
+    "qualifiedName": "com.example.parserfix.Sample.add",
+    "enclosingScope": [
+     "Sample"
+    ],
+    "parameters": [
+     {
+      "name": "item",
+      "type": "T"
+     },
+     {
+      "name": "times",
+      "type": "int"
+     }
+    ],
+    "normalizedSignature": "int add(T item, int times)",
+    "returnType": "int",
+    "range": {
+     "startLine": 27,
+     "startColumn": 4,
+     "endLine": 30,
+     "endColumn": 5
+    },
+    "source": "public int add(T item, int times) {\n        for (int i = 0; i < times; i++) add(item);\n        return items.size();\n    }",
+    "sourceHash": "01ce62c36e7d599647cedbb3911960e00b36e5d01c6cc05e0a6b29f14ec8d891",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "method",
+    "modifiers": [
+     "public"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "public",
+     "int",
+     "add",
+     "t",
+     "item",
+     "int",
+     "times",
+     "for",
+     "int",
+     "i",
+     "0",
+     "i",
+     "times",
+     "i",
+     "add",
+     "item",
+     "return",
+     "items",
+     "size"
+    ],
+    "astSummary": {
+     "nodeType": "method_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "thrownExceptions": null
+    },
+    "docstring": "",
+    "calls": [
+     "add",
+     "size"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.max::33",
+    "name": "max",
+    "qualifiedName": "com.example.parserfix.Sample.max",
+    "enclosingScope": [
+     "Sample"
+    ],
+    "parameters": [],
+    "normalizedSignature": "T max()",
+    "returnType": "T",
+    "range": {
+     "startLine": 33,
+     "startColumn": 4,
+     "endLine": 37,
+     "endColumn": 5
+    },
+    "source": "public T max() {\n        T best = null;\n        for (T t : items) if (best == null || t.compareTo(best) > 0) best = t;\n        return best;\n    }",
+    "sourceHash": "d3c162c465587676b1038ed1335c8acfab1676927f6c5daa059db363728be90a",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "method",
+    "modifiers": [
+     "public"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "public",
+     "t",
+     "max",
+     "t",
+     "best",
+     "null",
+     "for",
+     "t",
+     "t",
+     "items",
+     "if",
+     "best",
+     "null",
+     "t",
+     "compareto",
+     "best",
+     "0",
+     "best",
+     "t",
+     "return",
+     "best"
+    ],
+    "astSummary": {
+     "nodeType": "method_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "thrownExceptions": null
+    },
+    "docstring": "// Finds the maximum item, or null.",
+    "calls": [
+     "compareTo"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.map::39",
+    "name": "map",
+    "qualifiedName": "com.example.parserfix.Sample.map",
+    "enclosingScope": [
+     "Sample"
+    ],
+    "parameters": [
+     {
+      "name": "fn",
+      "type": "Function<T, R>"
+     }
+    ],
+    "normalizedSignature": "List<R> map(Function<T, R> fn)",
+    "returnType": "List<R>",
+    "range": {
+     "startLine": 39,
+     "startColumn": 4,
+     "endLine": 43,
+     "endColumn": 5
+    },
+    "source": "public <R> List<R> map(Function<T, R> fn) {\n        List<R> out = new ArrayList<>();\n        items.forEach(x -> out.add(fn.apply(x)));\n        return out;\n    }",
+    "sourceHash": "907aaa5b6bbcf5632d3e9ee1aa89481ba4539be310661b20dd042e8e5c9460e4",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "method",
+    "modifiers": [
+     "public"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "public",
+     "r",
+     "list",
+     "r",
+     "map",
+     "function",
+     "t",
+     "r",
+     "fn",
+     "list",
+     "r",
+     "out",
+     "new",
+     "arraylist",
+     "items",
+     "foreach",
+     "x",
+     "out",
+     "add",
+     "fn",
+     "apply",
+     "x",
+     "return",
+     "out"
+    ],
+    "astSummary": {
+     "nodeType": "method_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "thrownExceptions": null
+    },
+    "docstring": "",
+    "calls": [
+     "forEach",
+     "add",
+     "apply"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.Inner::45",
+    "name": "Inner",
+    "qualifiedName": "com.example.parserfix.Sample.Inner",
+    "enclosingScope": [
+     "Sample"
+    ],
+    "parameters": [],
+    "normalizedSignature": "class Inner",
+    "returnType": null,
+    "range": {
+     "startLine": 45,
+     "startColumn": 4,
+     "endLine": 48,
+     "endColumn": 5
+    },
+    "source": "static class Inner {\n        /** Inner helper. */\n        int helper(int x) { return x * 2; }\n    }",
+    "sourceHash": "e1a4eab97e762a33bb8b75d3c8ae6fdaecf7d39b9a45ec1c2350f8419bb57152",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "class",
+    "modifiers": [
+     "static"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "static",
+     "class",
+     "inner",
+     "inner",
+     "helper",
+     "int",
+     "helper",
+     "int",
+     "x",
+     "return",
+     "x",
+     "2"
+    ],
+    "astSummary": {},
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "isClass": true,
+     "typeKind": "class"
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.Inner.helper::47",
+    "name": "helper",
+    "qualifiedName": "com.example.parserfix.Sample.Inner.helper",
+    "enclosingScope": [
+     "Sample",
+     "Inner"
+    ],
+    "parameters": [
+     {
+      "name": "x",
+      "type": "int"
+     }
+    ],
+    "normalizedSignature": "int helper(int x)",
+    "returnType": "int",
+    "range": {
+     "startLine": 47,
+     "startColumn": 8,
+     "endLine": 47,
+     "endColumn": 43
+    },
+    "source": "int helper(int x) { return x * 2; }",
+    "sourceHash": "797d41d9bd696e170f328ec6f215ccaaec806305c550e7da0e7a8f40ca6fb3a0",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "int",
+     "helper",
+     "int",
+     "x",
+     "return",
+     "x",
+     "2"
+    ],
+    "astSummary": {
+     "nodeType": "method_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "thrownExceptions": null
+    },
+    "docstring": "/** Inner helper. */",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.Visitor::50",
+    "name": "Visitor",
+    "qualifiedName": "com.example.parserfix.Sample.Visitor",
+    "enclosingScope": [
+     "Sample"
+    ],
+    "parameters": [],
+    "normalizedSignature": "interface Visitor",
+    "returnType": null,
+    "range": {
+     "startLine": 50,
+     "startColumn": 4,
+     "endLine": 53,
+     "endColumn": 5
+    },
+    "source": "interface Visitor<V> {\n        V visit(Object o);\n        default V visitAll(List<Object> os) { return os.isEmpty() ? null : visit(os.get(0)); }\n    }",
+    "sourceHash": "ef62d917c17c0639ea143dfaa80a858a103b0b19074f81bb41ed6e00c4b67295",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "interface",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "interface",
+     "visitor",
+     "v",
+     "v",
+     "visit",
+     "object",
+     "o",
+     "default",
+     "v",
+     "visitall",
+     "list",
+     "object",
+     "os",
+     "return",
+     "os",
+     "isempty",
+     "null",
+     "visit",
+     "os",
+     "get",
+     "0"
+    ],
+    "astSummary": {},
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "isClass": true,
+     "typeKind": "interface"
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.Visitor.visit::51",
+    "name": "visit",
+    "qualifiedName": "com.example.parserfix.Sample.Visitor.visit",
+    "enclosingScope": [
+     "Sample",
+     "Visitor"
+    ],
+    "parameters": [
+     {
+      "name": "o",
+      "type": "Object"
+     }
+    ],
+    "normalizedSignature": "V visit(Object o)",
+    "returnType": "V",
+    "range": {
+     "startLine": 51,
+     "startColumn": 8,
+     "endLine": 51,
+     "endColumn": 26
+    },
+    "source": "V visit(Object o);",
+    "sourceHash": "278c02ae6ab5e344118b15fd688db2e19e3ed2f5b9ccb24e6f9ab5baf94b199b",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "v",
+     "visit",
+     "object",
+     "o"
+    ],
+    "astSummary": {
+     "nodeType": "method_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "thrownExceptions": null
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.Visitor.visitAll::52",
+    "name": "visitAll",
+    "qualifiedName": "com.example.parserfix.Sample.Visitor.visitAll",
+    "enclosingScope": [
+     "Sample",
+     "Visitor"
+    ],
+    "parameters": [
+     {
+      "name": "os",
+      "type": "List<Object>"
+     }
+    ],
+    "normalizedSignature": "V visitAll(List<Object> os)",
+    "returnType": "V",
+    "range": {
+     "startLine": 52,
+     "startColumn": 8,
+     "endLine": 52,
+     "endColumn": 94
+    },
+    "source": "default V visitAll(List<Object> os) { return os.isEmpty() ? null : visit(os.get(0)); }",
+    "sourceHash": "99514a919cbf8f5810d740e13301a9d05986730cce431ea46281c52926311b73",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "method",
+    "modifiers": [
+     "default"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "default",
+     "v",
+     "visitall",
+     "list",
+     "object",
+     "os",
+     "return",
+     "os",
+     "isempty",
+     "null",
+     "visit",
+     "os",
+     "get",
+     "0"
+    ],
+    "astSummary": {
+     "nodeType": "method_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "thrownExceptions": null
+    },
+    "docstring": "",
+    "calls": [
+     "isEmpty",
+     "visit",
+     "get"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.Mode::55",
+    "name": "Mode",
+    "qualifiedName": "com.example.parserfix.Sample.Mode",
+    "enclosingScope": [
+     "Sample"
+    ],
+    "parameters": [],
+    "normalizedSignature": "enum Mode",
+    "returnType": null,
+    "range": {
+     "startLine": 55,
+     "startColumn": 4,
+     "endLine": 58,
+     "endColumn": 5
+    },
+    "source": "enum Mode {\n        FAST, SLOW;\n        boolean isFast() { return this == FAST; }\n    }",
+    "sourceHash": "217471f7806460531a28c2248d809d8b7a33a32313499e7961950f7652e1665a",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "enum",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "enum",
+     "mode",
+     "fast",
+     "slow",
+     "boolean",
+     "isfast",
+     "return",
+     "this",
+     "fast"
+    ],
+    "astSummary": {},
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "isClass": true,
+     "typeKind": "enum"
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "Sample.java::Sample.Mode.isFast::57",
+    "name": "isFast",
+    "qualifiedName": "com.example.parserfix.Sample.Mode.isFast",
+    "enclosingScope": [
+     "Sample",
+     "Mode"
+    ],
+    "parameters": [],
+    "normalizedSignature": "boolean isFast()",
+    "returnType": "boolean",
+    "range": {
+     "startLine": 57,
+     "startColumn": 8,
+     "endLine": 57,
+     "endColumn": 49
+    },
+    "source": "boolean isFast() { return this == FAST; }",
+    "sourceHash": "eef919f25d6229a99dc824d93c934fed5f46aebf562ca6b7fd1e35ef4df4556e",
+    "language": "java",
+    "filePath": "Sample.java",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "boolean",
+     "isfast",
+     "return",
+     "this",
+     "fast"
+    ],
+    "astSummary": {
+     "nodeType": "method_declaration"
+    },
+    "metadata": {
+     "packageName": "com.example.parserfix",
+     "thrownExceptions": null
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   }
+  ],
+  "imports": [
+   "java.util.ArrayList",
+   "java.util.List",
+   "java.util.function.Function"
+  ],
+  "hasSyntaxError": false
+ },
+ "python": {
+  "symbols": [
+   {
+    "id": "sample.py::top_level::6",
+    "name": "top_level",
+    "qualifiedName": "top_level",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "a",
+      "type": "int"
+     },
+     {
+      "name": "b",
+      "type": "int",
+      "defaultValue": "2"
+     }
+    ],
+    "normalizedSignature": "top_level(a: int, b: int): int",
+    "returnType": "int",
+    "range": {
+     "startLine": 6,
+     "startColumn": 0,
+     "endLine": 8,
+     "endColumn": 16
+    },
+    "source": "def top_level(a: int, b: int = 2) -> int:\n    \"\"\"Add two numbers.\"\"\"\n    return a + b",
+    "sourceHash": "017aab5d6d76764170ee343f3f3508a329ee4b2cb5292b897469ba38bbc67164",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "def",
+     "top_level",
+     "a",
+     "int",
+     "b",
+     "int",
+     "2",
+     "int",
+     "add",
+     "two",
+     "numbers",
+     "return",
+     "a",
+     "b"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 7
+    },
+    "metadata": {
+     "isMethod": false,
+     "hasDecorators": false
+    },
+    "docstring": "Add two numbers.",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::fetch::11",
+    "name": "fetch",
+    "qualifiedName": "fetch",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "url",
+      "type": "str"
+     }
+    ],
+    "normalizedSignature": "fetch(url: str): Optional[str]",
+    "returnType": "Optional[str]",
+    "range": {
+     "startLine": 11,
+     "startColumn": 0,
+     "endLine": 13,
+     "endColumn": 15
+    },
+    "source": "async def fetch(url: str) -> Optional[str]:\n    \"\"\"Fetch a url asynchronously.\"\"\"\n    return None",
+    "sourceHash": "59813c5ab4dbf321e471efeec2a12827c581c72a1d318cd76fedf19972ba9a44",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "async",
+     "def",
+     "fetch",
+     "url",
+     "str",
+     "optional",
+     "str",
+     "fetch",
+     "a",
+     "url",
+     "asynchronously",
+     "return",
+     "none"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 8
+    },
+    "metadata": {
+     "isMethod": false,
+     "hasDecorators": false
+    },
+    "docstring": "Fetch a url asynchronously.",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::Widget::16",
+    "name": "Widget",
+    "qualifiedName": "Widget",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "class Widget",
+    "returnType": null,
+    "range": {
+     "startLine": 16,
+     "startColumn": 0,
+     "endLine": 40,
+     "endColumn": 47
+    },
+    "source": "class Widget:\n    \"\"\"A widget.\"\"\"\n\n    count = 0\n\n    def __init__(self, name: str):\n        self.name = name\n\n    @property\n    def label(self) -> str:\n        \"\"\"The widget label.\"\"\"\n        return self.name.upper()\n\n    @staticmethod\n    def make(name):\n        return Widget(name)\n\n    @classmethod\n    def default(cls):\n        return cls(\"default\")\n\n    def render(self, items: List[str]) -> str:\n        def inner(x):\n            return f\"<{x}>\"\n        return \"\".join(inner(i) for i in items)",
+    "sourceHash": "4f950e5872b5d9d9bc4d121ec1286b460edd210a5d7aa8ea9b77b2b9da78d1f4",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "class",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "class",
+     "widget",
+     "a",
+     "widget",
+     "count",
+     "0",
+     "def",
+     "__init__",
+     "self",
+     "name",
+     "str",
+     "self",
+     "name",
+     "name",
+     "property",
+     "def",
+     "label",
+     "self",
+     "str",
+     "the",
+     "widget",
+     "label",
+     "return",
+     "self",
+     "name",
+     "upper",
+     "staticmethod",
+     "def",
+     "make",
+     "name",
+     "return",
+     "widget",
+     "name",
+     "classmethod",
+     "def",
+     "default",
+     "cls",
+     "return",
+     "cls",
+     "default",
+     "def",
+     "render",
+     "self",
+     "items",
+     "list",
+     "str",
+     "str",
+     "def",
+     "inner",
+     "x",
+     "return",
+     "f",
+     "x",
+     "return",
+     "join",
+     "inner",
+     "i",
+     "for",
+     "i",
+     "in",
+     "items"
+    ],
+    "astSummary": {},
+    "metadata": {
+     "isClass": true,
+     "baseClasses": []
+    },
+    "docstring": "A widget.",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::Widget.__init__::21",
+    "name": "__init__",
+    "qualifiedName": "Widget.__init__",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "self",
+      "type": null
+     },
+     {
+      "name": "name",
+      "type": "str"
+     }
+    ],
+    "normalizedSignature": "__init__(self, name: str)",
+    "returnType": null,
+    "range": {
+     "startLine": 21,
+     "startColumn": 4,
+     "endLine": 22,
+     "endColumn": 24
+    },
+    "source": "def __init__(self, name: str):\n        self.name = name",
+    "sourceHash": "b43dcae2cde4c897490095b9fa3a983bbeda34787324a58d43186be65814805e",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "def",
+     "__init__",
+     "self",
+     "name",
+     "str",
+     "self",
+     "name",
+     "name"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 5
+    },
+    "metadata": {
+     "isMethod": true,
+     "hasDecorators": false
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::Widget.label::25",
+    "name": "label",
+    "qualifiedName": "Widget.label",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "self",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "label(self): str",
+    "returnType": "str",
+    "range": {
+     "startLine": 25,
+     "startColumn": 4,
+     "endLine": 27,
+     "endColumn": 32
+    },
+    "source": "def label(self) -> str:\n        \"\"\"The widget label.\"\"\"\n        return self.name.upper()",
+    "sourceHash": "d3da7e46441106d14c32f3da4fbf8e8ed50b86fd5e273973d5abdf50694061aa",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [
+     "@property"
+    ],
+    "normalizedTokens": [
+     "def",
+     "label",
+     "self",
+     "str",
+     "the",
+     "widget",
+     "label",
+     "return",
+     "self",
+     "name",
+     "upper"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 7
+    },
+    "metadata": {
+     "isMethod": true,
+     "hasDecorators": true
+    },
+    "docstring": "The widget label.",
+    "calls": [
+     "upper"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::Widget.make::30",
+    "name": "make",
+    "qualifiedName": "Widget.make",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "name",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "make(name)",
+    "returnType": null,
+    "range": {
+     "startLine": 30,
+     "startColumn": 4,
+     "endLine": 31,
+     "endColumn": 27
+    },
+    "source": "def make(name):\n        return Widget(name)",
+    "sourceHash": "7304eabf2c21ef66c5ef14c3d630ac8d997b4019abe732b515554c2cc4f0789a",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [
+     "@staticmethod"
+    ],
+    "normalizedTokens": [
+     "def",
+     "make",
+     "name",
+     "return",
+     "widget",
+     "name"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 5
+    },
+    "metadata": {
+     "isMethod": true,
+     "hasDecorators": true
+    },
+    "docstring": "",
+    "calls": [
+     "Widget"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::Widget.default::34",
+    "name": "default",
+    "qualifiedName": "Widget.default",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "cls",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "default(cls)",
+    "returnType": null,
+    "range": {
+     "startLine": 34,
+     "startColumn": 4,
+     "endLine": 35,
+     "endColumn": 29
+    },
+    "source": "def default(cls):\n        return cls(\"default\")",
+    "sourceHash": "01b03fdea498bc7268b0b250ea916288a43937a3f53a8c2515dc75e01167e533",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [
+     "@classmethod"
+    ],
+    "normalizedTokens": [
+     "def",
+     "default",
+     "cls",
+     "return",
+     "cls",
+     "default"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 5
+    },
+    "metadata": {
+     "isMethod": true,
+     "hasDecorators": true
+    },
+    "docstring": "",
+    "calls": [
+     "cls"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::Widget.render::37",
+    "name": "render",
+    "qualifiedName": "Widget.render",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "self",
+      "type": null
+     },
+     {
+      "name": "items",
+      "type": "List[str]"
+     }
+    ],
+    "normalizedSignature": "render(self, items: List[str]): str",
+    "returnType": "str",
+    "range": {
+     "startLine": 37,
+     "startColumn": 4,
+     "endLine": 40,
+     "endColumn": 47
+    },
+    "source": "def render(self, items: List[str]) -> str:\n        def inner(x):\n            return f\"<{x}>\"\n        return \"\".join(inner(i) for i in items)",
+    "sourceHash": "7ad2ce18d4a6aba2578b5518fc47dbc754a5a3cd428678f8db942a52fd3c6877",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "def",
+     "render",
+     "self",
+     "items",
+     "list",
+     "str",
+     "str",
+     "def",
+     "inner",
+     "x",
+     "return",
+     "f",
+     "x",
+     "return",
+     "join",
+     "inner",
+     "i",
+     "for",
+     "i",
+     "in",
+     "items"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 7
+    },
+    "metadata": {
+     "isMethod": true,
+     "hasDecorators": false
+    },
+    "docstring": "",
+    "calls": [
+     "join",
+     "inner"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::Widget.render.inner::38",
+    "name": "inner",
+    "qualifiedName": "Widget.render.inner",
+    "enclosingScope": [
+     "Widget",
+     "render"
+    ],
+    "parameters": [
+     {
+      "name": "x",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "inner(x)",
+    "returnType": null,
+    "range": {
+     "startLine": 38,
+     "startColumn": 8,
+     "endLine": 39,
+     "endColumn": 27
+    },
+    "source": "def inner(x):\n            return f\"<{x}>\"",
+    "sourceHash": "8d46fb567be89757ae90c1230cefe352d264bf06ee7d5d15a765cf22704b477e",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "def",
+     "inner",
+     "x",
+     "return",
+     "f",
+     "x"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 5
+    },
+    "metadata": {
+     "isMethod": true,
+     "hasDecorators": false
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::decorator::43",
+    "name": "decorator",
+    "qualifiedName": "decorator",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "fn",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "decorator(fn)",
+    "returnType": null,
+    "range": {
+     "startLine": 43,
+     "startColumn": 0,
+     "endLine": 46,
+     "endColumn": 18
+    },
+    "source": "def decorator(fn):\n    def wrapper(*args, **kwargs):\n        return fn(*args, **kwargs)\n    return wrapper",
+    "sourceHash": "2902534453c8503dfaaca639abac46a052d4d6f89d2094df3469caa11693661d",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "def",
+     "decorator",
+     "fn",
+     "def",
+     "wrapper",
+     "args",
+     "kwargs",
+     "return",
+     "fn",
+     "args",
+     "kwargs",
+     "return",
+     "wrapper"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 5
+    },
+    "metadata": {
+     "isMethod": false,
+     "hasDecorators": false
+    },
+    "docstring": "",
+    "calls": [
+     "fn"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::decorator.wrapper::44",
+    "name": "wrapper",
+    "qualifiedName": "decorator.wrapper",
+    "enclosingScope": [
+     "decorator"
+    ],
+    "parameters": [
+     {
+      "name": "*args",
+      "type": "splat"
+     },
+     {
+      "name": "**kwargs",
+      "type": "dict_splat"
+     }
+    ],
+    "normalizedSignature": "wrapper(*args: splat, **kwargs: dict_splat)",
+    "returnType": null,
+    "range": {
+     "startLine": 44,
+     "startColumn": 4,
+     "endLine": 45,
+     "endColumn": 34
+    },
+    "source": "def wrapper(*args, **kwargs):\n        return fn(*args, **kwargs)",
+    "sourceHash": "f9d864bdfd23eb4b89dfc40927218b07b8b3809cf9963f85c9f71710cbe29354",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "def",
+     "wrapper",
+     "args",
+     "kwargs",
+     "return",
+     "fn",
+     "args",
+     "kwargs"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 5
+    },
+    "metadata": {
+     "isMethod": true,
+     "hasDecorators": false
+    },
+    "docstring": "",
+    "calls": [
+     "fn"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.py::decorated::50",
+    "name": "decorated",
+    "qualifiedName": "decorated",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "path",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "decorated(path)",
+    "returnType": null,
+    "range": {
+     "startLine": 50,
+     "startColumn": 0,
+     "endLine": 52,
+     "endColumn": 33
+    },
+    "source": "def decorated(path):\n    \"\"\"Decorated function.\"\"\"\n    return os.path.basename(path)",
+    "sourceHash": "b1b272b8659f98dcd55a28c36ef86c90ae9d2435ee2b68d7fba3ab98aa169438",
+    "language": "python",
+    "filePath": "sample.py",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [
+     "@decorator"
+    ],
+    "normalizedTokens": [
+     "def",
+     "decorated",
+     "path",
+     "decorated",
+     "function",
+     "return",
+     "os",
+     "path",
+     "basename",
+     "path"
+    ],
+    "astSummary": {
+     "nodeType": "function_definition",
+     "childCount": 5
+    },
+    "metadata": {
+     "isMethod": false,
+     "hasDecorators": true
+    },
+    "docstring": "Decorated function.",
+    "calls": [
+     "basename"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   }
+  ],
+  "imports": [
+   "os",
+   "typing"
+  ],
+  "hasSyntaxError": false
+ },
+ "javascript": {
+  "symbols": [
+   {
+    "id": "sample.js::join::7",
+    "name": "join",
+    "qualifiedName": "join",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "a",
+      "type": null
+     },
+     {
+      "name": "b",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "join(a, b)",
+    "returnType": null,
+    "range": {
+     "startLine": 7,
+     "startColumn": 0,
+     "endLine": 9,
+     "endColumn": 1
+    },
+    "source": "function join(a, b) {\r\n  return path.join(a, b);\r\n}",
+    "sourceHash": "67f417ee5499490a3315f5729954d0b6d7c4b9e4241bc7d537dc6feff5de8e55",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "function",
+     "join",
+     "a",
+     "b",
+     "return",
+     "path",
+     "join",
+     "a",
+     "b"
+    ],
+    "astSummary": {
+     "nodeType": "function_declaration"
+    },
+    "metadata": {},
+    "docstring": "/**\n* Join two segments.\n*/",
+    "calls": [
+     "join"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::arrow::11",
+    "name": "arrow",
+    "qualifiedName": "arrow",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "x",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "arrow(x)",
+    "returnType": null,
+    "range": {
+     "startLine": 11,
+     "startColumn": 6,
+     "endLine": 11,
+     "endColumn": 26
+    },
+    "source": "arrow = (x) => x * 2",
+    "sourceHash": "d149398bfc4f274b41406a710a7a027c71f713b11aec69b77f6511e8037f2957",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "arrow_function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "arrow",
+     "x",
+     "x",
+     "2"
+    ],
+    "astSummary": {
+     "nodeType": "arrow_function"
+    },
+    "metadata": {},
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::method::14",
+    "name": "method",
+    "qualifiedName": "method",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "method()",
+    "returnType": null,
+    "range": {
+     "startLine": 14,
+     "startColumn": 2,
+     "endLine": 14,
+     "endColumn": 24
+    },
+    "source": "method() { return 1; }",
+    "sourceHash": "9429f779bd5c4f5a19a8d11610207e060e5a946b70d8e95900eb593ab4547d17",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "method",
+     "return",
+     "1"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": false
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::anonymous::15",
+    "name": "anonymous",
+    "qualifiedName": "anonymous",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "anonymous()",
+    "returnType": null,
+    "range": {
+     "startLine": 15,
+     "startColumn": 8,
+     "endLine": 15,
+     "endColumn": 16
+    },
+    "source": "function",
+    "sourceHash": "78f9ac018e554365069108352dacabb7fbd15246edf19400677e3b54fe24e126",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "function"
+    ],
+    "astSummary": {
+     "nodeType": "function"
+    },
+    "metadata": {},
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::Widget::19",
+    "name": "Widget",
+    "qualifiedName": "Widget",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "class Widget",
+    "returnType": null,
+    "range": {
+     "startLine": 19,
+     "startColumn": 0,
+     "endLine": 25,
+     "endColumn": 1
+    },
+    "source": "class Widget {\r\n  constructor(name) { this.name = name; }\r\n  /** Render the widget. */\r\n  render() { return `<${this.name}>`; }\r\n  static create(name) { return new Widget(name); }\r\n  get label() { return this.name; }\r\n}",
+    "sourceHash": "80581c1c67d574e137d5c19147237769100ac4e2b1b75c8da94c60036bbed8bf",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "class",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "class",
+     "widget",
+     "constructor",
+     "name",
+     "this",
+     "name",
+     "name",
+     "render",
+     "the",
+     "widget",
+     "render",
+     "return",
+     "this",
+     "name",
+     "static",
+     "create",
+     "name",
+     "return",
+     "new",
+     "widget",
+     "name",
+     "get",
+     "label",
+     "return",
+     "this",
+     "name"
+    ],
+    "astSummary": {},
+    "metadata": {
+     "isClass": true
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::Widget.constructor::20",
+    "name": "constructor",
+    "qualifiedName": "Widget.constructor",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "name",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "constructor(name)",
+    "returnType": null,
+    "range": {
+     "startLine": 20,
+     "startColumn": 2,
+     "endLine": 20,
+     "endColumn": 41
+    },
+    "source": "constructor(name) { this.name = name; }",
+    "sourceHash": "46664e2e297ef19fb92555bb469d4c1c29435bf9a525f9c38afe18d3ba4f6018",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "constructor",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "constructor",
+     "name",
+     "this",
+     "name",
+     "name"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": true
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::Widget.render::22",
+    "name": "render",
+    "qualifiedName": "Widget.render",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [],
+    "normalizedSignature": "render()",
+    "returnType": null,
+    "range": {
+     "startLine": 22,
+     "startColumn": 2,
+     "endLine": 22,
+     "endColumn": 39
+    },
+    "source": "render() { return `<${this.name}>`; }",
+    "sourceHash": "d03a0b537f5f89ab28058b338ee7a2f61480b099060f4293ea5bc3f127e8fb51",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "render",
+     "return",
+     "this",
+     "name"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": false
+    },
+    "docstring": "/** Render the widget. */",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::Widget.create::23",
+    "name": "create",
+    "qualifiedName": "Widget.create",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "name",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "create(name)",
+    "returnType": null,
+    "range": {
+     "startLine": 23,
+     "startColumn": 2,
+     "endLine": 23,
+     "endColumn": 50
+    },
+    "source": "static create(name) { return new Widget(name); }",
+    "sourceHash": "d20740a18e737922147e22fab348f03b3aeec021d22f596ddc881582ac98721a",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "method",
+    "modifiers": [
+     "static"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "static",
+     "create",
+     "name",
+     "return",
+     "new",
+     "widget",
+     "name"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": false
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::Widget.label::24",
+    "name": "label",
+    "qualifiedName": "Widget.label",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [],
+    "normalizedSignature": "label()",
+    "returnType": null,
+    "range": {
+     "startLine": 24,
+     "startColumn": 2,
+     "endLine": 24,
+     "endColumn": 35
+    },
+    "source": "get label() { return this.name; }",
+    "sourceHash": "d53cc8e46751bfb391ef0f4683ff8958c2b45e8bf336df35965866b54c592c6c",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "method",
+    "modifiers": [
+     "get"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "get",
+     "label",
+     "return",
+     "this",
+     "name"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": false
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::factory::27",
+    "name": "factory",
+    "qualifiedName": "factory",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "options",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "factory(options)",
+    "returnType": null,
+    "range": {
+     "startLine": 27,
+     "startColumn": 0,
+     "endLine": 29,
+     "endColumn": 1
+    },
+    "source": "function factory(options) {\r\n  return { options, join, arrow };\r\n}",
+    "sourceHash": "1a973fdfdd7bd46540acced48def35fb135cccf322de1a46c324aa97e5e1cdb3",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "function",
+     "factory",
+     "options",
+     "return",
+     "options",
+     "join",
+     "arrow"
+    ],
+    "astSummary": {
+     "nodeType": "function_declaration"
+    },
+    "metadata": {},
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::helper::32",
+    "name": "helper",
+    "qualifiedName": "helper",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "x",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "helper(x)",
+    "returnType": null,
+    "range": {
+     "startLine": 32,
+     "startColumn": 0,
+     "endLine": 32,
+     "endColumn": 49
+    },
+    "source": "exports.helper = function helper(x) { return x; }",
+    "sourceHash": "dcbf76f5238ca1f1d63f87b3e19bd192eecf575880216255bd9f87f47306fd67",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "exports",
+     "helper",
+     "function",
+     "helper",
+     "x",
+     "return",
+     "x"
+    ],
+    "astSummary": {
+     "nodeType": "function_expression"
+    },
+    "metadata": {},
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::load::34",
+    "name": "load",
+    "qualifiedName": "load",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "url",
+      "type": null
+     }
+    ],
+    "normalizedSignature": "load(url)",
+    "returnType": null,
+    "range": {
+     "startLine": 34,
+     "startColumn": 0,
+     "endLine": 34,
+     "endColumn": 40
+    },
+    "source": "async function load(url) { return url; }",
+    "sourceHash": "17597a9c0b424a1175d8a9503fae32b47a53538be9b5284dea1d2f6e442ac8ee",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "function",
+    "modifiers": [
+     "async"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "async",
+     "function",
+     "load",
+     "url",
+     "return",
+     "url"
+    ],
+    "astSummary": {
+     "nodeType": "function_declaration"
+    },
+    "metadata": {},
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.js::anonymous::36",
+    "name": "anonymous",
+    "qualifiedName": "anonymous",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "anonymous()",
+    "returnType": null,
+    "range": {
+     "startLine": 36,
+     "startColumn": 0,
+     "endLine": 36,
+     "endColumn": 8
+    },
+    "source": "function",
+    "sourceHash": "78f9ac018e554365069108352dacabb7fbd15246edf19400677e3b54fe24e126",
+    "language": "javascript",
+    "filePath": "sample.js",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "function"
+    ],
+    "astSummary": {
+     "nodeType": "function"
+    },
+    "metadata": {},
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   }
+  ],
+  "imports": [
+   "path"
+  ],
+  "hasSyntaxError": false
+ },
+ "typescript": {
+  "symbols": [
+   {
+    "id": "sample.ts::WidgetOptions::4",
+    "name": "WidgetOptions",
+    "qualifiedName": "WidgetOptions",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "interface WidgetOptions",
+    "returnType": null,
+    "range": {
+     "startLine": 4,
+     "startColumn": 7,
+     "endLine": 7,
+     "endColumn": 1
+    },
+    "source": "interface WidgetOptions {\r\n  name: string;\r\n  size?: number;\r\n}",
+    "sourceHash": "4ff8f9686f5acf7a7ef232f0e567b89b5e2aa607200e63cb4d558e2de33329a3",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "interface",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "interface",
+     "widgetoptions",
+     "name",
+     "string",
+     "size",
+     "number"
+    ],
+    "astSummary": {},
+    "metadata": {
+     "isType": true,
+     "symbolType": "interface"
+    },
+    "docstring": "/** Options for widgets. */",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::parse::14",
+    "name": "parse",
+    "qualifiedName": "parse",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "input",
+      "type": "string | number",
+      "defaultValue": null
+     }
+    ],
+    "normalizedSignature": "parse(input: string | number): number",
+    "returnType": "number",
+    "range": {
+     "startLine": 14,
+     "startColumn": 7,
+     "endLine": 16,
+     "endColumn": 1
+    },
+    "source": "function parse(input: string | number): number {\r\n  return typeof input === 'string' ? Number(input) : input;\r\n}",
+    "sourceHash": "5ed5d49ffb5267c384a3609a7b325b8531f9fceb6bc1a9eeeadc96a1364fc3a8",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "function",
+     "parse",
+     "input",
+     "string",
+     "number",
+     "number",
+     "return",
+     "typeof",
+     "input",
+     "string",
+     "number",
+     "input",
+     "input"
+    ],
+    "astSummary": {
+     "nodeType": "function_declaration"
+    },
+    "metadata": {
+     "typeParameters": null,
+     "isSignatureOnly": false
+    },
+    "docstring": "/**\n* Parse a number.\n*/",
+    "calls": [
+     "Number"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::double::18",
+    "name": "double",
+    "qualifiedName": "double",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "x",
+      "type": "number",
+      "defaultValue": null
+     }
+    ],
+    "normalizedSignature": "double(x: number): number",
+    "returnType": "number",
+    "range": {
+     "startLine": 18,
+     "startColumn": 13,
+     "endLine": 18,
+     "endColumn": 50
+    },
+    "source": "double = (x: number): number => x * 2",
+    "sourceHash": "8018c9808806a85f2213ac5dfa8e5b655b46311ed0afb72f201319f2f52a5e31",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "arrow_function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "double",
+     "x",
+     "number",
+     "number",
+     "x",
+     "2"
+    ],
+    "astSummary": {
+     "nodeType": "arrow_function"
+    },
+    "metadata": {},
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::Widget::20",
+    "name": "Widget",
+    "qualifiedName": "Widget",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "class Widget",
+    "returnType": null,
+    "range": {
+     "startLine": 20,
+     "startColumn": 7,
+     "endLine": 39,
+     "endColumn": 1
+    },
+    "source": "class Widget<T> {\r\n  private items: T[] = [];\r\n  constructor(private readonly options: WidgetOptions) {}\r\n\r\n  /** Add an item. */\r\n  add(item: T): number {\r\n    this.items.push(item);\r\n    return this.items.length;\r\n  }\r\n\r\n  map<R>(fn: Mapper<T, R>): R[] {\r\n    return this.items.map(fn);\r\n  }\r\n\r\n  static fromFile(path: string): Widget<string> {\r\n    return new Widget<string>({ name: readFileSync(path, 'utf8') });\r\n  }\r\n\r\n  get size(): number { return this.items.length; }\r\n}",
+    "sourceHash": "d1106544497d0eb41bab944a68d6a2ac15b53a514725167866f20795fed31318",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "class",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "class",
+     "widget",
+     "t",
+     "private",
+     "items",
+     "t",
+     "constructor",
+     "private",
+     "readonly",
+     "options",
+     "widgetoptions",
+     "add",
+     "an",
+     "item",
+     "add",
+     "item",
+     "t",
+     "number",
+     "this",
+     "items",
+     "push",
+     "item",
+     "return",
+     "this",
+     "items",
+     "length",
+     "map",
+     "r",
+     "fn",
+     "mapper",
+     "t",
+     "r",
+     "r",
+     "return",
+     "this",
+     "items",
+     "map",
+     "fn",
+     "static",
+     "fromfile",
+     "path",
+     "string",
+     "widget",
+     "string",
+     "return",
+     "new",
+     "widget",
+     "string",
+     "name",
+     "readfilesync",
+     "path",
+     "utf8",
+     "get",
+     "size",
+     "number",
+     "return",
+     "this",
+     "items",
+     "length"
+    ],
+    "astSummary": {},
+    "metadata": {
+     "isType": true,
+     "symbolType": "class"
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::Widget.constructor::22",
+    "name": "constructor",
+    "qualifiedName": "Widget.constructor",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "options",
+      "type": "WidgetOptions",
+      "defaultValue": null
+     }
+    ],
+    "normalizedSignature": "constructor(options: WidgetOptions)",
+    "returnType": null,
+    "range": {
+     "startLine": 22,
+     "startColumn": 2,
+     "endLine": 22,
+     "endColumn": 57
+    },
+    "source": "constructor(private readonly options: WidgetOptions) {}",
+    "sourceHash": "65023bcf7a2172417bfba36b3470ccf359dfb26b571e02b14b371d8c4a03c223",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "constructor",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "constructor",
+     "private",
+     "readonly",
+     "options",
+     "widgetoptions"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": true,
+     "typeParameters": null,
+     "isSignatureOnly": false
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::Widget.add::25",
+    "name": "add",
+    "qualifiedName": "Widget.add",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "item",
+      "type": "T",
+      "defaultValue": null
+     }
+    ],
+    "normalizedSignature": "add(item: T): number",
+    "returnType": "number",
+    "range": {
+     "startLine": 25,
+     "startColumn": 2,
+     "endLine": 28,
+     "endColumn": 3
+    },
+    "source": "add(item: T): number {\r\n    this.items.push(item);\r\n    return this.items.length;\r\n  }",
+    "sourceHash": "fa8001dd08edb4e1426447ed259133e572347d22bb14e65d050c2f193dfb062f",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "add",
+     "item",
+     "t",
+     "number",
+     "this",
+     "items",
+     "push",
+     "item",
+     "return",
+     "this",
+     "items",
+     "length"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": false,
+     "typeParameters": null,
+     "isSignatureOnly": false
+    },
+    "docstring": "/** Add an item. */",
+    "calls": [
+     "push"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::Widget.map::30",
+    "name": "map",
+    "qualifiedName": "Widget.map",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "fn",
+      "type": "Mapper<T, R>",
+      "defaultValue": null
+     }
+    ],
+    "normalizedSignature": "map(fn: Mapper<T, R>): R[]",
+    "returnType": "R[]",
+    "range": {
+     "startLine": 30,
+     "startColumn": 2,
+     "endLine": 32,
+     "endColumn": 3
+    },
+    "source": "map<R>(fn: Mapper<T, R>): R[] {\r\n    return this.items.map(fn);\r\n  }",
+    "sourceHash": "e430988e9108e3ad85efb544de4a1df522849eae4c96c081c5d8ed95e9775586",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "map",
+     "r",
+     "fn",
+     "mapper",
+     "t",
+     "r",
+     "r",
+     "return",
+     "this",
+     "items",
+     "map",
+     "fn"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": false,
+     "typeParameters": "<R>",
+     "isSignatureOnly": false
+    },
+    "docstring": "",
+    "calls": [
+     "map"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::Widget.fromFile::34",
+    "name": "fromFile",
+    "qualifiedName": "Widget.fromFile",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [
+     {
+      "name": "path",
+      "type": "string",
+      "defaultValue": null
+     }
+    ],
+    "normalizedSignature": "fromFile(path: string): Widget<string>",
+    "returnType": "Widget<string>",
+    "range": {
+     "startLine": 34,
+     "startColumn": 2,
+     "endLine": 36,
+     "endColumn": 3
+    },
+    "source": "static fromFile(path: string): Widget<string> {\r\n    return new Widget<string>({ name: readFileSync(path, 'utf8') });\r\n  }",
+    "sourceHash": "0cb86bd10e7f1cd2e6be70c05c679b239fa5ce49c7efade5b3399b8cb65a969e",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "method",
+    "modifiers": [
+     "static"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "static",
+     "fromfile",
+     "path",
+     "string",
+     "widget",
+     "string",
+     "return",
+     "new",
+     "widget",
+     "string",
+     "name",
+     "readfilesync",
+     "path",
+     "utf8"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": false,
+     "typeParameters": null,
+     "isSignatureOnly": false
+    },
+    "docstring": "",
+    "calls": [
+     "readFileSync"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::Widget.size::38",
+    "name": "size",
+    "qualifiedName": "Widget.size",
+    "enclosingScope": [
+     "Widget"
+    ],
+    "parameters": [],
+    "normalizedSignature": "size(): number",
+    "returnType": "number",
+    "range": {
+     "startLine": 38,
+     "startColumn": 2,
+     "endLine": 38,
+     "endColumn": 50
+    },
+    "source": "get size(): number { return this.items.length; }",
+    "sourceHash": "9bffa733d1737c0e8beb27d172f4f36faac8243eaeca8c788c29d8e69c7caa39",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "method",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "get",
+     "size",
+     "number",
+     "return",
+     "this",
+     "items",
+     "length"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": false,
+     "typeParameters": null,
+     "isSignatureOnly": false
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::AnonymousType::41",
+    "name": "AnonymousType",
+    "qualifiedName": "AnonymousType",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "class AnonymousType",
+    "returnType": null,
+    "range": {
+     "startLine": 41,
+     "startColumn": 16,
+     "endLine": 41,
+     "endColumn": 21
+    },
+    "source": "class",
+    "sourceHash": "0889113e04d3203f0c401c17c0fd8b352b740dc607433779d3edcaa13320b001",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "class",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "class"
+    ],
+    "astSummary": {},
+    "metadata": {
+     "isType": true,
+     "symbolType": "class"
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::helper::43",
+    "name": "helper",
+    "qualifiedName": "helper",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "helper(): string",
+    "returnType": "string",
+    "range": {
+     "startLine": 43,
+     "startColumn": 2,
+     "endLine": 43,
+     "endColumn": 47
+    },
+    "source": "protected helper(): string { return 'base'; }",
+    "sourceHash": "6da5981bef0e92fb632d762b0ecbf164d5fabfb7c1526c8098cacab8285edd1f",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "method",
+    "modifiers": [
+     "protected"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "protected",
+     "helper",
+     "string",
+     "return",
+     "base"
+    ],
+    "astSummary": {
+     "nodeType": "method_definition"
+    },
+    "metadata": {
+     "isConstructor": false,
+     "typeParameters": null,
+     "isSignatureOnly": false
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::load::46",
+    "name": "load",
+    "qualifiedName": "load",
+    "enclosingScope": [],
+    "parameters": [
+     {
+      "name": "url",
+      "type": "string",
+      "defaultValue": null
+     }
+    ],
+    "normalizedSignature": "load(url: string): Promise<string>",
+    "returnType": "Promise<string>",
+    "range": {
+     "startLine": 46,
+     "startColumn": 7,
+     "endLine": 48,
+     "endColumn": 1
+    },
+    "source": "async function load(url: string): Promise<string> {\r\n  return url;\r\n}",
+    "sourceHash": "8061fca2ab70df85aab806059a48c59dec9933691e302814fa3b60aa2173ef75",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "function",
+    "modifiers": [
+     "async"
+    ],
+    "decorators": [],
+    "normalizedTokens": [
+     "async",
+     "function",
+     "load",
+     "url",
+     "string",
+     "promise",
+     "string",
+     "return",
+     "url"
+    ],
+    "astSummary": {
+     "nodeType": "function_declaration"
+    },
+    "metadata": {
+     "typeParameters": null,
+     "isSignatureOnly": false
+    },
+    "docstring": "",
+    "calls": [],
+    "dependencies": [],
+    "extractionStatus": "success"
+   },
+   {
+    "id": "sample.ts::main::50",
+    "name": "main",
+    "qualifiedName": "main",
+    "enclosingScope": [],
+    "parameters": [],
+    "normalizedSignature": "main(): void",
+    "returnType": "void",
+    "range": {
+     "startLine": 50,
+     "startColumn": 15,
+     "endLine": 53,
+     "endColumn": 1
+    },
+    "source": "function main(): void {\r\n  const w = new Widget<number>({ name: 'w' });\r\n  w.add(1);\r\n}",
+    "sourceHash": "ef2c07d105101bdcd6a7caeac3a7ccf82d2a62972977dc4cd7ddac402b39379f",
+    "language": "typescript",
+    "filePath": "sample.ts",
+    "symbolType": "function",
+    "modifiers": [],
+    "decorators": [],
+    "normalizedTokens": [
+     "function",
+     "main",
+     "void",
+     "const",
+     "w",
+     "new",
+     "widget",
+     "number",
+     "name",
+     "w",
+     "w",
+     "add",
+     "1"
+    ],
+    "astSummary": {
+     "nodeType": "function_declaration"
+    },
+    "metadata": {
+     "typeParameters": null,
+     "isSignatureOnly": false
+    },
+    "docstring": "",
+    "calls": [
+     "add"
+    ],
+    "dependencies": [],
+    "extractionStatus": "success"
+   }
+  ],
+  "imports": [
+   "fs"
+  ],
+  "hasSyntaxError": false
+ }
+}
