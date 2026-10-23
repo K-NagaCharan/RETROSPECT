@@ -1,3 +1,5 @@
+> Applies to the 2026-10-19 evaluator-preparation phase (Category-B cases read by `src/evaluation/BenchmarkCaseLoader.js`). The 2026-10-21 four-language benchmark and the external benchmark use their own case files; see [DOCS_INDEX.md](DOCS_INDEX.md).
+
 # Retrospect Rebuilt Benchmark Schema Specification
 
 **Version:** 2.0 (Git-First Benchmark)  

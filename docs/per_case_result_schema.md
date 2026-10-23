@@ -1,3 +1,5 @@
+> Applies to the 2026-10-19 evaluator-preparation phase (per-case records written by `src/evaluation/RetrospectEvaluator.js`). The 2026-10-21 four-language benchmark and the external benchmark use their own harness outputs; see [DOCS_INDEX.md](DOCS_INDEX.md).
+
 # Retrospect Per-Case Evaluation Result Schema
 
 **Version:** 2.0  

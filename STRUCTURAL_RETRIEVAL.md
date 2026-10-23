@@ -65,10 +65,10 @@ Retrospect implements language-specific parsers behind a unified abstract interf
 To add support for a new language (e.g. Go, Rust, Ruby):
 1. Install the Tree-sitter WASM grammar in `node_modules/tree-sitter-wasms/out/tree-sitter-<lang>.wasm`.
 2. Extend `LanguageAdapter` in `src/languages/<Lang>Adapter.js`:
-   - Implement `extractSymbols(sourceCode, filePath)`: traverse the Tree-sitter AST, returning instances of `SymbolRecord`.
-   - Implement `extractImports(sourceCode, filePath)`: return imported module names and symbols.
+   - Implement `extractSymbols(sourceCode, tree, filePath)`: traverse the Tree-sitter AST, returning instances of `SymbolRecord`.
+   - Implement `extractImports(tree, sourceCode)`: return imported module names and symbols.
    - Implement `_extractLeadingComment(node, sourceCode)`: extract associated docstrings or comments.
-3. Register the new adapter in `src/languages/index.js` and associate it with file extensions in `src/parser/FunctionExtractor.js`.
+3. Register the new adapter in `src/languages/LanguageAdapterRegistry.js` (`this.register(new <Lang>Adapter())`). `FunctionExtractor` selects adapters through the registry by `getFileExtensions()`, so there is no separate extension mapping.
 4. Add unit test coverage in `tests/unit/adapters.test.js`.
 
 ---
@@ -77,12 +77,12 @@ To add support for a new language (e.g. Go, Rust, Ruby):
 
 The structural index format is explicitly versioned (`schemaVersion: "1.0.0"`):
 
-- **Symbol Registry**: Map of stable IDs (`file_path:symbol_name:start_line`) to full `SymbolRecord` metadata.
+- **Symbol Registry**: Map of stable IDs (`<filePath>::<scope.>name::<startLine>`) to full `SymbolRecord` metadata.
 - **Exact Name Index**: Map of raw identifier names to candidate symbol IDs.
 - **Inverted Token Index**: Map of stemmed sub-tokens to posting lists for lexical search.
 - **Call Graph**: Forward call edges (`callerId -> [calledNames]`) and reverse call edges (`calleeId -> [callerIds]`).
 - **File Manifest**: Tracked file modification times (`mtimeMs`) and content hashes (`sha256`).
-- **Incremental Sync**: `index.updateFiles({ added, modified, deleted })` purges stale symbols, re-indexes modified/added files, and rebuilds graph edges without re-parsing untouched files.
+- **Incremental Sync**: `index.updateIncremental(repoPath)` re-discovers files, purges symbols of deleted files, and re-indexes modified/added files (by `mtimeMs` and size) without re-parsing untouched files.
 
 ---
 
@@ -92,20 +92,20 @@ Candidate symbols are evaluated across multiple independent, normalized signals.
 
 ### Scoring Formula
 
-$$S(s, q) = w_{\text{exact}} \cdot I_{\text{exact}} + w_{\text{token}} \cdot \text{Score}_{\text{token}} + w_{\text{doc}} \cdot \text{Score}_{\text{doc}} + w_{\text{path}} \cdot \text{Score}_{\text{path}} + w_{\text{sig}} \cdot \text{Score}_{\text{sig}} + w_{\text{kind}} \cdot I_{\text{kind}} + \text{Boost}_{\text{graph}}$$
+$$S(s, q) = w_{\text{exact}} \cdot I_{\text{exact}} + w_{\text{token}} \cdot \text{Score}_{\text{token}} + w_{\text{doc}} \cdot \text{Score}_{\text{doc}} + w_{\text{path}} \cdot \text{Score}_{\text{path}} + w_{\text{sig}} \cdot \text{Score}_{\text{sig}} + w_{\text{kind}} \cdot I_{\text{kind}} + w_{\text{graph}} \cdot \text{Score}_{\text{graph}}$$
 
 | Component | Default Weight | Description |
 | :--- | :--- | :--- |
-| **Exact Name Match ($I_{\text{exact}}$)** | $0.40$ | Returns $1.0$ if the symbol identifier exactly matches any candidate identifier extracted from the query. |
+| **Exact Name Match ($I_{\text{exact}}$)** | $0.35$ | Returns $1.0$ if the symbol identifier exactly matches any candidate identifier extracted from the query. |
 | **Identifier Token Overlap ($\text{Score}_{\text{token}}$)** | $0.25$ | Jaccard / token-coverage overlap between query sub-tokens and the symbol's split identifier parts. |
 | **Docstring / Comment Relevance ($\text{Score}_{\text{doc}}$)** | $0.15$ | Coverage of query terms found within the associated docstring or JSDoc comment. |
 | **File Path Relevance ($\text{Score}_{\text{path}}$)** | $0.10$ | Sub-token matches against the file path and enclosing module name. |
 | **Signature Overlap ($\text{Score}_{\text{sig}}$)** | $0.05$ | Matches against parameters and return types in the signature. |
 | **Target Kind Match ($I_{\text{kind}}$)** | $0.05$ | Bonus if the query specifies intent (e.g. "class", "interface", "function") matching symbol kind. |
-| **Call Graph Proximity ($\text{Boost}_{\text{graph}}$)** | Up to $+0.08$ | Bounded boost for symbols called by or calling high-confidence candidate symbols. |
+| **Call Graph Proximity ($\text{Score}_{\text{graph}}$)** | $0.05$ | Graph score of 0.8 or 0.6 (otherwise 0) for symbols called by or calling high-confidence candidate symbols; weighted like the other signals. |
 
 ### Minimum Threshold & Deduplication
-- Minimum candidate acceptance threshold: $0.12$.
+- Minimum candidate acceptance threshold: $0.08$ (`minScoreThreshold` in `StructuralRetriever`).
 - Queries with zero candidate matches above threshold return an empty result list (preventing noisy false positives).
 - Results are deduplicated by stable symbol ID.
 
@@ -121,11 +121,11 @@ const {
   searchCurrentCode,
   getSymbol,
   getRelatedSymbols
-} = require('retrospect');
+} = require('retrospect-cli');   // or require('./src') from a checkout
 
-// 1. Index a repository
+// 1. Index a repository (optionally persist it)
 const index = await indexRepository('./my-repo', {
-  cacheDir: './my-repo/.retrospect'
+  persistPath: './my-repo/.retrospect/structural-index.json'
 });
 
 // 2. Search current code
@@ -134,16 +134,16 @@ const results = await searchCurrentCode('./my-repo', 'Where is user authenticati
   tokenBudget: 2000
 });
 
-for (const res of results.results) {
-  console.log(`[#${res.rank}] ${res.name} (${res.kind}) - Score: ${res.score.toFixed(4)}`);
-  console.log(`    File: ${res.filePath}:${res.startLine}-${res.endLine}`);
+results.results.forEach((res, i) => {
+  console.log(`[#${i + 1}] ${res.name} (${res.kind}) - Score: ${res.score.toFixed(4)}`);
+  console.log(`    File: ${res.filePath}:${res.range.startLine}-${res.range.endLine}`);
   console.log(`    Reasons: ${res.matchReasons.join('; ')}`);
-  console.log(res.code);
-}
+  console.log(res.source);
+});
 
-// 3. Inspect specific symbol and call graph relations
-const symbol = getSymbol(results.results[0].symbolId);
-const related = getRelatedSymbols(symbol.id, { direction: 'both' });
+// 3. Inspect a specific symbol and its call-graph relations
+const symbol = await getSymbol('./my-repo', results.results[0].symbolId);
+const related = await getRelatedSymbols('./my-repo', symbol.id);
 ```
 
 ### Command Line Interface
@@ -167,6 +167,8 @@ node scripts/run_structural_eval.js
 ---
 
 ## 6. Evaluation & Benchmark Results
+
+> Note (2026-10-23): this section reports the original structural mini-benchmark (`data/structural_eval_benchmark.json`); its figures were not re-measured at `eval-v1`. For the current evaluations see [docs/DOCS_INDEX.md](docs/DOCS_INDEX.md).
 
 ### Dataset Provenance & Design
 The benchmark dataset (`data/structural_eval_benchmark.json`) contains **22 explicitly labeled instances** evaluated across 4 real, multi-language mini-repositories (`python_repo`, `javascript_repo`, `typescript_repo`, `java_repo`):
@@ -224,7 +226,7 @@ Across all 22 benchmark instances (dev + test splits combined), Retrospect achie
 1. **Static Name-Based Call Graph Resolution**:
    Tree-sitter AST extraction resolves function calls syntactically by identifier name. It does not perform full semantic type-inference, flow-sensitive pointer analysis, or dynamic dispatch resolution across polymorphic class hierarchies.
 2. **Current-Code Isolation**:
-   In accordance with the task specification, this pipeline operates strictly on contemporary repository snapshots. Git commit lineage traversal, historical tracking across renames, and commit diff fusion are decoupled and handled in Retrospect's historical pipeline.
+   In accordance with the task specification, this pipeline operates strictly on contemporary repository snapshots. Git commit lineage traversal, historical tracking across renames, and commit diff fusion are decoupled and handled in Retrospect's historical pipeline. The lineage gate that combines them is described in the [README](README.md#2-how-it-works).
 3. **Out-of-Scope Languages**:
    C and C++ are not included in this release.
 4. **Token Budget Approximation**:

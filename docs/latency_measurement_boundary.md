@@ -1,3 +1,5 @@
+> Applies to the 2026-10-19 evaluator-preparation phase (`t_struct` / `t_hist` / `t_fusion_*` timing in `src/evaluation/RetrospectEvaluator.js`). Note: structural scoring is `StructuralRetriever`'s multi-signal weighted scorer, not BM25. See [DOCS_INDEX.md](DOCS_INDEX.md).
+
 # Standardized Latency Measurement Boundary Specification
 
 **Version:** 1.0  

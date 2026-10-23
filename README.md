@@ -1,313 +1,18 @@
-# Retrospect — Evolution-Aware Multi-Language Code Retrieval & Fusion Pipeline
+# Retrospect: evolution-aware code retrieval
 
-Retrospect is a research-oriented, evolution-aware code retrieval and context search framework for repository-level LLMs and developers. It unifies **syntax-aware structural code search** over contemporary codebases with **deterministic Git history lineage tracking**, resolving historical predecessors across renames, relocations, and refactorings to deliver explainable, high-precision context.
+Retrospect is an evolution-aware code retrieval system for repository-level LLMs and developers. It finds **current** code even when you ask about it by a **former** name. To do that it combines two things:
+- syntax-aware structural search over the current snapshot;
+- lineage recovered from git history (renames, moves, signature changes).
 
-Retrospect is implemented in **Node.js** and leverages Tree-sitter WebAssembly grammars (`web-tree-sitter`) for fast, robust parsing across Python, JavaScript, TypeScript, and Java without native C++ compilation toolchains.
+It supports **Java, Python, JavaScript and TypeScript**. Parsing uses Tree-sitter WebAssembly grammars (`web-tree-sitter`, `tree-sitter-wasms`), so no native toolchain is needed. Retrospect is written in Node.js (18 or newer).
 
----
-
-## 1. System Architecture
-
-```
-Retrospect
-├── src/
-│   ├── index.js                  # Primary entry point & public API exports
-│   ├── git/
-│   │   └── GitHistoryReader.js   # Safe, deterministic Git inspection & commit snapshots
-│   ├── languages/
-│   │   ├── LanguageAdapter.js    # Common language adapter interface
-│   │   ├── LanguageAdapterRegistry.js # Adapter discovery and singleton registry
-│   │   ├── PythonAdapter.js      # Python function/method/decorator extraction
-│   │   ├── JavaScriptAdapter.js  # JS declarations, expressions, arrows, class methods
-│   │   ├── TypeScriptAdapter.js  # TS typed functions, access modifiers, return types
-│   │   └── JavaAdapter.js        # Java methods, constructors, overloaded signatures
-│   ├── parser/
-│   │   ├── TreeSitterManager.js  # WASM grammar loading & parser singleton lifecycle
-│   │   └── FunctionExtractor.js  # Multi-language symbol extraction orchestration
-│   ├── model/
-│   │   ├── SymbolRecord.js       # Language-neutral symbol model & hashing
-│   │   └── HistoryGraph.js       # Function-version graph (nodes, edges, vocabulary)
-│   ├── matcher/
-│   │   ├── SimilarityUtils.js    # Token Jaccard, string edit distance, signature metrics
-│   │   └── FunctionMatcher.js    # Tier 1 & Tier 2 deterministic evolution matcher
-│   ├── storage/
-│   │   ├── HistoryStore.js       # Streamable JSONL persistence, atomic writes & recovery
-│   │   └── HistoryCache.js       # Immutable commit-level symbol caching & validation
-│   ├── tracker/
-│   │   └── HistoryTracker.js     # Git commit traversal & predecessor chaining
-│   ├── structural/
-│   │   ├── StructuralDiscovery.js# .gitignore-aware multi-language file discovery
-│   │   ├── StructuralIndex.js    # Inverted index, call graph, and symbol registry
-│   │   ├── StructuralQueryUnderstanding.js # Subtoken splitting, stemming, intent analysis
-│   │   ├── StructuralRetriever.js# Multi-signal deterministic candidate scoring
-│   │   ├── SymbolContextBuilder.js# Budget-aware atomic context window assembly
-│   │   ├── CodeSearchEngine.js   # Programmatic search facade & index coordinator
-│   │   └── index.js              # Structural subsystem barrel export
-│   ├── retrieval/
-│   │   ├── UnifiedSearch.js      # Public unified search engine (retrospect.search)
-│   │   ├── HistoricalRetrievalAdapter.js # Transitive lineage stitching, profiles & fusion
-│   │   └── HistoricalRetriever.js# User-facing commit-level evidence retrieval API
-│   └── evaluation/
-│       ├── HistoryEvaluator.js   # Ground-truth accuracy, precision, and latency metrics
-│       ├── evaluationRunner.js   # Phase 1 evaluation CLI runner
-│       └── benchmarks/
-│           └── labeled_dataset.json # Phase 1 multi-language ground-truth benchmark
-├── scripts/
-│   ├── structural_cli.js         # Interactive structural search and indexing CLI
-│   ├── run_structural_eval.js    # Structural benchmark runner (dev / held-out test splits)
-│   ├── evaluate_phase_b_fusion.js# Phase B controlled fusion evaluation runner
-│   └── export_phase_c_author_pack.js # Phase C blinded author pack exporter & leak scanner
-├── data/
-│   ├── structural_eval_benchmark.json # Structural evaluation dataset (22 instances)
-│   ├── phase_b_evaluation_results.json # Preserved frozen Phase B evaluation baseline
-│   ├── phase_b_evaluation_results_stitched.json # Transitive stitched lineage evaluation results
-│   └── phase_c/                  # Phase C manifests, provenance, schemas, evaluator blind key
-└── exported_packs/
-    └── phase_c_author_pack/      # 18 blinded context cards, template, and instructions
-```
+Retrospect ships as the `retrospect-cli` package. It has an `ask` command that sends retrieved code and history to an LLM. **Only retrieval has been evaluated; the quality of LLM answers has not.**
 
 ---
 
-## 2. Key Capabilities
+## 1. Install and CLI usage
 
-### 1. Unified Search (`retrospect.search`)
-Combines structural lexical/AST search with historical Git lineage evidence to rank contemporary code symbols. Supports 4 fusion strategies:
-- **Reciprocal Rank Fusion (RRF $k=60$)**: Rank-based fusion providing robust suppression of false positives on unanswerable queries.
-- **Linear Fusion**: Weighted linear combination ($w_s \cdot S + w_h \cdot H$).
-- **Adaptive Fusion**: Signal-preserving fusion ($S_{\text{max}} + 0.25 \cdot S_{\text{min}}$).
-- **Residual Historical Boost**: Baseline-preserving residual boost ($S + \alpha \cdot H \cdot (1 - S)$).
-
-### 2. Transitive Lineage Stitching
-Resolves function evolution across multi-hop chained renames and file moves (e.g., $A \to B \to C$) using deterministic AST matching and confidence discounting, ensuring HEAD symbols inherit historical context across long-term refactorings.
-
-### 3. Syntax-Aware Structural Retrieval
-Extracts symbols, signatures, docstrings, and call-graph relationships using Tree-sitter WASM parsers. Details available in [STRUCTURAL_RETRIEVAL.md](STRUCTURAL_RETRIEVAL.md).
-
-### 4. Zero Semantic Leakage Phase C Benchmark Suite
-Generates blinded author packs with salted HMAC-SHA256 opaque card identifiers (`CARD-[A-Z0-9]{6}`) and an automated fail-closed leakage scanner to enable genuine held-out evaluation without exposing target symbols, file paths, or commit SHAs.
-
----
-
-## 3. Supported Languages
-
-| Language | File Extensions | Supported Constructs |
-| :--- | :--- | :--- |
-| **Python** | `.py` | Module-level functions, class methods, nested functions, decorators (`@dec`), default/typed parameters, `*args`/`**kwargs`, return types. |
-| **JavaScript** | `.js`, `.jsx`, `.mjs`, `.cjs` | Function declarations, function expressions, arrow functions (`const f = () => {}`), class methods, constructors, async methods, getters. |
-| **TypeScript** | `.ts`, `.tsx`, `.mts`, `.cts` | All JS constructs + typed parameters, return type annotations, access modifiers (`public`, `private`, `protected`, `static`), generic parameters (`<T>`), interface method signatures. |
-| **Java** | `.java` | Class/interface/enum methods, constructors, overloaded methods (distinguished by parameter count/types), qualified scopes, modifiers, annotations (`@Override`), thrown exceptions. |
-
----
-
-## 4. Deterministic Matching & Lineage Strategy
-
-Retrospect implements an explainable, deterministic baseline without embeddings or vector databases:
-
-### Tier 1 — Strong Identity Signals
-- **Exact Hash Match (`tier1_exact_hash`)**: Identical source code SHA-256 hash and matching symbol name across snapshots $\to$ `unchanged` (score `1.0`).
-- **Exact Signature Match (`tier1_exact_signature`)**: Identical qualified name, enclosing scope, and normalized parameter signature with modified body $\to$ `modified` (score `0.98`, `high_confidence`).
-- **Name & Scope Match (`tier1_name_and_scope`)**: Identical qualified name and enclosing scope with body token overlap $\to$ `modified` (`high_confidence`).
-
-### Tier 2 — Similarity-Based Matching
-When signatures change, functions are renamed, or files are moved:
-- **Scoring Signals**: Normalized token Jaccard similarity (`0.35`), function name similarity (`0.25`), normalized signature similarity (`0.15`), enclosing scope similarity (`0.15`), parameter similarity (`0.10`).
-- **Thresholds**: High confidence match ($\ge 0.70$), moderate confidence match ($\ge 0.50$).
-- **Explicit Uncertainty**: If the top two candidate scores are within `0.08`, the matcher refrains from guessing and flags `uncertain` with `ambiguous_candidates`.
-- **Change Vocabulary**: `unchanged`, `modified`, `renamed`, `moved`, `renamed_and_moved`, `new`, `deleted`, `uncertain`.
-
----
-
-## 5. Usage & JavaScript API
-
-### Installation
-
-```bash
-npm install
-```
-
-### 1. Unified Search (Structural + Git Lineage Fusion)
-
-The unified search API evaluates contemporary symbols and combines structural and historical evidence using the selected fusion strategy:
-
-```javascript
-const retrospect = require('retrospect');
-
-async function runSearch() {
-  const query = 'Where is user authentication token validation handled?';
-  const repoPath = './my-repository';
-
-  const results = await retrospect.search(repoPath, query, {
-    strategy: 'rrf',          // 'rrf' | 'linear' | 'adaptive' | 'residual'
-    rrfK: 60,                 // RRF smoothing constant (default: 60)
-    weightStructural: 0.60,   // Structural rank weight
-    weightHistorical: 0.40,   // Historical rank weight
-    maxResults: 5,            // Maximum candidate results
-    historyDepth: 15          // Commits to inspect for lineage
-  });
-
-  console.log(`Query: "${results.query}" (${results.totalCandidates} candidates evaluated in ${results.timingMs}ms)`);
-
-  for (const hit of results.results) {
-    console.log(`\n[#${hit.rank}] ${hit.name} (${hit.kind})`);
-    console.log(`  File: ${hit.filePath}:${hit.startLine}-${hit.endLine}`);
-    console.log(`  Score: ${hit.score.toFixed(4)} (Structural: ${hit.structuralScore.toFixed(4)}, Historical: ${hit.historicalScore.toFixed(4)})`);
-
-    if (hit.historicalProfile?.hasHistory) {
-      console.log(`  Lineage: ${hit.historicalProfile.lineageClassification} (Confidence: ${hit.historicalProfile.lineageConfidence})`);
-      console.log(`  Historical Names: ${hit.historicalProfile.historicalNames.join(', ')}`);
-      console.log(`  Predecessors: ${hit.historicalProfile.predecessors.length} recorded versions`);
-    }
-  }
-}
-
-runSearch();
-```
-
-### 2. Structural Current-Code Retrieval
-
-To query contemporary code directly without historical traversal (see [STRUCTURAL_RETRIEVAL.md](STRUCTURAL_RETRIEVAL.md)):
-
-```javascript
-const { searchCurrentCode, indexRepository } = require('retrospect');
-
-async function runStructural() {
-  const results = await searchCurrentCode('./my-repository', 'retry logic for failed network requests', {
-    maxResults: 5,
-    tokenBudget: 2000
-  });
-
-  for (const hit of results.results) {
-    console.log(`[#${hit.rank}] ${hit.name} - Score: ${hit.score.toFixed(4)}`);
-    console.log(`Reasons: ${hit.matchReasons.join('; ')}`);
-    console.log(hit.code);
-  }
-}
-
-runStructural();
-```
-
-### 3. Historical Retriever API
-
-To inspect commit-by-commit evolution of specific symbols:
-
-```javascript
-const { HistoricalRetriever } = require('retrospect');
-
-async function inspectHistory() {
-  const retriever = new HistoricalRetriever();
-
-  const evidence = await retriever.retrieve({
-    repoPath: './my-repository',
-    targetCommit: 'HEAD',
-    symbolQueries: [
-      { filePath: 'src/auth.ts', name: 'login' }
-    ],
-    historyDepth: 10,
-    includeDiffs: true
-  });
-
-  for (const item of evidence.symbols) {
-    console.log(`Symbol: ${item.query.name} (Depth: ${item.historicalDepth})`);
-    for (const version of item.history) {
-      console.log(` - Commit: ${version.commitHash} [${version.changeClassification}]`);
-      console.log(`   Signature: ${version.normalizedSignature}`);
-    }
-  }
-}
-
-inspectHistory();
-```
-
----
-
-## 6. Testing & Evaluation
-
-### Running the Test Suite
-
-Execute the full Jest test suite (16 test suites, 92 tests passing):
-
-```bash
-npm test
-```
-
-Test coverage includes:
-- Multi-language Tree-sitter symbol extraction (Python, JS, TS, Java)
-- Deterministic FunctionMatcher (Tier 1 exact & Tier 2 similarity)
-- HistoryStore JSONL persistence and corruption recovery
-- HistoryTracker commit traversal and merge resolution
-- Structural discovery, indexing, query parsing, and ranking
-- Transitive lineage stitching across multi-step renames and moves
-- Unified search API with exact Phase B evaluation parity (alphabetical tie-breaking & RRF precision)
-- Fail-closed Phase C author pack export and leak prevention
-
----
-
-### Empirical Evaluation Benchmarks
-
-Retrospect includes three distinct, reproducible benchmark suites:
-
-#### A. Phase 1 Multi-Language Lineage Benchmark
-
-```bash
-npm run evaluate
-```
-
-```
-Total Ground-Truth Examples:       13
-Top-1 Matching Accuracy:          100.00%
-Change Category Accuracy:         100.00%
-False Historical Match Rate:        0.00%
-Uncertain / No-Match Rate:         15.38%
-Average Matching Latency:          0.110 ms
-```
-
-#### B. Structural Current-Code Benchmark
-
-Evaluates 22 labeled instances across Python, JavaScript, TypeScript, and Java:
-
-```bash
-node scripts/run_structural_eval.js
-```
-
-| Split | Labeled Queries | Recall@1 | Recall@5 | MRR | Precision@1 | No-Result Acc |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Held-Out Test Split** | 16 | **100.00%** | **100.00%** | **1.0000** | **100.00%** | **100.00%** |
-| **All Benchmark Instances** | 22 | **95.45%** | **95.45%** | **0.9545** | **95.45%** | **100.00%** |
-
-#### C. Phase B Controlled Fusion Evaluation
-
-Evaluates 40 audited lineage queries across 4 real-world repositories (`bottle`, `express`, `gson`, `zod`):
-
-```bash
-node scripts/evaluate_phase_b_fusion.js
-```
-
-**Held-Out Test Set Performance (17 answerable / 3 negative queries):**
-
-| Retrieval Strategy | Recall@1 | Recall@5 | Recall@10 | MRR | False Positive Rate |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Structural-Only Baseline** | 23.5% (4/17) | 35.3% (6/17) | 35.3% (6/17) | 0.2833 | 33.3% (1/3) |
-| **Historical-Only Baseline** | 5.9% (1/17) | 35.3% (6/17) | 41.2% (7/17) | 0.1930 | 100.0% (3/3) |
-| **Linear Fusion (0.60S / 0.40H)** | 17.6% (3/17) | 29.4% (5/17) | 52.9% (9/17) | 0.2600 | 33.3% (1/3) |
-| **Adaptive Fusion** | 11.8% (2/17) | 29.4% (5/17) | 52.9% (9/17) | 0.2322 | 100.0% (3/3) |
-| **Reciprocal Rank Fusion (RRF $k=60$)** | **23.5% (4/17)** | **41.2% (7/17)** | **58.8% (10/17)** | **0.3268** | **0.0% (0/3)** |
-| **Residual Historical Boost** | 17.6% (3/17) | 35.3% (6/17) | 58.8% (10/17) | 0.2844 | 66.7% (2/3) |
-
-*Key finding*: **RRF ($k=60$) achieves the highest overall MRR (0.3268) and 0% false positives on unanswerable queries**, proving superior to linear and adaptive fusion by avoiding score distribution mismatches.
-
-#### D. Phase C Independent Blinded Benchmark Pack
-
-Generates 18 blinded context cards with salted HMAC-SHA256 opaque tokens, strict information stripping, and a private evaluator mapping key:
-
-```bash
-node scripts/export_phase_c_author_pack.js
-```
-
----
-
-## CLI usage (`rtro`)
-
-`retrospect-cli` installs two commands, `rtro` and `retrospect` (an alias). It needs Node 18 or newer and git on the `PATH`.
+`retrospect-cli` installs two commands, `rtro` and `retrospect` (an alias), both pointing to `bin/rtro.js`. It needs Node 18 or newer and git on the `PATH`.
 
 ### Install
 
@@ -315,7 +20,7 @@ node scripts/export_phase_c_author_pack.js
 npm install -g retrospect-cli
 ```
 
-To install from a local checkout instead, run `npm pack` and then `npm install -g retrospect-cli-1.0.0.tgz`.
+To install from a local checkout instead, run `npm pack` and then `npm install -g retrospect-cli-1.0.0.tgz`. To work on the source, run `npm install` in the repository.
 
 ### Index a repository: `rtro init`
 
@@ -326,7 +31,7 @@ rtro init                 # default history window: the 400 most recent commits
 rtro init --history 1000  # analyse a longer history
 ```
 
-This builds the structural index and the history index, and stores them in `<repo>/.retrospect/` along with `config.json`. It also adds `.retrospect/` to `.git/info/exclude`. Tracked files are never modified.
+`init` builds the structural index and the history index and stores them in `<repo>/.retrospect/` along with `config.json`. It adds `.retrospect/` to `.git/info/exclude`; tracked files are never modified.
 
 `rtro status` shows:
 - whether the index is fresh (indexed HEAD = current HEAD) or stale;
@@ -341,7 +46,7 @@ rtro search computeCartTotal --k 5
 rtro search "what happened to show_message?" --json   # machine-readable
 ```
 
-Search uses Retrospect's lineage gate.
+Search uses Retrospect's lineage gate (G, §2).
 - **Identifiers in the question** (`` `backticks` ``, camelCase, snake_case, dotted names, or a single bare token) are matched against former names recorded in git history. Matching symbols are listed first, each with a `formerly <oldName> (renamed in <sha>, <date>)` line.
 - **Without a lineage match**, results come from structural search over the current code.
 
@@ -355,7 +60,7 @@ rtro ask "what happened to show_message?" --model <model-name>
 rtro ask "where is filterObject now?" --provider openai-compatible --model llama3
 ```
 
-`ask` takes the top results (`--k`, default 5) and builds a context within the token budget (default 4000). It sends a prompt with QUESTION, CURRENT CODE and HISTORICAL EVIDENCE sections. It prints the answer, then `Sources:` (file:line, plus the commit sha for historical evidence). The model is told to answer only from that context.
+`ask` takes the top results (`--k`, default 5) and builds a context within the token budget (default 4000) using `ContextBuilder`. It sends a prompt with QUESTION, CURRENT CODE and HISTORICAL EVIDENCE sections. It prints the answer, then `Sources:` (file:line, plus the commit sha for historical evidence). The model is told to answer only from that context.
 
 ### Configure: `rtro config`
 
@@ -369,7 +74,7 @@ rtro config set baseUrl http://localhost:11434/v1 --global   # for openai-compat
 
 Global keys (`provider`, `model`, `baseUrl`) live in `~/.retrospect/config.json`. API keys are never stored in any file.
 
-### Environment variables
+### Providers and environment variables
 
 | Variable | Used for |
 |---|---|
@@ -378,25 +83,229 @@ Global keys (`provider`, `model`, `baseUrl`) live in `~/.retrospect/config.json`
 | `OPENAI_BASE_URL` | Base URL for `openai-compatible` when `baseUrl` is not configured, e.g. `https://api.openai.com/v1` |
 | `RETROSPECT_MODEL` | Default model when neither `--model` nor the `model` config key is set |
 
-If a required key or model is missing, `rtro ask` names the variable or setting to provide. `--dry-run` never needs a key.
+If a required key, base URL or model is missing, `rtro ask` names the variable or setting to provide. `--dry-run` never needs a key. Example transcripts (init, status, search, `--json`, `ask --dry-run`) on two benchmark repositories are in [docs/demo/](docs/demo/).
 
 ---
 
-## 7. CLI Reference
+## 2. How it works
 
-```bash
-# Structural Indexing & Search
-node scripts/structural_cli.js index ./path/to/repo
-node scripts/structural_cli.js search ./path/to/repo "handle multipart form upload" --limit 5
+Retrospect has three retrieval configurations that matter for the CLI and the evaluation.
 
-# Benchmark Runners
-node scripts/run_structural_eval.js      # Structural current-code evaluation
-node scripts/evaluate_phase_b_fusion.js  # Phase B controlled fusion evaluation
-node scripts/export_phase_c_author_pack.js # Generate blinded Phase C author pack
+| Configuration | What it does | Code |
+|---|---|---|
+| **B1: structural** | Ranks symbols in the current snapshot with a deterministic multi-signal scorer: exact name, identifier sub-token overlap, docstring, file path, signature, kind, and a call-graph term. The weights and the minimum-score threshold are defined in `StructuralRetriever.js`. | `src/structural/` |
+| **B2: history / lineage** | Walks the most recent *H* commits (merge-aware `git log --topo-order`). It matches each changed function to its predecessor with `FunctionMatcher` and stitches lineage chains (A → B → C). Each current symbol gets a history profile (former names, commit messages, diff terms). B2 ranks symbols by that profile. | `src/retrieval/HistoricalRetrievalAdapter.js`, `src/matcher/`, `src/git/` |
+| **G: lineage gate** | Extracts identifiers from the query (`ids(q)`). If any B2 candidate's inherited former names contain one of them (exact, case-sensitive), those candidates come first, in B2 order, followed by the B1 ranking. Otherwise G **is** the B1 ranking. G has no parameters. | `src/retrieval/LineageGate.js` |
+
+**Why gating instead of fusion.** The evaluation also measured two fusion configurations:
+- **B3:** linear, 0.6 structural / 0.4 historical;
+- **B4:** reciprocal-rank fusion, k = 60.
+
+Fusion helped when the rename was inside the history window. But it lost much of that gain, and it harmed queries for which history had no signal; see §4. G only changes the ranking when the query names a former identifier that history actually recorded. In every other case it returns the structural result unchanged.
+
+### Lineage matching (FunctionMatcher)
+
+Matching is deterministic and explainable, with no embeddings or vector databases.
+
+- **Tier 1: strong identity signals.**
+  - Exact source hash and same name (`tier1_exact_hash`) → `unchanged`.
+  - Same qualified name, scope and normalized signature with a modified body (`tier1_exact_signature`) → `modified`.
+  - Same qualified name and scope with body token overlap (`tier1_name_and_scope`) → `modified`.
+- **Tier 2: similarity-based matching** (renames, moves, signature changes).
+  - **Weighted signals:** token Jaccard 0.35, name similarity 0.25, signature 0.15, enclosing scope 0.15, parameters 0.10.
+  - **Thresholds:** high confidence ≥ 0.70, moderate ≥ 0.50.
+  - **Ambiguity:** when the top two candidates are within 0.08 of each other, the matcher reports `uncertain` rather than guessing.
+- **Change vocabulary** (`src/model/HistoryGraph.js`): `unchanged`, `modified`, `renamed`, `moved`, `renamed_and_moved`, `new`, `deleted`, `uncertain`.
+
+### Supported languages
+
+| Language | File extensions | Extracted callables |
+| :--- | :--- | :--- |
+| **Python** | `.py` | Module-level functions, class methods, nested functions, decorated functions |
+| **JavaScript** | `.js`, `.jsx`, `.mjs`, `.cjs` | Function declarations and expressions, arrow functions, class methods, factory-returned callables |
+| **TypeScript** | `.ts`, `.tsx`, `.mts`, `.cts` | All JavaScript constructs, plus typed parameters, return types, access modifiers, overloads (signatures collapsed onto the implementation) |
+| **Java** | `.java` | Class, interface and enum methods, constructors, overloads (distinguished by parameter types) |
+
+More detail on the structural pipeline is in [STRUCTURAL_RETRIEVAL.md](STRUCTURAL_RETRIEVAL.md).
+
+---
+
+## 3. Architecture
+
+Generated from the actual `src/` layout at `cli-v1.0.0`:
+
+```
+Retrospect
+├── bin/
+│   └── rtro.js                       # CLI entry point (rtro / retrospect)
+├── src/
+│   ├── index.js                      # Public API exports
+│   ├── cli/                          # CLI: args, config, store (.retrospect/), search, prompt, index (commands)
+│   ├── llm/
+│   │   └── index.js                  # Providers: anthropic, openai-compatible (fetch only)
+│   ├── git/
+│   │   ├── GitHistoryReader.js       # Git commits, diffs, file contents
+│   │   └── historyWindow.js          # History-window (reach) classification
+│   ├── languages/                    # LanguageAdapter, LanguageAdapterRegistry, Java/JavaScript/Python/TypeScript adapters
+│   ├── parser/
+│   │   ├── TreeSitterManager.js      # WASM grammar loading; one cached parser per language
+│   │   └── FunctionExtractor.js      # Symbol extraction (frees Tree-sitter trees after use)
+│   ├── model/                        # SymbolRecord, HistoryGraph (change vocabulary)
+│   ├── matcher/                      # FunctionMatcher (Tier 1/Tier 2), SimilarityUtils
+│   ├── storage/                      # HistoryStore (JSONL), HistoryCache
+│   ├── tracker/
+│   │   └── HistoryTracker.js         # Commit traversal and predecessor chaining
+│   ├── structural/
+│   │   ├── index.js                  # indexRepository, searchCurrentCode, getSymbol, getRelatedSymbols
+│   │   ├── discovery/RepoDiscoverer.js
+│   │   ├── index/StructuralIndex.js  # Symbol registry, inverted index, call graph, save/load
+│   │   ├── query/QueryProcessor.js
+│   │   ├── retrieval/StructuralRetriever.js   # B1
+│   │   └── context/ContextBuilder.js # Token-budgeted context blocks
+│   ├── retrieval/
+│   │   ├── HistoricalRetrievalAdapter.js      # B2 history profiles, B3 linear fusion
+│   │   ├── RRFv2.js                  # B4 reciprocal-rank fusion
+│   │   ├── LineageGate.js            # G and identifier extraction
+│   │   ├── UnifiedSearch.js          # Programmatic fused search (search)
+│   │   └── HistoricalRetriever.js    # Commit-level evidence API
+│   └── evaluation/                   # RetrospectEvaluator, BenchmarkCaseLoader, ClusterBootstrap, SplitGuard,
+│                                     # HistoryEvaluator, StructuralEvaluator, evaluationRunner
+├── tests/                            # unit/, integration/, evaluation/, cli/, stress/, fixtures/ (jest)
+├── scripts/                          # Benchmark, audit and export scripts (e.g. structural_cli.js)
+└── docs/                             # Specs, demo transcripts, DOCS_INDEX.md
 ```
 
+### Programmatic API
+
+```javascript
+const retrospect = require('retrospect-cli');   // or require('./src') from a checkout
+
+// Structural (B1) search over the current snapshot
+const r = await retrospect.searchCurrentCode('./my-repo', 'retry logic for failed network requests', { maxResults: 5 });
+for (const b of r.results) console.log(b.name, `${b.filePath}:${b.range.startLine}`, b.score);
+
+// Fused structural + history search (strategies: 'linear' (default), 'adaptive', 'rrf', 'residual')
+const u = await retrospect.search('./my-repo', 'where is computeCartTotal now?', { strategy: 'rrf', limit: 5, maxCommits: 400 });
+for (const h of u.results) console.log(h.rank, h.symbol.qualifiedName, h.symbol.filePath, h.lineageEvidence.historicalNames);
+```
+
+The lineage gate G is not one of `search`'s strategies. Use the CLI, or call `rankLineageGate` from `src/retrieval/LineageGate.js`.
+
 ---
 
-## 8. License
+## 4. Key results
 
-ISC
+All numbers are copied from the result files listed in [docs/DOCS_INDEX.md](docs/DOCS_INDEX.md#where-results-live). Ground truth differs between the two benchmarks, as described with each.
+
+### External confirmation (pre-registered, one confirmatory test)
+
+**Case set:** 42 repositories, one rename event each: Java 12, Python 12, JavaScript 7, TypeScript 11. The events come from three sources:
+- the RefactoringMiner oracle (Java);
+- the PyRef oracle (Python);
+- developer-attested renames, where the commit message names the old and new identifiers and Retrospect's extractor confirms the rename.
+
+The owner reviewed the 29 developer-attested events and confirmed 26.
+
+**Settings:** H = 400. The query is the old identifier (task B_id).
+
+**Confirmatory test: B_id, G vs B1, pooled over repositories** (Monte Carlo sign-flip, 100,000 assignments, seed 20261023):
+
+| Repos | MRR B1 | MRR G | R@1 B1 | R@1 G | R@10 B1 | R@10 G | Δ (G − B1) | 95% CI | p (two-sided) | Rescues / harms @10 | Decision |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 42 | 0.3628 | 0.7747 | 0.2619 | 0.7143 | 0.5238 | 0.8571 | 0.4119 | [0.279, 0.5489] | 9.9999e-06 | 14 / 0 | **SUPPORTED** |
+
+The p-value is the smallest value attainable with 100,000 Monte Carlo assignments.
+
+**Harm check (task A, current-docstring queries, G vs B1):** 14 repositories, MRR B1 0.6512 vs G 0.6452, Δ −0.006, CI [−0.0179, 0.0], harms@10 = 0. Result: **PASS** (the rule is harms@10 = 0 and Δ ≥ −0.01).
+
+**Sensitivity (owner-confirmed cases only):** S1 + S2 + the 26 owner-confirmed developer-attested events. Rejected: django/django, tj/commander.js, trpc/trpc.
+
+| Repos | MRR B1 | MRR G | Δ | 95% CI | p | Rescues / harms @10 |
+|---|---|---|---|---|---|---|
+| 39 | 0.3856 | 0.7574 | 0.3718 | [0.2348, 0.5091] | 9.9999e-06 | 12 / 0 |
+
+### Main four-language benchmark (v4, parser-fix re-measurement)
+
+**Ground truth:** machine-verified evolution events.
+
+**Machine-verified, not human-reviewed:** the 1,005-event owner review queue has not been done.
+
+The figures below are held-out task B (old identifier), pooled, cluster-level.
+
+| Stratum | Cases / clusters | MRR B1 | MRR B2 | MRR B3 | MRR B4 | B4 − B1 | B4 rescues / harms @10 |
+|---|---|---|---|---|---|---|---|
+| In window, H = 400 | 14 / 12 | 0.4069 | 0.6496 | 0.528 | 0.491 | +0.0914 | 3 / 0 |
+| All indexed, H = 400 | 63 / 49 | 0.4329 | 0.2486 | 0.3464 | 0.2695 | −0.0837 | 4 / 23 |
+| All indexed, H = 50 | 63 / 49 | 0.4329 | 0.0883 | 0.3047 | 0.1699 | −0.2141 | 3 / 17 |
+
+**Readings:**
+- **In window:** history alone (B2, 0.6496) beats structural search (B1, 0.4069) when the rename commit lies inside the H = 400 window.
+- **Fusion harm:** over all indexed held-out cases, fusion is worse than structural alone.
+  - **H = 400:** B4 harms 23 cases and rescues 4.
+  - **H = 50:** B4 harms 17 and rescues 3.
+
+  This is the finding that motivated G.
+- **Reachability:** only **20 of 91** task-B cases, across all splits, have their rename commit inside the H = 400 window.
+- **Per language:** no per-language confirmatory test reached SUPPORTED. Java is INCONCLUSIVE with 6 clusters; the other languages had too few clusters to test.
+
+**E3-Reach** (pre-registered, Java, H = 400, 18 cases): MRR B1 0.1623 vs B4 0.2825, Δ +0.1068, exact p = 0.06641, rescues / harms 4 / 2. The outcome is **INCONCLUSIVE**, identical before and after the parser fix.
+
+---
+
+## 5. Limitations
+
+- **History reach.** The evaluated window is the 400 most recent commits. Older renames are not reachable (20 of 91 main-benchmark task-B cases were in window). `rtro init --history <n>` can widen the window, at a cost in indexing time.
+- **Narrow query form.**
+  - **Confirmatory test:** it used the old identifier as the query.
+  - **Natural-language templates:** descriptive only. One of them ("What happened to OLD after the refactor?") is a degenerate baseline for B1: its non-identifier words keep every structural score below the 0.08 threshold.
+- **Small JavaScript sample.** JavaScript has 7 repositories in the external set; its catalog was exhausted. Per-language results are descriptive.
+- **Machine-verified main labels.** The main benchmark's 1,005-event review queue is still open.
+- **Retrieval-only evaluation.** `rtro ask` builds a grounded prompt, but the quality of LLM answers has not been evaluated.
+- **Clone skips.** In the external set, some repositories were skipped because cloning exceeded 10 minutes or 1.5 GB, or the repository was not found. Windows path-length failures were fixed with `core.longpaths` and those repositories retried.
+- **Parser coverage.** Events and targets are limited to callables that Retrospect's Tree-sitter extractors can parse. One external target (droolsjbpm/jbpm) was missing from the structural index; it is counted as unranked for every system.
+
+---
+
+## 6. Reproducibility
+
+| Tag | Commit | Contents |
+|---|---|---|
+| `eval-v1` | `1ac3b358c248fab5db2d7618de4cc057a856c9d4` | Code used for the external confirmation: B1–B4, the parser-leak fix, and G |
+| `cli-v1.0.0` | `13cdb3a0165eddb7276b7344c3e4c76812051105` | `retrospect-cli` v1.0.0 (`rtro`); retrieval code identical to `eval-v1` |
+
+**Evaluation workspaces.** Both live outside this repository, under `D:\base papers considered\Test creation\`:
+
+- **`retrospect_evaluation_2026-10-21\`** (main four-language benchmark):
+  - **authoritative analysis:** `evaluation\analysis\v4_parserfix\`;
+  - **re-measurement and E3-Reach comparison:** `reports\parserfix_remeasurement.md`.
+- **`retrospect_external_4lang\`** (external confirmation):
+  - **results:** `analysis\external_v1\results.json`, and `analysis\external_v1_posthoc\results_posthoc.json` for the sensitivity and post-hoc rows;
+  - **pre-registration:** `protocol.md`;
+  - **code version:** `VERSION.md`.
+
+**Tests.** Run the safe subset:
+
+```bash
+npx jest --runInBand --testPathIgnorePatterns author_pack_blinding
+```
+
+`tests/unit/author_pack_blinding.test.js` rewrites timestamps in tracked Phase C files, so exclude it unless you intend to regenerate that pack.
+
+A complete map of the documentation, including which documents are historical records and where each experiment's results live, is in [docs/DOCS_INDEX.md](docs/DOCS_INDEX.md).
+
+---
+
+## 7. License and citation
+
+ISC. See [LICENSE](LICENSE).
+
+If you use Retrospect in academic work, please cite:
+
+```
+@misc{retrospect2026,
+  title  = {Retrospect: Evolution-Aware Code Retrieval},
+  author = {TODO},
+  year   = {2026},
+  note   = {Citation placeholder; to be replaced with the paper reference}
+}
+```
