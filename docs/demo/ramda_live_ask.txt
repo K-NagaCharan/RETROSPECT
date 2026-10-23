@@ -1,0 +1,39 @@
+PS <ramda-clone>> rtro config set model openai/gpt-oss-120b --global
+model = openai/gpt-oss-120b (<home>\.retrospect\config.json)
+PS <ramda-clone>> rtro search "what happened to filterObject?"
+ 1. pickWith  ramda.js:2893
+    formerly filterObject (renamed in 92c182c, 2014-07-01)
+ 2. filter  ramda.js:1742
+ 3. filterIdx  ramda.js:1771
+ 4. filterLeaks  lib/test/mocha.js:4584
+ 5. genFilter  examples/generators.js:35
+ 6. anonymous  ext/lazylist/lazylist.js:41
+ 7. filter  ramda.api.js:51
+ 8. filter.idx  ramda.api.js:52
+ 9. anonymous  ramda.js:1428
+10. anonymous  ramda.js:1464
+PS <ramda-clone>> rtro ask "what happened to filterObject?"
+**What happened to `filterObject`?**  
+
+- The function that used to be called **`filterObject`** was **renamed to `pickWith`**.  
+- The rename was made to bring the name in line with the library’s naming convention.  
+
+**Evidence**
+
+| Historical commit | Change |
+|-------------------|--------|
+| `92c182c2d94d` (2014‑07‑01) | “filterObject → pickWith to match naming convention” |
+
+After that commit the old identifier `filterObject` was removed from the source and the implementation was kept under the new name **`pickWith`**, which you can see in the current code base:
+
+* `pickWith` (function) – **ramda.js:2893‑2904** – implements the same logic that `filterObject` used to have (iterates over an object’s keys, applies a predicate, and builds a new object with the entries that pass).
+
+There is no `filterObject` symbol anywhere in the current repository; its functionality is now provided by `pickWith`.
+
+Sources:
+- ramda.js:2893 (pickWith) — history: commit 92c182c
+- ramda.js:1742 (filter)
+- ramda.js:1771 (filterIdx) — history: commit b2d1fe7
+- lib/test/mocha.js:4584 (filterLeaks)
+- examples/generators.js:35 (genFilter)
+PS <ramda-clone>> `
