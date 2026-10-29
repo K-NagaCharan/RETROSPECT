@@ -624,7 +624,7 @@ These tools and Retrospect solve **different problems**:
 | Source code and tests | This repository: `src/`, `bin/rtro.js` and the jest suite in `tests/` |
 | CLI package | `retrospect-cli` on npm, current version 1.0.1 (installs `rtro` and `retrospect`); see [CHANGELOG.md](../CHANGELOG.md) |
 | Evaluation code version | Tag `eval-v1` = `1ac3b358c248fab5db2d7618de4cc057a856c9d4` |
-| CLI release | Tag `cli-v1.0.0` = `90feeeab46e431ad51782b701908547803360bde` (the relicensing commit; retrieval code identical to `eval-v1`) |
+| CLI release | Tag `cli-v1.0.0` = `90feeeab46e431ad51782b701908547803360bde` (the relicensing commit; retrieval code identical to `eval-v1`); tag `cli-v1.0.1` = `79c8192bcb8fcd158dd7e124fb53ea18c2fcd9ad` (empty-retrieval guard in `ask`) |
 | Main benchmark workspace | `evaluation-artifacts/retrospect_evaluation_2026-10-21/` (authoritative analysis in `evaluation/analysis/v4_parserfix/`) |
 | External confirmation workspace | `evaluation-artifacts/retrospect_external_4lang/` (`analysis/external_v1/results.json`, `analysis/external_v1_posthoc/results_posthoc.json`, `protocol.md`) |
 | Demo transcripts | `docs/demo/` |

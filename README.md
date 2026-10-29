@@ -272,6 +272,7 @@ The figures below are held-out task B (old identifier), pooled, cluster-level.
 |---|---|---|
 | `eval-v1` | `1ac3b358c248fab5db2d7618de4cc057a856c9d4` | Code used for the external confirmation: B1–B4, the parser-leak fix, and G |
 | `cli-v1.0.0` | `90feeeab46e431ad51782b701908547803360bde` | `retrospect-cli` v1.0.0 (`rtro`); retrieval code identical to `eval-v1` |
+| `cli-v1.0.1` | `79c8192bcb8fcd158dd7e124fb53ea18c2fcd9ad` | `retrospect-cli` v1.0.1: `ask` sends no request when nothing is retrieved; retrieval code identical to `eval-v1` |
 
 `cli-v1.0.0` points to the relicensing commit ("chore: MIT license; publish evaluation artifacts; README polish"). This table was updated in the commit after it.
 
