@@ -1,6 +1,6 @@
 {
   "name": "retrospect-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Evolution-aware code search for git repositories: find current code by its former names, and ask questions grounded in code and history.",
   "main": "src/index.js",
   "bin": {
@@ -12,6 +12,7 @@
     "src/",
     "!src/evaluation/benchmarks/",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "engines": {

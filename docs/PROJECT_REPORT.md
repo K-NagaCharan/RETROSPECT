@@ -234,6 +234,8 @@ The system instructions tell the model to:
 
 After the answer, `rtro ask` prints `Sources:`: each context block's `file:line`, plus the commit sha of its historical evidence when it has one.
 
+Since v1.0.1, when retrieval returns no results, `rtro ask` makes no LLM call and prints a hint instead. Only callables are indexed (not README or package files), so a broad question about the project as a whole retrieves nothing; in v1.0.0 the model was still called with an empty context and an empty `Sources:` list was printed.
+
 ### 4i. Index storage and staleness
 
 `src/cli/store.js` writes four files to `<repo>/.retrospect/`:
@@ -620,7 +622,7 @@ These tools and Retrospect solve **different problems**:
 | Deliverable | Where |
 |---|---|
 | Source code and tests | This repository: `src/`, `bin/rtro.js` and the jest suite in `tests/` |
-| CLI package | `retrospect-cli` v1.0.0, packaged for npm (installs `rtro` and `retrospect`) |
+| CLI package | `retrospect-cli` on npm, current version 1.0.1 (installs `rtro` and `retrospect`); see [CHANGELOG.md](../CHANGELOG.md) |
 | Evaluation code version | Tag `eval-v1` = `1ac3b358c248fab5db2d7618de4cc057a856c9d4` |
 | CLI release | Tag `cli-v1.0.0` = `90feeeab46e431ad51782b701908547803360bde` (the relicensing commit; retrieval code identical to `eval-v1`) |
 | Main benchmark workspace | `evaluation-artifacts/retrospect_evaluation_2026-10-21/` (authoritative analysis in `evaluation/analysis/v4_parserfix/`) |

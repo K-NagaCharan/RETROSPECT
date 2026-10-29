@@ -25,6 +25,7 @@ Paths in A, C and D are relative to the repository root. C and D are published a
 | [docs/DOCS_INDEX.md](DOCS_INDEX.md) | LIVING | This index | — |
 | [DOC_AUDIT.md](../DOC_AUDIT.md) | LIVING | 2026-10-23 documentation audit: actions and number sources | — |
 | [LICENSE](../LICENSE) | LIVING | MIT license | — |
+| [CHANGELOG.md](../CHANGELOG.md) | LIVING | Release notes for the `retrospect-cli` package | — |
 | [evaluation-artifacts/README.md](../evaluation-artifacts/README.md) | LIVING | What the two published evaluation workspaces are, which files are authoritative, and the verbatim-copy note | — |
 | [docs/demo/ramda_transcript.txt](demo/ramda_transcript.txt) | LIVING | `rtro` demo transcript (ramda, benchmark pin) | — |
 | [docs/demo/pylint_transcript.txt](demo/pylint_transcript.txt) | LIVING | `rtro` demo transcript (pylint, benchmark pin) | — |

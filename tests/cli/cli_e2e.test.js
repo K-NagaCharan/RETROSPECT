@@ -90,6 +90,21 @@ describe('end-to-end on a repository with a renamed function', () => {
     expect(stdout).toMatch(/Sources:\n- src\/billing\.js:4 \(sumLineItems\) — history: commit [0-9a-f]{7}/);
   });
 
+  test('ask with no retrieved code sends no request, prints a hint and no Sources list', async () => {
+    const fetchSpy = jest.fn();
+    let stdout = '';
+    const { main } = require('../../src/cli');
+    for (const extra of [[], ['--dry-run']]) {
+      const code = await main(['ask', 'why is this project built in javascript?', ...extra], { cwd: repo, env: { ANTHROPIC_API_KEY: '' },
+        fetch: fetchSpy, stdout: { write: s => { stdout += s; } }, stderr: { write: () => {} } });
+      expect(code).toBe(0);
+    }
+    expect(fetchSpy).not.toHaveBeenCalled();
+    expect(stdout).toMatch(/^No matching code found for this question, so no LLM request was sent\./);
+    expect(stdout).toMatch(/rtro search "<words>"/);
+    expect(stdout).not.toMatch(/Sources:|=== SYSTEM ===/);
+  });
+
   test('ask without a key fails with the variable name (after retrieval, before any request)', async () => {
     const r = await run(['ask', 'what happened to computeCartTotal?'], { cwd: repo, env: { ANTHROPIC_API_KEY: '', RETROSPECT_MODEL: 'm' } });
     expect(r.code).toBe(1);

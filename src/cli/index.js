@@ -49,7 +49,7 @@ Options:
   ask: `Usage: rtro ask "<question>" [--k <n>] [--dry-run] [--provider <p>] [--model <m>]
 
 Retrieve the top results, build a context within the token budget, and ask an LLM. Prints the
-answer followed by "Sources:".
+answer followed by "Sources:". If nothing is retrieved, no request is sent.
 
 Options:
   --k <n>            Number of code results in the context (default: config k, 5)
@@ -70,6 +70,11 @@ API keys are never stored in files; set them as environment variables.`
 };
 
 function out(io, s) { io.stdout.write(s + '\n'); }
+
+const NO_MATCH = `No matching code found for this question, so no LLM request was sent.
+Retrospect answers from the indexed functions, classes and methods (and their rename history); README and
+package files are not indexed, so broad questions about the project as a whole find nothing.
+Try naming a function, class or file in the question, or explore first with: rtro search "<words>"`;
 
 async function cmdInit(argv, io) {
   const a = parseArgs(argv, { booleans: ['help'], strings: ['history'] });
@@ -151,6 +156,11 @@ async function cmdAsk(argv, io) {
   const k = a.flags.k ? positiveInt(a.flags.k, 'k') : cfg.k;
   const idx = await freshIndexes(root, io);
   const res = rankG(question, idx, k);
+  // Nothing retrieved: an LLM call would only restate that the context is empty, so stop here.
+  if (!res.results.length) {
+    out(io, NO_MATCH);
+    return;
+  }
   const prompt = buildPrompt(question, res.results, { k, tokenBudget: cfg.tokenBudget, lineage: idx.lineage });
   if (a.flags['dry-run']) {
     out(io, '=== SYSTEM ===');

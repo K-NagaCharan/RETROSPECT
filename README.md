@@ -20,7 +20,7 @@ Retrospect ships as the `retrospect-cli` package. It has an `ask` command that s
 npm install -g retrospect-cli
 ```
 
-To install from a local checkout instead, run `npm pack` and then `npm install -g retrospect-cli-1.0.0.tgz`. To work on the source, run `npm install` in the repository.
+To install from a local checkout instead, run `npm pack` and then `npm install -g retrospect-cli-1.0.1.tgz`. To work on the source, run `npm install` in the repository.
 
 ### Index a repository: `rtro init`
 
@@ -61,6 +61,8 @@ rtro ask "where is filterObject now?" --provider openai-compatible --model llama
 ```
 
 `ask` takes the top results (`--k`, default 5) and builds a context within the token budget (default 4000) using `ContextBuilder`. It sends a prompt with QUESTION, CURRENT CODE and HISTORICAL EVIDENCE sections. It prints the answer, then `Sources:` (file:line, plus the commit sha for historical evidence). The model is told to answer only from that context.
+
+If retrieval finds no matching code, `ask` sends no request and prints a hint instead (since v1.0.1). Only functions, classes and methods are indexed, not README or package files, so broad questions about the project as a whole ("why is this written in JavaScript?") find nothing. Name a function, class or file in the question, or explore first with `rtro search`.
 
 ### Configure: `rtro config`
 
